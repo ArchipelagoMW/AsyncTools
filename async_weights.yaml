@@ -746,3 +746,18 @@ Secret of Evermore:
     pupdunk: 10
   turdo_mode: false  # Replace offensive spells by Turd Balls with varying strength and make weapons weak
 
+triggers:
+  # make it less likely to have a hard time with pupdunk
+  - option_category: Secret of Evermore
+    option_name: doggomizer
+    option_result: pupdunk
+    options:
+      Secret of Evermore:
+        difficulty:
+          normal: 50
+          hard: 25
+          mystery: 25
+        exp_modifier:
+          150: 50
+          200: 50
+
