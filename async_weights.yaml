@@ -707,13 +707,13 @@ Super Metroid:
 
   exclude_locations:
     []
-  
+
 Secret of Evermore:
   difficulty: # Changes relative spell cost and stuff
     easy: 0
     normal: 33
     hard: 33
-    chaos: 33
+    mystery: 33
   money_modifier: 150
   exp_modifier: 150
   fix_sequence: true  # Require Leviate for Volcano, Energy Core for Boss Rush
@@ -725,18 +725,18 @@ Secret of Evermore:
   short_boss_rush: false  # Start boss rush at Magmar, cut HP in half
   ingredienizer: # Shuffles or randomizes spell ingredients
     on: 50
-    chaos: 50
+    full: 50
   sniffamizer: # Shuffles or randomizes drops in sniff locations
     on: 50
-    chaos: 50
+    full: 50
   callbeadamizer: # Shuffles call bead characters or spells
     on: 50
-    chaos: 50
+    full: 50
   musicmizer: false  # Randomize music for some rooms
   doggomizer: # On shuffles dog per act, Chaos randomizes dog per screen, Pupdunk gives you Everpupper everywhere
     off: 30
     on: 30
-    chaos: 30
+    full: 30
     pupdunk: 10
   turdo_mode: false  # Replace offensive spells by Turd Balls with varying strength and make weapons weak
-  
+
