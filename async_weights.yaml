@@ -714,15 +714,21 @@ Secret of Evermore:
     normal: 33
     hard: 33
     mystery: 33
-  money_modifier: 150
-  exp_modifier: 150
+  money_modifier:
+    150: 75
+    200: 25
+  exp_modifier:
+    150: 75
+    200: 25
   fix_sequence: true  # Require Leviate for Volcano, Energy Core for Boss Rush
   fix_cheats: true  # Fix cheats left in by the devs (not desert skip)
   fix_infinite_ammo: true  # Fix infinite ammo glitch
   fix_atlas_glitch: true  # Fix atlas underflowing stats
   fix_wings_glitch: true  # Fix wings making you invincible in some areas
   shorter_dialogs: true  # Cuts some dialogs
-  short_boss_rush: false  # Start boss rush at Magmar, cut HP in half
+  short_boss_rush:  # Start boss rush at Magmar, cut HP in half
+    on: 50
+    off: 50
   ingredienizer: # Shuffles or randomizes spell ingredients
     on: 50
     full: 50
