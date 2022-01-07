@@ -44,7 +44,7 @@ Ocarina of Time:
     off: 1
 
   # Open Options: controls the state of certain pathways in the world
-  open_forest: 
+  open_forest:
     open: 0 # Deku Tree and Kokiri Forest exit are not blocked. 
     closed_deku: 1 # Kokiri Forest exit is not blocked. Deku Tree access is blocked until you have Kokiri Sword and Deku Shield. 
     closed: 0 # Kokiri Forest exit is blocked until you finish Deku Tree. This setting will override Starting Age: Adult. 
@@ -52,14 +52,14 @@ Ocarina of Time:
     open: 1 # Kakariko Gate is always open as child. Happy Mask Shop opens when you get Zelda's Letter. 
     zelda: 0 # Kakariko Gate and Mask Shop are closed until you obtain Zelda's Letter; don't need to show to guard. 
     closed: 0 # Kakariko Gate and Mask Shop are closed until you show Zelda's Letter to the guard. 
-  open_door_of_time: 
+  open_door_of_time:
     on: 1 # Can freely swap ages at the Temple of Time. 
     off: 0 # Requires an Ocarina and the Song of Time to open the door. Does not require the 3 spiritual stones. 
-  zora_fountain: 
+  zora_fountain:
     closed: 1 # King Zora blocks the way to Zora's Fountain until you show him Ruto's Letter as child. 
     adult: 0 # King Zora is always moved for adult, but still blocks the way as child. 
     open: 0 # King Zora starts moved for both child and adult. Ruto's Letter is removed from the pool. 
-  gerudo_fortress: 
+  gerudo_fortress:
     normal: 0 # Free all 4 carpenters
     fast: 1 # Free only 1 carpenter (the far left one)
     open: 0 # No carpenters needed to open the fortress.
@@ -98,7 +98,7 @@ Ocarina of Time:
     off: 3
 
   # Shuffle Options: controls which items are shuffled into the world
-  shuffle_song_items: 
+  shuffle_song_items:
     song: 3 # Songs remain at song locations within a player's own world. 
     dungeon: 0 # Songs are placed at the end of dungeons (also at Song from Impa)
     any: 2 # Songs are shuffled into the itempool. Song locations receive regular items. 
@@ -107,7 +107,7 @@ Ocarina of Time:
     fixed_number: 1
     random_number: 0
   shop_slots: 4
-  tokensanity: 
+  tokensanity:
     off: 3 # All 100 gold skulltulas have their tokens. 
     dungeons: 2 # Skulltulas in dungeons will have their tokens randomized into the main item pool. 
     overworld: 0 # Skulltulas in the overworld will have their tokens randomized into the main item pool. 
@@ -143,26 +143,26 @@ Ocarina of Time:
   enhance_map_compass: # Map tells if a dungeon is MQ. Compass tells what the prize is. Temple of Time altar won't say what prizes are. 
     on: 0
     off: 1
-  shuffle_mapcompass: 
+  shuffle_mapcompass:
     startwith: 1 # Start with map/compass for every dungeon in your inventory.
     dungeon: 0 # Item type remains in its associated dungeon.
     remove: 0 # Item type is removed. Key doors are automatically opened. 
     keysanity: 0 # Item type may be shuffled anywhere in the multiworld.
     vanilla: 0 # Item type remains in its vanilla location. 
-  shuffle_smallkeys: 
+  shuffle_smallkeys:
     dungeon: 1
     remove: 0
     keysanity: 0
     vanilla: 0
-  shuffle_fortresskeys: 
+  shuffle_fortresskeys:
     vanilla: 1
     keysanity: 0
-  shuffle_bosskeys: 
+  shuffle_bosskeys:
     dungeon: 1
     remove: 0
     keysanity: 0
     vanilla: 0
-  shuffle_ganon_bosskey: 
+  shuffle_ganon_bosskey:
     dungeon: 0
     remove: 0
     keysanity: 0
@@ -227,13 +227,13 @@ Ocarina of Time:
     balanced: 1 # Original item pool. 
     scarce: 0 # Some excess items are removed, including health upgrades. 
     minimal: 0 # Most excess items are removed. 
-  junk_ice_traps: 
+  junk_ice_traps:
     off: 0 # All ice traps are removed. 
     normal: 1 # Only ice traps from the base item pool are placed.
     extra: 0 # Chance to add extra ice traps when junk items are added to the pool.
     mayhem: 0 # All added junk items will be ice traps.
     onslaught: 0 # All junk items will be replaced by ice traps, even those in the base pool.
-  ice_trap_appearance: 
+  ice_trap_appearance:
     major_only: 0 # Ice traps appear as major items.
     junk_only: 0 # Ice traps appear as junk items.
     anything: 1 # Ice traps may appear as anything.
@@ -316,6 +316,7 @@ Factorio:
     small_funnels: 1
     medium_funnels: 1
     large_funnels: 1
+    choices: 1
   recipe_time: # randomize the time it takes for any recipe to craft, this includes smelting, chemical lab, hand crafting etc.
     vanilla: 0
     fast: 0 # 25% to 100% of original time
@@ -350,8 +351,8 @@ Minecraft:
   include_postgame_advancements: off
   shuffle_structures: on
 A Link to the Past:
-### Logic Section ###
-# Warning: overworld_glitches is not available and minor_glitches is only partially implemented on the door-rando version
+  ### Logic Section ###
+  # Warning: overworld_glitches is not available and minor_glitches is only partially implemented on the door-rando version
   glitches_required: # Determine the logic required to complete the seed
     none: 50 # No glitches required
     minor_glitches: 0 # Puts fake flipper, waterwalk, super bunny shenanigans, and etc into logic
@@ -365,7 +366,7 @@ A Link to the Past:
   restrict_dungeon_item_on_boss: # aka ambrosia boss items
     on: 0 # prevents unshuffled compasses, maps and keys to be boss drops, they can still drop keysanity and other players' items
     off: 50
-### End of Logic Section ###
+  ### End of Logic Section ###
   bigkey_shuffle: # Big Key Placement
     original_dungeon: 50
     own_dungeons: 5
@@ -395,8 +396,8 @@ A Link to the Past:
   dungeon_counters: pickup
   progressive: # Enable or disable progressive items (swords, shields, bow)
     on: 50 # All items progressive
-    off: 0 # No items progressive
-    grouped_random: 0 # Randomly decides for all items. Swords could be progressive, shields might not be
+    off: 25 # No items progressive
+    grouped_random: 25 # Randomly decides for all items. Swords could be progressive, shields might not be
   entrance_shuffle:
     none: 60 # Vanilla game map. All entrances and exits lead to their original locations. You probably want this option
     dungeonssimple: 20 # shuffle just dungeons amongst each other, swapping dungeons entirely, so Hyrule Castle is always 1 dungeon
@@ -469,7 +470,7 @@ A Link to the Past:
     Ether: 0
     Bombos: 0
     Quake: 0
-### Enemizer Section ###
+  ### Enemizer Section ###
   boss_shuffle:
     none: 70 # No boss shuffle
     basic: 10 # Existing bosses except Ganon and Agahnim are shuffled throughout dungeons
@@ -477,7 +478,7 @@ A Link to the Past:
     chaos: 10 # Any boss can appear any amount of times
     singularity: 20
   enemy_shuffle: # Randomize enemy placement
-    on: 0
+    on: 10
     off: 50
   killable_thieves: # Make thieves killable
     on: 50 # Usually turned on together with enemy_shuffle to make annoying thief placement more manageable
@@ -497,8 +498,8 @@ A Link to the Past:
   pot_shuffle:
     'on': 0 # Keys, items, and buttons hidden under pots in dungeons are shuffled with other pots in their supertile
     'off': 100 # Default pot item locations
-### End of Enemizer Section ###
-### Shop Settings ###
+  ### End of Enemizer Section ###
+  ### Shop Settings ###
   shop_shuffle_slots: # Maximum amount of shop slots to be filled with regular item pool items (such as Moon Pearl)
     0: 50
     5: 0
@@ -520,7 +521,7 @@ A Link to the Past:
     ipP: 1
     pP: 1
   # You can add more combos
-### End of Shop Section ###
+  ### End of Shop Section ###
   shuffle_prizes: g
   start_inventory: {"Pegasus Boots": 1}
   local_items: ["Moon Pearl", "Pegasus Boots"]
@@ -677,12 +678,12 @@ Super Metroid:
   random_music:
     false: 50
     true: 0
-  custom_preset: # 
+  custom_preset: #
     #    see https://randommetroidsolver.pythonanywhere.com/presets for detailed info on each preset settings
     #    knows: each skill (know) has a pair [can use, perceived difficulty using one of 1, 5, 10, 25, 50 or 100 each one matching a max_difficulty]
     #    settings: hard rooms, hellruns and bosses settings
     #    controller: predefined controller mapping and moon walk setting
-    #    
+    #
     controller: {}
     knows: {}
     settings: {}
