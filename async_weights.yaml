@@ -284,9 +284,44 @@ Risk of Rain 2:
     random-low: 0
     random-high: 0
     1: 50
+    2: 25
+    3: 5
   enable_lunar: # Allows Lunar items in the item pool.
-    false: 0
+    false: 50
     true: 50
+  item_pool_presets:
+    true: 100
+    false: 2
+  green_scrap: 
+    random: 1
+  red_scrap: 
+    random: 1
+  yellow_scrap: 
+    random: 1
+  white_scrap: 
+    random: 1
+  common_item:
+    random: 1
+  uncommon_item:
+    random: 1
+  legendary_item:
+    random: 1
+  boss_item:
+    random: 1
+  lunar_item:
+    random: 1
+  equipment:
+    random: 1
+  item_weights:
+    default: 100
+    new: 0
+    uncommon: 0
+    legendary: 1
+    lunartic: 1
+    chaos: 0
+    no_scraps: 0
+    even: 0
+    scraps_only: 0
 Slay the Spire:
   character: # Pick What Character you wish to play with.
     ironclad: 50
