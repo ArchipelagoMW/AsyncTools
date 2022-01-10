@@ -17,6 +17,7 @@ always = {"game", "accessibility", "progression_balancing"}
 
 rows = []
 players = list(mystery["name"].values())
+player_games = list(mystery["game"].values())
 START = 1
 for START, player in enumerate(players, 1):
     if player.startswith("Player") and all(c in string.digits for c in player.lstrip("Player")):
@@ -95,9 +96,9 @@ with open('mystery_result.csv', 'w') as mysterycsv:
         writer.writerow({key: value for key, value in row.items() if key in fieldnames})
 
 with open("mystery_players.csv", 'w') as mysterycsv:
-    writer = csv.DictWriter(mysterycsv, fieldnames=["Slot", "Name"], lineterminator='\n')
+    writer = csv.DictWriter(mysterycsv, fieldnames=["Slot", "Name", "Game"], lineterminator='\n')
     writer.writeheader()
     for i, name in enumerate(players, 1):
-        writer.writerow({"Slot": i, "Name": name})
+        writer.writerow({"Slot": i, "Name": name, "Game": player_games[i-1]})
 
 print("Done")
