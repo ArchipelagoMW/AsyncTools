@@ -746,20 +746,6 @@ Secret of Evermore:
     full: 30
     pupdunk: 10
   turdo_mode: false  # Replace offensive spells by Turd Balls with varying strength and make weapons weak
-  plando_items:
-    # place Wings in Halls NE to avoid softlock (AP specific fix required)
-    - items:
-        - Wings
-      locations:
-        - "Halls NE #174"
-        - "Halls NE #175"
-        - "Halls NE #176"
-        - "Halls NE #177"
-      force: true  # should never fail
-    # place Wings in Pyramid to avoid softlock (fixed in evermizer v041)
-    - item: Wings
-      location: "Pyramid bottom #130"
-      force: true  # should never fail
   triggers:
     # make it less likely to have a hard time with pupdunk
     - option_category: Secret of Evermore
