@@ -22,6 +22,7 @@ Timespinner:
   GyreArchives: random
   Cantoran: false
   DamageRando: false
+  LoreChecks: true
   DeathLink: false
 Ocarina of Time:
   logic_rules: # Determine the logic used to place items. 
