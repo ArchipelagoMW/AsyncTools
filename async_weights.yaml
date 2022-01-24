@@ -533,11 +533,11 @@ Super Metroid:
     false: 50
     true: 0
   preset: # choose one of the preset or specify "varia_custom" to use varia_custom_preset option or specify "custom" to use custom_preset option
-    newbie: 0
-    casual: 50
+    newbie: 30
+    casual: 40
     regular: 30
     veteran: 20
-    expert: 10
+    expert: 0
     master: 0
     samus: 0
     season_races: 0
@@ -609,12 +609,12 @@ Super Metroid:
     7: 0 # minimum value
     100: 50 # maximum value
     random: 0
-    random-low: 10
-    random-high: 50
+    random-low: 0
+    random-high: 0
   energy_qty:
     ultra_sparse: 0
-    sparse: 10
-    medium: 30
+    sparse: 0
+    medium: 0
     vanilla: 50
   area_randomization:
     off: 50
@@ -645,8 +645,8 @@ Super Metroid:
     false: 0
     true: 50
   varia_tweaks:
-    false: 50
-    true: 0
+    false: 0
+    true: 50
   nerfed_charge:
     false: 50
     true: 10
@@ -671,7 +671,7 @@ Super Metroid:
     true: 50
   animals:
     false: 50
-    true: 10
+    true: 0
   no_music:
     false: 50
     true: 0
