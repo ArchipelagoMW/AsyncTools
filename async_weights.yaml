@@ -65,7 +65,7 @@ Ocarina of Time:
   # Bridge options: controls Rainbow Bridge numbers
   bridge_medallions: random # 0-6
   bridge_stones: 3 # 0-3
-  bridge_rewards: 5 # dungeon rewards; 0-9
+  bridge_rewards: 9 # dungeon rewards; 0-9
   bridge_tokens: 40 # 0-100
 
   # World Options: controls the configuration of the world
@@ -93,9 +93,9 @@ Ocarina of Time:
     dungeon: 0 # Songs are placed at the end of dungeons (also at Song from Impa)
     any: 2 # Songs are shuffled into the itempool. Song locations receive regular items. 
   shopsanity: # Shuffle items in shops
-    off: 0 # All shop items are vanilla.
-    fixed_number: 1
-    random_number: 0
+    off: 3 # All shop items are vanilla.
+    fixed_number: 0
+    random_number: 2
   shop_slots: 4
   tokensanity:
     off: 3 # All 100 gold skulltulas have their tokens. 
@@ -218,8 +218,8 @@ Ocarina of Time:
     scarce: 0 # Some excess items are removed, including health upgrades. 
     minimal: 0 # Most excess items are removed. 
   junk_ice_traps:
-    off: 0 # All ice traps are removed. 
-    normal: 1 # Only ice traps from the base item pool are placed.
+    off: 1 # All ice traps are removed. 
+    normal: 0 # Only ice traps from the base item pool are placed.
     extra: 0 # Chance to add extra ice traps when junk items are added to the pool.
     mayhem: 0 # All added junk items will be ice traps.
     onslaught: 0 # All junk items will be replaced by ice traps, even those in the base pool.
