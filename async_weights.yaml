@@ -12,28 +12,18 @@ game:
   Secret of Evermore: 10
   Super Metroid: 20
 Timespinner:
-  StartWithJewelryBox: # Start with Jewelry Box unlocked
-    false: 0
-    true: 1
-  DownloadableItems: # With the tablet you will be able to download items at terminals
-    false: 0
-    true: 1
-  FacebookMode: # With the tablet you will be able to download items at terminals
-    false: 50
-    true: 0
-  StartWithMeyef: # Start with Meyef, ideal for when you want to play multiplayer.
-    false: 50
-    true: 0
-  QuickSeed: # Start with Talaria Attachment, Nyoom!
-    false: 50
-    true: 0
-  SpecificKeycards: # Keycards can only open corresponding doors
-    false: 50
-    true: 0
-  Inverted: # Start in the past
-    false: 50
-    true: 50
-  start_hints: []
+  StartWithJewelryBox: true
+  DownloadableItems: true
+  FacebookMode: false
+  StartWithMeyef: false
+  QuickSeed: false
+  SpecificKeycards: true
+  Inverted: random
+  GyreArchives: random
+  Cantoran: false
+  DamageRando: false
+  LoreChecks: true
+  DeathLink: false
 Ocarina of Time:
   logic_rules: # Determine the logic used to place items. 
     glitchless: 1 # No glitches are required, but may require some minor tricks (can be set under logic_tricks)
