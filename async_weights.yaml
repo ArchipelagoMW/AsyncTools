@@ -12,6 +12,8 @@ game:
   Secret of Evermore: 10
   Super Metroid: 20
   Rogue Legacy: 40
+  Super Mario 64: 20
+  VVVVVV: 20
 Timespinner:
   StartWithJewelryBox: true
   DownloadableItems: true
@@ -918,3 +920,22 @@ Rogue Legacy:
           challenge: 100
         herodotus:
           challenge: 100
+Super Mario 64:
+  EnableCoinStars:
+    false: 2
+    true: 3
+  StrictCapRequirements:
+    true: 5
+    false: 2
+  StarsToFinish:
+    70: 4
+    80: 3
+    90: 2
+    100: 1
+  accessibility: 
+    items: 1
+VVVVVV:
+  DoorCost: 
+    3: 1 
+  accessibility:
+    items: 1
