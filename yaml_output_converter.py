@@ -63,7 +63,7 @@ def get_option_name(option):
 
 
 def get_option_header(option, key):
-    getter = getattr(option, "displayname", None)
+    getter = getattr(option, "display_name", None)
     if getter:
         return getter
     else:
@@ -86,8 +86,12 @@ for game in games:
 
 with open('mystery_result.csv', 'w') as mysterycsv:
     rows = [{get_option_header(data, key): get_option_name(data) for key, data in row.items()} for row in rows]
-    fieldnames = set(itertools.chain.from_iterable(((key for key, value in dictionary.items() if value is not None)
+    fieldnames = set(itertools.chain.from_iterable(((key for key, value in dictionary.items() if value not in {"", None})
                                                     for dictionary in rows)))
+
+    fieldnames -= {"game"}
+    fieldnames = sorted(fieldnames)
+    fieldnames = ["game"] + fieldnames
     writer = csv.DictWriter(mysterycsv, fieldnames=fieldnames, lineterminator='\n')
 
     writer.writeheader()
