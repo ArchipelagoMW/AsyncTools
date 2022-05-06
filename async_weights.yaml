@@ -14,6 +14,7 @@ game:
   Rogue Legacy: 50
   Super Mario 64: 20
   VVVVVV: 20
+  Meritous: 10
   SMZ3: 30
 Timespinner:
   StartWithJewelryBox: true
@@ -963,6 +964,22 @@ VVVVVV:
   AreaCostRandomizer:
     false: 3
     true: 1
+Meritous:
+  goal:
+    return_the_cursed_seal: 50
+    any_ending: 3
+  include_psi_keys:
+    false: 1
+    true: 1
+  include_evolution_traps:
+    false: 10
+    true: 1
+  item_cache_cost:
+    vanilla: 1
+    reduced: 3
+    heavily_reduced: 10
+  start_inventory:
+    Reflect Shield upgrade: 1
 SMZ3:
   sm_logic: # This option selects what kind of logic to use for item placement inside
     #    Super Metroid.
