@@ -384,11 +384,13 @@ Minecraft:
   include_insane_advancements: off
   include_postgame_advancements: off
   shuffle_structures: on
+  structrue
   required_bosses:
     none: 50
     ender_dragon: 50 
     wither: 50
     both: 10
+  structure_compasses: on
 A Link to the Past:
   ### Logic Section ###
   # Warning: overworld_glitches is not available and minor_glitches is only partially implemented on the door-rando version
