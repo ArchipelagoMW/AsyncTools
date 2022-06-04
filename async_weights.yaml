@@ -1044,8 +1044,8 @@ Starcraft 2 Wings of Liberty:
     ground: 50
     air: 50
   mission_order:
-    vanilla: 50
-    vanilla_shuffled: 0
+    vanilla: 40
+    vanilla_shuffled: 10
   shuffle_protoss:
     false: 50
     true: 0
