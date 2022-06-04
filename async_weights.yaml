@@ -16,6 +16,7 @@ game:
   VVVVVV: 20
   Meritous: 10
   SMZ3: 30
+  Starcraft 2 Wings of Liberty: 20
 Timespinner:
   StartWithJewelryBox: true
   DownloadableItems: true
@@ -1029,3 +1030,24 @@ SMZ3:
     locations: 0
     items: 50
     minimal: 0
+Starcraft 2 Wings of Liberty:
+  game_difficulty:
+    casual: 50
+    normal: 50
+  upgrade_bonus:
+    ultra_capacitors: 50
+    vanadium_plating: 50
+  bunker_upgrade:
+    shrike_turret: 50
+    fortified_bunker: 50
+  all_in_map:
+    ground: 50
+    air: 50
+  mission_order:
+    vanilla: 50
+    vanilla_shuffled: 0
+  shuffle_protoss:
+    false: 50
+    true: 0
+  progression_balancing:
+    0: 50
