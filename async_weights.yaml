@@ -384,7 +384,6 @@ Minecraft:
   include_insane_advancements: off
   include_postgame_advancements: off
   shuffle_structures: on
-  structrue
   required_bosses:
     none: 50
     ender_dragon: 50 
