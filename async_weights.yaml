@@ -380,12 +380,18 @@ Factorio:
     stone-furnace: 19
     lab: 1
 Minecraft:
-  advancement_goal: 40
+  advancement_goal: random-range-30-80
   combat_difficulty: normal
   include_hard_advancements: on
   include_insane_advancements: off
   include_postgame_advancements: off
   shuffle_structures: on
+  required_bosses:
+    none: 50
+    ender_dragon: 50 
+    wither: 50
+    both: 10
+  structure_compasses: on
 A Link to the Past:
   ### Logic Section ###
   # Warning: overworld_glitches is not available and minor_glitches is only partially implemented on the door-rando version
