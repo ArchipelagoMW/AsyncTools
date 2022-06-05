@@ -17,6 +17,7 @@ game:
   Meritous: 10
   SMZ3: 30
   Starcraft 2 Wings of Liberty: 20
+  The Witness: 15
 Timespinner:
   StartWithJewelryBox: true
   DownloadableItems: true
@@ -1051,3 +1052,11 @@ Starcraft 2 Wings of Liberty:
     true: 0
   progression_balancing:
     0: 50
+The Witness:
+  disable_non_randomized_puzzles: 'false'
+  shuffle_discarded_panels: 'true'
+  shuffle_vault_boxes: 'false'
+  shuffle_uncommon: 'true'
+  shuffle_hard: 'false'
+  challenge_victory: 'false'
+  trap_percentage: 30
