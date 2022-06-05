@@ -1,38 +1,43 @@
-import os, yaml
-
+import os
+import yaml
 from colorama import Fore
-from Mystery import MysterySettings
-
-
-# Define games and requirements here.
-meta_settings = MysterySettings(
-    name="Player{player}",
-    description="Archipelago Async Mystery Filler Settings",
-    requires={
-        "version": "0.3.2",
-        "plando": "bosses, items, text, connections"
-    },
-    game={
-        "A Link to the Past": 150,
-        "Factorio":            20,
-        "Minecraft":           50,
-        "Slay the Spire":      20,
-        "Risk of Rain 2":      30,
-        "Subnautica":           5,
-        "Ocarina of Time":     40,
-        "Timespinner":         50,
-        "Secret of Evermore":  10,
-        "Super Metroid":       30,
-        "Rogue Legacy":        50,
-        "Super Mario 64":      20,
-        "VVVVVV":              20,
-        "Meritous":            10,
-        "SMZ3":                30,
-    }
-)
 
 
 # Please don't look too closely at this code below. kthx -Phar
+class MysterySettings(dict):
+    def __init__(self, name: str, description: str, requires: dict, game: dict):
+        super().__init__()
+
+        self["name"] = name
+        self["description"] = description
+        self["requires"] = requires
+        self["game"] = game
+
+    def __str__(self) -> str:
+        string = "{:<32} {:<4} {:>8}\n".format("GAME", "WGT", "%")
+        string += "-" * 46
+        string += "\n"
+        for game, percentage in sorted(self.weight_percentages().items(), key=lambda x:x[1], reverse=True):
+            string += "{:<32} {:<4}  ~{:>6}\n".format(game, self[game], "{:.1f}%".format(percentage * 100))
+
+        return string
+
+    def total_game_weights(self) -> int:
+        total = 0
+        for weight in self["game"].values():
+            total += weight
+        return total
+
+    def weight_percentages(self) -> dict:
+        total = self.total_game_weights()
+        games = {}
+
+        for game, weight in self["game"].items():
+            games[game] = weight / total
+
+        return games
+
+
 def main():
     # Create output directory, if it does not exist.
     if not os.path.exists("output/"):
@@ -42,17 +47,21 @@ def main():
     if os.path.exists("output/mystery.yaml"):
         os.remove("output/mystery.yaml")
 
-    print(meta_settings)
+    # Load meta data first.
+    mystery: dict
+    print("Loading meta player settings...")
+    try:
+        with open("games/__meta__.yaml") as file:
+            data = yaml.unsafe_load(file)
+            mystery = MysterySettings(data["name"], data["description"], data["requires"], data["game"])
+    except FileNotFoundError:
+        print(Fore.RED + "__meta__.yaml not found. Please ensure file exists and rerun generator.")
+        exit(3)
+
     print("Attempting to generate yaml file...")
 
     # Merge together each game yaml into our mystery settings.
     with open("output/mystery.yaml", "w+") as file:
-        mystery = {
-            "name": meta_settings.name,
-            "description": meta_settings.description,
-            "requires": meta_settings.requires,
-            "game": meta_settings.game
-        }
         for game in mystery["game"].keys():
             try:
                 print(f"Loading ./games/{game}.yaml...")
