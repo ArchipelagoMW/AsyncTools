@@ -1,0 +1,49 @@
+SMZ3:
+  sm_logic: # This option selects what kind of logic to use for item placement inside
+    #    Super Metroid.
+    #
+    #    Normal - Normal logic includes only what Super Metroid teaches players
+    #    itself. Anything that's not demonstrated in-game or by the intro cutscenes
+    #    will not be required here.
+    #
+    #    Hard - Hard logic is based upon the "no major glitches" ruleset and
+    #    includes most tricks that are considered minor glitches, with some
+    #    restrictions. You'll want to be somewhat of a Super Metroid veteran for
+    #    this logic.
+    #
+    #    See https://samus.link/information for required moves.
+    normal: 50
+    hard: 0
+  sword_location: # This option decides where the first sword will be placed.
+    #    Randomized - The sword can be placed anywhere.
+    #    Early - The sword will be placed in a location accessible from the start of
+    #    the game.
+    #    Unce assured - The sword will always be placed on Link's Uncle.
+    randomized: 0
+    early: 50
+    uncle: 0
+  morph_location: # This option decides where the morph ball will be placed.
+    #    Randomized - The morph ball can be placed anywhere.
+    #    Early - The morph ball will be placed in a location accessible from the
+    #    start of the game.
+    #    Original location - The morph ball will always be placed at its original
+    #    location.
+    randomized: 0
+    early: 50
+    original: 0
+  key_shuffle: # This option decides how dungeon items such as keys are shuffled.
+    #    None - A Link to the Past dungeon items can only be placed inside the
+    #    dungeon they belong to, and there are no changes to Super Metroid.
+    #    Keysanity - See https://samus.link/information
+    none: 50
+    keysanity: 0
+  progression_balancing: # A system that moves progression earlier, to try and prevent the player from getting stuck and bored early.
+    false: 50
+    true: 0
+  accessibility: # Set rules for reachability of your items/locations.
+    #    Locations: ensure everything can be reached and acquired.
+    #    Items: ensure all logically relevant items can be acquired.
+    #    Minimal: ensure what is needed to reach your goal can be acquired.
+    locations: 0
+    items: 50
+    minimal: 0

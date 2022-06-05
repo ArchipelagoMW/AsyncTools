@@ -1,0 +1,117 @@
+Rogue Legacy:
+  starting_gender:
+    random: 100
+  starting_class:
+    knight: 100
+    mage: 33
+    barbarian: 33
+    knave: 33
+    shinobi: 25
+    miner: 25
+    spellthief: 25
+    lich: 25
+  new_game_plus:
+    normal: 80
+    new_game_plus: 20
+    new_game_plus_2: 0
+  fairy_chests_per_zone:
+    10: 100
+  chests_per_zone:
+    30: 100
+  universal_fairy_chests:
+    true: 75
+    false: 25
+  universal_chests:
+    true: 50
+    false: 50
+  vendors:
+    start_unlocked: 75
+    early: 20
+    normal: 5
+    anywhere: 0
+  architect:
+    start_unlocked: 25
+    normal: 70
+    disabled: 5
+  architect_fee:
+    random: 100
+  disable_charon:
+    false: 100
+  disable_purchasing:
+    true: 25
+    false: 75
+  progressive_blueprints:
+    true: 80
+    false: 20
+  gold_gain_multiplier:
+    normal: 100
+    quarter: 10
+    half: 25
+    double: 25
+    quadruple: 10
+  number_of_children:
+    random: true
+  free_diary_on_generation:
+    false: 100
+  khidr:
+    vanilla: 80
+    challenge: 20
+  alexander:
+    vanilla: 100
+  leon:
+    vanilla: 100
+  herodotus:
+    vanilla: 100
+  health_pool:
+    15: 100
+  mana_pool:
+    15: 100
+  attack_pool:
+    15: 100
+  magic_damage_pool:
+    15: 100
+  armor_pool:
+    10: 100
+  equip_pool:
+    10: 100
+  crit_chance_pool:
+    5: 100
+  crit_damage_pool:
+    5: 100
+  allow_default_names:
+    true: 100
+  additional_lady_names:
+    []
+  additional_sir_names:
+    []
+  death_link:
+    false: 100
+  progression_balancing:
+    false: 100
+  accessibility:
+    items: 100
+  local_items:
+    []
+  non_local_items:
+    []
+  start_inventory:
+    {}
+  start_hints:
+    []
+  start_location_hints:
+    []
+  exclude_locations:
+    []
+  triggers:
+  # Challenge Boss Fights!
+  - option_category: Rogue Legacy
+    option_name: khidr
+    option_result: challenge
+    options:
+      Rogue Legacy:
+        alexander:
+          challenge: 100
+        leon:
+          challenge: 100
+        herodotus:
+          challenge: 100
