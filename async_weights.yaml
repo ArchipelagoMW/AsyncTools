@@ -11,6 +11,7 @@ game:
   Timespinner: 50
   Secret of Evermore: 10
   Super Metroid: 30
+  Raft: 5
   Rogue Legacy: 50
   Super Mario 64: 20
   VVVVVV: 20
@@ -1029,3 +1030,12 @@ SMZ3:
     locations: 0
     items: 50
     minimal: 0
+Raft:
+  use_resource_packs: true
+  minimum_resource_pack_amount: 1
+  maximum_resource_pack_amount: 15
+  duplicate_items: disabled
+  island_frequency_locations: progressive
+  progressive_items: true
+  big_island_early_crafting: false
+  paddleboard_mode: false
