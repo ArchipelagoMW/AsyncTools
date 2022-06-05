@@ -15,7 +15,7 @@ Rogue Legacy:
     new_game_plus: 20
     new_game_plus_2: 0
   fairy_chests_per_zone:
-    10: 100
+    5: 100
   chests_per_zone:
     30: 100
   universal_fairy_chests:
@@ -87,7 +87,7 @@ Rogue Legacy:
   death_link:
     false: 100
   progression_balancing:
-    false: 100
+    0: 100
   accessibility:
     items: 100
   local_items:
