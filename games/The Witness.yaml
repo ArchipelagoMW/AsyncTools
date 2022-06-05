@@ -1,0 +1,8 @@
+The Witness:
+  disable_non_randomized_puzzles: 'false'
+  shuffle_discarded_panels: 'true'
+  shuffle_vault_boxes: 'false'
+  shuffle_uncommon: 'true'
+  shuffle_hard: 'false'
+  challenge_victory: 'false'
+  trap_percentage: 30
