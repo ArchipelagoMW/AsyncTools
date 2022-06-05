@@ -18,7 +18,7 @@ class MysterySettings(dict):
         string += "-" * 46
         string += "\n"
         for game, percentage in sorted(self.weight_percentages().items(), key=lambda x:x[1], reverse=True):
-            string += "{:<32} {:<4}  ~{:>6}\n".format(game, self[game], "{:.1f}%".format(percentage * 100))
+            string += "{:<32} {:<4}  ~{:>6}\n".format(game, self["game"][game], "{:.1f}%".format(percentage * 100))
 
         return string
 
@@ -58,6 +58,7 @@ def main():
         print(Fore.RED + "__meta__.yaml not found. Please ensure file exists and rerun generator.")
         exit(3)
 
+    print(f"Estimated chance of a particular game being rolled...\n\n{mystery}")
     print("Attempting to generate yaml file...")
 
     # Merge together each game yaml into our mystery settings.
