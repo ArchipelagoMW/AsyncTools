@@ -28,7 +28,7 @@ name: Player{player}
 description: Archipelago Async Mystery Filler Settings
 requires:
   version: 0.3.2
-  plando: bosses, items, text, connections
+  plando: bosses, items, texts, connections
 
 # Define your game here!
 game:
