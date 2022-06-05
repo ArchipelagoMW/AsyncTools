@@ -16,6 +16,7 @@ game:
   VVVVVV: 20
   Meritous: 10
   SMZ3: 30
+  The Witness: 15
 Timespinner:
   StartWithJewelryBox: true
   DownloadableItems: true
@@ -1029,3 +1030,11 @@ SMZ3:
     locations: 0
     items: 50
     minimal: 0
+The Witness:
+  disable_non_randomized_puzzles: 'false'
+  shuffle_discarded_panels: 'true'
+  shuffle_vault_boxes: 'false'
+  shuffle_uncommon: 'true'
+  shuffle_hard: 'false'
+  challenge_victory: 'false'
+  trap_percentage: 30
