@@ -1,0 +1,16 @@
+Meritous:
+  goal:
+    return_the_cursed_seal: 50
+    any_ending: 3
+  include_psi_keys:
+    false: 1
+    true: 1
+  include_evolution_traps:
+    false: 10
+    true: 1
+  item_cache_cost:
+    vanilla: 1
+    reduced: 3
+    heavily_reduced: 10
+  start_inventory:
+    Reflect Shield upgrade: 1
