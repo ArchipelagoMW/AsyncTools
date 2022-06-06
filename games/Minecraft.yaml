@@ -1,0 +1,7 @@
+Minecraft:
+  advancement_goal: 40
+  combat_difficulty: normal
+  include_hard_advancements: on
+  include_unreasonable_advancements: off
+  include_postgame_advancements: off
+  shuffle_structures: on

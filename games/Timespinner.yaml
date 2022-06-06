@@ -1,0 +1,17 @@
+Timespinner:
+  StartWithJewelryBox: true
+  DownloadableItems: true
+  FacebookMode: false
+  StartWithMeyef: false
+  QuickSeed: false
+  SpecificKeycards: true
+  Inverted:
+    true: 1
+    false: 1
+  GyreArchives:
+    true: 1
+    false: 1
+  Cantoran: false
+  DamageRando: false
+  LoreChecks: true
+  DeathLink: false

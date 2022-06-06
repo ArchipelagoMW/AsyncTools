@@ -1,0 +1,39 @@
+Factorio:
+  tech_tree_layout:
+    single: 1
+    small_diamonds: 1
+    medium_diamonds: 1
+    large_diamonds: 1
+    small_pyramids: 1
+    medium_pyramids: 1
+    large_pyramids: 1
+    small_funnels: 1
+    medium_funnels: 1
+    large_funnels: 1
+    choices: 1
+  recipe_time: # randomize the time it takes for any recipe to craft, this includes smelting, chemical lab, hand crafting etc.
+    vanilla: 0
+    fast: 0 # 25% to 100% of original time
+    normal: 10 # 50 % to 200% of original time
+    slow: 0 # 100% to 400% of original time
+    chaos: 0 # 25% to 400% of original time
+  progressive:
+    on: 1
+  max_science_pack:
+    automation_science_pack: 0
+    logistic_science_pack: 0
+    military_science_pack: 0
+    chemical_science_pack: 0
+    production_science_pack: 0
+    utility_science_pack: 0
+    space_science_pack: 1
+  tech_cost: normal
+  free_samples: stack
+  tech_tree_information: none
+  recipe_ingredients:
+    rocket: 0 # only randomize rocket part recipe
+    science_pack: 1 # also randomize science pack ingredients
+  starting_items:
+    burner-mining-drill: 19
+    stone-furnace: 19
+    lab: 1
