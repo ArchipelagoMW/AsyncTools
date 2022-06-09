@@ -7,7 +7,7 @@ Super Mario 64:
     false: 5
     true: 2
   StrictCapRequirements:
-    true: 5
+    true: 0
     false: 2
   StarsToFinish:
     50: 1
@@ -18,6 +18,7 @@ Super Mario 64:
     0: 1
     10: 2
     20: 3
+    30: 2
   accessibility:
     items: 1
   BuddyChecks:
