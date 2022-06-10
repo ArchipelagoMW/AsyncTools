@@ -7,8 +7,8 @@ Super Mario 64:
     false: 5
     true: 2
   StrictCapRequirements:
-    true: 0
-    false: 2
+    true: 50
+    false: 0
   StarsToFinish:
     50: 1
     60: 3
