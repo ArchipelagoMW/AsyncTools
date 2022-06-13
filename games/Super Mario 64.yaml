@@ -24,5 +24,4 @@ Super Mario 64:
   BuddyChecks:
     false: 1
     true: 1
-  local_items:
-    ["Power Star"]
+
