@@ -1,7 +1,14 @@
 Minecraft:
-  advancement_goal: 40
+  advancement_goal: random-30-80
   combat_difficulty: normal
   include_hard_advancements: on
   include_unreasonable_advancements: off
   include_postgame_advancements: off
   shuffle_structures: on
+  structure_compasses: on
+  required_bosses: # Bosses which must be defeated to finish the game.
+    none: 50
+    ender_dragon: 25
+    wither: 25
+    both: 10
+    
