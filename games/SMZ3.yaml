@@ -13,7 +13,7 @@ SMZ3:
     #
     #    See https://samus.link/information for required moves.
     normal: 50
-    hard: 5
+    hard: 1
   sword_location: # This option decides where the first sword will be placed.
     #    Randomized - The sword can be placed anywhere.
     #    Early - The sword will be placed in a location accessible from the start of
