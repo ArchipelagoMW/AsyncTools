@@ -1,0 +1,44 @@
+Donkey Kong Country 3:
+  goal:
+    knautilus: 3
+    banana_bird_hunt: 2
+  dk_coins_for_gyrocopter:
+    30: 50
+  krematoa_bonus_coin_cost:
+    10: 1
+    11: 2
+    12: 3
+    13: 4
+    14: 5
+    15: 6
+  percentage_of_extra_bonus_coins:
+    100: 50
+  number_of_banana_birds:
+    15: 50
+  percentage_of_banana_birds:
+    80: 1
+    86: 2
+    93: 3
+    100: 4
+  level_shuffle:
+    false: 3
+    true: 2
+  music_shuffle:  
+    false: 50
+  kong_palette_swap:  
+    default: 50
+  starting_life_count:
+    7: 50
+  triggers:
+    - option_category: Donkey Kong Country 3
+      option_name: goal
+      option_result: knautilus
+      options:
+        Donkey Kong Country 3:
+          local_items: ["Krematoa Cog"]
+    - option_category: Donkey Kong Country 3
+      option_name: goal
+      option_result: banana_bird_hunt
+      options:
+        Donkey Kong Country 3:
+          local_items: ["Banana Bird"]
