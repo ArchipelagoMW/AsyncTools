@@ -6,11 +6,11 @@ Dark Souls III:
   lock_equip:
     false: 50
   no_weapon_requirements:
-    false: 3
-    true: 2
+    false: 2
+    true: 3
   randomize_weapons_level:
-    false: 3
-    true: 2
+    false: 2
+    true: 3
   late_basin_of_vows:
     false: 2
     true: 5
