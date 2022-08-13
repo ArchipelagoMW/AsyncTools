@@ -1,7 +1,7 @@
 Super Mario 64:
   AreaRandomizer:
     off: 5
-    courses_only: 2
+    courses_only: 3
     courses_and_secrets: 1
   ProgressiveKeys: true
   EnableCoinStars:
