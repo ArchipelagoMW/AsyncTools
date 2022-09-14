@@ -29,4 +29,7 @@ Donkey Kong Country 3:
     default: 50
   starting_life_count:
     7: 50
+  kongsanity:  
+    false: 3
+    true: 2
   local_items: ["Krematoa Cog","Banana Bird"]
