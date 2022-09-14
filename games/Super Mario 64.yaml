@@ -26,4 +26,6 @@ Super Mario 64:
   BuddyChecks:
     false: 1
     true: 1
-
+  ExclamationBoxes:
+    'off': 1
+    1ups_only: 1
