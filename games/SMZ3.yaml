@@ -19,9 +19,9 @@ SMZ3:
     #    Early - The sword will be placed in a location accessible from the start of
     #    the game.
     #    Unce assured - The sword will always be placed on Link's Uncle.
-    randomized: 0
+    randomized: 10
     early: 50
-    uncle: 0
+    uncle: 25
   morph_location: # This option decides where the morph ball will be placed.
     #    Randomized - The morph ball can be placed anywhere.
     #    Early - The morph ball will be placed in a location accessible from the
@@ -36,7 +36,7 @@ SMZ3:
     #    dungeon they belong to, and there are no changes to Super Metroid.
     #    Keysanity - See https://samus.link/information
     none: 50
-    keysanity: 0
+    keysanity: 10
   progression_balancing: # A system that moves progression earlier, to try and prevent the player from getting stuck and bored early.
     false: 50
     true: 0
