@@ -101,7 +101,3 @@ Hollow Knight:
     - King_Fragment
     - Queen_Fragment
     - Void_Heart
-
-description: 'Hollow Knight Async Filler yaml'
-game: Hollow Knight
-name: Player{number}
