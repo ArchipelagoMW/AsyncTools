@@ -15,6 +15,3 @@ Subnautica:
     stasis: 5
     containment: 2
     either: 2
-description: 'Subnautica Async filler yaml'
-game: Subnautica
-name: Player{number}
