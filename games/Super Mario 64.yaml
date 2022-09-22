@@ -1,14 +1,16 @@
 Super Mario 64:
   AreaRandomizer:
-    true: 1
-    false: 1
+    off: 5
+    courses_only: 3
+    courses_and_secrets: 1
   ProgressiveKeys: true
   EnableCoinStars:
     false: 5
     true: 2
   StrictCapRequirements:
     true: 50
-    false: 0
+  StrictCannonRequirements:
+    true: 50
   StarsToFinish:
     50: 1
     60: 3
@@ -24,4 +26,6 @@ Super Mario 64:
   BuddyChecks:
     false: 1
     true: 1
-
+  ExclamationBoxes:
+    'off': 1
+    1ups_only: 1
