@@ -22,7 +22,7 @@ Sonic Adventure 2 Battle:
     beginner: 1
     intermediate: 1
     expert: 3
-  include_chao_karate: # 
+  include_chao_karate:
     false: 2
     true: 1 
   chao_race_checks: all
