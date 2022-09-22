@@ -1,0 +1,16 @@
+Dark Souls III:
+  local_items:
+    ["Small Lothric Banner","Cinders of a Lord - Abyss Watcher","Cinders of a Lord - Yhorm the Giant","Cinders of a Lord - Aldrich","Cinders of a Lord - Lothric Prince"]
+  auto_equip:
+    false: 50
+  lock_equip:
+    false: 50
+  no_weapon_requirements:
+    false: 2
+    true: 3
+  randomize_weapons_level:
+    false: 2
+    true: 3
+  late_basin_of_vows:
+    false: 1
+    true: 5

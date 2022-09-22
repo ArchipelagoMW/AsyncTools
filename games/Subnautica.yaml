@@ -1,1 +1,9 @@
-Subnautica: {}
+Subnautica:
+  item_pool:
+    valuable
+  goal:
+    launch: 3
+    free: 2
+    infected: 1
+    drive: 0
+  creature_scans: 50
