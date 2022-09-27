@@ -53,9 +53,9 @@ A Link to the Past:
     dungeonscrossed: 10
     simple: 1 # Entrances are grouped together before being randomized. Simple uses the most strict grouping rules
     restricted: 1 # Less strict than simple
-    full: 2 # Less strict than restricted
+    full: 5 # Less strict than restricted
     crossed: 10 # Less strict than full
-    insanity: 3 # Very few grouping rules and entrances <-> insides are uncoupled. Good luck.
+    insanity: 0 # Very few grouping rules and entrances <-> insides are uncoupled. Good luck.
   goals:
     ganon: 30 # Climb GT, defeat Agahnim 2, then kill Ganon
     crystals: 30 # Only killing Ganon is required. The hole is always open. Items may still be placed in GT, however
@@ -98,13 +98,13 @@ A Link to the Past:
   item_pool:
     easy: 2
     normal: 10 # Item availability remains unchanged from the vanilla game
-    hard: 2 # Reduced upgrade availability (max: 14 hearts, green mail, tempered sword, fire shield, no silvers unless swordless)
-    expert: 1 # Minimum upgrade availability (max: 8 hearts, green mail, master sword, fighter shield, no silvers unless swordless)
+    hard: 3 # Reduced upgrade availability (max: 14 hearts, green mail, tempered sword, fire shield, no silvers unless swordless)
+    expert: 0 # Minimum upgrade availability (max: 8 hearts, green mail, master sword, fighter shield, no silvers unless swordless)
   item_functionality:
     easy: 2
     normal: 10 # Vanilla game item functionality
-    hard: 2 # Reduced helpfulness of items (potions less effective, can't catch faeries, cape uses double magic, byrna does not grant invulnerability, boomerangs do not stun, silvers disabled outside ganon)
-    expert: 1 # Vastly helpfulness of items (potions barely effective, can't catch faeries, cape uses double magic, byrna does not grant invulnerability, boomerangs and hookshot do not stun, silvers disabled outside ganon)
+    hard: 3 # Reduced helpfulness of items (potions less effective, can't catch faeries, cape uses double magic, byrna does not grant invulnerability, boomerangs do not stun, silvers disabled outside ganon)
+    expert: 0 # Vastly helpfulness of items (potions barely effective, can't catch faeries, cape uses double magic, byrna does not grant invulnerability, boomerangs and hookshot do not stun, silvers disabled outside ganon)
   tile_shuffle: # Randomize the tile layouts in flying tile rooms
     on: 50
     off: 0
