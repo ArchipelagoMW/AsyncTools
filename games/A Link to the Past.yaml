@@ -129,8 +129,8 @@ A Link to the Past:
     on: 10
     off: 50
   killable_thieves: # Make thieves killable
-    on: 50 # Usually turned on together with enemy_shuffle to make annoying thief placement more manageable
-    off: 0
+    on: 0 # Usually turned on together with enemy_shuffle to make annoying thief placement more manageable
+    off: 50
   bush_shuffle: # Randomize the chance that bushes have enemies and the enemies under said bush
     on: 0
     off: 50
@@ -176,3 +176,11 @@ A Link to the Past:
   glitch_boots:
     on: 50 # Start with Pegasus Boots in any glitched logic mode that makes use of them
     off: 0
+triggers:
+  #Turn killable thieves on if enemy shuffle is on
+  - option_name: enemy_shuffle
+    option_category: A Link to the Past
+    option_result: on
+    options:
+      A Link to the Past:
+        killable_thieves: on
