@@ -19,9 +19,9 @@ Sonic Adventure 2 Battle:
     high: 2
   chao_garden_difficulty:
     none: 5
-    beginner: 1
+    beginner: 3
     intermediate: 1
-    expert: 3
+    expert: 1
   include_chao_karate:
     false: 2
     true: 1 
