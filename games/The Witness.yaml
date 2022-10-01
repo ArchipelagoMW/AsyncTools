@@ -37,3 +37,12 @@ The Witness:
     20: 50
   puzzle_skip_amount: 
     10: 50
+triggers:
+  - option_name: shuffle_doors 
+    option_category: The Witness
+    option_result: doors_complex 
+    percentage: 50 
+    options: 
+      The Witness:
+          shuffle_symbols:
+            false: 50
