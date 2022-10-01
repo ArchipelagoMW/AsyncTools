@@ -1,7 +1,9 @@
 Starcraft 2 Wings of Liberty:
   game_difficulty:
-    casual: 50
-    normal: 50
+    casual: 2
+    normal: 3
+    hard: 2
+    brutal: 1
   upgrade_bonus:
     ultra_capacitors: 50
     vanadium_plating: 50
@@ -12,10 +14,13 @@ Starcraft 2 Wings of Liberty:
     ground: 50
     air: 50
   mission_order:
-    vanilla: 40
-    vanilla_shuffled: 10
+    vanilla: 10
+    vanilla_shuffled: 40
   shuffle_protoss:
-    false: 50
-    true: 0
+    false: 10
+    true: 40
+  relegate_no_build:
+    false: 40
+    true: 10
   progression_balancing:
     0: 50
