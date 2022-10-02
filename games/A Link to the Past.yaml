@@ -176,7 +176,7 @@ A Link to the Past:
   glitch_boots:
     on: 50 # Start with Pegasus Boots in any glitched logic mode that makes use of them
     off: 0
-triggers:
+  triggers:
   #Turn killable thieves on if enemy shuffle is on
   - option_name: enemy_shuffle
     option_category: A Link to the Past
