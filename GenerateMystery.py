@@ -93,7 +93,7 @@ def main():
             meta.update(meta_settings)
 
     with open("output/mystery.yaml", "w+") as file:
-        yaml.dump(mystery, file)
+        yaml.dump(dict(mystery), file)
     print(Fore.GREEN + "\nOutputted settings file to `./output/mystery.yaml`")
     meta_path = os.path.join("output", "meta.yaml")
     with open(meta_path, "w+") as file:
