@@ -7,7 +7,7 @@ Pokemon Red and Blue:
     items: 50
     minimal: 0
   game_version: # Select Red or Blue version.
-    red: 0
+    red: 50
     blue: 50
     random: 0
   elite_four_condition: # Number of badges required to challenge the Elite Four once the Indigo Plateau has been reached.
@@ -44,10 +44,10 @@ Pokemon Red and Blue:
     #    Scientist after reviving this number of fossils.
     # you can add additional values between minimum and maximum
     0: 0 # minimum value
-    3: 50 # maximum value
+    3: 0 # maximum value
     random: 0
     random-low: 0
-    random-high: 0
+    random-high: 50
   badgesanity: # Shuffle gym badges into the general item pool. If turned off, badges will be shuffled across the 8 gyms.
     false: 25
     true: 50
@@ -279,16 +279,33 @@ Pokemon Red and Blue:
     random-high: 0
     3000: 50
     random-range-2500-10000: 25
-  trainer_name: RED
-  rival_name: BLUE
   triggers:
+    - option_category: Pokemon Red and Blue
+      option_name: game_version
+      option_result: red
+      options:
+        Pokemon Red and Blue:
+          rival_name:
+            BLUE: 5
+            GARY: 3
+            JOHN: 1
+          trainer_name:
+            RED: 5
+            ASH: 3
+            JACK: 1
     - option_category: Pokemon Red and Blue
       option_name: game_version
       option_result: blue
       options:
         Pokemon Red and Blue:
-          trainer_name: BLUE
-          rival_name: RED
+          trainer_name:
+            BLUE: 5
+            GARY: 3
+            JOHN: 1
+          rival_name:
+            RED: 5
+            ASH: 3
+            JACK: 1
     - option_category: Pokemon Red and Blue
       option_name: randomize_pokemon_types
       option_result: vanilla
@@ -307,4 +324,4 @@ Pokemon Red and Blue:
             vanilla: 50
             prefer_types: 50
             completely_random: 5
-  
+
