@@ -1,7 +1,7 @@
 name: Player{player}
 description: Archipelago Async Mystery Filler Settings
 requires:
-  version: 0.3.2
+  version: 0.3.6
 
 # Define your game here!
 game:
