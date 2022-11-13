@@ -1,4 +1,12 @@
 Factorio:
+  start_hints:
+    - Progressive Science
+  max_science_pack:
+    utility_science_pack: 30
+    space_science_pack: 50
+  goal:
+    rocket: 50
+    satellite: 200
   tech_tree_layout:
     single: 1
     small_diamonds: 1
@@ -10,30 +18,127 @@ Factorio:
     small_funnels: 1
     medium_funnels: 1
     large_funnels: 1
+    trees: 1
     choices: 1
-  recipe_time: # randomize the time it takes for any recipe to craft, this includes smelting, chemical lab, hand crafting etc.
-    vanilla: 0
-    fast: 0 # 25% to 100% of original time
-    normal: 10 # 50 % to 200% of original time
-    slow: 0 # 100% to 400% of original time
-    chaos: 0 # 25% to 400% of original time
-  progressive:
-    on: 1
-  max_science_pack:
-    automation_science_pack: 0
-    logistic_science_pack: 0
-    military_science_pack: 0
-    chemical_science_pack: 0
-    production_science_pack: 0
-    utility_science_pack: 0
-    space_science_pack: 1
-  tech_cost: normal
+  min_tech_cost:
+    5: 50
+    random: 20
+    random-low: 20
+    random-high: 20
+  max_tech_cost:
+    500: 50
+    random: 20
+    random-low: 20
+    random-high: 20
+  tech_cost_mix:
+    70: 50
+    random: 20
+    random-low: 20
+    random-high: 20
+  silo:
+    vanilla: 50
+    randomize_recipe: 20
+    spawn: 20
+  satellite:
+    vanilla: 50
+    randomize_recipe: 50
   free_samples: stack
   tech_tree_information: none
-  recipe_ingredients:
-    rocket: 0 # only randomize rocket part recipe
-    science_pack: 1 # also randomize science pack ingredients
   starting_items:
+    # Mapping of Factorio internal item-name to amount granted on start.
     burner-mining-drill: 19
     stone-furnace: 19
-    lab: 1
+  recipe_time: normal
+  recipe_ingredients: science_pack
+  imported_blueprints: true
+  world_type:
+    rich: 80
+    peaceful_rich: 60
+    death_world: 5
+    rail_world: 40
+    peaceful_rail_world: 20
+  world_gen:
+  progressive: on
+  evolution_traps:
+    0: 50
+    random-low: 50
+  attack_traps:
+    0: 50
+    random-low: 50
+  evolution_trap_increase:
+    10: 50
+    random-low: 50
+  energy_link: true
+  triggers:
+    - option_category: Factorio
+      option_name: world_type
+      option_result: rich
+      options:
+        null: null
+    - option_category: Factorio
+      option_name: world_type
+      option_result: peaceful_rich
+      options:
+        Factorio:
+          world_gen:
+            peaceful_mode: true
+    - option_category: Factorio
+      option_name: world_type
+      option_result: rail_world
+      options:
+        Factorio:
+          world_gen:
+            autoplace_controls:
+              coal:
+                frequency: 0.333
+                richness: 1
+              copper-ore:
+                frequency: 0.333
+                richness: 1
+              crude-oil:
+                frequency: 0.333
+                richness: 1
+              iron-ore:
+                frequency: 0.333
+                richness: 1
+              stone:
+                frequency: 0.333
+                richness: 1
+              uranium-ore:
+                frequency: 0.333
+                richness: 1
+            enemy_evolution:
+              time_factor: 2.0e-06
+            enemy_expansion:
+              enabled: false
+            water: 2
+    - option_category: Factorio
+      option_name: world_type
+      option_result: peaceful_rail_world
+      options:
+        Factorio:
+          world_gen:
+            autoplace_controls:
+              coal:
+                frequency: 0.333
+                richness: 1
+              copper-ore:
+                frequency: 0.333
+                richness: 1
+              crude-oil:
+                frequency: 0.333
+                richness: 1
+              iron-ore:
+                frequency: 0.333
+                richness: 1
+              stone:
+                frequency: 0.333
+                richness: 1
+              uranium-ore:
+                frequency: 0.333
+                richness: 1
+            enemy_evolution:
+              time_factor: 2.0e-06
+            enemy_expansion:
+              enabled: false
+            water: 2
