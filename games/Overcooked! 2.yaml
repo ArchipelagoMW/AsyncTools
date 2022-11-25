@@ -120,7 +120,7 @@ Overcooked! 2:
 
   kevin_levels:
     # Includes the 8 Kevin level locations on the map as unlockables. Turn off to make games shorter.
-    false: 50
+    false: 0
     true: 50
 
   fix_bugs:
