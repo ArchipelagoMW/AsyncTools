@@ -31,14 +31,14 @@ Pokemon Red and Blue:
     7: 0 # maximum value
     random: 0
     random-low: 0
-    random-high: 50
+    random-range-high-4-8: 50
   cerulean_cave_condition: # Number of badges, HMs, and key items (not counting items you can lose) required to access Cerulean Cave.
     # you can add additional values between minimum and maximum
     0: 0 # minimum value
     25: 0 # maximum value
-    random: 50
+    random: 0
     random-low: 0
-    random-high: 0
+    random-high: 50
     20: 0
   second_fossil_check_condition: # After choosing one of the fossil location items, you can obtain the remaining item from the Cinnabar Lab
     #    Scientist after reviving this number of fossils.
@@ -49,8 +49,8 @@ Pokemon Red and Blue:
     random-low: 0
     random-high: 50
   badgesanity: # Shuffle gym badges into the general item pool. If turned off, badges will be shuffled across the 8 gyms.
-    false: 25
-    true: 50
+    false: 50
+    true: 25
   old_man: # With Open Viridian City, the Old Man will let you through without needing to turn in Oak's Parcel.
     vanilla: 0
     early_parcel: 50
@@ -134,15 +134,16 @@ Pokemon Red and Blue:
     random: 0
     random-low: 0
     random-high: 0
-    half: 25
-    normal: 75
-    double: 75
-    triple: 50
-    quadruple: 25
+    half: 0
+    normal: 0
+    double: 0
+    triple: 0
+    quadruple: 0
     quintuple: 0
     sextuple: 0
     septuple: 0
     octuple: 0
+    random-range-low-16-32: 1
   randomize_wild_pokemon: # Randomize all wild Pokemon and game corner prize Pokemon. match_types will select a Pokemon with at least one
     #    type matching the original type of the original Pokemon. match_base_stats will prefer Pokemon with closer base stat
     #    totals. match_types_and_base_stats will match types and will weight towards similar base stats, but there may not be
