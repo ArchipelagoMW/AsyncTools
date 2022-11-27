@@ -23,15 +23,16 @@ Pokemon Red and Blue:
     0: 0 # minimum value
     8: 0 # maximum value
     random: 0
-    random-low: 50
+    random-low: 0
     random-high: 0
+    random-range-high-4-8: 50
   viridian_gym_condition: # Number of badges required to enter Viridian Gym.
     # you can add additional values between minimum and maximum
     0: 0 # minimum value
     7: 0 # maximum value
     random: 0
     random-low: 0
-    random-range-high-4-8: 50
+    random-range-high-3-7: 50
   cerulean_cave_condition: # Number of badges, HMs, and key items (not counting items you can lose) required to access Cerulean Cave.
     # you can add additional values between minimum and maximum
     0: 0 # minimum value
