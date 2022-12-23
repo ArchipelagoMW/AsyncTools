@@ -1,6 +1,6 @@
 Sonic Adventure 2 Battle:
   goal: biolizard
-  mission_shuffle: random
+  mission_shuffle: true
   keysanity:
     false: 2
     true: 1
