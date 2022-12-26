@@ -7,19 +7,11 @@ Timespinner:
   StartWithMeyef: true
   QuickSeed: false
   SpecificKeycards: true
-  Inverted:
-    false: 50
-    true: 50
-  GyreArchives:
-    false: 50
-    true: 50
-  Cantoran:
-    false: 50
-    true: 50
+  Inverted: random
+  GyreArchives: random
+  Cantoran: random
   LoreChecks: true
-  BossRando:
-    false: 50
-    true: 50
+  BossRando: random
   BossScaling: true
   DamageRando: off
   ShopFill: default
@@ -29,4 +21,7 @@ Timespinner:
   LootTierDistro: full_random
   ShowBestiary: true
   ShowDrops: true
+  EnterSandman:
+    false: 75
+    true: 25
   DeathLink: false
