@@ -1,4 +1,3 @@
-Super Mario World:
   goal: bowser
   bosses_required: random-range-5-10
   dragon_coin_checks:
@@ -23,3 +22,11 @@ Super Mario World:
   foreground_palette_shuffle: false
   background_palette_shuffle: false
   starting_life_count: random-range-3-20
+  triggers:
+    - option_category: Super Mario World
+      option_name: level_shuffle
+      option_result: false
+      options:
+        Super Mario World:
+          local_items:
+            - Climb
