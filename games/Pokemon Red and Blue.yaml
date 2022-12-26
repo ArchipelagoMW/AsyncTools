@@ -1,5 +1,3 @@
-game: Pokemon Red and Blue
-name: Alchav
 Pokemon Red and Blue:
   accessibility: # Set rules for reachability of your items/locations.
     #    Locations: ensure everything can be reached and acquired.
@@ -291,6 +289,14 @@ Pokemon Red and Blue:
     random-high: 0
     3000: 50
     random-range-2500-10000: 25
+  lose_money_on_blackout: 
+    true: 1
+    false: 1
+  better_shops:
+    true: 5
+    false: 1
+  master_ball_price: 5000
+  deah_link: false
   triggers:
     - option_category: Pokemon Red and Blue
       option_name: randomize_pokemon_types
