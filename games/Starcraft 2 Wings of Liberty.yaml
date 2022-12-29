@@ -8,7 +8,8 @@ Starcraft 2 Wings of Liberty:
   bunker_upgrade: random
   all_in_map: random
   mission_order:
-    vanilla_shuffled: 40
+    vanilla: 10
+    vanilla_shuffled: 30
     grid: 30
     mini_campaign: 30
   shuffle_protoss: random
