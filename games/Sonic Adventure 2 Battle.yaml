@@ -50,12 +50,12 @@ Sonic Adventure 2 Battle:
   speed_mission_3: true
   speed_mission_4: true
   speed_mission_5: false
-  mech_mission_count: random-range-1-2
+  mech_mission_count: random-range-1-3
   mech_mission_2: true
   mech_mission_3: true
   mech_mission_4: true
   mech_mission_5: false
-  hunt_mission_count: random-range-1-2
+  hunt_mission_count: random-range-1-3
   hunt_mission_2: true
   hunt_mission_3: true
   hunt_mission_4: false
