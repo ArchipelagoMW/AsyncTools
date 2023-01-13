@@ -1,0 +1,16 @@
+Overcooked! 2:
+  accessibility: locations
+  shuffle_level_order: random
+  include_horde_levels: random 
+  prep_levels:
+    original: 50
+    excluded: 50
+  kevin_levels: 'true'
+
+  shorter_level_duration: 'false'
+  short_horde_levels: 'false'
+
+  stars_to_win: random-range-30-75
+
+
+  star_threshold_scale: random-range-25-45
