@@ -1,48 +1,63 @@
 The Witness:
+  local_items: [Lasers]
+  puzzle_randomization:
+    sigma_normal: 50
   shuffle_symbols:
     true: 50
-  shuffle_doors: 
+  shuffle_doors:
     none: 10
     panels: 20
     doors_simple: 50
     doors_complex: 20
-  shuffle_lasers: 
-    false: 50
+  shuffle_lasers:
+    false: 75
+    true: 25
   disable_non_randomized_puzzles:
+    false: 75
+    true: 25
+  shuffle_discarded_panels:
+    true: 75
+    false: 25
+  shuffle_vault_boxes:
+    true: 75
+    false: 25
+  shuffle_postgame:
     false: 50
-  shuffle_discarded_panels: 
-    true: 50
-  shuffle_vault_boxes: 
-    true: 50
-  shuffle_uncommon:
-    true: 50
-  shuffle_postgame: 
-    false: 50
-  victory_condition: 
+  victory_condition:
     elevator: 60
     challenge: 30
     mountain_box_long: 10
-  mountain_lasers: 
-    6: 50 
+  mountain_lasers:
+    6: 50
     7: 50
   challenge_lasers:
     8: 50
     9: 30
     10: 15
-    11: 5 
-  early_secret_area: 
+    11: 5
+  early_secret_area:
     false: 50
     true: 50
-  trap_percentage: 
+  trap_percentage:
     20: 50
-  puzzle_skip_amount: 
+  puzzle_skip_amount:
+    10: 50
+  hint_amount:
     10: 50
   triggers:
-    - option_name: shuffle_doors 
+    - option_name: shuffle_doors
       option_category: The Witness
-      option_result: doors_complex 
-      percentage: 50 
-      options: 
+      option_result: doors_simple
+      percentage: 50
+      options:
+        The Witness:
+          shuffle_symbols:
+            false: 50
+    - option_name: shuffle_doors
+      option_category: The Witness
+      option_result: doors_complex
+      percentage: 50
+      options:
         The Witness:
             shuffle_symbols:
               false: 50
