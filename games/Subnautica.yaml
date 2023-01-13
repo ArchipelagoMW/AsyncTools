@@ -1,9 +1,16 @@
 Subnautica:
+  accessibility: items
   item_pool:
-    valuable
+    standard: 1
+    valuable: 3
   goal:
     launch: 3
     free: 2
     infected: 1
     drive: 0
-  creature_scans: 50
+  creature_scans:
+    random-range-40-50: 1
+  creature_scan_logic:
+    stasis: 5
+    containment: 2
+    either: 2

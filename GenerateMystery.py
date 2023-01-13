@@ -49,6 +49,7 @@ def main():
 
     # Load meta data first.
     mystery: dict
+    meta: dict = {"meta_description": "Created by AsyncTools"}
     print("Loading meta player settings...")
     try:
         with open("games/__meta__.yaml") as file:
@@ -62,29 +63,42 @@ def main():
     print("Attempting to generate yaml file...")
 
     # Merge together each game yaml into our mystery settings.
+    for game in mystery["game"].keys():
+        try:
+            print(f"Loading ./games/{game}.yaml...")
+            with open(f"games/{game}.yaml") as game_file:
+                game_settings: dict = yaml.unsafe_load(game_file)
+
+                # Ensure that game_settings only has one property which has the same name as the file.
+                if len(game_settings.items()) > 1:
+                    raise ValueError(f"Found {len(game_settings)} top-level keys in `./games/{game}.yaml`")
+                if game not in game_settings:
+                    raise ValueError(f"Could not find `{game}` top-level key in `./games/{game}.yaml`")
+
+                mystery.update(game_settings)
+        except FileNotFoundError:
+            print(Fore.RED + f"\nUnable to find game settings file `./games/{game}.yaml` in games directory.")
+            exit(1)
+        except ValueError as e:
+            print(Fore.RED + f"\nGame settings dict should only have 1 key named after the game.\n\t{e}")
+            exit(2)
+        meta_path = os.path.join("games", f"{game}.meta.yaml")
+        if os.path.exists(meta_path):
+            with open(meta_path) as meta_file:
+                meta_settings: dict = yaml.unsafe_load(meta_file)
+            if len(meta_settings.items()) > 1:
+                raise ValueError(f"Found {len(meta_settings)} top-level keys in `{meta_path}`")
+            if game not in meta_settings:
+                raise ValueError(f"Could not find `{game}` top-level key in `{meta_path}`")
+            meta.update(meta_settings)
+
     with open("output/mystery.yaml", "w+") as file:
-        for game in mystery["game"].keys():
-            try:
-                print(f"Loading ./games/{game}.yaml...")
-                with open(f"games/{game}.yaml") as game_file:
-                    game_settings: dict = yaml.unsafe_load(game_file)
-
-                    # Ensure that game_settings only has one property which has the same name as the file.
-                    if len(game_settings.items()) > 1:
-                        raise ValueError(f"Found {len(game_settings)} top-level keys in `./games/{game}.yaml`")
-                    if game not in game_settings:
-                        raise ValueError(f"Could not find `{game}` top-level key in `./games/{game}.yaml`")
-
-                    mystery = {**mystery, **game_settings}
-            except FileNotFoundError:
-                print(Fore.RED + f"\nUnable to find game settings file `./games/{game}.yaml` in games directory.")
-                exit(1)
-            except ValueError as e:
-                print(Fore.RED + f"\nGame settings dict should only have 1 key named after the game.\n\t{e}")
-                exit(2)
-
-        yaml.dump(mystery, file)
-        print(Fore.GREEN + "\nOutputted settings file to `./output/mystery.yaml`")
+        yaml.dump(dict(mystery), file)
+    print(Fore.GREEN + "\nOutputted settings file to `./output/mystery.yaml`")
+    meta_path = os.path.join("output", "meta.yaml")
+    with open(meta_path, "w+") as file:
+        yaml.dump(meta, file)
+    print(Fore.GREEN + f"\nOutputted meta file to `{meta_path}`")
 
 
 if __name__ == "__main__":
