@@ -1,6 +1,4 @@
 Factorio:
-  start_hints:
-    - Progressive Science
   max_science_pack:
     utility_science_pack: 30
     space_science_pack: 50
