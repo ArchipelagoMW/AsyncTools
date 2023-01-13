@@ -19,6 +19,5 @@ Subnautica:
     false: 1
   swim_rule:
     easy: 5
-    normal: 3
+    normal: 4
     items_easy: 5
-    items_normal: 2
