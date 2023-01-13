@@ -14,3 +14,11 @@ Subnautica:
     stasis: 5
     containment: 2
     either: 2
+  early_seaglide:
+    true: 2
+    false: 1
+  swim_rule:
+    easy: 5
+    normal: 3
+    items_easy: 5
+    items_normal: 2
