@@ -48,7 +48,7 @@ The Witness:
     - option_name: shuffle_doors
       option_category: The Witness
       option_result: doors_simple
-      percentage: 50
+      percentage: 20
       options:
         The Witness:
           shuffle_symbols:
