@@ -1,7 +1,7 @@
 name: Player{player}
 description: Archipelago Async Mystery Filler Settings
 requires:
-  version: 0.3.6
+  version: 0.3.7
 
 # Define your game here!
 game:
@@ -27,4 +27,5 @@ game:
   Donkey Kong Country 3: 20
   Dark Souls III: 15
   Hollow Knight: 30
+  Pokemon Red and Blue: 50
   Overcooked! 2: 15
