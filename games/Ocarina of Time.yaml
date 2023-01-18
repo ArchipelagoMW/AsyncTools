@@ -1,210 +1,112 @@
 Ocarina of Time:
-  logic_rules: # Determine the logic used to place items.
-    glitchless: 1 # No glitches are required, but may require some minor tricks (can be set under logic_tricks)
-    glitched: 0 # Movement-oriented glitches are required. Entrance randomization of any kind is not compatible with glitched logic.
-    no_logic: 0 # All locations considered available with no items. May be impossible to beat.
-  logic_no_night_tokens_without_suns_song: # Skulltulas that only spawn at night will logically require Sun's Song.
-    on: 0
-    off: 1
-
-  # Open Options: controls the state of certain pathways in the world
-  open_forest:
-    open: 0 # Deku Tree and Kokiri Forest exit are not blocked.
-    closed_deku: 1 # Kokiri Forest exit is not blocked. Deku Tree access is blocked until you have Kokiri Sword and Deku Shield.
-    closed: 0 # Kokiri Forest exit is blocked until you finish Deku Tree. This setting will override Starting Age: Adult.
-  open_kakariko: # also controls Happy Mask Shop behavior
-    open: 1 # Kakariko Gate is always open as child. Happy Mask Shop opens when you get Zelda's Letter.
-    zelda: 0 # Kakariko Gate and Mask Shop are closed until you obtain Zelda's Letter; don't need to show to guard.
-    closed: 0 # Kakariko Gate and Mask Shop are closed until you show Zelda's Letter to the guard.
-  open_door_of_time:
-    on: 1 # Can freely swap ages at the Temple of Time.
-    off: 0 # Requires an Ocarina and the Song of Time to open the door. Does not require the 3 spiritual stones.
-  zora_fountain:
-    closed: 1 # King Zora blocks the way to Zora's Fountain until you show him Ruto's Letter as child.
-    adult: 0 # King Zora is always moved for adult, but still blocks the way as child.
-    open: 0 # King Zora starts moved for both child and adult. Ruto's Letter is removed from the pool.
-  gerudo_fortress:
-    normal: 0 # Free all 4 carpenters
-    fast: 1 # Free only 1 carpenter (the far left one)
-    open: 0 # No carpenters needed to open the fortress.
-  trials: 0 # Number of trials to open the barrier inside Ganons Castle. Anywhere from 0 to 6, or random.
-  bridge: # Controls Rainbow Bridge requirement
-    medallions: 1 # Obtain N medallions
-    stones: 0 # Obtain N spiritual stones
-    dungeons: 0 # Obtain any N dungeon rewards (stones and medallions)
-    vanilla: 0 # Shadow Medallion, Spirit Medallion, and Light Arrows. Note that you can't get the Light Arrows hint if you do this.
-    open: 0 # Bridge requires nothing
-    tokens: 0 # Obtain N gold skulltula tokens
-
-  # Bridge options: controls Rainbow Bridge numbers
-  bridge_medallions: random # 0-6
-  bridge_stones: 3 # 0-3
-  bridge_rewards: 9 # dungeon rewards; 0-9
-  bridge_tokens: 40 # 0-100
-
-  # World Options: controls the configuration of the world
-  starting_age: # Choose which age you want to start as. Cannot start as adult with Closed Forest.
-    child: 1
-    adult: 1
-  triforce_hunt: # Collect N Triforce pieces to win. The game is saved upon winning so you can reenter.
-    on: 0
-    off: 1
-  triforce_goal: 30 # Number of required pieces for Triforce Hunt. May be up to 100.
-  bombchus_in_logic: # Bombchus properly considered in logic.
-    on: 0 # First chu pack will always be 20. Chus can be purchased at Kokiri Shop and Bazaar. Bombchu Bowling opens with chus.
-    off: 1
-
-  spawn_positions:
-    on: 2
-    off: 3
-  shuffle_dungeon_entrances:
-    on: 2
-    off: 3
-
-  # Shuffle Options: controls which items are shuffled into the world
-  shuffle_song_items:
-    song: 3 # Songs remain at song locations within a player's own world.
-    dungeon: 0 # Songs are placed at the end of dungeons (also at Song from Impa)
-    any: 2 # Songs are shuffled into the itempool. Song locations receive regular items.
-  shopsanity: # Shuffle items in shops
-    off: 3 # All shop items are vanilla.
-    fixed_number: 0
-    random_number: 2
-  shop_slots: 4
-  tokensanity:
-    off: 3 # All 100 gold skulltulas have their tokens.
-    dungeons: 2 # Skulltulas in dungeons will have their tokens randomized into the main item pool.
-    overworld: 0 # Skulltulas in the overworld will have their tokens randomized into the main item pool.
-    all: 0 # All skulltulas will have their tokens randomized into the main item pool.
-  shuffle_scrubs: # This setting shuffles business scrubs that ordinarily sell renewable items.
-    off: 3 # Only the 3 business scrubs that sell unique items are shuffled.
-    affordable: 2 # All scrub prices are reduced to 10 rupees.
-    expensive: 0 # Scrub prices are vanilla. This will require spending over 1000 rupees on scrubs.
-    random_prices: 0 # Scrub prices are randomly set between 0-99 rupees.
-  shuffle_cows: # Playing Epona's Song for a cow will cause it to give you an item.
-    on: 0
-    off: 1
-  shuffle_kokiri_sword: # Shuffles the Kokiri Sword chest in Kokiri Forest. Shuffling this will require child to manage Deku Sticks as a weapon.
-    on: 2
-    off: 3
-  shuffle_ocarinas: # Shuffles the Fairy Ocarina and Ocarina of Time into the item pool. Restricts the ability to play songs.
-    on: 0
-    off: 1
-  shuffle_weird_egg: # Shuffles the Weird Egg from Malon at Hyrule Castle. Restricts access to Zelda's Letter, Lon Lon Ranch checks, and more.
-    on: 0
-    off: 1
-  shuffle_gerudo_card: # Shuffles the Gerudo Membership Card, which allows access to Gerudo Training Grounds and makes the guards friendly.
-    on: 0
-    off: 1
-  shuffle_beans: # Adds a pack of 10 beans to the pool; the bean salesman sells one item for 60 rupees.
-    on: 0
-    off: 1
-  shuffle_medigoron_carpet_salesman: # Adds Giant's Knife and a 20 chu pack to the pool; these locations sell one item for 200 rupees.
-    on: 0
-    off: 1
-
-  # Dungeon Items Options
-  enhance_map_compass: # Map tells if a dungeon is MQ. Compass tells what the prize is. Temple of Time altar won't say what prizes are.
-    on: 0
-    off: 1
-  shuffle_mapcompass:
-    startwith: 1 # Start with map/compass for every dungeon in your inventory.
-    dungeon: 0 # Item type remains in its associated dungeon.
-    remove: 0 # Item type is removed. Key doors are automatically opened.
-    keysanity: 0 # Item type may be shuffled anywhere in the multiworld.
-    vanilla: 0 # Item type remains in its vanilla location.
-  shuffle_smallkeys:
-    dungeon: 1
-    remove: 0
-    keysanity: 0
-    vanilla: 0
-  shuffle_fortresskeys:
-    vanilla: 1
-    keysanity: 0
-  shuffle_bosskeys:
-    dungeon: 1
-    remove: 0
-    keysanity: 0
-    vanilla: 0
-  shuffle_ganon_bosskey:
-    dungeon: 0
-    remove: 0
-    keysanity: 0
-    vanilla: 0
-    on_lacs: 1 # Puts the Ganon BK on LACS. Use to allow early Ganons Castle access without beating the game.
-
-  # Light Arrow Cutscene (LACS) Options
-  lacs_condition: # Sets trigger condition for LACS. Use these options plus triggers to replicate "Ganon Boss Key On LACS" options.
-    vanilla: 0 # Shadow and Spirit Medallions
-    stones: 0
-    medallions: 3
-    dungeons: 2
-    tokens: 0
-  lacs_medallions: random-high # 0-6
-  lacs_stones: 3 # 0-3
-  lacs_rewards: random-high # 0-9
-  lacs_tokens: 40 # 0-100
-
-  # Timesaver Options
-  skip_child_zelda: off
-  no_escape_sequence: on # Skips the tower collapse sequence between the Ganondorf and Ganon fights.
-  no_guard_stealth: on # The crawlspace into Hyrule Castle skips straight to Zelda.
-  no_epona_race: on # Epona can always be summoned with Epona's Song.
-  skip_some_minigame_phases: on # Dampe Race and Horseback Archery give both rewards if the second condition is met on the first attempt.
-  complete_mask_quest: off # All masks are immediately available to borrow from the Happy Mask Shop.
-  useful_cutscenes: off # Reenables the Poe cutscene in Forest Temple, Darunia in Fire Temple, and Twinrova introduction. Mostly useful for glitched.
-  fast_chests: on # All chest animations are fast. If disabled, major items have a slow animation.
-  free_scarecrow: off # Pulling out the ocarina near a scarecrow spot spawns Pierre without needing the song.
-  fast_bunny_hood: on # Bunny Hood lets you move 1.5x faster like in Majora's Mask.
-  chicken_count: 7 # Controls the number of Cuccos for Anju to give an item as child. 0 to 7
-
-  # Miscellaneous Options
-  hints: always
-  hint_dist: async
-  text_shuffle: # Randomizes text in the game for comedic effect.
-    none: 1
-    except_hints: 0 # Hints, key text, and shop item text are not shuffled to preserve gameplay.
-    complete: 0 # No regard is made for playability.
-  damage_multiplier: # Controls the amount of damage Link takes.
-    normal: 1
-    half: 0
-    double: 0
-    quadruple: 0
-    ohko: 0 # Link dies in one hit.
-  no_collectible_hearts: off # Also known as "Hero Mode." Hearts will not drop from enemies or objects.
-  starting_tod: # Starting time of day
-    default: 1        # 10:00
-    sunrise: 0        # 06:30
-    morning: 0        # 09:00
-    noon: 0           # 12:00
-    afternoon: 0      # 15:00
-    sunset: 0         # 18:00
-    evening: 0        # 21:00
-    midnight: 0       # 00:00
-    witching_hour: 0  # 03:00
-  start_with_consumables: off # Start the game with full Deku Sticks and Deku Nuts.
-  start_with_rupees: off # Start with a full wallet. Wallet upgrades will also fill your wallet.
-
-  # Item Pool Options
-  item_pool_value: # Changes the amount of bonus items that are available
-    plentiful: 0 # Extra major items are added.
-    balanced: 1 # Original item pool.
-    scarce: 0 # Some excess items are removed, including health upgrades.
-    minimal: 0 # Most excess items are removed.
-  junk_ice_traps:
-    off: 1 # All ice traps are removed.
-    normal: 0 # Only ice traps from the base item pool are placed.
-    extra: 0 # Chance to add extra ice traps when junk items are added to the pool.
-    mayhem: 0 # All added junk items will be ice traps.
-    onslaught: 0 # All junk items will be replaced by ice traps, even those in the base pool.
-  ice_trap_appearance:
-    major_only: 0 # Ice traps appear as major items.
-    junk_only: 0 # Ice traps appear as junk items.
-    anything: 1 # Ice traps may appear as anything.
-  # Choose the earliest and latest possible items given for the adult trade sequence.
-  # Options: pocket_egg, pocket_cucco, cojiro, odd_mushroom, poachers_saw, broken_sword, prescription, eyeball_frog, eyedrops, claim_check
-  logic_earliest_adult_trade: claim_check
-  logic_latest_adult_trade: claim_check
-
   exclude_locations:
     - GF HBA 1500 Points
+    - Deku Theater Mask of Truth
+  local_items:
+    - Triforce Piece
+    - Ice Trap
+
+  logic_rules: glitchless
+  logic_no_night_tokens_without_suns_song: off
+
+  # World state
+  open_forest:
+    open: 3
+    closed_deku: 7
+  open_kakariko: open
+  open_door_of_time: on
+  zora_fountain: closed
+  gerudo_fortress: fast
+  trials: 0
+
+  # Bridge requirements. real completion requirements are on ganon bk options
+  bridge:
+    medallions: 7
+    dungeons: 2
+    open: 1
+  bridge_medallions: random
+  bridge_rewards: random
+
+  starting_age:
+    child: 1
+    adult: 1
+
+  # Local TFH
+  triforce_hunt:
+    on: 2
+    off: 8
+  triforce_goal:
+    30: 5
+    40: 3
+    50: 2
+  extra_triforce_percentage: 50
+
+  # ER
+  spawn_positions:
+    on: 1
+    off: 4
+  shuffle_dungeon_entrances:
+    on: 1
+    off: 4
+  shuffle_bosses:
+    on: 1
+    off: 4
+
+  # Locations
+  shuffle_song_items:
+    song: 3
+    any: 2
+  shopsanity:
+    off: 4
+    random_number: 1
+  shopsanity_prices: affordable
+  tokensanity:
+    off: 80
+    dungeons: 15
+    all: 5
+  shuffle_scrubs:
+    off: 4
+    affordable: 1
+  shuffle_kokiri_sword:
+    off: 1
+    on: 4
+  shuffle_ocarinas:
+    off: 3
+    on: 2
+
+  # If pot shuffle turns out to go badly, remove this
+  shuffle_pots:
+    off: 90
+    dungeons: 10
+
+  # Dungeon items
+  shuffle_mapcompass: startwith
+  shuffle_smallkeys: dungeon
+  shuffle_bosskeys:
+    dungeon: 4
+    keysanity: 1
+  key_rings:
+    off: 7
+    all: 3  # trigger: key_rings == all -> shuffle_smallkeys := keysanity
+
+  # Ganon BK -- completion condition if not TFH
+  shuffle_ganon_bosskey:
+    remove: 1
+    medallions: 6
+    dungeons: 3
+  ganon_bosskey_medallions: random-high
+  ganon_bosskey_rewards: random-high
+
+  # Extra options
+  chicken_count: 1
+  correct_chest_appearances: both
+  correct_potcrate_appearances: textures_content
+  hint_dist: async
+
+  triggers:
+    - option_name: key_rings
+      option_category: Ocarina of Time
+      option_result: all
+      options:
+        Ocarina of Time:
+          shuffle_smallkeys: keysanity
