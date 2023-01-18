@@ -1,13 +1,21 @@
 Sonic Adventure 2 Battle:
+  goal: biolizard
+  mission_shuffle: true
+  keysanity:
+    false: 2
+    true: 1
+  whistlesanity:
+    none: 2
+    pipes: 1
+  beetlesanity:
+    false: 2
+    true: 1
   music_shuffle:
     full: 1
     none: 2
     levels: 1
-  include_missions:
-    "3": 2
-    "4": 1
-    "5": 1
   emblem_percentage_for_cannons_core: random-range-50-75
+  required_cannons_core_missions: first
   number_of_level_gates:
     "3": 1
     "4": 2
@@ -32,3 +40,33 @@ Sonic Adventure 2 Battle:
   timestop_trap_weight: random
   confusion_trap_weight: random
   tiny_trap_weight: random
+  gravity_trap_weight: random
+  exposition_trap_weight: random
+  sadx_music: sa2b
+  narrator: random
+  logic_difficulty: standard
+  speed_mission_count: random-range-2-4
+  speed_mission_2: true
+  speed_mission_3: true
+  speed_mission_4: true
+  speed_mission_5: false
+  mech_mission_count: random-range-1-3
+  mech_mission_2: true
+  mech_mission_3: true
+  mech_mission_4: true
+  mech_mission_5: false
+  hunt_mission_count: random-range-1-3
+  hunt_mission_2: true
+  hunt_mission_3: true
+  hunt_mission_4: false
+  hunt_mission_5: false
+  kart_mission_count: random-range-1-2
+  kart_mission_2: true
+  kart_mission_3: false
+  kart_mission_4: false
+  kart_mission_5: false
+  cannons_core_mission_count: 1
+  cannons_core_mission_2: false
+  cannons_core_mission_3: false
+  cannons_core_mission_4: false
+  cannons_core_mission_5: false
