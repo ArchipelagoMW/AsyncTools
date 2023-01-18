@@ -14,3 +14,11 @@ Dark Souls III:
   late_basin_of_vows:
     false: 1
     true: 5
+  no_spell_requirements:
+    false: 2
+    true: 3
+  no_equip_load:
+    false: 2
+    true: 3
+  death_link:
+    false: 50
