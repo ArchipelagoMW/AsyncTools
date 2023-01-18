@@ -1,17 +1,27 @@
 Timespinner:
+  accessibility: items
+  local_items: [Timespinner Gear 1, Timespinner Gear 2, Timespinner Gear 3]
   StartWithJewelryBox: true
   DownloadableItems: true
-  FacebookMode: false
-  StartWithMeyef: false
+  EyeSpy: false
+  StartWithMeyef: true
   QuickSeed: false
   SpecificKeycards: true
-  Inverted:
-    true: 1
-    false: 1
-  GyreArchives:
-    true: 1
-    false: 1
-  Cantoran: false
-  DamageRando: false
+  Inverted: random
+  GyreArchives: random
+  Cantoran: random
   LoreChecks: true
+  BossRando: random
+  BossScaling: true
+  DamageRando: off
+  ShopFill: default
+  ShopWarpShards: true
+  LootPool: randomized
+  DropRateCategory: randomized
+  LootTierDistro: full_random
+  ShowBestiary: true
+  ShowDrops: true
+  EnterSandman:
+    false: 75
+    true: 25
   DeathLink: false
