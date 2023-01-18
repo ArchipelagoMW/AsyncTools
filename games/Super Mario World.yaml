@@ -1,0 +1,33 @@
+Super Mario World:
+  goal: bowser
+  bosses_required: random-range-5-10
+  dragon_coin_checks:
+    false: 2
+    true: 1
+  bowser_castle_doors: vanilla
+  level_shuffle:
+    false: 2
+    true: 1
+  swap_donut_gh_exits: false
+  display_received_item_popups: progression
+  trap_fill_percentage: random-low
+  ice_trap_weight: random
+  stun_trap_weight: random
+  literature_trap_weight: random
+  autosave: true
+  music_shuffle:
+    none: 3
+    consistent: 2
+    full: 1
+  mario_palette: random
+  foreground_palette_shuffle: false
+  background_palette_shuffle: false
+  starting_life_count: random-range-3-20
+  triggers:
+    - option_category: Super Mario World
+      option_name: level_shuffle
+      option_result: false
+      options:
+        Super Mario World:
+          local_items:
+            - Climb
