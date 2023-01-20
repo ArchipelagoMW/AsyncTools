@@ -49,7 +49,7 @@ Ocarina of Time:
     on: 1
     off: 4
   shuffle_bosses:
-    on: 1
+    limited: 1
     off: 4
 
   # Locations
