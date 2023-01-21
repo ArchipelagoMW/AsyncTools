@@ -84,27 +84,27 @@ Factorio:
               coal:
                 frequency: 0.333
                 richness: 1
-                size: 1
+                size: 6
               copper-ore:
                 frequency: 0.333
                 richness: 1
-                size: 1
+                size: 6
               crude-oil:
                 frequency: 0.333
                 richness: 1
-                size: 1
+                size: 6
               iron-ore:
                 frequency: 0.333
                 richness: 1
-                size: 1
+                size: 6
               stone:
                 frequency: 0.333
                 richness: 1
-                size: 1
+                size: 6
               uranium-ore:
                 frequency: 0.333
                 richness: 1
-                size: 1
+                size: 6
             enemy_evolution:
               time_factor: 2.0e-06
             enemy_expansion:
@@ -120,27 +120,27 @@ Factorio:
               coal:
                 frequency: 0.333
                 richness: 1
-                size: 1
+                size: 6
               copper-ore:
                 frequency: 0.333
                 richness: 1
-                size: 1
+                size: 6
               crude-oil:
                 frequency: 0.333
                 richness: 1
-                size: 1
+                size: 6
               iron-ore:
                 frequency: 0.333
                 richness: 1
-                size: 1
+                size: 6
               stone:
                 frequency: 0.333
                 richness: 1
-                size: 1
+                size: 6
               uranium-ore:
                 frequency: 0.333
                 richness: 1
-                size: 1
+                size: 6
             enemy_evolution:
               time_factor: 2.0e-06
             enemy_expansion:
