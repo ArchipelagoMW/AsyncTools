@@ -55,7 +55,6 @@ Factorio:
     death_world: 5
     rail_world: 40
     peaceful_rail_world: 20
-  world_gen:
   progressive: on
   evolution_traps:
     0: 50
@@ -68,11 +67,6 @@ Factorio:
     random-low: 50
   energy_link: true
   triggers:
-    - option_category: Factorio
-      option_name: world_type
-      option_result: rich
-      options:
-        null: null
     - option_category: Factorio
       option_name: world_type
       option_result: peaceful_rich
@@ -90,21 +84,27 @@ Factorio:
               coal:
                 frequency: 0.333
                 richness: 1
+                size: 6
               copper-ore:
                 frequency: 0.333
                 richness: 1
+                size: 6
               crude-oil:
                 frequency: 0.333
                 richness: 1
+                size: 6
               iron-ore:
                 frequency: 0.333
                 richness: 1
+                size: 6
               stone:
                 frequency: 0.333
                 richness: 1
+                size: 6
               uranium-ore:
                 frequency: 0.333
                 richness: 1
+                size: 6
             enemy_evolution:
               time_factor: 2.0e-06
             enemy_expansion:
@@ -120,21 +120,27 @@ Factorio:
               coal:
                 frequency: 0.333
                 richness: 1
+                size: 6
               copper-ore:
                 frequency: 0.333
                 richness: 1
+                size: 6
               crude-oil:
                 frequency: 0.333
                 richness: 1
+                size: 6
               iron-ore:
                 frequency: 0.333
                 richness: 1
+                size: 6
               stone:
                 frequency: 0.333
                 richness: 1
+                size: 6
               uranium-ore:
                 frequency: 0.333
                 richness: 1
+                size: 6
             enemy_evolution:
               time_factor: 2.0e-06
             enemy_expansion:
