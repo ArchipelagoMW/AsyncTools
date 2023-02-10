@@ -1,19 +1,39 @@
 Starcraft 2 Wings of Liberty:
   game_difficulty:
-    casual: 20
-    normal: 30
+    casual: 25
+    normal: 35
     hard: 20
-    brutal: 10
+    brutal: 0
   upgrade_bonus: random
   bunker_upgrade: random
   all_in_map: random
   mission_order:
-    vanilla: 10
+    vanilla: 5
     vanilla_shuffled: 30
-    grid: 30
-    mini_campaign: 30
-  shuffle_protoss: random
+    mini_campaign: 0 # Significantly harder All in
+    grid: 0 # Significantly harder All in
+    mini_grid: 20 # No All in
+    blitz: 25 # No All in
+    gauntlet: 20 # No All in
+  shuffle_protoss: false # Set to random for vanilla or vanilla_shuffled by a trigger
   shuffle_no_build: random
   early_unit: true
   required_tactics: standard
   units_always_have_upgrades: true
+  triggers:
+    - option_category: Starcraft 2 Wings of Liberty
+      option_name: mission_order
+      option_result: vanilla
+      options:
+        Starcraft 2 Wings of Liberty:
+          shuffle_protoss:
+            true: 50
+            false: 50
+    - option_category: Starcraft 2 Wings of Liberty
+      option_name: mission_order
+      option_result: vanilla_shuffled
+      options:
+        Starcraft 2 Wings of Liberty:
+          shuffle_protoss:
+            true: 50
+            false: 50
