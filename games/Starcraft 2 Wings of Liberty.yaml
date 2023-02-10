@@ -15,20 +15,12 @@ Starcraft 2 Wings of Liberty:
     mini_grid: 20 # No All in
     blitz: 25 # No All in
     gauntlet: 20 # No All in
-  shuffle_protoss: false # Set to random for vanilla or vanilla_shuffled by a trigger
+  shuffle_protoss: false # Set to random for vanilla_shuffled by a trigger
   shuffle_no_build: random
   early_unit: true
   required_tactics: standard
   units_always_have_upgrades: true
   triggers:
-    - option_category: Starcraft 2 Wings of Liberty
-      option_name: mission_order
-      option_result: vanilla
-      options:
-        Starcraft 2 Wings of Liberty:
-          shuffle_protoss:
-            true: 50
-            false: 50
     - option_category: Starcraft 2 Wings of Liberty
       option_name: mission_order
       option_result: vanilla_shuffled
