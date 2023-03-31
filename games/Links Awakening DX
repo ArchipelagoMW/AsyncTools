@@ -1,0 +1,42 @@
+Links Awakening DX:
+  logic:
+    normal: 1
+  tradequest:
+    false: 3
+    true: 2
+  goal:
+    instruments: 5
+    seashells: 2
+  instrument_count:
+    random-high: 1
+  trendy_game:
+    normal: 5
+    hard: 2
+  shuffle_nightmare_keys:
+    original_dungeon: 5
+    own_world: 3
+    any_world: 2
+  shuffle_small_keys:
+    original_dungeon: 5
+    own_world: 3
+    any_world: 2
+  shuffle_maps:
+    original_dungeon: 5
+    own_world: 3
+    any_world: 2
+  shuffle_compasses:
+    original_dungeon: 5
+    own_world: 3
+    any_world: 2
+  shuffle_stone_beaks:
+    original_dungeon: 5
+    own_world: 3
+    any_world: 2
+  triggers:
+    - option_category: Links Awakening DX
+      option_name: goal
+      option_result: seashells
+      options:
+        Links Awakening DX:
+          local_items:
+            - Seashell
