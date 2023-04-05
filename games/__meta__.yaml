@@ -6,6 +6,7 @@ requires:
 # Define your game here!
 game:
   A Link to the Past: 80
+  Adventure: 10
   Dark Souls III: 15
   Donkey Kong Country 3: 20
   Factorio: 15
