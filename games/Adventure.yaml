@@ -1,0 +1,23 @@
+Adventure:
+  dragon_slay_check: true
+  death_link: false
+  bat_logic:
+    cannot_break: 1
+    can_break: 2
+  freeincarnate_max: 17
+  dragon_rando_type:
+    normal: 2
+    shuffle: 1
+  connector_multi_slot: false
+  yorgle_speed: random-range-1-3
+  yorgle_min_speed: 1
+  grundle_speed: random-range-1-3
+  grundle_min_speed: 1
+  rhindle_speed: random-range-2-4
+  rhindle_min_speed: random-range-1-2
+  difficulty_switch_a: hard_with_unlock_item
+  difficulty_switch_b: hard_with_unlock_item
+  start_castle:
+    yellow: 5
+    black: 1
+    white: 1
