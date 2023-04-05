@@ -11,12 +11,9 @@ Risk of Rain 2:
   total_revivals: random-high
   start_with_revive: 'true'
   final_stage_death:
-    # Death on the final boss stage counts as a win.
     false: 50
     true: 100
   begin_with_loop:
-    # Enable to precollect a full loop of environments.
-    # Only has an effect with Explore Mode.
     false: 50
     true: 10
   dlc_sotv: 'false'
@@ -24,17 +21,6 @@ Risk of Rain 2:
   shrine_use_step: 0
   enable_lunar: random
   item_weights:
-    # Set item_pool_presets to true if you want to use one of these presets.
-    # Preset choices for determining the weights of the item pool.
-    # - New is a test for a potential adjustment to the default weights.
-    # - Uncommon puts a large number of uncommon items in the pool.
-    # - Legendary puts a large number of legendary items in the pool.
-    # - Lunartic makes everything a lunar item.
-    # - Chaos generates the pool completely at random with rarer items having a slight cap to prevent this option being too easy.
-    # - No Scraps removes all scrap items from the item pool.
-    # - Even generates the item pool with every item having an even weight.
-    # - Scraps Only will be only scrap items in the item pool.
-    # - Void makes everything a void item.
     default: 50
     new: 50
     uncommon: 50
@@ -46,6 +32,5 @@ Risk of Rain 2:
     scraps_only: 50
     void: 0
   item_pool_presets:
-    # Will use the item weight presets when set to true, otherwise will use the custom set item pool weights.
     false: 0
     true: 50
