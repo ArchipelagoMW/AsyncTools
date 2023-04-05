@@ -5,23 +5,30 @@ Super Mario World:
     false: 2
     true: 1
   bowser_castle_doors: vanilla
+  bowser_castle_rooms:
+    vanilla: 2
+    random_two_room: 1
   level_shuffle:
     false: 2
     true: 1
-  swap_donut_gh_exits: false
-  display_received_item_popups: progression
+  exclude_special_zone:
+    true: 2
+    false: 1
+  boss_shuffle:
+    none: 1
+    simple: 1
+    full: 1
   trap_fill_percentage: random-low
   ice_trap_weight: random
   stun_trap_weight: random
   literature_trap_weight: random
-  autosave: true
+  timer_trap_weight: random
+  overworld_speed: fast
   music_shuffle:
     none: 3
     consistent: 2
     full: 1
   mario_palette: random
-  foreground_palette_shuffle: false
-  background_palette_shuffle: false
   starting_life_count: random-range-3-20
   triggers:
     - option_category: Super Mario World
@@ -29,5 +36,4 @@ Super Mario World:
       option_result: false
       options:
         Super Mario World:
-          local_items:
-            - Climb
+          early_climb: 1
