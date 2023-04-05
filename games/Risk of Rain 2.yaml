@@ -1,67 +1,105 @@
 Risk of Rain 2:
-  total_locations: # Number of location checks which are added to the Risk of Rain playthrough.
-    # you can add additional values between minimum and maximum
-    10: 0 # minimum value
-    100: 50 # maximum value
-    random: 0
-    random-low: 0
-    random-high: 0
-  total_revivals: # Number of `Dio's Best Friend` item put in the item pool.
-    # you can add additional values between minimum and maximum
-    0: 1 # minimum value
-    10: 0 # maximum value
-    random: 0
-    random-low: 0
-    random-high: 0
-    4: 0
-  start_with_revive: # Start the game with a `Dio's Best Friend` item.
-    false: 1
-    true: 0
-  item_pickup_step: # Number of items to pick up before an AP Check is completed.
-    #    Setting to 1 means every other pickup.
-    #    Setting to 2 means every third pickup. So on...
-    # you can add additional values between minimum and maximum
-    0: 0 # minimum value
-    5: 0 # maximum value
-    random: 0
-    random-low: 0
-    random-high: 0
-    1: 50
-    2: 25
-    3: 5
-  enable_lunar: # Allows Lunar items in the item pool.
+
+  accessibility:
+    # Set rules for reachability of your items/locations.
+    # Locations: ensure everything can be reached and acquired.
+    # Items: ensure all logically relevant items can be acquired.
+    # Minimal: ensure what is needed to reach your goal can be acquired.
+    locations: 0
+    items: 50
+    minimal: 0
+
+  local_items:
+    # Forces these items to be in their native world.
+    []
+
+  non_local_items:
+    # Forces these items to be outside their native world.
+    []
+
+  start_inventory:
+    # Start with these items.
+    {}
+
+  start_hints:
+    # Start with these item's locations prefilled into the !hint command.
+    []
+
+  start_location_hints:
+    # Start with these locations and their item prefilled into the !hint command
+    []
+
+  exclude_locations:
+    # Prevent these locations from having an important item
+    []
+
+  priority_locations:
+    # Prevent these locations from having an unimportant item
+    []
+
+  item_links:
+    # Share part of your item pool with other players.
+    []
+
+  goal:
+    # Classic Mode: Every Item pickup increases fills a progress bar which gives location checks.
+    # 
+    # Explore Mode: Each environment will have location checks within each environment.
+    # environments will be locked in the item pool until received.
+    classic: 25
+    explore: 50
+
+  total_locations: random-range-60-200
+  chests_per_stage: random-high
+  shrines_per_stage: random-low
+  scavengers_per_stage: random
+  scanner_per_stage: random
+  altars_per_stage: random
+  total_revivals: random-high
+
+
+  start_with_revive: 'true'
+  final_stage_death:
+    # Death on the final boss stage counts as a win.
     false: 50
-    true: 50
-  item_pool_presets:
     true: 100
-    false: 2
-  green_scrap:
-    random: 1
-  red_scrap:
-    random: 1
-  yellow_scrap:
-    random: 1
-  white_scrap:
-    random: 1
-  common_item:
-    random: 1
-  uncommon_item:
-    random: 1
-  legendary_item:
-    random: 1
-  boss_item:
-    random: 1
-  lunar_item:
-    random: 1
-  equipment:
-    random: 1
+
+  begin_with_loop:
+    # Enable to precollect a full loop of environments.
+    # Only has an effect with Explore Mode.
+    false: 50
+    true: 10
+  dlc_sotv: 'false'
+  item_pickup_step: random-range-0-3
+
+  shrine_use_step: 0
+
+  enable_lunar: random
+
   item_weights:
-    default: 100
-    new: 0
-    uncommon: 0
-    legendary: 1
-    lunartic: 1
-    chaos: 0
-    no_scraps: 0
-    even: 0
-    scraps_only: 0
+    # Set item_pool_presets to true if you want to use one of these presets.
+    # Preset choices for determining the weights of the item pool.
+    # - New is a test for a potential adjustment to the default weights.
+    # - Uncommon puts a large number of uncommon items in the pool.
+    # - Legendary puts a large number of legendary items in the pool.
+    # - Lunartic makes everything a lunar item.
+    # - Chaos generates the pool completely at random with rarer items having a slight cap to prevent this option being too easy.
+    # - No Scraps removes all scrap items from the item pool.
+    # - Even generates the item pool with every item having an even weight.
+    # - Scraps Only will be only scrap items in the item pool.
+    # - Void makes everything a void item.
+    default: 50
+    new: 50
+    uncommon: 50
+    legendary: 50
+    lunartic: 0
+    chaos: 50
+    no_scraps: 50
+    even: 50
+    scraps_only: 50
+    void: 0
+
+  item_pool_presets:
+    # Will use the item weight presets when set to true, otherwise will use the custom set item pool weights.
+    false: 0
+    true: 50
