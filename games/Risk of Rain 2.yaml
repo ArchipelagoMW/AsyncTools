@@ -1,23 +1,21 @@
 Risk of Rain 2:
   goal:
     classic: 25
-    explore: 50
+    explore: 100
   total_locations: random-range-60-200
-  chests_per_stage: random-high
+  chests_per_stage: random-range-high-5-15
   shrines_per_stage: random-low
   scavengers_per_stage: random
   scanner_per_stage: random
   altars_per_stage: random
   total_revivals: random-high
   start_with_revive: 'true'
-  final_stage_death:
-    false: 50
-    true: 100
+  final_stage_death: random
   begin_with_loop:
     false: 50
     true: 10
   dlc_sotv: 'false'
-  item_pickup_step: random-range-0-3
+  item_pickup_step: random-range-low-0-3
   shrine_use_step: 0
   enable_lunar: random
   item_weights:
