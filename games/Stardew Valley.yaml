@@ -1,9 +1,13 @@
 Stardew Valley:
   accessibility: items
-  starting_money: 2000
+  starting_money: random-range-1000-3000
   resource_pack_multiplier: 100
-  bundle_randomization: thematic
-  bundle_price: normal
+  bundle_randomization:
+    thematic: 2
+    vanilla: 1
+  bundle_price:
+    normal: 3
+    cheap: 1
   entrance_randomization: disabled
   backpack_progression: early_progressive
   tool_progression: progressive
@@ -11,15 +15,20 @@ Stardew Valley:
   building_progression: progressive_early_shipping_bin
   elevator_progression: progressive
   arcade_machine_locations: disabled
-  help_wanted_locations: 7
+  help_wanted_locations:
+    7: 1
+    14: 1
   fishsanity: none
-  player_buff_number: 4
-  goal: community_center
+  player_buff_number: random-range-4-8
+  goal:
+    community_center: 3
+    bottom_of_the_mines: 1
   multiple_day_sleep_enabled: 'true'
   multiple_day_sleep_cost: 0
   experience_multiplier: 200
-  debris_multiplier: half
+  debris_multiplier:
+    vanilla: 1
+    half: 1
   quick_start: 'true'
   gifting: 'false'
-  gift_tax: 20
   death_link: 'false'
