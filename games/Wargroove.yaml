@@ -1,0 +1,9 @@
+Wargroove:
+  accessibility: items
+  income_boost: 25
+  commander_defense_boost: 2
+  commander_choice: random
+  local_items:
+   - Final Bridges
+   - Final Walls
+   - Final Sickle
