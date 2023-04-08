@@ -15,19 +15,17 @@ Rogue Legacy:
     new_game_plus: 20
     new_game_plus_2: 0
   fairy_chests_per_zone:
-    5: 100
+    range-range-0-5: 100
   chests_per_zone:
-    30: 100
+    range-range-30-50: 100
   universal_fairy_chests:
     true: 75
-    false: 25
   universal_chests:
-    true: 50
     false: 50
   vendors:
     start_unlocked: 75
     early: 20
-    normal: 5
+    normal: 0
     anywhere: 0
   architect:
     start_unlocked: 25
@@ -41,16 +39,14 @@ Rogue Legacy:
     true: 25
     false: 75
   progressive_blueprints:
-    true: 80
-    false: 20
+    true: 50
+    false: 50
   gold_gain_multiplier:
-    normal: 100
-    quarter: 10
+    normal: 70
+    quarter: 5
     half: 25
-    double: 25
-    quadruple: 10
   number_of_children:
-    random: true
+    random-range-2-5: true
   free_diary_on_generation:
     false: 100
   khidr:
@@ -62,6 +58,9 @@ Rogue Legacy:
     vanilla: 100
   herodotus:
     vanilla: 100
+  reduced_item_pools:
+    vanilla: 15
+    reduced: 5
   health_pool:
     15: 100
   mana_pool:
@@ -83,9 +82,10 @@ Rogue Legacy:
   additional_lady_names:
     []
   additional_sir_names:
-    []
+    - Phar
   death_link:
     false: 100
+
   progression_balancing:
     0: 100
   accessibility:
@@ -102,6 +102,7 @@ Rogue Legacy:
     []
   exclude_locations:
     []
+
   triggers:
   # Challenge Boss Fights!
   - option_category: Rogue Legacy
@@ -115,3 +116,39 @@ Rogue Legacy:
           challenge: 100
         herodotus:
           challenge: 100
+  # Prevent low pools with NG+
+  - option_category: Rogue Legacy
+    option_name: new_game_plus
+    option_result: new_game_plus
+    options:
+      Rogue Legacy:
+        reduced_item_pools:
+          vanilla: 100
+  # Change for reduced item pools.
+  - option_category: Rogue Legacy
+    option_name: reduced_item_pools
+    option_result: reduced
+    options:
+      Rogue Legacy:
+        health_pool:
+          10: 100
+        mana_pool:
+          10: 100
+        attack_pool:
+          10: 100
+        magic_damage_pool:
+          10: 100
+        armor_pool:
+          5: 100
+        equip_pool:
+          10: 100
+        crit_chance_pool:
+          5: 100
+        crit_damage_pool:
+          5: 100
+  - option_category: Rogue Legacy
+    option_name: gold_gain_multiplier
+    option_result: quarter
+    options:
+      Rogue Legacy:
+        disable_charon: true
