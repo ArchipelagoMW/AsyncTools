@@ -10,16 +10,15 @@ Links Awakening DX:
   instrument_count:
     random-high: 1
   trendy_game:
+    easy: 2
     normal: 5
     hard: 2
   shuffle_nightmare_keys:
     original_dungeon: 5
     own_world: 3
-    any_world: 2
   shuffle_small_keys:
     original_dungeon: 5
     own_world: 3
-    any_world: 2
   shuffle_maps:
     original_dungeon: 5
     own_world: 3
