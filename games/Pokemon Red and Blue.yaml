@@ -88,9 +88,30 @@ Pokemon Red and Blue:
     on: 50
     off: 50
     exclude: 50
+  prizesanity:
+    true: 1
+    false: 1
+  require_pokedex:
+    true: 1
+    false: 3
+  all_pokemon_seen:
+    true: 1
+    false: 1
   trainersanity:
     true: 1
     false: 3
+  randomize_rock_tunnel:
+    true: 1
+    false: 1
+  area_1_to_1_mapping:
+    true: 3
+    false: 1
+  move_balancing:
+    true: 3
+    false: 1
+  confine_transform_to_ditto:
+    true: 5
+    false: 1
   badges_needed_for_hm_moves: # Off will remove the requirement for badges to use HM moves. Extra will give the Marsh, Volcano, and Earth
     #    Badges a random HM move to enable. Extra Plus will additionally pick two random badges to enable a second HM move.
     #    A man in Cerulean City will reveal the moves enabled by each Badge.
@@ -231,22 +252,13 @@ Pokemon Red and Blue:
     false: 50
     true: 50
   same_type_attack_bonus: true
-  tm_compatibility: # Randomize which Pokemon can learn each TM. prefer_types: 90% chance if Pokemon's type matches the move,
-    #    50% chance if move is Normal type and the Pokemon is not, and 25% chance otherwise. Pokemon will retain the same
-    #    TM compatibility when they evolve if the evolved form has the same type(s). Mew will always be able to learn
-    #    every TM.
-    vanilla: 0
-    prefer_types: 50
-    completely_random: 5
-    full_compatibility: 25
-  hm_compatibility: # Randomize which Pokemon can learn each HM. prefer_types: 100% chance if Pokemon's type matches the move,
-    #    75% chance if move is Normal type and the Pokemon is not, and 25% chance otherwise. Pokemon will retain the same
-    #    HM compatibility when they evolve if the evolved form has the same type(s). Mew will always be able to learn
-    #    every HM.
-    vanilla: 0
-    prefer_types: 50
-    completely_random: 5
-    full_compatibility: 25
+  tm_same_type_compatibility: 90
+  tm_normal_type_compatibility: 60
+  tm_other_type_compatibility: 10
+  hm_same_type_compatibility: 100
+  hm_normal_type_compatibility: 75
+  hm_other_type_compatibility: 15
+  vanilla_tms_hms: false
   randomize_pokemon_types: # Randomize the types of each Pokemon. Follow Evolutions will ensure Pokemon's types remain the same when evolving
     #    (except possibly gaining a type).
     vanilla: 50
@@ -297,6 +309,7 @@ Pokemon Red and Blue:
     false: 1
   master_ball_price: 5000
   deah_link: false
+  randomize_pokemon_palettes: random
   triggers:
     - option_category: Pokemon Red and Blue
       option_name: randomize_pokemon_types
@@ -307,15 +320,10 @@ Pokemon Red and Blue:
             vanilla: 50
             prefer_types: 50
             completely_random: 15
-          tm_compatibility:
-            vanilla: 50
-            prefer_types: 50
-            completely_random: 5
-            full_compatibility: 25
-          hm_compatibility:
-            vanilla: 50
-            prefer_types: 50
-            completely_random: 5
+          vanilla_tms_hms:
+            false: 1
+            true: 1
+          randomize_pokemon_palettes: vanilla
     - option_category: Pokemon Red and Blue
       option_name: randomize_pokemon_movesets
       option_result: completely_random
@@ -324,3 +332,14 @@ Pokemon Red and Blue:
           same_type_attack_bonus:
             false: 1
             true: 1
+    - option_category: Pokemon Red and Blue
+      option_name: vanilla_tms_hms
+      option_result: true
+      options:
+        Pokemon Red and Blue:
+          tm_same_type_compatibility: vanilla
+          tm_normal_type_compatibility: vanilla
+          tm_other_type_compatibility: vanilla
+          hm_same_type_compatibility: vanilla
+          hm_normal_type_compatibility: vanilla
+          hm_other_type_compatibility: vanilla
