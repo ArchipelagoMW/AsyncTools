@@ -8,3 +8,4 @@ The Messenger:
     true: 100
     false: 10
   percent_seals_required: random
+  total_seals: random-range-20-45
