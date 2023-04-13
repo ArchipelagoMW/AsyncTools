@@ -15,9 +15,9 @@ Rogue Legacy:
     new_game_plus: 20
     new_game_plus_2: 0
   fairy_chests_per_zone:
-    range-range-0-5: 100
+    random-range-0-5: 100
   chests_per_zone:
-    range-range-30-50: 100
+    random-range-30-50: 100
   universal_fairy_chests:
     true: 75
   universal_chests:
