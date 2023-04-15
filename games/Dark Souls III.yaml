@@ -9,8 +9,15 @@ Dark Souls III:
     false: 2
     true: 3
   randomize_weapons_level:
-    false: 2
-    true: 3
+    all: 5
+    basic: 1
+    epic: 1
+    none: 4
+  randomize_weapons_percentage: random-range-10-100
+  min_levels_in_5: 1
+  max_levels_in_5: 5
+  min_levels_in_10: 1
+  max_levels_in_10: 10
   late_basin_of_vows:
     false: 1
     true: 5
@@ -22,3 +29,9 @@ Dark Souls III:
     true: 3
   death_link:
     false: 50
+  enable_progressive_locations:
+    true: 1
+    false: 3
+  enable_dlc:
+    true: 1
+    false: 24
