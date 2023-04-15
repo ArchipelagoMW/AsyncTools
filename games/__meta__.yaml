@@ -1,11 +1,12 @@
 name: Player{player}
 description: Archipelago Async Mystery Filler Settings
 requires:
-  version: 0.3.7
+  version: 0.4.0
 
 # Define your game here!
 game:
   A Link to the Past: 80
+  Adventure: 10
   Dark Souls III: 15
   Donkey Kong Country 3: 20
   Factorio: 15
@@ -28,6 +29,8 @@ game:
   Super Mario 64: 25
   Super Mario World: 20
   Super Metroid: 30
+  The Legend of Zelda: 10
   The Witness: 15
   Timespinner: 45
   VVVVVV: 15
+  The Messenger: 15
