@@ -1,0 +1,11 @@
+The Messenger:
+  local_items:
+    - Power Seal
+  goal:
+    open_music_box: 80
+    power_seal_hunt: 10
+  music_box:
+    true: 100
+    false: 10
+  percent_seals_required: random
+  total_seals: random-range-20-45

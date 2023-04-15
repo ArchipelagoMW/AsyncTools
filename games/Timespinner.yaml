@@ -24,4 +24,11 @@ Timespinner:
   EnterSandman:
     false: 75
     true: 25
+  DadPercent:
+    false: 75
+    true: 25
+  RisingTides:
+    false: 75
+    true: 25
+  UnchainedKeys: random
   DeathLink: false

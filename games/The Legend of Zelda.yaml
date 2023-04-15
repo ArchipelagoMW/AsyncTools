@@ -1,0 +1,13 @@
+The Legend of Zelda:
+  local_items: [Triforce Fragment]
+  ExpandedPool:
+    false: 30
+    true: 70
+  TriforceLocations:
+    vanilla: 60
+    dungeons: 30
+    anywhere: 10
+  StartingPosition:
+    safe: 70
+    unsafe: 20
+    dangerous: 10
