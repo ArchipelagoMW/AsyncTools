@@ -51,7 +51,7 @@ def main():
     mystery: dict
     meta: dict = {
         "meta_description": "Created by AsyncTools",
-        "null": {
+        None: {
             "progression_balancing": 0,
         }
     }
