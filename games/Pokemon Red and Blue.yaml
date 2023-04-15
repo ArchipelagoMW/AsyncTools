@@ -101,7 +101,7 @@ Pokemon Red and Blue:
     true: 1
     false: 3
   randomize_rock_tunnel:
-    true: 1
+    true: 0
     false: 1
   area_1_to_1_mapping:
     true: 3
