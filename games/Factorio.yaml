@@ -19,20 +19,19 @@ Factorio:
     trees: 1
     choices: 1
   min_tech_cost:
-    5: 50
-    random: 20
-    random-low: 20
-    random-high: 20
+    1: 50
   max_tech_cost:
-    500: 50
-    random: 20
-    random-low: 20
-    random-high: 20
+    random-range-low-100-10000: 20
+  tech_cost_distribution:
+    even: 10
+    low: 10
+    middle: 10
+    high: 10
+  ramping_tech_costs:
+    true: 25
+    false: 50
   tech_cost_mix:
-    70: 50
     random: 20
-    random-low: 20
-    random-high: 20
   silo:
     vanilla: 50
     randomize_recipe: 20
@@ -46,7 +45,11 @@ Factorio:
     # Mapping of Factorio internal item-name to amount granted on start.
     burner-mining-drill: 19
     stone-furnace: 19
-  recipe_time: normal
+  recipe_time: 
+    normal: 10
+    fast: 5
+    slow: 5
+    vanilla: 3
   recipe_ingredients: science_pack
   imported_blueprints: true
   world_type:
@@ -58,10 +61,8 @@ Factorio:
   progressive: on
   evolution_traps:
     0: 50
-    random-low: 50
   attack_traps:
     0: 50
-    random-low: 50
   evolution_trap_increase:
     10: 50
     random-low: 50
