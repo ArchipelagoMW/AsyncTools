@@ -49,7 +49,12 @@ def main():
 
     # Load meta data first.
     mystery: dict
-    meta: dict = {"meta_description": "Created by AsyncTools"}
+    meta: dict = {
+        "meta_description": "Created by AsyncTools",
+        "null": {
+            "progression_balancing": 0,
+        }
+    }
     print("Loading meta player settings...")
     try:
         with open("games/__meta__.yaml") as file:
