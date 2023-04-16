@@ -11,6 +11,8 @@ Slay the Spire:
     random: 0
     random-low: 0
     random-high: 0
+    random-range-1-5: 50
+    random-range-6-10: 5
   heart_run: # Whether or not you will need to collect they 3 keys to unlock the final act
     #     and beat the heart to finish the game.
     false: 50
