@@ -11,8 +11,7 @@ import sys
 with open(sys.argv[1], 'r') as f:
     mystery = yaml.unsafe_load(f.read())
 
-shuffles = {"bigkey_shuffle": "b", "compass_shuffle": "c", "map_shuffle": "m"}
-ignored = {"open_pyramid"}
+
 always = {"game", "accessibility", "progression_balancing"}
 
 rows = []
@@ -29,28 +28,17 @@ print(START, END)
 
 print("unnamed players follow")
 for p in range(START, END):
-    row = {"keysanity": ""}
+    row = {}
     for key, value in [(k, v) for k, v in mystery.items() if isinstance(v, dict)]:
-        if not key in ignored:
-            if p not in value:
-                row[key] = None
-                continue
-            pvalue = value[p]
-            try:
-                pkey = getattr(pvalue, "current_key", pvalue)
-            except:
-                pass
-            if key == "smallkey_shuffle":
-                if pkey == "universal":
-                    row["keysanity"] += "u"
-                elif pkey != "original_dungeon":
-                    row["keysanity"] += "s"
-            elif key in shuffles:
-                if pkey != "original_dungeon":
-                    row["keysanity"] += shuffles[key]
-            else:
-                row[key] = pvalue
-    row["keysanity"] = "".join(sorted(row["keysanity"]))
+        if p not in value:
+            row[key] = None
+            continue
+        pvalue = value[p]
+        try:
+            pkey = getattr(pvalue, "current_key", pvalue)
+        except:
+            pass
+        row[key] = pvalue
     rows.append(row)
 
 
