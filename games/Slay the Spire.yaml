@@ -1,9 +1,9 @@
 Slay the Spire:
-  character: # Pick What Character you wish to play with.
-    ironclad: 50
-    silent: 50
-    defect: 50
-    watcher: 50
+  character: # Enter the internal ID of the character to use.
+    the_ironclad: 50
+    the_silent: 50
+    the_defect: 50
+    the_watcher: 50
   ascension: # What Ascension do you wish to play with.
     # you can add additional values between minimum and maximum
     0: 50 # minimum value
@@ -15,5 +15,8 @@ Slay the Spire:
     random-range-6-10: 5
   final_act: # Whether or not you will need to collect they 3 keys to unlock the final act
             # and beat the heart to finish the game.
+    false: 50
+    true: 0
+  downfall:
     false: 50
     true: 0
