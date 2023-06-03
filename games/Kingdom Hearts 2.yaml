@@ -1,8 +1,4 @@
 Kingdom Hearts 2:
-  progression_balancing:
-    50: 50
-  accessibility:
-    items: 50
   LevelDepth:
     level_50: 50
     level_50_sanity: 50
@@ -25,8 +21,7 @@ Kingdom Hearts 2:
   RandomGrowth:
     0: 50
   Promise_Charm:
-    'false': 25
-    'true': 25
+    'true': 50
   Goal:
     three_proofs: 25
     lucky_emblem_hunt: 25
@@ -77,7 +72,7 @@ Kingdom Hearts 2:
   start_hints: []
   start_location_hints: []
 triggers:
-  #Turn killable thieves on if enemy shuffle is on
+  #Turn off the need to kill Final Xemnas if Lucky Emblem Hunt
   - option_name: Goal
     option_category: Kingdom Hearts 2
     option_result: lucky_emblem_hunt
