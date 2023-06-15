@@ -71,11 +71,11 @@ Kingdom Hearts 2:
   non_local_items: []
   start_hints: []
   start_location_hints: []
-triggers:
-  #Turn off the need to kill Final Xemnas if Lucky Emblem Hunt
-  - option_name: Goal
-    option_category: Kingdom Hearts 2
-    option_result: lucky_emblem_hunt
-    options:
-      Kingdom Hearts 2:
-        FinalXemnas: 'false'
+  triggers:
+    #Turn off the need to kill Final Xemnas if Lucky Emblem Hunt
+    - option_name: Goal
+      option_category: Kingdom Hearts 2
+      option_result: lucky_emblem_hunt
+      options:
+        Kingdom Hearts 2:
+          FinalXemnas: 'false'
