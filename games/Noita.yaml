@@ -44,6 +44,8 @@ Noita:
         Noita:
           extra_orbs:
             random-low
+          local_items:
+            Orb
     - option_category: Noita
       option_name: victory_condition
       option_result: peaceful_ending
@@ -51,3 +53,5 @@ Noita:
         Noita:
           extra_orbs:
             random-high
+          local_items:
+            Orb
