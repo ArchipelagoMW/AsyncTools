@@ -14,19 +14,43 @@ Pokemon Red and Blue:
     # Your trainer name. If not set to choose_in_game, must be a string not exceeding 7 characters.
     # See the setup guide on archipelago.gg for a list of allowed characters.
     choose_in_game: 50
-
   rival_name:
     # Your rival's name. If not set to choose_in_game, must be a string not exceeding 7 characters.
     # See the setup guide on archipelago.gg for a list of allowed characters.
     choose_in_game: 50
-  elite_four_condition: # Number of badges required to challenge the Elite Four once the Indigo Plateau has been reached.
-    #    Your rival will reveal the amount needed on the first Route 22 battle (after turning in Oak's Parcel).
-    # you can add additional values between minimum and maximum
-    0: 0 # minimum value
-    8: 0 # maximum value
+  elite_four_badges_condition:
+    # Number of badges required to challenge the Elite Four once the Indigo Plateau has been reached.
+    # Your rival will reveal the amount needed on the first Route 22 battle (after turning in Oak's Parcel).
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 8
+    8: 0
     random: 0
     random-low: 0
     random-high: 50
+  elite_four_key_items_condition:
+    # Percentage of available key items (not counting items you can lose) required to challenge the Elite Four. Does
+    # not count HMs. Evolution stones and Exp. All are key items in Archipelago.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 100
+    0: 50
+    random: 25
+    random-low: 0
+    random-high: 0
+  elite_four_pokedex_condition:
+    # Percentage of logically-reachable Pokemon that must be registered as "owned" in the Pokedex in order to
+    # challenge the Elite Four.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 100
+    0: 50
+    random: 0
+    random-low: 15
+    random-high: 0
   victory_road_condition: # Number of badges required to reach Victory Road.
     # you can add additional values between minimum and maximum
     0: 0 # minimum value
@@ -35,6 +59,17 @@ Pokemon Red and Blue:
     random-low: 0
     random-high: 0
     random-range-high-4-8: 50
+  route_22_gate_condition:
+    # Number of badges required to pass through the Route 22 Gate
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 7
+    7: 50
+    random: 0
+    random-low: 0
+    random-range-3-7: 50
+
   viridian_gym_condition: # Number of badges required to enter Viridian Gym.
     # you can add additional values between minimum and maximum
     0: 0 # minimum value
@@ -42,14 +77,39 @@ Pokemon Red and Blue:
     random: 0
     random-low: 0
     random-range-high-3-7: 50
-  cerulean_cave_condition: # Number of badges, HMs, and key items (not counting items you can lose) required to access Cerulean Cave.
-    # you can add additional values between minimum and maximum
-    0: 0 # minimum value
-    25: 0 # maximum value
-    random: 0
+  cerulean_cave_badges_condition:
+    # Number of badges needed to access the Cerulean Cave entrance in addition to the required Key Items.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 8
+    0: 0
+    random: 50
     random-low: 0
-    random-high: 50
-    20: 0
+    random-high: 0
+  cerulean_cave_key_items_condition:
+    # Percentage of available key items (not counting items you can lose) required to access the Cerulean Cave
+    # entrance in addition to the required badges. Does not count HMs.
+    # Evolution stones and Exp. All are key items in Archipelago.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 100
+    0: 50
+    random: 50
+    random-low: 0
+    random-high: 0
+  route_3_condition:
+    # Set a condition to pass through from Pewter City to Route 3.
+    open: 50
+    defeat_brock: 50
+    defeat_any_gym: 50
+    boulder_badge: 50
+    any_badge: 50
+  robbed_house_officer:
+    # You can disable to remove the requirement to help Bill before you can enter the robbed house in Cerulean City.
+    false: 50
+    true: 50
   second_fossil_check_condition: # After choosing one of the fossil location items, you can obtain the remaining item from the Cinnabar Lab
     #    Scientist after reviving this number of fossils.
     # you can add additional values between minimum and maximum
@@ -58,6 +118,20 @@ Pokemon Red and Blue:
     random: 0
     random-low: 0
     random-high: 50
+  fossil_check_item_types:
+    # The two fossil checks always contain items for your own game. Here, you can choose what types of items can
+    # appear. Key Items means only advancement items can appear. Unique means key items or TMs may appear. No Key Items
+    # means no advancement items may appear.
+    any: 50
+    key_items: 50
+    unique_items: 50
+    no_key_items: 50
+  exp_all:
+    # Choose how the Exp. All item is handled. It can be removed entirely, shuffled into the item pool, or you can
+    # start with it.
+    remove: 0
+    randomize: 50
+    start_with: 50
   badgesanity: # Shuffle gym badges into the general item pool. If turned off, badges will be shuffled across the 8 gyms.
     false: 50
     true: 25
@@ -69,6 +143,12 @@ Pokemon Red and Blue:
     start_with: 1
     vanilla: 1
     randomize: 1
+  key_items_only:
+    # Shuffle only Key Items. This overrides Randomize Hidden Items, Trainersanity, and Dexsanity.
+    # Sets all non-excluded locations in your game to Priority Locations.
+    # May have high generation failure rates for solo games or small multiworlds, especially with Door Shuffle.
+    false: 50
+    true: 5
   tea: # Adds a Tea item to the item pool which the Saffron guards require instead of the vending machine drinks.
     #    Adds a location check to the Celadon Mansion 1F, where Tea is acquired in FireRed and LeafGreen.
     false: 50
@@ -77,6 +157,18 @@ Pokemon Red and Blue:
     #    Adds four item pickups to Rock Tunnel B1F.
     false: 50
     true: 50
+  split_card_key:
+    # Splits the Card Key item into 10 different Keys, one for each Silph Co floor 2F through 11F.
+    # Adds location checks to 9 NPCs in Silph Co.
+    # With Progressive, you will always obtain the keys in order from 2F to 11F.
+    off: 50
+    on: 25
+    progressive: 25
+  all_elevators_locked:
+    # Adds requirements to the Celadon Department Store elevator and Silph Co elevators to have the Lift Key.
+    # No logical implications normally, but may have a significant impact on Insanity Door Shuffle.
+    false: 50
+    true: 25
   extra_strength_boulders: # Adds Strength Boulders blocking the Route 11 gate, and in Route 13 (can be bypassed with Surf).
     #    This potentially increases the usefulness of Strength as well as the Bicycle.
     false: 50
@@ -112,6 +204,24 @@ Pokemon Red and Blue:
   confine_transform_to_ditto:
     true: 5
     false: 1
+  dexsanity:
+    disabled: 50
+    random-low: 25
+    full: 5
+  stonesanity:
+    false: 25
+    true: 50
+  door_shuffle:
+    off: 80
+    simple: 40
+    full: 20
+    insanity: 10
+  warp_tile_shuffle:
+    # Shuffle the warp tiles in Silph Co and Sabrina's Gym among themselves, separately.
+    # On Insanity, turning this off means they are mixed into the general door shuffle instead of only being shuffled
+    # among themselves.
+    false: 50
+    true: 50
   badges_needed_for_hm_moves: # Off will remove the requirement for badges to use HM moves. Extra will give the Marsh, Volcano, and Earth
     #    Badges a random HM move to enable. Extra Plus will additionally pick two random badges to enable a second HM move.
     #    A man in Cerulean City will reveal the moves enabled by each Badge.
@@ -120,6 +230,14 @@ Pokemon Red and Blue:
     extra: 25
     extra_plus: 25
   free_fly_location: # One random fly destination will be unlocked by default.
+    false: 20
+    true: 50
+  town_map_fly_location:
+    # One random Fly destination will be unlocked when you obtain the Town Map.
+    false: 20
+    true: 50
+  dark_rock_tunnel_logic:
+    # Logically require Flash to traverse the Rock Tunnel, so you are never forced to traverse it in the dark.
     false: 0
     true: 50
   oaks_aide_rt_2: # Number of Pokemon registered in the Pokedex required to receive the item from Oak's Aide on Route 2
@@ -310,7 +428,41 @@ Pokemon Red and Blue:
   master_ball_price: 5000
   deah_link: false
   randomize_pokemon_palettes: random
+  fix_combat_bugs:
+    true: 50
+    false: 25
+  poke_doll_skip: patched
+  bicycle_gate_skips: patched
   triggers:
+    - option_category: Pokemon Red and Blue
+      option_name: door_shuffle
+      option_result: simple
+      options:
+        Pokemon Red and Blue:
+          level_scaling: by_spheres
+    - option_category: Pokemon Red and Blue
+      option_name: door_shuffle
+      option_result: off
+      options:
+        Pokemon Red and Blue:
+          level_scaling:
+            by_spheres: 50
+            off: 50
+    - option_category: Pokemon Red and Blue
+      option_name: door_shuffle
+      option_result: full
+      options:
+        Pokemon Red and Blue:
+          level_scaling:
+            by_spheres: 15
+            by_spheres_and_distance: 50
+    - option_category: Pokemon Red and Blue
+      option_name: door_shuffle
+      option_result: insanity
+      options:
+        Pokemon Red and Blue:
+          level_scaling:
+            by_spheres_and_distance: 50
     - option_category: Pokemon Red and Blue
       option_name: randomize_pokemon_types
       option_result: vanilla
