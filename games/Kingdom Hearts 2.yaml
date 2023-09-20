@@ -29,18 +29,8 @@ Kingdom Hearts 2:
     'true': 50
   LuckyEmblemsAmount:
     random-range-30-35: 50
-    31: 50
-    32: 50
-    33: 50
-    34: 50
-    35: 50
   LuckyEmblemsRequired:
     random-range-20-25: 50
-    21: 50
-    22: 50
-    23: 50
-    24: 50
-    25: 50
   Keyblade_Minimum:
     3: 50
   Keyblade_Maximum:
