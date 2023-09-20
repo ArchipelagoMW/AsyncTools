@@ -20,7 +20,7 @@ DOOM 1993:
           episode3:
             true: 50
     - option_name: shuffle_doors
-      option_category: The Witness
+      option_category: DOOM 1993
       option_result: doors_complex
       percentage: 50
       options:
