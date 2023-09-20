@@ -31,10 +31,10 @@ Noita:
     side_path: 10
     all_bosses: 10
   shop_price:
-    option_full_price: 10
-    option_25_percent_off: 30
-    option_50_percent_off: 30
-    option_75_percent_off: 10
+    full_price: 10
+    25_percent_off: 30
+    50_percent_off: 30
+    75_percent_off: 10
     
   triggers:
     - option_category: Noita
