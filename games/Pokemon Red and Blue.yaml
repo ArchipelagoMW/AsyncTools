@@ -37,7 +37,7 @@ Pokemon Red and Blue:
     # Minimum value is 0
     # Maximum value is 100
     0: 50
-    random: 25
+    random: 0
     random-low: 0
     random-high: 0
   elite_four_pokedex_condition:
@@ -49,7 +49,7 @@ Pokemon Red and Blue:
     # Maximum value is 100
     0: 50
     random: 0
-    random-low: 15
+    random-low: 0
     random-high: 0
   victory_road_condition: # Number of badges required to reach Victory Road.
     # you can add additional values between minimum and maximum
@@ -126,12 +126,7 @@ Pokemon Red and Blue:
     key_items: 50
     unique_items: 50
     no_key_items: 50
-  exp_all:
-    # Choose how the Exp. All item is handled. It can be removed entirely, shuffled into the item pool, or you can
-    # start with it.
-    remove: 0
-    randomize: 50
-    start_with: 50
+  exp_all: randomize
   badgesanity: # Shuffle gym badges into the general item pool. If turned off, badges will be shuffled across the 8 gyms.
     false: 50
     true: 25
@@ -143,12 +138,7 @@ Pokemon Red and Blue:
     start_with: 1
     vanilla: 1
     randomize: 1
-  key_items_only:
-    # Shuffle only Key Items. This overrides Randomize Hidden Items, Trainersanity, and Dexsanity.
-    # Sets all non-excluded locations in your game to Priority Locations.
-    # May have high generation failure rates for solo games or small multiworlds, especially with Door Shuffle.
-    false: 50
-    true: 5
+  key_items_only: false
   tea: # Adds a Tea item to the item pool which the Saffron guards require instead of the vending machine drinks.
     #    Adds a location check to the Celadon Mansion 1F, where Tea is acquired in FireRed and LeafGreen.
     false: 50
@@ -229,9 +219,7 @@ Pokemon Red and Blue:
     off: 25
     extra: 25
     extra_plus: 25
-  free_fly_location: # One random fly destination will be unlocked by default.
-    false: 20
-    true: 50
+  free_fly_location: true
   town_map_fly_location:
     # One random Fly destination will be unlocked when you obtain the Town Map.
     false: 20
@@ -267,39 +255,9 @@ Pokemon Red and Blue:
     random-high: 0
     50: 0
     random-range-0-30: 50
-  blind_trainers: # Chance each frame that you are standing on a tile in a trainer's line of sight that they will fail to initiate a
-    #    battle. If you move into and out of their line of sight without stopping, this chance will only trigger once.
-    # you can add additional values between minimum and maximum
-    0: 50 # minimum value
-    100: 0 # maximum value
-    random: 0
-    random-low: 25
-    random-high: 0
-  minimum_steps_between_encounters: # Minimum number of steps between wild Pokemon encounters.
-    # you can add additional values between minimum and maximum
-    0: 0 # minimum value
-    255: 0 # maximum value
-    random: 0
-    random-low: 0
-    random-high: 0
-    3: 50
-  exp_modifier: # Modifier for EXP gained. When specifying a number, exp is multiplied by this amount and divided by 16.
-    # you can add additional values between minimum and maximum
-    0: 0 # minimum value
-    255: 0 # maximum value
-    random: 0
-    random-low: 0
-    random-high: 0
-    half: 0
-    normal: 0
-    double: 0
-    triple: 0
-    quadruple: 0
-    quintuple: 0
-    sextuple: 0
-    septuple: 0
-    octuple: 0
-    random-range-low-16-32: 1
+  blind_trainers: random-low
+  minimum_steps_between_encounters: 3
+  exp_modifier: random-range-low-16-32: 1
   randomize_wild_pokemon: # Randomize all wild Pokemon and game corner prize Pokemon. match_types will select a Pokemon with at least one
     #    type matching the original type of the original Pokemon. match_base_stats will prefer Pokemon with closer base stat
     #    totals. match_types_and_base_stats will match types and will weight towards similar base stats, but there may not be
@@ -340,19 +298,8 @@ Pokemon Red and Blue:
     vanilla: 50
     shuffle: 50
     randomize: 50
-  randomize_pokemon_catch_rates: # Randomize the catch rate for each Pokemon.
-    false: 50
-    true: 10
-  minimum_catch_rate: # Minimum catch rate for each Pokemon. If randomize_catch_rates is on, this will be the minimum value that can be
-    #    chosen. Otherwise, it will raise any Pokemon's catch rate up to this value if its normal catch rate is lower.
-    # you can add additional values between minimum and maximum
-    1: 0 # minimum value
-    255: 0 # maximum value
-    random: 0
-    random-low: 0
-    random-high: 0
-    3: 50
-    random-range-low-3-45: 25 
+  randomize_pokemon_catch_rates: false
+  minimum_catch_rate: 3
   randomize_trainer_parties: # Randomize enemy Pokemon encountered in trainer battles.
     vanilla: 50
     match_types: 25
@@ -366,9 +313,7 @@ Pokemon Red and Blue:
     vanilla: 0
     prefer_types: 50
     completely_random: 15
-  start_with_four_moves: # If movesets are randomized, this will give all Pokemon 4 starting moves.
-    false: 50
-    true: 50
+  start_with_four_moves: false
   same_type_attack_bonus: true
   tm_same_type_compatibility: 90
   tm_normal_type_compatibility: 60
@@ -410,27 +355,12 @@ Pokemon Red and Blue:
   reusable_tms: # Makes TMs reusable, so they will not be consumed upon use.
     false: 0
     true: 50
-  starting_money: # The amount of money you start with.
-    # you can add additional values between minimum and maximum
-    0: 0 # minimum value
-    999999: 0 # maximum value
-    random: 0
-    random-low: 0
-    random-high: 0
-    3000: 50
-    random-range-2500-10000: 25
   lose_money_on_blackout: 
     true: 1
     false: 1
-  better_shops:
-    true: 5
-    false: 1
-  master_ball_price: 5000
-  deah_link: false
+  better_shops: true
   randomize_pokemon_palettes: random
-  fix_combat_bugs:
-    true: 50
-    false: 25
+  fix_combat_bugs: true
   poke_doll_skip: patched
   bicycle_gate_skips: patched
   triggers:
