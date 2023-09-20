@@ -1,29 +1,29 @@
 DOOM 1993:
   difficulty: medium
-  random_monsters: random
+  random_monsters: shuffle
   random_pickups: shuffle
   allow_death_logic: false
   start_with_computer_area_maps: random
   death_link: false
   episode1: true
-  episode2:
+  episode3:
     false: 10
     true: 90
   episode4: false
   triggers:
-    - option_name: episode2
+    - option_name: episode3
       option_category: DOOM 1993
       option_result: true
       percentage: 20
       options:
         DOOM 1993:
-          episode3:
+          episode2:
             true: 50
-    - option_name: episode2
+    - option_name: episode3
       option_category: DOOM 1993
       option_result: false
       percentage: 50
       options:
         DOOM 1993:
-          episode3:
+          episode2:
             true: 50
