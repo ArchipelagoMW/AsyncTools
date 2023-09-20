@@ -14,16 +14,16 @@ DOOM 1993:
     - option_name: episode3
       option_category: DOOM 1993
       option_result: true
-      percentage: 20
       options:
         DOOM 1993:
           episode2:
-            true: 50
+            true: 20
+            false: 80
     - option_name: episode3
       option_category: DOOM 1993
       option_result: false
-      percentage: 50
       options:
         DOOM 1993:
           episode2:
             true: 50
+            false: 50
