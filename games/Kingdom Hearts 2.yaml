@@ -28,7 +28,7 @@ Kingdom Hearts 2:
   FinalXemnas:
     'true': 50
   LuckyEmblemsAmount:
-    30: 50
+    random-range-30-35: 50
     31: 50
     32: 50
     33: 50
