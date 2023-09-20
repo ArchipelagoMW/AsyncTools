@@ -1,0 +1,29 @@
+DOOM 1993:
+  difficulty: medium
+  random_monsters: random
+  random_pickups: shuffle
+  allow_death_logic: false
+  start_with_computer_area_maps: random
+  death_link: false
+  episode1: true
+  episode2:
+    false: 10
+    true: 90
+  episode4: false
+  triggers:
+    - option_name: episode2
+      option_category: DOOM 1993
+      option_result: true
+      percentage: 20
+      options:
+        DOOM 1993:
+          episode3:
+            true: 50
+    - option_name: shuffle_doors
+      option_category: The Witness
+      option_result: doors_complex
+      percentage: 50
+      options:
+        The Witness:
+            shuffle_symbols:
+              false: 50
