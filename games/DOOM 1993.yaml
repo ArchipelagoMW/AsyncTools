@@ -19,11 +19,11 @@ DOOM 1993:
         DOOM 1993:
           episode3:
             true: 50
-    - option_name: shuffle_doors
+    - option_name: episode2
       option_category: DOOM 1993
-      option_result: doors_complex
+      option_result: false
       percentage: 50
       options:
-        The Witness:
-            shuffle_symbols:
-              false: 50
+        DOOM 1993:
+          episode3:
+            true: 50
