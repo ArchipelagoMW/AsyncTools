@@ -1,19 +1,75 @@
 Starcraft 2 Wings of Liberty:
   game_difficulty:
-    casual: 20
-    normal: 30
+    casual: 25
+    normal: 35
     hard: 20
-    brutal: 10
-  upgrade_bonus: random
-  bunker_upgrade: random
+    brutal: 0
   all_in_map: random
   mission_order:
     vanilla: 10
     vanilla_shuffled: 30
     grid: 30
     mini_campaign: 30
+  final_map:
+    all_in: 25
+    random_hard: 75
   shuffle_protoss: random
   shuffle_no_build: random
   early_unit: true
   required_tactics: standard
   units_always_have_upgrades: true
+  generic_upgrade_research:
+    auto_in_no_build: 75
+    always_auto: 25
+  nco_items: true
+  bw_items: true
+  ext_items: true
+  mission_progress_locations: enabled
+  bonus_locations: enabled
+  challenge_locations:
+    enabled: 75
+    trash: 25
+  optional_boss_locations: enabled
+  triggers:
+    - option_category: Starcraft 2 Wings of Liberty
+      option_name: mission_order
+      option_result: vanilla_shuffled
+      options:
+        Starcraft 2 Wings of Liberty:
+          shuffle_protoss:
+            true: 75
+            false: 25
+          shuffle_no_build:
+            true: 75
+            false: 25
+          final_map:
+            all_in: 50
+            random_hard: 50
+    - option_category: Starcraft 2 Wings of Liberty
+      option_name: mission_order
+      option_result: grid
+      options:
+        Starcraft 2 Wings of Liberty:
+          nco_items:
+            true: 75
+            false: 25
+          bw_items:
+            true: 75
+            false: 25
+          ext_items:
+            true: 75
+            false: 25
+    - option_category: Starcraft 2 Wings of Liberty
+      option_name: mission_order
+      option_result: mini_campaign
+      options:
+        Starcraft 2 Wings of Liberty:
+          nco_items:
+            true: 75
+            false: 25
+          bw_items:
+            true: 75
+            false: 25
+          ext_items:
+            true: 75
+            false: 25
