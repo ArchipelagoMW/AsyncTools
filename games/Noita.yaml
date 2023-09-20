@@ -5,9 +5,9 @@ Noita:
     pure_ending: 50
     peaceful_ending: 50
   path_option:
-    main_path: 0
-    side_path: 50
-    main_world: 30
+    main_path: 50
+    side_path: 30
+    main_world: 10
   hidden_chests:
     3: 10
     4: 20
@@ -22,14 +22,14 @@ Noita:
     7: 10
   orbs_as_checks:
     no_orbs: 0
-    main_path: 30
-    side_path: 20
-    main_world: 20
+    main_path: 60
+    side_path: 30
+    main_world: 5
   bosses_as_checks:
-    no_bosses: 40
+    no_bosses: 60
     main_path: 20
-    side_path: 20
-    all_bosses: 10
+    side_path: 15
+    all_bosses: 5
   shop_price:
     full_price: 10
     25_percent_off: 30
