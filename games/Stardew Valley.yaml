@@ -1,34 +1,86 @@
 Stardew Valley:
   accessibility: items
-  starting_money: random-range-1000-3000
-  resource_pack_multiplier: 100
+  goal:
+    community_center: 60
+    grandpa_evaluation: 10
+    bottom_of_the_mines: 10
+    master_angler: 10
+    complete_collection: 10
+  starting_money: random-range-2000-20000
+  profit_margin:
+    normal: 30
+    double: 40
+    triple: 20
+    quadruple: 10
   bundle_randomization:
-    thematic: 2
-    vanilla: 1
+    vanilla: 10
+    thematic: 90
   bundle_price:
-    normal: 3
-    cheap: 1
+    very_cheap: 10
+    cheap: 60
+    normal: 30
   entrance_randomization: disabled
+  season_randomization:
+    randomized: 30
+    randomized_not_winter: 40
+    progressive: 30
+  cropsanity: shuffled
   backpack_progression: early_progressive
   tool_progression: progressive
+  elevator_progression:
+    progressive: 50
+    progressive_from_previous_floor: 50
   skill_progression: progressive
   building_progression: progressive_early_shipping_bin
-  elevator_progression: progressive
+  festival_locations: easy
   arcade_machine_locations: disabled
+  special_order_locations:
+    disabled: 50
+    board_only: 50
   help_wanted_locations:
-    7: 1
-    14: 1
-  fishsanity: none
-  player_buff_number: random-range-4-8
-  goal:
-    community_center: 3
-    bottom_of_the_mines: 1
+    0: 25
+    7: 50
+    14: 25
+  fishsanity:
+    none: 10
+    exclude_legendaries: 20
+    exclude_hard_fish: 20
+    only_easy_fish: 50
+  museumsanity: milestones
+  friendsanity:
+    none: 25
+    bachelors: 25
+    starting_npcs: 25
+    all: 25
+  friendsanity_heart_size: 4
+  movement_buff_number: random-range-4-8
+  luck_buff_number: random-range-4-8
+  exclude_ginger_island:
+    false: 50
+    true: 50
+  trap_items:
+    no_traps: 25
+    easy: 50
+    medium: 25
   multiple_day_sleep_enabled: 'true'
   multiple_day_sleep_cost: 0
-  experience_multiplier: 200
+  experience_multiplier:
+    vanilla: 20
+    double: 50
+    triple: 20
+    quadruple: 10
+  friendship_multiplier:
+    vanilla: 20
+    double: 50
+    triple: 20
+    quadruple: 10
   debris_multiplier:
-    vanilla: 1
-    half: 1
+    vanilla: 25
+    half: 50
+    quarter: 25
   quick_start: 'true'
-  gifting: 'false'
+  gifting: 'true'
+  mods:
+    []: 50
+    ["Bigger Backpack"]: 50
   death_link: 'false'
