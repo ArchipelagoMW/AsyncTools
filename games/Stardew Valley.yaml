@@ -65,14 +65,12 @@ Stardew Valley:
   multiple_day_sleep_enabled: 'true'
   multiple_day_sleep_cost: 0
   experience_multiplier:
-    vanilla: 20
     double: 50
-    triple: 20
+    triple: 40
     quadruple: 10
   friendship_multiplier:
-    vanilla: 20
     double: 50
-    triple: 20
+    triple: 40
     quadruple: 10
   debris_multiplier:
     vanilla: 25
@@ -80,7 +78,5 @@ Stardew Valley:
     quarter: 25
   quick_start: 'true'
   gifting: 'true'
-  mods:
-    []: 50
-    ["Bigger Backpack"]: 50
+  mods: []
   death_link: 'false'
