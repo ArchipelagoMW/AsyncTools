@@ -1,5 +1,8 @@
 DOOM 1993:
-  difficulty: medium
+  difficulty:
+    baby: 20
+    easy: 50
+    medium: 30
   random_monsters: shuffle
   random_pickups: shuffle
   allow_death_logic: false
