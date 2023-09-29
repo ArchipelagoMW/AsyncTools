@@ -46,7 +46,11 @@ Stardew Valley:
     exclude_legendaries: 20
     exclude_hard_fish: 20
     only_easy_fish: 50
-  museumsanity: milestones
+  museumsanity:
+    none: 30
+    milestones: 50
+    randomized: 10
+    all: 10
   friendsanity:
     none: 25
     bachelors: 25
