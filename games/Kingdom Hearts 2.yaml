@@ -1,0 +1,71 @@
+Kingdom Hearts 2:
+  LevelDepth:
+    level_50: 50
+    level_50_sanity: 50
+  Sora_Level_EXP:
+    5: 50
+  Valor_Form_EXP:
+    10: 50
+  Wisdom_Form_EXP:
+    4: 50
+  Limit_Form_EXP:
+    4: 50
+  Master_Form_EXP:
+    4: 50
+  Final_Form_EXP:
+    4: 50
+  Summon_EXP:
+    4: 50
+  Schmovement:
+    level_1: 50
+  RandomGrowth:
+    0: 50
+  Promise_Charm:
+    'true': 50
+  Goal:
+    three_proofs: 25
+    lucky_emblem_hunt: 25
+  FinalXemnas:
+    'true': 50
+  LuckyEmblemsAmount:
+    random-range-30-35: 50
+  LuckyEmblemsRequired:
+    random-range-20-25: 50
+  Keyblade_Minimum:
+    3: 50
+  Keyblade_Maximum:
+    7: 50
+  Visitlocking:
+    first_and_second_visit_locking: 50
+  RandomVisitLockingItem:
+    3: 50
+  SuperBosses:
+    'false': 50
+  KeybladeAbilities:
+    support: 50
+  BlacklistKeyblade:
+    - Second Chance
+    - Scan
+    - Once More
+    - Aerial Recovery
+  Cups:
+    no_cups: 50
+  start_inventory: {}
+  exclude_locations: []
+  priority_locations: []
+  local_items:
+    - Proof of Connection
+    - Proof of Nonexistence
+    - Proof of Peace
+    - Lucky Emblem
+  non_local_items: []
+  start_hints: []
+  start_location_hints: []
+  triggers:
+    #Turn off the need to kill Final Xemnas if Lucky Emblem Hunt
+    - option_name: Goal
+      option_category: Kingdom Hearts 2
+      option_result: lucky_emblem_hunt
+      options:
+        Kingdom Hearts 2:
+          FinalXemnas: 'false'
