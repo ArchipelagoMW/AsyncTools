@@ -35,3 +35,36 @@ Dark Souls III:
   enable_dlc:
     true: 1
     false: 24
+  enable_weapon_locations:
+    true: 50
+    false: 50
+  enable_shield_locations:
+    true: 50
+    false: 50
+  enable_armor_locations:
+    true: 50
+    false: 50
+  enable_ring_locations:
+    true: 50
+    false: 50
+  enable_spell_locations:
+    true: 50
+    false: 50
+  enable_key_locations:
+    true: 50
+  enable_boss_locations:
+    true: 50
+  enable_npc_locations:
+    true: 50
+    false: 50
+  enable_misc_locations:
+    true: 50
+    false: 50
+  enable_health_upgrade_locations:
+    true: 50
+    false: 50
+  pool_type: shuffle
+  randomize_infusion:
+    true: 50
+    false: 50
+  randomize_infusion_percentage: random
