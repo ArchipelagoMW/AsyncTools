@@ -1,0 +1,35 @@
+﻿Undertale:
+  route_required:
+    neutral: 50
+    pacifist: 50
+    genocide: 30
+  starting_area:
+    ruins: 50
+    snowdin: 50
+    waterfall: 50
+    hotland: 50
+  key_hunt:
+    false: 50
+    true: 30
+  key_pieces:
+    5: 50
+    7: 40
+    10: 30
+  rando_love:
+    false: 50
+    true: 30
+  rando_stats:
+    false: 50
+    true: 30
+  temy_include:
+    false: 30
+    true: 50
+  prog_armor:
+    false: 30
+    true: 50
+  prog_weapons:
+    false: 30
+    true: 50
+  rando_item_button:
+    false: 50
+    true: 30
