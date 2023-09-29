@@ -1,0 +1,11 @@
+Terraria:
+  goal:
+    golem: 1
+    moon_lord: 3
+    zenith: 2
+  achievements:
+    none: 2
+    exclude_grindy: 1
+    exclude_fishing: 2
+  fill_extra_checks_with: useful_items
+  death_link: 'false'

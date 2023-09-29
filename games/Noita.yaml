@@ -1,0 +1,57 @@
+Noita:
+  bad_effects: 'true'
+  victory_condition:
+    greed_ending: 0
+    pure_ending: 50
+    peaceful_ending: 50
+  path_option:
+    main_path: 50
+    side_path: 30
+    main_world: 10
+  hidden_chests:
+    3: 10
+    4: 20
+    5: 50
+    6: 30
+    7: 20
+  pedestal_checks:
+    3: 10
+    4: 50
+    5: 30
+    6: 20
+    7: 10
+  orbs_as_checks:
+    no_orbs: 0
+    main_path: 60
+    side_path: 30
+    main_world: 5
+  bosses_as_checks:
+    no_bosses: 60
+    main_path: 20
+    side_path: 15
+    all_bosses: 5
+  shop_price:
+    full_price: 10
+    25_percent_off: 30
+    50_percent_off: 30
+    75_percent_off: 10
+    
+  triggers:
+    - option_category: Noita
+      option_name: victory_condition
+      option_result: pure_ending
+      options:
+        Noita:
+          extra_orbs:
+            random-low
+          local_items:
+            Orb
+    - option_category: Noita
+      option_name: victory_condition
+      option_result: peaceful_ending
+      options:
+        Noita:
+          extra_orbs:
+            random-low
+          local_items:
+            Orb
