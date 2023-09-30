@@ -1,11 +1,15 @@
 The Messenger:
   local_items:
     - Power Seal
+    - Keys
   goal:
     open_music_box: 80
-    power_seal_hunt: 10
+    power_seal_hunt: 20
   music_box:
     true: 100
-    false: 10
-  percent_seals_required: random
+    false: 30
+  percent_seals_required: random-range-70-90
   total_seals: random-range-20-45
+  shuffle_shards:
+    true: 50
+    false: 80
