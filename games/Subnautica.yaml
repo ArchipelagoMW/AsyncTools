@@ -17,6 +17,9 @@ Subnautica:
   early_seaglide:
     true: 3
     false: 1
+  free_samples:
+    true: 1
+    false: 1
   swim_rule:
     easy: 5
     normal: 4
