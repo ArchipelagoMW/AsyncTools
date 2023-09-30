@@ -1,6 +1,12 @@
 Sonic Adventure 2 Battle:
-  goal: biolizard
+  goal:
+    biolizard: 3
+    cannons_core_boss_rush: 1
   mission_shuffle: true
+  boss_rush_shuffle:
+    vanilla: 2
+    shuffled: 1
+    chaos: 1
   keysanity:
     false: 2
     true: 1
@@ -48,7 +54,11 @@ Sonic Adventure 2 Battle:
   tiny_trap_weight: random
   gravity_trap_weight: random
   exposition_trap_weight: random
+  ice_trap_weight: random
+  slow_trap_weight: random
+  cutscene_trap_weight: random
   pong_trap_weight: random
+  minigame_trap_difficulty: easy
   ring_loss:
     classic: 1
     modern: 1
