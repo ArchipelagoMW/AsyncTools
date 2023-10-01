@@ -8,7 +8,7 @@ Dark Souls III:
   no_weapon_requirements:
     false: 2
     true: 3
-  randomize_weapons_level:
+  randomize_weapon_level:
     all: 5
     basic: 1
     epic: 1
