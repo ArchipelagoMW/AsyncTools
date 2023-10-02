@@ -46,6 +46,8 @@ Noita:
             random-low
           local_items:
             - Orb
+          exclude_locations:
+            - Kolmisilmä
     - option_category: Noita
       option_name: victory_condition
       option_result: peaceful_ending
@@ -55,3 +57,5 @@ Noita:
             random-low
           local_items:
             - Orb
+          exclude_locations:
+            - Kolmisilmä
