@@ -17,11 +17,6 @@ Super Mario 64:
     60: 3
     70: 4
     80: 2
-  ExtraStars:
-    0: 1
-    10: 2
-    20: 3
-    30: 2
   accessibility:
     items: 1
   BuddyChecks:
