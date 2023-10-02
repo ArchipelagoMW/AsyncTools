@@ -71,7 +71,7 @@ def main():
     for game in mystery["game"].keys():
         try:
             print(f"Loading ./games/{game}.yaml...")
-            with open(f"games/{game}.yaml") as game_file:
+            with open(f"games/{game}.yaml", encoding="utf-8-sig") as game_file:
                 game_settings: dict = yaml.unsafe_load(game_file)
 
                 # Ensure that game_settings only has one property which has the same name as the file.
