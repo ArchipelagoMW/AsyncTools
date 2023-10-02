@@ -13,7 +13,6 @@ Rogue Legacy:
   new_game_plus:
     normal: 80
     new_game_plus: 20
-    new_game_plus_2: 0
   fairy_chests_per_zone:
     random-range-0-5: 100
   chests_per_zone:
@@ -25,8 +24,6 @@ Rogue Legacy:
   vendors:
     start_unlocked: 75
     early: 20
-    normal: 0
-    anywhere: 0
   architect:
     start_unlocked: 25
     normal: 70
@@ -35,9 +32,9 @@ Rogue Legacy:
     random: 100
   disable_charon:
     false: 100
-  disable_purchasing:
-    true: 25
-    false: 75
+  require_purchasing:
+    true: 75
+    false: 25
   progressive_blueprints:
     true: 50
     false: 50
@@ -79,30 +76,9 @@ Rogue Legacy:
     5: 100
   allow_default_names:
     true: 100
-  additional_lady_names:
-    []
   additional_sir_names:
     - Phar
-  death_link:
-    false: 100
-
-  progression_balancing:
-    0: 100
-  accessibility:
-    items: 100
-  local_items:
-    []
-  non_local_items:
-    []
-  start_inventory:
-    {}
-  start_hints:
-    []
-  start_location_hints:
-    []
-  exclude_locations:
-    []
-
+    
   triggers:
   # Challenge Boss Fights!
   - option_category: Rogue Legacy
