@@ -1,5 +1,5 @@
 Raft:
-  filler_item_types: resource_packs
+  use_resource_packs: true
   minimum_resource_pack_amount: 1
   maximum_resource_pack_amount: 15
   duplicate_items: any
