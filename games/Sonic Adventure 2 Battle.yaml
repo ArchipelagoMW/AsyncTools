@@ -34,7 +34,7 @@ Sonic Adventure 2 Battle:
     "5": 3
   level_gate_distribution: random
   required_rank: e
-  level_gate_cost:
+  level_gate_costs:
     medium: 1
     high: 2
   chao_garden_difficulty:
