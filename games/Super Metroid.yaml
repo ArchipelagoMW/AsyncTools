@@ -81,6 +81,12 @@ Super Metroid:
     false: 50
 
   hud: true
+  
+  escape_rando:
+    false: 50
+    true: 10
+  
+  relaxed_round_robin_cf: true
 
   tourian:
     vanilla: 50
