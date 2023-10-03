@@ -1,0 +1,17 @@
+DLCQuest:
+  accessibility: items
+  double_jump_glitch: none
+  time_is_money: required
+  coinsanity:
+    none: 60
+    coin: 40
+  coinbundlequantity:
+    10: 20
+    20: 20
+    30: 20
+    40: 20
+    50: 20
+  ending_choice: 'true'
+  campaign: both
+  item_shuffle: shuffled
+  death_link: 'false'
