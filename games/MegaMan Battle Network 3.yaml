@@ -1,5 +1,4 @@
 MegaMan Battle Network 3:
-
   include_jobs:
     false: 1
     true: 5
