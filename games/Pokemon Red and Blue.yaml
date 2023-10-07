@@ -1,12 +1,5 @@
 Pokemon Red and Blue:
-  accessibility: items
-  game_version: random
-  trainer_name: choose_in_game
-  rival_name: choose_in_game
   elite_four_badges_condition: random-high: 50
-  elite_four_key_items_condition: 0
-  elite_four_pokedex_condition: 0
-    random-high: 0
   victory_road_condition: random-range-high-4-7: 50
   route_22_gate_condition: random-range-3-7: 50
   viridian_gym_condition: random-range-high-3-7: 50
@@ -14,19 +7,8 @@ Pokemon Red and Blue:
   cerulean_cave_key_items_condition: random
   route_3_condition:
     open: 50
-    defeat_brock: 50
-    defeat_any_gym: 50
-    boulder_badge: 50
-    any_badge: 50
-  robbed_house_officer:
-    false: 50
-    true: 50
   second_fossil_check_condition: random-high: 50
-  fossil_check_item_types:
-    any: 50
-    key_items: 50
-    unique_items: 50
-    no_key_items: 50
+  fossil_check_item_types: unique_items
   exp_all: randomize
   badgesanity: # Shuffle gym badges into the general item pool. If turned off, badges will be shuffled across the 8 gyms.
     false: 50
@@ -36,7 +18,6 @@ Pokemon Red and Blue:
     early_parcel: 50
     open_viridian_city: 50
   randomize_pokedex: start_with
-  key_items_only: false
   tea:
     false: 50
     true: 50
@@ -101,7 +82,6 @@ Pokemon Red and Blue:
   town_map_fly_location:
     false: 20
     true: 50
-  dark_rock_tunnel_logic: true
   oaks_aide_rt_2: random-range-0-10: 50
   oaks_aide_rt_11: random-range-0-20: 50
   oaks_aide_rt_15: random-range-0-30: 50
@@ -151,8 +131,6 @@ Pokemon Red and Blue:
     vanilla: 0
     prefer_types: 50
     completely_random: 15
-  start_with_four_moves: false
-  same_type_attack_bonus: true
   tm_same_type_compatibility: 90
   tm_normal_type_compatibility: 60
   tm_other_type_compatibility: 10
@@ -185,7 +163,6 @@ Pokemon Red and Blue:
   reusable_tms: true
   lose_money_on_blackout: false
   better_shops: true
-  randomize_pokemon_palettes: random
   fix_combat_bugs: true
   poke_doll_skip: patched
   bicycle_gate_skips: patched
