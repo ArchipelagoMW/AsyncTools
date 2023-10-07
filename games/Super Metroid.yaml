@@ -1,22 +1,12 @@
 Super Metroid:
-  start_inventory_removes_from_pool:
-    false: 50
-    true: 0
-  preset: # choose one of the preset or specify "varia_custom" to use varia_custom_preset option or specify "custom" to use custom_preset option
+
+  preset:
     newbie: 30
     casual: 40
     regular: 30
     veteran: 20
-    expert: 0
-    master: 0
-    samus: 0
-    season_races: 0
-    smrat2021: 0
-    solution: 0
-    custom: 0
-    varia_custom: 0
+  
   start_location:
-    ceres: 0
     landing_site: 20
     gauntlet_top: 1
     green_brinstar_elevator: 1
@@ -31,150 +21,82 @@ Super Metroid:
     aqueduct: 1
     red_brinstar_elevator: 1
     golden_four: 1
-  death_link: # When you die, everyone dies. Of course the reverse is true too.
-    false: 50
-    true: 0
+  
+  remote_items: true
+  
   max_difficulty:
-    easy: 0
     medium: 50
     hard: 40
     harder: 30
     hardcore: 20
-    mania: 0
-    infinity: 0
-  morph_placement:
-    early: 50
-    normal: 0
-  suits_restriction:
-    false: 0
-    true: 50
-  strict_minors:
-    false: 50
-    true: 0
+
+  morph_placement: early
+
   missile_qty:
-    # you can add additional values between minimum and maximum
-    10: 0 # minimum value
-    90: 0 # maximum value
-    random: 0
     random-low: 10
     random-high: 50
-    30: 0
+
   super_qty:
-    # you can add additional values between minimum and maximum
-    10: 0 # minimum value
-    90: 0 # maximum value
-    random: 0
     random-low: 10
     random-high: 50
     20: 50
+
   power_bomb_qty:
-    # you can add additional values between minimum and maximum
-    10: 50 # minimum value
-    90: 0 # maximum value
-    random: 0
+    10: 50
     random-low: 10
     random-high: 50
-  minor_qty:
-    # you can add additional values between minimum and maximum
-    7: 0 # minimum value
-    100: 50 # maximum value
-    random: 0
-    random-low: 0
-    random-high: 0
-  energy_qty:
-    ultra_sparse: 0
-    sparse: 0
-    medium: 0
-    vanilla: 50
+
+  minor_qty: 100
+
+  energy_qty: vanilla
+
   area_randomization:
     off: 50
     light: 20
     on: 10
-  area_layout:
-    false: 50
-    true: 0
+
+  area_layout: false
+
   doors_colors_rando:
     false: 50
     true: 10
-  allow_grey_doors:
-    false: 50
-    true: 0
+
+  allow_grey_doors: false
+
   boss_randomization:
     false: 50
     true: 10
-  fun_combat:
-    false: 50
-    true: 0
-  fun_movement:
-    false: 50
-    true: 0
-  fun_suits:
-    false: 50
-    true: 0
-  layout_patches:
-    false: 0
-    true: 50
-  varia_tweaks:
-    false: 0
-    true: 50
+
+  varia_tweaks: true
+
   nerfed_charge:
     false: 50
     true: 10
+
   gravity_behaviour:
-    vanilla: 0
     balanced: 50
     progressive: 10
-  elevators_doors_speed:
-    false: 0
-    true: 50
-  spin_jump_restart:
-    false: 50
-    true: 0
+
   infinite_space_jump:
     false: 50
-    true: 0
-  refill_before_save:
+
+  hud: true
+  
+  escape_rando:
     false: 50
-    true: 0
-  hud:
-    false: 0
-    true: 50
-  animals:
+    true: 10
+  
+  relaxed_round_robin_cf: true
+
+  tourian:
+    vanilla: 50
+    fast: 20
+
+  custom_objective:
     false: 50
-    true: 0
-  no_music:
-    false: 50
-    true: 0
-  random_music:
-    false: 50
-    true: 0
-  custom_preset: #
-    #    see https://randommetroidsolver.pythonanywhere.com/presets for detailed info on each preset settings
-    #    knows: each skill (know) has a pair [can use, perceived difficulty using one of 1, 5, 10, 25, 50 or 100 each one matching a max_difficulty]
-    #    settings: hard rooms, hellruns and bosses settings
-    #    controller: predefined controller mapping and moon walk setting
-    #
-    controller: {}
-    knows: {}
-    settings: {}
+    true: 30
 
-  varia_custom_preset: # use an entry from the preset list on https://randommetroidsolver.pythonanywhere.com/presets
-    {}
+  custom_objective_list:
+    ['kill two G4', 'kill three G4', 'kill all G4', 'kill three minibosses', 'kill all mini bosses', 'tickle the red fish', 'kill the orange geemer', 'kill shaktool', 'visit the animals', 'kill phantoon', 'kill draygon', 'kill ridley', 'kill spore spawn', 'kill botwoon', 'kill crocomire', 'kill golden torizo', 'clear crateria', 'clear green brinstar', 'clear red brinstar', 'clear wrecked ship', "clear kraid's lair", 'clear upper norfair', "clear croc's lair", 'clear lower norfair', 'clear west maridia', 'clear east maridia']
 
-  local_items: # Forces these items to be in their native world.
-    []
-
-  non_local_items: # Forces these items to be outside their native world.
-    []
-
-  start_inventory: # Start with these items.
-    {}
-
-  start_hints: # Start with these item's locations prefilled into the !hint command.
-    []
-
-  start_location_hints:
-    []
-
-  exclude_locations:
-    []
+  custom_objective_count: random-high
