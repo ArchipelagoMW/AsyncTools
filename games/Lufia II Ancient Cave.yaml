@@ -41,11 +41,6 @@
     50: 4
     random-low: 2
 
-  death_link:
-    # When you die, everyone dies. Of course the reverse is true too.
-    false: 10
-    true: 1
-
   default_capsule:
     jelze: 1
     flash: 1
