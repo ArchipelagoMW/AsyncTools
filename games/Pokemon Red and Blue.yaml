@@ -1,13 +1,13 @@
 Pokemon Red and Blue:
-  elite_four_badges_condition: random-high: 50
-  victory_road_condition: random-range-high-4-7: 50
-  route_22_gate_condition: random-range-3-7: 50
-  viridian_gym_condition: random-range-high-3-7: 50
+  elite_four_badges_condition: random-high
+  victory_road_condition: random-range-high-4-7
+  route_22_gate_condition: random-range-3-7
+  viridian_gym_condition: random-range-high-3-7
   cerulean_cave_badges_condition: random
   cerulean_cave_key_items_condition: random
   route_3_condition:
     open: 50
-  second_fossil_check_condition: random-high: 50
+  second_fossil_check_condition: random-high
   fossil_check_item_types: unique_items
   exp_all: randomize
   badgesanity: # Shuffle gym badges into the general item pool. If turned off, badges will be shuffled across the 8 gyms.
@@ -82,12 +82,12 @@ Pokemon Red and Blue:
   town_map_fly_location:
     false: 20
     true: 50
-  oaks_aide_rt_2: random-range-0-10: 50
-  oaks_aide_rt_11: random-range-0-20: 50
-  oaks_aide_rt_15: random-range-0-30: 50
+  oaks_aide_rt_2: random-range-1-10
+  oaks_aide_rt_11: random-range-1-20
+  oaks_aide_rt_15: random-range-1-30
   blind_trainers: random-low
   minimum_steps_between_encounters: 3
-  exp_modifier: random-range-low-16-32: 1
+  exp_modifier: random-range-low-16-32
   randomize_wild_pokemon:
     vanilla: 50
     match_types: 25
