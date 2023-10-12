@@ -3,7 +3,7 @@ Muse Dash:
   allow_just_as_planned_dlc_songs: false
   streamer_mode_enabled: false
   starting_song_count: 5
-  additional_song_count: random-range-high-40-55
+  additional_song_count: random-range-high-30-40
   additional_item_percentage: random-range-75-85
   song_difficulty_mode:
     medium: 67
