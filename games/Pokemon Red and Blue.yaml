@@ -1,63 +1,15 @@
 Pokemon Red and Blue:
-  accessibility: # Set rules for reachability of your items/locations.
-    #    Locations: ensure everything can be reached and acquired.
-    #    Items: ensure all logically relevant items can be acquired.
-    #    Minimal: ensure what is needed to reach your goal can be acquired.
-    locations: 0
-    items: 50
-    minimal: 0
-  game_version: # Select Red or Blue version.
-    red: 50
-    blue: 50
-    random: 0
-  trainer_name:
-    # Your trainer name. If not set to choose_in_game, must be a string not exceeding 7 characters.
-    # See the setup guide on archipelago.gg for a list of allowed characters.
-    choose_in_game: 50
-
-  rival_name:
-    # Your rival's name. If not set to choose_in_game, must be a string not exceeding 7 characters.
-    # See the setup guide on archipelago.gg for a list of allowed characters.
-    choose_in_game: 50
-  elite_four_condition: # Number of badges required to challenge the Elite Four once the Indigo Plateau has been reached.
-    #    Your rival will reveal the amount needed on the first Route 22 battle (after turning in Oak's Parcel).
-    # you can add additional values between minimum and maximum
-    0: 0 # minimum value
-    8: 0 # maximum value
-    random: 0
-    random-low: 0
-    random-high: 50
-  victory_road_condition: # Number of badges required to reach Victory Road.
-    # you can add additional values between minimum and maximum
-    0: 0 # minimum value
-    8: 0 # maximum value
-    random: 0
-    random-low: 0
-    random-high: 0
-    random-range-high-4-8: 50
-  viridian_gym_condition: # Number of badges required to enter Viridian Gym.
-    # you can add additional values between minimum and maximum
-    0: 0 # minimum value
-    7: 0 # maximum value
-    random: 0
-    random-low: 0
-    random-range-high-3-7: 50
-  cerulean_cave_condition: # Number of badges, HMs, and key items (not counting items you can lose) required to access Cerulean Cave.
-    # you can add additional values between minimum and maximum
-    0: 0 # minimum value
-    25: 0 # maximum value
-    random: 0
-    random-low: 0
-    random-high: 50
-    20: 0
-  second_fossil_check_condition: # After choosing one of the fossil location items, you can obtain the remaining item from the Cinnabar Lab
-    #    Scientist after reviving this number of fossils.
-    # you can add additional values between minimum and maximum
-    0: 0 # minimum value
-    3: 0 # maximum value
-    random: 0
-    random-low: 0
-    random-high: 50
+  elite_four_badges_condition: random-high
+  victory_road_condition: random-range-high-4-7
+  route_22_gate_condition: random-range-3-7
+  viridian_gym_condition: random-range-high-3-7
+  cerulean_cave_badges_condition: random
+  cerulean_cave_key_items_condition: random
+  route_3_condition:
+    open: 50
+  second_fossil_check_condition: random-high
+  fossil_check_item_types: unique_items
+  exp_all: randomize
   badgesanity: # Shuffle gym badges into the general item pool. If turned off, badges will be shuffled across the 8 gyms.
     false: 50
     true: 25
@@ -65,22 +17,21 @@ Pokemon Red and Blue:
     vanilla: 0
     early_parcel: 50
     open_viridian_city: 50
-  randomize_pokedex:
-    start_with: 1
-    vanilla: 1
-    randomize: 1
-  tea: # Adds a Tea item to the item pool which the Saffron guards require instead of the vending machine drinks.
-    #    Adds a location check to the Celadon Mansion 1F, where Tea is acquired in FireRed and LeafGreen.
+  randomize_pokedex: start_with
+  tea:
     false: 50
     true: 50
-  extra_key_items: # Adds key items that are required to access the Rocket Hideout, Cinnabar Mansion, Safari Zone, and Power Plant.
-    #    Adds four item pickups to Rock Tunnel B1F.
+  extra_key_items:
     false: 50
     true: 50
-  extra_strength_boulders: # Adds Strength Boulders blocking the Route 11 gate, and in Route 13 (can be bypassed with Surf).
-    #    This potentially increases the usefulness of Strength as well as the Bicycle.
+  split_card_key:
+    off: 50
+    on: 25
+    progressive: 25
+  all_elevators_locked:
     false: 50
-    true: 50
+    true: 25
+  extra_strength_boulders: false
   require_item_finder: # Require Item Finder to pick up hidden items.
     false: 50
     true: 50
@@ -91,9 +42,6 @@ Pokemon Red and Blue:
   prizesanity:
     true: 1
     false: 1
-  require_pokedex:
-    true: 1
-    false: 3
   all_pokemon_seen:
     true: 1
     false: 1
@@ -109,83 +57,38 @@ Pokemon Red and Blue:
   move_balancing:
     true: 3
     false: 1
-  confine_transform_to_ditto:
-    true: 5
-    false: 1
-  badges_needed_for_hm_moves: # Off will remove the requirement for badges to use HM moves. Extra will give the Marsh, Volcano, and Earth
-    #    Badges a random HM move to enable. Extra Plus will additionally pick two random badges to enable a second HM move.
-    #    A man in Cerulean City will reveal the moves enabled by each Badge.
+  confine_transform_to_ditto: true
+  dexsanity:
+    disabled: 50
+    random-low: 25
+    full: 5
+  stonesanity:
+    false: 25
+    true: 50
+  door_shuffle:
+    off: 80
+    simple: 40
+    full: 20
+    insanity: 10
+  warp_tile_shuffle:
+    false: 50
+    true: 50
+  badges_needed_for_hm_moves:
     on: 50
     off: 25
     extra: 25
     extra_plus: 25
-  free_fly_location: # One random fly destination will be unlocked by default.
-    false: 0
+  free_fly_location: true
+  town_map_fly_location:
+    false: 20
     true: 50
-  oaks_aide_rt_2: # Number of Pokemon registered in the Pokedex required to receive the item from Oak's Aide on Route 2
-    # you can add additional values between minimum and maximum
-    0: 0 # minimum value
-    80: 0 # maximum value
-    random: 0
-    random-low: 0
-    random-high: 0
-    10: 0
-    random-range-0-10: 50
-  oaks_aide_rt_11: # Number of Pokemon registered in the Pokedex required to receive the item from Oak's Aide on Route 11
-    # you can add additional values between minimum and maximum
-    0: 0 # minimum value
-    80: 0 # maximum value
-    random: 0
-    random-low: 0
-    random-high: 0
-    30: 0
-    random-range-0-20: 50
-  oaks_aide_rt_15: # Number of Pokemon registered in the Pokedex required to receive the item from Oak's Aide on Route 15
-    # you can add additional values between minimum and maximum
-    0: 0 # minimum value
-    80: 0 # maximum value
-    random: 0
-    random-low: 0
-    random-high: 0
-    50: 0
-    random-range-0-30: 50
-  blind_trainers: # Chance each frame that you are standing on a tile in a trainer's line of sight that they will fail to initiate a
-    #    battle. If you move into and out of their line of sight without stopping, this chance will only trigger once.
-    # you can add additional values between minimum and maximum
-    0: 50 # minimum value
-    100: 0 # maximum value
-    random: 0
-    random-low: 25
-    random-high: 0
-  minimum_steps_between_encounters: # Minimum number of steps between wild Pokemon encounters.
-    # you can add additional values between minimum and maximum
-    0: 0 # minimum value
-    255: 0 # maximum value
-    random: 0
-    random-low: 0
-    random-high: 0
-    3: 50
-  exp_modifier: # Modifier for EXP gained. When specifying a number, exp is multiplied by this amount and divided by 16.
-    # you can add additional values between minimum and maximum
-    0: 0 # minimum value
-    255: 0 # maximum value
-    random: 0
-    random-low: 0
-    random-high: 0
-    half: 0
-    normal: 0
-    double: 0
-    triple: 0
-    quadruple: 0
-    quintuple: 0
-    sextuple: 0
-    septuple: 0
-    octuple: 0
-    random-range-low-16-32: 1
-  randomize_wild_pokemon: # Randomize all wild Pokemon and game corner prize Pokemon. match_types will select a Pokemon with at least one
-    #    type matching the original type of the original Pokemon. match_base_stats will prefer Pokemon with closer base stat
-    #    totals. match_types_and_base_stats will match types and will weight towards similar base stats, but there may not be
-    #    many to choose from.
+  oaks_aide_rt_2: random-range-1-10
+  oaks_aide_rt_11: random-range-1-20
+  oaks_aide_rt_15: random-range-1-30
+  blind_trainers: random-low
+  minimum_steps_between_encounters: 3
+  exp_modifier: random-range-low-16-32
+  randomize_wild_pokemon:
     vanilla: 50
     match_types: 25
     match_base_stats: 50
@@ -197,44 +100,24 @@ Pokemon Red and Blue:
     match_base_stats: 50
     match_types_and_base_stats: 25
     completely_random: 5
-  randomize_static_pokemon: # Randomize all one-time gift and encountered Pokemon, except legendaries.
-    #    These will always be first evolution stage Pokemon.
+  randomize_static_pokemon:
     vanilla: 50
     match_types: 25
     match_base_stats: 50
     match_types_and_base_stats: 25
     completely_random: 5
-  randomize_legendary_pokemon: # Randomize Legendaries. Mew has been added as an encounter at the Vermilion dock truck.
-    #    Shuffle will shuffle the legendaries with each other. Static will shuffle them into other static Pokemon locations.
-    #    'Any' will allow legendaries to appear anywhere based on wild and static randomization options, and their locations
-    #    will be randomized according to static Pokemon randomization options.
+  randomize_legendary_pokemon:
     vanilla: 50
     shuffle: 50
     static: 50
     any: 50
-  catch_em_all: # Guarantee all first evolution stage Pokemon are available, or all Pokemon of all stages.
-    #    Currently only has an effect if wild Pokemon are randomized.
-    off: 50
-    first_stage: 50
-    all_pokemon: 50
-  randomize_pokemon_stats: # Randomize base stats for each Pokemon. Shuffle will shuffle the 5 base stat values amongst each other. Randomize
-    #    will completely randomize each stat, but will still add up to the same base stat total.
+  catch_em_all: all_pokemon
+  randomize_pokemon_stats:
     vanilla: 50
     shuffle: 50
     randomize: 50
-  randomize_pokemon_catch_rates: # Randomize the catch rate for each Pokemon.
-    false: 50
-    true: 10
-  minimum_catch_rate: # Minimum catch rate for each Pokemon. If randomize_catch_rates is on, this will be the minimum value that can be
-    #    chosen. Otherwise, it will raise any Pokemon's catch rate up to this value if its normal catch rate is lower.
-    # you can add additional values between minimum and maximum
-    1: 0 # minimum value
-    255: 0 # maximum value
-    random: 0
-    random-low: 0
-    random-high: 0
-    3: 50
-    random-range-low-3-45: 25 
+  randomize_pokemon_catch_rates: false
+  minimum_catch_rate: 3
   randomize_trainer_parties: # Randomize enemy Pokemon encountered in trainer battles.
     vanilla: 50
     match_types: 25
@@ -248,10 +131,6 @@ Pokemon Red and Blue:
     vanilla: 0
     prefer_types: 50
     completely_random: 15
-  start_with_four_moves: # If movesets are randomized, this will give all Pokemon 4 starting moves.
-    false: 50
-    true: 50
-  same_type_attack_bonus: true
   tm_same_type_compatibility: 90
   tm_normal_type_compatibility: 60
   tm_other_type_compatibility: 10
@@ -259,20 +138,12 @@ Pokemon Red and Blue:
   hm_normal_type_compatibility: 75
   hm_other_type_compatibility: 15
   vanilla_tms_hms: false
-  randomize_pokemon_types: # Randomize the types of each Pokemon. Follow Evolutions will ensure Pokemon's types remain the same when evolving
-    #    (except possibly gaining a type).
+  randomize_pokemon_types:
     vanilla: 50
     follow_evolutions: 50
     randomize: 5
-  secondary_type_chance: # If randomize_pokemon_types is on, this is the chance each Pokemon will have a secondary type. If follow_evolutions
-    #    is selected, it is the chance a second type will be added at each evolution stage. vanilla will give secondary types
-    #    to Pokemon that normally have a secondary type.
-    # you can add additional values between minimum and maximum
-    0: 0 # minimum value without special meaning
-    100: 0 # maximum value
+  secondary_type_chance: 
     random: 50
-    random-low: 0
-    random-high: 0
     vanilla: 50
   randomize_type_chart:
     vanilla: 50
@@ -289,28 +160,42 @@ Pokemon Red and Blue:
     #    19.9% to 1.2%. Turn this on to normalize them all to 10% each.
     false: 15
     true: 50
-  reusable_tms: # Makes TMs reusable, so they will not be consumed upon use.
-    false: 0
-    true: 50
-  starting_money: # The amount of money you start with.
-    # you can add additional values between minimum and maximum
-    0: 0 # minimum value
-    999999: 0 # maximum value
-    random: 0
-    random-low: 0
-    random-high: 0
-    3000: 50
-    random-range-2500-10000: 25
-  lose_money_on_blackout: 
-    true: 1
-    false: 1
-  better_shops:
-    true: 5
-    false: 1
-  master_ball_price: 5000
-  deah_link: false
-  randomize_pokemon_palettes: random
+  reusable_tms: true
+  lose_money_on_blackout: false
+  better_shops: true
+  fix_combat_bugs: true
+  poke_doll_skip: patched
+  bicycle_gate_skips: patched
   triggers:
+    - option_category: Pokemon Red and Blue
+      option_name: door_shuffle
+      option_result: simple
+      options:
+        Pokemon Red and Blue:
+          level_scaling: by_spheres
+    - option_category: Pokemon Red and Blue
+      option_name: door_shuffle
+      option_result: off
+      options:
+        Pokemon Red and Blue:
+          level_scaling:
+            by_spheres: 50
+            off: 50
+    - option_category: Pokemon Red and Blue
+      option_name: door_shuffle
+      option_result: full
+      options:
+        Pokemon Red and Blue:
+          level_scaling:
+            by_spheres: 15
+            by_spheres_and_distance: 50
+    - option_category: Pokemon Red and Blue
+      option_name: door_shuffle
+      option_result: insanity
+      options:
+        Pokemon Red and Blue:
+          level_scaling:
+            by_spheres_and_distance: 50
     - option_category: Pokemon Red and Blue
       option_name: randomize_pokemon_types
       option_result: vanilla
