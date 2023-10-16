@@ -1,0 +1,128 @@
+﻿Lufia II Ancient Cave:
+
+  local_items:
+    ["Iris treasures"]
+
+  blue_chest_chance:
+    25: 10
+    30: 4
+    40: 2
+    50: 1
+    60: 1
+    70: 1
+
+  blue_chest_count:
+    25: 1
+    50: 3
+    60: 4
+    70: 5
+    80: 6
+    90: 5
+    100: 3
+
+  boss:
+    lizard_man: 1
+    camu: 2
+    pierre: 1
+    daniele: 1
+    gades_a: 2
+    master: 1
+    random-middle: 10
+    random-low: 1
+
+  capsule_cravings_jp_style: true
+
+  capsule_starting_form:
+    random: 2
+    default: 1 # equivalent to 1
+    m: 1 # equivalent to 5
+
+  capsule_starting_level:
+    random: 1
+    default: 2 # equivalent to 1
+    party_starting_level: 4 # equivalent to 0
+
+  crowded_floor_chance:
+    16: 10
+    50: 4
+    8: 2
+
+  default_capsule:
+    jelze: 1
+    flash: 1
+    gusto: 1
+    zeppy: 1
+    darbi: 1
+    sully: 1
+    blaze: 1
+
+  default_party:
+    random-2p: 2
+    random-3p: 2
+    random-4p: 1
+    m: 4
+
+  enemy_floor_numbers:
+    vanilla: 5
+    shuffle: 1
+    randomize: 1
+
+  enemy_movement_patterns:
+    vanilla: 1
+    shuffle_by_pattern: 1
+    randomize_by_pattern: 1
+    shuffle_by_sprite: 1
+    randomize_by_sprite: 1
+
+  exp_modifier:
+    100: 2
+    150: 1
+    200: 1
+    random: 1
+    
+  final_floor:
+    99: 1
+    50: 5
+    60: 5
+    70: 3
+
+  gear_variety_after_b9:
+    false: 1
+    true: 10
+
+  goal:
+    boss: 1
+    iris_treasure_hunt: 5
+    boss_iris_treasure_hunt: 1
+    final_floor: 4
+
+  healing_floor_chance:
+    16: 1
+    random: 1
+    random-low: 1
+
+  iris_floor_chance:
+    40: 1
+    50: 2
+    60: 2
+    70: 1
+    80: 1
+
+  iris_treasures_required:
+    9: 2
+    random: 1
+    random-high: 1
+
+  master_hp: random-low
+
+  party_starting_level: 1
+
+  run_speed: double
+
+  shuffle_capsule_monsters:
+    false: 1
+    true: 3
+
+  shuffle_party_members:
+    false: 1
+    true: 3
