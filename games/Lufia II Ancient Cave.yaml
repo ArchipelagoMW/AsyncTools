@@ -4,9 +4,12 @@
     ["Iris treasures"]
 
   blue_chest_chance:
-    25: 4
-    30: 2
-    random-high: 1
+    25: 10
+    30: 4
+    40: 2
+    50: 1
+    60: 1
+    70: 1
 
   blue_chest_count:
     25: 1
@@ -39,7 +42,7 @@
   crowded_floor_chance:
     16: 10
     50: 4
-    random-low: 2
+    8: 2
 
   default_capsule:
     jelze: 1
@@ -96,12 +99,11 @@
     random-low: 1
 
   iris_floor_chance:
-    5: 1
-    10: 2
-    20: 2
-    30: 1    
-    random: 1
-    random-low: 2
+    40: 1
+    50: 2
+    60: 2
+    70: 1
+    80: 1
 
   iris_treasures_required:
     9: 2
@@ -110,9 +112,7 @@
 
   master_hp: random-low
 
-  party_starting_level:
-    1: 10
-    random-low: 1
+  party_starting_level: 1
 
   run_speed: double
 
