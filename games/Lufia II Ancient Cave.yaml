@@ -14,8 +14,11 @@
   blue_chest_count:
     25: 1
     50: 3
-    100: 2
-    random-high: 3
+    60: 4
+    70: 5
+    80: 6
+    90: 5
+    100: 3
 
   boss:
     lizard_man: 1
