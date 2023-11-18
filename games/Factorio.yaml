@@ -21,7 +21,7 @@ Factorio:
   min_tech_cost:
     1: 50
   max_tech_cost:
-    random-range-low-100-10000: 20
+    random-range-100-1500: 20
   tech_cost_distribution:
     even: 10
     low: 10
