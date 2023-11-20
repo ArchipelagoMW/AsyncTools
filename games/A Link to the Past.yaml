@@ -15,13 +15,13 @@ A Link to the Past:
     on: 0 # prevents unshuffled compasses, maps and keys to be boss drops, they can still drop keysanity and other players' items
     off: 50
   ### End of Logic Section ###
-  bigkey_shuffle: # Big Key Placement
+  big_key_shuffle: # Big Key Placement
     original_dungeon: 50
     own_dungeons: 5
     own_world: 15
     any_world: 0
     different_world: 0
-  smallkey_shuffle: # Small Key Placement
+  small_key_shuffle: # Small Key Placement
     original_dungeon: 50
     own_dungeons: 5
     own_world: 15
@@ -40,6 +40,7 @@ A Link to the Past:
     own_world: 0
     any_world: 20
     different_world: 0
+  key_drop_shuffle: on
   # you can add more combos of these letters here
   dungeon_counters: pickup
   progressive: # Enable or disable progressive items (swords, shields, bow)
@@ -48,15 +49,15 @@ A Link to the Past:
     grouped_random: 25 # Randomly decides for all items. Swords could be progressive, shields might not be
   entrance_shuffle:
     none: 60 # Vanilla game map. All entrances and exits lead to their original locations. You probably want this option
-    dungeonssimple: 20 # shuffle just dungeons amongst each other, swapping dungeons entirely, so Hyrule Castle is always 1 dungeon
-    dungeonsfull: 15 # shuffle any dungeon entrance with any dungeon interior, so Hyrule Castle can be 4 different dungeons
-    dungeonscrossed: 10
+    dungeons_simple: 20 # shuffle just dungeons amongst each other, swapping dungeons entirely, so Hyrule Castle is always 1 dungeon
+    dungeons_full: 15 # shuffle any dungeon entrance with any dungeon interior, so Hyrule Castle can be 4 different dungeons
+    dungeons_crossed: 10
     simple: 1 # Entrances are grouped together before being randomized. Simple uses the most strict grouping rules
     restricted: 1 # Less strict than simple
     full: 5 # Less strict than restricted
     crossed: 10 # Less strict than full
     insanity: 0 # Very few grouping rules and entrances <-> insides are uncoupled. Good luck.
-  goals:
+  goal:
     ganon: 30 # Climb GT, defeat Agahnim 2, then kill Ganon
     crystals: 30 # Only killing Ganon is required. The hole is always open. Items may still be placed in GT, however
     bosses: 10 # Defeat the boss of all dungeons, including Agahnim's tower and GT (Aga 2)
@@ -72,19 +73,9 @@ A Link to the Past:
     yes: 0 # Pyramid hole is always open. Ganon's vulnerable condition is still required before he can he hurt
     no: 0 # Pyramid hole is always closed until you defeat Agahnim atop Ganon's Tower
   triforce_pieces_required:
-    25: 1
-    26: 1
-    27: 1
-    28: 1
-    29: 1
-    30: 1
+    random-range-25-30: 1
   triforce_pieces_available:
-    30: 1
-    31: 1
-    32: 1
-    33: 1
-    34: 1
-    35: 1
+    random-range-30-35: 1
   crystals_needed_for_gt: random-low
   crystals_needed_for_ganon: random-high
   mode:
@@ -154,25 +145,45 @@ A Link to the Past:
     15: 0
     30: 0
     random: 0 # 0 to 30 evenly distributed
-  shop_shuffle:
-    none: 5
-    g: 1 # Generate new default inventories for overworld/underworld shops, and unique shops
-    f: 1 # Generate new default inventories for every shop independently
-    i: 1 # Shuffle default inventories of the shops around
-    p: 1 # Randomize the prices of the items in shop inventories
-    u: 1 # Shuffle capacity upgrades into the item pool (and allow them to traverse the multiworld)
-    w: 0 # Consider witch's hut like any other shop and shuffle/randomize it too
-    ip: 1 # Shuffle inventories and randomize prices
-    fpu: 1 # Generate new inventories, randomize prices and shuffle capacity upgrades into item pool
-    uip: 1 # Shuffle inventories, randomize prices and shuffle capacity upgrades into the item pool
-    uipP: 1
-    ipP: 1
-    pP: 1
+
+  randomize_shop_inventories:
+    # Generate new default inventories for overworld/underworld shops, and unique shops; or each shop independently
+    default: 50
+    randomize_by_shop_type: 50
+    randomize_each: 50
+
+  shuffle_shop_inventories:
+    # Shuffle default inventories of the shops around
+    false: 50
+    true: 50
+
+  randomize_shop_prices:
+    # Randomize the prices of the items in shop inventories
+    false: 50
+    true: 50
+
+  randomize_cost_types:
+    # Prices of the items in shop inventories may cost hearts, arrow, or bombs instead of rupees
+    false: 50
+    true: 50
+    
+  shuffle_capacity_upgrades:
+    # Shuffle capacity upgrades into the item pool (and allow them to traverse the multiworld).
+    # On Combined will shuffle only a single bomb upgrade and arrow upgrade each which bring you to the maximum capacity.
+    off: 50
+    on: 50
+    on_combined: 10
+
+  bombless_start:
+    # Start with a max of 0 bombs available, requiring Bomb Upgrade items in order to use bombs
+    false: 50
+    true: 5
+    
   # You can add more combos
   ### End of Shop Section ###
-  shuffle_prizes: g
-  start_inventory: {"Pegasus Boots": 1}
-  local_items: ["Moon Pearl", "Pegasus Boots"]
+  shuffle_prizes: general
+  start_inventory_from_pool: {"Pegasus Boots": 1}
+  local_items: ["Moon Pearl"]
   glitch_boots:
     on: 50 # Start with Pegasus Boots in any glitched logic mode that makes use of them
     off: 0
