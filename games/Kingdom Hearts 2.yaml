@@ -40,6 +40,7 @@ Kingdom Hearts 2:
   WeaponSlotStartHint:
     'false': 50
   FightLogic:
+    easy: 10
     normal: 50
   FinalFormLogic:
     no_light_and_darkness: 50
@@ -48,7 +49,7 @@ Kingdom Hearts 2:
   DonaldGoofyStatsanity:
     'true': 50
   FillerItemsLocal:
-    'true': 50
+    'false': 50
   Visitlocking:
     first_and_second_visit_locking: 50
   RandomVisitLockingItem:
