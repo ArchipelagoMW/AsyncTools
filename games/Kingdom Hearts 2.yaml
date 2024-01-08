@@ -15,11 +15,13 @@ Kingdom Hearts 2:
   Final_Form_EXP:
     4: 50
   Summon_EXP:
-    4: 50
+    6: 50
   Schmovement:
     level_1: 50
   RandomGrowth:
     0: 50
+  AntiForm:
+    'false': 50
   Promise_Charm:
     'true': 50
   Goal:
@@ -35,21 +37,33 @@ Kingdom Hearts 2:
     3: 50
   Keyblade_Maximum:
     7: 50
+  WeaponSlotStartHint:
+    'false': 50
+  FightLogic:
+    normal: 50
+  FinalFormLogic:
+    no_light_and_darkness: 50
+  AutoFormLogic:
+    'false': 50
+  DonaldGoofyStatsanity:
+    'true': 50
+  FillerItemsLocal:
+    'true': 50
   Visitlocking:
     first_and_second_visit_locking: 50
   RandomVisitLockingItem:
     3: 50
   SuperBosses:
     'false': 50
-  KeybladeAbilities:
-    support: 50
-  BlacklistKeyblade:
-    - Second Chance
-    - Scan
-    - Once More
-    - Aerial Recovery
   Cups:
     no_cups: 50
+  SummonLevelLocationToggle:
+    'true': 50
+  AtlanticaToggle:
+    'false': 50
+    'true': 5
+  CorSkipToggle:
+    'false': 50
   start_inventory: {}
   exclude_locations: []
   priority_locations: []
