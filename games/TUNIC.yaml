@@ -1,0 +1,32 @@
+TUNIC:
+  sword_progression: 'true'
+  start_with_sword: 'false'
+  keys_behind_bosses: 'false'
+  ability_shuffling: 'true'
+  shuffle_ladders: 'true'
+  entrance_rando: no
+  fixed_shop: 'false'
+  logic_rules: restricted
+  fool_traps:
+    off: 50
+    normal: 50
+  hexagon_quest:
+    'false': 50
+    'true': 50
+  hexagon_goal: random-middle
+  extra_hexagon_percentage: random-low
+  lanternless: 'false'
+  maskless: 'false'
+  laurels_location:
+    anywhere: 50
+    10_fairies: 50
+
+  triggers:
+    - option_category: TUNIC
+      option_name: hexagon_quest
+      option_result: 'false'
+      options:
+        TUNIC:
+          keys_behind_bosses:
+            'true': 50
+            'false': 50
