@@ -1,6 +1,6 @@
 TUNIC:
   sword_progression: 'true'
-  start_with_sword: 'false'
+  start_with_sword: random
   keys_behind_bosses: 'false'
   ability_shuffling: 'true'
   shuffle_ladders: 'true'
@@ -10,9 +10,7 @@ TUNIC:
   fool_traps:
     off: 50
     normal: 50
-  hexagon_quest:
-    'false': 50
-    'true': 50
+  hexagon_quest: random
   hexagon_goal: random-middle
   extra_hexagon_percentage: random-low
   lanternless: 'false'
