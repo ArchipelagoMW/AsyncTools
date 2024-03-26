@@ -1,12 +1,13 @@
 name: Player{player}
 description: Archipelago Async Mystery Filler Settings
 requires:
-  version: 0.4.3
+  version: 0.4.5
 
 # Define your game here!
 game:
   A Link to the Past: 100
   Adventure: 7
+  Celeste 64: 15
   Dark Souls III: 31
   DLCQuest: 25
   Donkey Kong Country 3: 25
@@ -14,6 +15,7 @@ game:
   Factorio: 31
   Hollow Knight: 88
   Kingdom Hearts 2: 55
+  Kirby's Dream Land 3: 25
   Links Awakening DX: 50
   Lufia II Ancient Cave: 10
   MegaMan Battle Network 3: 31
