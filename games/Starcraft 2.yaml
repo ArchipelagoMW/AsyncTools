@@ -1,0 +1,207 @@
+name: Player{player}
+game: Starcraft 2
+Starcraft 2:
+  game_format:
+    multi_campaign: 30
+    all_terran: 15
+    all_protoss: 15
+    wol: 10
+    hots: 20
+    lotv: 10
+  mission_order:
+    vanilla: 10
+    vanilla_shuffled: 30
+    grid: 30
+    mini_campaign: 30
+  game_difficulty:
+    casual: 25
+    normal: 35
+    hard: 20
+    brutal: 0
+  all_in_map: random
+  maximum_campaign_size: 83
+  grid_two_start_positions: random
+  shuffle_no_build:
+    true: 75
+    false: 25
+  starter_unit:
+    balanced: 75
+    any_starter_unit: 25
+  required_tactics: standard
+  ensure_generic_items: 25
+  min_number_of_upgrades: 2
+  max_number_of_upgrades: -1
+  generic_upgrade_research:
+    auto_in_no_build: 75
+    always_auto: 25
+  nco_items: true
+  bw_items: true
+  ext_items: true
+  enable_wol_missions: false
+  enable_prophecy_missions: false
+  enable_hots_missions: false
+  enable_lotv_prologue_missions: false
+  enable_lotv_missions: false
+  enable_nco_missions: false
+  enable_epilogue_missions: false
+  grant_story_tech:
+    false: 75
+    true: 25
+  kerrigan_presence: not_present
+  kerrigan_levels_per_mission_completed: 0
+  kerrigan_levels_per_mission_completed_cap: -1
+  kerrigan_level_item_sum: random-range-70-140
+  kerrigan_level_item_distribution:
+    size_7: 15
+    size_10: 30
+    size_14: 40
+    size_35: 15
+  take_over_ai_allies: false
+  vanilla_locations: enabled
+  extra_locations: enabled
+  challenge_locations: enabled
+  mastery_locations: enabled
+  exclude_very_hard_missions:
+    default: 50
+    true: 50
+  triggers:
+    # Link grant_story_levels to grant_story_tech
+    - option_category: Starcraft 2
+      option_name: grant_story_tech
+      option_result: false
+      options:
+        Starcraft 2:
+          grant_story_levels: disabled
+    - option_category: Starcraft 2
+      option_name: grant_story_tech
+      option_result: true
+      options:
+        Starcraft 2:
+          grant_story_levels:
+            additive: 50
+            minimum: 50
+    # Game formats
+    - option_category: Starcraft 2
+      option_name: game_format
+      option_result: multi_campaign
+      options:
+        Starcraft 2:
+          enable_wol_missions: true
+          enable_prophecy_missions: true
+          enable_hots_missions: true
+          enable_lotv_prologue_missions: true
+          enable_lotv_missions: true
+          enable_nco_missions: true
+          enable_epilogue_missions: true
+          maximum_campaign_size:
+            83: 75
+            40: 25
+          spear_of_adun_presence:
+            protoss: 50
+            everywhere: 50
+          spear_of_adun_present_in_no_build: random
+          spear_of_adun_autonomously_cast_ability_presence:
+            protoss: 50
+            everywhere: 50
+          spear_of_adun_autonomously_cast_present_in_no_build: random
+          take_over_ai_allies: random
+          kerrigan_presence: vanilla
+    - option_category: Starcraft 2
+      option_name: game_format
+      option_result: all_terran
+      options:
+        Starcraft 2:
+          enable_wol_missions: true
+          enable_nco_missions: true
+          maximum_campaign_size:
+            34: 75
+            17: 25
+    - option_category: Starcraft 2
+      option_name: game_format
+      option_result: all_protoss
+      options:
+        Starcraft 2:
+          enable_prophecy_missions: true
+          enable_lotv_prologue_missions: true
+          enable_lotv_missions: true
+          spear_of_adun_presence: protoss
+          spear_of_adun_autonomously_cast_ability_presence: protoss
+          spear_of_adun_present_in_no_build: random
+          spear_of_adun_autonomously_cast_present_in_no_build: random
+          maximum_campaign_size:
+            26: 75
+            16: 25
+    - option_category: Starcraft 2
+      option_name: game_format
+      option_result: wol
+      options:
+        Starcraft 2:
+          enable_wol_missions: true
+          maximum_campaign_size:
+            25: 75
+            16: 25
+    - option_category: Starcraft 2
+      option_name: game_format
+      option_result: hots
+      options:
+        Starcraft 2:
+          enable_hots_missions: true
+          maximum_campaign_size:
+            20: 75
+            12: 25
+          shuffle_no_build: true
+          kerrigan_presence: vanilla
+    - option_category: Starcraft 2
+      option_name: game_format
+      option_result: lotv
+      options:
+        Starcraft 2:
+          enable_lotv_missions: true
+          maximum_campaign_size:
+            19: 75
+            12: 25
+          shuffle_no_build: true
+          spear_of_adun_present_in_no_build: random
+          spear_of_adun_autonomously_cast_present_in_no_build: random
+    # Exclude missions requiring Kerrigan level in short orders
+    # Mini campaign
+    - option_category: Starcraft 2
+      option_name: mission_order
+      option_result: mini_campaign
+      options:
+        Starcraft 2:
+          excluded_missions:
+            - Supreme
+            - The Infinite Cycle
+    # Short grids
+    # Don't treat vanilla shuffled as a short grid first
+    - option_category: Starcraft 2
+      option_name: mission_order
+      option_result: vanilla_shuffled
+      options:
+        Starcraft 2:
+          maximum_campaign_size: 83
+    - option_category: Starcraft 2
+      option_name: maximum_campaign_size
+      option_result: 12
+      options:
+        Starcraft 2:
+          excluded_missions:
+            - Supreme
+            - The Infinite Cycle
+    - option_category: Starcraft 2
+      option_name: maximum_campaign_size
+      option_result: 16
+      options:
+        Starcraft 2:
+          excluded_missions:
+            - Supreme
+            - The Infinite Cycle
+    - option_category: Starcraft 2
+      option_name: maximum_campaign_size
+      option_result: 40
+      options:
+        Starcraft 2:
+          excluded_missions:
+            - Supreme
+            - The Infinite Cycle
