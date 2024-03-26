@@ -1,7 +1,11 @@
 The Witness:
   puzzle_randomization: sigma_normal
   shuffle_symbols: random
-  shuffle_doors: random
+  shuffle_doors:
+    off: 50
+    panels: 50
+    doors: 50
+    mixed: 50
   door_groupings: random
   shuffle_boat:
     false: 40
@@ -22,7 +26,11 @@ The Witness:
     obelisk_sides: 20
   EP_difficulty: normal
   shuffle_postgame: 'false'
-  victory_condition: random
+  victory_condition:
+    elevator: 50
+    challenge: 50
+    mountain_box_short: 50
+    mountain_box_long: 50
   mountain_lasers: random
   challenge_lasers: random
   early_caves:
