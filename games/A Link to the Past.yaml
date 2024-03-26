@@ -170,7 +170,7 @@ A Link to the Past:
     pP: 1
   # You can add more combos
   ### End of Shop Section ###
-  shuffle_prizes: g
+  shuffle_prizes: general
   start_inventory: {"Pegasus Boots": 1}
   local_items: ["Moon Pearl", "Pegasus Boots"]
   glitch_boots:
