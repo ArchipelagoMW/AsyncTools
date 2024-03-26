@@ -33,7 +33,7 @@ Kirby's Dream Land 3:
     false: 50
   starsanity: 
     true: 25
-    false 75
+    false: 75
   kirby_flavor_preset: random
   gooey_flavor_preset: random
   music_shuffle: random
