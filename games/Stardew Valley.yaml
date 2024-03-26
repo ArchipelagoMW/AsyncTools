@@ -1,11 +1,13 @@
 Stardew Valley:
   accessibility: items
   goal:
-    community_center: 60
-    grandpa_evaluation: 10
-    bottom_of_the_mines: 10
-    master_angler: 10
-    complete_collection: 10
+    community_center: 75
+    grandpa_evaluation: 5
+    bottom_of_the_mines: 5
+    master_angler: 5
+    complete_collection: 5
+    protector_of_the_valley: 5
+  farm_type: random
   starting_money: random-range-2000-20000
   profit_margin:
     normal: 30
@@ -13,25 +15,31 @@ Stardew Valley:
     triple: 20
     quadruple: 10
   bundle_randomization:
-    vanilla: 10
-    thematic: 90
+    thematic: 50
+    remixed: 50
   bundle_price:
-    very_cheap: 10
-    cheap: 60
-    normal: 30
+    minimum: 10
+    very_cheap: 20
+    cheap: 50
+    normal: 20
   entrance_randomization: disabled
   season_randomization:
-    randomized: 30
+    randomized: 40
     randomized_not_winter: 40
-    progressive: 30
+    progressive: 20
   cropsanity: shuffled
   backpack_progression: early_progressive
-  tool_progression: progressive
+  tool_progression:
+    progressive_very_cheap: 40
+    progressive_cheap: 50
+    progressive: 10
   elevator_progression:
     progressive: 50
     progressive_from_previous_floor: 50
   skill_progression: progressive
-  building_progression: progressive_early_shipping_bin
+  building_progression:
+    progressive_very_cheap: 50
+    progressive_cheap: 50
   festival_locations: easy
   arcade_machine_locations: disabled
   special_order_locations:
@@ -47,15 +55,25 @@ Stardew Valley:
     exclude_hard_fish: 20
     only_easy_fish: 50
   museumsanity:
-    none: 30
-    milestones: 50
+    none: 50
+    milestones: 30
     randomized: 10
     all: 10
+  monstersanity:
+    one_per_category: 40
+    one_per_monster: 40
+    very_short_goals: 20
+  shipsanity:
+    none: 60
+    crops: 40
+  cooksanity: none
+  chefsanity: none
+  craftsanity: none
   friendsanity:
-    none: 25
+    none: 40
     bachelors: 25
     starting_npcs: 25
-    all: 25
+    all: 10
   friendsanity_heart_size: 4
   movement_buff_number: random-range-4-8
   luck_buff_number: random-range-4-8
