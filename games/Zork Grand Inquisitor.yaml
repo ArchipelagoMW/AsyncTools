@@ -1,0 +1,13 @@
+Zork Grand Inquisitor:
+  goal:
+    three_artifacts: 100
+  quick_port_foozle:
+    true: 100
+  start_with_hotspot_items:
+    false: 2
+    true: 1
+  deathsanity:
+    false: 1
+    true: 2
+  grant_missable_location_checks:
+    true: 100
