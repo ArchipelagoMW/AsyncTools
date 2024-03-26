@@ -10,7 +10,9 @@ TUNIC:
   fool_traps:
     off: 50
     normal: 50
-  hexagon_quest: random
+  hexagon_quest:
+    'true': 50
+    'false': 50
   hexagon_goal: random-middle
   extra_hexagon_percentage: random-low
   lanternless: 'false'
