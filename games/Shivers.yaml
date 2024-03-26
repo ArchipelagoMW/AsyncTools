@@ -1,0 +1,8 @@
+Shivers:
+  lobby_access: random
+  puzzle_hints_required: false
+  include_information_plaques: random
+  front_door_usable: random
+  elevators_stay_solved: true
+  early_beth: true
+  early_lightning: false
