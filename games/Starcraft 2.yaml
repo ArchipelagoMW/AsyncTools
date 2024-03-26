@@ -1,5 +1,3 @@
-name: Player{player}
-game: Starcraft 2
 Starcraft 2:
   game_format:
     multi_campaign: 30
