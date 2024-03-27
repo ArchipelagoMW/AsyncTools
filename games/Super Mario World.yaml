@@ -1,8 +1,22 @@
 Super Mario World:
   goal: bowser
   bosses_required: random-range-5-10
+  max_yoshi_egg_cap: 50
+  percentage_of_yoshi_eggs: 100
   dragon_coin_checks:
     false: 2
+    true: 1
+  moon_checks:
+    false: 2
+    true: 1
+  hidden_1up_checks:
+    false: 2
+    true: 1
+  bonus_block_checks:
+    false: 2
+    true: 1
+  blocksanity:
+    false: 3
     true: 1
   bowser_castle_doors: vanilla
   bowser_castle_rooms:
@@ -15,20 +29,41 @@ Super Mario World:
     true: 2
     false: 1
   boss_shuffle:
-    none: 1
-    simple: 1
-    full: 1
+    none: 2
+    simple: 2
+    full: 2
+    singularity: 1
+  swap_donut_gh_exits: true
+  display_received_item_popups: progression
+  junk_fill_percentage: 0
   trap_fill_percentage: random-low
   ice_trap_weight: random
   stun_trap_weight: random
   literature_trap_weight: random
   timer_trap_weight: random
+  reverse_trap_weight: random
+  thwimp_trap_weight: random
+  autosave: true
+  early_climb: false
   overworld_speed: fast
   music_shuffle:
-    none: 3
-    consistent: 2
-    full: 1
+    none: 6
+    consistent: 4
+    full: 2
+    singularity: 1
+  sfx_shuffle:
+    none: 6
+    full: 3
+    singularity: 1
   mario_palette: random
+  level_palette_shuffle:
+    off: 3
+    on_legacy: 1
+    on_curated: 2
+  overworld_palette_shuffle:
+    off: 3
+    on_legacy: 1
+    on_curated: 2
   starting_life_count: random-range-3-20
   triggers:
     - option_category: Super Mario World
@@ -36,4 +71,5 @@ Super Mario World:
       option_result: false
       options:
         Super Mario World:
-          early_climb: 1
+          early_climb: true
+          swap_donut_gh_exits: false
