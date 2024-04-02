@@ -12,8 +12,9 @@ Timespinner:
   Cantoran: random
   LoreChecks: true
   BossRando: random
-  BossScaling: true
+  EnemyRando: off
   DamageRando: off
+  BossHealing: 'true'
   ShopFill: default
   ShopWarpShards: true
   LootPool: randomized
@@ -28,7 +29,15 @@ Timespinner:
     false: 75
     true: 25
   RisingTides:
-    false: 75
-    true: 25
+    false: 50
+    true: 50
+  TrapChance: 10
+  Traps:
+    - Meteor Sparrow Trap
+    - Poison Trap
+    - Chaos Trap
+    - Neurotoxin Trap
+    - Bee Trap
+  PresentAccessWithWheelAndSpindle: true
   UnchainedKeys: random
   DeathLink: false
