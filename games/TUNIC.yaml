@@ -22,6 +22,8 @@ TUNIC:
   laurels_location:
     anywhere: 50
     10_fairies: 50
+  local_items:
+    - Gold Questagon
 
   triggers:
     - option_category: TUNIC
