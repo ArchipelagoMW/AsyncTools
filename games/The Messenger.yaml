@@ -13,3 +13,6 @@ The Messenger:
   shuffle_shards:
     true: 50
     false: 80
+  early_meditation:
+    true: 80
+    false: 40
