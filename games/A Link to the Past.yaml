@@ -137,8 +137,7 @@ A Link to the Past:
   pot_shuffle:
     'on': 0 # Keys, items, and buttons hidden under pots in dungeons are shuffled with other pots in their supertile
     'off': 100 # Default pot item locations
-  ### End of Enemizer Section ###
-  ### Shop Settings ###
+
   shop_shuffle_slots: # Maximum amount of shop slots to be filled with regular item pool items (such as Moon Pearl)
     0: 50
     5: 0
