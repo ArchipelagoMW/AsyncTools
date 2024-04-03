@@ -165,7 +165,7 @@ A Link to the Past:
   randomize_cost_types:
     # Prices of the items in shop inventories may cost hearts, arrow, or bombs instead of rupees
     false: 50
-    true: 50
+    true: 5
     
   shuffle_capacity_upgrades:
     # Shuffle capacity upgrades into the item pool (and allow them to traverse the multiworld).
