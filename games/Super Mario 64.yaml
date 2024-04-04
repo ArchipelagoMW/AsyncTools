@@ -38,7 +38,7 @@ Super Mario 64:
     items: 5
     locations: 2
   buddy_checks: random
-  ExclamationBoxes: random
+  exclamation_boxes: random
   completion_type:
     last_bowser_stage: 5
     all_bowser_stages: 2
