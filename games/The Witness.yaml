@@ -1,5 +1,4 @@
 The Witness:
-  local_items: [Lasers]
   puzzle_randomization:
     sigma_normal: 50
   shuffle_symbols:
@@ -7,11 +6,15 @@ The Witness:
   shuffle_doors:
     none: 10
     panels: 20
-    doors_simple: 50
-    doors_complex: 20
+    doors: 70
+  door_groupings:
+    regional: 50
+    off: 20
   shuffle_lasers:
-    false: 75
-    true: 25
+    off: 75
+    local: 25
+  shuffle_boat:
+    true: 50
   disable_non_randomized_puzzles:
     false: 75
     true: 25
@@ -22,6 +25,8 @@ The Witness:
     true: 75
     false: 25
   shuffle_postgame:
+    false: 50
+  shuffle_EPs:
     false: 50
   victory_condition:
     elevator: 60
@@ -47,17 +52,9 @@ The Witness:
   triggers:
     - option_name: shuffle_doors
       option_category: The Witness
-      option_result: doors_simple
+      option_result: doors
       percentage: 20
       options:
         The Witness:
           shuffle_symbols:
             false: 50
-    - option_name: shuffle_doors
-      option_category: The Witness
-      option_result: doors_complex
-      percentage: 50
-      options:
-        The Witness:
-            shuffle_symbols:
-              false: 50
