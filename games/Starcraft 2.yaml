@@ -45,6 +45,7 @@ Starcraft 2:
   grant_story_tech:
     false: 75
     true: 25
+  grant_story_levels: minimum
   kerrigan_presence: not_present
   kerrigan_levels_per_mission_completed: 0
   kerrigan_levels_per_mission_completed_cap: -1
@@ -62,6 +63,11 @@ Starcraft 2:
   exclude_very_hard_missions:
     default: 50
     true: 50
+  excluded_missions: []
+  spear_of_adun_presence: lotv_protoss
+  spear_of_adun_present_in_no_build: false
+  spear_of_adun_autonomously_cast_ability_presence: lotv_protoss
+  spear_of_adun_autonomously_cast_present_in_no_build: false
   triggers:
     # Link grant_story_levels to grant_story_tech
     - option_category: Starcraft 2
