@@ -1,0 +1,110 @@
+Final Fantasy Mystic Quest:
+  progression_balancing: '0'
+  accessibility: items
+  logic:
+    friendly: 25
+    standard: 10
+  brown_boxes:
+    exclude: 10
+    include: 25
+    shuffle: 10
+  sky_coin_mode:
+    save_the_crystals: 25
+    shattered_sky_coin: 10
+  shattered_sky_coin_quantity:
+    mid_24: 10
+    high_32: 20
+  starting_weapon:
+    steel_sword: 50
+    axe: 50
+    cat_claw: 50
+    bomb: 50
+  progressive_gear:
+    'false': 20
+    'true': 25
+  leveling_curve:
+    normal: 5
+    one_and_half: 15
+    double: 30
+    double_and_half: 15
+    triple: 5
+    quadruple: 2
+  starting_companion:
+    none: 50
+    kaeli: 50
+    tristam: 50
+    phoebe: 50
+    reuben: 50
+  available_companions: '4'
+  companions_locations:
+    standard: 25
+    shuffled: 10
+  kaelis_mom_fight_minotaur: 'false'
+  companion_leveling_type:
+    quests: 30
+    quests_extended: 20
+    save_crystals_individual: 10
+    save_crystals_all: 5
+    benjamin_level: 10
+    benjamin_level_plus_5: 5
+  companion_spellbook_type:
+    standard: 25
+    extended: 10
+    random_balanced: 5
+  enemies_density:
+    all: 5
+    three_quarter: 10
+    half: 20
+    quarter: 10
+  enemies_scaling_lower:
+    quarter: 25
+    half: 5
+  enemies_scaling_upper: one_and_quarter
+  bosses_scaling_lower:
+    quarter: 25
+    half: 10
+  bosses_scaling_upper:
+    one_and_quarter: 25
+    one_and_half: 10
+  enemizer_attacks:
+    normal: 50
+    safe: 10
+  enemizer_groups: mobs_and_bosses
+  shuffle_res_weak_types: 'false'
+  shuffle_enemies_position:
+    'false': 10
+    'true': 25
+  progressive_formations:
+    regions_strict: 25
+    regions_keep_type: 25
+  doom_castle_mode:
+    standard: 25
+    boss_rush: 10
+    dark_king_only: 15
+  doom_castle_shortcut:
+    'false': 25
+    'true': 15
+  tweak_frustrating_dungeons:
+    'false': 25
+    'true': 15
+  map_shuffle:
+    none: 40
+    overworld: 5
+    dungeons: 20
+    overworld_and_dungeons: 10
+    everything: 1
+  crest_shuffle: 'false'
+  shuffle_battlefield_rewards:
+    'false': 50
+    'true': 50
+  battlefields_battles_quantities:
+    ten: 1
+    seven: 5
+    five: 20
+    three: 15
+    one: 10
+    random_one_through_five: 50
+    random_one_through_ten: 25
+  local_items:
+    - Sky Coin
+    - Sky Fragment
