@@ -1,5 +1,5 @@
 Noita:
-  bad_effects: 'true'
+  bad_effects: 'false'
   victory_condition:
     greed_ending: 0
     pure_ending: 50

@@ -9,9 +9,7 @@ TUNIC:
     no: 90
   fixed_shop: 'false'
   logic_rules: restricted
-  fool_traps:
-    off: 50
-    normal: 50
+  fool_traps: off
   hexagon_quest:
     'true': 50
     'false': 50
