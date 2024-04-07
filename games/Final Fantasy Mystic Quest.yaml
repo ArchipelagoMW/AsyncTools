@@ -5,9 +5,9 @@ Final Fantasy Mystic Quest:
     friendly: 25
     standard: 10
   brown_boxes:
-    exclude: 10
-    include: 25
-    shuffle: 10
+    exclude: 0
+    include: 50 
+    shuffle: 0
   sky_coin_mode:
     save_the_crystals: 25
     shattered_sky_coin: 10
@@ -23,12 +23,12 @@ Final Fantasy Mystic Quest:
     'false': 20
     'true': 25
   leveling_curve:
-    normal: 5
-    one_and_half: 15
-    double: 30
-    double_and_half: 15
-    triple: 5
-    quadruple: 2
+    normal: 0
+    one_and_half: 1
+    double: 15
+    double_and_half: 30
+    triple: 10
+    quadruple: 5
   starting_companion:
     none: 50
     kaeli: 50
@@ -45,7 +45,7 @@ Final Fantasy Mystic Quest:
     quests_extended: 20
     save_crystals_individual: 10
     save_crystals_all: 5
-    benjamin_level: 10
+    benjamin_level_plus_10: 10
     benjamin_level_plus_5: 5
   companion_spellbook_type:
     standard: 25
@@ -85,13 +85,13 @@ Final Fantasy Mystic Quest:
     'false': 25
     'true': 15
   tweak_frustrating_dungeons:
-    'false': 25
-    'true': 15
+    'false': 5
+    'true': 50
   map_shuffle:
-    none: 40
-    overworld: 5
-    dungeons: 20
-    overworld_and_dungeons: 10
+    none: 50
+    overworld: 25
+    dungeons: 10
+    overworld_and_dungeons: 5
     everything: 1
   crest_shuffle: 'false'
   shuffle_battlefield_rewards:
