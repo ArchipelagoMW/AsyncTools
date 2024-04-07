@@ -4,9 +4,7 @@ Super Mario 64:
     courses_only: 3
     courses_and_secrets_separate: 2
     courses_and_secrets: 1
-  progressive_keys:
-    true: 5
-    false: 2
+  progressive_keys: true
   enable_coin_stars:
     false: 5
     true: 2
@@ -38,7 +36,14 @@ Super Mario 64:
     items: 5
     locations: 2
   buddy_checks: random
-  exclamation_boxes: random
+  ExclamationBoxes: random
   completion_type:
     last_bowser_stage: 5
     all_bowser_stages: 2
+  triggers:
+    - option_category: Super Mario 64
+      option_name: completion_type
+      option_result: all_bowser_stages
+      options:
+        Super Mario 64:
+          progressive_keys: false
