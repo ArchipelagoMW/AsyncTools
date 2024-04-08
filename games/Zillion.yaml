@@ -1,5 +1,6 @@
 ﻿Zillion:
   continues: random-range-low-1-21
+  floppy_req: random-range-3-7
   gun_levels:
     vanilla: 25
     balanced: 50
@@ -11,7 +12,7 @@
   randomize_alarms:
     false: 50
     true: 50
-  floppy_disk_count: random-range-5-8
+  floppy_disk_count: random-range-3-8
   red_id_card_count: random-range-1-3
   early_scope:
     false: 50
