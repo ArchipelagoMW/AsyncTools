@@ -1,0 +1,29 @@
+﻿Zillion:
+  continues: random-range-low-1-21
+  gun_levels:
+    vanilla: 25
+    balanced: 50
+    low: 25
+  jump_levels:
+    vanilla: 25
+    balanced: 50
+    low: 25
+  randomize_alarms:
+    false: 50
+    true: 50
+  floppy_disk_count: random-range-5-8
+  red_id_card_count: random-range-1-3
+  early_scope:
+    false: 50
+    true: 50
+  skill:
+    0: 25
+    1: 30
+    2: 25
+    3: 12
+    4: 7
+    5: 1
+  starting_cards: random-high
+  room_gen:
+    false: 60
+    true: 40
