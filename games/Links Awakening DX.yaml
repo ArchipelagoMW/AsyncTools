@@ -31,6 +31,14 @@ Links Awakening DX:
     original_dungeon: 5
     own_world: 3
     any_world: 2
+  warp_improvements: true
+  additional_warp_points: true
+  shuffle_instruments:
+    original_dungeon: 10
+    own_dungeons: 10
+    own_world: 10
+    any_world: 5
+    vanilla: 50  
   triggers:
     - option_category: Links Awakening DX
       option_name: goal
