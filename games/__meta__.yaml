@@ -6,16 +6,21 @@ requires:
 # Define your game here!
 game:
   A Link to the Past: 100
+  A Short Hike: 30
   Adventure: 7
+  Bumper Stickers: 10
   Celeste 64: 15
   Dark Souls III: 31
   DLCQuest: 25
   Donkey Kong Country 3: 25
   DOOM 1993: 50
   Factorio: 31
+  Final Fantasy Mystic Quest: 19
   Hollow Knight: 88
+  Hylics 2: 7
   Kingdom Hearts 2: 55
   Kirby's Dream Land 3: 25
+  Lingo: 10
   Links Awakening DX: 50
   Lufia II Ancient Cave: 10
   MegaMan Battle Network 3: 31
@@ -31,15 +36,17 @@ game:
   Rogue Legacy: 40
   SMZ3: 40
   Secret of Evermore: 19
+  Shivers: 10
   Slay the Spire: 37
   Sonic Adventure 2 Battle: 55
-  Starcraft 2 Wings of Liberty: 55
+  Starcraft 2: 55
   Stardew Valley: 50
   Subnautica: 8
   Super Mario 64: 62
   Super Mario World: 35
   Super Metroid: 40
   Terraria: 40
+  TUNIC: 40
   The Legend of Zelda: 25
   The Messenger: 15
   The Witness: 37
@@ -47,3 +54,5 @@ game:
   Undertale: 45
   VVVVVV: 12
   Wargroove: 10
+  Zillion: 7
+  Zork Grand Inquisitor: 7

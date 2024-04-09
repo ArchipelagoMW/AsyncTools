@@ -1,0 +1,43 @@
+TUNIC:
+  sword_progression: 'true'
+  start_with_sword: random
+  keys_behind_bosses: 'false'
+  ability_shuffling: 'true'
+  shuffle_ladders: 'true'
+  entrance_rando:
+    yes: 10
+    no: 90
+  fixed_shop: 'false'
+  logic_rules: restricted
+  fool_traps: off
+  hexagon_quest:
+    'true': 50
+    'false': 50
+  hexagon_goal: random-middle
+  extra_hexagon_percentage: random-range-low-10-100
+  lanternless: 'false'
+  maskless: 'false'
+  laurels_location:
+    anywhere: 50
+    10_fairies: 50
+  local_items:
+    - Gold Questagon
+
+  triggers:
+    - option_category: TUNIC
+      option_name: hexagon_quest
+      option_result: 'false'
+      options:
+        TUNIC:
+          keys_behind_bosses:
+            'true': 50
+            'false': 50
+
+    - option_category: TUNIC
+      option_name: entrance_rando
+      option_result: yes
+      options:
+        TUNIC:
+          fixed_shop:
+            'true': 50
+            'false': 50

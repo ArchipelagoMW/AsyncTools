@@ -66,13 +66,15 @@ Pokemon Red and Blue:
     false: 25
     true: 50
   door_shuffle:
-    off: 80
+    off: 100
     simple: 40
+    interiors: 30
     full: 20
     insanity: 10
   warp_tile_shuffle:
-    false: 50
-    true: 50
+    vanilla: 50
+    shuffle: 50
+    mixed: 50
   badges_needed_for_hm_moves:
     on: 50
     off: 25
@@ -116,8 +118,6 @@ Pokemon Red and Blue:
     vanilla: 50
     shuffle: 50
     randomize: 50
-  randomize_pokemon_catch_rates: false
-  minimum_catch_rate: 3
   randomize_trainer_parties: # Randomize enemy Pokemon encountered in trainer battles.
     vanilla: 50
     match_types: 25
@@ -166,36 +166,8 @@ Pokemon Red and Blue:
   fix_combat_bugs: true
   poke_doll_skip: patched
   bicycle_gate_skips: patched
+  level_scaling: auto
   triggers:
-    - option_category: Pokemon Red and Blue
-      option_name: door_shuffle
-      option_result: simple
-      options:
-        Pokemon Red and Blue:
-          level_scaling: by_spheres
-    - option_category: Pokemon Red and Blue
-      option_name: door_shuffle
-      option_result: off
-      options:
-        Pokemon Red and Blue:
-          level_scaling:
-            by_spheres: 50
-            off: 50
-    - option_category: Pokemon Red and Blue
-      option_name: door_shuffle
-      option_result: full
-      options:
-        Pokemon Red and Blue:
-          level_scaling:
-            by_spheres: 15
-            by_spheres_and_distance: 50
-    - option_category: Pokemon Red and Blue
-      option_name: door_shuffle
-      option_result: insanity
-      options:
-        Pokemon Red and Blue:
-          level_scaling:
-            by_spheres_and_distance: 50
     - option_category: Pokemon Red and Blue
       option_name: randomize_pokemon_types
       option_result: vanilla

@@ -1,0 +1,48 @@
+Lingo:
+  shuffle_doors:
+    none: 50
+    simple: 25
+    complex: 25
+  shuffle_colors: true
+  progressive_orange_tower: random
+  progressive_colorful: random
+  location_checks:
+    normal: 95
+    insanity: 5
+  shuffle_panels: random
+  shuffle_paintings: random
+  victory_condition: random
+  mastery_achievements: random-high
+  level_2_requirement: random-range-200-500
+  early_color_hallways: true
+  trap_percentage: 20
+  puzzle_skip_percentage: 20
+  triggers:
+    - option_name: shuffle_doors
+      option_category: Lingo
+      option_result: simple
+      percentage: 25
+      options:
+        Lingo:
+          shuffle_colors: false
+    - option_name: shuffle_doors
+      option_category: Lingo
+      option_result: complex
+      percentage: 30
+      options:
+        Lingo:
+          shuffle_colors: false
+    - option_name: shuffle_doors
+      option_category: Lingo
+      option_result: none
+      percentage: 10
+      options:
+        Lingo:
+          location_checks: reduced
+    - option_name: location_checks
+      option_category: Lingo
+      option_result: insanity
+      percentage: 75
+      options:
+        Lingo:
+          trap_percentage: 2
