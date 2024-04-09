@@ -1,22 +1,27 @@
 name: Player{player}
 description: Archipelago Async Mystery Filler Settings
 requires:
-  version: 0.4.3
+  version: 0.4.5
 
 # Define your game here!
 game:
   A Link to the Past: 100
   A Short Hike: 30
   Adventure: 7
+  Bumper Stickers: 10
+  Celeste 64: 15
   Dark Souls III: 31
   DLCQuest: 25
   Donkey Kong Country 3: 25
   DOOM 1993: 50
   DOOM II: 30
   Factorio: 31
+  Final Fantasy Mystic Quest: 19
   Heretic: 7
   Hollow Knight: 88
+  Hylics 2: 7
   Kingdom Hearts 2: 55
+  Kirby's Dream Land 3: 25
   Lingo: 10
   Links Awakening DX: 50
   Lufia II Ancient Cave: 10
@@ -28,6 +33,7 @@ game:
   Ocarina of Time: 75
   Overcooked! 2: 25
   Pokemon Red and Blue: 63
+  Pokemon Emerald: 35
   Raft: 7
   Risk of Rain 2: 38
   Rogue Legacy: 40
@@ -51,4 +57,5 @@ game:
   Undertale: 45
   VVVVVV: 12
   Wargroove: 10
+  Zillion: 7
   Zork Grand Inquisitor: 7

@@ -1,63 +1,76 @@
 The Witness:
-  local_items: [Lasers]
-  puzzle_randomization:
-    sigma_normal: 50
-  shuffle_symbols:
-    true: 50
+  puzzle_randomization: sigma_normal
+  shuffle_symbols: random
   shuffle_doors:
-    none: 10
-    panels: 20
-    doors_simple: 50
-    doors_complex: 20
+    off: 50
+    panels: 50
+    doors: 50
+    mixed: 50
+  door_groupings: random
+  shuffle_boat:
+    false: 40
+    true: 60
   shuffle_lasers:
-    false: 75
-    true: 25
+    off: 50
+    local: 35
+    anywhere: 35
   disable_non_randomized_puzzles:
     false: 75
     true: 25
-  shuffle_discarded_panels:
-    true: 75
-    false: 25
-  shuffle_vault_boxes:
-    true: 75
-    false: 25
-  shuffle_postgame:
-    false: 50
+  shuffle_discarded_panels: random
+  shuffle_vault_boxes: random
+  obelisk_keys: random
+  shuffle_EPs:
+    off: 50
+    individual: 20
+    obelisk_sides: 20
+  EP_difficulty: normal
+  shuffle_postgame: 'false'
   victory_condition:
-    elevator: 60
-    challenge: 30
-    mountain_box_long: 10
-  mountain_lasers:
-    6: 50
-    7: 50
-  challenge_lasers:
-    8: 50
-    9: 30
-    10: 15
-    11: 5
-  early_secret_area:
-    false: 50
-    true: 50
-  trap_percentage:
-    20: 50
-  puzzle_skip_amount:
-    10: 50
-  hint_amount:
-    10: 50
+    elevator: 50
+    challenge: 50
+    mountain_box_short: 50
+    mountain_box_long: 50
+  mountain_lasers: random
+  challenge_lasers: random
+  early_caves:
+    off: 50
+    add_to_pool: 25
+    starting_inventory: 25
+  elevators_come_to_you: random
+  trap_percentage: random-range-0-50
+  trap_weights:
+    Bonk: 1
+    Power Surge: 2
+    Slowness: 6
+  puzzle_skip_amount: random-range-10-25
+  hint_amount: random-range-10-30
+  area_hint_percentage: random-range-30-70
+  laser_hints: random
   triggers:
-    - option_name: shuffle_doors
-      option_category: The Witness
-      option_result: doors_simple
-      percentage: 20
+    - option_category: The Witness
+      option_name: shuffle_doors
+      option_result: off
+      options:  
+        The Witness: 
+          shuffle_symbols: 'true'
+    - option_category: The Witness
+      option_name: victory_condition
+      option_result: mountain_box_short
+      options:  
+        The Witness: 
+          mountain_lasers: random-range-7-11
+    - option_category: The Witness
+      option_name: victory_condition
+      option_result: mountain_box_long
+      options:  
+        The Witness: 
+          challenge_lasers: random-range-7-11
+    - option_category: The Witness
+      option_name: shuffle_EPs
+      option_result: individual
       options:
         The Witness:
-          shuffle_symbols:
-            false: 50
-    - option_name: shuffle_doors
-      option_category: The Witness
-      option_result: doors_complex
-      percentage: 50
-      options:
-        The Witness:
-            shuffle_symbols:
-              false: 50
+          obelisk_keys:
+            false: 30
+            true: 70
