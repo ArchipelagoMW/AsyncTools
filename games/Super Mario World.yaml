@@ -6,17 +6,13 @@ Super Mario World:
   dragon_coin_checks:
     false: 2
     true: 1
-  moon_checks:
-    false: 2
-    true: 1
-  hidden_1up_checks:
-    false: 2
-    true: 1
+  moon_checks: false
+  hidden_1up_checks: false
   bonus_block_checks:
     false: 2
     true: 1
   blocksanity:
-    false: 3
+    false: 7
     true: 1
   bowser_castle_doors: vanilla
   bowser_castle_rooms:
