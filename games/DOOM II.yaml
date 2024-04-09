@@ -6,7 +6,9 @@
   random_monsters: shuffle
   random_pickups: shuffle
   allow_death_logic: false
-  start_with_computer_area_maps: random
+  start_with_computer_area_maps:
+    false: 3
+    true: 2
   reset_level_on_death: false
   episode1: true
   episode2:
