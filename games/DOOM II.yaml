@@ -1,0 +1,22 @@
+DOOM II:
+  difficulty:
+    baby: 2
+    easy: 5
+    medium: 3
+  random_monsters: shuffle
+  random_pickups: shuffle
+  allow_death_logic: false
+  start_with_computer_area_maps:
+    false: 3
+    true: 2
+  reset_level_on_death: false
+  episode1: true
+  episode2:
+    false: 1
+    true: 1
+  episode3:
+    false: 1
+    true: 1
+  episode4:
+    false: 1
+    true: 1
