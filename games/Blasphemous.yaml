@@ -1,0 +1,36 @@
+Blasphemous:
+  accessibility: 'items'
+  prie_dieu_warp: 'true'
+  skip_cutscenes: 'true'
+  corpse_hints: 'true'
+  difficulty: 'normal'
+  penitence: 'false'
+  starting_location:
+    albero: 10
+    convent: 3
+    knot_of_words: 3
+    rooftops: 1
+  ending: any_ending
+  skip_long_quests: 'false'
+  thorn_shuffle: anywhere
+  dash_shuffle:
+    'true': 2
+    'false': 8
+  wall_climb_shuffle: 
+    'true': 2
+    'false': 8
+  reliquary_shuffle: 'true'
+  boots_of_pleading: 'false'
+  purified_hand: 'false'
+  start_wheel: 'false'
+  skill_randomizer: 'true'
+  enemy_randomizer: disabled
+  enemy_groups: 'true'
+  enemy_scaling: 'true'
+  death_link: 'false'
+  exclude_locations:
+    - "AtTotS: Miriam's gift"
+  local_items:
+    - Embossed Mask of Crescente
+    - Mirrored Mask of Dolphos
+    - Deformed Mask of Orestes
