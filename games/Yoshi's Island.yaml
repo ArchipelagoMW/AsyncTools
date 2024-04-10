@@ -1,0 +1,42 @@
+Yoshi's Island:
+  progression_balancing: 50
+  accessibility: items
+  starting_world: 
+    world_1: 50
+    world_2: 10 
+    world_3: 50
+    world_4: 10
+    world_5: 30
+    world_6: 30
+  starting_lives: random
+  goal: random
+  luigi_pieces_required: random-range-30-50
+  luigi_pieces_in_pool: 50
+  extras_enabled: 
+    false: 70
+    true: 10
+  minigame_checks: random
+  split_extras: 'random'
+  split_bonus: 'random'
+  hidden_object_visibility: coins_only
+  add_secretlens: 'random'
+  shuffle_midrings: 
+    false: 80
+    true: 10
+  stage_logic:
+    strict: 70
+    loose: 30
+  item_logic: 'false'
+  disable_autoscroll: 'true'
+  softlock_prevention: 'true'
+  castle_open_condition: random-range-5-11
+  castle_clear_condition: random-range-0-5
+  bowser_door_mode: manual
+  level_shuffle: random
+  boss_shuffle: random
+  yoshi_colors: random
+  yoshi_singularity_color: random
+  baby_mario_sound: random_sound_effect
+  traps_enabled: 'false'
+  trap_percent: 10
+  death_link: 'false'
