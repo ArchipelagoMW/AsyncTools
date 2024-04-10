@@ -1,12 +1,12 @@
 Stardew Valley:
   accessibility: items
   goal:
-    community_center: 75
-    grandpa_evaluation: 5
-    bottom_of_the_mines: 5
-    master_angler: 5
-    complete_collection: 5
-    protector_of_the_valley: 5
+    community_center: 50
+    grandpa_evaluation: 10
+    bottom_of_the_mines: 10
+    master_angler: 10
+    complete_collection: 10
+    protector_of_the_valley: 10
   farm_type: random
   starting_money: random-range-2000-20000
   profit_margin:
@@ -18,10 +18,10 @@ Stardew Valley:
     thematic: 50
     remixed: 50
   bundle_price:
-    minimum: 10
+    minimum: 5
     very_cheap: 20
     cheap: 50
-    normal: 20
+    normal: 25
   entrance_randomization: disabled
   season_randomization:
     randomized: 40
