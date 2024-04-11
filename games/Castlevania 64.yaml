@@ -1,8 +1,14 @@
 Castlevania 64:
   accessibility: items
   character_stages: both
-  stage_shuffle: 'true'
-  starting_stage: random
+  stage_shuffle: 
+    'true': 2
+    'false': 3
+  starting_stage:
+    forest_of_silence: 1
+    villa: 1
+    castle_center: 1
+    random: 1
   warp_order: seed_stage_order
   sub_weapon_shuffle: anywhere
   spare_keys:
@@ -18,8 +24,10 @@ Castlevania 64:
     specials: 4
   special2s_required: 20
   total_special2s: 40
-  bosses_required: 14
-  carrie_logic: 'true'
+  bosses_required: 12
+  carrie_logic:
+    'true': 1
+    'false': 1
   hard_logic: 'false'
   multi_hit_breakables: 'false'
   empty_breakables: 'true'
@@ -40,18 +48,24 @@ Castlevania 64:
   loading_zone_heals: 'true'
   invisible_items: reveal_all
   drop_previous_sub_weapon: 'true'
-  permanent_power_ups: 'true'
+  permanent_power_ups:
+    'true': 2
+    'false': 1
   disable_time_restrictions: 'true'
   skip_gondolas: 'true'
   skip_waterway_blocks: 'true'
   countdown: all_locations
   panther_dash:
     on: 1
-    off: 2
+    off: 1
   increase_shimmy_speed: 'true'
   fall_guard: 'true'
-  background_music: randomized
-  map_lighting: randomized
+  background_music: 
+    normal: 1
+    randomized: 1
+  map_lighting:
+    normal: 1
+    randomized: 1
   cinematic_experience: 'false'
   window_color_r: 'random'
   window_color_g: 'random'
@@ -60,4 +74,3 @@ Castlevania 64:
   death_link:
     off: 99
     explosive: 1
-
