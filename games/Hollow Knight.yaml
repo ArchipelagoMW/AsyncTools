@@ -62,6 +62,8 @@ Hollow Knight:
     include: 0
   StartingGeo: 0
   DeathLink: off
+  ExtraPlatforms: 'true'
+  AddUnshuffledLocations: 'false'
   MinimumGeoPrice: 1
   MaximumGeoPrice: 500
   MinimumGrubPrice: 1
