@@ -62,7 +62,7 @@ Pokemon Emerald:
   norman_count: random-range-1-5
   legendary_hunt_catch: false
   legendary_hunt_count: random-range-4-12
-  allowed_legendary_hunt_encounters: ["Ho-oh", "Kyogre", "Lugia", "Deoxys", "Latios", "Registeel", "Mew", "Groudon", "Regirock", "Rayquaza", "Regice", "Latias"]
+  allowed_legendary_hunt_encounters: ["Ho-Oh", "Kyogre", "Lugia", "Deoxys", "Latios", "Registeel", "Mew", "Groudon", "Regirock", "Rayquaza", "Regice", "Latias"]
   wild_pokemon:
     vanilla: 10
     match_base_stats: 25
