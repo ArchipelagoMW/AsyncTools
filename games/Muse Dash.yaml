@@ -1,9 +1,11 @@
 Muse Dash:
   local_items: [Music Sheet]
-  allow_just_as_planned_dlc_songs: false
+  allow_just_as_planned_dlc_songs:
+    false: 80
+    true: 20
   streamer_mode_enabled: false
   starting_song_count: 5
-  additional_song_count: random-range-high-25-35
+  additional_song_count: random-range-high-40-55
   additional_item_percentage: random-range-75-85
   song_difficulty_mode:
     medium: 67
@@ -11,8 +13,23 @@ Muse Dash:
   grade_needed: any
   music_sheet_count_percentage: 25
   music_sheet_win_count_percentage: 80
-  available_trap_types: all
+  available_trap_types: all #essentially equivalent to vfx if DLC is off
   trap_count_percentage:
     0: 50
     random-range-5-15: 50
   death_link: false
+  triggers:
+    # Reduce song count if hard difficulty selected due to fewer songs available for base game + hard diff
+    - option_category: Muse Dash
+      option_name: song_difficulty_mode
+      option_result: hard
+      options:
+        Muse Dash:
+          additional_song_count: random-range-25-35
+    # Increase song count if DLC on due to massively larger pool      
+    - option_category: Muse Dash
+      option_name: allow_just_as_planned_dlc_songs
+      option_result: true
+      options:
+        Muse Dash:
+          additional_song_count: random-range-75-100
