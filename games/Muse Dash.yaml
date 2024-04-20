@@ -6,7 +6,6 @@ Muse Dash:
   streamer_mode_enabled: false
   starting_song_count: 5
   additional_song_count: random-range-high-40-55
-  additional_item_percentage: random-range-75-85
   song_difficulty_mode:
     medium: 67
     hard: 33
@@ -26,7 +25,7 @@ Muse Dash:
       options:
         Muse Dash:
           additional_song_count: random-range-25-35
-    # Increase song count if DLC on due to massively larger pool      
+    # Increase song count if DLC on due to massively larger pool
     - option_category: Muse Dash
       option_name: allow_just_as_planned_dlc_songs
       option_result: true
