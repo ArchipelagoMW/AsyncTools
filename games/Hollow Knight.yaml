@@ -54,7 +54,11 @@ Hollow Knight:
   DifficultSkips: 'false'
   RemoveSpellUpgrades: 'false'
   StartLocation: king's_pass
-  Goal: random
+  Goal:
+    any: 1
+    hollowknight: 1
+    siblings: 1
+    radiance: 1
   WhitePalace: 
     exclude: 5
     kingfragment: 0
