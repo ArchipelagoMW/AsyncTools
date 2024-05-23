@@ -67,10 +67,6 @@ Pokemon Red and Blue:
     true: 50
   door_shuffle:
     off: 100
-    simple: 40
-    interiors: 30
-    full: 20
-    insanity: 10
   warp_tile_shuffle:
     vanilla: 50
     shuffle: 50
