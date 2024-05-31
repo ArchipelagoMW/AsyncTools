@@ -5,8 +5,8 @@ TUNIC:
   ability_shuffling: 'true'
   shuffle_ladders: 'true'
   entrance_rando:
-    yes: 10
-    no: 90
+    yes: 20
+    no: 80
   fixed_shop: 'false'
   logic_rules: restricted
   fool_traps: off
