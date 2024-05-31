@@ -7,8 +7,6 @@ Minecraft:
   shuffle_structures: on
   structure_compasses: on
   required_bosses: # Bosses which must be defeated to finish the game.
-    none: 50
-    ender_dragon: 25
-    wither: 25
+    ender_dragon: 35
+    wither: 35
     both: 10
-    
