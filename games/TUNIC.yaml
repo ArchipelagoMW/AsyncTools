@@ -21,6 +21,9 @@ TUNIC:
     anywhere: 50
     10_fairies: 50
   local_items:
+    - Red Questagon
+    - Blue Questagon
+    - Green Questagon
     - Gold Questagon
 
   triggers:
