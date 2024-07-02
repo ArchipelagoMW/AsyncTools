@@ -45,17 +45,13 @@ Ocarina of Time:
   spawn_positions:
     on: 1
     off: 4
-  shuffle_dungeon_entrances:
-    on: 1
-    off: 4
+  shuffle_dungeon_entrances: off
   shuffle_bosses:
     limited: 1
     off: 4
 
   # Locations
-  shuffle_song_items:
-    song: 3
-    any: 2
+  shuffle_song_items: any
   shopsanity:
     off: 4
     random_number: 1
@@ -81,7 +77,7 @@ Ocarina of Time:
 
   # Dungeon items
   shuffle_mapcompass: startwith
-  shuffle_smallkeys: dungeon
+  shuffle_smallkeys: keysanity
   shuffle_bosskeys:
     dungeon: 4
     keysanity: 1
@@ -102,11 +98,3 @@ Ocarina of Time:
   correct_chest_appearances: both
   correct_potcrate_appearances: textures_content
   hint_dist: async
-
-  triggers:
-    - option_name: key_rings
-      option_category: Ocarina of Time
-      option_result: all
-      options:
-        Ocarina of Time:
-          shuffle_smallkeys: keysanity
