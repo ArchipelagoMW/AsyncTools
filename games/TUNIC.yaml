@@ -5,8 +5,8 @@ TUNIC:
   ability_shuffling: 'true'
   shuffle_ladders: 'true'
   entrance_rando:
-    yes: 10
-    no: 90
+    yes: 20
+    no: 80
   fixed_shop: 'false'
   logic_rules: restricted
   fool_traps: off
@@ -21,6 +21,9 @@ TUNIC:
     anywhere: 50
     10_fairies: 50
   local_items:
+    - Red Questagon
+    - Blue Questagon
+    - Green Questagon
     - Gold Questagon
 
   triggers:
