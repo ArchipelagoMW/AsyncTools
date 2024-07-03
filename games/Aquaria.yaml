@@ -86,3 +86,4 @@
     'false': 1
     'true': 0
 
+  local_items: ["Energy form"]
