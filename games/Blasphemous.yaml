@@ -24,7 +24,7 @@ Blasphemous:
     ending_c: 1
   skip_long_quests:
     true: 5
-    miriam_only: 3
+    no_miriam: 3
     false: 1
   thorn_shuffle:
     anywhere: 5
@@ -81,9 +81,10 @@ triggers:
           vanilla: 2
   - option_category: Blasphemous
     option_name: skip_long_quests
-    option_result: miriam_only
+    option_result: no_miriam
     options:
       Blasphemous:
+        skip_long_quests: false
         exclude_locations:
         - "AtTotS: Miriam's gift"
   - option_category: Blasphemous
