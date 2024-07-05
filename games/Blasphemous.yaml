@@ -1,36 +1,100 @@
 Blasphemous:
-  accessibility: 'items'
-  prie_dieu_warp: 'true'
-  skip_cutscenes: 'true'
-  corpse_hints: 'true'
-  difficulty: 'normal'
-  penitence: 'false'
+  accessibility: items
+  prie_dieu_warp: true
+  skip_cutscenes: true
+  corpse_hints:
+    true: 4
+    false: 1
+  difficulty:
+    easy: 4
+    normal: 4
+    hard: 1
+  penitence:
+    false: 4
+    true: 1
   starting_location:
+    brotherhood: 8
     albero: 10
     convent: 3
     knot_of_words: 3
+    grievance: 2
     rooftops: 1
-  ending: any_ending
-  skip_long_quests: 'false'
-  thorn_shuffle: anywhere
+  ending:
+    any_ending: 4
+    ending_c: 1
+  skip_long_quests:
+    true: 5
+    no_miriam: 3
+    false: 1
+  thorn_shuffle:
+    anywhere: 5
+    local_only: 3
+    vanilla: 1
   dash_shuffle:
-    'true': 2
-    'false': 8
+    true: 3
+    false: 4
   wall_climb_shuffle: 
-    'true': 2
-    'false': 8
-  reliquary_shuffle: 'true'
-  boots_of_pleading: 'false'
-  purified_hand: 'false'
-  start_wheel: 'false'
-  skill_randomizer: 'true'
-  enemy_randomizer: disabled
-  enemy_groups: 'true'
-  enemy_scaling: 'true'
-  death_link: 'false'
-  exclude_locations:
-    - "AtTotS: Miriam's gift"
-  local_items:
-    - Embossed Mask of Crescente
-    - Mirrored Mask of Dolphos
-    - Deformed Mask of Orestes
+    true: 3
+    false: 4
+  reliquary_shuffle: true
+  boots_of_pleading: 
+    true: 1
+    false: 3
+  purified_hand: 
+    true: 1
+    false: 3
+  start_wheel: random
+  skill_randomizer:
+    true: 5
+    false: 1
+  enemy_randomizer:
+    disabled: 8
+    shuffled: 1
+  enemy_groups: true
+  enemy_scaling: true
+  death_link: false
+  mask_location:
+    anywhere: 3
+    local: 1
+  
+triggers:
+  - option_category: Blasphemous
+    option_name: starting_location
+    option_result: brotherhood
+    options:
+      Blasphemous:
+        dash_shuffle: false
+  - option_category: Blasphemous
+    option_name: starting_location
+    option_result: grievance
+    options:
+      Blasphemous:
+        wall_climb_shuffle: false
+  - option_category: Blasphemous
+    option_name: ending
+    option_result: ending_c
+    options:
+      Blasphemous:
+        thorn_shuffle:
+          anywhere: 2
+          local_only: 5
+          vanilla: 2
+  - option_category: Blasphemous
+    option_name: skip_long_quests
+    option_result: no_miriam
+    options:
+      Blasphemous:
+        skip_long_quests: false
+        exclude_locations:
+        - "AtTotS: Miriam's gift"
+  - option_category: Blasphemous
+    option_name: mask_location
+    option_result: local
+    options:
+      Blasphemous:
+        local_items:
+        - Embossed Mask of Crescente
+        - Mirrored Mask of Dolphos
+        - Deformed Mask of Orestes
+
+  
