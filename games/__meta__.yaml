@@ -1,10 +1,11 @@
 name: Player{player}
 description: Archipelago Async Mystery Filler Settings
 requires:
-  version: 0.4.5
+  version: 0.5.0
 
 # Define your game here!
 game:
+  A Hat in Time: 30
   A Link to the Past: 60
   A Short Hike: 30
   Adventure: 7

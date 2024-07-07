@@ -1,0 +1,193 @@
+A Hat in Time:
+  accessibility: items
+  AllowDLC:
+    none: 4
+    dlc1_only: 1
+    dlc2_only: 1
+    both: 1
+  ActRandomizer:
+    false: 2
+    light: 3
+    insanity: 2
+  ShuffleAlpineZiplines:
+    true: 1
+    false: 2
+  FinaleShuffle:
+    true: 1
+    false: 3
+  LogicDifficulty:
+    normal: 20
+    moderate: 2
+    hard: 1
+  RandomizeHatOrder:
+    false: 2
+    true: 5
+    time_stop_last: 3
+  UmbrellaLogic:
+    true: 1
+    false: 3
+  StartWithCompassBadge: true
+  CompassBadgeMode: closest
+  ShuffleStorybookPages:
+    true: 2
+    false: 1
+  ShuffleActContracts:
+    true: 2
+    false: 1
+  ShuffleSubconPaintings:
+    true: 1
+    false: 2
+  NoPaintingSkips: false
+  StartingChapter:
+    1: 4
+    2: 2
+    3: 3
+    4: 1
+  CTRLogic: time_stop_only
+  LowestChapterCost:
+    random-range-0-2: 3
+    random-range-3-7: 5
+    random-range-8-10: 2
+  HighestChapterCost:
+    random-range-15-20: 3
+    random-range-21-30: 7
+    random-range-31-40: 5
+    random-range-41-45: 2
+  ChapterCostIncrement:
+    random-range-1-4: 6
+    5: 6
+    6: 5
+    7: 3
+    8: 1
+  ChapterCostMinDifference: random
+  MaxExtraTimePieces:
+    16: 1
+    random-high: 1
+  FinalChapterMinCost: random-range-15-35
+  FinalChapterMaxCost: random-range-30-50
+  YarnCostMin: random-low
+  YarnCostMax: random-high
+  YarnAvailable: random-high
+  MinExtraYarn: random
+  HatItems:
+    false: 3
+    true: 1
+  MinPonCost: random-range-10-50
+  MaxPonCost: random-range-100-200
+  BadgeSellerMinItems: random-low
+  BadgeSellerMaxItems: random-high
+  TrapChance:
+    0: 9
+    5: 1
+  BabyTrapWeight: 40
+  LaserTrapWeight: 40
+  ParadeTrapWeight: 20
+  death-link: false
+
+triggers:
+- option_category: A Hat in Time
+  option_name: AllowDLC
+  option_result: none
+  options:
+    A Hat in Time:
+      EndGoal: finale
+      EnableDLC1: false
+      EnableDLC2: false
+- option_category: A Hat in Time
+  option_name: AllowDLC
+  option_result: dlc1_only
+  options:
+    A Hat in Time:
+      EndGoal: finale
+      EnableDLC1: true
+      EnableDLC2: false
+      Tasksanity:
+        true: 1
+        false: 3
+      TasksanityTaskStep:
+        1: 8
+        2: 2
+        3: 1
+      TasksanityCheckCount: random-range-5-18
+      ExcludeTour:
+        true: 3
+        false: 1
+      ShipShapeCustomTaskGoal: random-range-1-18
+      EnableDeathWish:
+        true: 1
+        false: 19
+      DWShuffle: 
+        true: 2
+        false: 1
+      DWShuffleCountMin: 5
+      DWShuffleCountMax: random-low
+      DeathWishOnly: false
+      DWEnableBonus: false
+      DWAutoCompleteBonuses: true
+      DWExcludeAnnoyingContracts: true
+      DWExcludeAnnoyingBonuses: true
+      DWExcludeCandles:
+        true: 2
+        false: 1
+      DWTimePieceRequirement: random
+- option_category: A Hat in Time
+  option_name: AllowDLC
+  option_result: dlc2_only
+  options:
+    A Hat in Time:
+      EndGoal:
+        finale: 3
+        rush_hour: 2
+      EnableDLC1: false
+      EnableDLC2: true
+      BaseballBat: random
+      MetroMinPonCost: 10
+      MetroMaxPonCost: random-low
+      NyakuzaThugMinShopItems: random-range-1-4
+      NyakuzaThugMaxShopItems: random-range-2-5
+      NoTicketSkips: false
+- option_category: A Hat in Time
+  option_name: AllowDLC
+  option_result: both
+  options:
+    A Hat in Time:
+      EndGoal:
+        finale: 3
+        rush_hour: 2
+      EnableDLC1: true
+      EnableDLC2: true
+      Tasksanity:
+        true: 1
+        false: 3
+      TasksanityTaskStep:
+        1: 8
+        2: 2
+        3: 1
+      TasksanityCheckCount: random-range-5-18
+      ExcludeTour:
+        true: 3
+        false: 1
+      ShipShapeCustomTaskGoal: random-range-1-18
+      EnableDeathWish:
+        true: 1
+        false: 19
+      DWShuffle: 
+        true: 2
+        false: 1
+      DWShuffleCountMin: 5
+      DWShuffleCountMax: random-low
+      DeathWishOnly: false
+      DWEnableBonus: false
+      DWAutoCompleteBonuses: true
+      DWExcludeAnnoyingContracts: true
+      DWExcludeAnnoyingBonuses: true
+      DWExcludeCandles:
+        true: 2
+        false: 1
+      DWTimePieceRequirement: random
+      BaseballBat: random
+      MetroMinPonCost: 10
+      MetroMaxPonCost: random-low
+      NyakuzaThugMinShopItems: random-range-1-4
+      NyakuzaThugMaxShopItems: random-range-2-5
+      NoTicketSkips: false
