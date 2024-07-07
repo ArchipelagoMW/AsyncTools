@@ -1,0 +1,89 @@
+﻿Aquaria:
+  objective:
+    # The game objective can be to kill the creator or to kill the creator after obtaining all three secret memories.
+    kill_the_creator: 2
+    obtain_secrets_and_kill_the_creator: 1
+
+  mini_bosses_to_beat:
+    # The number of minibosses to beat before having access to the creator (the final boss). The minibosses are
+    # "Nautilus Prime", "Blaster Peg Prime", "Mergog", "Mithalan priests", "Octopus Prime", "Crabbius Maximus",
+    # "Mantis Shrimp Prime" and "King Jellyfish God Prime".
+    # Note that the Energy Statue and Simon Says are not minibosses.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 8
+    random-low: 5
+    random-high: 2
+
+  big_bosses_to_beat:
+    # The number of big bosses to beat before having access to the creator (the final boss). The big bosses are
+    # "Fallen God", "Mithalan God", "Drunian God", "Sun God" and "The Golem".
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 5
+    random-low: 5
+    random-high: 2
+
+  turtle_randomizer:
+    # Randomize the transportation turtle.
+    none: 1
+    all: 3
+    all_except_final: 0
+
+  early_energy_form:
+    # Force the Energy Form to be in a location early in the game
+    'false': 1
+    'true': 5
+
+  light_needed_to_get_to_dark_places:
+    # Make sure that the sun form or the dumbo pet can be acquired before getting to dark places.
+    # Be aware that navigating in dark places without light is extremely difficult.
+    'false': 0
+    'true': 1
+
+  bind_song_needed_to_get_under_rock_bulb:
+    # Make sure that the bind song can be acquired before having to obtain sing bulbs under rocks.
+    'false': 2
+    'true': 1
+
+  unconfine_home_water:
+    # Open the way out of the Home Water area so that Naija can go to open water and beyond without the bind song.
+    'off': 1
+    via_energy_door: 1
+    via_transturtle: 1
+    via_both: 1
+
+  no_progression_hard_or_hidden_locations:
+    # Make sure that there are no progression items at hard-to-reach or hard-to-find locations.
+    # Those locations are very High locations (that need beast form, soup and skill to get),
+    # every location in the bubble cave, locations where need you to cross a false wall without any indication,
+    # the Arnassi race, bosses and minibosses. Useful for those that want a more casual run.
+    'false': 1
+    'true': 2
+
+  ingredient_randomizer:
+    # Select if the simple ingredients (that do not have a recipe) should be randomized.
+    # If "Common Ingredients" is selected, the randomization will exclude the "Red Bulb", "Special Bulb" and "Rukh Egg".
+    'off': 5
+    common_ingredients: 2
+    all_ingredients: 1
+
+  dish_randomizer:
+    # Randomize the drop of Dishes (Ingredients with recipe).
+    'false': 5
+    'true': 2
+
+  aquarian_translation:
+    # Translate the Aquarian scripture in the game into English.
+    'false': 1
+    'true': 1
+
+  skip_first_vision:
+    # The first vision in the game, where Naija transforms into Energy Form and gets flooded by enemies, is quite cool but
+    # can be quite long when you already know what is going on. This option can be used to skip this vision.
+    'false': 1
+    'true': 0
+
+  local_items: ["Energy form"]

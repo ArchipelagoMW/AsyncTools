@@ -1,2 +1,15 @@
 Celeste 64:
-  strawberries_required: random-range-12-20
+  move_shuffle:
+    'false': 3
+    'true': 2
+  total_strawberries: random-high
+  strawberries_required_percentage: random-range-70-90
+  friendsanity:
+    'false': 3
+    'true': 2
+  signsanity:
+    'false': 3
+    'true': 2
+  carsanity:
+    'false': 3
+    'true': 2
