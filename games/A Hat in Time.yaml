@@ -82,7 +82,7 @@ A Hat in Time:
   BabyTrapWeight: 40
   LaserTrapWeight: 40
   ParadeTrapWeight: 20
-  death-link: false
+  death_link: false
 
 
 triggers:
