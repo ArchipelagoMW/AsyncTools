@@ -84,110 +84,111 @@ A Hat in Time:
   ParadeTrapWeight: 20
   death-link: false
 
+
 triggers:
-- option_category: A Hat in Time
-  option_name: AllowDLC
-  option_result: none
-  options:
-    A Hat in Time:
-      EndGoal: finale
-      EnableDLC1: false
-      EnableDLC2: false
-- option_category: A Hat in Time
-  option_name: AllowDLC
-  option_result: dlc1_only
-  options:
-    A Hat in Time:
-      EndGoal: finale
-      EnableDLC1: true
-      EnableDLC2: false
-      Tasksanity:
-        true: 1
-        false: 3
-      TasksanityTaskStep:
-        1: 8
-        2: 2
-        3: 1
-      TasksanityCheckCount: random-range-5-18
-      ExcludeTour:
-        true: 3
-        false: 1
-      ShipShapeCustomTaskGoal: random-range-1-18
-      EnableDeathWish:
-        true: 1
-        false: 19
-      DWShuffle: 
-        true: 2
-        false: 1
-      DWShuffleCountMin: 5
-      DWShuffleCountMax: random-low
-      DeathWishOnly: false
-      DWEnableBonus: false
-      DWAutoCompleteBonuses: true
-      DWExcludeAnnoyingContracts: true
-      DWExcludeAnnoyingBonuses: true
-      DWExcludeCandles:
-        true: 2
-        false: 1
-      DWTimePieceRequirement: random
-- option_category: A Hat in Time
-  option_name: AllowDLC
-  option_result: dlc2_only
-  options:
-    A Hat in Time:
-      EndGoal:
-        finale: 3
-        rush_hour: 2
-      EnableDLC1: false
-      EnableDLC2: true
-      BaseballBat: random
-      MetroMinPonCost: 10
-      MetroMaxPonCost: random-low
-      NyakuzaThugMinShopItems: random-range-1-4
-      NyakuzaThugMaxShopItems: random-range-2-5
-      NoTicketSkips: false
-- option_category: A Hat in Time
-  option_name: AllowDLC
-  option_result: both
-  options:
-    A Hat in Time:
-      EndGoal:
-        finale: 3
-        rush_hour: 2
-      EnableDLC1: true
-      EnableDLC2: true
-      Tasksanity:
-        true: 1
-        false: 3
-      TasksanityTaskStep:
-        1: 8
-        2: 2
-        3: 1
-      TasksanityCheckCount: random-range-5-18
-      ExcludeTour:
-        true: 3
-        false: 1
-      ShipShapeCustomTaskGoal: random-range-1-18
-      EnableDeathWish:
-        true: 1
-        false: 19
-      DWShuffle: 
-        true: 2
-        false: 1
-      DWShuffleCountMin: 5
-      DWShuffleCountMax: random-low
-      DeathWishOnly: false
-      DWEnableBonus: false
-      DWAutoCompleteBonuses: true
-      DWExcludeAnnoyingContracts: true
-      DWExcludeAnnoyingBonuses: true
-      DWExcludeCandles:
-        true: 2
-        false: 1
-      DWTimePieceRequirement: random
-      BaseballBat: random
-      MetroMinPonCost: 10
-      MetroMaxPonCost: random-low
-      NyakuzaThugMinShopItems: random-range-1-4
-      NyakuzaThugMaxShopItems: random-range-2-5
-      NoTicketSkips: false
+  - option_category: A Hat in Time
+    option_name: AllowDLC
+    option_result: none
+    options:
+      A Hat in Time:
+        EndGoal: finale
+        EnableDLC1: false
+        EnableDLC2: false
+  - option_category: A Hat in Time 
+    option_name: AllowDLC
+    option_result: dlc1_only
+    options:
+      A Hat in Time:
+        EndGoal: finale
+        EnableDLC1: true
+        EnableDLC2: false
+        Tasksanity:
+          true: 1
+          false: 3
+        TasksanityTaskStep:
+          1: 8
+          2: 2
+          3: 1
+        TasksanityCheckCount: random-range-5-18
+        ExcludeTour:
+          true: 3
+          false: 1
+        ShipShapeCustomTaskGoal: random-range-1-18
+        EnableDeathWish:
+          true: 1
+          false: 19
+        DWShuffle: 
+          true: 2
+          false: 1
+        DWShuffleCountMin: 5
+        DWShuffleCountMax: random-low
+        DeathWishOnly: false
+        DWEnableBonus: false
+        DWAutoCompleteBonuses: true
+        DWExcludeAnnoyingContracts: true
+        DWExcludeAnnoyingBonuses: true
+        DWExcludeCandles:
+          true: 2
+          false: 1
+        DWTimePieceRequirement: random
+  - option_category: A Hat in Time
+    option_name: AllowDLC
+    option_result: dlc2_only
+    options:
+      A Hat in Time:
+        EndGoal:
+          finale: 3
+          rush_hour: 2
+        EnableDLC1: false
+        EnableDLC2: true
+        BaseballBat: random
+        MetroMinPonCost: 10
+        MetroMaxPonCost: random-low
+        NyakuzaThugMinShopItems: random-range-1-4
+        NyakuzaThugMaxShopItems: random-range-2-5
+        NoTicketSkips: false
+  - option_category: A Hat in Time
+    option_name: AllowDLC
+    option_result: both
+    options:
+      A Hat in Time:
+        EndGoal:
+          finale: 3
+          rush_hour: 2
+        EnableDLC1: true
+        EnableDLC2: true
+        Tasksanity:
+          true: 1
+          false: 3
+        TasksanityTaskStep:
+          1: 8
+          2: 2
+          3: 1
+        TasksanityCheckCount: random-range-5-18
+        ExcludeTour:
+          true: 3
+          false: 1
+        ShipShapeCustomTaskGoal: random-range-1-18
+        EnableDeathWish:
+          true: 1
+          false: 19
+        DWShuffle: 
+          true: 2
+          false: 1
+        DWShuffleCountMin: 5
+        DWShuffleCountMax: random-low
+        DeathWishOnly: false
+        DWEnableBonus: false
+        DWAutoCompleteBonuses: true
+        DWExcludeAnnoyingContracts: true
+        DWExcludeAnnoyingBonuses: true
+        DWExcludeCandles:
+          true: 2
+          false: 1
+        DWTimePieceRequirement: random
+        BaseballBat: random
+        MetroMinPonCost: 10
+        MetroMaxPonCost: random-low
+        NyakuzaThugMinShopItems: random-range-1-4
+        NyakuzaThugMaxShopItems: random-range-2-5
+        NoTicketSkips: false
