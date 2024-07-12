@@ -277,6 +277,21 @@ Pokemon Emerald:
         Pokemon Emerald:
           trainer_party_blacklist: []
 
+    # Disallow randomized pokemon types when match trainer levels is on 
+    - option_category: Pokemon Emerald
+      option_name: match_trainer_levels
+      option_result: additive
+      options:
+        Pokemon Emerald:
+          types: vanilla
+
+    - option_category: Pokemon Emerald
+      option_name: match_trainer_levels
+      option_result: multiplicative
+      options:
+        Pokemon Emerald:
+          types: vanilla
+
     # Set matching trainer levels bonus
     - option_category: Pokemon Emerald
       option_name: match_trainer_levels
