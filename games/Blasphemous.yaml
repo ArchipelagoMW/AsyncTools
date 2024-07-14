@@ -57,44 +57,44 @@ Blasphemous:
     anywhere: 3
     local: 1
   
-triggers:
-  - option_category: Blasphemous
-    option_name: starting_location
-    option_result: brotherhood
-    options:
-      Blasphemous:
-        dash_shuffle: false
-  - option_category: Blasphemous
-    option_name: starting_location
-    option_result: grievance
-    options:
-      Blasphemous:
-        wall_climb_shuffle: false
-  - option_category: Blasphemous
-    option_name: ending
-    option_result: ending_c
-    options:
-      Blasphemous:
-        thorn_shuffle:
-          anywhere: 2
-          local_only: 5
-          vanilla: 2
-  - option_category: Blasphemous
-    option_name: skip_long_quests
-    option_result: no_miriam
-    options:
-      Blasphemous:
-        skip_long_quests: false
-        exclude_locations:
-        - "AtTotS: Miriam's gift"
-  - option_category: Blasphemous
-    option_name: mask_location
-    option_result: local
-    options:
-      Blasphemous:
-        local_items:
-        - Embossed Mask of Crescente
-        - Mirrored Mask of Dolphos
-        - Deformed Mask of Orestes
+  triggers:
+    - option_category: Blasphemous
+      option_name: starting_location
+      option_result: brotherhood
+      options:
+        Blasphemous:
+          dash_shuffle: false
+    - option_category: Blasphemous
+      option_name: starting_location
+      option_result: grievance
+      options:
+        Blasphemous:
+          wall_climb_shuffle: false
+    - option_category: Blasphemous
+      option_name: ending
+      option_result: ending_c
+      options:
+        Blasphemous:
+          thorn_shuffle:
+            anywhere: 2
+            local_only: 5
+            vanilla: 2
+    - option_category: Blasphemous
+      option_name: skip_long_quests
+      option_result: no_miriam
+      options:
+        Blasphemous:
+          skip_long_quests: false
+          exclude_locations:
+          - "AtTotS: Miriam's gift"
+    - option_category: Blasphemous
+      option_name: mask_location
+      option_result: local
+      options:
+        Blasphemous:
+          local_items:
+          - Embossed Mask of Crescente
+          - Mirrored Mask of Dolphos
+          - Deformed Mask of Orestes
 
   
