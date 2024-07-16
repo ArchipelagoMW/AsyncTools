@@ -10,8 +10,8 @@ TUNIC:
   ability_shuffling: 'true'
   shuffle_ladders: 'true'
   entrance_rando:
-    yes: 20
-    no: 80
+    yes: 25
+    no: 75
   logic_rules:
     restricted: 85
     no_major_glitches: 10
