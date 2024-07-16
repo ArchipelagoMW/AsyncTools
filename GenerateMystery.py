@@ -38,6 +38,13 @@ class MysterySettings(dict):
         return games
 
 
+class GameSettings(MysterySettings):
+    def __init__(self, name: str, description: str, requires: dict, game: str, game_options: dict):
+        super().__init__(name, description, requires, game)
+
+        self[game] = game_options
+
+
 def main():
     # Create output directory, if it does not exist.
     if not os.path.exists("output/"):
@@ -81,10 +88,6 @@ def main():
                     raise ValueError(f"Could not find `{game}` top-level key in `./games/{game}.yaml`")
 
                 mystery.update(game_settings)
-
-            with open(f"output/{game}.yaml", "w+") as game_file_output:
-                game_settings["name"] = data["name"]
-                yaml.dump(game_settings, game_file_output)
         except FileNotFoundError:
             print(Fore.RED + f"\nUnable to find game settings file `./games/{game}.yaml` in games directory.")
             exit(1)
@@ -103,6 +106,11 @@ def main():
 
     with open("output/weights.yaml", "w+") as file:
         yaml.dump(dict(mystery), file)
+    with open("output/games.yaml", "w+") as file:
+        for game in mystery["game"]:
+            game_options = GameSettings(mystery["name"], mystery["description"], mystery["requires"], game, mystery[game])
+            yaml.dump(dict(game_options), file)
+            file.write("\n---\n\n")
     print(Fore.GREEN + "\nOutputted settings file to `./output/weights.yaml`")
     meta_path = os.path.join("output", "meta.yaml")
     with open(meta_path, "w+") as file:
