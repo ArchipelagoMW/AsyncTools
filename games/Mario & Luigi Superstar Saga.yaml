@@ -43,7 +43,7 @@ Mario & Luigi Superstar Saga:
     false: 100
 
   randomize_enemies:
-    false: 30
+    disabled: 30
     vanilla_groups: 40
     custom_groups: 30
 
