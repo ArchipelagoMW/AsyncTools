@@ -1,14 +1,21 @@
 TUNIC:
+  # column order for the spreadsheet:
+  # Start with Sword | Keys Behind Bosses | Hexagon Quest | Gold Hexagons Required | Percentage of Extra Hexagons | Entrance Rando | Fewer Shops | Laurels Location
+  # if Hexagon Quest is disabled, put a - for Gold Hexagons Required and Percentage of Extra Hexagons since they are not relevant
   sword_progression: 'true'
-  start_with_sword: random
+  start_with_sword:
+    'true': 25
+    'false': 75
   keys_behind_bosses: 'false'
   ability_shuffling: 'true'
   shuffle_ladders: 'true'
   entrance_rando:
     yes: 20
     no: 80
-  fixed_shop: 'false'
-  logic_rules: restricted
+  logic_rules:
+    restricted: 85
+    no_major_glitches: 10
+    unrestricted: 5
   fool_traps: off
   hexagon_quest:
     'true': 50
@@ -38,7 +45,7 @@ TUNIC:
 
     - option_category: TUNIC
       option_name: entrance_rando
-      option_result: yes
+      option_result: 'yes'
       options:
         TUNIC:
           fixed_shop:
