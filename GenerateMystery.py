@@ -81,6 +81,10 @@ def main():
                     raise ValueError(f"Could not find `{game}` top-level key in `./games/{game}.yaml`")
 
                 mystery.update(game_settings)
+
+            with open(f"output/{game}.yaml", "w+") as game_file_output:
+                game_settings["name"] = data["name"]
+                yaml.dump(game_settings, game_file_output)
         except FileNotFoundError:
             print(Fore.RED + f"\nUnable to find game settings file `./games/{game}.yaml` in games directory.")
             exit(1)
