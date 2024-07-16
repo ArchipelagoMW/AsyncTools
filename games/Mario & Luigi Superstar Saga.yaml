@@ -3,8 +3,8 @@ Mario & Luigi Superstar Saga:
     false: 50
     true: 50
 
-  difficult_logic:
-    false: 100
+  difficult_logic: 
+    false: 100 
   
   castle_skip:
     false: 40
@@ -19,12 +19,12 @@ Mario & Luigi Superstar Saga:
     true: 25
   
   disable_surf:
-    false: 30
-    true: 70
+    false: 40
+    true: 60
 
   harhalls_pants:
-    false: 30
-    true: 70
+    false: 40
+    true: 60
   
   block_visibility:
     disabled: 25
@@ -32,8 +32,8 @@ Mario & Luigi Superstar Saga:
 
   chuckle_beans:
     none: 25
-    only_visible: 60
-    all: 15
+    only_visible: 50
+    all: 25
 
   music_options:
     default: 90
@@ -43,14 +43,14 @@ Mario & Luigi Superstar Saga:
     false: 100
 
   randomize_enemies:
-    false: 40
+    false: 30
     vanilla_groups: 40
-    custom_groups: 20
+    custom_groups: 30
 
   randomize_bosses:
-    disabled: 40
+    disabled: 30
     boss_only: 40
-    normal: 20
+    normal: 30
 
   scale_stats: 
     false: 100
