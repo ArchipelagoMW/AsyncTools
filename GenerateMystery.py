@@ -101,9 +101,9 @@ def main():
                 raise ValueError(f"Could not find `{game}` top-level key in `{meta_path}`")
             meta.update(meta_settings)
 
-    with open("output/mystery.yaml", "w+") as file:
+    with open("output/weights.yaml", "w+") as file:
         yaml.dump(dict(mystery), file)
-    print(Fore.GREEN + "\nOutputted settings file to `./output/mystery.yaml`")
+    print(Fore.GREEN + "\nOutputted settings file to `./output/weights.yaml`")
     meta_path = os.path.join("output", "meta.yaml")
     with open(meta_path, "w+") as file:
         yaml.dump(meta, file)
