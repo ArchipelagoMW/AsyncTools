@@ -130,6 +130,3 @@ dmypy.json
 
 # Outputted yaml file
 output/
-/.vs/AsyncTools
-/.vs/slnx.sqlite
-/.vs/VSWorkspaceState.json
