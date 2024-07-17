@@ -22,12 +22,12 @@ Muse Dash:
     - Vignette Trap
   trap_count_percentage:
     0: 50
-    random-range-5-15: 50
+    random-range-5-25: 50
   death_link: false
   
   allow_dlc: #custom setting now for trigger due to DLC handling changes in 0.5.0
-    false: 80
-    true: 20
+    false: 33
+    true: 67
   triggers:
     # Reduce song count if hard difficulty selected due to fewer songs available for base game + hard diff
     - option_category: Muse Dash
@@ -43,4 +43,4 @@ Muse Dash:
       options:
         Muse Dash:
           +dlc_packs: [Muse Plus]
-          additional_song_count: random-range-75-100
+          additional_song_count: random-range-95-200
