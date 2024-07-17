@@ -50,7 +50,7 @@ Mario & Luigi Superstar Saga:
   randomize_bosses:
     disabled: 30
     boss_only: 40
-    normal: 30
+    boss_normal: 30
 
   scale_stats: 
     false: 100
@@ -96,7 +96,8 @@ Mario & Luigi Superstar Saga:
     true_chaos: 2
 
   mario_pants:
-    red: 76
+    vanilla: 76
+    red: 2
     green: 2
     blue: 2
     cyan: 2
@@ -106,13 +107,13 @@ Mario & Luigi Superstar Saga:
     pink: 2
     black: 2
     white: 2
-    silhouette: 2
     chaos: 2
-    true_chaos: 2
+    
 
   luigi_pants:
+    vanilla: 76
     red: 2
-    green: 76
+    green: 2
     blue: 2
     cyan: 2
     yellow: 2
@@ -121,13 +122,11 @@ Mario & Luigi Superstar Saga:
     pink: 2
     black: 2
     white: 2
-    silhouette: 2
     chaos: 2
-    true_chaos: 2
+    
 
-  starting_items:
-   - Woo Beans: 40
-   - Hee Beans: 25
+  start_inventory:
+   { Woo Bean: 40, Hee Bean: 25 }
 
   triggers:
     # Scale stats if enemies randomized
