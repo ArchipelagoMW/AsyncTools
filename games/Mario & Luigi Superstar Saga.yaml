@@ -1,0 +1,171 @@
+Mario & Luigi Superstar Saga:
+  coins:
+    false: 50
+    true: 50
+
+  difficult_logic: 
+    false: 100 
+  
+  castle_skip:
+    false: 40
+    true: 60
+
+  extra_pipes:
+    false: 40
+    true: 60
+ 
+  skip_minecart:
+    false: 75
+    true: 25
+  
+  disable_surf:
+    false: 40
+    true: 60
+
+  harhalls_pants:
+    false: 40
+    true: 60
+  
+  block_visibility:
+    disabled: 25
+    hidden_visible: 75
+
+  chuckle_beans:
+    none: 25
+    only_visible: 50
+    all: 25
+
+  music_options:
+    default: 90
+    randomize: 10
+
+  randomize_sounds:
+    false: 100
+
+  randomize_enemies:
+    disabled: 30
+    vanilla_groups: 40
+    custom_groups: 30
+
+  randomize_bosses:
+    disabled: 30
+    boss_only: 40
+    boss_normal: 30
+
+  scale_stats: 
+    false: 100
+
+  xp_multiplier:
+    1: 15
+    2: 35
+    3: 35
+    4: 15
+
+  tattle_hp:
+    false: 20
+    true: 80
+
+  mario_color:
+    red: 76
+    green: 2
+    blue: 2
+    cyan: 2
+    yellow: 2
+    orange: 2
+    purple: 2
+    pink: 2
+    black: 2
+    white: 2
+    silhouette: 2
+    chaos: 2
+    true_chaos: 2
+
+  luigi_color:
+    red: 2
+    green: 76
+    blue: 2
+    cyan: 2
+    yellow: 2
+    orange: 2
+    purple: 2
+    pink: 2
+    black: 2
+    white: 2
+    silhouette: 2
+    chaos: 2
+    true_chaos: 2
+
+  mario_pants:
+    vanilla: 76
+    red: 2
+    green: 2
+    blue: 2
+    cyan: 2
+    yellow: 2
+    orange: 2
+    purple: 2
+    pink: 2
+    black: 2
+    white: 2
+    chaos: 2
+    
+
+  luigi_pants:
+    vanilla: 76
+    red: 2
+    green: 2
+    blue: 2
+    cyan: 2
+    yellow: 2
+    orange: 2
+    purple: 2
+    pink: 2
+    black: 2
+    white: 2
+    chaos: 2
+    
+
+  start_inventory:
+   { Woo Bean: 40, Hee Bean: 25 }
+
+  triggers:
+    # Scale stats if enemies randomized
+    - option_category: Mario & Luigi Superstar Saga
+      option_name: randomize_enemies
+      option_result: vanilla_groups
+      options:
+        Mario & Luigi Superstar Saga:
+          scale_stats:
+            true: 100
+
+    - option_category: Mario & Luigi Superstar Saga
+      option_name: randomize_enemies
+      option_result: custom_groups
+      options:
+        Mario & Luigi Superstar Saga:
+          scale_stats:
+            true: 100
+
+    - option_category: Mario & Luigi Superstar Saga
+      option_name: randomize_bosses
+      option_result: boss_only
+      options:
+        Mario & Luigi Superstar Saga:
+          scale_stats:
+            true: 100
+
+    - option_category: Mario & Luigi Superstar Saga
+      option_name: randomize_bosses
+      option_result: normal
+      options:
+        Mario & Luigi Superstar Saga:
+          scale_stats:
+            true: 100
+
+
+
+
+
+
+
+   
