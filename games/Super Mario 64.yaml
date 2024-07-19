@@ -31,7 +31,7 @@ Super Mario 64:
   second_floor_star_door_cost: random-middle
   mips1_cost: random-middle
   mips2_cost: random-middle
-  stars_to_finish: random-range-middle-42-100
+  stars_to_finish: random-range-middle-42-90
   accessibility:
     items: 5
     locations: 2
