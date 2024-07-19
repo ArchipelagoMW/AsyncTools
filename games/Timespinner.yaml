@@ -11,8 +11,8 @@ Timespinner:
   DownloadableItems: true
   LoreChecks: true
   Cantoran:
-    true: 50
-    false: 50
+    true: 75
+    false: 25
   GyreArchives:
     true: 67
     false: 33
@@ -61,3 +61,14 @@ Timespinner:
     - Chaos Trap
     - Neurotoxin Trap
     - Bee Trap
+    
+  triggers:
+    # swap Cantoran odds on an inverted start - it's an endgame boss location that can be as early as sphere 1 if inverted and quick seed are both true
+    - option_category: Timespinner
+      option_name: Inverted
+      option_result: true
+      options:
+        Timespinner:
+          Cantoran:
+            true: 25
+            false: 75
