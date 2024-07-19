@@ -7,10 +7,12 @@ Lingo:
   progressive_orange_tower: random
   progressive_colorful: random
   location_checks:
-    normal: 95
-    insanity: 5
+    normal: 70
+    insanity: 30
   shuffle_panels: random
-  shuffle_paintings: random
+  shuffle_paintings:
+    true: 67
+    false: 33
   victory_condition:
     the_end: 25
     the_master: 25
@@ -53,6 +55,8 @@ Lingo:
       options:
         Lingo:
           location_checks: reduced
+          progressive_orange_tower: false
+		      progressive_colorful: false
     - option_name: location_checks
       option_category: Lingo
       option_result: insanity
