@@ -14,8 +14,8 @@ Timespinner:
     true: 50
     false: 50
   GyreArchives:
-    true: 75
-    false: 25
+    true: 67
+    false: 33
   SpecificKeycards:
     true: 80
     false: 20
@@ -26,8 +26,8 @@ Timespinner:
     true: 80
     false: 20
   UnchainedKeys:
-    true: 80
-    false: 20
+    true: 67
+    false: 33
   EnterSandman:
     false: 75
     true: 25
