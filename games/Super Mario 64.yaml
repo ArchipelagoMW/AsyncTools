@@ -1,16 +1,16 @@
 Super Mario 64:
   area_rando:
     off: 5
-    courses_only: 3
-    courses_and_secrets_separate: 2
+    courses_only: 4
+    courses_and_secrets_separate: 3
     courses_and_secrets: 1
   progressive_keys: true
   enable_coin_stars:
     false: 5
     true: 2
   enable_move_rando:
-    true: 2
-    false: 5
+    true: 1
+    false: 1
   move_rando_actions:
     - Triple Jump
     - Long Jump
@@ -31,12 +31,16 @@ Super Mario 64:
   second_floor_star_door_cost: random-middle
   mips1_cost: random-middle
   mips2_cost: random-middle
-  stars_to_finish: random-range-middle-42-67
+  stars_to_finish: random-range-middle-42-100
   accessibility:
     items: 5
     locations: 2
   buddy_checks: random
-  exclamation_boxes: random
+  exclamation_boxes:
+    off: 1
+    1ups_only: 0
+  local_items:
+    1Up Mushroom
   completion_type:
     last_bowser_stage: 5
     all_bowser_stages: 2
