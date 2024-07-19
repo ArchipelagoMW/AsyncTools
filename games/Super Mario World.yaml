@@ -1,15 +1,23 @@
 Super Mario World:
-  goal: bowser
+  goal:
+    bowser: 1
+    yoshi_egg_hunt: 1
+  local_items:
+    Yoshi Egg
   bosses_required: random-range-5-10
   max_yoshi_egg_cap: 50
   percentage_of_yoshi_eggs: 100
   dragon_coin_checks:
     false: 2
     true: 1
-  moon_checks: false
-  hidden_1up_checks: false
-  bonus_block_checks:
+  moon_checks:
     false: 2
+    true: 1
+  hidden_1up_checks:
+    false: 5
+    true: 1
+  bonus_block_checks:
+    false: 5
     true: 1
   blocksanity:
     false: 7
@@ -69,3 +77,9 @@ Super Mario World:
         Super Mario World:
           early_climb: true
           swap_donut_gh_exits: false
+    - option_category: Super Mario World
+      option_name: blocksanity
+      option_result: true
+      options:
+        Super Mario World:
+          max_yoshi_egg_cap: random-range-middle-50-255
