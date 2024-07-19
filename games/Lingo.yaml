@@ -56,7 +56,7 @@ Lingo:
         Lingo:
           location_checks: reduced
           progressive_orange_tower: false
-		      progressive_colorful: false
+	  progressive_colorful: false
     - option_name: location_checks
       option_category: Lingo
       option_result: insanity
