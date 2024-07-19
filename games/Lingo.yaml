@@ -11,8 +11,8 @@ Lingo:
     insanity: 30
   shuffle_panels: random
   shuffle_paintings:
-    true: 67
-    false: 33
+    false: 67
+    true: 33
   victory_condition:
     the_end: 25
     the_master: 25
