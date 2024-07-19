@@ -54,13 +54,7 @@ Timespinner:
   LootTierDistro: full_random
   ShowBestiary: true
   ShowDrops: true
-  TrapChance: 10
-  Traps:
-    - Meteor Sparrow Trap
-    - Poison Trap
-    - Chaos Trap
-    - Neurotoxin Trap
-    - Bee Trap
+  TrapChance: 0
     
   triggers:
     # swap Cantoran odds on an inverted start - it's an endgame boss location that can be as early as sphere 1 if inverted and quick seed are both true
