@@ -12,7 +12,7 @@ Muse Dash:
   chosen_traps:
     - Background Freeze Trap
     - Bad Apple Trap
-    - Chromatic Aberration Trap
+    #- Chromatic Aberration Trap
     - Error SFX Trap
     - Focus Line Trap
     - Gray Scale Trap
