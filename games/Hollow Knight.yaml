@@ -55,15 +55,17 @@ Hollow Knight:
   RemoveSpellUpgrades: 'false'
   StartLocation: king's_pass
   Goal:
-    any: 1
-    hollowknight: 1
-    siblings: 1
-    radiance: 1
+    any: 2
+    hollowknight: 2
+    siblings: 3
+    radiance: 3
+    godhome: 1
+    godhome_flower: 1
   WhitePalace: 
     exclude: 5
     kingfragment: 0
     nopathofpain: 3
-    include: 0
+    include: 2
   StartingGeo: 0
   DeathLink: off
   ExtraPlatforms: 'true'
