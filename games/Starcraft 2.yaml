@@ -1,4 +1,7 @@
 Starcraft 2:
+  harder_mode:
+    false: 75
+    true: 25 # Enable only for filler-only asyncs
   game_format:
     multi_campaign: 30
     all_terran: 15
@@ -164,6 +167,7 @@ Starcraft 2:
           maximum_campaign_size:
             19: 75
             12: 25
+          grid_two_start_positions: false # Possibly not enough starters
           shuffle_no_build: true
           spear_of_adun_present_in_no_build: random
           spear_of_adun_autonomously_cast_present_in_no_build: random
@@ -177,6 +181,7 @@ Starcraft 2:
           excluded_missions:
             - Supreme
             - The Infinite Cycle
+          maximum_campaign_size: 40
     # Short grids
     # Don't treat vanilla shuffled as a short grid first
     - option_category: Starcraft 2
@@ -209,3 +214,63 @@ Starcraft 2:
           excluded_missions:
             - Supreme
             - The Infinite Cycle
+    # Harder mode (for filler-only asyncs)
+    # Shouldn't be too challenging as truly challenging YAMLs are heavily customized
+    - option_category: Starcraft 2
+      option_name: harder_mode
+      option_result: true
+      options:
+        Starcraft 2:
+          game_difficulty:
+            casual: 0
+            normal: 25
+            hard: 50
+            brutal: 25
+          required_tactics: advanced
+          max_number_of_upgrades: random-range-4-12
+    # Harder mode: Allow standard tactics + Brutal
+    - option_category: Starcraft 2
+      option_name: game_difficulty
+      option_result: brutal
+      options:
+        Starcraft 2:
+          required_tactics:
+            standard: 25
+            advanced: 75
+    # Harder mode - full campaigns - don't spawn many filler items giving the player too many resources
+    - option_category: Starcraft 2
+      option_name: maximum_campaign_size
+      option_result: 83
+      options:
+        Starcraft 2:
+          max_number_of_upgrades: -1
+    - option_category: Starcraft 2
+      option_name: maximum_campaign_size
+      option_result: 34
+      options:
+        Starcraft 2:
+          max_number_of_upgrades: -1
+    - option_category: Starcraft 2
+      option_name: maximum_campaign_size
+      option_result: 26
+      options:
+        Starcraft 2:
+          max_number_of_upgrades: -1
+    - option_category: Starcraft 2
+      option_name: maximum_campaign_size
+      option_result: 25
+      options:
+        Starcraft 2:
+          max_number_of_upgrades: -1
+    - option_category: Starcraft 2
+      option_name: maximum_campaign_size
+      option_result: 20
+      options:
+        Starcraft 2:
+          max_number_of_upgrades: -1
+    - option_category: Starcraft 2
+      option_name: maximum_campaign_size
+      option_result: 19
+      options:
+        Starcraft 2:
+          max_number_of_upgrades: -1
