@@ -1,8 +1,8 @@
 Lingo:
   shuffle_doors:
-    none: 33
-    simple: 33
-    complex: 33
+    none: 20
+    simple: 40
+    complex: 40
   shuffle_colors: true
   progressive_orange_tower: random
   progressive_colorful: random
