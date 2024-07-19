@@ -17,6 +17,4 @@ DLCQuest:
   ending_choice: 'true'
   campaign: both
   item_shuffle: shuffled
-  death_link: 
-    'false': 75
-    'true': 25
+  death_link: 'false'
