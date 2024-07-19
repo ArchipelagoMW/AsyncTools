@@ -4,11 +4,15 @@ Timespinner:
   local_items: [Timespinner Gear 1, Timespinner Gear 2, Timespinner Gear 3]
   StartWithJewelryBox: true
   StartWithMeyef: true
-  QuickSeed: random
+  QuickSeed:
+    true: 50
+    false: 50
   PresentAccessWithWheelAndSpindle: true
   DownloadableItems: true
   LoreChecks: true
-  Cantoran: random
+  Cantoran:
+    true: 50
+    false: 50
   GyreArchives:
     true: 75
     false: 25
