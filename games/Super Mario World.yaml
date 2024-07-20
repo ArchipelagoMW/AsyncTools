@@ -20,7 +20,7 @@ Super Mario World:
     false: 5
     true: 1
   blocksanity:
-    false: 7
+    false: 3
     true: 1
   bowser_castle_doors: vanilla
   bowser_castle_rooms:
@@ -41,12 +41,12 @@ Super Mario World:
   display_received_item_popups: progression
   junk_fill_percentage: 0
   trap_fill_percentage: random-low
+  stun_trap_weight: none
+  thwimp_trap_weight: none
+  literature_trap_weight: none
   ice_trap_weight: random
-  stun_trap_weight: random
-  literature_trap_weight: random
   timer_trap_weight: random
   reverse_trap_weight: random
-  thwimp_trap_weight: random
   autosave: true
   early_climb: false
   overworld_speed: fast
@@ -83,3 +83,6 @@ Super Mario World:
       options:
         Super Mario World:
           max_yoshi_egg_cap: random-range-middle-50-255
+          stun_trap_weight: random
+          thwimp_trap_weight: random
+          literature_trap_weight: random
