@@ -57,17 +57,17 @@ Hollow Knight:
   RemoveSpellUpgrades: 'false'
   StartLocation: king's_pass
   Goal:
-    any: 12
-    hollowknight: 12
-    siblings: 12
-    radiance: 12
-    godhome: 1
-    godhome_flower: 1
+    any: 1
+    hollowknight: 1
+    siblings: 1
+    radiance: 1
+    godhome: 0
+    godhome_flower: 0
   WhitePalace: 
     exclude: 5
     kingfragment: 0
     nopathofpain: 3
-    include: 2
+    include: 1
   StartingGeo: 0
   DeathLink: off
   ExtraPlatforms: 'true'
@@ -144,12 +144,12 @@ Hollow Knight:
     option_result: easy
     options:
       Hollow Knight:
-        PreciseMovement: 'false'
-        ProficientCombat: 'false'
+        PreciseMovement: 'true'
+        ProficientCombat: 'true'
         BackgroundObjectPogos: 'true'
         EnemyPogos: 'true'
         ObscureSkips: 'true'
-        ShadeSkips: 'true'
+        ShadeSkips: 'false'
         InfectionSkips: 'true'
         FireballSkips: 'false'
         SpikeTunnels: 'false'
