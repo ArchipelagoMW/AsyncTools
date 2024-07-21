@@ -107,10 +107,13 @@ def main():
     with open("output/weights.yaml", "w+") as file:
         yaml.dump(dict(mystery), file)
     with open("output/games.yaml", "w+") as file:
-        for game in mystery["game"]:
+        games = list(mystery["game"])
+        last_key = games[-1]
+        for game in games:
             game_options = GameSettings(mystery["name"], mystery["description"], mystery["requires"], game, mystery[game])
             yaml.dump(dict(game_options), file)
-            file.write("\n---\n\n")
+            if not last_key:
+                file.write("\n---\n\n")
     print(Fore.GREEN + "\nOutputted settings file to `./output/weights.yaml`")
     meta_path = os.path.join("output", "meta.yaml")
     with open(meta_path, "w+") as file:
