@@ -148,7 +148,7 @@ Hollow Knight:
         ProficientCombat: 'true'
         BackgroundObjectPogos: 'true'
         EnemyPogos: 'true'
-        ObscureSkips: 'true'
+        ObscureSkips: 'false'
         ShadeSkips: 'false'
         InfectionSkips: 'true'
         FireballSkips: 'false'
