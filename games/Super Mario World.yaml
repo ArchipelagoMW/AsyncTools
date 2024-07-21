@@ -3,10 +3,10 @@ Super Mario World:
     bowser: 1
     yoshi_egg_hunt: 1
   local_items:
-    Yoshi Egg
-    Thwimp Trap
-    Stun Trap
-    Literature Trap
+    - Yoshi Egg
+    - Thwimp Trap
+    - Stun Trap
+    - Literature Trap
   bosses_required: random-range-5-10
   max_yoshi_egg_cap: 50
   percentage_of_yoshi_eggs: 100
