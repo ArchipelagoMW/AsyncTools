@@ -38,12 +38,10 @@ Super Mario 64:
   buddy_checks: random
   exclamation_boxes:
     off: 1
-    1ups_only: 0
-  local_items:
-    1Up Mushroom
+    1ups_only: 1
   completion_type:
     last_bowser_stage: 5
-    all_bowser_stages: 2
+    all_bowser_stages: 3
   triggers:
     - option_category: Super Mario 64
       option_name: completion_type
