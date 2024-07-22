@@ -1,8 +1,19 @@
 Shivers:
-  lobby_access: random
-  puzzle_hints_required: false
-  include_information_plaques: random
-  front_door_usable: random
-  elevators_stay_solved: true
-  early_beth: true
-  early_lightning: false
+  lobby_access:
+    normal: 10
+    early: 45
+    local: 45
+  puzzle_hints_required:
+    'true': 25
+    'false': 75
+  include_information_plaques:
+    'true': 75
+    'false': 25
+  front_door_usable: 'true'
+  elevators_stay_solved: 'true'
+  early_beth:
+    'true': 75
+    'false': 25
+  early_lightning:
+    'true': 75
+    'false': 25
