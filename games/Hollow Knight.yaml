@@ -23,7 +23,9 @@ Hollow Knight:
   RandomizeLifebloodCocoons: 'random'
   RandomizeGrimmkinFlames: 'false'
   RandomizeJournalEntries: 'random'
-  RandomizeNail: 'false'
+  RandomizeNail:
+    true: 1
+    false: 5
   RandomizeGeoRocks:
     true: 1
     false: 5
@@ -59,11 +61,13 @@ Hollow Knight:
     hollowknight: 1
     siblings: 1
     radiance: 1
+    godhome: 0
+    godhome_flower: 0
   WhitePalace: 
     exclude: 5
     kingfragment: 0
     nopathofpain: 3
-    include: 0
+    include: 1
   StartingGeo: 0
   DeathLink: off
   ExtraPlatforms: 'true'
@@ -106,3 +110,73 @@ Hollow Knight:
     - King_Fragment
     - Queen_Fragment
     - Void_Heart
+    - Godtuner
+
+  skips:
+    none: 4
+    easy: 1
+    medium: 1
+  
+  triggers:
+  - option_category: Hollow Knight
+    option_name: skips
+    option_result: none
+    options:
+      Hollow Knight:
+        PreciseMovement: 'false'
+        ProficientCombat: 'false'
+        BackgroundObjectPogos: 'false'
+        EnemyPogos: 'false'
+        ObscureSkips: 'false'
+        ShadeSkips: 'false'
+        InfectionSkips: 'false'
+        FireballSkips: 'false'
+        SpikeTunnels: 'false'
+        AcidSkips: 'false'
+        DamageBoosts: 'false'
+        DangerousSkips: 'false'
+        DarkRooms: 'false'
+        ComplexSkips: 'false'
+        DifficultSkips: 'false'
+
+  - option_category: Hollow Knight
+    option_name: skips
+    option_result: easy
+    options:
+      Hollow Knight:
+        PreciseMovement: 'true'
+        ProficientCombat: 'true'
+        BackgroundObjectPogos: 'true'
+        EnemyPogos: 'true'
+        ObscureSkips: 'false'
+        ShadeSkips: 'false'
+        InfectionSkips: 'true'
+        FireballSkips: 'false'
+        SpikeTunnels: 'false'
+        AcidSkips: 'false'
+        DamageBoosts: 'false'
+        DangerousSkips: 'false'
+        DarkRooms: 'false'
+        ComplexSkips: 'false'
+        DifficultSkips: 'false'
+
+  - option_category: Hollow Knight
+    option_name: skips
+    option_result: medium
+    options:
+      Hollow Knight:
+        PreciseMovement: 'true'
+        ProficientCombat: 'true'
+        BackgroundObjectPogos: 'true'
+        EnemyPogos: 'true'
+        ObscureSkips: 'true'
+        ShadeSkips: 'true'
+        InfectionSkips: 'true'
+        FireballSkips: 'true'
+        SpikeTunnels: 'false'
+        AcidSkips: 'true'
+        DamageBoosts: 'true'
+        DangerousSkips: 'false'
+        DarkRooms: 'false'
+        ComplexSkips: 'false'
+        DifficultSkips: 'false'
