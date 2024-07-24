@@ -1,43 +1,68 @@
 Timespinner:
   accessibility: items
+  DeathLink: false
   local_items: [Timespinner Gear 1, Timespinner Gear 2, Timespinner Gear 3]
   StartWithJewelryBox: true
-  DownloadableItems: true
-  EyeSpy: false
   StartWithMeyef: true
-  QuickSeed: false
-  SpecificKeycards: true
-  Inverted: random
-  GyreArchives: random
-  Cantoran: random
+  QuickSeed:
+    true: 50
+    false: 50
+  PresentAccessWithWheelAndSpindle: true
+  DownloadableItems: true
   LoreChecks: true
-  BossRando: random
+  Cantoran:
+    true: 75
+    false: 25
+  GyreArchives:
+    true: 67
+    false: 33
+  SpecificKeycards:
+    true: 80
+    false: 20
+  EyeSpy: 
+    true: 10
+    false: 90
+  Inverted:
+    true: 80
+    false: 20
+  UnchainedKeys:
+    true: 67
+    false: 33
+  EnterSandman:
+    false: 75
+    true: 25
+  DadPercent:
+    false: 80
+    true: 20
+  RisingTides:
+    false: 50
+    true: 50
+  DamageRando:
+    off: 50
+    balanced: 50
+  BossRando:
+    off: 25
+    scaled: 75
+  BossHealing: true
   EnemyRando: off
-  DamageRando: off
-  BossHealing: 'true'
-  ShopFill: default
+  ShopFill:
+    default: 33
+    randomized: 67
   ShopWarpShards: true
   LootPool: randomized
   DropRateCategory: randomized
   LootTierDistro: full_random
   ShowBestiary: true
   ShowDrops: true
-  EnterSandman:
-    false: 75
-    true: 25
-  DadPercent:
-    false: 75
-    true: 25
-  RisingTides:
-    false: 50
-    true: 50
-  TrapChance: 10
-  Traps:
-    - Meteor Sparrow Trap
-    - Poison Trap
-    - Chaos Trap
-    - Neurotoxin Trap
-    - Bee Trap
-  PresentAccessWithWheelAndSpindle: true
-  UnchainedKeys: random
-  DeathLink: false
+  TrapChance: 0
+    
+  triggers:
+    # swap Cantoran odds on an inverted start - it's an endgame boss location that can be as early as sphere 1 if inverted and quick seed are both true
+    - option_category: Timespinner
+      option_name: Inverted
+      option_result: true
+      options:
+        Timespinner:
+          Cantoran:
+            true: 25
+            false: 75
