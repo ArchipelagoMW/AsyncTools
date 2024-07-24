@@ -38,4 +38,4 @@ Yu-Gi-Oh! 2006:
       option_result: challenges
       options:
         Yu-Gi-Oh! 2006:
-          number_of_challenges: random_range-10-91
+          number_of_challenges: random-range-10-91
