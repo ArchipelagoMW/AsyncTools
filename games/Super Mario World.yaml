@@ -41,7 +41,6 @@ Super Mario World:
     full: 2
     singularity: 1
   swap_donut_gh_exits: true
-  display_received_item_popups: progression
   junk_fill_percentage: 0
   trap_fill_percentage: random-low
   stun_trap_weight: none
