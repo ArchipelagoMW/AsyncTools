@@ -1,5 +1,9 @@
 Ocarina of Time:
+
+  # Changes to shuffle_dungeon_entrances, shuffle_song_items, shuffle_smallkeys are off-limits, due to them being slow
+
   exclude_locations:
+    - GF HBA 1000 Points
     - GF HBA 1500 Points
     - Deku Theater Mask of Truth
   local_items:
@@ -11,13 +15,21 @@ Ocarina of Time:
 
   # World state
   open_forest:
-    open: 3
-    closed_deku: 7
-  open_kakariko: open
-  open_door_of_time: on
+    open: 1
+    closed_deku: 4
+  open_kakariko:
+    open: 1
+    zelda: 4
+  open_door_of_time:
+    false: 4
+    true: 1
   zora_fountain: closed
   gerudo_fortress: fast
   trials: 0
+  mq_dungeons_mode:
+    vanilla: 1
+    count: 1
+  mq_dungeons_count: random-middle
 
   # Bridge requirements. real completion requirements are on ganon bk options
   bridge:
@@ -33,8 +45,8 @@ Ocarina of Time:
 
   # Local TFH
   triforce_hunt:
-    on: 2
-    off: 8
+    on: 1
+    off: 4
   triforce_goal:
     30: 5
     40: 3
@@ -44,22 +56,22 @@ Ocarina of Time:
   # ER
   spawn_positions:
     on: 1
-    off: 4
+    off: 3
   shuffle_dungeon_entrances: off
   shuffle_bosses:
     limited: 1
-    off: 4
+    off: 3
 
   # Locations
   shuffle_song_items: any
   shopsanity:
-    off: 4
-    random_number: 1
+    off: 3
+    random_number: 2
   shopsanity_prices: affordable
   tokensanity:
-    off: 80
-    dungeons: 15
-    all: 5
+    off: 2
+    dungeons: 1
+    all: 1
   shuffle_scrubs:
     off: 4
     affordable: 1
@@ -67,34 +79,225 @@ Ocarina of Time:
     off: 1
     on: 4
   shuffle_ocarinas:
-    off: 3
-    on: 2
+    off: 1
+    on: 1
+  shuffle_child_trade:
+    vanilla: 1
+    shuffle: 4
 
   # If pot shuffle turns out to go badly, remove this
-  shuffle_pots:
-    off: 90
-    dungeons: 10
+  pots_crates_freestanding:
+    off: 7
+    dungeons: 0
+    all: 3
 
   # Dungeon items
   shuffle_mapcompass: startwith
   shuffle_smallkeys: keysanity
+  shuffle_hideoutkeys: keysanity
   shuffle_bosskeys:
     dungeon: 4
     keysanity: 1
   key_rings:
     off: 7
-    all: 3  # trigger: key_rings == all -> shuffle_smallkeys := keysanity
+    all: 3
 
   # Ganon BK -- completion condition if not TFH
   shuffle_ganon_bosskey:
     remove: 1
-    medallions: 6
-    dungeons: 3
-  ganon_bosskey_medallions: random-high
-  ganon_bosskey_rewards: random-high
+    medallions: 12
+    dungeons: 7
+  ganon_bosskey_medallions: random-range-4-6
+  ganon_bosskey_rewards: random-range-6-9
 
   # Extra options
   chicken_count: 1
   correct_chest_appearances: both
   correct_potcrate_appearances: textures_content
   hint_dist: async
+  free_scarecrow: true
+  fast_bunny_hood: true
+  blue_fire_arrows: true
+  start_with_consumables: true
+  start_with_rupees: true
+  enhance_map_compass: true
+
+  # Difficulty
+  # A description for each logic trick can be found at https://github.com/ArchipelagoMW/Archipelago/blob/main/worlds/oot/LogicTricks.py
+  tricks:
+    simple: 4
+    advanced: 1
+
+  # Triggers
+  # Exclude skulltula rewards without tokensanity
+  triggers:
+    - option_category: Ocarina of Time
+      option_name: tokensanity
+      option_result: off
+      options:
+        Ocarina of Time:
+          exclude_locations:
+            - Kak 10 Gold Skulltula Reward
+            - Kak 20 Gold Skulltula Reward
+            - Kak 30 Gold Skulltula Reward
+            - Kak 40 Gold Skulltula Reward
+            - Kak 50 Gold Skulltula Reward
+            - GF HBA 1000 Points
+            - GF HBA 1500 Points
+            - Deku Theater Mask of Truth
+
+  # Groups various shuffles together
+    - option_category: Ocarina of Time
+      option_name: pots_crates_freestanding
+      option_result: all
+      options:
+        Ocarina of Time:
+          shuffle_pots: all
+          shuffle_crates: all
+          shuffle_freestanding_items: all
+
+  # Simple logic tricks, only includes the very simple tricks, with mild game knowledge gating
+    - option_category: Ocarina of Time
+      option_name: tricks
+      option_result: simple
+      options:
+        Ocarina of Time:
+          logic_tricks:
+            - pass through visible one-way collisions
+            - hidden grottos without stone of agony
+            - fewer tunic requirements
+            - adult kokiri forest gs with hover boots
+            - man on roof without hookshot
+            - windmill poh as adult with nothing
+            - zora's river rupees with jump dive
+            - lake hylia lab dive without gold scale
+            - gerudo's fortress ledge jumps
+            - child dead hand without kokiri sword
+            - fire temple boss door without hover boots or pillar
+            - Spirit Temple without Lens of Truth
+            - ganon's castle without lens of truth
+            - ganon's castle mq without lens of truth
+
+  # Advanced logic tricks, includes some harder tricks, but no extensive setups, or tricks I couldn't easily find videos for
+    - option_category: Ocarina of Time
+      option_name: tricks
+      option_result: advanced
+      options:
+        Ocarina of Time:
+          logic_tricks:
+            - pass through visible one-way collisions
+            - hidden grottos without stone of agony
+            - fewer tunic requirements
+            - beehives with bombchus
+            - hammer rusted switches through walls
+            - adult kokiri forest gs with hover boots
+            - backflip over mido as adult
+            - lost woods adult gs without bean
+            - hyrule castle storms grotto gs with just boomerang
+            - man on roof without hookshot
+            - kakariko tower gs with jump slash
+            - windmill poh as adult with nothing
+            - kakariko rooftop gs with hover boots
+            - graveyard freestanding poh with boomerang
+            - second dampe race as child
+            - death mountain trail lower red rock gs with hookshot
+            - death mountain trail upper red rock gs without hammer
+            - rolling goron (hot rodder goron) as child with strength
+            - goron city maze left chest with hover boots
+            - crater's bean poh with hover boots
+            - death mountain crater upper to lower with hammer
+            - zora's domain entry with cucco
+            - zora's domain entry with hover boots
+            - zora's river rupees with jump dive
+            - skip king zora as adult with nothing
+            - lake hylia lab wall gs with jump slash
+            - lake hylia lab dive without gold scale
+            - water temple entry without iron boots using hookshot
+            - gerudo valley crate poh as adult with hover boots
+            - thieves' hideout "kitchen" with no additional items
+            - gerudo's fortress ledge jumps
+            - wasteland crossing without hover boots or longshot
+            - lensless wasteland
+            - reverse wasteland
+            - colossus hill gs with hookshot
+            - deku tree basement vines gs with jump slash
+            - deku tree basement web to gohma with bow
+            - deku tree mq compass room gs boulders with just hammer
+            - deku tree mq roll under the spiked log
+            - dodongo's cavern scarecrow gs with armos statue
+            - dodongo's cavern vines gs from below with longshot
+            - dodongo's cavern staircase with bow
+            - dodongo's cavern child slingshot skips
+            - dodongo's cavern two scrub room with strength
+            - dodongo's cavern spike trap room jump without hover boots
+            - dodongo's cavern smash the boss lobby floor
+            - dodongo's cavern mq early bomb bag area as child
+            - jabu near boss ceiling switch/gs without boomerang or explosives
+            - jabu mq song of time block gs with boomerang
+            - bottom of the well without lens of truth
+            - child dead hand without kokiri sword
+            - bottom of the well map chest with strength & sticks
+            - bottom of the well mq jump over the pits
+            - bottom of the well mq dead hand freestanding key with boomerang
+            - forest temple first room gs with difficult-to-use weapons
+            - forest temple east courtyard vines with hookshot
+            - forest temple ne outdoors ledge with hover boots
+            - forest temple east courtyard door frame with hover boots
+            - forest temple outside backdoor with jump slash
+            - swim through forest temple mq well with hookshot
+            - skip forest temple mq block puzzle with bombchu
+            - forest temple mq twisted hallway switch with jump slash
+            - fire temple boss door without hover boots or pillar
+            - fire temple song of time room gs without song of time
+            - fire temple climb without strength
+            - fire temple flame wall maze skip
+            - fire temple mq chest near boss without breaking crate
+            - fire temple mq big lava room blocked door without hookshot
+            - fire temple mq boss key chest without bow
+            - fire temple mq climb without fire source
+            - fire temple mq lizalfos maze side room without box
+            - fire temple mq lower to upper lizalfos maze with hover boots
+            - fire temple mq lower to upper lizalfos maze with precise jump
+            - fire temple mq above flame wall maze gs from below with longshot
+            - fire temple mq flame wall maze skip
+            - water temple torch longshot
+            - water temple cracked wall with hover boots
+            - water temple cracked wall with no additional items
+            - water temple boss key region with hover boots
+            - water temple boss key jump dive
+            - water temple central pillar gs with farore's wind
+            - water temple central pillar gs with iron boots
+            - water temple falling platform room gs with hookshot
+            - water temple river gs without iron boots
+            - water temple dragon statue jump dive
+            - water temple dragon statue switch from above the water as adult
+            - water temple mq north basement gs without small key
+            - shadow temple stationary objects without lens of truth
+            - shadow temple invisible moving platform without lens of truth
+            - shadow temple bongo bongo without lens of truth
+            - shadow temple stone umbrella skip
+            - shadow temple river statue with bombchu
+            - shadow temple mq stationary objects without lens of truth
+            - shadow temple mq invisible blades silver rupees without lens of truth
+            - shadow temple mq truth spinner gap with longshot
+            - shadow temple mq lower huge pit without fire source
+            - spirit temple without lens of truth
+            - spirit temple child side bridge with bombchu
+            - spirit temple main room gs with boomerang
+            - spirit temple main room jump from hands to upper ledges
+            - spirit temple map chest with bow
+            - spirit temple sun block room chest with bow
+            - spirit temple shifting wall with no additional items
+            - spirit temple mq without lens of truth
+            - spirit temple mq sun block room gs with boomerang
+            - spirit temple mq lower adult without fire arrows
+            - spirit temple mq frozen eye switch without fire
+            - ice cavern mq scarecrow gs with no additional items
+            - gerudo training ground without lens of truth
+            - gerudo training ground left side silver rupees without hookshot
+            - reach gerudo training ground fake wall ledge with hover boots
+            - gerudo training ground mq without lens of truth
+            - gerudo training ground mq left side silver rupees with hookshot
+            - gerudo training ground mq left side silver rupees without hookshot
+            - ganon's castle without lens of truth
+            - ganon's castle mq without lens of truth
