@@ -61,9 +61,9 @@ Ocarina of Time:
   shuffle_bosses:
     limited: 1
     off: 3
-  shuffle_overworld_entrances:
-    false: 4
+  entrances:
     true: 1
+    false: 4
 
   # Locations
   shuffle_song_items: any
@@ -149,15 +149,37 @@ Ocarina of Time:
             - GF HBA 1500 Points
             - Deku Theater Mask of Truth
 
+  # Groups ER together
+  - option_category: Ocarina of Time
+    option_name: entrances
+    option_result: true
+    options:
+      Ocarina of Time:
+        shuffle_grotto_entrances:
+          true: 9
+          false: 1
+        shuffle_overworld_entrances:
+          true: 9
+          false: 1
+        shuffle_interior_entrances:
+          simple: 9
+          off: 1
+
   # Groups various shuffles together
     - option_category: Ocarina of Time
       option_name: pots_crates_freestanding
       option_result: all
       options:
         Ocarina of Time:
-          shuffle_pots: all
-          shuffle_crates: all
-          shuffle_freestanding_items: all
+          shuffle_pots:
+            all: 9
+            off: 1
+          shuffle_crates:
+            all: 9
+            off: 1
+          shuffle_freestanding_items:
+            all: 9
+            off: 1
 
   # Simple logic tricks, only includes the very simple tricks, with mild game knowledge gating
     - option_category: Ocarina of Time
