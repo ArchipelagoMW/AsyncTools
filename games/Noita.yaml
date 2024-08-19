@@ -54,7 +54,7 @@ Noita:
       options:
         Noita:
           extra_orbs:
-            random-low
+            random-high
           local_items:
             - Orb
           exclude_locations:
