@@ -141,14 +141,6 @@ Pokemon Red and Blue:
   secondary_type_chance: 
     random: 50
     vanilla: 50
-  randomize_type_chart:
-    vanilla: 50
-    randomize: 25
-    chaos: 5
-  normal_matchups: random-range-high-50-225
-  super_effective_matchups: random-range-25-50
-  not_very_effective_matchups: random-range-25-50
-  immunity_matchups: random-range-low-3-15
   safari_zone_normal_battles: # Change the Safari Zone to have standard wild pokemon battles.
     false: 50
     true: 25
