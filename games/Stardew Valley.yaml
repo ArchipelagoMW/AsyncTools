@@ -131,3 +131,77 @@ Stardew Valley:
   gifting: 'true'
   mods: []
   death_link: 'false'
+triggers: #Added triggers to complement the goal (eg. add museumsanity to a museum goal)
+    - option_category: Stardew Valley
+      option_name: goal
+      option_result: community_center
+      options:
+        Stardew Valley:
+          bundle_price: #Move minimal odds to very_expensive odds
+            very_cheap: 15
+            cheap: 50
+            normal: 25
+            expensive: 5
+            very_expensive: 5
+    - option_category: Stardew Valley
+      option_name: goal
+      option_result: master_angler #catch all fishsanity fish
+      options:
+        Stardew Valley:
+          fishsanity: #Move none odds to all
+            all: 10
+            exclude_legendaries: 20
+            exclude_hard_fish: 50
+            only_easy_fish: 20
+    - option_category: Stardew Valley
+      option_name: goal
+      option_result: complete_collection #finish museum
+      options:
+        Stardew Valley:
+          museumsanity: #remove none odds
+            milestones: 30
+            all: 10
+    - option_category: Stardew Valley
+      option_name: goal
+      option_result: full_shipment # ship all items, follows shipsanity
+      options:
+        Stardew Valley:
+          shipsanity: #Remove none odds
+            crops: 15
+            full_shipment: 5
+    - option_category: Stardew Valley
+      option_name: goal
+      option_result: gourmet_chef # cook every recipe, follows cooksanity
+      options:
+        Stardew Valley:
+          cooksanity: #Remove none odds
+            queen_of_sauce: 20
+            all: 10
+          chefsanity: #Increase the odds shuffling recipes to add
+            none: 10
+            all: 10
+            random: 10
+    - option_category: Stardew Valley
+      option_name: goal
+      option_result: craft_master #craft every item
+      options:
+        Stardew Valley:
+          craftsanity: #Remove none odds
+            all: 20
+    - option_category: Stardew Valley
+      option_name: goal
+      option_result: mystery_of_the_stardrops #find every stardrop
+      options:
+        Stardew Valley:
+          museumsanity: #Remove none odds
+            milestones: 30
+            all: 10
+          festival_locations: #Remove disable odds
+            easy: 40
+            hard: 40
+          friendsanity: #Remove none odds
+            bachelors: 25
+            starting_npcs: 25
+            all: 10
+          fishsanity: #Set to all, since that is required
+            all: 10
