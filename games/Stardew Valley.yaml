@@ -190,6 +190,17 @@ triggers: #Added triggers to complement the goal (eg. add museumsanity to a muse
             all: 20
     - option_category: Stardew Valley
       option_name: goal
+      option_result: protector_of_the_valley # complete monsterslayer goals, follows monstersanity
+      options: 
+        Stardew Valley: #Remove one_per_category odds
+          monstersanity:
+            one_per_monster: 25
+            very_short_goals: 20
+            short_goals: 20
+            progressive_goals: 5
+            split_goals: 5
+    - option_category: Stardew Valley
+      option_name: goal
       option_result: mystery_of_the_stardrops #find every stardrop
       options:
         Stardew Valley:
