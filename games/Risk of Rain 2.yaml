@@ -33,3 +33,10 @@ Risk of Rain 2:
   item_pool_presets:
     false: 0
     true: 50
+  triggers:
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: RoR2_{player}

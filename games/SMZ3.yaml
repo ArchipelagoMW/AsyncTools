@@ -26,3 +26,10 @@ SMZ3:
     random-high: 1
   quick_swap:
     true: 1
+  triggers:
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: SMZ3_{player}

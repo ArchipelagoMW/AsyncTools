@@ -310,3 +310,11 @@ Pokemon Emerald:
           match_trainer_levels_bonus:
             0: 80
             random-range-1-25: 20
+
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: PokeEmerald{player}
+

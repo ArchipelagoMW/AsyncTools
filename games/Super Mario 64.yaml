@@ -49,3 +49,9 @@ Super Mario 64:
       options:
         Super Mario 64:
           progressive_keys: false
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: SM64_{player}

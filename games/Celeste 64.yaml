@@ -13,3 +13,11 @@ Celeste 64:
   carsanity:
     'false': 3
     'true': 2
+  triggers:
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: Celeste64_{player}
+

@@ -96,5 +96,12 @@ Blasphemous:
           - Embossed Mask of Crescente
           - Mirrored Mask of Dolphos
           - Deformed Mask of Orestes
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: Blasphemous{player}
+
 
   

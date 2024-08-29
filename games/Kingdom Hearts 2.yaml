@@ -71,3 +71,10 @@ Kingdom Hearts 2:
           BountyAmount: random-range-18-23
           BountyRequired: random-range-12-17
           BountyStartingHintToggle: true
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: KH2_{player}
+

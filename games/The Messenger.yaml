@@ -16,3 +16,10 @@ The Messenger:
   early_meditation:
     true: 80
     false: 40
+  triggers:
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: Messenger{player}

@@ -39,3 +39,10 @@ Yu-Gi-Oh! 2006:
       options:
         Yu-Gi-Oh! 2006:
           number_of_challenges: random-range-10-91
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: YuGiOh{player}
+

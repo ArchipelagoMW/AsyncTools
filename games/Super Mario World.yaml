@@ -88,3 +88,10 @@ Super Mario World:
           stun_trap_weight: random
           thwimp_trap_weight: random
           literature_trap_weight: random
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: SMW{player}
+

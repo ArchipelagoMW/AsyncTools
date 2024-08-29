@@ -40,3 +40,11 @@ Kirby's Dream Land 3:
   virtual_console:  # Never roll without flash reduction
     flash_reduction: 50
     both: 50
+  triggers:
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: KDL3_{player}
+

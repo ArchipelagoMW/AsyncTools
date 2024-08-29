@@ -131,3 +131,10 @@ Stardew Valley:
   gifting: 'true'
   mods: []
   death_link: 'false'
+  triggers:
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: Stardew{player}

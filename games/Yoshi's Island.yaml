@@ -40,3 +40,11 @@ Yoshi's Island:
   traps_enabled: 'false'
   trap_percent: 10
   death_link: 'false'
+  triggers:
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: YI{player}
+

@@ -68,3 +68,11 @@ Dark Souls III:
     true: 50
     false: 50
   randomize_infusion_percentage: random
+  triggers:
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: DS3_{player}
+

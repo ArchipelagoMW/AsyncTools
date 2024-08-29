@@ -162,6 +162,13 @@ Mario & Luigi Superstar Saga:
           scale_stats:
             true: 100
 
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: MLSS{player}
+
 
 
 

@@ -20,3 +20,10 @@ Slay the Spire:
   downfall:
     false: 50
     true: 0
+  triggers:
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: StS{player}

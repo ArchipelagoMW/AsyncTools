@@ -126,3 +126,11 @@
   shuffle_party_members:
     false: 1
     true: 3
+  
+  triggers:
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: LufiaII{player}

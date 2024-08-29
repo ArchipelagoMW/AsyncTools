@@ -33,3 +33,11 @@ Donkey Kong Country 3:
     false: 3
     true: 2
   local_items: ["Krematoa Cog","Banana Bird"]
+  triggers:
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: DKC3_{player}
+

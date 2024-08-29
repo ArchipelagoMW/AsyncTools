@@ -75,3 +75,10 @@ Lingo:
         Lingo:
           enable_pilgrimage: false
           shuffle_sunwarps: false
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: Lingo{player}
+

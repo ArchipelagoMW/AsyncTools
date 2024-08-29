@@ -23,3 +23,10 @@ Landstalker - The Treasures of King Nole:
   handle_tree_cutting_glitch_in_logic: false
   hint_count: random-high
   revive_using_ekeeke: true
+  triggers:
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: Landstalker{player}

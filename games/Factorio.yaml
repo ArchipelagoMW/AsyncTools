@@ -147,3 +147,10 @@ Factorio:
             enemy_expansion:
               enabled: false
             water: 2
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: Factorio{player}
+

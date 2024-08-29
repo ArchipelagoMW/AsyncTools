@@ -12,3 +12,10 @@ A Short Hike:
     normal: 3
   cost_multiplier: random-range-25-200
   filler_coin_amount: random
+  triggers:
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: ShortHike{player}

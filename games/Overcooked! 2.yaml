@@ -19,3 +19,11 @@ Overcooked! 2:
   display_leaderboard_scores: 'false'
   stars_to_win: random-range-45-65
   star_threshold_scale: random-range-35-45
+  triggers:
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: OC2_{player}
+

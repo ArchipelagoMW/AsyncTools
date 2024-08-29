@@ -13,3 +13,10 @@ Bomb Rush Cyberfunk:
   score_difficulty: normal
   damage_multiplier: 1
   death_link: false
+  triggers:
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: BombRush{player}

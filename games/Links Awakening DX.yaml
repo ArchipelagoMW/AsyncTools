@@ -73,3 +73,10 @@ Links Awakening DX:
         Links Awakening DX:
           local_items:
             - Seashell
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: LADX{player}
+

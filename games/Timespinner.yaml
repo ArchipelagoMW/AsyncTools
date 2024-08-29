@@ -66,3 +66,9 @@ Timespinner:
           Cantoran:
             true: 25
             false: 75
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: TS{player}

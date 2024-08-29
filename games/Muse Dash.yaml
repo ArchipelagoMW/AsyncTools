@@ -44,3 +44,10 @@ Muse Dash:
         Muse Dash:
           +dlc_packs: [Muse Plus]
           additional_song_count: random-range-95-200
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: MuseDash{player}
+
