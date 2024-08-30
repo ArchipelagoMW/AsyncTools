@@ -79,4 +79,4 @@ The Witness:
       option_result: Player{player}
       options:
         null:
-          name: Witness{player}
+          name: Witness-{player}

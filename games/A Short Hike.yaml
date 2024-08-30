@@ -18,4 +18,4 @@ A Short Hike:
       option_result: Player{player}
       options:
         null:
-          name: ShortHike{player}
+          name: ShortHike-{player}

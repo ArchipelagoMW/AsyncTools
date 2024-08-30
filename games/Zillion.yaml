@@ -34,5 +34,5 @@
       option_result: Player{player}
       options:
         null:
-          name: Zillion{player}
+          name: Zillion-{player}
 

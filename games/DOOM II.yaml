@@ -26,5 +26,5 @@ DOOM II:
       option_result: Player{player}
       options:
         null:
-          name: DOOMII{player}
+          name: DOOMII-{player}
 

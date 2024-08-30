@@ -137,4 +137,4 @@ Stardew Valley:
       option_result: Player{player}
       options:
         null:
-          name: Stardew{player}
+          name: Stardew-{player}

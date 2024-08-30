@@ -26,5 +26,5 @@ Subnautica:
       option_result: Player{player}
       options:
         null:
-          name: Subnautica{player}
+          name: Subnautica-{player}
 

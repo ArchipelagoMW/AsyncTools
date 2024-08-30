@@ -105,4 +105,4 @@ Ocarina of Time:
       option_result: Player{player}
       options:
         null:
-          name: OOT{player}
+          name: OOT-{player}

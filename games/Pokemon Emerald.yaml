@@ -316,5 +316,5 @@ Pokemon Emerald:
       option_result: Player{player}
       options:
         null:
-          name: PokeEmerald{player}
+          name: PokeEmerald-{player}
 

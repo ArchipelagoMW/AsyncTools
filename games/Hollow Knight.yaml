@@ -185,4 +185,4 @@ Hollow Knight:
     option_result: Player{player}
     options:
       null:
-        name: HollowKnight{player}
+        name: HK-{player}

@@ -101,7 +101,7 @@ Blasphemous:
       option_result: Player{player}
       options:
         null:
-          name: Blasphemous{player}
+          name: Blasphemous-{player}
 
 
   

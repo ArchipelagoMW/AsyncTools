@@ -25,5 +25,5 @@ Overcooked! 2:
       option_result: Player{player}
       options:
         null:
-          name: OC2_{player}
+          name: OC2-{player}
 

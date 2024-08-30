@@ -44,5 +44,5 @@ Yu-Gi-Oh! 2006:
       option_result: Player{player}
       options:
         null:
-          name: YuGiOh{player}
+          name: YuGiOh2006-{player}
 

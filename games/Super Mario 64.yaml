@@ -54,4 +54,4 @@ Super Mario 64:
       option_result: Player{player}
       options:
         null:
-          name: SM64_{player}
+          name: SM64-{player}

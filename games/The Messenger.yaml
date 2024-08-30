@@ -22,4 +22,4 @@ The Messenger:
       option_result: Player{player}
       options:
         null:
-          name: Messenger{player}
+          name: Messenger-{player}

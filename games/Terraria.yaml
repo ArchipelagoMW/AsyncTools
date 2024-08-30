@@ -15,5 +15,5 @@ Terraria:
       option_result: Player{player}
       options:
         null:
-          name: Terraria{player}
+          name: Terraria-{player}
 

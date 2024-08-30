@@ -78,5 +78,5 @@ Links Awakening DX:
       option_result: Player{player}
       options:
         null:
-          name: LADX{player}
+          name: LADX-{player}
 

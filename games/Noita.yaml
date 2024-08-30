@@ -64,5 +64,5 @@ Noita:
       option_result: Player{player}
       options:
         null:
-          name: Noita{player}
+          name: Noita-{player}
 

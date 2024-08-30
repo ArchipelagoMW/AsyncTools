@@ -125,4 +125,4 @@ A Link to the Past:
     option_result: Player{player}
     options:
       null:
-        name: LttP{player}
+        name: LttP-{player}

@@ -58,5 +58,5 @@
       option_result: Player{player}
       options:
         null:
-          name: Aquaria{player}
+          name: Aquaria-{player}
 

@@ -13,5 +13,5 @@ Raft:
       option_result: Player{player}
       options:
         null:
-          name: Raft{player}
+          name: Raft-{player}
 

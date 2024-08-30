@@ -39,4 +39,4 @@ Undertale:
       option_result: Player{player}
       options:
         null:
-          name: Undertale{player}
+          name: Undertale-{player}

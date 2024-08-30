@@ -201,4 +201,4 @@ Pokemon Red and Blue:
       option_result: Player{player}
       options:
         null:
-          name: PokeRedBlue{player}
+          name: PokeRedBlue-{player}

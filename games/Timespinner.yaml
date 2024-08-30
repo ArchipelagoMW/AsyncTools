@@ -71,4 +71,4 @@ Timespinner:
       option_result: Player{player}
       options:
         null:
-          name: TS{player}
+          name: TS-{player}

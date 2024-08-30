@@ -13,4 +13,4 @@ Wargroove:
       option_result: Player{player}
       options:
         null:
-          name: Wargroove{player}
+          name: Wargroove-{player}

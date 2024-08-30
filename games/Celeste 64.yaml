@@ -19,5 +19,5 @@ Celeste 64:
       option_result: Player{player}
       options:
         null:
-          name: Celeste64_{player}
+          name: Celeste64-{player}
 

@@ -32,4 +32,4 @@ SMZ3:
       option_result: Player{player}
       options:
         null:
-          name: SMZ3_{player}
+          name: SMZ3-{player}

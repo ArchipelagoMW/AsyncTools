@@ -29,4 +29,4 @@ Landstalker - The Treasures of King Nole:
       option_result: Player{player}
       options:
         null:
-          name: Landstalker{player}
+          name: Landstalker-{player}

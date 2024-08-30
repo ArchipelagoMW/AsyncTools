@@ -49,5 +49,5 @@ Muse Dash:
       option_result: Player{player}
       options:
         null:
-          name: MuseDash{player}
+          name: MuseDash-{player}
 

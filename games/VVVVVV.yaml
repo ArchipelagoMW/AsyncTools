@@ -15,4 +15,4 @@ VVVVVV:
       option_result: Player{player}
       options:
         null:
-          name: VVVVVV{player}
+          name: VVVVVV-{player}

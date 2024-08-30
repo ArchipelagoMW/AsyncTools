@@ -17,5 +17,5 @@ Minecraft:
       option_result: Player{player}
       options:
         null:
-          name: Minecraft{player}
+          name: Minecraft-{player}
 

@@ -114,5 +114,5 @@ Final Fantasy Mystic Quest:
       option_result: Player{player}
       options:
         null:
-          name: FFMQ{player}
+          name: FFMQ-{player}
 

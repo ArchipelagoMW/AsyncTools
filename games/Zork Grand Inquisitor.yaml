@@ -17,4 +17,4 @@ Zork Grand Inquisitor:
       option_result: Player{player}
       options:
         null:
-          name: Zork{player}
+          name: Zork-{player}

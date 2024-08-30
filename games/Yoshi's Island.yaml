@@ -46,5 +46,5 @@ Yoshi's Island:
       option_result: Player{player}
       options:
         null:
-          name: YI{player}
+          name: YI-{player}
 

@@ -133,4 +133,4 @@
       option_result: Player{player}
       options:
         null:
-          name: LufiaII{player}
+          name: LufiaII-{player}

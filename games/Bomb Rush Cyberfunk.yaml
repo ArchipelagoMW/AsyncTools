@@ -19,4 +19,4 @@ Bomb Rush Cyberfunk:
       option_result: Player{player}
       options:
         null:
-          name: BombRush{player}
+          name: BombRush-{player}

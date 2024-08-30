@@ -13,4 +13,4 @@ MegaMan Battle Network 3:
       option_result: Player{player}
       options:
         null:
-          name: MMBN3_{player}
+          name: MMBN3-{player}

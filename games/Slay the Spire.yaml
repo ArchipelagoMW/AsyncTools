@@ -26,4 +26,4 @@ Slay the Spire:
       option_result: Player{player}
       options:
         null:
-          name: StS{player}
+          name: StS-{player}

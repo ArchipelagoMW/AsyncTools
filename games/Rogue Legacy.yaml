@@ -133,4 +133,4 @@ Rogue Legacy:
     option_result: Player{player}
     options:
       null:
-        name: RL{player}
+        name: RogueLegacy-{player}

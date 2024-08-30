@@ -46,5 +46,5 @@ Kirby's Dream Land 3:
       option_result: Player{player}
       options:
         null:
-          name: KDL3_{player}
+          name: KDL3-{player}
 

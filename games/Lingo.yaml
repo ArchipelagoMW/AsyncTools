@@ -80,5 +80,5 @@ Lingo:
       option_result: Player{player}
       options:
         null:
-          name: Lingo{player}
+          name: Lingo-{player}
 

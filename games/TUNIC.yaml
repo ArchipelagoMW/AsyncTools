@@ -56,5 +56,5 @@ TUNIC:
       option_result: Player{player}
       options:
         null:
-          name: TUNIC{player}
+          name: TUNIC-{player}
 

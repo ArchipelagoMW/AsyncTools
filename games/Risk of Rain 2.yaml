@@ -39,4 +39,4 @@ Risk of Rain 2:
       option_result: Player{player}
       options:
         null:
-          name: RoR2_{player}
+          name: RoR2-{player}

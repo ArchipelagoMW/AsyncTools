@@ -74,5 +74,5 @@ Dark Souls III:
       option_result: Player{player}
       options:
         null:
-          name: DS3_{player}
+          name: DS3-{player}
 

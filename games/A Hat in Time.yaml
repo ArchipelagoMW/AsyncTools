@@ -517,4 +517,4 @@ A Hat in Time:
       option_result: Player{player}
       options:
         null:
-          name: HatInTime{player}
+          name: HatInTime-{player}

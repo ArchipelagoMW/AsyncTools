@@ -35,5 +35,5 @@ DOOM 1993:
       option_result: Player{player}
       options:
         null:
-          name: DOOM{player}
+          name: DOOM1993-{player}
 

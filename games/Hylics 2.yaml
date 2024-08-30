@@ -18,4 +18,4 @@
       option_result: Player{player}
       options:
         null:
-          name: Hylics{player}
+          name: Hylics2-{player}

@@ -23,5 +23,5 @@ Shivers:
       option_result: Player{player}
       options:
         null:
-          name: Shivers{player}
+          name: Shivers-{player}
 

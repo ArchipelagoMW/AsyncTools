@@ -107,4 +107,4 @@ Super Metroid:
       option_result: Player{player}
       options:
         null:
-          name: SM{player}
+          name: SM-{player}

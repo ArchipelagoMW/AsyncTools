@@ -39,5 +39,5 @@ Donkey Kong Country 3:
       option_result: Player{player}
       options:
         null:
-          name: DKC3_{player}
+          name: DKC3-{player}
 

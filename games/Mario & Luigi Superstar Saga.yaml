@@ -167,7 +167,7 @@ Mario & Luigi Superstar Saga:
       option_result: Player{player}
       options:
         null:
-          name: MLSS{player}
+          name: MLSS-{player}
 
 
 

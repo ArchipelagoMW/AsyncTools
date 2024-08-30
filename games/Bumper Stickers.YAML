@@ -25,5 +25,5 @@ Bumper Stickers:
       option_result: Player{player}
       options:
         null:
-          name: BumpStick{player}
+          name: BumpStick-{player}
 

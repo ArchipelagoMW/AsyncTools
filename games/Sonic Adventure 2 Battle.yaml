@@ -96,5 +96,5 @@ Sonic Adventure 2 Battle:
       option_result: Player{player}
       options:
         null:
-          name: SA2B{player}
+          name: SA2B-{player}
 

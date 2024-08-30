@@ -80,4 +80,4 @@ Castlevania 64:
       option_result: Player{player}
       options:
         null:
-          name: CV64_{player}
+          name: CV64-{player}

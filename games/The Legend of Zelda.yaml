@@ -17,5 +17,5 @@ The Legend of Zelda:
       option_result: Player{player}
       options:
         null:
-          name: TLoZ{player}
+          name: TLoZ-{player}
 

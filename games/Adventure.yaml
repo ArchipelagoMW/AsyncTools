@@ -27,4 +27,4 @@ Adventure:
       option_result: Player{player}
       options:
         null:
-          name: Adventure{player}
+          name: Adventure-{player}

@@ -20,5 +20,5 @@ Meritous:
       option_result: Player{player}
       options:
         null:
-          name: Meritous{player}
+          name: Meritous-{player}
 

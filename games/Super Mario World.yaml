@@ -93,5 +93,5 @@ Super Mario World:
       option_result: Player{player}
       options:
         null:
-          name: SMW{player}
+          name: SMW-{player}
 

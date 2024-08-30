@@ -76,5 +76,5 @@ Kingdom Hearts 2:
       option_result: Player{player}
       options:
         null:
-          name: KH2_{player}
+          name: KH2-{player}
 

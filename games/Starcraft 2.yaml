@@ -279,5 +279,5 @@ Starcraft 2:
       option_result: Player{player}
       options:
         null:
-          name: SC2_{player}
+          name: SC2-{player}
 

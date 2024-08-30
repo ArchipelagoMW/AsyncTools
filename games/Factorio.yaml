@@ -152,5 +152,5 @@ Factorio:
       option_result: Player{player}
       options:
         null:
-          name: Factorio{player}
+          name: Factorio-{player}
 
