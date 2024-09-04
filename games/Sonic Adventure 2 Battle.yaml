@@ -2,6 +2,8 @@ Sonic Adventure 2 Battle:
   goal:
     biolizard: 3
     cannons_core_boss_rush: 1
+    boss_rush_chaos_emerald_hunt: 1
+    finalhazard_chaos_emerald_hunt: 1
   mission_shuffle: true
   boss_rush_shuffle:
     vanilla: 2
@@ -37,15 +39,32 @@ Sonic Adventure 2 Battle:
   level_gate_costs:
     medium: 1
     high: 2
-  chao_garden_difficulty:
+  chao_race_difficulty:
     none: 5
     beginner: 3
     intermediate: 1
     expert: 1
-  include_chao_karate:
-    false: 2
-    true: 1 
-  chao_race_checks: all
+  chao_karate_difficulty:
+    none: 5
+    beginner: 3
+    intermediate: 1
+    expert: 1
+  chao_stadium_checks: all
+  black_market_slots:
+    0: 3
+    random-low: 1
+    random-high: 1
+    64: 2
+  black_market_unlock_costs:
+    low: 3
+    medium: 2
+    high: 1
+  black_market_price_multiplier:
+    0: 1
+    1: 3
+    2: 1
+    3: 1
+    4: 1
   junk_fill_percentage: random-low
   trap_fill_percentage: random-low
   omochao_trap_weight: random
@@ -90,3 +109,4 @@ Sonic Adventure 2 Battle:
   cannons_core_mission_3: false
   cannons_core_mission_4: false
   cannons_core_mission_5: false
+  local_items: Chaos Emeralds
