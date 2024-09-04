@@ -188,3 +188,9 @@ Pokemon Red and Blue:
           hm_same_type_compatibility: vanilla
           hm_normal_type_compatibility: vanilla
           hm_other_type_compatibility: vanilla
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: PokeRedBlue-{player}

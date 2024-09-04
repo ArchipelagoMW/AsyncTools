@@ -7,3 +7,11 @@ Raft:
   progressive_items: true
   big_island_early_crafting: false
   paddleboard_mode: false
+  triggers:
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: Raft-{player}
+

@@ -30,3 +30,10 @@ DOOM 1993:
           episode2:
             true: 50
             false: 50
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: DOOM1993-{player}
+

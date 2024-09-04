@@ -511,3 +511,10 @@ A Hat in Time:
             'false': 10
             'true': 10
             time_stop_last: 80
+    
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: HatInTime-{player}

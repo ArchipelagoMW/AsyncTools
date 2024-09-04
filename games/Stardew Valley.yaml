@@ -133,7 +133,7 @@ Stardew Valley:
   gifting: 'true'
   mods: []
   death_link: 'false'
-triggers: #Added triggers to complement the goal (eg. add museumsanity to a museum goal)
+  triggers: #Added triggers to complement the goal (eg. add museumsanity to a museum goal)
     - option_category: Stardew Valley
       option_name: goal
       option_result: community_center
@@ -222,3 +222,9 @@ triggers: #Added triggers to complement the goal (eg. add museumsanity to a muse
             exclude_legendaries: 20
             exclude_hard_fish: 50
             only_easy_fish: 20
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: Stardew-{player}

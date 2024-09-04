@@ -180,3 +180,9 @@ Hollow Knight:
         DarkRooms: 'false'
         ComplexSkips: 'false'
         DifficultSkips: 'false'
+  - option_category: null
+    option_name: name
+    option_result: Player{player}
+    options:
+      null:
+        name: HK-{player}

@@ -98,3 +98,11 @@ Ocarina of Time:
   correct_chest_appearances: both
   correct_potcrate_appearances: textures_content
   hint_dist: async
+  
+  triggers:
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: OOT-{player}

@@ -120,3 +120,9 @@ A Link to the Past:
     options:
       A Link to the Past:
         killable_thieves: on
+  - option_category: null
+    option_name: name
+    option_result: Player{player}
+    options:
+      null:
+        name: LttP-{player}
