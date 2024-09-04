@@ -56,6 +56,8 @@ Blasphemous:
   mask_location:
     anywhere: 3
     local: 1
+  local_items: [wounds]
+  exclude_locations: ["Skill 1, Tier 3", "Skill 5, Tier 3"] #locations apparently bugged in 0.5.0 and can accidentally self-lock local progression, can remove in 0.5.1
   
   triggers:
     - option_category: Blasphemous
@@ -92,10 +94,7 @@ Blasphemous:
       option_result: local
       options:
         Blasphemous:
-          local_items:
-          - Embossed Mask of Crescente
-          - Mirrored Mask of Dolphos
-          - Deformed Mask of Orestes
+          +local_items: [masks]
     - option_category: null
       option_name: name
       option_result: Player{player}
