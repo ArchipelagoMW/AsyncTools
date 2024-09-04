@@ -47,7 +47,7 @@ Sonic Adventure 2 Battle:
   chao_karate_difficulty:
     none: 5
     beginner: 3
-    intermediate: 1
+    standard: 1
     expert: 1
   chao_stadium_checks: all
   black_market_slots:
