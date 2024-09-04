@@ -83,9 +83,11 @@ Stardew Valley:
     progressive_goals: 5
     split_goals: 5
   shipsanity:
-    none: 80
+    none: 60
     crops: 15
+    fish: 15
     full_shipment: 5
+    full_shipment_with_fish: 5
   cooksanity:
     none: 70
     queen_of_sauce: 20
@@ -131,3 +133,92 @@ Stardew Valley:
   gifting: 'true'
   mods: []
   death_link: 'false'
+triggers: #Added triggers to complement the goal (eg. add museumsanity to a museum goal)
+    - option_category: Stardew Valley
+      option_name: goal
+      option_result: community_center
+      options:
+        Stardew Valley:
+          bundle_price: #Move minimal odds to very_expensive odds
+            very_cheap: 15
+            cheap: 50
+            normal: 25
+            expensive: 5
+            very_expensive: 5
+    - option_category: Stardew Valley
+      option_name: goal
+      option_result: master_angler #catch all fishsanity fish
+      options:
+        Stardew Valley:
+          fishsanity: #Move none odds to all, and only_easy_fish split between all and exclude_legendaries
+            all: 20
+            exclude_legendaries: 30
+            exclude_hard_fish: 50
+    - option_category: Stardew Valley
+      option_name: goal
+      option_result: complete_collection #finish museum
+      options:
+        Stardew Valley:
+          museumsanity: #remove none odds
+            milestones: 75
+            all: 25
+    - option_category: Stardew Valley
+      option_name: goal
+      option_result: full_shipment # ship all items, follows shipsanity
+      options:
+        Stardew Valley:
+          shipsanity: #Remove none odds and rolled into into the other options
+            crops: 35
+            fish: 35
+            full_shipment: 15
+            full_shipment_with_fish: 15
+    - option_category: Stardew Valley
+      option_name: goal
+      option_result: gourmet_chef # cook every recipe, follows cooksanity
+      options:
+        Stardew Valley:
+          cooksanity: #Remove none odds
+            queen_of_sauce: 70
+            all: 30
+          chefsanity: #Increase the odds shuffling recipes to add
+            none: 30
+            all: 30
+            random: 40
+    - option_category: Stardew Valley
+      option_name: goal
+      option_result: craft_master #craft every item
+      options:
+        Stardew Valley:
+          craftsanity: #Remove none odds
+            all: 100
+    - option_category: Stardew Valley
+      option_name: goal
+      option_result: protector_of_the_valley # complete monsterslayer goals, follows monstersanity
+      options: 
+        Stardew Valley: #Remove one_per_category odds, and bumped everything else by +5
+          monstersanity:
+            one_per_monster: 30
+            very_short_goals: 25
+            short_goals: 25
+            progressive_goals: 10
+            split_goals: 10
+    - option_category: Stardew Valley
+      option_name: goal
+      option_result: mystery_of_the_stardrops #find every stardrop
+      options:
+        Stardew Valley:
+          museumsanity: #Remove none odds
+            milestones: 75
+            all: 25
+          festival_locations: #Remove disable odds
+            easy: 50
+            hard: 50
+          friendsanity: #Remove none odds
+            bachelors: 40
+            starting_npcs: 40
+            all: 20
+          fishsanity: #Replaced none with all
+            all: 10
+            exclude_legendaries: 20
+            exclude_hard_fish: 50
+            only_easy_fish: 20
