@@ -1,6 +1,6 @@
 Ocarina of Time:
 
-  # Changes to shuffle_dungeon_entrances, shuffle_song_items, shuffle_smallkeys are off-limits, due to them being slow
+  # Changes to all shuffle_dungeon_entrances, shuffle_song_items, shuffle_smallkeys are off-limits, due to them being slow
 
   exclude_locations:
     - GF HBA 1000 Points
@@ -57,7 +57,9 @@ Ocarina of Time:
   spawn_positions:
     on: 1
     off: 3
-  shuffle_dungeon_entrances: off
+  shuffle_dungeon_entrances: 
+    simple: 1
+    false: 3
   shuffle_bosses:
     limited: 1
     off: 3
