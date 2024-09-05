@@ -20,3 +20,11 @@ Subnautica:
     easy: 5
     normal: 4
     items_easy: 5
+  triggers:
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: Subnautica-{player}
+

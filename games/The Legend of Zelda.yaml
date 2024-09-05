@@ -11,3 +11,11 @@ The Legend of Zelda:
     safe: 70
     unsafe: 20
     dangerous: 10
+  triggers:
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: TLoZ-{player}
+

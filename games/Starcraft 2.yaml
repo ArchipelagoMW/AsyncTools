@@ -274,3 +274,10 @@ Starcraft 2:
       options:
         Starcraft 2:
           max_number_of_upgrades: -1
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: SC2-{player}
+

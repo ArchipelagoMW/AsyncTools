@@ -74,3 +74,9 @@ The Witness:
           obelisk_keys:
             false: 30
             true: 70
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: Witness-{player}

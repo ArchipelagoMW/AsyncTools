@@ -6,3 +6,11 @@ MegaMan Battle Network 3:
   trade_quest_hinting:
     partial: 1
     full: 2
+
+  triggers:
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: MMBN3-{player}

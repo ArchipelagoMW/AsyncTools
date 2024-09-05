@@ -11,4 +11,11 @@ Minecraft:
     ender_dragon: 25
     wither: 25
     both: 10
-    
+  triggers:
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: Minecraft-{player}
+

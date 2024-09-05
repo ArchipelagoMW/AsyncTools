@@ -33,3 +33,10 @@ Undertale:
   rando_item_button:
     false: 50
     true: 30
+  triggers:
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: Undertale-{player}

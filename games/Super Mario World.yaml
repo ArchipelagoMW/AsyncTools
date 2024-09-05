@@ -41,7 +41,6 @@ Super Mario World:
     full: 2
     singularity: 1
   swap_donut_gh_exits: true
-  display_received_item_popups: progression
   junk_fill_percentage: 0
   trap_fill_percentage: random-low
   stun_trap_weight: none
@@ -89,3 +88,10 @@ Super Mario World:
           stun_trap_weight: random
           thwimp_trap_weight: random
           literature_trap_weight: random
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: SMW-{player}
+
