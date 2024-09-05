@@ -325,3 +325,11 @@ Ocarina of Time:
             - gerudo training ground mq left side silver rupees without hookshot
             - ganon's castle without lens of truth
             - ganon's castle mq without lens of truth
+
+  # Per game name
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: OOT-{player}
