@@ -26,14 +26,14 @@ Timespinner:
     true: 80
     false: 20
   UnchainedKeys:
-    true: 67
-    false: 33
+    true: 75
+    false: 25
   EnterSandman:
     false: 75
     true: 25
   DadPercent:
-    false: 80
-    true: 20
+    false: 85
+    true: 15
   RisingTides:
     false: 50
     true: 50
@@ -57,15 +57,15 @@ Timespinner:
   TrapChance: 0
     
   triggers:
-    # swap Cantoran odds on an inverted start - it's an endgame boss location that can be as early as sphere 1 if inverted and quick seed are both true
+    # greatly reduce Cantoran odds on an inverted start - it's an endgame boss location that can be as early as sphere 1 if inverted and quick seed are both true
     - option_category: Timespinner
       option_name: Inverted
       option_result: true
       options:
         Timespinner:
           Cantoran:
-            true: 25
-            false: 75
+            true: 15
+            false: 85
     - option_category: null
       option_name: name
       option_result: Player{player}
