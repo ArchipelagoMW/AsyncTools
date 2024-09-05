@@ -40,6 +40,7 @@ Yoshi's Island:
   traps_enabled: 'false'
   trap_percent: 10
   death_link: 'false'
+  local_items: ["Piece of Luigi"]
   triggers:
     - option_category: null
       option_name: name
