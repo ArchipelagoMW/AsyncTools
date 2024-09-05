@@ -110,3 +110,11 @@ Sonic Adventure 2 Battle:
   cannons_core_mission_4: false
   cannons_core_mission_5: false
   local_items: Chaos Emeralds
+  triggers:
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: SA2B-{player}
+

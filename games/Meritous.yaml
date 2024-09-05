@@ -14,3 +14,11 @@ Meritous:
     heavily_reduced: 10
   start_inventory:
     Reflect Shield upgrade: 1
+  triggers:
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: Meritous-{player}
+

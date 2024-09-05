@@ -51,3 +51,12 @@
   skip_first_vision: false
 
   local_items: ["Energy form"]
+  
+  triggers:
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: Aquaria-{player}
+

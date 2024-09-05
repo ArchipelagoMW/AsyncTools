@@ -59,3 +59,10 @@ Noita:
             - Orb
           exclude_locations:
             - "Kolmisilm\u00e4"
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: Noita-{player}
+

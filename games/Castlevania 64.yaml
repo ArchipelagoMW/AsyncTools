@@ -74,3 +74,10 @@ Castlevania 64:
   death_link:
     off: 99
     explosive: 1
+  triggers:
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: CV64-{player}

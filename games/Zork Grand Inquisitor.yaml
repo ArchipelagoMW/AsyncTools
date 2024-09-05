@@ -11,3 +11,10 @@ Zork Grand Inquisitor:
     true: 1
   grant_missable_location_checks:
     true: 100
+  triggers:
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: Zork-{player}

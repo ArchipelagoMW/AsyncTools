@@ -9,3 +9,11 @@ Terraria:
     exclude_fishing: 2
   fill_extra_checks_with: useful_items
   death_link: 'false'
+  triggers:
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: Terraria-{player}
+

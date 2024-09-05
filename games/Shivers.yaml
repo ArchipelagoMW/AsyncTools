@@ -17,3 +17,11 @@ Shivers:
   early_lightning:
     'true': 75
     'false': 25
+  triggers:
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: Shivers-{player}
+
