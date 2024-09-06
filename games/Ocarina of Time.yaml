@@ -61,9 +61,6 @@ Ocarina of Time:
   shuffle_bosses:
     limited: 1
     off: 3
-  entrances:
-    true: 1
-    false: 4
 
   # Locations
   shuffle_song_items: any
