@@ -57,9 +57,7 @@ Ocarina of Time:
   spawn_positions:
     on: 1
     off: 3
-  shuffle_dungeon_entrances: 
-    simple: 1
-    false: 3
+  shuffle_dungeon_entrances: false
   shuffle_bosses:
     limited: 1
     off: 3
@@ -148,22 +146,6 @@ Ocarina of Time:
             - Kak 30 Gold Skulltula Reward
             - Kak 40 Gold Skulltula Reward
             - Kak 50 Gold Skulltula Reward
-
-  # Groups ER together
-    - option_category: Ocarina of Time
-      option_name: entrances
-      option_result: true
-      options:
-        Ocarina of Time:
-          shuffle_grotto_entrances:
-            true: 9
-            false: 1
-          shuffle_overworld_entrances:
-            true: 9
-            false: 1
-          shuffle_interior_entrances:
-            simple: 9
-            off: 1
 
   # Groups various shuffles together
     - option_category: Ocarina of Time
