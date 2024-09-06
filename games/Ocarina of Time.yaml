@@ -69,8 +69,8 @@ Ocarina of Time:
     random_number: 2
   shopsanity_prices: affordable
   tokensanity:
-    off: 2
-    dungeons: 1
+    off: 3
+    dungeons: 2
     all: 1
   shuffle_scrubs:
     off: 4
@@ -82,14 +82,15 @@ Ocarina of Time:
     off: 1
     on: 1
   shuffle_child_trade:
-    vanilla: 1
-    shuffle: 4
+    vanilla: 2
+    shuffle: 3
+    skip_child_zelda: 1
 
   # If pot shuffle turns out to go badly, remove this
   pots_crates_freestanding:
     off: 7
-    dungeons: 0
-    all: 3
+    dungeons: 2
+    all: 1
 
   # Dungeon items
   shuffle_mapcompass: startwith
@@ -145,6 +146,21 @@ Ocarina of Time:
             - Kak 50 Gold Skulltula Reward
 
   # Groups various shuffles together
+    - option_category: Ocarina of Time
+      option_name: pots_crates_freestanding
+      option_result: dungeons
+      options:
+        Ocarina of Time:
+          shuffle_pots:
+            dungeons: 9
+            off: 1
+          shuffle_crates:
+            dungeons: 9
+            off: 1
+          shuffle_freestanding_items:
+            dungeons: 9
+            off: 1
+            
     - option_category: Ocarina of Time
       option_name: pots_crates_freestanding
       option_result: all
