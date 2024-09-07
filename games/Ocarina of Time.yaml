@@ -11,7 +11,7 @@ Ocarina of Time:
     - Ice Trap
 
   logic_rules: glitchless
-  logic_no_night_tokens_without_suns_song: off
+  logic_no_night_tokens_without_suns_song: true
 
   # World state
   open_forest:
@@ -114,7 +114,7 @@ Ocarina of Time:
   # Extra options
   chicken_count: 1
   correct_chest_appearances: both
-  correct_potcrate_appearances: textures_content
+  correct_potcrate_appearances: textures_unchecked
   hint_dist: async
   free_scarecrow: true
   fast_bunny_hood: true
