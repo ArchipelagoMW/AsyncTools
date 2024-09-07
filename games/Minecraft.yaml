@@ -1,7 +1,12 @@
 Minecraft:
   advancement_goal: random-range-30-80
-  combat_difficulty: normal
-  include_hard_advancements: on
+  combat_difficulty:
+    easy: 10
+    normal: 20
+    hard: 5
+  include_hard_advancements:
+    on: 5
+    off: 2
   include_unreasonable_advancements: off
   include_postgame_advancements: off
   shuffle_structures: on
@@ -11,6 +16,9 @@ Minecraft:
     ender_dragon: 25
     wither: 25
     both: 10
+  exclude_locations:
+    - Two by Two
+    - Monsters Hunted
   triggers:
     - option_category: null
       option_name: name
