@@ -20,7 +20,7 @@ TUNIC:
   hexagon_quest:
     'true': 50
     'false': 50
-  hexagon_goal: random-middle
+  hexagon_goal: random-range-middle-15-50
   extra_hexagon_percentage: random-range-low-10-100
   lanternless: 'false'
   maskless: 'false'
@@ -28,10 +28,7 @@ TUNIC:
     anywhere: 50
     10_fairies: 50
   local_items:
-    - Red Questagon
-    - Blue Questagon
-    - Green Questagon
-    - Gold Questagon
+    - Questagons
 
   triggers:
     - option_category: TUNIC
