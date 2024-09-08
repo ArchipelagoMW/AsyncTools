@@ -3,17 +3,17 @@ Starcraft 2:
     false: 75
     true: 25 # Enable only for filler-only asyncs
   game_format:
-    multi_campaign: 30
-    all_terran: 15
-    all_protoss: 15
+    multi_campaign: 55
+    all_terran: 10
+    all_protoss: 5
     wol: 10
-    hots: 20
+    hots: 10
     lotv: 10
   mission_order:
-    vanilla: 10
-    vanilla_shuffled: 30
-    grid: 30
-    mini_campaign: 30
+    vanilla: 5
+    vanilla_shuffled: 40
+    grid: 40
+    mini_campaign: 15
   game_difficulty:
     casual: 25
     normal: 35
@@ -101,8 +101,8 @@ Starcraft 2:
           enable_nco_missions: true
           enable_epilogue_missions: true
           maximum_campaign_size:
-            83: 75
-            40: 25
+            83: 85
+            40: 15
           spear_of_adun_presence:
             protoss: 50
             everywhere: 50
@@ -121,8 +121,8 @@ Starcraft 2:
           enable_wol_missions: true
           enable_nco_missions: true
           maximum_campaign_size:
-            34: 75
-            17: 25
+            34: 85
+            17: 15
     - option_category: Starcraft 2
       option_name: game_format
       option_result: all_protoss
@@ -136,8 +136,8 @@ Starcraft 2:
           spear_of_adun_present_in_no_build: random
           spear_of_adun_autonomously_cast_present_in_no_build: random
           maximum_campaign_size:
-            26: 75
-            16: 25
+            26: 85
+            16: 15
     - option_category: Starcraft 2
       option_name: game_format
       option_result: wol
@@ -145,8 +145,8 @@ Starcraft 2:
         Starcraft 2:
           enable_wol_missions: true
           maximum_campaign_size:
-            25: 75
-            16: 25
+            25: 85
+            16: 15
     - option_category: Starcraft 2
       option_name: game_format
       option_result: hots
@@ -154,8 +154,8 @@ Starcraft 2:
         Starcraft 2:
           enable_hots_missions: true
           maximum_campaign_size:
-            20: 75
-            12: 25
+            20: 85
+            12: 15
           shuffle_no_build: true
           kerrigan_presence: vanilla
     - option_category: Starcraft 2
@@ -165,8 +165,8 @@ Starcraft 2:
         Starcraft 2:
           enable_lotv_missions: true
           maximum_campaign_size:
-            19: 75
-            12: 25
+            19: 85
+            12: 15
           grid_two_start_positions: false # Possibly not enough starters
           shuffle_no_build: true
           spear_of_adun_present_in_no_build: random
