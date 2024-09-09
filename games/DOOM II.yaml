@@ -3,6 +3,7 @@ DOOM II:
     baby: 2
     easy: 5
     medium: 3
+    hard: 1
   random_monsters:
     vanilla: 2
     shuffle: 5
@@ -26,4 +27,3 @@ DOOM II:
       options:
         null:
           name: DOOMII-{player}
-
