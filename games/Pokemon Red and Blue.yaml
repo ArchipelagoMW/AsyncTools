@@ -12,7 +12,7 @@ Pokemon Red and Blue:
     on: 50
     off: 40
     exclude: 10
-  require_item_finder: # Require Item Finder to pick up hidden items. ?
+  require_item_finder: # Require Item Finder to pick up hidden items.
     false: 50
     true: 50
 
@@ -34,6 +34,7 @@ Pokemon Red and Blue:
     6: 25
     7: 50
     8: 25
+  elite_four_pokedex_condition: 0
   victory_road_condition: random-range-high-4-7
   route_22_gate_condition: random-range-3-7
   viridian_gym_condition: random-range-high-3-7
@@ -190,6 +191,19 @@ Pokemon Red and Blue:
             full: 10
           minimum_steps_between_encounters: 3
           safari_zone_normal_battles: true
+          elite_four:
+            badges: 20
+            dex: 50
+    - option_category: Pokemon Red and Blue
+      option_name: elite_four
+      option_result: dex
+      options:
+        Pokemon Red and Blue:
+          elite_four_badges_condition: 0
+          elite_four_pokedex_condition:
+            70: 20
+            80: 20
+            90: 10
     - option_category: Pokemon Red and Blue
       option_name: sanities
       option_result: both
