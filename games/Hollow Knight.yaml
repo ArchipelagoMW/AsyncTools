@@ -161,10 +161,8 @@ Hollow Knight:
         EnemyPogos: 'true'
         ObscureSkips: 'false'
         ShadeSkips: 'false'
-        InfectionSkips: 'true'
-        FireballSkips: 
-          true: 1
-          false: 2
+        InfectionSkips: 'random'
+        FireballSkips: 'false'
         SpikeTunnels: 'false'
         AcidSkips: 'false'
         DamageBoosts: 'false'
@@ -186,18 +184,24 @@ Hollow Knight:
           false: 1
         BackgroundObjectPogos: 'true'
         EnemyPogos: 'true'
-        ObscureSkips: 'true'
-        ShadeSkips: 'true'
+        ObscureSkips:
+            true: 3
+            false: 1
+        ShadeSkips:
+            true: 3
+            false: 2   
         InfectionSkips: 'true'
         FireballSkips: 'true'
         SpikeTunnels: 'false'
-        AcidSkips: 'true'
-        DamageBoosts: 'true'
+        AcidSkips:
+            true: 1
+            false: 2
+        DamageBoosts:
+            true: 1
+            false: 4        
         DangerousSkips: 'false'
         DarkRooms: 'false'
-        ComplexSkips: 
-          true: 1
-          false: 3
+        ComplexSkips: 'false'
         DifficultSkips: 
           true: 1
           false: 3
