@@ -202,9 +202,7 @@ Hollow Knight:
         DangerousSkips: 'false'
         DarkRooms: 'false'
         ComplexSkips: 'false'
-        DifficultSkips: 
-          true: 1
-          false: 3
+        DifficultSkips: 'false'
   - option_category: null
     option_name: name
     option_result: Player{player}
