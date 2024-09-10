@@ -1,53 +1,79 @@
 Pokemon Red and Blue:
-  elite_four_badges_condition: random-high
+
+  #Major sanities
+  sanities: #for triggers
+    none: 20
+    trainer: 45
+    dex: 15
+    both: 20
+  dexsanity: disabled
+  trainersanity: false
+  randomize_hidden_items: # Randomize hidden items. If you choose exclude, they will be randomized but will be guaranteed junk items.
+    on: 50
+    off: 40
+    exclude: 10
+  require_item_finder: # Require Item Finder to pick up hidden items.
+    false: 50
+    true: 50
+
+  #Minor sanities
+  exp_all: start_with
+  badgesanity: # Shuffle gym badges into the general item pool. If turned off, badges will be shuffled across the 8 gyms.
+    false: 50
+    true: 50
+  randomize_pokedex: start_with
+  prizesanity:
+    true: 1
+    false: 1
+  stonesanity:
+    false: 25
+    true: 50
+
+  #Blockers
+  elite_four_badges_condition:
+    6: 25
+    7: 50
+    8: 25
+  elite_four_pokedex_condition: 0
   victory_road_condition: random-range-high-4-7
   route_22_gate_condition: random-range-3-7
   viridian_gym_condition: random-range-high-3-7
-  cerulean_cave_badges_condition: random
-  cerulean_cave_key_items_condition: random
+  cerulean_cave_condition: #for triggers
+    none: 10
+    badges: 40
+    key_items: 40
+    both: 10
+  cerulean_cave_badges_condition: 0
+  cerulean_cave_key_items_condition: 0
   route_3_condition:
-    open: 50
+    random: 50
   second_fossil_check_condition: random-high
   fossil_check_item_types: unique_items
-  exp_all: randomize
-  badgesanity: # Shuffle gym badges into the general item pool. If turned off, badges will be shuffled across the 8 gyms.
-    false: 50
-    true: 25
   old_man: # With Open Viridian City, the Old Man will let you through without needing to turn in Oak's Parcel.
     vanilla: 0
     early_parcel: 50
     open_viridian_city: 50
-  randomize_pokedex: start_with
   tea:
     false: 50
     true: 50
   extra_key_items:
     false: 50
-    true: 50
+    true: 100
   split_card_key:
     off: 50
     on: 25
     progressive: 25
   all_elevators_locked:
     false: 50
-    true: 25
-  extra_strength_boulders: false
-  require_item_finder: # Require Item Finder to pick up hidden items.
-    false: 50
-    true: 50
-  randomize_hidden_items: # Randomize hidden items. If you choose exclude, they will be randomized but will be guaranteed junk items.
-    on: 50
-    off: 50
-    exclude: 50
-  prizesanity:
-    true: 1
-    false: 1
-  all_pokemon_seen:
-    true: 1
-    false: 1
-  trainersanity:
-    true: 1
-    false: 3
+    true: 0
+  extra_strength_boulders: random
+  badges_needed_for_hm_moves:
+    on: 100
+  poke_doll_skip: patched
+  bicycle_gate_skips: patched
+
+  #Other
+  all_pokemon_seen: true
   randomize_rock_tunnel:
     true: 0
     false: 1
@@ -58,52 +84,44 @@ Pokemon Red and Blue:
     true: 3
     false: 1
   confine_transform_to_ditto: true
-  dexsanity:
-    disabled: 50
-    random-low: 25
-    full: 5
-  stonesanity:
-    false: 25
-    true: 50
   door_shuffle:
     off: 100
   warp_tile_shuffle:
-    vanilla: 50
+    vanilla: 200
     shuffle: 50
     mixed: 50
-  badges_needed_for_hm_moves:
-    on: 50
-    off: 25
-    extra: 25
-    extra_plus: 25
   free_fly_location: true
-  town_map_fly_location:
-    false: 20
-    true: 50
+  town_map_fly_location: true
   oaks_aide_rt_2: random-range-1-10
   oaks_aide_rt_11: random-range-1-20
   oaks_aide_rt_15: random-range-1-30
-  blind_trainers: random-low
-  minimum_steps_between_encounters: 3
-  exp_modifier: random-range-low-16-32
+  blind_trainers: 90
+  minimum_steps_between_encounters: 12
+  exp_modifier: 32
+  lose_money_on_blackout: false
+  better_shops: true
+  fix_combat_bugs: true
+  level_scaling: auto
+
+  #Pokemon, Trainer and TM randomization
   randomize_wild_pokemon:
     vanilla: 50
     match_types: 25
     match_base_stats: 50
     match_types_and_base_stats: 25
-    completely_random: 5
+    completely_random: 50
   randomize_starter_pokemon: # Randomize the starter Pokemon choices.
     vanilla: 50
     match_types: 25
     match_base_stats: 50
     match_types_and_base_stats: 25
-    completely_random: 5
+    completely_random: 50
   randomize_static_pokemon:
     vanilla: 50
     match_types: 25
     match_base_stats: 50
     match_types_and_base_stats: 25
-    completely_random: 5
+    completely_random: 50
   randomize_legendary_pokemon:
     vanilla: 50
     shuffle: 50
@@ -112,19 +130,19 @@ Pokemon Red and Blue:
   catch_em_all: all_pokemon
   randomize_pokemon_stats:
     vanilla: 50
-    shuffle: 50
-    randomize: 50
+    shuffle: 10
+    randomize: 10
   randomize_trainer_parties: # Randomize enemy Pokemon encountered in trainer battles.
     vanilla: 50
     match_types: 25
     match_base_stats: 50
     match_types_and_base_stats: 25
-    completely_random: 5
+    completely_random: 50
   trainer_legendaries: # Allow legendary Pokemon in randomized trainer parties.
     false: 50
     true: 25
   randomize_pokemon_movesets: # Randomize the moves learned by Pokemon. prefer_types will prefer moves that match the type of the Pokemon.
-    vanilla: 0
+    vanilla: 15
     prefer_types: 50
     completely_random: 15
   tm_same_type_compatibility: 90
@@ -136,8 +154,8 @@ Pokemon Red and Blue:
   vanilla_tms_hms: false
   randomize_pokemon_types:
     vanilla: 50
-    follow_evolutions: 50
-    randomize: 5
+    follow_evolutions: 10
+    randomize: 0
   secondary_type_chance: 
     random: 50
     vanilla: 50
@@ -146,16 +164,82 @@ Pokemon Red and Blue:
     true: 25
   normalize_encounter_chances: # Each wild encounter table has 10 slots for Pokemon. Normally the chance for each being chosen ranges from
     #    19.9% to 1.2%. Turn this on to normalize them all to 10% each.
-    false: 15
     true: 50
   reusable_tms: true
-  lose_money_on_blackout: false
-  better_shops: true
-  fix_combat_bugs: true
-  poke_doll_skip: patched
-  bicycle_gate_skips: patched
-  level_scaling: auto
+  same_type_attack_bonus: 'true'
+
+  #Triggers
   triggers:
+    - option_category: Pokemon Red and Blue
+      option_name: sanities
+      option_result: trainer
+      options:
+        Pokemon Red and Blue:
+          trainersanity: true
+          dexsanity: disabled
+          blind_trainers: 0
+          exp_modifier: 
+            16: 50
+            32: 25
+    - option_category: Pokemon Red and Blue
+      option_name: sanities
+      option_result: dex
+      options:
+        Pokemon Red and Blue:
+          trainersanity: false
+          dexsanity:
+            full: 10
+          minimum_steps_between_encounters: 3
+          safari_zone_normal_battles: true
+          elite_four:
+            badges: 20
+            dex: 50
+    - option_category: Pokemon Red and Blue
+      option_name: elite_four
+      option_result: dex
+      options:
+        Pokemon Red and Blue:
+          elite_four_badges_condition: 0
+          elite_four_pokedex_condition:
+            70: 20
+            80: 20
+            90: 10
+    - option_category: Pokemon Red and Blue
+      option_name: sanities
+      option_result: both
+      options:
+        Pokemon Red and Blue:
+          trainersanity: true
+          dexsanity: 
+            random-range-30-100: 30
+            full: 10
+          blind_trainers: 0
+          minimum_steps_between_encounters: 3
+          exp_modifier: 
+            16: 50
+            32: 25
+          safari_zone_normal_battles: true
+    - option_category: Pokemon Red and Blue
+      option_name: cerulean_cave_condition
+      option_result: badges
+      options:
+        Pokemon Red and Blue:
+          cerulean_cave_badges_condition: random-range-4-7
+          cerulean_cave_key_items_condition: 0
+    - option_category: Pokemon Red and Blue
+      option_name: cerulean_cave_condition
+      option_result: key_items
+      options:
+        Pokemon Red and Blue:
+          cerulean_cave_badges_condition: 0
+          cerulean_cave_key_items_condition: random-range-50-90
+    - option_category: Pokemon Red and Blue
+      option_name: cerulean_cave_condition
+      option_result: both
+      options:
+        Pokemon Red and Blue:
+          cerulean_cave_badges_condition: random-range-3-7
+          cerulean_cave_key_items_condition: random-range-35-90
     - option_category: Pokemon Red and Blue
       option_name: randomize_pokemon_types
       option_result: vanilla
@@ -168,7 +252,6 @@ Pokemon Red and Blue:
           vanilla_tms_hms:
             false: 1
             true: 1
-          randomize_pokemon_palettes: vanilla
     - option_category: Pokemon Red and Blue
       option_name: randomize_pokemon_movesets
       option_result: completely_random
