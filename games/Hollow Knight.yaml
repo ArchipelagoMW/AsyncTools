@@ -8,17 +8,27 @@ Hollow Knight:
   RandomizeKeys: 'true'
   RandomizeMaskShards: 'true'
   RandomizeVesselFragments: 'true'
-  RandomizeCharmNotches: 'random'
+  RandomizeCharmNotches:
+    true: 4
+    false: 1
   RandomizePaleOre: 'true'
-  RandomizeGeoChests: 'random'
-  RandomizeJunkPitChests: 'false'
+  RandomizeGeoChests: 
+    true: 3
+    false: 1
+  RandomizeJunkPitChests: 
+    true: 1
+    false: 3
   RandomizeRancidEggs: 'true'
   RandomizeRelics: 'true'
-  RandomizeWhisperingRoots: 'random'
+  RandomizeWhisperingRoots: 
+    true: 2
+    false: 1
   RandomizeBossEssence: 'true'
   RandomizeGrubs: 'true'
   RandomizeMimics: 'random'
-  RandomizeMaps: 'random'
+  RandomizeMaps: 
+    true: 3
+    false: 1
   RandomizeStags: 'true'
   RandomizeLifebloodCocoons: 'random'
   RandomizeGrimmkinFlames: 'false'
@@ -32,13 +42,13 @@ Hollow Knight:
   RandomizeBossGeo: 'random'
   RandomizeSoulTotems:
     true: 1
-    false: 5
+    false: 2
   RandomizeLoreTablets:
     true: 1
     false: 5
   RandomizeElevatorPass:
     true: 1
-    false: 4
+    false: 3
   PreciseMovement: 'false'
   ProficientCombat: 'false'
   BackgroundObjectPogos: 'false'
@@ -111,6 +121,7 @@ Hollow Knight:
     - Queen_Fragment
     - Void_Heart
     - Godtuner
+    - Mimics
 
   skips:
     none: 4
@@ -144,13 +155,13 @@ Hollow Knight:
     option_result: easy
     options:
       Hollow Knight:
-        PreciseMovement: 'true'
-        ProficientCombat: 'true'
+        PreciseMovement: 'random'
+        ProficientCombat: 'random'
         BackgroundObjectPogos: 'true'
         EnemyPogos: 'true'
         ObscureSkips: 'false'
         ShadeSkips: 'false'
-        InfectionSkips: 'true'
+        InfectionSkips: 'random'
         FireballSkips: 'false'
         SpikeTunnels: 'false'
         AcidSkips: 'false'
@@ -165,17 +176,29 @@ Hollow Knight:
     option_result: medium
     options:
       Hollow Knight:
-        PreciseMovement: 'true'
-        ProficientCombat: 'true'
+        PreciseMovement: 
+          true: 3
+          false: 1
+        ProficientCombat: 
+          true: 3
+          false: 1
         BackgroundObjectPogos: 'true'
         EnemyPogos: 'true'
-        ObscureSkips: 'true'
-        ShadeSkips: 'true'
+        ObscureSkips:
+            true: 3
+            false: 1
+        ShadeSkips:
+            true: 3
+            false: 2   
         InfectionSkips: 'true'
         FireballSkips: 'true'
         SpikeTunnels: 'false'
-        AcidSkips: 'true'
-        DamageBoosts: 'true'
+        AcidSkips:
+            true: 1
+            false: 2
+        DamageBoosts:
+            true: 1
+            false: 4        
         DangerousSkips: 'false'
         DarkRooms: 'false'
         ComplexSkips: 'false'
