@@ -16,6 +16,9 @@ The Messenger:
   early_meditation:
     true: 80
     false: 40
+  shuffle_portals:
+    true: 35
+    false: 65
   triggers:
     - option_category: null
       option_name: name
@@ -23,3 +26,12 @@ The Messenger:
       options:
         null:
           name: Messenger-{player}
+    - option_category: The Messenger
+      option_name: shuffle_portals
+      option_result: true
+      options:
+        The Messenger:
+          starting_portals:
+            3: 60
+            4: 50
+            5: 30
