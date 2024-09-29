@@ -99,9 +99,9 @@ A Hat in Time:
   # important Act being behind a Purple Time Rift entrances, which typically makes a seed much worse and enables the
   # possibility of nested Time Rift entrances.
   ActRandomizer:
-    'false': 5 # Effectively only chapter and item randomization, not a common choice.
-    light: 60 # light is the default option
-    insanity: 35
+    'false': 8 # Effectively only chapter and item randomization, not a common choice.
+    light: 51 # light is the default option
+    insanity: 41
   # Removes the possibility of being walled for a long time by The Illness Has Spread (when ShuffleAlpineZiplines is
   # enabled) and Rush Hour (when EnableDLC2 is enabled with EndGoal is set to finale).
   FinaleShuffle:
