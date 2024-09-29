@@ -29,7 +29,7 @@ A Hat in Time:
   # starting chapter with ActRandomizer: false.
   # A trigger changes this value when ActRandomizer is set to false.
   # Additional triggers then adjust the StartingChapter option and other options depending on this option's value when
-  # it is set to something other than false.
+  # it is set to something other than null.
   triggerchain_no_act_rando_StartingChapter: null
 
   ### Goal ###
