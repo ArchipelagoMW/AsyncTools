@@ -69,10 +69,11 @@ A Hat in Time:
   NoTicketSkips: 'true'
 
   ### Shuffles ###
+  # The chance of having every shuffle option enabled is about 33.3%.
   # Shuffle zipline unlocks into the item pool. All ziplines are unlocked from the start when disabled.
   ShuffleAlpineZiplines:
-    'false': 40
-    'true': 60
+    'false': 30
+    'true': 70
   # Adds additional checks to Purple Time Rifts and additional junk to the item pool.
   ShuffleStorybookPages:
     'false': 15
