@@ -19,14 +19,10 @@ A Hat in Time:
   # Players are probably going to have either no DLC or both DLC, though the DLC1 content is probably less popular to
   # play compared to the DLC2 content.
   trigger_dlc:
-    no_dlc: 60 # Always Finale Goal
-    dlc1_only: 7 # Always Finale Goal
-    dlc2_only: 8 # Equal chance of Finale Goal or Rush Hour Goal (4/8 each)
-    both_dlc: 25 # 40% (10/25) chance of Finale Goal, 60% (15/25) chance of Rush Hour Goal
-
-  # The effective weights for each goal:
-  #   finale: 81
-  #   rush_hour: 19
+    no_dlc: 40 # Always Finale Goal
+    dlc1_only: 10 # Always Finale Goal
+    dlc2_only: 15 # 20% (3/15) chance of Finale Goal, 80% (12/15) chance of Rush Hour Goal
+    both_dlc: 35 # 34.3% (12/35) chance of Finale Goal, 65.7% (23/35) chance of Rush Hour Goal
 
   ### ActRandomizer: false, StartingChapter trigger control ###
   # Chained trigger to choose StartingChapter with different weights and adjust chapter-specific options for the chosen
@@ -39,8 +35,8 @@ A Hat in Time:
   ### Goal ###
   # Overridden by triggers, but these values match the summed trigger weights for each goal.
   EndGoal:
-    finale: 81
-    rush_hour: 19
+    finale: 65 # 40 have no DLCs enabled, 10 only have DLC1 enabled, 3 only have DLC2 enabled, 12 have both DLCs enabled
+    rush_hour: 35 # 12 only have DLC2 enabled, 23 have both DLCs enabled
 
   ### Logic ###
   # Higher difficulties require additional game knowledge and skill. May be overridden by triggers.
@@ -345,7 +341,7 @@ A Hat in Time:
       options:
         A Hat in Time:
           EndGoal:
-            finale: 60
+            finale: 40
           # There are 40 Time Pieces in the pool.
           HighestChapterCost: 29
           FinalChapterMinCost: 30
@@ -357,7 +353,7 @@ A Hat in Time:
       options:
         A Hat in Time:
           EndGoal:
-            finale: 7
+            finale: 10
           EnableDLC1: 'true'
           # There are 46 Time Pieces in the pool.
           HighestChapterCost: random-range-33-34 # ~33.35
@@ -370,8 +366,8 @@ A Hat in Time:
       options:
         A Hat in Time:
           EndGoal:
-            finale: 4
-            rush_hour: 4
+            finale: 3
+            rush_hour: 12
           EnableDLC2: 'true'
           # There are 50 Time Pieces in the pool.
           HighestChapterCost: random-range-low-36-37 # ~36.25
@@ -384,8 +380,8 @@ A Hat in Time:
       options:
         A Hat in Time:
           EndGoal:
-            finale: 10
-            rush_hour: 15
+            finale: 12
+            rush_hour: 23
           EnableDLC1: 'true'
           EnableDLC2: 'true'
           # There are 56 Time Pieces in the pool.
