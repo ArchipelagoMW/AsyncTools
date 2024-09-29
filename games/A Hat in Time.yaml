@@ -498,8 +498,9 @@ A Hat in Time:
             5: 10
 
     # Re-roll hat order with a greatly increased chance of time_stop_last when CTRLogic is set to logically allow
-    # Scooter Badge + Sprint Hat because there is only a single other check in the game that requires Time Stop Hat, and
-    # only when on LogicDifficulty: normal and EnableDLC2: true.
+    # Scooter Badge + Sprint Hat because there is only a single other check in the game (Pink Paw Station - Behind Fan)
+    # that requires Time Stop Hat, and only when on LogicDifficulty: normal and EnableDLC2: true. Time Stop Hat is also
+    # logically relevant to Alpine Skyline - Mystifying Time Mesa: Zipline, but Sprint Hat can be used instead.
     - option_category: A Hat in Time
       option_name: CTRLogic
       option_result: scooter
