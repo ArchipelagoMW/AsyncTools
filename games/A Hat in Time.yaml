@@ -511,7 +511,62 @@ A Hat in Time:
             'false': 10
             'true': 10
             time_stop_last: 80
-    
+
+    ### Randomized option cleanup ###
+    # If a randomized option has no effect because an option it depends on has been disabled, set it to a non-randomized
+    # value, typically its default.
+    # This aims to make it easier for people reading the spreadsheet to identify which options have been enabled.
+    - option_category: A Hat in Time
+      option_name: EnableDLC1
+      option_result: 'false'
+      options:
+        A Hat in Time:
+          EnableDeathWish: 'false'
+          Tasksanity: 'false'
+          ExcludeTour: 'false'
+    - option_category: A Hat in Time
+      option_name: Tasksanity
+      option_result: 'false'
+      options:
+        A Hat in Time:
+          TasksanityTaskStep: 1
+          TasksanityCheckCount: 18
+    - option_category: A Hat in Time
+      option_name: EnableDeathWish
+      option_result: 'false'
+      options:
+        A Hat in Time:
+          DWShuffle: 'false'
+          # DWShuffleCountMin is set lower than default, but is not randomized, so is not changed here to prevent adding
+          # an extra column to the spreadsheet.
+          DWShuffleCountMax: 25
+          DWExcludeCandles: 'true'
+          DWTimePieceRequirement: 15
+    - option_category: A Hat in Time
+      option_name: EnableDLC2
+      option_result: 'false'
+      options:
+        A Hat in Time:
+          NyakuzaThugMinShopItems: 0
+          # NyakuzaThugMaxShopItems is set higher than default, but is not randomized, so is not changed here to prevent
+          # adding an extra column to the spreadsheet.
+    - option_category: A Hat in Time
+      option_name: HatItems
+      option_result: 'true'
+      options:
+        A Hat in Time:
+          RandomizeHatOrder: 'true'
+          YarnCostMin: 4
+          YarnCostMax: 8
+          YarnAvailable: 50
+          MinExtraYarn: 10
+    - option_category: A Hat in Time
+      option_name: ActRandomizer
+      option_result: 'false'
+      options:
+        A Hat in Time:
+          FinaleShuffle: 'false'
+
     - option_category: null
       option_name: name
       option_result: Player{player}
