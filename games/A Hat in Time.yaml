@@ -169,10 +169,11 @@ A Hat in Time:
   YarnAvailable: random-range-30-50
   MinExtraYarn: random-range-6-10
   # All Yarn options become irrelevant when HatItems is enabled.
-  # Seeds with Hat items are typically more varied in length, either shorter or longer.
+  # Seeds with Hat items are typically more varied in length, either shorter or longer, but can utilise hints more
+  # effectively.
   HatItems:
-    'false': 65
-    'true': 35
+    'false': 60
+    'true': 40
 
   ### DLC1 ###
   EnableDLC1: 'false' # Overridden by triggers.
