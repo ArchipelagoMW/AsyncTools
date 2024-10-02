@@ -536,11 +536,16 @@ A Hat in Time:
       options:
         A Hat in Time:
           DWShuffle: 'false'
+          DWExcludeCandles: 'true'
+          DWTimePieceRequirement: 15
+    - option_category: A Hat in Time
+      option_name: DWShuffle
+      option_result: 'false'
+      options:
+        A Hat in Time:
           # DWShuffleCountMin is set lower than default, but is not randomized, so is not changed here to prevent adding
           # an extra column to the spreadsheet.
           DWShuffleCountMax: 25
-          DWExcludeCandles: 'true'
-          DWTimePieceRequirement: 15
     - option_category: A Hat in Time
       option_name: EnableDLC2
       option_result: 'false'
