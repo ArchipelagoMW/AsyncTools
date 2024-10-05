@@ -209,7 +209,9 @@ A Hat in Time:
     # All non-excluded death wish contracts will be enabled and unlocked like the base game, by collecting Stamps from
     # completing other contracts. This typically results in the player having a lot to do once Death Wish is unlocked.
     'false': 1
-  DWShuffleCountMin: 5
+  DWShuffleCountMin: 10
+  # There are 38 contracts total, after excluding annoying contracts, there are 31. After excluding candles there are
+  # 23. Note that one of the candles is only enabled when DLC2 is enabled.
   DWShuffleCountMax: random-range-low-10-38
   DeathWishOnly: 'false'
   # The bonuses cannot be completing using Peace and Tranquillity and are often considerably more difficult.
