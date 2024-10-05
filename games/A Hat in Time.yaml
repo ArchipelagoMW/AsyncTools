@@ -48,8 +48,10 @@ A Hat in Time:
     moderate: 5
     # Hard starts requiring basic speedrun tech (Sprint Double Jump) and more obscure and technically demanding tricks.
     hard: 1
-  # Re-rolled with a chance of "scooter", by triggers, when LogicDifficulty is set to moderate or higher.
-  CTRLogic: time_stop_only
+  # Re-rolled with an increased chance of "scooter", by triggers, when LogicDifficulty is set to moderate or higher.
+  CTRLogic:
+    time_stop_only: 90
+    scooter: 10
   # Makes the basic melee attack do nothing, being unable to activate Dweller Bells, Faucets etc.
   # Makes the Umbrella item more logic relevant.
   # Also makes the Brewing Hat more logic relevant because it can be used to activate/damage some objects that would
@@ -466,8 +468,8 @@ A Hat in Time:
             'false': 50
             'true': 50
           CTRLogic:
-            time_stop_only: 50
-            scooter: 50
+            time_stop_only: 30
+            scooter: 70
     - option_category: A Hat in Time
       option_name: LogicDifficulty
       option_result: hard
@@ -481,8 +483,7 @@ A Hat in Time:
             'true': 25
             rush_hour: 25
           CTRLogic:
-            time_stop_only: 20
-            scooter: 80
+            scooter: 100
 
     # Disable all more difficult options for asyncs that allow non-filler yamls #
     - option_category: A Hat in Time
