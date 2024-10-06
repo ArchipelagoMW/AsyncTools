@@ -190,7 +190,7 @@ A Hat in Time:
   # Don't want to make `TasksanityTaskStep * TasksanityCheckCount` high because the level gets very long and more
   # difficult.
   # Overridden by triggers when TasksanityTaskStep is 2 or 3 to produce a similar number of total tasks.
-  TasksanityCheckCount: random-range-8-20
+  TasksanityCheckCount: random-range-8-24
   ExcludeTour: 'false' # Overridden by triggers to almost always be 'true' when EndGoal is set to 'finale'.
   # Setting this to a different value than `TasksanityTaskStep * TasksanityCheckCount` can be confusing because either
   # the checks are completed before the level is completed, or the player must re-enter Ship Shape multiple times to get
@@ -434,13 +434,13 @@ A Hat in Time:
       option_result: 2
       options:
         A Hat in Time:
-          TasksanityCheckCount: random-range-4-10 # 8-20 total tasks
+          TasksanityCheckCount: random-range-4-12 # 8-24 total tasks
     - option_category: A Hat in Time
       option_name: TasksanityTaskStep
       option_result: 3
       options:
         A Hat in Time:
-          TasksanityCheckCount: random-range-3-7 # 9-21 total tasks
+          TasksanityCheckCount: random-range-3-8 # 9-24 total tasks
 
     ### Triggers adjusting logic ###
     # Remove the possibility for LogicDifficulty: Hard when Death Wish is enabled.
