@@ -11,11 +11,14 @@ Minecraft:
   include_postgame_advancements: off
   shuffle_structures: on
   structure_compasses: on
+  egg_shards_required: random-range-5-20
+  egg_shards_available: random-range-10-30
   required_bosses: # Bosses which must be defeated to finish the game.
     none: 50
     ender_dragon: 25
     wither: 25
     both: 10
+  local_items: Dragon Egg Shard
   exclude_locations:
     - Two by Two
     - Monsters Hunted
