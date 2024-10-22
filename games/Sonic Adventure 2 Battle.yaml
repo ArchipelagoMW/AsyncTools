@@ -10,11 +10,12 @@ Sonic Adventure 2 Battle:
     shuffled: 1
     chaos: 1
   keysanity:
-    false: 2
-    true: 1
+    false: 1
+    true: 2
   whistlesanity:
-    none: 2
-    pipes: 1
+    none: 8
+    pipes: 3
+    both: 1
   beetlesanity:
     false: 2
     true: 1
@@ -40,15 +41,15 @@ Sonic Adventure 2 Battle:
     medium: 1
     high: 2
   chao_race_difficulty:
-    none: 6
+    none: 10
     beginner: 4
     intermediate: 1
     expert: 1
   chao_stadium_checks: all
   black_market_slots:
-    0: 3
-    random-low: 1
-    random-high: 1
+    0: 4
+    random-low: 2
+    random-high: 2
     64: 2
   black_market_unlock_costs:
     low: 3
@@ -134,7 +135,7 @@ Sonic Adventure 2 Battle:
       options:
         Sonic Adventure 2 Battle:
             chao_karate_difficulty:
-                none: 10
+                none: 15
                 beginner_override: 3
                 standard_override: 1
                 expert_override: 1
@@ -215,3 +216,9 @@ Sonic Adventure 2 Battle:
                 '1': 1
                 '2': 1
                 '5': 1
+    - option_category: Sonic Adventure 2 Battle
+      option_name: whistlesanity
+      option_result: both
+      options:
+        Sonic Adventure 2 Battle:
+            animalsanity: 'true'
