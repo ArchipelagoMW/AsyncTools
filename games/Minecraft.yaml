@@ -11,7 +11,7 @@ Minecraft:
   include_postgame_advancements: off
   shuffle_structures: on
   structure_compasses: on
-  egg_shards_required: random-range-5-20
+  egg_shards_required: 10
   egg_shards_available: random-range-10-30
   required_bosses: # Bosses which must be defeated to finish the game.
     none: 50
