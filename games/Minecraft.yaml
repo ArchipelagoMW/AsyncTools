@@ -1,7 +1,7 @@
 Minecraft:
   goal:
     advancements: 1
-    eggs: 1
+    eggs: 2
   combat_difficulty:
     easy: 10
     normal: 20
@@ -25,7 +25,7 @@ Minecraft:
         Minecraft:
             advancement_goal: random-range-60-80
             required_bosses:
-                none: 30
+                none: 20
                 ender_dragon: 20
                 wither: 20
                 both: 10
