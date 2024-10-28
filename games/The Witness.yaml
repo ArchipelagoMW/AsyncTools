@@ -1,5 +1,8 @@
 The Witness:
-  puzzle_randomization: sigma_normal
+  puzzle_randomization:
+    sigma_normal: 75
+    sigma_expert: 5
+    umbra_variety: 20
   shuffle_symbols: random
   shuffle_doors:
     off: 50
@@ -31,8 +34,17 @@ The Witness:
     challenge: 50
     mountain_box_short: 50
     mountain_box_long: 50
+    panel_hunt: 70
   mountain_lasers: random
   challenge_lasers: random
+  panel_hunt_total: random-range-15-80
+  panel_hunt_postgame: 
+    off: 50
+    disable_anything_locked_by_lasers: 50
+    # The other two options are rarely played & confusing for newcomers
+    disable_mountain_lasers_locations: 0  
+    disable_challenge_lasers_locations: 0
+  panel_hunt_required_percentage: random-range-50-90
   early_caves:
     off: 50
     add_to_pool: 25
@@ -45,6 +57,10 @@ The Witness:
     Slowness: 6
   puzzle_skip_amount: random-range-10-25
   hint_amount: random-range-10-30
+  vague_hints:
+    off: 50
+    stable: 50
+    experimental: 0  # Experimental has turned out to be perfectly stable & fun, but it adds more chaos and confusion than is healthy for the big public async.
   area_hint_percentage: random-range-30-70
   laser_hints: random
   triggers:
