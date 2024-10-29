@@ -40,3 +40,9 @@ Risk of Rain 2:
       options:
         null:
           name: RoR2-{player}
+    - option_category: Risk of Rain 2
+      option_name: victory
+      option_result: voidling
+      options:
+        Risk of Rain 2:
+          dlc_sotv: 'true'
