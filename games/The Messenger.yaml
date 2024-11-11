@@ -18,7 +18,7 @@ The Messenger:
     false: 40
   shuffle_portals:
     true: 35
-    false: 65
+    none: 65
   triggers:
     - option_category: null
       option_name: name
@@ -35,3 +35,7 @@ The Messenger:
             3: 60
             4: 50
             5: 30
+          shuffle_portals:
+            shops: 60
+            checkpoints: 50
+            anywhere: 30
