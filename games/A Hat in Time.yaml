@@ -19,28 +19,24 @@ A Hat in Time:
   # Players are probably going to have either no DLC or both DLC, though the DLC1 content is probably less popular to
   # play compared to the DLC2 content.
   trigger_dlc:
-    no_dlc: 60 # Always Finale Goal
-    dlc1_only: 7 # Always Finale Goal
-    dlc2_only: 8 # Equal chance of Finale Goal or Rush Hour Goal (4/8 each)
-    both_dlc: 25 # 40% (10/25) chance of Finale Goal, 60% (15/25) chance of Rush Hour Goal
-
-  # The effective weights for each goal:
-  #   finale: 81
-  #   rush_hour: 19
+    no_dlc: 40 # Always Finale Goal
+    dlc1_only: 10 # Always Finale Goal
+    dlc2_only: 15 # 20% (3/15) chance of Finale Goal, 80% (12/15) chance of Rush Hour Goal
+    both_dlc: 35 # 34.3% (12/35) chance of Finale Goal, 65.7% (23/35) chance of Rush Hour Goal
 
   ### ActRandomizer: false, StartingChapter trigger control ###
   # Chained trigger to choose StartingChapter with different weights and adjust chapter-specific options for the chosen
   # starting chapter with ActRandomizer: false.
   # A trigger changes this value when ActRandomizer is set to false.
   # Additional triggers then adjust the StartingChapter option and other options depending on this option's value when
-  # it is set to something other than false.
+  # it is set to something other than null.
   triggerchain_no_act_rando_StartingChapter: null
 
   ### Goal ###
   # Overridden by triggers, but these values match the summed trigger weights for each goal.
   EndGoal:
-    finale: 81
-    rush_hour: 19
+    finale: 65 # 40 have no DLCs enabled, 10 only have DLC1 enabled, 3 only have DLC2 enabled, 12 have both DLCs enabled
+    rush_hour: 35 # 12 only have DLC2 enabled, 23 have both DLCs enabled
 
   ### Logic ###
   # Higher difficulties require additional game knowledge and skill. May be overridden by triggers.
@@ -52,8 +48,10 @@ A Hat in Time:
     moderate: 5
     # Hard starts requiring basic speedrun tech (Sprint Double Jump) and more obscure and technically demanding tricks.
     hard: 1
-  # Re-rolled with a chance of "scooter", by triggers, when LogicDifficulty is set to moderate or higher.
-  CTRLogic: time_stop_only
+  # Re-rolled with an increased chance of "scooter", by triggers, when LogicDifficulty is set to moderate or higher.
+  CTRLogic:
+    time_stop_only: 90
+    scooter: 10
   # Makes the basic melee attack do nothing, being unable to activate Dweller Bells, Faucets etc.
   # Makes the Umbrella item more logic relevant.
   # Also makes the Brewing Hat more logic relevant because it can be used to activate/damage some objects that would
@@ -69,10 +67,11 @@ A Hat in Time:
   NoTicketSkips: 'true'
 
   ### Shuffles ###
+  # The chance of having every shuffle option enabled is about 33.3%.
   # Shuffle zipline unlocks into the item pool. All ziplines are unlocked from the start when disabled.
   ShuffleAlpineZiplines:
-    'false': 40
-    'true': 60
+    'false': 30
+    'true': 70
   # Adds additional checks to Purple Time Rifts and additional junk to the item pool.
   ShuffleStorybookPages:
     'false': 15
@@ -98,9 +97,9 @@ A Hat in Time:
   # important Act being behind a Purple Time Rift entrances, which typically makes a seed much worse and enables the
   # possibility of nested Time Rift entrances.
   ActRandomizer:
-    'false': 5 # Effectively only chapter and item randomization, not a common choice.
-    light: 60 # light is the default option
-    insanity: 35
+    'false': 8 # Effectively only chapter and item randomization, not a common choice.
+    light: 51 # light is the default option
+    insanity: 41
   # Removes the possibility of being walled for a long time by The Illness Has Spread (when ShuffleAlpineZiplines is
   # enabled) and Rush Hour (when EnableDLC2 is enabled with EndGoal is set to finale).
   FinaleShuffle:
@@ -172,10 +171,11 @@ A Hat in Time:
   YarnAvailable: random-range-30-50
   MinExtraYarn: random-range-6-10
   # All Yarn options become irrelevant when HatItems is enabled.
-  # Seeds with Hat items are typically more varied in length, either shorter or longer.
+  # Seeds with Hat items are typically more varied in length, either shorter or longer, but can utilise hints more
+  # effectively.
   HatItems:
-    'false': 65
-    'true': 35
+    'false': 60
+    'true': 40
 
   ### DLC1 ###
   EnableDLC1: 'false' # Overridden by triggers.
@@ -190,7 +190,7 @@ A Hat in Time:
   # Don't want to make `TasksanityTaskStep * TasksanityCheckCount` high because the level gets very long and more
   # difficult.
   # Overridden by triggers when TasksanityTaskStep is 2 or 3 to produce a similar number of total tasks.
-  TasksanityCheckCount: random-range-8-20
+  TasksanityCheckCount: random-range-8-24
   ExcludeTour: 'false' # Overridden by triggers to almost always be 'true' when EndGoal is set to 'finale'.
   # Setting this to a different value than `TasksanityTaskStep * TasksanityCheckCount` can be confusing because either
   # the checks are completed before the level is completed, or the player must re-enter Ship Shape multiple times to get
@@ -211,7 +211,9 @@ A Hat in Time:
     # All non-excluded death wish contracts will be enabled and unlocked like the base game, by collecting Stamps from
     # completing other contracts. This typically results in the player having a lot to do once Death Wish is unlocked.
     'false': 1
-  DWShuffleCountMin: 5
+  DWShuffleCountMin: 10
+  # There are 38 contracts total, after excluding annoying contracts, there are 31. After excluding candles there are
+  # 23. Note that one of the candles is only enabled when DLC2 is enabled.
   DWShuffleCountMax: random-range-low-10-38
   DeathWishOnly: 'false'
   # The bonuses cannot be completing using Peace and Tranquillity and are often considerably more difficult.
@@ -344,7 +346,7 @@ A Hat in Time:
       options:
         A Hat in Time:
           EndGoal:
-            finale: 60
+            finale: 40
           # There are 40 Time Pieces in the pool.
           HighestChapterCost: 29
           FinalChapterMinCost: 30
@@ -356,7 +358,7 @@ A Hat in Time:
       options:
         A Hat in Time:
           EndGoal:
-            finale: 7
+            finale: 10
           EnableDLC1: 'true'
           # There are 46 Time Pieces in the pool.
           HighestChapterCost: random-range-33-34 # ~33.35
@@ -369,8 +371,8 @@ A Hat in Time:
       options:
         A Hat in Time:
           EndGoal:
-            finale: 4
-            rush_hour: 4
+            finale: 3
+            rush_hour: 12
           EnableDLC2: 'true'
           # There are 50 Time Pieces in the pool.
           HighestChapterCost: random-range-low-36-37 # ~36.25
@@ -383,8 +385,8 @@ A Hat in Time:
       options:
         A Hat in Time:
           EndGoal:
-            finale: 10
-            rush_hour: 15
+            finale: 12
+            rush_hour: 23
           EnableDLC1: 'true'
           EnableDLC2: 'true'
           # There are 56 Time Pieces in the pool.
@@ -432,13 +434,13 @@ A Hat in Time:
       option_result: 2
       options:
         A Hat in Time:
-          TasksanityCheckCount: random-range-4-10 # 8-20 total tasks
+          TasksanityCheckCount: random-range-4-12 # 8-24 total tasks
     - option_category: A Hat in Time
       option_name: TasksanityTaskStep
       option_result: 3
       options:
         A Hat in Time:
-          TasksanityCheckCount: random-range-3-7 # 9-21 total tasks
+          TasksanityCheckCount: random-range-3-8 # 9-24 total tasks
 
     ### Triggers adjusting logic ###
     # Remove the possibility for LogicDifficulty: Hard when Death Wish is enabled.
@@ -466,8 +468,8 @@ A Hat in Time:
             'false': 50
             'true': 50
           CTRLogic:
-            time_stop_only: 50
-            scooter: 50
+            time_stop_only: 30
+            scooter: 70
     - option_category: A Hat in Time
       option_name: LogicDifficulty
       option_result: hard
@@ -481,8 +483,7 @@ A Hat in Time:
             'true': 25
             rush_hour: 25
           CTRLogic:
-            time_stop_only: 20
-            scooter: 80
+            scooter: 100
 
     # Disable all more difficult options for asyncs that allow non-filler yamls #
     - option_category: A Hat in Time
@@ -500,8 +501,9 @@ A Hat in Time:
             5: 10
 
     # Re-roll hat order with a greatly increased chance of time_stop_last when CTRLogic is set to logically allow
-    # Scooter Badge + Sprint Hat because there is only a single other check in the game that requires Time Stop Hat, and
-    # only when on LogicDifficulty: normal and EnableDLC2: true.
+    # Scooter Badge + Sprint Hat because there is only a single other check in the game (Pink Paw Station - Behind Fan)
+    # that requires Time Stop Hat, and only when on LogicDifficulty: normal and EnableDLC2: true. Time Stop Hat is also
+    # logically relevant to Alpine Skyline - Mystifying Time Mesa: Zipline, but Sprint Hat can be used instead.
     - option_category: A Hat in Time
       option_name: CTRLogic
       option_result: scooter
@@ -511,7 +513,67 @@ A Hat in Time:
             'false': 10
             'true': 10
             time_stop_last: 80
-    
+
+    ### Randomized option cleanup ###
+    # If a randomized option has no effect because an option it depends on has been disabled, set it to a non-randomized
+    # value, typically its default.
+    # This aims to make it easier for people reading the spreadsheet to identify which options have been enabled.
+    - option_category: A Hat in Time
+      option_name: EnableDLC1
+      option_result: 'false'
+      options:
+        A Hat in Time:
+          EnableDeathWish: 'false'
+          Tasksanity: 'false'
+          ExcludeTour: 'false'
+    - option_category: A Hat in Time
+      option_name: Tasksanity
+      option_result: 'false'
+      options:
+        A Hat in Time:
+          TasksanityTaskStep: 1
+          TasksanityCheckCount: 18
+    - option_category: A Hat in Time
+      option_name: EnableDeathWish
+      option_result: 'false'
+      options:
+        A Hat in Time:
+          DWShuffle: 'false'
+          DWExcludeCandles: 'true'
+          DWTimePieceRequirement: 15
+    - option_category: A Hat in Time
+      option_name: DWShuffle
+      option_result: 'false'
+      options:
+        A Hat in Time:
+          # DWShuffleCountMin is set lower than default, but is not randomized, so is not changed here to prevent adding
+          # an extra column to the spreadsheet.
+          DWShuffleCountMax: 25
+    - option_category: A Hat in Time
+      option_name: EnableDLC2
+      option_result: 'false'
+      options:
+        A Hat in Time:
+          NyakuzaThugMinShopItems: 0
+          # NyakuzaThugMaxShopItems is set higher than default, but is not randomized, so is not changed here to prevent
+          # adding an extra column to the spreadsheet.
+    - option_category: A Hat in Time
+      option_name: HatItems
+      option_result: 'true'
+      options:
+        A Hat in Time:
+          RandomizeHatOrder: 'true'
+          YarnCostMin: 4
+          YarnCostMax: 8
+          YarnAvailable: 50
+          MinExtraYarn: 10
+    - option_category: A Hat in Time
+      option_name: ActRandomizer
+      option_result: 'false'
+      options:
+        A Hat in Time:
+          FinaleShuffle: 'false'
+
     - option_category: null
       option_name: name
       option_result: Player{player}
