@@ -9,7 +9,7 @@ Celeste 64:
   carsanity: false
   sanities:
     none: 1
-    all: 1    
+    all: 5    
   triggers:
     - option_category: Celeste 64
       option_name: sanities
