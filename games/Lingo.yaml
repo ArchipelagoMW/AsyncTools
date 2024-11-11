@@ -19,7 +19,7 @@ Lingo:
     level_2: 25
     pilgrimage: 25
   mastery_achievements: random-high
-  level_2_requirement: random-range-200-500
+  level_2_requirement: random-range-350-650
   early_color_hallways: true
   trap_percentage: 20
   puzzle_skip_percentage: 20
