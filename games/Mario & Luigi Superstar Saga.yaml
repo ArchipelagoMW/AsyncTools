@@ -22,7 +22,7 @@ Mario & Luigi Superstar Saga:
     false: 40
     true: 60
 
-  harhalls_pants:
+  disable_harhalls_pants:
     false: 40
     true: 60
   
