@@ -25,9 +25,12 @@
     4: 7
     5: 1
   starting_cards: random-high
-  room_gen:
-    false: 60
-    true: 40
+  map_gen:
+    none: 60
+    rooms: 40
+  local_items:
+    Floppy Disk: 1
+    Red ID Card: 1
   triggers:
     - option_category: null
       option_name: name
