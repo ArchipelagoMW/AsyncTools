@@ -1,8 +1,11 @@
 Lingo:
   shuffle_doors:
     none: 20
-    simple: 40
-    complex: 40
+    panels: 40
+    doors: 40
+  group_doors:
+    false: 50
+    true: 50
   shuffle_colors: true
   progressive_orange_tower: random
   progressive_colorful: random
@@ -33,18 +36,19 @@ Lingo:
     progressive: 10
     individual: 10
   shuffle_sunwarps: random
+  shuffle_postgame: false
   triggers:
     - option_name: shuffle_doors
       option_category: Lingo
-      option_result: simple
+      option_result: panels
       percentage: 25
       options:
         Lingo:
           shuffle_colors: false
     - option_name: shuffle_doors
       option_category: Lingo
-      option_result: complex
-      percentage: 30
+      option_result: doors
+      percentage: 25
       options:
         Lingo:
           shuffle_colors: false
