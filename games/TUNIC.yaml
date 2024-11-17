@@ -1,6 +1,7 @@
 TUNIC:
   # column order for the spreadsheet:
-  # Start with Sword | Keys Behind Bosses | Hexagon Quest | Gold Hexagons Required | Percentage of Extra Hexagons | Entrance Rando | Fewer Shops | Laurels Location
+  # Start with Sword | Keys Behind Bosses | Hexagon Quest | Gold Hexagons Required | Percentage of Extra Hexagons | Entrance Rando | Fewer Shops | 
+  # Laurels Location | Laurels Zips | Ice Grappling | Ladder Storage
   # if Hexagon Quest is disabled, put a - for Gold Hexagons Required and Percentage of Extra Hexagons since they are not relevant
   sword_progression: 'true'
   start_with_sword:
@@ -12,10 +13,9 @@ TUNIC:
   entrance_rando:
     yes: 25
     no: 75
-  logic_rules:
-    restricted: 85
-    no_major_glitches: 10
-    unrestricted: 5
+  laurels_zips:
+    'false': 70
+    glitch_logic_on: 30
   fool_traps: off
   hexagon_quest:
     'true': 50
@@ -48,6 +48,26 @@ TUNIC:
           fixed_shop:
             'true': 50
             'false': 50
+
+    - option_category: TUNIC
+      option_name: laurels_zips
+      option_result: glitch_logic_on
+      options:
+        TUNIC:
+          laurels_zips:
+            'true': 60
+            'false': 40
+          ice_grappling:
+            off: 20
+            easy: 60
+            medium: 20
+            hard: 0
+          ladder_storage:
+            off: 60
+            easy: 25
+            medium: 15
+            hard: 0
+    
     - option_category: null
       option_name: name
       option_result: Player{player}

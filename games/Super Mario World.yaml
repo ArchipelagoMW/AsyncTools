@@ -24,7 +24,7 @@ Super Mario World:
     true: 1
   blocksanity:
     false: 3
-    true: 1
+    true: 4
   bowser_castle_doors: vanilla
   bowser_castle_rooms:
     vanilla: 2

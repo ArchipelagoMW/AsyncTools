@@ -7,7 +7,7 @@ Pokemon Red and Blue:
     dex: 15
     both: 20
   dexsanity: disabled
-  trainersanity: false
+  trainersanity: disabled
   randomize_hidden_items: # Randomize hidden items. If you choose exclude, they will be randomized but will be guaranteed junk items.
     on: 50
     off: 40
@@ -175,7 +175,7 @@ Pokemon Red and Blue:
       option_result: trainer
       options:
         Pokemon Red and Blue:
-          trainersanity: true
+          trainersanity: full
           dexsanity: disabled
           blind_trainers: 0
           exp_modifier: 
@@ -186,7 +186,7 @@ Pokemon Red and Blue:
       option_result: dex
       options:
         Pokemon Red and Blue:
-          trainersanity: false
+          trainersanity: disabled
           dexsanity:
             full: 10
           minimum_steps_between_encounters: 3
@@ -209,7 +209,7 @@ Pokemon Red and Blue:
       option_result: both
       options:
         Pokemon Red and Blue:
-          trainersanity: true
+          trainersanity: full
           dexsanity: 
             random-range-30-100: 30
             full: 10

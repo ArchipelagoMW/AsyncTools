@@ -2,16 +2,16 @@ Stardew Valley:
   accessibility: items
   goal:
     community_center: 50
-    grandpa_evaluation: 25
-    bottom_of_the_mines: 2
-    master_angler: 2
+    grandpa_evaluation: 20
+    bottom_of_the_mines: 3
+    master_angler: 3
     complete_collection: 2
-    protector_of_the_valley: 2
-    full_shipment: 2
-    gourmet_chef: 2
+    protector_of_the_valley: 3
+    full_shipment: 3
+    gourmet_chef: 3
     craft_master: 2
-    legend: 2
-    mystery_of_the_stardrops: 10
+    legend: 3
+    mystery_of_the_stardrops: 8
   farm_type: random
   starting_money: random-range-1000-25000
   profit_margin:
@@ -20,11 +20,10 @@ Stardew Valley:
     triple: 20
     quadruple: 10
   bundle_randomization:
-    vanilla: 5
-    thematic: 15
+    thematic: 20
     remixed: 75
     shuffled: 5
-  bundle_price:
+  bundle_price: #Override in trigger
     minimum: 5
     very_cheap: 15
     cheap: 50
@@ -39,7 +38,9 @@ Stardew Valley:
     randomized: 40
     randomized_not_winter: 40
     progressive: 20
-  cropsanity: enabled
+  cropsanity: #Override in trigger
+    enabled: 75
+    disabled: 25
   backpack_progression: early_progressive
   tool_progression:
     progressive_very_cheap: 30
@@ -53,7 +54,7 @@ Stardew Valley:
     progressive_very_cheap: 40
     progressive_cheap: 40
     progressive: 20
-  festival_locations:
+  festival_locations: #Override in trigger
     disabled: 20
     easy: 40
     hard: 40
@@ -66,40 +67,40 @@ Stardew Valley:
     0: 50
     7: 25
     14: 25
-  fishsanity:
+  fishsanity: #Override in trigger
     none: 10
     exclude_legendaries: 20
     exclude_hard_fish: 50
     only_easy_fish: 20
-  museumsanity:
+  museumsanity: #Override in trigger
     none: 60
     milestones: 30
     all: 10
-  monstersanity:
+  monstersanity: #Override in trigger
     one_per_category: 25
     one_per_monster: 25
     very_short_goals: 20
     short_goals: 20
     progressive_goals: 5
     split_goals: 5
-  shipsanity:
+  shipsanity: #Override in trigger
     none: 60
     crops: 15
     fish: 15
     full_shipment: 5
     full_shipment_with_fish: 5
-  cooksanity:
+  cooksanity: #Override in trigger
     none: 70
     queen_of_sauce: 20
     all: 10
-  chefsanity:
+  chefsanity: #Override in trigger
     none: 70
     queen_of_sauce: 20
     all: 10
-  craftsanity:
+  craftsanity: #Override in trigger
     none: 80
     all: 20
-  friendsanity:
+  friendsanity: #Override in trigger
     none: 40
     bachelors: 25
     starting_npcs: 25
@@ -118,13 +119,13 @@ Stardew Valley:
   multiple_day_sleep_enabled: 'true'
   multiple_day_sleep_cost: 0
   experience_multiplier:
-    double: 50
-    triple: 40
-    quadruple: 10
-  friendship_multiplier:
-    double: 20
+    double: 25
     triple: 50
-    quadruple: 30
+    quadruple: 25
+  friendship_multiplier:
+    double: 25
+    triple: 50
+    quadruple: 25
   debris_multiplier:
     vanilla: 25
     half: 50
@@ -145,6 +146,15 @@ Stardew Valley:
             normal: 25
             expensive: 5
             very_expensive: 5
+          cropsanity: #Remove Disabled odds
+            enabled: 100
+    - option_category: Stardew Valley
+      option_name: goal
+      option_result: grandpa_evaluation
+      options:
+        Stardew Valley:
+          cropsanity: #Remove Disabled odds
+            enabled: 100
     - option_category: Stardew Valley
       option_name: goal
       option_result: master_angler #catch all fishsanity fish
@@ -172,6 +182,8 @@ Stardew Valley:
             fish: 35
             full_shipment: 15
             full_shipment_with_fish: 15
+          cropsanity: #Remove Disabled odds
+            enabled: 100
     - option_category: Stardew Valley
       option_name: goal
       option_result: gourmet_chef # cook every recipe, follows cooksanity
@@ -222,6 +234,7 @@ Stardew Valley:
             exclude_legendaries: 20
             exclude_hard_fish: 50
             only_easy_fish: 20
+          local_items: Stardrop
     - option_category: null
       option_name: name
       option_result: Player{player}
