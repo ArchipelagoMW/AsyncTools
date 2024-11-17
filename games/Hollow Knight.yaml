@@ -68,11 +68,13 @@ Hollow Knight:
   StartLocation: king's_pass
   Goal:
     any: 1
-    hollowknight: 1
-    siblings: 1
-    radiance: 1
+    hollowknight: 2
+    siblings: 2
+    radiance: 2
     godhome: 0
     godhome_flower: 0
+    grub_hunt: 1
+  GrubHuntGoal: random-range-middle-25-35
   WhitePalace: 
     exclude: 5
     kingfragment: 0
@@ -129,6 +131,14 @@ Hollow Knight:
     medium: 1
   
   triggers:
+  - option_category: Hollow Knight
+    option_name: goal
+    option_result: grub_hunt
+    options:
+      Hollow Knight:
+        +local_items:
+          - Grubs
+  
   - option_category: Hollow Knight
     option_name: skips
     option_result: none
