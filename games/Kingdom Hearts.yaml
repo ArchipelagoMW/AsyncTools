@@ -3,11 +3,11 @@ Kingdom Hearts:
     postcards: 20
     final_ansem: 60
     puppies: 20
-  end_of_the_world_unlock: item
+  end_of_the_world_unlock: item #Even though reports is the default math wise, this is cleaner to write than manually setting it for other goals each time
   final_rest_door:
     reports: 80
     superbosses: 20
-  required_reports_eotw: 0
+  required_reports_eotw: 0 #Same idea as the End of the World unlock
   required_reports_door: 0
   reports_in_pool: 0
   super_bosses:
@@ -63,12 +63,22 @@ Kingdom Hearts:
     Scan: 1 #Nothing but love in my heart for players
   
   triggers:
+    #Local Superboss unlock items and final world so this goal has some macguffins
     - option_name: final_rest_door
       option_category: Kingdom Hearts
       option_result: superbosses
       options:
         Kingdom Hearts:
           super_bosses: true
+          vanilla_emblem_pieces: false
+          +local_items:
+            - Cups
+            - Emblem Piece (Flame)
+            - Emblem Piece (Chest)
+            - Emblem Piece (Statue)
+            - Emblem Piece (Fountain)
+            - End of the World
+    #Hints the local Postcards to vary this goal up from Puppies. Door set to Postcards so reports can be out of the pool on non-report goals and enable the final boss after goal just for fun
     - option_name: goal
       option_category: Kingdom Hearts
       option_result: postcards
@@ -77,6 +87,7 @@ Kingdom Hearts:
           final_rest_door: postcards
           +start_hints: [Postcard]
           +local_items: [Postcard]
+    #Locks Puppies to Triplets to be reasonable as a local goal. Same idea with the Final Door as Postcards
     - option_name: goal
       option_category: Kingdom Hearts
       option_result: puppies
@@ -85,6 +96,7 @@ Kingdom Hearts:
           final_rest_door: puppies
           puppies: triplets
           +local_items: [Puppies]
+    #Adds reports back into the pool and makes them local.
     - option_name: final_rest_door
       option_category: Kingdom Hearts
       option_result: reports
