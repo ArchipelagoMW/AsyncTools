@@ -107,6 +107,24 @@ Kingdom Hearts:
           required_reports_door: random-range-6-9
           reports_in_pool: random-range-9-13
           +local_items: [Reports]
+    #Exclude Hades Cup if superbosses are disabled
+    - option_name: super_bosses
+      option_category: Kingdom Hearts
+      option_result: 'false'
+      options:
+        Kingdom Hearts:
+          exclude_locations:
+            - "Olympus Coliseum Gates Purple Jar After Defeating Hades"
+            - "Olympus Coliseum Defeat Hades Ansem's Report 8"
+            - "Complete Hades Cup"
+            - "Complete Hades Cup Solo"
+            - "Complete Hades Cup Time Trial"
+            - "Hades Cup Defeat Cloud and Leon Event"
+            - "Hades Cup Defeat Yuffie Event"
+            - "Hades Cup Defeat Cerberus Event"
+            - "Hades Cup Defeat Behemoth Event"
+            - "Hades Cup Defeat Hades Event"
+            - "Olympus Coliseum Defeat Ice Titan Diamond Dust Event"
     - option_category: null
       option_name: name
       option_result: Player{player}
