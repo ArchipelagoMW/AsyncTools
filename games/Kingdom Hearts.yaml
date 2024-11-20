@@ -4,9 +4,7 @@ Kingdom Hearts:
     final_ansem: 60
     puppies: 20
   end_of_the_world_unlock: item #Even though reports is the default math wise, this is cleaner to write than manually setting it for other goals each time
-  final_rest_door:
-    reports: 80
-    superbosses: 20
+  final_rest_door: reports
   required_reports_eotw: 0 #Same idea as the End of the World unlock
   required_reports_door: 0
   reports_in_pool: 0
@@ -63,6 +61,15 @@ Kingdom Hearts:
     Scan: 1 #Nothing but love in my heart for players
   
   triggers:
+    #Set this here to not trigger superboss settings on other goals
+    - option_name: goal
+      option_category: Kingdom Hearts
+      option_result: final_ansem
+      options:
+        Kingdom Hearts:
+          final_rest_door:
+            reports: 80
+            superbosses: 20
     #Local Superboss unlock items and final world so this goal has some macguffins
     - option_name: final_rest_door
       option_category: Kingdom Hearts
