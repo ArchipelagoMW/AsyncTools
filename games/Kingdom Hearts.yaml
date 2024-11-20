@@ -1,16 +1,16 @@
 Kingdom Hearts:
   goal:
-    postcards: 20
-    final_ansem: 60
-    puppies: 20
+    postcards: 25
+    final_ansem: 50
+    puppies: 25
   end_of_the_world_unlock: item #Even though reports is the default math wise, this is cleaner to write than manually setting it for other goals each time
   final_rest_door: reports
   required_reports_eotw: 0 #Same idea as the End of the World unlock
   required_reports_door: 0
   reports_in_pool: 0
   super_bosses:
-    'false': 75
-    'true': 25
+    'false': 85
+    'true': 15
   atlantica:
     'false': 50
     'true': 50
@@ -18,8 +18,8 @@ Kingdom Hearts:
     'false': 80
     'true': 20
   cups:
-    'false': 70
-    'true': 30
+    'false': 50
+    'true': 50
   vanilla_emblem_pieces:
     'false': 50
     'true': 50
@@ -45,15 +45,15 @@ Kingdom Hearts:
   keyblade_min_mp: -2
   keyblade_max_mp: 3
   puppies:
-    full: 0
+    full: 25
     triplets: 50
-    individual: 0
+    individual: 25
   starting_worlds: 0
   interact_in_battle: true
   advanced_logic: false
   extra_shared_abilities:
-    'false': 90
-    'true': 10
+    'false': 80
+    'true': 20
   exp_zero_in_pool: false
   donald_death_link: false
   goofy_death_link: false
@@ -68,8 +68,8 @@ Kingdom Hearts:
       options:
         Kingdom Hearts:
           final_rest_door:
-            reports: 80
-            superbosses: 20
+            reports: 75
+            superbosses: 25
     #Local Superboss unlock items and final world so this goal has some macguffins
     - option_name: final_rest_door
       option_category: Kingdom Hearts
