@@ -21,7 +21,7 @@ Kingdom Hearts:
   vanilla_emblem_pieces:
     'false': 50
     'true': 50
-  exp_multiplier: 4x #need to consult on this
+  exp_multiplier: 4x
   level_checks: 100
   force_stats_on_levels: all
   strength_increase: 24
@@ -29,8 +29,8 @@ Kingdom Hearts:
   hp_increase: 23
   ap_increase: 18
   mp_increase: 7
-  accessory_slot_increase: 1   #These two could probably be higher for QoL but I'm not certain yet
-  item_slot_increase: 3   #These two could probably be higher for QoL but I'm not certain yet
+  accessory_slot_increase: 1
+  item_slot_increase: 3
   keyblades_unlock_chests:
     'false': 75
     'true': 25
