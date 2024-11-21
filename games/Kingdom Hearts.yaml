@@ -21,7 +21,7 @@ Kingdom Hearts:
   vanilla_emblem_pieces:
     'false': 50
     'true': 50
-  exp_multiplier: 4x
+  exp_multiplier: 3x
   level_checks: 100
   force_stats_on_levels: all
   strength_increase: 24
