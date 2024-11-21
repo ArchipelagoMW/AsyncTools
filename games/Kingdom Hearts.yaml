@@ -1,16 +1,14 @@
 Kingdom Hearts:
   goal:
-    postcards: 25
-    final_ansem: 50
+    postcards: 15
+    final_ansem: 60
     puppies: 25
   end_of_the_world_unlock: item #Even though reports is the default math wise, this is cleaner to write than manually setting it for other goals each time
   final_rest_door: reports
   required_reports_eotw: 0 #Same idea as the End of the World unlock
   required_reports_door: 0
   reports_in_pool: 0
-  super_bosses:
-    'false': 85
-    'true': 15
+  super_bosses: false
   atlantica:
     'false': 50
     'true': 50
@@ -52,13 +50,13 @@ Kingdom Hearts:
   interact_in_battle: true
   advanced_logic: false
   extra_shared_abilities:
-    'false': 80
-    'true': 20
+    'false': 50
+    'true': 50
   exp_zero_in_pool: false
   donald_death_link: false
   goofy_death_link: false
   start_inventory_from_pool:
-    Scan: 1 #Nothing but love in my heart for players
+    Scan: 1 #Nothing but love in our hearts for players
   
   triggers:
     #Set this here to not trigger superboss settings on other goals
@@ -92,6 +90,7 @@ Kingdom Hearts:
       options:
         Kingdom Hearts:
           final_rest_door: postcards
+          super_bosses: true #Makes Postcards the only non-Superboss goal setting to have these checks enabled to set it apart from Puppies
           +start_hints: [Postcard]
           +local_items: [Postcard]
     #Locks Puppies to Triplets to be reasonable as a local goal. Same idea with the Final Door as Postcards
