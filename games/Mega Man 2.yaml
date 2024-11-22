@@ -5,9 +5,9 @@ Mega Man 2:
   starting_robot_master: random
   consumables:
     none: 1
-    1up_etank: 2
-    weapon_health: 2
-    all: 2
+    1up_etank: 4
+    weapon_health: 4
+    all: 8
   yoku_jumps:
     'false': 5
     'true': 2
