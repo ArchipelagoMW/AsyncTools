@@ -1,0 +1,139 @@
+Kingdom Hearts:
+  goal:
+    postcards: 15
+    final_ansem: 60
+    puppies: 25
+  end_of_the_world_unlock: item #Even though reports is the default math wise, this is cleaner to write than manually setting it for other goals each time
+  final_rest_door: reports
+  required_reports_eotw: 0 #Same idea as the End of the World unlock
+  required_reports_door: 0
+  reports_in_pool: 0
+  super_bosses: false
+  atlantica:
+    'false': 50
+    'true': 50
+  hundred_acre_wood:
+    'false': 80
+    'true': 20
+  cups:
+    'false': 50
+    'true': 50
+  vanilla_emblem_pieces:
+    'false': 50
+    'true': 50
+  exp_multiplier: 3x
+  level_checks: 100
+  force_stats_on_levels: all
+  strength_increase: 24
+  defense_increase: 24
+  hp_increase: 23
+  ap_increase: 18
+  mp_increase: 7
+  accessory_slot_increase: 1
+  item_slot_increase: 3
+  keyblades_unlock_chests:
+    'false': 75
+    'true': 25
+  randomize_keyblade_stats:
+    'false': 50
+    'true': 50
+  bad_starting_weapons: false
+  keyblade_min_str: 3
+  keyblade_max_str: 14
+  keyblade_min_mp: -2
+  keyblade_max_mp: 3
+  puppies:
+    full: 25
+    triplets: 50
+    individual: 25
+  starting_worlds: 0
+  interact_in_battle: true
+  advanced_logic: false
+  extra_shared_abilities:
+    'false': 50
+    'true': 50
+  exp_zero_in_pool: false
+  donald_death_link: false
+  goofy_death_link: false
+  start_inventory_from_pool:
+    Scan: 1 #Nothing but love in our hearts for players
+  
+  triggers:
+    #Set this here to not trigger superboss settings on other goals
+    - option_name: goal
+      option_category: Kingdom Hearts
+      option_result: final_ansem
+      options:
+        Kingdom Hearts:
+          final_rest_door:
+            reports: 75
+            superbosses: 25
+    #Local Superboss unlock items and final world so this goal has some macguffins
+    - option_name: final_rest_door
+      option_category: Kingdom Hearts
+      option_result: superbosses
+      options:
+        Kingdom Hearts:
+          super_bosses: true
+          vanilla_emblem_pieces: false
+          +local_items:
+            - Cups
+            - Emblem Piece (Flame)
+            - Emblem Piece (Chest)
+            - Emblem Piece (Statue)
+            - Emblem Piece (Fountain)
+            - End of the World
+    #Hints the local Postcards to vary this goal up from Puppies. Door set to Postcards so reports can be out of the pool on non-report goals and enable the final boss after goal just for fun
+    - option_name: goal
+      option_category: Kingdom Hearts
+      option_result: postcards
+      options:
+        Kingdom Hearts:
+          final_rest_door: postcards
+          super_bosses: true #Makes Postcards the only non-Superboss goal setting to have these checks enabled to set it apart from Puppies
+          +start_hints: [Postcard]
+          +local_items: [Postcard]
+    #Locks Puppies to Triplets to be reasonable as a local goal. Same idea with the Final Door as Postcards
+    - option_name: goal
+      option_category: Kingdom Hearts
+      option_result: puppies
+      options:
+        Kingdom Hearts:
+          final_rest_door: puppies
+          puppies: triplets
+          +local_items: [Puppies]
+    #Adds reports back into the pool and makes them local.
+    - option_name: final_rest_door
+      option_category: Kingdom Hearts
+      option_result: reports
+      options:
+        Kingdom Hearts:
+          end_of_the_world_unlock: reports
+          required_reports_eotw: random-range-3-6
+          required_reports_door: random-range-6-9
+          reports_in_pool: random-range-9-13
+          +local_items: [Reports]
+    #Exclude Hades Cup if superbosses are disabled
+    - option_name: super_bosses
+      option_category: Kingdom Hearts
+      option_result: 'false'
+      options:
+        Kingdom Hearts:
+          exclude_locations:
+            - "Olympus Coliseum Gates Purple Jar After Defeating Hades"
+            - "Olympus Coliseum Defeat Hades Ansem's Report 8"
+            - "Complete Hades Cup"
+            - "Complete Hades Cup Solo"
+            - "Complete Hades Cup Time Trial"
+            - "Hades Cup Defeat Cloud and Leon Event"
+            - "Hades Cup Defeat Yuffie Event"
+            - "Hades Cup Defeat Cerberus Event"
+            - "Hades Cup Defeat Behemoth Event"
+            - "Hades Cup Defeat Hades Event"
+            - "Olympus Coliseum Defeat Ice Titan Diamond Dust Event"
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: KH1-{player}
