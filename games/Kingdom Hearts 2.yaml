@@ -41,6 +41,8 @@ Kingdom Hearts 2:
   AutoFormLogic: false
   CorSkipToggle: false
   FillerItemsLocal: false
+  start_inventory:
+    Scan: 1
   
   triggers:
     #Turn off the need to kill Final Xemnas if Lucky Emblem Hunt and set other details
@@ -50,8 +52,8 @@ Kingdom Hearts 2:
       options:
         Kingdom Hearts 2:
           FinalXemnas: false
-          LuckyEmblemsAmount: random-range-30-35
-          LuckyEmblemsRequired: random-range-20-25
+          LuckyEmblemsAmount: random-range-40-50
+          LuckyEmblemsRequired: random-range-30-39
           +local_items: [Lucky Emblem]
     #No point in local proofs for goals other than Three Proofs - Nonexistence, well, doesn't exist, and the other two just open a check or two
     - option_name: Goal
