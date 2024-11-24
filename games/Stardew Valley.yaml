@@ -114,7 +114,7 @@ Stardew Valley:
     starting_npcs: 25
     all: 10
   friendsanity_heart_size: random-range-3-5
-  booksanity: all
+  booksanity:
     none: 10
     power: 50
     power_skill: 30
