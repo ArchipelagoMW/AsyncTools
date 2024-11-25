@@ -21,7 +21,8 @@ Stardew Valley:
     quadruple: 10
   bundle_randomization:
     thematic: 20
-    remixed: 75
+    remixed: 40
+    remixed_anywhere: 35
     shuffled: 5
   bundle_price: #Override in trigger
     minimum: 5
@@ -33,7 +34,8 @@ Stardew Valley:
     disabled: 50
     pelican_town: 10
     non_progression: 20
-    buildings: 20
+    buildings_without_house: 15
+    buildings: 5
   season_randomization:
     randomized: 40
     randomized_not_winter: 40
@@ -49,7 +51,9 @@ Stardew Valley:
   elevator_progression:
     progressive: 50
     progressive_from_previous_floor: 50
-  skill_progression: progressive
+  skill_progression:
+    progressive: 50
+    progressive_with_masteries: 50
   building_progression:
     progressive_very_cheap: 40
     progressive_cheap: 40
@@ -60,9 +64,13 @@ Stardew Valley:
     hard: 40
   arcade_machine_locations: disabled
   special_order_locations:
-    disabled: 40
-    board_only: 40
-    board_qi: 20
+    vanilla: 10
+    board_very_short: 20
+    board_qi_very_short: 20
+    board_short: 20
+    board_qi_short: 10
+    board: 10
+    board_qi: 10
   quest_locations:
     0: 50
     7: 25
@@ -106,7 +114,14 @@ Stardew Valley:
     starting_npcs: 25
     all: 10
   friendsanity_heart_size: random-range-3-5
+  booksanity:
+    none: 10
+    power: 50
+    power_skill: 30
+    all: 10
+  walnutsanity: ["Puzzles", "Bushes", "Repeatables"] # If Ginger island rolls excluded, this will automatically disable itself. I have disabled dig spots because they are not noob-friendly. Everything else is better shuffled
   movement_buff_number: random-range-4-8
+  enabled_filler_buffs: ["Luck", "Damage", "Defense", "Immunity", "Health", "Energy", "Bite Rate", "Fish Trap", "Fishing Bar Size"]
   luck_buff_number: random-range-4-12
   exclude_ginger_island:
     false: 50
@@ -133,6 +148,7 @@ Stardew Valley:
   quick_start: 'true'
   gifting: 'true'
   mods: []
+  bundle_plando: []
   death_link: 'false'
   triggers: #Added triggers to complement the goal (eg. add museumsanity to a museum goal)
     - option_category: Stardew Valley
