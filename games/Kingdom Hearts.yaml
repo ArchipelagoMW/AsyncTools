@@ -57,6 +57,8 @@ Kingdom Hearts:
   goofy_death_link: false
   start_inventory_from_pool:
     Scan: 1 #Nothing but love in our hearts for players
+  exclude_locations:
+    - "Monstro Chamber 6 White Trinity Chest"
   
   triggers:
     #Set this here to not trigger superboss settings on other goals
