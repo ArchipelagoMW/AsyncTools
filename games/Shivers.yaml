@@ -1,9 +1,8 @@
 Shivers:
   ixupi_captures_needed: random-range-5-10
   lobby_access:
-    normal: 10
-    early: 45
-    local: 45
+    early: 50
+    local: 50
   puzzle_hints_required:
     'true': 25
     'false': 75
