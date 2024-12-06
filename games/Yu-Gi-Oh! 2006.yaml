@@ -1,0 +1,48 @@
+Yu-Gi-Oh! 2006:
+  structure_deck:
+    dragons_roar: 20
+    zombie_madness: 20
+    blazing_destruction: 20
+    fury_from_the_deep: 20
+    warriors_triumph: 20
+    spellcasters_judgement: 20
+    none: 10
+  banlist:
+    no_banlist: 10
+    september_2003: 10
+    march_2004: 10
+    september_2004: 10
+    march_2005: 10
+    september_2005: 10
+  final_campaign_boss_unlock_condition:
+    campaign_opponents: 15
+    challenges: 5
+  fourth_tier_5_campaign_boss_unlock_condition: campaign_opponents
+  third_tier_5_campaign_boss_unlock_condition: campaign_opponents
+  final_campaign_boss_challenges: random-range-15-45
+  final_campaign_boss_campaign_opponents: random-range-15-24
+  fourth_tier_5_campaign_boss_campaign_opponents: random
+  third_tier_5_campaign_boss_campaign_opponents: random
+  number_of_challenges: random-range-0-10
+  starting_money: random-range-3000-30000
+  money_reward_multiplier: random-range-10-30
+  normalize_boosters_packs: true
+  booster_pack_prices: random-range-100-1000
+  add_empty_banlist: random
+  campaign_opponents_shuffle: random
+  ocg_arts: random
+
+  triggers:
+    - option_category: Yu-Gi-Oh! 2006
+      option_name: final_campaign_boss_unlock_condition
+      option_result: challenges
+      options:
+        Yu-Gi-Oh! 2006:
+          number_of_challenges: random-range-10-91
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: YuGiOh2006-{player}
+

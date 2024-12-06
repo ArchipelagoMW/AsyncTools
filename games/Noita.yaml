@@ -1,5 +1,5 @@
 Noita:
-  bad_effects: 'true'
+  bad_effects: 'false'
   victory_condition:
     greed_ending: 0
     pure_ending: 50
@@ -54,8 +54,15 @@ Noita:
       options:
         Noita:
           extra_orbs:
-            random-low
+            random-high
           local_items:
             - Orb
           exclude_locations:
             - "Kolmisilm\u00e4"
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: Noita-{player}
+

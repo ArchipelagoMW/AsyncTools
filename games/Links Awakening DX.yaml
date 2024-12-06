@@ -2,35 +2,69 @@ Links Awakening DX:
   logic:
     normal: 1
   tradequest:
-    false: 3
-    true: 2
+    false: 1
+    true: 1
   goal:
     instruments: 5
-    seashells: 2
+    seashells: 3
   instrument_count:
-    random-high: 1
+    random-range-6-8: 1
   trendy_game:
     easy: 2
     normal: 5
     hard: 2
   shuffle_nightmare_keys:
     original_dungeon: 5
-    own_world: 3
+    own_dungeons: 5
+    own_world: 5
+    any_world: 3
+    different_world: 1
   shuffle_small_keys:
     original_dungeon: 5
-    own_world: 3
+    own_dungeons: 5
+    own_world: 5
+    any_world: 3
+    different_world: 1
   shuffle_maps:
     original_dungeon: 5
-    own_world: 3
-    any_world: 2
+    own_dungeons: 5
+    own_world: 5
+    any_world: 3
+    different_world: 1
   shuffle_compasses:
     original_dungeon: 5
-    own_world: 3
-    any_world: 2
+    own_dungeons: 5
+    own_world: 5
+    any_world: 3
+    different_world: 1
   shuffle_stone_beaks:
     original_dungeon: 5
-    own_world: 3
-    any_world: 2
+    own_dungeons: 5
+    own_world: 5
+    any_world: 3
+    different_world: 1
+  warp_improvements: true
+  additional_warp_points: true
+  shuffle_instruments:
+    original_dungeon: 10
+    own_dungeons: 10
+    own_world: 10
+    any_world: 5
+    vanilla: 50
+  rooster:
+    false: 1
+    true: 1
+  experimental_dungeon_shuffle:
+    false: 3
+    true: 2
+  experimental_entrance_shuffle:
+    none: 3
+    simple: 1
+  boots_controls:
+    bracelet: 1
+  music:
+    vanilla: 10
+    shuffled: 1
   triggers:
     - option_category: Links Awakening DX
       option_name: goal
@@ -39,3 +73,10 @@ Links Awakening DX:
         Links Awakening DX:
           local_items:
             - Seashell
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: LADX-{player}
+

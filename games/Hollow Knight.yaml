@@ -8,35 +8,47 @@ Hollow Knight:
   RandomizeKeys: 'true'
   RandomizeMaskShards: 'true'
   RandomizeVesselFragments: 'true'
-  RandomizeCharmNotches: 'random'
+  RandomizeCharmNotches:
+    true: 4
+    false: 1
   RandomizePaleOre: 'true'
-  RandomizeGeoChests: 'random'
-  RandomizeJunkPitChests: 'false'
+  RandomizeGeoChests: 
+    true: 3
+    false: 1
+  RandomizeJunkPitChests: 
+    true: 1
+    false: 3
   RandomizeRancidEggs: 'true'
   RandomizeRelics: 'true'
-  RandomizeWhisperingRoots: 'random'
+  RandomizeWhisperingRoots: 
+    true: 2
+    false: 1
   RandomizeBossEssence: 'true'
   RandomizeGrubs: 'true'
   RandomizeMimics: 'random'
-  RandomizeMaps: 'random'
+  RandomizeMaps: 
+    true: 3
+    false: 1
   RandomizeStags: 'true'
   RandomizeLifebloodCocoons: 'random'
   RandomizeGrimmkinFlames: 'false'
   RandomizeJournalEntries: 'random'
-  RandomizeNail: 'false'
+  RandomizeNail:
+    true: 1
+    false: 5
   RandomizeGeoRocks:
     true: 1
     false: 5
   RandomizeBossGeo: 'random'
   RandomizeSoulTotems:
     true: 1
-    false: 5
+    false: 2
   RandomizeLoreTablets:
     true: 1
     false: 5
   RandomizeElevatorPass:
     true: 1
-    false: 4
+    false: 3
   PreciseMovement: 'false'
   ProficientCombat: 'false'
   BackgroundObjectPogos: 'false'
@@ -54,14 +66,24 @@ Hollow Knight:
   DifficultSkips: 'false'
   RemoveSpellUpgrades: 'false'
   StartLocation: king's_pass
-  Goal: random
+  Goal:
+    any: 2
+    hollowknight: 3
+    siblings: 3
+    radiance: 3
+    godhome: 0
+    godhome_flower: 0
+    grub_hunt: 2
+  GrubHuntGoal: random-range-middle-25-35
   WhitePalace: 
     exclude: 5
     kingfragment: 0
     nopathofpain: 3
-    include: 0
+    include: 1
   StartingGeo: 0
   DeathLink: off
+  ExtraPlatforms: 'true'
+  AddUnshuffledLocations: 'false'
   MinimumGeoPrice: 1
   MaximumGeoPrice: 500
   MinimumGrubPrice: 1
@@ -100,3 +122,107 @@ Hollow Knight:
     - King_Fragment
     - Queen_Fragment
     - Void_Heart
+    - Godtuner
+    - Mimics
+
+  skips:
+    none: 4
+    easy: 1
+    medium: 1
+  
+  triggers:
+  - option_category: Hollow Knight
+    option_name: goal
+    option_result: grub_hunt
+    options:
+      Hollow Knight:
+        +local_items:
+          - Grubs
+  - option_category: Hollow Knight
+    option_name: goal
+    option_result: any
+    options:
+      Hollow Knight:
+        +local_items:
+          - Grubs
+  
+  - option_category: Hollow Knight
+    option_name: skips
+    option_result: none
+    options:
+      Hollow Knight:
+        PreciseMovement: 'false'
+        ProficientCombat: 'false'
+        BackgroundObjectPogos: 'false'
+        EnemyPogos: 'false'
+        ObscureSkips: 'false'
+        ShadeSkips: 'false'
+        InfectionSkips: 'false'
+        FireballSkips: 'false'
+        SpikeTunnels: 'false'
+        AcidSkips: 'false'
+        DamageBoosts: 'false'
+        DangerousSkips: 'false'
+        DarkRooms: 'false'
+        ComplexSkips: 'false'
+        DifficultSkips: 'false'
+
+  - option_category: Hollow Knight
+    option_name: skips
+    option_result: easy
+    options:
+      Hollow Knight:
+        PreciseMovement: 'random'
+        ProficientCombat: 'random'
+        BackgroundObjectPogos: 'true'
+        EnemyPogos: 'true'
+        ObscureSkips: 'false'
+        ShadeSkips: 'false'
+        InfectionSkips: 'random'
+        FireballSkips: 'false'
+        SpikeTunnels: 'false'
+        AcidSkips: 'false'
+        DamageBoosts: 'false'
+        DangerousSkips: 'false'
+        DarkRooms: 'false'
+        ComplexSkips: 'false'
+        DifficultSkips: 'false'
+
+  - option_category: Hollow Knight
+    option_name: skips
+    option_result: medium
+    options:
+      Hollow Knight:
+        PreciseMovement: 
+          true: 3
+          false: 1
+        ProficientCombat: 
+          true: 3
+          false: 1
+        BackgroundObjectPogos: 'true'
+        EnemyPogos: 'true'
+        ObscureSkips:
+            true: 3
+            false: 1
+        ShadeSkips:
+            true: 3
+            false: 2   
+        InfectionSkips: 'true'
+        FireballSkips: 'true'
+        SpikeTunnels: 'false'
+        AcidSkips:
+            true: 1
+            false: 2
+        DamageBoosts:
+            true: 1
+            false: 4        
+        DangerousSkips: 'false'
+        DarkRooms: 'false'
+        ComplexSkips: 'false'
+        DifficultSkips: 'false'
+  - option_category: null
+    option_name: name
+    option_result: Player{player}
+    options:
+      null:
+        name: HK-{player}

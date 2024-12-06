@@ -1,71 +1,82 @@
 Kingdom Hearts 2:
+  Goal:
+    three_proofs: 15
+    lucky_emblem_hunt: 60
+    hitlist: 25
+  Promise_Charm: true
+  FinalXemnas: true
   LevelDepth:
     level_50: 50
     level_50_sanity: 50
-  Sora_Level_EXP:
-    5: 50
-  Valor_Form_EXP:
-    10: 50
-  Wisdom_Form_EXP:
-    4: 50
-  Limit_Form_EXP:
-    4: 50
-  Master_Form_EXP:
-    4: 50
-  Final_Form_EXP:
-    4: 50
-  Summon_EXP:
-    4: 50
-  Schmovement:
-    level_1: 50
-  RandomGrowth:
-    0: 50
-  Promise_Charm:
-    'true': 50
-  Goal:
-    three_proofs: 25
-    lucky_emblem_hunt: 25
-  FinalXemnas:
-    'true': 50
-  LuckyEmblemsAmount:
-    random-range-30-35: 50
-  LuckyEmblemsRequired:
-    random-range-20-25: 50
-  Keyblade_Minimum:
-    3: 50
-  Keyblade_Maximum:
-    7: 50
-  Visitlocking:
-    first_and_second_visit_locking: 50
-  RandomVisitLockingItem:
-    3: 50
-  SuperBosses:
-    'false': 50
-  KeybladeAbilities:
-    support: 50
-  BlacklistKeyblade:
-    - Second Chance
-    - Scan
-    - Once More
-    - Aerial Recovery
+  DonaldGoofyStatsanity:
+    true: 75
+    false: 25
+  Visitlocking: first_and_second_visit_locking
+  RandomVisitLockingItem: 3
+  SuperBosses: false
   Cups:
-    no_cups: 50
-  start_inventory: {}
-  exclude_locations: []
-  priority_locations: []
-  local_items:
-    - Proof of Connection
-    - Proof of Nonexistence
-    - Proof of Peace
-    - Lucky Emblem
-  non_local_items: []
-  start_hints: []
-  start_location_hints: []
+    no_cups: 80
+    cups: 20
+  SummonLevelLocationToggle: true
+  AtlanticaToggle:
+    false: 50
+    true: 5
+  Sora_Level_EXP: 5
+  Valor_Form_EXP: 10
+  Wisdom_Form_EXP: 4
+  Limit_Form_EXP: 4
+  Master_Form_EXP: 4
+  Final_Form_EXP: 4
+  Summon_EXP: 6
+  Schmovement: level_1
+  RandomGrowth: 0
+  Keyblade_Minimum: 3
+  Keyblade_Maximum: 7
+  WeaponSlotStartHint: false
+  FightLogic:
+    easy: 10
+    normal: 50
+  FinalFormLogic: no_light_and_darkness
+  AntiForm: false
+  AutoFormLogic: false
+  CorSkipToggle: false
+  FillerItemsLocal: false
+  start_inventory:
+    Scan: 1
+  
   triggers:
-    #Turn off the need to kill Final Xemnas if Lucky Emblem Hunt
+    #Turn off the need to kill Final Xemnas if Lucky Emblem Hunt and set other details
     - option_name: Goal
       option_category: Kingdom Hearts 2
       option_result: lucky_emblem_hunt
       options:
         Kingdom Hearts 2:
-          FinalXemnas: 'false'
+          FinalXemnas: false
+          LuckyEmblemsAmount: random-range-40-50
+          LuckyEmblemsRequired: random-range-30-39
+          +local_items: [Lucky Emblem]
+    #No point in local proofs for goals other than Three Proofs - Nonexistence, well, doesn't exist, and the other two just open a check or two
+    - option_name: Goal
+      option_category: Kingdom Hearts 2
+      option_result: three_proofs
+      options:
+        Kingdom Hearts 2:
+          +local_items: [Proof]
+    #Turn superbosses and Paradox Cup back on for Hitlist and set details (bounties are always local, no need to set item local)
+    - option_name: Goal
+      option_category: Kingdom Hearts 2
+      option_result: hitlist
+      options:
+        Kingdom Hearts 2:
+          SuperBosses: true
+          Cups: cups_and_hades_paradox
+          BountyAmount: random-range-18-23
+          BountyRequired: random-range-12-17
+          BountyStartingHintToggle: true
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: KH2-{player}
+

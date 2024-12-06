@@ -1,0 +1,582 @@
+A Hat in Time:
+  accessibility: items
+
+  # Make all traps local when enabled.
+  # Non-local traps typically have little effect in an async, with most being triggered upon loading into the game and
+  # then being cleared upon dying in the spaceship hub area or entering a level.
+  local_items:
+    - Baby Trap
+    - Laser Trap
+    - Parade Trap
+
+  ### Trigger control to allow harder options for filler-only asyncs ###
+  trigger_harder_options:
+    'true': 100
+    'false': 0
+
+
+  ### DLC trigger control ###
+  # Players are probably going to have either no DLC or both DLC, though the DLC1 content is probably less popular to
+  # play compared to the DLC2 content.
+  trigger_dlc:
+    no_dlc: 40 # Always Finale Goal
+    dlc1_only: 10 # Always Finale Goal
+    dlc2_only: 15 # 20% (3/15) chance of Finale Goal, 80% (12/15) chance of Rush Hour Goal
+    both_dlc: 35 # 34.3% (12/35) chance of Finale Goal, 65.7% (23/35) chance of Rush Hour Goal
+
+  ### ActRandomizer: false, StartingChapter trigger control ###
+  # Chained trigger to choose StartingChapter with different weights and adjust chapter-specific options for the chosen
+  # starting chapter with ActRandomizer: false.
+  # A trigger changes this value when ActRandomizer is set to false.
+  # Additional triggers then adjust the StartingChapter option and other options depending on this option's value when
+  # it is set to something other than null.
+  triggerchain_no_act_rando_StartingChapter: null
+
+  ### Goal ###
+  # Overridden by triggers, but these values match the summed trigger weights for each goal.
+  EndGoal:
+    finale: 65 # 40 have no DLCs enabled, 10 only have DLC1 enabled, 3 only have DLC2 enabled, 12 have both DLCs enabled
+    rush_hour: 35 # 12 only have DLC2 enabled, 23 have both DLCs enabled
+
+  ### Logic ###
+  # Higher difficulties require additional game knowledge and skill. May be overridden by triggers.
+  LogicDifficulty:
+    normal: 50
+    # Recommended for players that have 100%-ed vanilla and are good at platformers. Most of the tricks can be performed
+    # with only extra game knowledge, except Subcon Well without Hookshot, which is execution heavy and may require
+    # practice.
+    moderate: 5
+    # Hard starts requiring basic speedrun tech (Sprint Double Jump) and more obscure and technically demanding tricks.
+    hard: 1
+  # Re-rolled with an increased chance of "scooter", by triggers, when LogicDifficulty is set to moderate or higher.
+  CTRLogic:
+    time_stop_only: 90
+    scooter: 10
+  # Makes the basic melee attack do nothing, being unable to activate Dweller Bells, Faucets etc.
+  # Makes the Umbrella item more logic relevant.
+  # Also makes the Brewing Hat more logic relevant because it can be used to activate/damage some objects that would
+  # otherwise require the Umbrella to hit.
+  # Having this off can be annoying in some cases because the player loses control of Hat Kid as she recoils in pain
+  # for a couple of seconds after punching something with her bare hands.
+  UmbrellaLogic:
+    'false': 50
+    'true': 50
+  # To reduce confusion, all skips are disabled by default and then only enabled using triggers for higher logic
+  # difficulties where the skips are applicable.
+  NoPaintingSkips: 'true'
+  NoTicketSkips: 'true'
+
+  ### Shuffles ###
+  # The chance of having every shuffle option enabled is about 33.3%.
+  # Shuffle zipline unlocks into the item pool. All ziplines are unlocked from the start when disabled.
+  ShuffleAlpineZiplines:
+    'false': 30
+    'true': 70
+  # Adds additional checks to Purple Time Rifts and additional junk to the item pool.
+  ShuffleStorybookPages:
+    'false': 15
+    'true': 85
+  # Shuffle the items that unlock acts in Chapter 3 into the item pool.
+  # Triggers reduce the chance of a Chapter 3 start when this is enabled.
+  ShuffleActContracts:
+    'false': 20
+    'true': 80
+  # Breaks up the main Subcon Forest area into 4 parts.
+  ShuffleSubconPaintings:
+    'false': 30
+    'true': 70
+
+  ### Badge Seller/Mafia Boss Shop ###
+  MinPonCost: 75
+  MaxPonCost: 300
+  BadgeSellerMinItems: 4
+  BadgeSellerMaxItems: 10
+
+  ### Topology ###
+  # Insanity is more likely to result in an early BK and a smaller Sphere 1. It also enables the possibility of an
+  # important Act being behind a Purple Time Rift entrances, which typically makes a seed much worse and enables the
+  # possibility of nested Time Rift entrances.
+  ActRandomizer:
+    'false': 8 # Effectively only chapter and item randomization, not a common choice.
+    light: 51 # light is the default option
+    insanity: 41
+  # Removes the possibility of being walled for a long time by The Illness Has Spread (when ShuffleAlpineZiplines is
+  # enabled) and Rush Hour (when EnableDLC2 is enabled with EndGoal is set to finale).
+  FinaleShuffle:
+    'false': 5
+    'true': 2
+  # Chapter 3 chance is reduced, by triggers, when ShuffleActContracts is enabled.
+  # StartingChapter is rerolled, by triggers, with different odds when ActRandomizer is disabled.
+  StartingChapter:
+    '1': 38
+    '2': 32
+    '3': 23 # With ShuffleActContracts disabled, a Subcon Forest act still needs to be found to get contracts.
+    '4': 7 # Only has a single act available to start with, and the second is a Finale with many access requirements.
+
+  ### Chapter Costs ###
+  # The average cost of the first unlockable chapter is (LowestChapterCost + ChapterCostIncrement * 2)/ 2.
+  LowestChapterCost: random-range-middle-4-6
+  # Overridden, by triggers, depending on the number of Time Pieces in the pool.
+  HighestChapterCost: 35
+  # Each enabled DLC adds more Time Pieces to the item pool, but they also each add an extra chapter, so the cost
+  # increment and min difference do not need to be adjusted depending on the number of Time Pieces in the pool.
+  # The way chapter costs work is complicated.
+  # Where:
+  #   f(n) = chapter cost of nth unlockable chapter
+  #   f(-1) = 0 (the starting chapter that does not need to be unlocked)
+  # The hard minimum cost for chapters is:
+  #   f_min(0): LowestChapterCost
+  #   f_min(1): f(0) + ChapterCostIncrement
+  #   f_min(n): f(n-1) + max(ChapterCostIncrement, ChapterCostMinDifference)
+  # The hard maximum cost for chapters is:
+  #   f_max(0): max(LowestChapterCost, ChapterCostIncrement) + ChapterCostIncrement
+  #   f_max(1): f(0) + ChapterCostIncrement * 2
+  #   f_max(n): f(n-1) + max(ChapterCostIncrement * 2, ChapterCostMinDifference)
+  # Costs are clamped to <= HighestChapterCost
+  # From running simulations of chapter costs, the average chapter cost starts at roughly the average of the minimum
+  # and maximum for the first chapter and each subsequent chapter gradually gets closer to the maximum.
+  # Ideally, the difference between chapter costs starts high and reduces as each chapter is unlocked because as the
+  # number of Time Pieces in the pool decreases, the time between receiving Time Pieces should get longer.
+  ChapterCostIncrement: random-range-middle-4-7
+  ChapterCostMinDifference: random-range-middle-4-6
+  # Overridden, by triggers, depending on the number of Time Pieces in the pool.
+  FinalChapterMinCost: 30
+  # Overridden, by triggers, depending on the number of Time Pieces in the pool.
+  FinalChapterMaxCost: 35
+  # Increases the number of Time Pieces in the pool, which is factored into the chapter costs.
+  # This value is reduced automatically depending on which DLCs are not enabled. Reduced to a max of 10 with only DLC2,
+  # a max of 6 with only DLC1 and always 0 with no DLCs.
+  MaxExtraTimePieces: 16
+
+  ### Yarn/Time Piece Progression Balancing ###
+  # These options are irrelevant with progression balancing disabled.
+  YarnBalancePercent: 0
+  TimePieceBalancePercent: 0
+
+  ### Convenience ###
+  # Compass Badge effectively functions as an in-game, logic-aware tracker.
+  StartWithCompassBadge: 'true'
+  CompassBadgeMode: closest
+
+  ### Hats ###
+  # Rerolled, using a trigger, with a higher chance of time_stop_last when CTRLogic is set to "scooter".
+  RandomizeHatOrder:
+    'false': 10
+    'true': 70
+    time_stop_last: 20
+  YarnCostMin: random-range-4-8
+  YarnCostMax: random-range-8-12
+  # Average yarn cost has been set to 8, so average yarn requirement for all hats is 40. Low values rolled for
+  # YarnAvailable rely on MinExtraYarn to add extra yarn.
+  YarnAvailable: random-range-30-50
+  MinExtraYarn: random-range-6-10
+  # All Yarn options become irrelevant when HatItems is enabled.
+  # Seeds with Hat items are typically more varied in length, either shorter or longer, but can utilise hints more
+  # effectively.
+  HatItems:
+    'false': 60
+    'true': 40
+
+  ### DLC1 ###
+  EnableDLC1: 'false' # Overridden by triggers.
+  # Send checks by doing tasks in Ship Shape. Adds junk to the item pool for each check.
+  Tasksanity:
+    'false': 5
+    'true': 4
+  TasksanityTaskStep:
+    1: 33
+    2: 33
+    3: 33
+  # Don't want to make `TasksanityTaskStep * TasksanityCheckCount` high because the level gets very long and more
+  # difficult.
+  # Overridden by triggers when TasksanityTaskStep is 2 or 3 to produce a similar number of total tasks.
+  TasksanityCheckCount: random-range-8-24
+  ExcludeTour: 'false' # Overridden by triggers to almost always be 'true' when EndGoal is set to 'finale'.
+  # Setting this to a different value than `TasksanityTaskStep * TasksanityCheckCount` can be confusing because either
+  # the checks are completed before the level is completed, or the player must re-enter Ship Shape multiple times to get
+  # all the checks.
+  ShipShapeCustomTaskGoal: 0 # When 0, set automatically to `TasksanityTaskStep * TasksanityCheckCount`.
+
+  ### Death Wish (DLC1) ###
+  # Death Wish is enabled with a low chance when DLC1 is enabled.
+  # Completing the main objective of a Death Wish contract with Peace and Tranquillity active counts for completing the
+  # checks, so the skill level required to complete Death Wish is lower than would be expected. This can be quite slow,
+  # however, because Peace and Tranquillity can only be activated after failing a Contract a number of times and
+  # activating it costs Pons (farmable currency).
+  EnableDeathWish: 'false'
+  DWShuffle:
+    # A random selection of non-excluded death wish contracts will be enabled and shuffled into a random sequence that
+    # must be completed in order.
+    'true': 3
+    # All non-excluded death wish contracts will be enabled and unlocked like the base game, by collecting Stamps from
+    # completing other contracts. This typically results in the player having a lot to do once Death Wish is unlocked.
+    'false': 1
+  DWShuffleCountMin: 10
+  # There are 38 contracts total, after excluding annoying contracts, there are 31. After excluding candles there are
+  # 23. Note that one of the candles is only enabled when DLC2 is enabled.
+  DWShuffleCountMax: random-range-low-10-38
+  DeathWishOnly: 'false'
+  # The bonuses cannot be completing using Peace and Tranquillity and are often considerably more difficult.
+  DWEnableBonus: 'false'
+  # When DWShuffle is not enabled, Stamps are required to unlock further Death Wish contracts, this gives the Stamps
+  # from bonuses for free when completing the main objective, allowing the Death Wish map to open up without having to
+  # complete any bonuses or use Peace and Tranquillity to get all the Stamps from the contract while only completing an
+  # easier main objective.
+  DWAutoCompleteBonuses: 'true'
+  DWExcludeAnnoyingContracts: 'true'
+  DWExcludeAnnoyingBonuses: 'true'
+  DWExcludeCandles:
+    'true': 2
+    'false': 1
+  DWTimePieceRequirement: random # Overridden by triggers depending on the number of Time Pieces in the item pool.
+
+  ### DLC2 ###
+  EnableDLC2: 'false' # Overridden by triggers.
+  BaseballBat: 'false' # Overridden by triggers. Set to random when DLC2 is enabled.
+  #### DLC2 Shops ####
+  MetroMinPonCost: 50
+  MetroMaxPonCost: 200
+  NyakuzaThugMinShopItems: random-range-low-2-5
+  NyakuzaThugMaxShopItems: 5
+
+  ### Traps ###
+  # Note that all traps have been forced to be local.
+  TrapChance:
+    0: 90
+    random-range-low-5-10: 10
+  BabyTrapWeight: 40
+  LaserTrapWeight: 40
+  # Parade traps last until death or level change, so have a lower weight.
+  ParadeTrapWeight: 20
+
+  triggers:
+    # Reduce the chance of starting in Chapter 3 when ShuffleActContracts is enabled because only a single act will be
+    # available to start with.
+    # This will be overridden by a later trigger if ActRandomizer is disabled.
+    - option_category: A Hat in Time
+      option_name: ShuffleActContracts
+      option_result: 'true'
+      options:
+        A Hat in Time:
+          StartingChapter:
+            '1': 41
+            '2': 35
+            '3': 14 # Only has a single act available to start with, but each Act Contract item unlocks another act.
+            '4': 10 # Only has a single act available to start with.
+
+    ### Triggers for ActRandomizer: 'false' ###
+    # Re-roll starting chapter with different odds when ActRandomizer is disabled.
+    # The StartingChapter option is modified by a chained trigger so that Shuffle options based on the chapter picked
+    # can be modified too.
+    - option_category: A Hat in Time
+      option_name: ActRandomizer
+      option_result: 'false'
+      options:
+        A Hat in Time:
+          triggerchain_no_act_rando_StartingChapter:
+            '1': 30
+            '2': 30
+            # Act Contracts/Painting Unlocks could still be shuffled. Rather than complicating the triggers further,
+            # just reduce the chance of this chapter.
+            '3': 20
+            # Ziplines could still be shuffled. Rather than complicating the triggers further, just reduce the chance of
+            # this chapter.
+            '4': 20
+    # ActRandomizer is disabled and the start will be Chapter 1
+    - option_category: A Hat in Time
+      option_name: triggerchain_no_act_rando_StartingChapter
+      option_result: '1'
+      options:
+        A Hat in Time:
+          StartingChapter: '1'
+    # ActRandomizer is disabled and the start will be Chapter 2.
+    # The generator puts the Umbrella into the player's starting inventory for this combination if they logically
+    # require an item to hit the switches in Dead Bird Studios to complete the act.
+    - option_category: A Hat in Time
+      option_name: triggerchain_no_act_rando_StartingChapter
+      option_result: '2'
+      options:
+        A Hat in Time:
+          StartingChapter: '2'
+    # ActRandomizer is disabled and the start will be Chapter 3.
+    # The generator puts 1 Progressive Painting Unlock into the player's starting inventory for this combination if they
+    # have ShuffleSubconPaintings enabled.
+    # ShuffleActContracts is also re-rolled with a lower chance of being enabled because it will typically result in an
+    # earlier BK when enabled.
+    - option_category: A Hat in Time
+      option_name: triggerchain_no_act_rando_StartingChapter
+      option_result: '3'
+      options:
+        A Hat in Time:
+          StartingChapter: '3'
+          ShuffleSubconPaintings:
+            'false': 70
+            'true': 30
+          ShuffleActContracts:
+            'false': 70
+            'true': 30
+    # ActRandomizer is disabled and the start will be Chapter 4.
+    # The generator puts the Hookshot Badge into the player's starting inventory for this combination.
+    # If the player has UmbrellaLogic enabled, they also get the Umbrella.
+    # If the player has ShuffleAlpineZiplines enabled, they also get a free Zipline Unlock, but this is still quite a
+    # small start, so the chance of ShuffleAlpineZiplines being enabled is reduced.
+    - option_category: A Hat in Time
+      option_name: triggerchain_no_act_rando_StartingChapter
+      option_result: '4'
+      options:
+        A Hat in Time:
+          StartingChapter: '4'
+          ShuffleAlpineZiplines:
+            'false': 70
+            'true': 30
+
+    ### Enable DLCs and choose Goal and Highest/Max chapter costs dependent on the DLCs enabled. ###
+    # Chapter costs are set to a percentage of the number of Time Pieces that are in the pool with the enabled DLCs.
+    # HighestChapterCost is set to 72.5% of the Time Pieces in the pool.
+    # FinalChapterMinCost is set to 75% of the Time Pieces in the pool.
+    # FinalChapterMaxCost is set to 87.5% of the Time Pieces in the pool.
+    # The summed weights of each EndGoal option have been set to match the weight of the trigger_dlc result for easier
+    # comparisons.
+    # DWTimePieceRequirement is set to random-range-middle-1-{FinalChapterMinCost - 1}, but when
+    # {FinalChapterMinCost - 1} would be above the maximum DWTimePieceRequirement value of 35, the maximum is set to 35
+    # and minimum value is increased such that the middle point is the same as middle-1-{FinalChapterMinCost - 1}.
+    - option_category: A Hat in Time
+      option_name: trigger_dlc
+      option_result: no_dlc
+      options:
+        A Hat in Time:
+          EndGoal:
+            finale: 40
+          # There are 40 Time Pieces in the pool.
+          HighestChapterCost: 29
+          FinalChapterMinCost: 30
+          FinalChapterMaxCost: 35
+          DWTimePieceRequirement: random-range-middle-1-29
+    - option_category: A Hat in Time
+      option_name: trigger_dlc
+      option_result: dlc1_only
+      options:
+        A Hat in Time:
+          EndGoal:
+            finale: 10
+          EnableDLC1: 'true'
+          # There are 46 Time Pieces in the pool.
+          HighestChapterCost: random-range-33-34 # ~33.35
+          FinalChapterMinCost: random-range-34-35 # 34.5
+          FinalChapterMaxCost: random-range-low-40-41 # ~40.25
+          DWTimePieceRequirement: random-range-middle-1-33
+    - option_category: A Hat in Time
+      option_name: trigger_dlc
+      option_result: dlc2_only
+      options:
+        A Hat in Time:
+          EndGoal:
+            finale: 3
+            rush_hour: 12
+          EnableDLC2: 'true'
+          # There are 50 Time Pieces in the pool.
+          HighestChapterCost: random-range-low-36-37 # ~36.25
+          FinalChapterMinCost: random-range-37-38 # 37.5
+          FinalChapterMaxCost: random-range-high-43-44 # ~43.75
+          DWTimePieceRequirement: random-range-middle-2-35
+    - option_category: A Hat in Time
+      option_name: trigger_dlc
+      option_result: both_dlc
+      options:
+        A Hat in Time:
+          EndGoal:
+            finale: 12
+            rush_hour: 23
+          EnableDLC1: 'true'
+          EnableDLC2: 'true'
+          # There are 56 Time Pieces in the pool.
+          HighestChapterCost: random-range-40-41 # ~40.6
+          FinalChapterMinCost: 42
+          FinalChapterMaxCost: 49
+          DWTimePieceRequirement: random-range-middle-7-35
+
+    # Almost always disable the Tour rift Act/Entrance when the goal is Finale because it is almost always only
+    # reachable once the goal is reachable.
+    # Note that the Tour rift Act/Entrance is only available with EnableDLC1: true, so the ExcludeTour option does
+    # nothing when DLC1 is not enabled.
+    - option_category: A Hat in Time
+      option_name: EndGoal
+      option_result: finale
+      options:
+        A Hat in Time:
+          ExcludeTour:
+            'true': 95
+            'false': 5
+
+    ### Triggers depending on which DLCs are enabled ###
+    # Enable Death Wish with a low chance when DLC1 is enabled
+    - option_category: A Hat in Time
+      option_name: EnableDLC1
+      option_result: 'true'
+      options:
+        A Hat in Time:
+          EnableDeathWish:
+            'true': 5
+            'false': 95
+    # Allow the Umbrella to be replaced with the Baseball Bat when DLC2 is enabled. The Baseball Bat is functionally
+    # identical.
+    - option_category: A Hat in Time
+      option_name: EnableDLC2
+      option_result: 'true'
+      options:
+        A Hat in Time:
+          BaseballBat: random
+
+    # Adjust the TasksanityCheckCount when the TasksanityTaskStep is 2 or 3 so that the possible total number of tasks
+    # remains roughly the same.
+    - option_category: A Hat in Time
+      option_name: TasksanityTaskStep
+      option_result: 2
+      options:
+        A Hat in Time:
+          TasksanityCheckCount: random-range-4-12 # 8-24 total tasks
+    - option_category: A Hat in Time
+      option_name: TasksanityTaskStep
+      option_result: 3
+      options:
+        A Hat in Time:
+          TasksanityCheckCount: random-range-3-8 # 9-24 total tasks
+
+    ### Triggers adjusting logic ###
+    # Remove the possibility for LogicDifficulty: Hard when Death Wish is enabled.
+    # Death Wish is enough of a challenge as is and adding logic difficulty on top of that makes it even more difficult.
+    # Moderate logic difficulty affects very little of Death Wish, so is left as a possible option.
+    - option_category: A Hat in Time
+      option_name: EnableDeathWish
+      option_result: 'true'
+      options:
+        A Hat in Time:
+          LogicDifficulty:
+            normal: 50
+            moderate: 6 # The weight from "hard" has been added to "moderate".
+    # Enable skips and other logic choices depending on logic difficulty.
+    # To reduce confusion, skips and logic choices are only ever enabled for logic difficulties where they are relevant.
+    - option_category: A Hat in Time
+      option_name: LogicDifficulty
+      option_result: moderate
+      options:
+        A Hat in Time:
+          NoPaintingSkips:
+             'false': 50
+             'true': 50
+          NoTicketSkips: # Rush Hour-only ticket skips are only relevant to Hard logic and above
+            'false': 50
+            'true': 50
+          CTRLogic:
+            time_stop_only: 30
+            scooter: 70
+    - option_category: A Hat in Time
+      option_name: LogicDifficulty
+      option_result: hard
+      options:
+        A Hat in Time:
+          NoPaintingSkips:
+             'false': 50
+             'true': 50
+          NoTicketSkips:
+            'false': 50
+            'true': 25
+            rush_hour: 25
+          CTRLogic:
+            scooter: 100
+
+    # Disable all more difficult options for asyncs that allow non-filler yamls #
+    - option_category: A Hat in Time
+      option_name: trigger_harder_options
+      option_result: 'false'
+      options:
+        A Hat in Time:
+          EnableDeathWish: 'false'
+          LogicDifficulty: normal
+          NoPaintingSkips: 'true'
+          NoTicketSkips: 'true'
+          CTRLogic: time_stop_only
+          TrapChance:
+            0: 90
+            5: 10
+
+    # Re-roll hat order with a greatly increased chance of time_stop_last when CTRLogic is set to logically allow
+    # Scooter Badge + Sprint Hat because there is only a single other check in the game (Pink Paw Station - Behind Fan)
+    # that requires Time Stop Hat, and only when on LogicDifficulty: normal and EnableDLC2: true. Time Stop Hat is also
+    # logically relevant to Alpine Skyline - Mystifying Time Mesa: Zipline, but Sprint Hat can be used instead.
+    - option_category: A Hat in Time
+      option_name: CTRLogic
+      option_result: scooter
+      options:
+        A Hat in Time:
+          RandomizeHatOrder:
+            'false': 10
+            'true': 10
+            time_stop_last: 80
+
+    ### Randomized option cleanup ###
+    # If a randomized option has no effect because an option it depends on has been disabled, set it to a non-randomized
+    # value, typically its default.
+    # This aims to make it easier for people reading the spreadsheet to identify which options have been enabled.
+    - option_category: A Hat in Time
+      option_name: EnableDLC1
+      option_result: 'false'
+      options:
+        A Hat in Time:
+          EnableDeathWish: 'false'
+          Tasksanity: 'false'
+          ExcludeTour: 'false'
+    - option_category: A Hat in Time
+      option_name: Tasksanity
+      option_result: 'false'
+      options:
+        A Hat in Time:
+          TasksanityTaskStep: 1
+          TasksanityCheckCount: 18
+    - option_category: A Hat in Time
+      option_name: EnableDeathWish
+      option_result: 'false'
+      options:
+        A Hat in Time:
+          DWShuffle: 'false'
+          DWExcludeCandles: 'true'
+          DWTimePieceRequirement: 15
+    - option_category: A Hat in Time
+      option_name: DWShuffle
+      option_result: 'false'
+      options:
+        A Hat in Time:
+          # DWShuffleCountMin is set lower than default, but is not randomized, so is not changed here to prevent adding
+          # an extra column to the spreadsheet.
+          DWShuffleCountMax: 25
+    - option_category: A Hat in Time
+      option_name: EnableDLC2
+      option_result: 'false'
+      options:
+        A Hat in Time:
+          NyakuzaThugMinShopItems: 0
+          # NyakuzaThugMaxShopItems is set higher than default, but is not randomized, so is not changed here to prevent
+          # adding an extra column to the spreadsheet.
+    - option_category: A Hat in Time
+      option_name: HatItems
+      option_result: 'true'
+      options:
+        A Hat in Time:
+          RandomizeHatOrder: 'true'
+          YarnCostMin: 4
+          YarnCostMax: 8
+          YarnAvailable: 50
+          MinExtraYarn: 10
+    - option_category: A Hat in Time
+      option_name: ActRandomizer
+      option_result: 'false'
+      options:
+        A Hat in Time:
+          FinaleShuffle: 'false'
+
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: HatInTime-{player}

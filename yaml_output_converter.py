@@ -74,7 +74,7 @@ for game in games:
 
 with open('mystery_result.csv', 'w') as mysterycsv:
     rows = [{get_option_header(data, key): get_option_name(data) for key, data in row.items()} for row in rows]
-    fieldnames = set(itertools.chain.from_iterable(((key for key, value in dictionary.items() if value not in {"", None})
+    fieldnames = set(itertools.chain.from_iterable(((key for key, value in dictionary.items() if value not in ["", None])
                                                     for dictionary in rows)))
 
     fieldnames -= {"game"}

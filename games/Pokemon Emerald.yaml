@@ -1,0 +1,320 @@
+Pokemon Emerald:
+  goal:
+    champion: 55
+    steven: 25
+    norman: 0
+    legendary_hunt: 20
+  badges:
+    vanilla: 0
+    shuffle: 30
+    completely_random: 70
+  hms:
+    vanilla: 0
+    shuffle: 30
+    completely_random: 70
+  key_items: true
+  bikes:
+    false: 10
+    true: 90
+  event_tickets:
+    false: 80
+    true: 20
+  rods:
+    false: 10
+    true: 90
+  overworld_items:
+    false: 20
+    true: 80
+  hidden_items:
+    false: 50
+    true: 50
+  npc_gifts:
+    false: 50
+    true: 50
+  berry_trees:
+    false: 50
+    true: 50
+  dexsanity:
+    false: 70
+    true: 30
+  trainersanity:
+    false: 70
+    true: 30
+  item_pool_type:
+    shuffled: 33
+    diverse_balanced: 33
+    diverse: 33
+  require_itemfinder:
+    false: 50
+    true: 50
+  require_flash:
+    neither: 7
+    only_granite_cave: 7
+    only_victory_road: 7
+    both: 80
+  elite_four_requirement:
+    badges: 70
+    gyms: 30
+  elite_four_count: random-high
+  norman_requirement:
+    badges: 70
+    gyms: 30
+  norman_count: random-range-1-5
+  legendary_hunt_catch: false
+  legendary_hunt_count: random-range-4-12
+  allowed_legendary_hunt_encounters: ["Ho-Oh", "Kyogre", "Lugia", "Deoxys", "Latios", "Registeel", "Mew", "Groudon", "Regirock", "Rayquaza", "Regice", "Latias"]
+  wild_pokemon:
+    vanilla: 10
+    match_base_stats: 25
+    match_type: 10
+    match_base_stats_and_type: 10
+    completely_random: 45
+  wild_encounter_blacklist: ["_Legendaries"]
+  starters:
+    vanilla: 10
+    match_base_stats: 20
+    match_type: 20
+    match_base_stats_and_type: 20
+    completely_random: 30
+  starter_blacklist: []
+  trainer_parties:
+    vanilla: 20
+    match_base_stats: 10
+    match_type: 10
+    match_base_stats_and_type: 10
+    completely_random: 50
+  trainer_party_blacklist: ["_Legendaries"]
+  force_fully_evolved:
+    100: 50
+    random-range-high-20-50: 50
+  legendary_encounters:
+    vanilla: 10
+    shuffle: 40
+    match_base_stats: 20
+    match_type: 5
+    match_base_stats_and_type: 5
+    completely_random: 20
+  misc_pokemon:
+    vanilla: 15
+    shuffle: 5
+    match_base_stats: 5
+    match_type: 5
+    match_base_stats_and_type: 5
+    completely_random: 65
+  types:
+    vanilla: 60
+    shuffle: 20
+    completely_random: 10
+    follow_evolutions: 10
+  abilities:
+    vanilla: 50
+    completely_random: 25
+    follow_evolutions: 25
+  ability_blacklist:
+    ["Wonder Guard"]
+  level_up_moves:
+    vanilla: 50
+    randomized: 25
+    start_with_four_moves: 25
+  move_match_type_bias:
+    0: 70
+    random-range-10-40: 30
+  move_normal_type_bias:
+    0: 70
+    random-range-10-40: 30
+  tm_tutor_compatibility:
+    100: 20
+    random-high: 60
+    vanilla: 20
+  hm_compatibility:
+    100: 20
+    random-high: 60
+    vanilla: 20
+  tm_tutor_moves:
+    false: 40
+    true: 60
+  reusable_tms_tutors:
+    false: 20
+    true: 80
+  move_blacklist: ["Dragon Rage"]
+  min_catch_rate:
+    3: 10
+    80: 40
+    255: 50
+  guaranteed_catch:
+    false: 50
+    true: 50
+  normalize_encounter_rates:
+    false: 50
+    true: 50
+  exp_modifier:
+    100: 30
+    random-range-80-100: 5
+    random-range-100-500: 65
+  blind_trainers:
+    false: 40
+    true: 60
+  purge_spinners:
+    false: 20
+    true: 80
+  match_trainer_levels:
+    off: 80
+    additive: 10
+    multiplicative: 10
+  match_trainer_levels_bonus: 0  # Modified in triggers
+  double_battle_chance:
+    0: 70
+    random-high: 25
+    100: 5
+  better_shops:
+    false: 30
+    true: 70
+  remove_roadblocks: []
+  extra_boulders:
+    false: 35
+    true: 65
+  extra_bumpy_slope:
+    false: 35
+    true: 65
+  modify_118:
+    false: 35
+    true: 65
+  free_fly_location:
+    false: 50
+    true: 50
+  hm_requirements:
+    vanilla: 50
+    fly_without_badge: 50
+  turbo_a: true
+  receive_item_messages: progression
+  remote_items: true
+  music:
+    false: 80
+    true: 20
+  fanfares:
+    false: 80
+    true: 20
+  death_link: false
+  enable_wonder_trading: true
+
+  triggers:
+    # Blacklist wild legendaries
+    - option_category: Pokemon Emerald
+      option_name: dexsanity
+      option_result: false
+      options:
+        Pokemon Emerald:
+          wild_encounter_blacklist:
+            allow_legendaries: 50
+            disallow_legendaries: 50
+
+    # Blacklist wild legendaries with Legendary Hunt goal
+    # Also guarantee event tickets in pool
+    - option_category: Pokemon Emerald
+      option_name: goal
+      option_result: legendary_hunt
+      options:
+        Pokemon Emerald:
+          wild_encounter_blacklist:
+            allow_legendaries: 20
+            disallow_legendaries: 80
+          event_tickets: true
+
+    - option_category: Pokemon Emerald
+      option_name: wild_encounter_blacklist
+      option_result: disallow_legendaries
+      options:
+        Pokemon Emerald:
+          wild_encounter_blacklist: ["_Legendaries"]
+
+    - option_category: Pokemon Emerald
+      option_name: wild_encounter_blacklist
+      option_result: allow_legendaries
+      options:
+        Pokemon Emerald:
+          wild_encounter_blacklist: []
+
+    # Must randomize wild encounters during dexsanity
+    # Not really any point in blacklisting species, they will appear anyway
+    # Normalize encounter rates to prevent searching for 1% encounters
+    # Set guaranteed catch to prevent frustating low probability catches
+    - option_category: Pokemon Emerald
+      option_name: dexsanity
+      option_result: true
+      options:
+        Pokemon Emerald:
+          wild_pokemon:
+            vanilla: 0
+            match_base_stats: 5
+            match_type: 5
+            match_base_stats_and_type: 5
+            completely_random: 85
+          wild_encounter_blacklist: []
+          normalize_encounter_rates: true
+          guaranteed_catch: true
+
+    # Blacklist trainer legendaries
+    - option_category: Pokemon Emerald
+      option_name: trainer_parties
+      option_result: completely_random
+      options:
+        Pokemon Emerald:
+          trainer_party_blacklist:
+            allow_legendaries: 50
+            disallow_legendaries: 50
+
+    - option_category: Pokemon Emerald
+      option_name: trainer_party_blacklist
+      option_result: disallow_legendaries
+      options:
+        Pokemon Emerald:
+          trainer_party_blacklist: ["_Legendaries"]
+
+    - option_category: Pokemon Emerald
+      option_name: trainer_party_blacklist
+      option_result: allow_legendaries
+      options:
+        Pokemon Emerald:
+          trainer_party_blacklist: []
+
+    # Disallow randomized pokemon types when match trainer levels is on 
+    - option_category: Pokemon Emerald
+      option_name: match_trainer_levels
+      option_result: additive
+      options:
+        Pokemon Emerald:
+          types: vanilla
+
+    - option_category: Pokemon Emerald
+      option_name: match_trainer_levels
+      option_result: multiplicative
+      options:
+        Pokemon Emerald:
+          types: vanilla
+
+    # Set matching trainer levels bonus
+    - option_category: Pokemon Emerald
+      option_name: match_trainer_levels
+      option_result: additive
+      options:
+        Pokemon Emerald:
+          match_trainer_levels_bonus:
+            0: 80
+            random-range-1-10: 20
+
+    - option_category: Pokemon Emerald
+      option_name: match_trainer_levels
+      option_result: multiplicative
+      options:
+        Pokemon Emerald:
+          match_trainer_levels_bonus:
+            0: 80
+            random-range-1-25: 20
+
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: PokeEmerald-{player}
+

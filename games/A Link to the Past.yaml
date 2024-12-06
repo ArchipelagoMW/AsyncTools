@@ -1,186 +1,127 @@
 A Link to the Past:
-  ### Logic Section ###
-  # Warning: overworld_glitches is not available and minor_glitches is only partially implemented on the door-rando version
-  glitches_required: # Determine the logic required to complete the seed
-    none: 50 # No glitches required
-    minor_glitches: 0 # Puts fake flipper, waterwalk, super bunny shenanigans, and etc into logic
-    overworld_glitches: 0 # Assumes the player has knowledge of both overworld major glitches (boots clips, mirror clips) and minor glitches
-    no_logic: 0 # Your own items are placed with no regard to any logic; such as your Fire Rod can be on your Trinexx.
-  # Other players items are placed into your world under OWG logic
-  dark_room_logic: # Logic for unlit dark rooms
-    lamp: 50 # require the Lamp for these rooms to be considered accessible.
-    torches: 0 # in addition to lamp, allow the fire rod and presence of easily accessible torches for access
-    none: 0 # all dark rooms are always considered doable, meaning this may force completion of rooms in complete darkness
-  restrict_dungeon_item_on_boss: # aka ambrosia boss items
-    on: 0 # prevents unshuffled compasses, maps and keys to be boss drops, they can still drop keysanity and other players' items
-    off: 50
-  ### End of Logic Section ###
-  bigkey_shuffle: # Big Key Placement
+  dark_room_logic:
+    lamp: 75
+    torches: 25
+  big_key_shuffle:
     original_dungeon: 50
-    own_dungeons: 5
     own_world: 15
     any_world: 0
     different_world: 0
-  smallkey_shuffle: # Small Key Placement
+  small_key_shuffle:
     original_dungeon: 50
-    own_dungeons: 5
     own_world: 15
-    any_world: 0
-    different_world: 0
     universal: 10
-  compass_shuffle: # Compass Placement
+  compass_shuffle:
     original_dungeon: 50
-    own_dungeons: 0
-    own_world: 0
     any_world: 20
-    different_world: 0
-  map_shuffle: # Map Placement
+  map_shuffle:
     original_dungeon: 50
-    own_dungeons: 0
-    own_world: 0
     any_world: 20
-    different_world: 0
-  # you can add more combos of these letters here
+  key_drop_shuffle: on
   dungeon_counters: pickup
-  progressive: # Enable or disable progressive items (swords, shields, bow)
-    on: 50 # All items progressive
-    off: 25 # No items progressive
-    grouped_random: 25 # Randomly decides for all items. Swords could be progressive, shields might not be
+  progressive:
+    on: 50
+    off: 25
+    grouped_random: 25
   entrance_shuffle:
-    none: 60 # Vanilla game map. All entrances and exits lead to their original locations. You probably want this option
-    dungeonssimple: 20 # shuffle just dungeons amongst each other, swapping dungeons entirely, so Hyrule Castle is always 1 dungeon
-    dungeonsfull: 15 # shuffle any dungeon entrance with any dungeon interior, so Hyrule Castle can be 4 different dungeons
-    dungeonscrossed: 10
-    simple: 1 # Entrances are grouped together before being randomized. Simple uses the most strict grouping rules
-    restricted: 1 # Less strict than simple
-    full: 5 # Less strict than restricted
-    crossed: 10 # Less strict than full
-    insanity: 0 # Very few grouping rules and entrances <-> insides are uncoupled. Good luck.
-  goals:
-    ganon: 30 # Climb GT, defeat Agahnim 2, then kill Ganon
-    crystals: 30 # Only killing Ganon is required. The hole is always open. Items may still be placed in GT, however
-    bosses: 10 # Defeat the boss of all dungeons, including Agahnim's tower and GT (Aga 2)
-    pedestal: 30 # Pull the Triforce from the Master Sword pedestal
-    triforce_hunt: 0 # Collect 20 of 30 Triforce pieces spread throughout the world, then turn them in to Murahadala in front of Hyrule Castle
+    none: 60
+    dungeons_simple: 20
+    dungeons_full: 15
+    dungeons_crossed: 10
+    simple: 1
+    restricted: 1
+    full: 5
+    crossed: 10
+  goal:
+    ganon: 30
+    crystals: 30
+    bosses: 10
+    pedestal: 30
     local_triforce_hunt: 5
-    ganon_triforce_hunt: 0 # Collect 20 of 30 Triforce pieces spread throughout the worlds, then kill Ganon
-    local_ganon_triforce_hunt: 15 # Collect 20 of 30 Triforce pieces spread throughout your world, then kill Ganon
-    ganon_pedestal: 15 # Pull the Master Sword pedestal, then kill Ganon
+    local_ganon_triforce_hunt: 15
+    ganon_pedestal: 15
   open_pyramid:
-    goal: 50 # Opens the pyramid if the goal requires you to kill Ganon, unless the goal is Slow Ganon or All Dungeons
-    auto: 0 # Same as Goal, but also is closed if holes are shuffled and ganon is part of the shuffle pool
-    yes: 0 # Pyramid hole is always open. Ganon's vulnerable condition is still required before he can he hurt
-    no: 0 # Pyramid hole is always closed until you defeat Agahnim atop Ganon's Tower
+    goal: 50
   triforce_pieces_required:
-    25: 1
-    26: 1
-    27: 1
-    28: 1
-    29: 1
-    30: 1
+    random-range-25-30: 1
   triforce_pieces_available:
-    30: 1
-    31: 1
-    32: 1
-    33: 1
-    34: 1
-    35: 1
+    random-range-30-35: 1
   crystals_needed_for_gt: random-low
   crystals_needed_for_ganon: random-high
   mode:
-    standard: 10 # Begin the game by rescuing Zelda from her cell and escorting her to the Sanctuary.
-    open: 70 # Begin the game from your choice of Link's House or the Sanctuary
-    inverted: 20 # Begin in the Dark World. The Moon Pearl is required to avoid bunny-state in Light World, and the Light World game map is altered
+    standard: 10
+    open: 70
+    inverted: 20
   hints: 'on'
-  swordless:
-    on: 0 # Your swords are replaced by rupees. Gameplay changes have been made to accommodate this change
-    off: 25
   item_pool:
     easy: 2
-    normal: 10 # Item availability remains unchanged from the vanilla game
-    hard: 3 # Reduced upgrade availability (max: 14 hearts, green mail, tempered sword, fire shield, no silvers unless swordless)
-    expert: 0 # Minimum upgrade availability (max: 8 hearts, green mail, master sword, fighter shield, no silvers unless swordless)
+    normal: 10
+    hard: 3
   item_functionality:
     easy: 2
-    normal: 10 # Vanilla game item functionality
-    hard: 3 # Reduced helpfulness of items (potions less effective, can't catch faeries, cape uses double magic, byrna does not grant invulnerability, boomerangs do not stun, silvers disabled outside ganon)
-    expert: 0 # Vastly helpfulness of items (potions barely effective, can't catch faeries, cape uses double magic, byrna does not grant invulnerability, boomerangs and hookshot do not stun, silvers disabled outside ganon)
-  tile_shuffle: # Randomize the tile layouts in flying tile rooms
+    normal: 10
+    hard: 3
+  tile_shuffle:
     on: 50
-    off: 0
-  misery_mire_medallion: # required medallion to open Misery Mire front entrance
-    random: 50
-    Ether: 0
-    Bombos: 0
-    Quake: 0
-  turtle_rock_medallion: # required medallion to open Turtle Rock front entrance
-    random: 50
-    Ether: 0
-    Bombos: 0
-    Quake: 0
-  ### Enemizer Section ###
+    off: 50
   boss_shuffle:
-    none: 70 # No boss shuffle
-    basic: 10 # Existing bosses except Ganon and Agahnim are shuffled throughout dungeons
-    full: 10 # Replace GT bosses with random bosses, then follow simple logic
-    chaos: 10 # Any boss can appear any amount of times
+    none: 70
+    basic: 10
+    full: 10
+    chaos: 10
     singularity: 20
-  enemy_shuffle: # Randomize enemy placement
+  enemy_shuffle:
     on: 10
     off: 50
-  killable_thieves: # Make thieves killable
-    on: 0 # Usually turned on together with enemy_shuffle to make annoying thief placement more manageable
+  killable_thieves:
     off: 50
-  bush_shuffle: # Randomize the chance that bushes have enemies and the enemies under said bush
     on: 0
+  bush_shuffle:
     off: 50
   enemy_damage:
-    default: 50 # Vanilla enemy damage
-    shuffled: 0 # Enemies deal 0 to 4 hearts and armor helps
-    random: 0 # Enemies deal 0 to 8 hearts and armor just reshuffles the damage
+    default: 50
   enemy_health:
-    default: 50 # Vanilla enemy HP
-    easy: 0 # Enemies have reduced health
-    hard: 0 # Enemies have increased health
-    expert: 0 # Enemies have greatly increased health
+    default: 50
   pot_shuffle:
-    'on': 0 # Keys, items, and buttons hidden under pots in dungeons are shuffled with other pots in their supertile
-    'off': 100 # Default pot item locations
-  ### End of Enemizer Section ###
-  ### Shop Settings ###
-  shop_shuffle_slots: # Maximum amount of shop slots to be filled with regular item pool items (such as Moon Pearl)
+    'off': 100
+  shop_item_slots:
     0: 50
-    5: 0
-    15: 0
-    30: 0
-    random: 0 # 0 to 30 evenly distributed
-  shop_shuffle:
-    none: 5
-    g: 1 # Generate new default inventories for overworld/underworld shops, and unique shops
-    f: 1 # Generate new default inventories for every shop independently
-    i: 1 # Shuffle default inventories of the shops around
-    p: 1 # Randomize the prices of the items in shop inventories
-    u: 1 # Shuffle capacity upgrades into the item pool (and allow them to traverse the multiworld)
-    w: 0 # Consider witch's hut like any other shop and shuffle/randomize it too
-    ip: 1 # Shuffle inventories and randomize prices
-    fpu: 1 # Generate new inventories, randomize prices and shuffle capacity upgrades into item pool
-    uip: 1 # Shuffle inventories, randomize prices and shuffle capacity upgrades into the item pool
-    uipP: 1
-    ipP: 1
-    pP: 1
-  # You can add more combos
-  ### End of Shop Section ###
-  shuffle_prizes: g
-  start_inventory: {"Pegasus Boots": 1}
-  local_items: ["Moon Pearl", "Pegasus Boots"]
+  randomize_shop_inventories:
+    default: 50
+    randomize_by_shop_type: 50
+    randomize_each: 50
+  shuffle_shop_inventories:
+    false: 50
+    true: 50
+  randomize_shop_prices:
+    false: 50
+    true: 50
+  randomize_cost_types:
+    false: 50
+    true: 5
+  shuffle_capacity_upgrades:
+    off: 50
+    on: 50
+    on_combined: 10
+  bombless_start:
+    false: 50
+    true: 5
+  shuffle_prizes: general
+  start_inventory_from_pool: {"Pegasus Boots": 1}
+  local_items: ["Moon Pearl"]
   glitch_boots:
-    on: 50 # Start with Pegasus Boots in any glitched logic mode that makes use of them
+    on: 50
     off: 0
   triggers:
-  #Turn killable thieves on if enemy shuffle is on
   - option_name: enemy_shuffle
     option_category: A Link to the Past
     option_result: on
     options:
       A Link to the Past:
         killable_thieves: on
+  - option_category: null
+    option_name: name
+    option_result: Player{player}
+    options:
+      null:
+        name: LttP-{player}

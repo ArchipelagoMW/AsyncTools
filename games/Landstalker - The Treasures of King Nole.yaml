@@ -1,0 +1,32 @@
+Landstalker - The Treasures of King Nole:
+  goal:
+    beat_gola: 10
+    reach_kazalt: 90
+  spawn_region:
+    massan: 50
+    gumi: 20
+  jewel_count: random-range-5-9
+  progressive_armors: true
+  use_record_book: true
+  use_spell_book: true
+  shop_prices_factor: 80
+  combat_difficulty:
+    easy: 70
+    normal: 30
+  teleport_tree_requirements: clear_tibor_and_visit_trees
+  shuffle_trees: false
+  ensure_ekeeke_in_shops: true
+  remove_gumi_boulder: false
+  allow_whistle_usage_behind_trees: true
+  handle_damage_boosting_in_logic: false
+  handle_enemy_jumping_in_logic: false
+  handle_tree_cutting_glitch_in_logic: false
+  hint_count: random-high
+  revive_using_ekeeke: true
+  triggers:
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: Landstalker-{player}

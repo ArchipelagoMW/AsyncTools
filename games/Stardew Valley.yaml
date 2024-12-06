@@ -1,81 +1,146 @@
 Stardew Valley:
   accessibility: items
   goal:
-    community_center: 60
-    grandpa_evaluation: 10
-    bottom_of_the_mines: 10
-    master_angler: 10
-    complete_collection: 10
-  starting_money: random-range-2000-20000
+    community_center: 50
+    grandpa_evaluation: 20
+    bottom_of_the_mines: 3
+    master_angler: 3
+    complete_collection: 2
+    protector_of_the_valley: 3
+    full_shipment: 3
+    gourmet_chef: 3
+    craft_master: 2
+    legend: 3
+    mystery_of_the_stardrops: 8
+  farm_type: random
+  starting_money: random-range-1000-25000
   profit_margin:
     normal: 30
     double: 40
     triple: 20
     quadruple: 10
   bundle_randomization:
-    vanilla: 10
-    thematic: 90
-  bundle_price:
-    very_cheap: 10
-    cheap: 60
-    normal: 30
-  entrance_randomization: disabled
+    thematic: 20
+    remixed: 40
+    remixed_anywhere: 35
+    shuffled: 5
+  bundle_price: #Override in trigger
+    minimum: 5
+    very_cheap: 15
+    cheap: 50
+    normal: 25
+    expensive: 5
+  entrance_randomization:
+    disabled: 50
+    pelican_town: 10
+    non_progression: 20
+    buildings_without_house: 15
+    buildings: 5
   season_randomization:
-    randomized: 30
+    randomized: 40
     randomized_not_winter: 40
-    progressive: 30
-  cropsanity: shuffled
+    progressive: 20
+  cropsanity: #Override in trigger
+    enabled: 75
+    disabled: 25
   backpack_progression: early_progressive
-  tool_progression: progressive
+  tool_progression:
+    progressive_very_cheap: 30
+    progressive_cheap: 40
+    progressive: 30
   elevator_progression:
     progressive: 50
     progressive_from_previous_floor: 50
-  skill_progression: progressive
-  building_progression: progressive_early_shipping_bin
-  festival_locations: easy
+  skill_progression:
+    progressive: 50
+    progressive_with_masteries: 50
+  building_progression:
+    progressive_very_cheap: 40
+    progressive_cheap: 40
+    progressive: 20
+  festival_locations: #Override in trigger
+    disabled: 20
+    easy: 40
+    hard: 40
   arcade_machine_locations: disabled
   special_order_locations:
-    disabled: 50
-    board_only: 50
-  help_wanted_locations:
-    0: 25
-    7: 50
+    vanilla: 10
+    board_very_short: 20
+    board_qi_very_short: 20
+    board_short: 20
+    board_qi_short: 10
+    board: 10
+    board_qi: 10
+  quest_locations:
+    0: 50
+    7: 25
     14: 25
-  fishsanity:
+  fishsanity: #Override in trigger
     none: 10
     exclude_legendaries: 20
-    exclude_hard_fish: 20
-    only_easy_fish: 50
-  museumsanity:
-    none: 30
-    milestones: 50
-    randomized: 10
+    exclude_hard_fish: 50
+    only_easy_fish: 20
+  museumsanity: #Override in trigger
+    none: 60
+    milestones: 30
     all: 10
-  friendsanity:
-    none: 25
+  monstersanity: #Override in trigger
+    one_per_category: 25
+    one_per_monster: 25
+    very_short_goals: 20
+    short_goals: 20
+    progressive_goals: 5
+    split_goals: 5
+  shipsanity: #Override in trigger
+    none: 60
+    crops: 15
+    fish: 15
+    full_shipment: 5
+    full_shipment_with_fish: 5
+  cooksanity: #Override in trigger
+    none: 70
+    queen_of_sauce: 20
+    all: 10
+  chefsanity: #Override in trigger
+    none: 70
+    queen_of_sauce: 20
+    all: 10
+  craftsanity: #Override in trigger
+    none: 80
+    all: 20
+  friendsanity: #Override in trigger
+    none: 40
     bachelors: 25
     starting_npcs: 25
-    all: 25
-  friendsanity_heart_size: 4
+    all: 10
+  friendsanity_heart_size: random-range-3-5
+  booksanity:
+    none: 10
+    power: 50
+    power_skill: 30
+    all: 10
+  walnutsanity: ["Puzzles", "Bushes", "Repeatables"] # If Ginger island rolls excluded, this will automatically disable itself. I have disabled dig spots because they are not noob-friendly. Everything else is better shuffled
   movement_buff_number: random-range-4-8
-  luck_buff_number: random-range-4-8
+  enabled_filler_buffs: ["Luck", "Damage", "Defense", "Immunity", "Health", "Energy", "Bite Rate", "Fish Trap", "Fishing Bar Size"]
+  luck_buff_number: random-range-4-12
   exclude_ginger_island:
     false: 50
     true: 50
   trap_items:
-    no_traps: 25
+    no_traps: 15
     easy: 50
     medium: 25
+    hard: 10
   multiple_day_sleep_enabled: 'true'
   multiple_day_sleep_cost: 0
   experience_multiplier:
-    double: 50
-    triple: 40
-    quadruple: 10
+    double: 25
+    triple: 50
+    quadruple: 25
   friendship_multiplier:
-    double: 50
-    triple: 40
-    quadruple: 10
+    double: 25
+    triple: 50
+    quadruple: 25
   debris_multiplier:
     vanilla: 25
     half: 50
@@ -83,4 +148,112 @@ Stardew Valley:
   quick_start: 'true'
   gifting: 'true'
   mods: []
+  bundle_plando: []
   death_link: 'false'
+  triggers: #Added triggers to complement the goal (eg. add museumsanity to a museum goal)
+    - option_category: Stardew Valley
+      option_name: goal
+      option_result: community_center
+      options:
+        Stardew Valley:
+          bundle_price: #Move minimal odds to very_expensive odds
+            very_cheap: 15
+            cheap: 50
+            normal: 25
+            expensive: 5
+            very_expensive: 5
+          cropsanity: #Remove Disabled odds
+            enabled: 100
+    - option_category: Stardew Valley
+      option_name: goal
+      option_result: grandpa_evaluation
+      options:
+        Stardew Valley:
+          cropsanity: #Remove Disabled odds
+            enabled: 100
+    - option_category: Stardew Valley
+      option_name: goal
+      option_result: master_angler #catch all fishsanity fish
+      options:
+        Stardew Valley:
+          fishsanity: #Move none odds to all, and only_easy_fish split between all and exclude_legendaries
+            all: 20
+            exclude_legendaries: 30
+            exclude_hard_fish: 50
+    - option_category: Stardew Valley
+      option_name: goal
+      option_result: complete_collection #finish museum
+      options:
+        Stardew Valley:
+          museumsanity: #remove none odds
+            milestones: 75
+            all: 25
+    - option_category: Stardew Valley
+      option_name: goal
+      option_result: full_shipment # ship all items, follows shipsanity
+      options:
+        Stardew Valley:
+          shipsanity: #Remove none odds and rolled into into the other options
+            crops: 35
+            fish: 35
+            full_shipment: 15
+            full_shipment_with_fish: 15
+          cropsanity: #Remove Disabled odds
+            enabled: 100
+    - option_category: Stardew Valley
+      option_name: goal
+      option_result: gourmet_chef # cook every recipe, follows cooksanity
+      options:
+        Stardew Valley:
+          cooksanity: #Remove none odds
+            queen_of_sauce: 70
+            all: 30
+          chefsanity: #Increase the odds shuffling recipes to add
+            none: 30
+            all: 30
+            random: 40
+    - option_category: Stardew Valley
+      option_name: goal
+      option_result: craft_master #craft every item
+      options:
+        Stardew Valley:
+          craftsanity: #Remove none odds
+            all: 100
+    - option_category: Stardew Valley
+      option_name: goal
+      option_result: protector_of_the_valley # complete monsterslayer goals, follows monstersanity
+      options: 
+        Stardew Valley: #Remove one_per_category odds, and bumped everything else by +5
+          monstersanity:
+            one_per_monster: 30
+            very_short_goals: 25
+            short_goals: 25
+            progressive_goals: 10
+            split_goals: 10
+    - option_category: Stardew Valley
+      option_name: goal
+      option_result: mystery_of_the_stardrops #find every stardrop
+      options:
+        Stardew Valley:
+          museumsanity: #Remove none odds
+            milestones: 75
+            all: 25
+          festival_locations: #Remove disable odds
+            easy: 50
+            hard: 50
+          friendsanity: #Remove none odds
+            bachelors: 40
+            starting_npcs: 40
+            all: 20
+          fishsanity: #Replaced none with all
+            all: 10
+            exclude_legendaries: 20
+            exclude_hard_fish: 50
+            only_easy_fish: 20
+          local_items: Stardrop
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: Stardew-{player}

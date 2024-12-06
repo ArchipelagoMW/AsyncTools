@@ -1,0 +1,88 @@
+Lingo:
+  shuffle_doors:
+    none: 20
+    panels: 40
+    doors: 40
+  group_doors:
+    false: 50
+    true: 50
+  shuffle_colors: true
+  progressive_orange_tower: random
+  progressive_colorful: random
+  location_checks:
+    normal: 70
+    insanity: 30
+  shuffle_panels: random
+  shuffle_paintings:
+    false: 67
+    true: 33
+  victory_condition:
+    the_end: 25
+    the_master: 25
+    level_2: 25
+    pilgrimage: 25
+  mastery_achievements: random-high
+  level_2_requirement: random-range-350-650
+  early_color_hallways: true
+  trap_percentage: 20
+  puzzle_skip_percentage: 20
+  enable_pilgrimage: random
+  pilgrimage_allows_roof_access: random
+  pilgrimage_allows_paintings: random
+  sunwarp_access:
+    normal: 50
+    disabled: 10
+    unlock: 20
+    progressive: 10
+    individual: 10
+  shuffle_sunwarps: random
+  shuffle_postgame: false
+  triggers:
+    - option_name: shuffle_doors
+      option_category: Lingo
+      option_result: panels
+      percentage: 25
+      options:
+        Lingo:
+          shuffle_colors: false
+    - option_name: shuffle_doors
+      option_category: Lingo
+      option_result: doors
+      percentage: 25
+      options:
+        Lingo:
+          shuffle_colors: false
+    - option_name: shuffle_doors
+      option_category: Lingo
+      option_result: none
+      percentage: 10
+      options:
+        Lingo:
+          location_checks: reduced
+    - option_name: location_checks
+      option_category: Lingo
+      option_result: insanity
+      percentage: 75
+      options:
+        Lingo:
+          trap_percentage: 2
+    - option_name: victory_condition
+      option_category: Lingo
+      option_result: pilgrimage
+      options:
+        Lingo:
+          enable_pilgrimage: true
+    - option_name: sunwarp_access
+      option_category: Lingo
+      option_result: disabled
+      options:
+        Lingo:
+          enable_pilgrimage: false
+          shuffle_sunwarps: false
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: Lingo-{player}
+

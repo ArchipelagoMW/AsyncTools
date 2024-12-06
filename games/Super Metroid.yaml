@@ -100,3 +100,11 @@ Super Metroid:
     ['kill two G4', 'kill three G4', 'kill all G4', 'kill three minibosses', 'kill all mini bosses', 'tickle the red fish', 'kill the orange geemer', 'kill shaktool', 'visit the animals', 'kill phantoon', 'kill draygon', 'kill ridley', 'kill spore spawn', 'kill botwoon', 'kill crocomire', 'kill golden torizo', 'clear crateria', 'clear green brinstar', 'clear red brinstar', 'clear wrecked ship', "clear kraid's lair", 'clear upper norfair', "clear croc's lair", 'clear lower norfair', 'clear west maridia', 'clear east maridia']
 
   custom_objective_count: random-high
+
+  triggers:
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: SM-{player}

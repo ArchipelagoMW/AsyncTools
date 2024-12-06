@@ -1,0 +1,62 @@
+﻿Aquaria:
+  objective:
+    kill_the_creator: 2
+    obtain_secrets_and_kill_the_creator: 1
+
+  mini_bosses_to_beat:
+    random-low: 5
+    random-high: 2
+
+  big_bosses_to_beat:
+    random-low: 5
+    random-high: 2
+
+  turtle_randomizer:
+    none: 1
+    all: 3
+
+  early_energy_form:
+    'false': 1
+    'true': 5
+
+  light_needed_to_get_to_dark_places: true
+
+  bind_song_needed_to_get_under_rock_bulb:
+    'false': 2
+    'true': 1
+
+  unconfine_home_water:
+    'off': 1
+    via_energy_door: 1
+    via_transturtle: 1
+    via_both: 1
+
+  no_progression_hard_or_hidden_locations:
+    'false': 1
+    'true': 2
+
+  ingredient_randomizer:
+    'off': 5
+    common_ingredients: 2
+    all_ingredients: 1
+
+  dish_randomizer:
+    'false': 5
+    'true': 2
+
+  aquarian_translation:
+    'false': 1
+    'true': 1
+
+  skip_first_vision: false
+
+  local_items: ["Energy form"]
+  
+  triggers:
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: Aquaria-{player}
+

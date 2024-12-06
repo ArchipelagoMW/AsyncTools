@@ -1,0 +1,50 @@
+Kirby's Dream Land 3:
+  game_language: english
+  goal:
+    zero: 70
+    boss_butch: 10
+    mg5: 10
+    jumping: 10
+  goal_speed: normal
+  total_heart_stars: random-range-30-50 # Never go below the vanilla count of Heart Stars
+  heart_stars_required: random-range-40-80
+  filler_percentage: 25
+  trap_percentage: 0
+  gooey_trap_weight: random
+  slow_trap_weight: random
+  ability_trap_weight: random
+  jumping_target: random-range-5-15
+  stage_shuffle: random
+  boss_shuffle: random
+  allow_bb: random
+  animal_randomization:
+    disabled: 50
+    shuffled: 25
+    full: 25
+  copy_ability_randomization: 
+    disabled: 500
+    enabled: 125
+    enabled_plus_minus: 125
+  strict_bosses: 'true'
+  open_world: 'true'
+  ow_boss_requirement: 3
+  consumables: 
+    true: 50
+    false: 50
+  starsanity: 
+    true: 25
+    false: 75
+  kirby_flavor_preset: random
+  gooey_flavor_preset: random
+  music_shuffle: random
+  virtual_console:  # Never roll without flash reduction
+    flash_reduction: 50
+    both: 50
+  triggers:
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: KDL3-{player}
+

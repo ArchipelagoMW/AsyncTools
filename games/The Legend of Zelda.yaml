@@ -1,8 +1,8 @@
 The Legend of Zelda:
   local_items: [Triforce Fragment]
   ExpandedPool:
-    false: 30
-    true: 70
+    false: 20
+    true: 80
   TriforceLocations:
     vanilla: 60
     dungeons: 30
@@ -11,3 +11,11 @@ The Legend of Zelda:
     safe: 70
     unsafe: 20
     dangerous: 10
+  triggers:
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: TLoZ-{player}
+

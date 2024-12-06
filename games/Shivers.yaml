@@ -1,0 +1,27 @@
+Shivers:
+  lobby_access:
+    normal: 10
+    early: 45
+    local: 45
+  puzzle_hints_required:
+    'true': 25
+    'false': 75
+  include_information_plaques:
+    'true': 75
+    'false': 25
+  front_door_usable: 'true'
+  elevators_stay_solved: 'true'
+  early_beth:
+    'true': 75
+    'false': 25
+  early_lightning:
+    'true': 75
+    'false': 25
+  triggers:
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: Shivers-{player}
+

@@ -1,0 +1,29 @@
+Bumper Stickers:
+  progression_balancing: '0'
+  accessibility: items
+  task_advances:
+    3: 5
+    4: 10
+    5: 25
+  turners:
+    3: 5
+    4: 10
+    5: 25
+  paint_cans:
+    3: 5
+    4: 10
+    5: 25
+  trap_count: '0'
+  rainbow_trap_weight: '0'
+  spinner_trap_weight: '0'
+  killer_trap_weight: '0'
+  local_items:
+    - Score Bonus
+  triggers:
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: BumpStick-{player}
+

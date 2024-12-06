@@ -1,0 +1,77 @@
+TUNIC:
+  # column order for the spreadsheet:
+  # Start with Sword | Keys Behind Bosses | Hexagon Quest | Gold Hexagons Required | Percentage of Extra Hexagons | Entrance Rando | Fewer Shops | 
+  # Laurels Location | Laurels Zips | Ice Grappling | Ladder Storage
+  # if Hexagon Quest is disabled, put a - for Gold Hexagons Required and Percentage of Extra Hexagons since they are not relevant
+  sword_progression: 'true'
+  start_with_sword:
+    'true': 25
+    'false': 75
+  keys_behind_bosses: 'false'
+  ability_shuffling: 'true'
+  shuffle_ladders: 'true'
+  entrance_rando:
+    yes: 25
+    no: 75
+  laurels_zips:
+    'false': 70
+    glitch_logic_on: 30
+  fool_traps: off
+  hexagon_quest:
+    'true': 50
+    'false': 50
+  hexagon_goal: random-range-middle-15-50
+  extra_hexagon_percentage: random-range-low-10-100
+  lanternless: 'false'
+  maskless: 'false'
+  laurels_location:
+    anywhere: 50
+    10_fairies: 50
+  local_items:
+    - Questagons
+
+  triggers:
+    - option_category: TUNIC
+      option_name: hexagon_quest
+      option_result: 'false'
+      options:
+        TUNIC:
+          keys_behind_bosses:
+            'true': 50
+            'false': 50
+
+    - option_category: TUNIC
+      option_name: entrance_rando
+      option_result: 'yes'
+      options:
+        TUNIC:
+          fixed_shop:
+            'true': 50
+            'false': 50
+
+    - option_category: TUNIC
+      option_name: laurels_zips
+      option_result: glitch_logic_on
+      options:
+        TUNIC:
+          laurels_zips:
+            'true': 60
+            'false': 40
+          ice_grappling:
+            off: 20
+            easy: 60
+            medium: 20
+            hard: 0
+          ladder_storage:
+            off: 60
+            easy: 25
+            medium: 15
+            hard: 0
+    
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: TUNIC-{player}
+

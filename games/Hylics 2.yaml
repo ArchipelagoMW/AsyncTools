@@ -1,0 +1,21 @@
+﻿Hylics 2:
+  party_shuffle:
+    false: 60
+    true: 40
+  gesture_shuffle:
+    anywhere: 60
+    tvs_only: 10
+    default_locations: 30
+  medallion_shuffle:
+    false: 80
+    true: 20
+  extra_items_in_logic:
+    false: 10
+    true: 90
+  triggers:
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: Hylics2-{player}

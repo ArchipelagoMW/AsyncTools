@@ -1,18 +1,53 @@
 Muse Dash:
   local_items: [Music Sheet]
-  allow_just_as_planned_dlc_songs: false
   streamer_mode_enabled: false
   starting_song_count: 5
-  additional_song_count: random-range-high-25-35
-  additional_item_percentage: random-range-75-85
+  additional_song_count: random-range-high-40-55
   song_difficulty_mode:
     medium: 67
     hard: 33
   grade_needed: any
   music_sheet_count_percentage: 25
   music_sheet_win_count_percentage: 80
-  available_trap_types: all
+  chosen_traps:
+    - Background Freeze Trap
+    - Bad Apple Trap
+    #- Chromatic Aberration Trap
+    - Error SFX Trap
+    - Focus Line Trap
+    - Gray Scale Trap
+    - Nyaa SFX Trap
+    - Pixelate Trap
+    - Ripple Trap
+    - Vignette Trap
   trap_count_percentage:
     0: 50
-    random-range-5-15: 50
+    random-range-5-25: 50
   death_link: false
+  
+  allow_dlc: #custom setting now for trigger due to DLC handling changes in 0.5.0
+    false: 25
+    true: 75
+  triggers:
+    # Reduce song count if hard difficulty selected due to fewer songs available for base game + hard diff
+    - option_category: Muse Dash
+      option_name: song_difficulty_mode
+      option_result: hard
+      options:
+        Muse Dash:
+          additional_song_count: random-range-25-35
+    # Increase song count if DLC on due to massively larger pool
+    - option_category: Muse Dash
+      option_name: allow_dlc
+      option_result: true
+      options:
+        Muse Dash:
+          +dlc_packs: [Muse Plus]
+          additional_song_count: random-range-80-150
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: MuseDash-{player}
+

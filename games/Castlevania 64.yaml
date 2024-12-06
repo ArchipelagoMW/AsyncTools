@@ -1,0 +1,83 @@
+Castlevania 64:
+  accessibility: items
+  character_stages: both
+  stage_shuffle: 
+    'true': 2
+    'false': 3
+  starting_stage:
+    forest_of_silence: 1
+    villa: 1
+    castle_center: 1
+    random: 1
+  warp_order: seed_stage_order
+  sub_weapon_shuffle: anywhere
+  spare_keys:
+    on: 5
+    chance: 2
+  hard_item_pool: 'false'
+  ice_trap_percentage: 5
+  ice_trap_appearance: major_only
+  special1s_per_warp: 3
+  total_special1s: 36
+  draculas_condition:
+    bosses: 3
+    specials: 4
+  special2s_required: 20
+  total_special2s: 40
+  bosses_required: 12
+  carrie_logic:
+    'true': 1
+    'false': 1
+  hard_logic: 'false'
+  multi_hit_breakables: 'false'
+  empty_breakables: 'true'
+  lizard_locker_items: 'false'
+  shopsanity: 'true'
+  shop_prices:
+    vanilla: 1
+    randomized: 2
+  minimum_gold_price: 2
+  maximum_gold_price: 50
+  post_behemoth_boss: vanilla
+  room_of_clocks_boss: vanilla
+  renon_fight_condition: never
+  vincent_fight_condition: never
+  bad_ending_condition: never
+  increase_item_limit: 'true'
+  nerf_healing_items: 'false'
+  loading_zone_heals: 'true'
+  invisible_items: reveal_all
+  drop_previous_sub_weapon: 'true'
+  permanent_power_ups:
+    'true': 2
+    'false': 1
+  disable_time_restrictions: 'true'
+  skip_gondolas: 'true'
+  skip_waterway_blocks: 'true'
+  countdown: all_locations
+  panther_dash:
+    on: 1
+    off: 1
+  increase_shimmy_speed: 'true'
+  fall_guard: 'true'
+  background_music: 
+    normal: 1
+    randomized: 1
+  map_lighting:
+    normal: 1
+    randomized: 1
+  cinematic_experience: 'false'
+  window_color_r: 'random'
+  window_color_g: 'random'
+  window_color_b: 'random'
+  window_color_a: 'random'
+  death_link:
+    off: 99
+    explosive: 1
+  triggers:
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: CV64-{player}

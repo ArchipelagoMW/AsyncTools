@@ -11,7 +11,18 @@ DLCQuest:
     30: 20
     40: 20
     50: 20
+  permanent_coins:
+    true: 50
+    false: 50
   ending_choice: 'true'
   campaign: both
   item_shuffle: shuffled
   death_link: 'false'
+  triggers:
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: DLCQuest-{player}
+

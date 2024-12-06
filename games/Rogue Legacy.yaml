@@ -128,3 +128,9 @@ Rogue Legacy:
     options:
       Rogue Legacy:
         disable_charon: true
+  - option_category: null
+    option_name: name
+    option_result: Player{player}
+    options:
+      null:
+        name: RogueLegacy-{player}
