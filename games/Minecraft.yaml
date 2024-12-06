@@ -35,8 +35,8 @@ Minecraft:
       options:
         Minecraft:
             advancement_goal: random-range-40-70
-            egg-shards-required: random-range-10-17
-            egg-shards-available: 20
+            egg_shards_required: random-range-10-17
+            egg_shards_available: 20
             local_items: Dragon Egg Shard
             required_bosses: # Bosses which must be defeated to finish the game.
                 none: 50
