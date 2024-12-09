@@ -9,6 +9,7 @@ Ocarina of Time:
   local_items:
     - Triforce Piece
     - Ice Trap
+    - Song of Time
 
   logic_rules: glitchless
   logic_no_night_tokens_without_suns_song: true
