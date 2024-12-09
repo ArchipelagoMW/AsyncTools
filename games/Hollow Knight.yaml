@@ -132,14 +132,14 @@ Hollow Knight:
   
   triggers:
   - option_category: Hollow Knight
-    option_name: goal
+    option_name: Goal
     option_result: grub_hunt
     options:
       Hollow Knight:
         +local_items:
           - Grubs
   - option_category: Hollow Knight
-    option_name: goal
+    option_name: Goal
     option_result: any
     options:
       Hollow Knight:
