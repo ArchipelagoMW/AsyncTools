@@ -26,8 +26,8 @@ Muse Dash:
   death_link: false
   
   allow_dlc: #custom setting now for trigger due to DLC handling changes in 0.5.0
-    false: 25
-    true: 75
+    false: 34
+    true: 66
   triggers:
     # Reduce song count if hard difficulty selected due to fewer songs available for base game + hard diff
     - option_category: Muse Dash
