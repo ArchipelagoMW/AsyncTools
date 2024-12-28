@@ -19,6 +19,7 @@ Shivers:
     'false': 25
   location_pot_pieces: random
   full_pots: random
+  ixupi_captures_priority: random
   puzzle_collect_behavior: prevent_out_of_logic_access
   triggers:
     - option_category: null
