@@ -1,6 +1,6 @@
 Timespinner:
   accessibility: full
-  local_items: [Timespinner Gear 1, Timespinner Gear 2, Timespinner Gear 3]
+  local_items: [Timespinner Spindle, Timespinner Gear 1, Timespinner Gear 2, Timespinner Gear 3]
   start_with_jewelry_box: true
   start_with_meyef: true
   quick_seed:
