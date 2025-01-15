@@ -1,0 +1,72 @@
+﻿Yacht Dice:
+  game_difficulty:
+    easy: 20
+    medium: 50
+    hard: 50
+    extreme: 0
+  score_for_last_check:
+    random-high: 50
+  score_for_goal:
+    random-high: 50
+  minimal_number_of_dice_and_rolls:
+    5_dice_and_3_rolls: 60
+    5_dice_and_5_rolls: 20
+    6_dice_and_4_rolls: 30
+    7_dice_and_3_rolls: 30
+    8_dice_and_2_rolls: 30
+  number_of_dice_fragments_per_dice:
+    random: 50
+  number_of_roll_fragments_per_roll:
+    random: 50
+  alternative_categories:
+    random: 50
+  allow_manual_input:
+    no_dont_allow: 50
+  weight_of_dice:
+    0: 50
+    random: 50
+  weight_of_roll:
+    0: 50
+    random: 50
+  weight_of_fixed_score_multiplier:
+    0: 50
+    random: 50
+  weight_of_step_score_multiplier:
+    0: 50
+    random: 50
+  weight_of_double_category:
+    0: 50
+    random: 50
+  weight_of_points:
+    0: 50
+    random: 50
+  points_size:
+    small: 50
+    medium: 50
+    large: 50
+    mix: 50
+  minimize_extra_items:
+    no_dont: 50
+  add_bonus_points:
+    all_of_it: 50
+    sure: 50
+    never: 50
+  add_story_chapters:
+    all_of_it: 50
+    sure: 50
+    never: 50
+  which_story:
+    the_quest_of_the_dice_warrior: 50
+    the_tragedy_of_fortunas_gambit: 50
+    the_dicey_animal_dice_game: 50
+    whispers_of_fate: 50
+    a_yacht_dice_odyssey: 50
+    a_rollin_rhyme_adventure: 50
+    random_story: 50
+  triggers:
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: YachtDice-{player}

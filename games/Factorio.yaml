@@ -110,7 +110,6 @@ Factorio:
               time_factor: 2.0e-06
             enemy_expansion:
               enabled: false
-            water: 2
     - option_category: Factorio
       option_name: world_type
       option_result: peaceful_rail_world
@@ -146,7 +145,6 @@ Factorio:
               time_factor: 2.0e-06
             enemy_expansion:
               enabled: false
-            water: 2
     - option_category: null
       option_name: name
       option_result: Player{player}
