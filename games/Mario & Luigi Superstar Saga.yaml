@@ -50,7 +50,6 @@ Mario & Luigi Superstar Saga:
   randomize_bosses:
     disabled: 30
     boss_only: 40
-    boss_normal: 30
 
   scale_stats: 
     false: 100
@@ -154,13 +153,6 @@ Mario & Luigi Superstar Saga:
           scale_stats:
             true: 100
 
-    - option_category: Mario & Luigi Superstar Saga
-      option_name: randomize_bosses
-      option_result: normal
-      options:
-        Mario & Luigi Superstar Saga:
-          scale_stats:
-            true: 100
 
     - option_category: null
       option_name: name
