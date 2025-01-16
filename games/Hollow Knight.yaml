@@ -95,16 +95,16 @@ Hollow Knight:
   RandomCharmCosts: -2
   MinimumEggPrice: 1
   MaximumEggPrice: 10
-  EggShopSlots: 5
-  SlyShopSlots: 8
-  SlyKeyShopSlots: 6
-  IseldaShopSlots: 2
-  SalubraShopSlots: 5
-  SalubraCharmShopSlots: 5
-  LegEaterShopSlots: 3
-  GrubfatherRewardSlots: 7
-  SeerRewardSlots: 8
-  ExtraShopSlots: 0
+  EggShopSlots: 1
+  SlyShopSlots: 1
+  SlyKeyShopSlots: 1
+  IseldaShopSlots: 1
+  SalubraShopSlots: 1
+  SalubraCharmShopSlots: 1
+  LegEaterShopSlots: 1
+  GrubfatherRewardSlots: 1
+  SeerRewardSlots: 1
+  ExtraShopSlots: 40
   SplitCrystalHeart: 'random'
   SplitMothwingCloak: 'random'
   SplitMantisClaw: 'random'
