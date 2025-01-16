@@ -28,8 +28,8 @@ Factorio:
     middle: 10
     high: 10
   ramping_tech_costs:
-    true: 25
-    false: 50
+    true: 1
+    false: 4
   tech_cost_mix:
     random: 20
   silo:
