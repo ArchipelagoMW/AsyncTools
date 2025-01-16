@@ -108,7 +108,9 @@ Hollow Knight:
   SplitCrystalHeart: 'random'
   SplitMothwingCloak: 'random'
   SplitMantisClaw: 'random'
-  CostSanity: off
+  CostSanity:
+    off: 3
+    on: 1
   CostSanityHybridChance: 10
   CostSanityEggWeight: 1
   CostSanityGrubWeight: 1
