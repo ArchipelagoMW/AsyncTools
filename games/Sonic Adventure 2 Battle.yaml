@@ -14,8 +14,9 @@ Sonic Adventure 2 Battle:
     true: 2
   whistlesanity:
     none: 8
-    pipes: 3
+    pipes: 4
     both: 1
+    both_plus: 1
   beetlesanity:
     false: 2
     true: 1
@@ -47,7 +48,7 @@ Sonic Adventure 2 Battle:
     expert: 1
   chao_stadium_checks: all
   black_market_slots:
-    0: 4
+    0: 6
     random-low: 2
     random-high: 2
     64: 2
@@ -218,7 +219,8 @@ Sonic Adventure 2 Battle:
                 '5': 1
     - option_category: Sonic Adventure 2 Battle
       option_name: whistlesanity
-      option_result: both
+      option_result: both_plus
       options:
         Sonic Adventure 2 Battle:
             animalsanity: 'true'
+            whistlesanity: both
