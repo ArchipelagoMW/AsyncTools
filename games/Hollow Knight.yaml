@@ -104,7 +104,7 @@ Hollow Knight:
   LegEaterShopSlots: 1
   GrubfatherRewardSlots: 1
   SeerRewardSlots: 1
-  ExtraShopSlots: 40
+  ExtraShopSlots: random-range-middle-30-50
   SplitCrystalHeart: 'random'
   SplitMothwingCloak: 'random'
   SplitMantisClaw: 'random'
