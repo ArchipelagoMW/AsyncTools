@@ -109,14 +109,15 @@ Hollow Knight:
   SplitMothwingCloak: 'random'
   SplitMantisClaw: 'random'
   CostSanity:
-    off: 3
+    off: 4
+    shops_only: 1
     on: 1
   CostSanityHybridChance: 10
   CostSanityEggWeight: 1
-  CostSanityGrubWeight: 1
-  CostSanityEssenceWeight: 1
-  CostSanityCharmWeight: 1
-  CostSanityGeoWeight: 8
+  CostSanityGrubWeight: 2
+  CostSanityEssenceWeight: 2
+  CostSanityCharmWeight: 2
+  CostSanityGeoWeight: 16
   local_items:
     - Monomon
     - Lurien
