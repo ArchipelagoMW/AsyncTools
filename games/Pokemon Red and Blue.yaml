@@ -177,7 +177,6 @@ Pokemon Red and Blue:
         Pokemon Red and Blue:
           trainersanity: full
           dexsanity: disabled
-          blind_trainers: 0
           exp_modifier: 
             16: 50
             32: 25
@@ -209,11 +208,12 @@ Pokemon Red and Blue:
       option_result: both
       options:
         Pokemon Red and Blue:
-          trainersanity: full
+          trainersanity:
+            random-range-60-200: 30
+            full: 10
           dexsanity: 
             random-range-30-100: 30
             full: 10
-          blind_trainers: 0
           minimum_steps_between_encounters: 3
           exp_modifier: 
             16: 50
