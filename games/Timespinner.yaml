@@ -1,69 +1,66 @@
 Timespinner:
-  accessibility: items
-  DeathLink: false
-  local_items: [Timespinner Gear 1, Timespinner Gear 2, Timespinner Gear 3]
-  StartWithJewelryBox: true
-  StartWithMeyef: true
-  QuickSeed:
+  accessibility: full
+  local_items: [Timespinner Spindle, Timespinner Gear 1, Timespinner Gear 2, Timespinner Gear 3]
+  start_with_jewelry_box: true
+  start_with_meyef: true
+  quick_seed:
     true: 50
     false: 50
-  PresentAccessWithWheelAndSpindle: true
-  DownloadableItems: true
-  LoreChecks: true
-  Cantoran:
+  back_to_the_future: true
+  downloadable_items: true
+  lore_checks: true
+  cantoran:
     true: 75
     false: 25
-  GyreArchives:
+  gyre_archives:
     true: 67
     false: 33
-  SpecificKeycards:
+  specific_keycards:
     true: 80
     false: 20
-  EyeSpy: 
+  eye_spy: 
     true: 10
     false: 90
-  Inverted:
+  inverted:
     true: 80
     false: 20
-  UnchainedKeys:
+  unchained_keys:
     true: 75
     false: 25
-  EnterSandman:
+  enter_sandman:
     false: 75
     true: 25
-  DadPercent:
+  dad_percent:
     false: 85
     true: 15
-  RisingTides:
+  rising_tides:
     false: 50
     true: 50
-  DamageRando:
+  damage_rando:
     off: 50
     balanced: 50
-  BossRando:
+  boss_rando:
     off: 25
     scaled: 75
-  BossHealing: true
-  EnemyRando: off
-  ShopFill:
+  shop_fill:
     default: 33
     randomized: 67
-  ShopWarpShards: true
-  LootPool: randomized
-  DropRateCategory: randomized
-  LootTierDistro: full_random
-  ShowBestiary: true
-  ShowDrops: true
-  TrapChance: 0
+  shop_warp_shards: true
+  loot_pool: randomized
+  drop_rate_category: randomized
+  loot_tier_distro: full_random
+  show_bestiary: true
+  show_drops: true
+  trap_chance: 0
     
   triggers:
     # greatly reduce Cantoran odds on an inverted start - it's an endgame boss location that can be as early as sphere 1 if inverted and quick seed are both true
     - option_category: Timespinner
-      option_name: Inverted
+      option_name: inverted
       option_result: true
       options:
         Timespinner:
-          Cantoran:
+          cantoran:
             true: 15
             false: 85
     - option_category: null
