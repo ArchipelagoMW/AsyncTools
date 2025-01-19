@@ -45,9 +45,7 @@
   smooth_soul_items: 'true'
   smooth_upgrade_items: 'true'
   smooth_upgraded_weapons: 'true'
-  randomize_enemies:
-    'false': 25
-    'true': 75
+  randomize_enemies: 'false'
   simple_early_bosses: 'true'
   scale_enemies: 'true'
   randomize_mimics_with_enemies: 'false'
