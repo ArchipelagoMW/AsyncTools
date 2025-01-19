@@ -10,8 +10,8 @@
     after_basin: 50
   death_link: 'false'
   enable_dlc:
-    'false': 75
-    'true': 25
+    'false': 7
+    'true': 1
   enable_ngp: 'false'
   random_starting_loadout:
     'false': 25
