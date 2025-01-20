@@ -110,7 +110,7 @@ Hollow Knight:
   SplitMantisClaw: 'random'
   CostSanity:
     off: 4
-    shops_only: 1
+    shopsonly: 1
     on: 1
   CostSanityHybridChance: 10
   CostSanityEggWeight: 1
