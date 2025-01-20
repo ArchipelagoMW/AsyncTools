@@ -43,3 +43,9 @@ Mega Man 2:
       options:
         null:
           name: MegaMan2-{player}
+    - option_category: Mega Man 2
+      option_name: random_weakness
+      option_result: randomized
+      options:
+        Mega Man 2:
+          energy_link: 'true'
