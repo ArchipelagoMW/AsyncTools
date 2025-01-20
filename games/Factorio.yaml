@@ -19,6 +19,7 @@ Factorio:
     spawn: 2
   satellite: random
   free_samples: stack
+  free_samples_quality: random
   tech_tree_information: none
   starting_items:
     # Mapping of Factorio internal item-name to amount granted on start.
