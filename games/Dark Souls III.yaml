@@ -59,7 +59,7 @@
     # Can be unobtainable in certain local locations
     ['Path of the Dragon']
   exclude_locations:
-    ['Small Souls', 'Miscellaneous', 'Hidden', 'Small Crystal Lizards', 'Upgrade']
+    ['Small Souls', 'Miscellaneous', 'Hidden', 'Small Crystal Lizards', 'Upgrade', "AL: Aldrich's Ruby - dark cathedral, miniboss"]
   excluded_location_behavior: forbid_useful
   missable_location_behavior: forbid_useful
   triggers:
