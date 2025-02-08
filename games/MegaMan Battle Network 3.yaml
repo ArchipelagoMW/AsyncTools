@@ -6,7 +6,15 @@ MegaMan Battle Network 3:
   trade_quest_hinting:
     partial: 1
     full: 2
-
+    
+  extra_ranks:
+    '0': 3
+    '1': 5
+    '2': 4
+    '3': 2
+    
+  local_items: Progressive Undernet Rank
+    
   triggers:
     - option_category: null
       option_name: name

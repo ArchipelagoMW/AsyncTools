@@ -1,8 +1,8 @@
 Shivers:
+  ixupi_captures_needed: random-range-5-10
   lobby_access:
-    normal: 10
-    early: 45
-    local: 45
+    early: 50
+    local: 50
   puzzle_hints_required:
     'true': 25
     'false': 75
@@ -17,6 +17,10 @@ Shivers:
   early_lightning:
     'true': 75
     'false': 25
+  location_pot_pieces: random
+  full_pots: random
+  ixupi_captures_priority: random
+  puzzle_collect_behavior: prevent_out_of_logic_access
   triggers:
     - option_category: null
       option_name: name
