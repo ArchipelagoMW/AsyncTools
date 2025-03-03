@@ -48,7 +48,7 @@
     'false': 1
     'true': 1
 
-  skip_first_vision: false
+  skip_first_vision: true
 
   local_items: ["Energy form"]
   
