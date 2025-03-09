@@ -1,8 +1,8 @@
 TUNIC:
   # column order for the spreadsheet:
-  # Start with Sword | Keys Behind Bosses | Hexagon Quest | Gold Hexagons Required | Percentage of Extra Hexagons | Entrance Rando | Fewer Shops | 
-  # Addtl Combat Logic | Laurels Location | Laurels Zips | Ice Grappling | Ladder Storage
-  # if Hexagon Quest is disabled, put a - for Gold Hexagons Required and Percentage of Extra Hexagons since they are not relevant
+  # Start with Sword | Keys Behind Bosses | Hexagon Quest | Gold Hexagons Required | Percentage of Extra Hexagons | Hexagon Quest Ability Type 
+  # Entrance Rando | Fewer Shops | Addtl Combat Logic | Laurels Location | Laurels Zips | Ice Grappling | Ladder Storage
+  # if Hexagon Quest is disabled, put a - for Gold Hexagons Required, Percentage of Extra Hexagons, and Hexagon Quest Ability Type since they are not relevant
   sword_progression: 'true'
   start_with_sword:
     'true': 25
@@ -22,6 +22,7 @@ TUNIC:
     'false': 50
   hexagon_goal: random-range-middle-15-50
   extra_hexagon_percentage: random-range-low-10-100
+  hexagon_quest_ability_type: random
   lanternless: 'false'
   maskless: 'false'
   laurels_location:
@@ -31,6 +32,9 @@ TUNIC:
     on: 40
     bosses_only: 20
     off: 40
+  breakable_shuffle:
+    'true': 40
+    'false': 60
   grass_randomizer:
     'true': 0
     'false': 100
