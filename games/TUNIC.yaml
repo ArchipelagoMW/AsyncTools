@@ -1,6 +1,6 @@
 TUNIC:
   # column order for the spreadsheet:
-  # Start with Sword | Keys Behind Bosses | Hexagon Quest | Gold Hexagons Required | Percentage of Extra Hexagons | Hexagon Quest Ability Type 
+  # Start with Sword | Hexagon Quest | Gold Hexagons Required | Percentage of Extra Hexagons | Hexagon Quest Ability Type | Breakable Shuffle | Keys Behind Bosses
   # Entrance Rando | Fewer Shops | Addtl Combat Logic | Laurels Location | Laurels Zips | Ice Grappling | Ladder Storage
   # if Hexagon Quest is disabled, put a - for Gold Hexagons Required, Percentage of Extra Hexagons, and Hexagon Quest Ability Type since they are not relevant
   sword_progression: 'true'
