@@ -67,7 +67,7 @@ Hollow Knight:
   RemoveSpellUpgrades: 'false'
   StartLocation: king's_pass
   Goal:
-    siblings: 3
+    siblings: 8
     radiance: 3
     grub_hunt: 2
     godhome: 0
