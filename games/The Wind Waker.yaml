@@ -658,9 +658,6 @@ The Wind Waker:
           progression_tingle_chests: 'false'
           # required_bosses cannot be enabled when progression_dungeons is disabled
           required_bosses: 'false'
-          randomize_dungeon_entrances: 'false'
-          randomize_boss_entrances: 'false'
-          randomize_miniboss_entrances: 'false'
           # There are no keys/maps/compasses. Set them to startwith to try to reduce confusion.
           randomize_mapcompass: startwith
           randomize_smallkeys: startwith
