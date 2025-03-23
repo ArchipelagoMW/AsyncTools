@@ -304,8 +304,8 @@ The Wind Waker:
           progression_expensive_purchases: 'false'
           # Remove the option of starting with nothing.
           trigger_start_inventory_from_pool:
-            basics: 10
-            base_rando: 10
+            basics: 50
+            base_rando: 50
 
     # Set logic
     - option_category: The Wind Waker
