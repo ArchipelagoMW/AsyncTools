@@ -610,22 +610,15 @@ The Wind Waker:
           randomize_miniboss_entrances: 'false'
     ## Disable secret cave ER if not all secret caves are enabled
     - option_category: The Wind Waker
-      option_name: trigger_progression_secret_caves
-      option_result: puzzle_only
+      option_name: progression_puzzle_secret_caves
+      option_result: 'false'
       options:
         The Wind Waker:
           randomize_secret_cave_entrances: 'false'
           randomize_secret_cave_inner_entrances: 'false'
     - option_category: The Wind Waker
-      option_name: trigger_progression_secret_caves
-      option_result: combat_only
-      options:
-        The Wind Waker:
-          randomize_secret_cave_entrances: 'false'
-          randomize_secret_cave_inner_entrances: 'false'
-    - option_category: The Wind Waker
-      option_name: trigger_progression_secret_caves
-      option_result: none
+      option_name: progression_combat_secret_caves
+      option_result: 'false'
       options:
         The Wind Waker:
           randomize_secret_cave_entrances: 'false'
