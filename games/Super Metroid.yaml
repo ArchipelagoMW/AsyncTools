@@ -33,18 +33,17 @@ Super Metroid:
   morph_placement: early
 
   missile_qty:
-    random-low: 10
-    random-high: 50
+    random-range-low-10-50: 10
+    random-range-high-10-50: 50
 
   super_qty:
-    random-low: 10
-    random-high: 50
+    random-range-low-15-40: 10
+    random-range-high-15-40: 50
     20: 50
 
   power_bomb_qty:
-    10: 50
-    random-low: 10
-    random-high: 50
+    random-range-low-10-20: 10
+    random-range-high-10-20: 50
 
   minor_qty: 100
 
