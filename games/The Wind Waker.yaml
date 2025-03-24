@@ -112,8 +112,8 @@ The Wind Waker:
     'false': 10
     'true': 90
   progression_expensive_purchases:
-    'false': 15
-    'true': 85
+    'false': 35
+    'true': 65
   ### Trigger for enabled charts
   # This trigger exists so that randomize_charts is always disabled when charts are disabled and so that triforce charts
   # being disabled due to progressive_expensive_purchases being disabled can be accounted for.
