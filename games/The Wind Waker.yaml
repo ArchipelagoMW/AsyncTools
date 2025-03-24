@@ -79,8 +79,8 @@ The Wind Waker:
     'false': 10
     'true': 90
   progression_platforms_rafts:
-    'false': 10
-    'true': 90
+    'false': 30
+    'true': 70
   progression_short_sidequests:
     'false': 10
     'true': 90
