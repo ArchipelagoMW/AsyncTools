@@ -7,20 +7,20 @@ The Wind Waker:
   ### Trigger control for starting inventory
   trigger_start_inventory_from_pool:
     # No specific items. May still include a sword or startwith keys/maps/compasses depending on other options.
-    nothing: 50
+    nothing: 5
     # Basic items for getting around the world and passing time.
     # Wind Waker
     # Wind's Requiem
     # Song of Passing
     # Ballad of Gales
-    basics: 25
+    basics: 75
     # The non-AP, base TWW rando currently always starts with the following items:
     # Wind's Requiem
     # Song of Passing
     # Ballad of Gales
     # Progressive Shield
     # Progressive Magic Meter
-    base_rando: 25
+    base_rando: 20
   # Added to by triggers.
   start_inventory_from_pool: {}
 
@@ -82,11 +82,11 @@ The Wind Waker:
     'false': 10
     'true': 90
   progression_long_sidequests:
-    'false': 20
-    'true': 80
+    'false': 70
+    'true': 30
   progression_spoils_trading:
-    'false': 20
-    'true': 80
+    'false': 70
+    'true': 30
   progression_eye_reef_chests:
     'false': 20
     'true': 80
@@ -139,12 +139,12 @@ The Wind Waker:
   ### Map and compass are filler that do nothing for most players because the internet and the tracker can provide the
   ### same information
   randomize_mapcompass:
-    startwith: 70
-    vanilla: 3
-    dungeon: 10
-    any_dungeon: 1
-    local: 1
-    keylunacy: 70
+    startwith: 100
+    vanilla: 0
+    dungeon: 0
+    any_dungeon: 0
+    local: 0
+    keylunacy: 0
   ## Individual rolls for small and big keys when they are rolled separately.
   randomize_smallkeys:
     startwith: 5
@@ -180,15 +180,15 @@ The Wind Waker:
   # While a dungeon may have a main entrance, miniboss door and boss door that can be randomized, a dungeon will
   # always be entered for the first time through its main entrance.
   trigger_entrance_rando:
-    disabled: 50  # All ER options will be forcefully disabled via triggers when this is rolled.
-    enabled: 50
+    disabled: 40  # All ER options will be forcefully disabled via triggers when this is rolled.
+    enabled: 60
   trigger_entrance_rando_mode:
     dungeons_only: 30  # dungeon entrances only, separate pools (though there's only one pool)
     dungeons_nested: 10  # dungeon entrances, miniboss entrances and boss entrances are mixed together
-    random_separate: 10  # All entrances that roll enabled for ER are mixed only within the same category
-    random_mixed: 5  # All entrances that roll enabled for ER are mixed together
-    all_separate: 5 # All entrances are enabled for ER (if possible) and are mixed only within the same category
-    all_mixed: 2  # All entrances are enabled for ER (if possible) and are mixed together
+    random_separate: 30  # All entrances that roll enabled for ER are mixed only within the same category
+    random_mixed: 10  # All entrances that roll enabled for ER are mixed together
+    all_separate: 15 # All entrances are enabled for ER (if possible) and are mixed only within the same category
+    all_mixed: 5  # All entrances are enabled for ER (if possible) and are mixed together
     none: 0  # Set by triggers when trigger_entrance_rando rolls disabled
   # Overwritten by triggers when ER is enabled.
   mix_entrances: separate_pools
@@ -228,28 +228,26 @@ The Wind Waker:
   # Convenience Tweaks
   # swift_sail is always enabled (default)
   # instant_text_boxes is always enabled (default)
-  reveal_full_sea_chart:
-    'false': 5
-    'true': 95
+  # reveal_full_sea_chart is always enabled (default)
   skip_rematch_bosses:
     'false': 25
     'true': 75
   add_shortcut_warps_between_dungeons:
-    'false': 40
-    'true': 60
+    'false': 20
+    'true': 80
   # remove_music is always disabled (default)
 
   # Required Bosses
   required_bosses:
-    'false': 70
-    'true': 30
+    'false': 30
+    'true': 70
   num_required_bosses:
-    1: 2
-    2: 7
-    3: 16
-    4: 14
-    5: 12
-    6: 6
+    1: 5
+    2: 15
+    3: 25
+    4: 30
+    5: 15
+    6: 10
 
   # Difficulty Options
   # hero_mode is always disabled (default)
@@ -298,14 +296,12 @@ The Wind Waker:
             normal_normal: 6
           # Disabling these options is debatable.
           randomize_charts: 'false'
-          progression_dungeon_secrets: 'false'
-          progression_tingle_chests: 'false'
           progression_long_sidequests: 'false'
           progression_expensive_purchases: 'false'
           # Remove the option of starting with nothing.
           trigger_start_inventory_from_pool:
-            basics: 50
-            base_rando: 50
+            basics: 75
+            base_rando: 25
 
     # Set logic
     - option_category: The Wind Waker
