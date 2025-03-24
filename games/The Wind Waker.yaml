@@ -91,11 +91,11 @@ The Wind Waker:
     'false': 70
     'true': 30
   progression_eye_reef_chests:
-    'false': 20
-    'true': 80
+    'false': 50
+    'true': 50
   progression_big_octos_gunboats:
-    'false': 10
-    'true': 90
+    'false': 40
+    'true': 60
   progression_misc:
     'false': 10
     'true': 90
