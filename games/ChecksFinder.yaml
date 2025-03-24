@@ -5,4 +5,4 @@ ChecksFinder:
       option_result: Player{player}
       options:
         null:
-          name: ChecksFinder-{player}  
+          name: CF-{player}
