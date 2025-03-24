@@ -8,12 +8,15 @@ The Wind Waker:
   trigger_start_inventory_from_pool:
     # No specific items. May still include a sword or startwith keys/maps/compasses depending on other options.
     nothing: 5
+    # Wind Waker
+    # Ballad of Gales
+    fast_travel_only: 15
     # Basic items for getting around the world and passing time.
     # Wind Waker
     # Wind's Requiem
     # Song of Passing
     # Ballad of Gales
-    basics: 75
+    basics: 60
     # The non-AP, base TWW rando currently always starts with the following items:
     # Wind's Requiem
     # Song of Passing
@@ -298,7 +301,7 @@ The Wind Waker:
           randomize_charts: 'false'
           progression_long_sidequests: 'false'
           progression_expensive_purchases: 'false'
-          # Remove the option of starting with nothing.
+          # Remove the options of starting with nothing and fast_travel_only.
           trigger_start_inventory_from_pool:
             basics: 75
             base_rando: 25
@@ -348,6 +351,14 @@ The Wind Waker:
           logic_precision: hard
 
     # Start inventory from pool
+    - option_category: The Wind Waker
+      option_name: trigger_start_inventory_from_pool
+      option_result: fast_travel_only
+      options:
+        The Wind Waker:
+          +start_inventory_from_pool:
+            "Wind Waker": 1
+            "Ballad of Gales": 1
     - option_category: The Wind Waker
       option_name: trigger_start_inventory_from_pool
       option_result: basics
