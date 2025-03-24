@@ -49,20 +49,20 @@ The Wind Waker:
     'false': 10
     'true': 90
   ### Trigger for enabled secret caves
-  # This trigger exists so that secret cave ER will only ever be enabled when both types of secret cave are enabled.
   # The chance of both types of secret cave being enabled is also increased while decreasing the chance of only one type
   # being enabled.
   # progression_puzzle_secret_caves and progression_combat_secret_caves are set in triggers depending on the rolled
   # value.
+  # Triggers ensure that secret cave ER will only ever be enabled when both types of secret cave are enabled.
   trigger_progression_secret_caves:
     both: 55
     puzzle_only: 20
     combat_only: 20
     none: 5
   # Overwritten by triggers.
-  progression_puzzle_secret_caves: 'true'
+  progression_puzzle_secret_caves: 'true'  # default value
   # Overwritten by triggers.
-  progression_combat_secret_caves: 'false'
+  progression_combat_secret_caves: 'false'  # default value
   progression_savage_labyrinth:
     'false': 70
     'true': 30
