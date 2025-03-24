@@ -119,8 +119,8 @@ The Wind Waker:
   # being disabled due to progressive_expensive_purchases being disabled can be accounted for.
   # The trigger is also used to increase the chance of both being enabled compared to just triforce charts.
   trigger_progression_charts:
-    enabled: 90
-    disabled: 10
+    disabled: 35
+    enabled: 65
   trigger_progression_charts_choice:
     both: 40
     triforce_only: 20
