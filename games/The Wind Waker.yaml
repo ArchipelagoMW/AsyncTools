@@ -232,9 +232,12 @@ The Wind Waker:
   # swift_sail is always enabled (default)
   # instant_text_boxes is always enabled (default)
   # reveal_full_sea_chart is always enabled (default)
-  skip_rematch_bosses:
-    'false': 25
-    'true': 75
+  # The rematch bosses extend the length of go-mode and can increase the number of items logically required to goal.
+  # But there are no checks tied to the rematch bosses, so generally they only make an already fairly long go-mode even
+  # longer.
+  # The rematch bosses are always skipped unless dungeons are entirely disabled, in which case a trigger will give them
+  # a chance to not be skipped.
+  skip_rematch_bosses: 'true'
   add_shortcut_warps_between_dungeons:
     'false': 20
     'true': 80
@@ -650,6 +653,16 @@ The Wind Waker:
           randomize_secret_cave_inner_entrances: 'false'
           randomize_fairy_fountain_entrances: 'false'
           mix_entrances: separate_pools  # set back to the default
+
+    # Allow rematch bosses to be enabled if dungeons are entirely disabled
+    - option_category: The Wind Waker
+      option_name: progression_dungeons
+      option_result: 'false'
+      options:
+        The Wind Waker:
+          skip_rematch_bosses:
+            'false': 25
+            'true': 75
 
     # Clean up options that depend on disabled options
     ## Clean up for disabled dungeons
