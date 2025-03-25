@@ -200,12 +200,14 @@ The Wind Waker:
   # The trigger allows for a weighted distribution of the average number of ER categories to enable.
   # These are only averages, so any number between 0 and 6 ER categories can still be rolled by chance with any of the
   # trigger values.
+  # The weights are set to above average because triggers will disable ER categories for disabled location categories,
+  # reducing the overall number of enabled ER categories on average compared to what is rolled.
   trigger_entrance_rando_random_count:
-    1: 2
-    2: 3
-    3: 4
-    4: 3
-    5: 2
+    1: 1
+    2: 2
+    3: 3
+    4: 5
+    5: 3
   # These are all overwritten by triggers.
   randomize_dungeon_entrances: 'false'
   randomize_boss_entrances: 'false'
