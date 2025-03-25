@@ -195,26 +195,24 @@ The Wind Waker:
     none: 0  # Set by triggers when trigger_entrance_rando rolls disabled
   # Overwritten by triggers when ER is enabled.
   mix_entrances: separate_pools
-  # Roll randomized entrances for the random_separate and random_mixed modes. Other modes directly set which entrances
-  # are randomized.
-  randomize_dungeon_entrances:
-    'false': 10
-    'true': 90
-  randomize_boss_entrances:
-    'false': 10
-    'true': 90
-  randomize_miniboss_entrances:
-    'false': 10
-    'true': 90
-  randomize_secret_cave_entrances:
-    'false': 10
-    'true': 90
-  randomize_secret_cave_inner_entrances:
-    'false': 10
-    'true': 90
-  randomize_fairy_fountain_entrances:
-    'false': 10
-    'true': 90
+  # Prepare a trigger to roll randomized entrances for the random_separate and random_mixed modes. Other modes directly
+  # set which entrances are randomized.
+  # The trigger allows for a weighted distribution of the average number of ER categories to enable.
+  # These are only averages, so any number between 0 and 6 ER categories can still be rolled by chance with any of the
+  # trigger values.
+  trigger_entrance_rando_random_count:
+    1: 2
+    2: 3
+    3: 4
+    4: 3
+    5: 2
+  # These are all overwritten by triggers.
+  randomize_dungeon_entrances: 'false'
+  randomize_boss_entrances: 'false'
+  randomize_miniboss_entrances: 'false'
+  randomize_secret_cave_entrances: 'false'
+  randomize_secret_cave_inner_entrances: 'false'
+  randomize_fairy_fountain_entrances: 'false'
 
   # Note: A chest containing a Useful item appears the same as a chest containing a Filler item currently, so this
   # option is less helpful than it would appear.
@@ -541,6 +539,166 @@ The Wind Waker:
         The Wind Waker:
           progression_triforce_charts: 'true'
           progression_treasure_charts: 'false'
+
+    # Roll for random ER categories. This is used when the ER mode is set to random_separate or random_mixed.
+    # Average 1 enabled ER category.
+    # Approximate distribution:
+    #  0: 15723 | 33.5%
+    #  1: 18862 | 40.1%
+    #  2: 9437  | 20.1%
+    #  3: 2520  |  5.4%
+    #  4: 376   |  0.8%
+    #  5: 29    |  0.06%
+    #  6: 1     |  0.002%
+    - option_category: The Wind Waker
+      option_name: trigger_entrance_rando_random_count
+      option_result: 1
+      options:
+        The Wind Waker:
+          randomize_dungeon_entrances:
+            'false': 5
+            'true': 1
+          randomize_boss_entrances:
+            'false': 5
+            'true': 1
+          randomize_miniboss_entrances:
+            'false': 5
+            'true': 1
+          randomize_secret_cave_entrances:
+            'false': 5
+            'true': 1
+          randomize_secret_cave_inner_entrances:
+            'false': 5
+            'true': 1
+          randomize_fairy_fountain_entrances:
+            'false': 5
+            'true': 1
+    # Average 2 enabled ER categories.
+    # Approximate distribution:
+    #  0: 64  |  8.7%
+    #  1: 192 | 26.3%
+    #  2: 241 | 32.9%
+    #  3: 160 | 21.9%
+    #  4: 60  |  8.2%
+    #  5: 12  |  1.6%
+    #  6: 1   |  0.1%
+    - option_category: The Wind Waker
+      option_name: trigger_entrance_rando_random_count
+      option_result: 2
+      options:
+        The Wind Waker:
+          randomize_dungeon_entrances:
+            'false': 4
+            'true': 2
+          randomize_boss_entrances:
+            'false': 4
+            'true': 2
+          randomize_miniboss_entrances:
+            'false': 4
+            'true': 2
+          randomize_secret_cave_entrances:
+            'false': 4
+            'true': 2
+          randomize_secret_cave_inner_entrances:
+            'false': 4
+            'true': 2
+          randomize_fairy_fountain_entrances:
+            'false': 4
+            'true': 2
+    # Average 3 enabled ER categories.
+    # Approximate distribution:
+    #  0: 1  |  1.6%
+    #  1: 6  |  9.4%
+    #  2: 15 | 23.5%
+    #  3: 20 | 31.2%
+    #  4: 15 | 23.5%
+    #  5: 6  |  9.4%
+    #  6: 1  |  1.6%
+    - option_category: The Wind Waker
+      option_name: trigger_entrance_rando_random_count
+      option_result: 3
+      options:
+        The Wind Waker:
+          randomize_dungeon_entrances:
+            'false': 3
+            'true': 3
+          randomize_boss_entrances:
+            'false': 3
+            'true': 3
+          randomize_miniboss_entrances:
+            'false': 3
+            'true': 3
+          randomize_secret_cave_entrances:
+            'false': 3
+            'true': 3
+          randomize_secret_cave_inner_entrances:
+            'false': 3
+            'true': 3
+          randomize_fairy_fountain_entrances:
+            'false': 3
+            'true': 3
+    # Average 4 enabled ER categories.
+    #  0: 1   |  0.1%
+    #  1: 12  |  1.6%
+    #  2: 60  |  8.2%
+    #  3: 160 | 21.9%
+    #  4: 241 | 32.9%
+    #  5: 192 | 26.3%
+    #  6: 64  |  8.7%
+    - option_category: The Wind Waker
+      option_name: trigger_entrance_rando_random_count
+      option_result: 4
+      options:
+        The Wind Waker:
+          randomize_dungeon_entrances:
+            'false': 2
+            'true': 4
+          randomize_boss_entrances:
+            'false': 2
+            'true': 4
+          randomize_miniboss_entrances:
+            'false': 2
+            'true': 4
+          randomize_secret_cave_entrances:
+            'false': 2
+            'true': 4
+          randomize_secret_cave_inner_entrances:
+            'false': 2
+            'true': 4
+          randomize_fairy_fountain_entrances:
+            'false': 2
+            'true': 4
+    # Average 5 enabled ER categories.
+    #  0: 1     |  0.002%
+    #  1: 29    |  0.06%
+    #  2: 376   |  0.8%
+    #  3: 2520  |  5.4%
+    #  4: 9437  | 20.1%
+    #  5: 18862 | 40.1%
+    #  6: 15723 | 33.5%
+    - option_category: The Wind Waker
+      option_name: trigger_entrance_rando_random_count
+      option_result: 5
+      options:
+        The Wind Waker:
+          randomize_dungeon_entrances:
+            'false': 1
+            'true': 5
+          randomize_boss_entrances:
+            'false': 1
+            'true': 5
+          randomize_miniboss_entrances:
+            'false': 1
+            'true': 5
+          randomize_secret_cave_entrances:
+            'false': 1
+            'true': 5
+          randomize_secret_cave_inner_entrances:
+            'false': 1
+            'true': 5
+          randomize_fairy_fountain_entrances:
+            'false': 1
+            'true': 5
 
     # Set ER mode:
     - option_category: The Wind Waker
