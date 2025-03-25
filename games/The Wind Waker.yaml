@@ -222,8 +222,8 @@ The Wind Waker:
 
   # Other Randomizers
   randomize_charts: # Note: not supported by the PopTracker pack
-    'false': 75
-    'true': 25
+    'false': 90
+    'true': 10
   randomize_starting_island: # Note: no effect on logic and quickly becomes irrelevant
     'false': 20
     'true': 80
