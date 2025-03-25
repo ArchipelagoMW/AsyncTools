@@ -43,8 +43,7 @@ Links Awakening DX:
     own_world: 5
     any_world: 3
     different_world: 1
-  warp_improvements: true
-  additional_warp_points: true
+  warps: improved_additional
   shuffle_instruments:
     original_dungeon: 10
     own_dungeons: 10
@@ -65,6 +64,19 @@ Links Awakening DX:
   music:
     vanilla: 10
     shuffled: 1
+
+  # 0.6.0 Additions
+  overworld:
+    normal: 1
+    open_mabe: 1
+  stabilize_item_pool:
+    false: 1
+    true: 1
+  quickswap: b
+  foreign_item_icons:
+    guess_by_name: 1
+    indicate_progression: 3
+    
   triggers:
     - option_category: Links Awakening DX
       option_name: goal
