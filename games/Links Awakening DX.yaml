@@ -15,16 +15,16 @@ Links Awakening DX:
     hard: 2
   shuffle_nightmare_keys:
     original_dungeon: 5
-    own_dungeons: 5
-    own_world: 5
-    any_world: 3
-    different_world: 1
+    own_dungeons: 3
+    own_world: 3
+    any_world: 4
+    different_world: 4
   shuffle_small_keys:
     original_dungeon: 5
-    own_dungeons: 5
-    own_world: 5
-    any_world: 3
-    different_world: 1
+    own_dungeons: 1
+    own_world: 1
+    any_world: 4
+    different_world: 4
   shuffle_maps:
     original_dungeon: 5
     own_dungeons: 5
