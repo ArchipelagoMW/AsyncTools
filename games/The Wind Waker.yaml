@@ -62,6 +62,9 @@ The Wind Waker:
     puzzle_only: 20
     combat_only: 20
     none: 5
+  # Extra trigger to reroll secret caves even more weighted towards `both` when secret cave ER *could* be enabled.
+  # This is set to 'true' by triggers when a reroll needs to occur.
+  trigger_reroll_secret_caves_more_weighted_to_both: 'false'
   # Overwritten by triggers.
   progression_puzzle_secret_caves: 'true'  # default value
   # Overwritten by triggers.
@@ -434,6 +437,54 @@ The Wind Waker:
         The Wind Waker:
           randomize_smallkeys: keylunacy
           randomize_bigkeys: keylunacy
+
+    # Reroll secret caves to have a higher chance of both being enabled compared to only one type when ER that can roll
+    # secret caves is enabled.
+    ## Start by enabling the trigger if any of the random_ or all_ modes is picked.
+    - option_category: The Wind Waker
+      option_name: trigger_entrance_rando_mode
+      option_result: random_separate
+      options:
+        The Wind Waker:
+          trigger_reroll_secret_caves_more_weighted_to_both: 'true'
+    - option_category: The Wind Waker
+      option_name: trigger_entrance_rando_mode
+      option_result: random_mixed
+      options:
+        The Wind Waker:
+          trigger_reroll_secret_caves_more_weighted_to_both: 'true'
+    - option_category: The Wind Waker
+      option_name: trigger_entrance_rando_mode
+      option_result: all_separate
+      options:
+        The Wind Waker:
+          trigger_reroll_secret_caves_more_weighted_to_both: 'true'
+    - option_category: The Wind Waker
+      option_name: trigger_entrance_rando_mode
+      option_result: all_mixed
+      options:
+        The Wind Waker:
+          trigger_reroll_secret_caves_more_weighted_to_both: 'true'
+    ## Disable the trigger if ER is disabled
+    - option_category: The Wind Waker
+      option_name: trigger_entrance_rando
+      option_result: disabled
+      options:
+        The Wind Waker:
+          trigger_reroll_secret_caves_more_weighted_to_both: 'false'
+    ## Reroll the secret caves with a higher weight for both, if the trigger is enabled.
+    - option_category: The Wind Waker
+      option_name: trigger_reroll_secret_caves_more_weighted_to_both
+      option_result: 'true'
+      options:
+        The Wind Waker:
+          trigger_progression_secret_caves:
+            # The weight of `both` is increased, taking the weight from puzzle_only and combat_only.
+            both: 71
+            puzzle_only: 12
+            combat_only: 12
+            # The weight of `none` remains the same.
+            none: 5
 
     # Enable secret caves based on the trigger
     - option_category: The Wind Waker
