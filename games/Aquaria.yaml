@@ -50,7 +50,7 @@
 
   skip_first_vision: true
 
-  local_items: ["Energy form"]
+  local_items: ["Energy Form"]
   
   triggers:
     - option_category: null
