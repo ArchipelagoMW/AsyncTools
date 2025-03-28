@@ -76,6 +76,7 @@ Links Awakening DX:
   foreign_item_icons:
     guess_by_name: 1
     indicate_progression: 3
+  tarins_gift: bush_breaker # other options are local progression or any_item but this guarantees a sphere 1 of more than 1 item. The other options could have you sit at BK for weeks after 1 item.
     
   triggers:
     - option_category: Links Awakening DX
