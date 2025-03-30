@@ -23,6 +23,7 @@ The Witness:
   shuffle_discarded_panels: random
   shuffle_vault_boxes: random
   obelisk_keys: random
+  unlockable_warps: random
   shuffle_EPs:
     off: 50
     individual: 20
@@ -49,7 +50,7 @@ The Witness:
     off: 50
     add_to_pool: 25
     starting_inventory: 25
-  elevators_come_to_you: random
+  elevators_come_to_you: Quarry Elevator
   trap_percentage: random-range-0-50
   trap_weights:
     Bonk: 1
