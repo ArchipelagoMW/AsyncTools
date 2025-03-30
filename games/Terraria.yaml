@@ -5,8 +5,8 @@ Terraria:
     zenith: 2
   achievements:
     none: 2
-    exclude_grindy: 1
-    exclude_fishing: 2
+    exclude_grindy: 2
+    exclude_fishing: 3
   fill_extra_checks_with: useful_items
   death_link: 'false'
   triggers:

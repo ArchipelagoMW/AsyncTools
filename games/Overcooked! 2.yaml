@@ -17,7 +17,7 @@ Overcooked! 2:
   always_preserve_cooking_progress: 'true'
   always_serve_oldest_order: 'true'
   display_leaderboard_scores: 'false'
-  stars_to_win: random-range-45-65
+  stars_to_win: random-range-40-70
   star_threshold_scale: random-range-35-45
   triggers:
     - option_category: null
