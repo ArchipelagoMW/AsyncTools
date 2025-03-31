@@ -22,6 +22,10 @@ Heretic:
   episode5:
     false: 3
     true: 2
+  split_bag_of_holding:
+    'false': 1
+    'true': 1
+  bag_of_holding_count: random-low
   triggers:
     - option_category: null
       option_name: name

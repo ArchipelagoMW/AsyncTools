@@ -52,7 +52,24 @@ Timespinner:
   show_bestiary: true
   show_drops: true
   trap_chance: 0
-    
+  prism_break:
+    false: 5
+    true: 2
+  lock_key_amadeus:
+    false: 5
+    true: 2
+  risky_warps:
+    false: 5
+    true: 2
+  pyramid_start:
+    false: 5
+    true: 2
+  gate_keep:
+    false: 5
+    true: 2
+  royal_roadblock:
+    false: 5
+    true: 2
   triggers:
     # greatly reduce Cantoran odds on an inverted start - it's an endgame boss location that can be as early as sphere 1 if inverted and quick seed are both true
     - option_category: Timespinner
