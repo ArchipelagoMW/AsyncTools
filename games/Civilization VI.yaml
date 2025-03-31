@@ -23,4 +23,4 @@ Civilization VI:
       option_result: Player{player}
       options:
         null:
-          name: CivIV-{player}
+          name: CivVI-{player}
