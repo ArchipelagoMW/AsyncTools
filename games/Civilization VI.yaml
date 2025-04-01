@@ -1,8 +1,5 @@
 Civilization VI:
-  progression_style:
-    districts_only: 5
-    eras_and_districts: 2
-    none: 2
+  progression_style: eras_and_districts
   shuffle_goody_hut_rewards:
     'false': 2
     'true': 5
