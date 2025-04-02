@@ -1,5 +1,7 @@
 Heretic:
-  goal: complete_boss_levels
+  goal: 
+    complete_all_levels: 2
+    complete_boss_levels: 3
   difficulty:
     wet_nurse: 2
     easy: 5

@@ -11,7 +11,7 @@ SMZ3:
     early: 50
   key_shuffle:
     none: 50
-    keysanity: 10
+    keysanity: 30
   accessibility:
     items: 50
   goal:

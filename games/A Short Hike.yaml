@@ -1,7 +1,6 @@
 A Short Hike:
   goal: 
     help_everyone: 3
-    fishmonger: 1
     photo: 1
   coins_in_shops: false
   golden_feathers: random-range-12-20
