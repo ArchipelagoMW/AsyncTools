@@ -20,6 +20,10 @@ DOOM II:
   episode2: random
   episode3: random
   episode4: random
+  split_backpack:
+    'false': 1
+    'true': 1
+  backpack_count: random-low
   triggers:
     - option_category: null
       option_name: name

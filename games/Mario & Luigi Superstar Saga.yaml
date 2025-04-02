@@ -1,4 +1,8 @@
 Mario & Luigi Superstar Saga:
+  goal:
+    vanilla: 50
+    emblem_hunt: 50
+    
   coins:
     false: 50
     true: 50
@@ -122,10 +126,11 @@ Mario & Luigi Superstar Saga:
     black: 2
     white: 2
     chaos: 2
-    
 
   start_inventory:
    { Woo Bean: 40, Hee Bean: 25 }
+   
+  local_items: ["Beanstar Emblem"]
 
   triggers:
     # Scale stats if enemies randomized
