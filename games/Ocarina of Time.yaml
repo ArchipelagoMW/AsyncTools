@@ -9,6 +9,7 @@ Ocarina of Time:
   local_items:
     - Triforce Piece
     - Ice Trap
+    - Song of Time
 
   logic_rules: glitchless
   logic_no_night_tokens_without_suns_song: true
@@ -100,8 +101,8 @@ Ocarina of Time:
     dungeon: 4
     keysanity: 1
   key_rings:
-    off: 7
-    all: 3
+    off: 3
+    all: 7
 
   # Ganon BK -- completion condition if not TFH
   shuffle_ganon_bosskey:

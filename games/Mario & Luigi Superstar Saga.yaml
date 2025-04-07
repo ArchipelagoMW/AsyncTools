@@ -1,4 +1,8 @@
 Mario & Luigi Superstar Saga:
+  goal:
+    vanilla: 50
+    emblem_hunt: 50
+    
   coins:
     false: 50
     true: 50
@@ -50,7 +54,6 @@ Mario & Luigi Superstar Saga:
   randomize_bosses:
     disabled: 30
     boss_only: 40
-    boss_normal: 30
 
   scale_stats: 
     false: 100
@@ -123,10 +126,11 @@ Mario & Luigi Superstar Saga:
     black: 2
     white: 2
     chaos: 2
-    
 
   start_inventory:
    { Woo Bean: 40, Hee Bean: 25 }
+   
+  local_items: ["Beanstar Emblem"]
 
   triggers:
     # Scale stats if enemies randomized
@@ -149,14 +153,6 @@ Mario & Luigi Superstar Saga:
     - option_category: Mario & Luigi Superstar Saga
       option_name: randomize_bosses
       option_result: boss_only
-      options:
-        Mario & Luigi Superstar Saga:
-          scale_stats:
-            true: 100
-
-    - option_category: Mario & Luigi Superstar Saga
-      option_name: randomize_bosses
-      option_result: normal
       options:
         Mario & Luigi Superstar Saga:
           scale_stats:

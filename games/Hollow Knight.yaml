@@ -67,13 +67,11 @@ Hollow Knight:
   RemoveSpellUpgrades: 'false'
   StartLocation: king's_pass
   Goal:
-    any: 2
-    hollowknight: 3
-    siblings: 3
+    siblings: 8
     radiance: 3
+    grub_hunt: 2
     godhome: 0
     godhome_flower: 0
-    grub_hunt: 2
   GrubHuntGoal: random-range-middle-25-35
   WhitePalace: 
     exclude: 5
@@ -95,26 +93,29 @@ Hollow Knight:
   RandomCharmCosts: -2
   MinimumEggPrice: 1
   MaximumEggPrice: 10
-  EggShopSlots: 5
-  SlyShopSlots: 8
-  SlyKeyShopSlots: 6
-  IseldaShopSlots: 2
-  SalubraShopSlots: 5
-  SalubraCharmShopSlots: 5
-  LegEaterShopSlots: 3
-  GrubfatherRewardSlots: 7
-  SeerRewardSlots: 8
-  ExtraShopSlots: 0
+  EggShopSlots: 1
+  SlyShopSlots: 1
+  SlyKeyShopSlots: 1
+  IseldaShopSlots: 1
+  SalubraShopSlots: 1
+  SalubraCharmShopSlots: 1
+  LegEaterShopSlots: 1
+  GrubfatherRewardSlots: 1
+  SeerRewardSlots: 1
+  ExtraShopSlots: random-range-middle-30-50
   SplitCrystalHeart: 'random'
   SplitMothwingCloak: 'random'
   SplitMantisClaw: 'random'
-  CostSanity: off
+  CostSanity:
+    off: 4
+    shopsonly: 1
+    on: 1
   CostSanityHybridChance: 10
   CostSanityEggWeight: 1
-  CostSanityGrubWeight: 1
-  CostSanityEssenceWeight: 1
-  CostSanityCharmWeight: 1
-  CostSanityGeoWeight: 8
+  CostSanityGrubWeight: 2
+  CostSanityEssenceWeight: 2
+  CostSanityCharmWeight: 2
+  CostSanityGeoWeight: 16
   local_items:
     - Monomon
     - Lurien
@@ -132,14 +133,14 @@ Hollow Knight:
   
   triggers:
   - option_category: Hollow Knight
-    option_name: goal
+    option_name: Goal
     option_result: grub_hunt
     options:
       Hollow Knight:
         +local_items:
           - Grubs
   - option_category: Hollow Knight
-    option_name: goal
+    option_name: Goal
     option_result: any
     options:
       Hollow Knight:

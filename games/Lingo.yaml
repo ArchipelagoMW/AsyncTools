@@ -1,7 +1,6 @@
 Lingo:
   shuffle_doors:
     none: 20
-    panels: 40
     doors: 40
   group_doors:
     false: 50
@@ -38,13 +37,6 @@ Lingo:
   shuffle_sunwarps: random
   shuffle_postgame: false
   triggers:
-    - option_name: shuffle_doors
-      option_category: Lingo
-      option_result: panels
-      percentage: 25
-      options:
-        Lingo:
-          shuffle_colors: false
     - option_name: shuffle_doors
       option_category: Lingo
       option_result: doors

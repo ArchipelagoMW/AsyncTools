@@ -252,6 +252,15 @@ Pokemon Emerald:
           wild_encounter_blacklist: []
           normalize_encounter_rates: true
           guaranteed_catch: true
+          
+    # No blind trainers if trainersanity is enabled
+    - option_category: Pokemon Emerald
+      option_name: trainersanity
+      option_result: true
+      options:
+        Pokemon Emerald:
+          blind_trainers: false
+
 
     # Blacklist trainer legendaries
     - option_category: Pokemon Emerald

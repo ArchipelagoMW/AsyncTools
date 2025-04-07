@@ -1,13 +1,37 @@
-Dark Souls III:
-  local_items:
-    ["Small Lothric Banner","Cinders of a Lord - Abyss Watcher","Cinders of a Lord - Yhorm the Giant","Cinders of a Lord - Aldrich","Cinders of a Lord - Lothric Prince"]
-  auto_equip:
-    false: 50
-  lock_equip:
-    false: 50
+﻿Dark Souls III:
+  early_banner: early_local
+  late_basin_of_vows:
+    'off': 25
+    after_small_lothric_banner: 50
+    after_small_doll: 50
+  late_dlc:
+    'off': 25
+    after_small_doll: 50
+    after_basin: 50
+  death_link: 'false'
+  enable_dlc:
+    'false': 7
+    'true': 1
+  enable_ngp: 'false'
+  random_starting_loadout:
+    'false': 25
+    'true': 75
+  require_one_handed_starting_weapons: 'true'
+  auto_equip: 'false'
+  lock_equip: 'false'
+  no_equip_load:
+    'false': 2
+    'true': 3
   no_weapon_requirements:
-    false: 2
-    true: 3
+    'false': 2
+    'true': 3
+  no_spell_requirements:
+    'false': 2
+    'true': 3
+  randomize_infusion:
+    'false': 50
+    'true': 50
+  randomize_infusion_percentage: random
   randomize_weapon_level:
     all: 5
     basic: 1
@@ -18,56 +42,26 @@ Dark Souls III:
   max_levels_in_5: 5
   min_levels_in_10: 1
   max_levels_in_10: 10
-  late_basin_of_vows:
-    false: 1
-    true: 5
-  no_spell_requirements:
-    false: 2
-    true: 3
-  no_equip_load:
-    false: 2
-    true: 3
-  death_link:
-    false: 50
-  enable_progressive_locations:
-    true: 1
-    false: 3
-  enable_dlc:
-    true: 1
-    false: 24
-  enable_weapon_locations:
-    true: 50
-    false: 50
-  enable_shield_locations:
-    true: 50
-    false: 50
-  enable_armor_locations:
-    true: 50
-    false: 50
-  enable_ring_locations:
-    true: 50
-    false: 50
-  enable_spell_locations:
-    true: 50
-    false: 50
-  enable_key_locations:
-    true: 50
-  enable_boss_locations:
-    true: 50
-  enable_npc_locations:
-    true: 50
-    false: 50
-  enable_misc_locations:
-    true: 50
-    false: 50
-  enable_health_upgrade_locations:
-    true: 50
-    false: 50
-  pool_type: shuffle
-  randomize_infusion:
-    true: 50
-    false: 50
-  randomize_infusion_percentage: random
+  smooth_soul_items: 'true'
+  smooth_upgrade_items: 'true'
+  smooth_upgraded_weapons: 'true'
+  randomize_enemies: 'false'
+  simple_early_bosses: 'true'
+  scale_enemies: 'true'
+  randomize_mimics_with_enemies: 'false'
+  randomize_small_crystal_lizards_with_enemies: 'false'
+  reduce_harmless_enemies: 'false'
+  all_chests_are_mimics: 'false'
+  impatient_mimics: 'false'
+  local_items:
+    ["Cinders of a Lord - Abyss Watcher", "Cinders of a Lord - Yhorm the Giant", "Cinders of a Lord - Aldrich", "Cinders of a Lord - Lothric Prince"]
+  non_local_items:
+    # Can be unobtainable in certain local locations
+    ['Path of the Dragon']
+  exclude_locations:
+    ['Small Souls', 'Miscellaneous', 'Hidden', 'Small Crystal Lizards', 'Upgrade', "AL: Aldrich's Ruby - dark cathedral, miniboss"]
+  excluded_location_behavior: forbid_useful
+  missable_location_behavior: forbid_useful
   triggers:
     - option_category: null
       option_name: name
@@ -75,4 +69,3 @@ Dark Souls III:
       options:
         null:
           name: DS3-{player}
-

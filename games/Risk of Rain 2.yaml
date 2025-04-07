@@ -4,8 +4,8 @@ Risk of Rain 2:
     explore: 100
   victory:
     any: 25
-    mithrix: 26
-    limbo: 25
+    mithrix: 25
+    voidling: 25
   total_locations: random-range-60-200
   chests_per_stage: random-range-high-5-15
   shrines_per_stage: random-low

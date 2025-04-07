@@ -43,6 +43,7 @@ Kingdom Hearts 2:
   FillerItemsLocal: false
   start_inventory:
     Scan: 1
+    Aerial Recovery: 1
   
   triggers:
     #Turn off the need to kill Final Xemnas if Lucky Emblem Hunt and set other details

@@ -3,7 +3,7 @@ Bomb Rush Cyberfunk:
   skip_intro: true
   skip_dreams: true
   skip_statue_hands: true
-  total_rep: random-range-1200-1600
+  total_rep: random-range-1100-1400
   extra_rep_required: random
   starting_movestyle: random
   limited_graffiti: true
