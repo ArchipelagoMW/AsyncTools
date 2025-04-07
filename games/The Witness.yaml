@@ -3,6 +3,11 @@ The Witness:
     sigma_normal: 75
     sigma_expert: 5
     umbra_variety: 20
+  easter_egg_hunt:
+    'off': 8
+    easy: 2
+    normal: 3
+    hard: 3
   shuffle_symbols: random
   shuffle_doors:
     off: 50
