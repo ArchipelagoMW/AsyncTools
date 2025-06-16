@@ -6,8 +6,9 @@ Overcooked! 2:
     'false': 50
     'true': 50
   prep_levels:
-    excluded: 80
-    all_you_can_eat: 20
+    original: 10
+    excluded: 50
+    all_you_can_eat: 40
   kevin_levels:
     'true': 50
     'false': 50
