@@ -39,7 +39,7 @@ Final Fantasy Mystic Quest:
   companions_locations:
     standard: 25
     shuffled: 10
-  kaelis_mom_fight_minotaur: 'false'
+  kaelis_mom_fight_minotaur: 'true'
   companion_leveling_type:
     quests: 30
     quests_extended: 20
