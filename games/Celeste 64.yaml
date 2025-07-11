@@ -7,6 +7,12 @@ Celeste 64:
   friendsanity: false
   signsanity: false
   carsanity: false
+  checkpointsanity:
+    'false': 3
+    'true': 2
+  madeline_one_dash_hair_color: any_color
+  madeline_two_dash_hair_color: any_color
+  madeline_feather_hair_color: any_color
   sanities:
     none: 1
     all: 5    

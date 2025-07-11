@@ -38,7 +38,7 @@ game:
 
 ```
 
-Now you can generate a new `mystery.yaml` by running `python GenerateMystery.py`
+Now you can generate `weights.yaml` and `games.yaml` by running `python GenerateMystery.py`
 
 ### Update an existing game's settings
 
@@ -46,7 +46,7 @@ To update an existing game's settings, just open the corresponding game file in 
 
 To update the weighting for a particular game being rolled, open the `./games/__meta__.yaml` file and adjust the number for how much that game is weighted and save the file.
 
-Then run `python GenerateMystery.py` to generate a new `mystery.yaml` file.
+Then run `python GenerateMystery.py` to generate a new `weights.yaml` file.
 
 ## YAML Output Converter
 

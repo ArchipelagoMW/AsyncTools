@@ -1,0 +1,23 @@
+Civilization VI:
+  progression_style: eras_and_districts
+  shuffle_goody_hut_rewards:
+    'false': 2
+    'true': 5
+  boostsanity:
+    'false': 5
+    'true': 2
+  research_cost_multiplier:
+    100: 50
+  hide_item_names:
+    'false': 5
+    'true': 2
+  advisor_show_progression_items:
+    'false': 2
+    'true': 5
+  triggers:
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: CivVI-{player}

@@ -1,0 +1,36 @@
+Inscryption:
+  death_link: false
+  goal:
+    full_story_any_order: 10
+  randomize_codes: 
+    true: 8
+    false: 2
+  randomize_deck:
+    disable: 5
+    every_encounter_within_same_type: 2
+    starting_only: 3
+  randomize_sigils:
+    disable: 8
+    randomize_all: 2
+  optional_death_card: always_on
+  skip_tutorial: true
+  skip_epilogue: true
+  epitaph_pieces_randomization:
+    in_groups: 4
+    as_one_item: 6
+  painting_checks_balancing:
+    balanced: 7
+    force_filler: 3
+  triggers:
+  - option_category: null
+    option_name: name
+    option_result: Player{player}
+    options:
+      null:
+        name: Inscryp-{player}
+  - option_name: randomize_sigils
+    option_category: Inscryption
+    option_result: randomize_all
+    options:
+      Inscryption:
+        randomize_deck: disable

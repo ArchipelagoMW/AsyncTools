@@ -1,0 +1,44 @@
+Saving Princess:
+  expanded_pool:
+    false: 30
+    true: 70
+
+  trap_chance:
+    0: 50
+    20: 50
+
+  death_link: false
+
+  instant_saving: true
+
+  sprint_availability:
+    always_available: 20
+    available_with_jacket: 80
+
+  cliff_weapon_upgrade:
+    never_upgraded: 10
+    always_upgraded: 45
+    vanilla: 45
+
+  ace_weapon_upgrade: always_upgraded
+
+  iframes_duration: 100
+
+  shake_intensity: 50
+
+  music_shuffle:
+    false: 70
+    true: 30
+
+  local_items:
+    - Ice Trap
+    - Shake Trap
+    - Ninja Trap
+
+  triggers:
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: SavingP-{player}

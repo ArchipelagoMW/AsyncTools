@@ -74,6 +74,7 @@ Castlevania 64:
   death_link:
     off: 99
     explosive: 1
+  local_items: ["Special2"]
   triggers:
     - option_category: null
       option_name: name

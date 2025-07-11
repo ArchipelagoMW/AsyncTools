@@ -30,6 +30,10 @@ DOOM 1993:
     false: 1
   episode3: false
   episode4: false
+  split_backpack:
+    'false': 1
+    'true': 1
+  backpack_count: random-low
   triggers:
     - option_category: null
       option_name: name
