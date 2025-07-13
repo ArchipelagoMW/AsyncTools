@@ -1,8 +1,9 @@
 TUNIC:
   # column order for the spreadsheet:
-  # Start with Sword | Hexagon Quest | Gold Hexagons Required | Percentage of Extra Hexagons | Hexagon Quest Ability Type | Breakable Shuffle | Keys Behind Bosses
-  # Entrance Rando | Fewer Shops | Addtl Combat Logic | Laurels Location | Laurels Zips | Ice Grappling | Ladder Storage
+  # Start with Sword | Hexagon Quest | Breakable Shuffle | Addtl Combat Logic | Keys Behind Bosses | Entrance Rando | Direction Pairs | Decoupled | Fewer Shops
+  # Laurels Location | Laurels Zips | Ice Grappling | Ladder Storage | Gold Hexagons Required | Percentage of Extra Hexagons | Hexagon Quest Ability Type
   # if Hexagon Quest is disabled, put a - for Gold Hexagons Required, Percentage of Extra Hexagons, and Hexagon Quest Ability Type since they are not relevant
+  # if Entrance Rando is disabled, put a - for Direction Pairs, Decoupled, and Fewer Shops since they are not relevant
   sword_progression: 'true'
   start_with_sword:
     'true': 25
@@ -56,9 +57,13 @@ TUNIC:
       option_result: 'yes'
       options:
         TUNIC:
-          fixed_shop:
-            'true': 50
-            'false': 50
+          entrance_layout:
+            standard: 25
+            direction_pairs: 50
+            fixed_shop: 25
+          decoupled:
+            'true': 10
+            'false': 90
 
     - option_category: TUNIC
       option_name: laurels_zips
