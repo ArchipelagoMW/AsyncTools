@@ -11,6 +11,12 @@ Stardew Valley:
     gourmet_chef: 3
     craft_master: 2
     mystery_of_the_stardrops: 8
+    cryptic_note: 0
+    full_house: 0
+    greatest_walnut_hunter: 0
+    allsanity: 0
+    perfection: 0
+    legend: 0
   farm_type: random
   starting_money: random-range-1000-25000
   profit_margin:
@@ -80,8 +86,9 @@ Stardew Valley:
     exclude_hard_fish: 50
     only_easy_fish: 20
   museumsanity: #Override in trigger
-    none: 60
+    none: 40
     milestones: 30
+    randomized: 20
     all: 10
   monstersanity: #Override in trigger
     one_per_category: 25
@@ -121,7 +128,6 @@ Stardew Valley:
   walnutsanity: ["Puzzles", "Bushes", "Repeatables"] # If Ginger island rolls excluded, this will automatically disable itself. I have disabled dig spots because they are not noob-friendly. Everything else is better shuffled
   movement_buff_number: random-range-4-8
   enabled_filler_buffs: ["Luck", "Damage", "Defense", "Immunity", "Health", "Energy", "Bite Rate", "Fish Trap", "Fishing Bar Size"]
-  luck_buff_number: random-range-4-12
   exclude_ginger_island:
     false: 50
     true: 50
@@ -184,7 +190,7 @@ Stardew Valley:
       option_result: complete_collection #finish museum
       options:
         Stardew Valley:
-          museumsanity: #remove none odds
+          museumsanity: #remove none and randomized odds
             milestones: 75
             all: 25
     - option_category: Stardew Valley
