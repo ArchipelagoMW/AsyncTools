@@ -6,8 +6,9 @@ Overcooked! 2:
     'false': 50
     'true': 50
   prep_levels:
-    excluded: 80
-    all_you_can_eat: 20
+    original: 10
+    excluded: 50
+    all_you_can_eat: 40
   kevin_levels:
     'true': 50
     'false': 50
@@ -17,8 +18,8 @@ Overcooked! 2:
   always_preserve_cooking_progress: 'true'
   always_serve_oldest_order: 'true'
   display_leaderboard_scores: 'false'
-  stars_to_win: random-range-40-70
-  star_threshold_scale: random-range-35-45
+  stars_to_win: random-range-40-90
+  star_threshold_scale: random-range-25-45
   triggers:
     - option_category: null
       option_name: name
