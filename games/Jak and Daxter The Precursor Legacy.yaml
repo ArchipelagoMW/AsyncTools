@@ -58,3 +58,10 @@
     Teleport Trap: 1
     Trip Trap: 1
     Zoomer Trap: 1
+  triggers:
+  - option_category: null
+    option_name: name
+    option_result: Player{player}
+    options:
+      null:
+        name: Jak-{player}
