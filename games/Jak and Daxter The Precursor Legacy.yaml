@@ -6,8 +6,8 @@
     'false': 2
     'true': 5
   jak_completion_condition:
-    defeat_gol_and_maia: 5
-    open_100_cell_door: 2
+    defeat_gol_and_maia: 10
+    open_100_cell_door: 1
   enable_orbsanity:
     'off': 5
     per_level: 1
