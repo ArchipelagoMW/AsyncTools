@@ -4,10 +4,10 @@ Super Mario Land 2:
     shuffle: 50
     mario_coin_fragment_hunt: 50
   required_golden_coins: random-high
-  mario_coin_fragment_percentage: random-high
+  mario_coin_fragment_percentage: random-middle
   mario_coin_fragments_required_percentage: random-range-50-90
   coinsanity: random
-  coinsanity_checks: random
+  coinsanity_checks: random-low
   shuffle_midway_bells: true
   marios_castle_midway_bell: true
   shuffle_pipe_traversal: random
