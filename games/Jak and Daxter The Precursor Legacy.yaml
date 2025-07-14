@@ -6,11 +6,7 @@
     'false': 2
     'true': 5
   jak_completion_condition:
-    cross_fire_canyon: 2
-    cross_mountain_pass: 2
-    cross_lava_tube: 2
-    defeat_klaww: 3
-    defeat_gol_and_maia: 10
+    defeat_gol_and_maia: 5
     open_100_cell_door: 2
   enable_orbsanity:
     'off': 5
