@@ -30,3 +30,10 @@ Super Mario Land 2:
     false: 75
   randomize_music: random
   energy_link: random
+  triggers:
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: SML2-{player}
