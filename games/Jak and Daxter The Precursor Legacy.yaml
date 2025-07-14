@@ -1,6 +1,6 @@
 'Jak and Daxter: The Precursor Legacy':
   enable_move_randomizer:
-    'false': 5
+    'false': 3
     'true': 2
   require_punch_for_klaww:
     'false': 2
