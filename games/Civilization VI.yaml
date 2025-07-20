@@ -29,3 +29,5 @@ Civilization VI:
           exclude_locations: 
             - BOOST_CIVIC_SPACE_RACE
             - BOOST_CIVIC_URBANIZATION
+            - BOOST_TECH_ADVANCED_FLIGHT
+            - BOOST_TECH_REPLACEABLE_PARTS
