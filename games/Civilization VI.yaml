@@ -21,3 +21,11 @@ Civilization VI:
       options:
         null:
           name: CivVI-{player}
+    - option_category: Civilization VI
+      option_name: boostsanity
+      option_result: 'true'
+      options:
+        Civilization VI:
+          exclude_locations: 
+            - BOOST_CIVIC_SPACE_RACE
+            - BOOST_CIVIC_URBANIZATION
