@@ -67,13 +67,11 @@ Hollow Knight:
   RemoveSpellUpgrades: 'false'
   StartLocation: king's_pass
   Goal:
-    any: 2
-    hollowknight: 3
-    siblings: 3
+    siblings: 8
     radiance: 3
+    grub_hunt: 2
     godhome: 0
     godhome_flower: 0
-    grub_hunt: 2
   GrubHuntGoal: random-range-middle-25-35
   WhitePalace: 
     exclude: 5
@@ -110,7 +108,7 @@ Hollow Knight:
   SplitMantisClaw: 'random'
   CostSanity:
     off: 4
-    shops_only: 1
+    shopsonly: 1
     on: 1
   CostSanityHybridChance: 10
   CostSanityEggWeight: 1

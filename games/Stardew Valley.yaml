@@ -1,17 +1,22 @@
 Stardew Valley:
-  accessibility: items
+  accessibility: full
   goal:
     community_center: 50
     grandpa_evaluation: 20
     bottom_of_the_mines: 3
-    master_angler: 3
+    master_angler: 4
     complete_collection: 2
-    protector_of_the_valley: 3
-    full_shipment: 3
+    protector_of_the_valley: 4
+    full_shipment: 4
     gourmet_chef: 3
     craft_master: 2
-    legend: 3
     mystery_of_the_stardrops: 8
+    cryptic_note: 0
+    full_house: 0
+    greatest_walnut_hunter: 0
+    allsanity: 0
+    perfection: 0
+    legend: 0
   farm_type: random
   starting_money: random-range-1000-25000
   profit_margin:
@@ -24,7 +29,7 @@ Stardew Valley:
     remixed: 40
     remixed_anywhere: 35
     shuffled: 5
-  bundle_price: #Override in trigger
+  bundle_price: # Override in trigger
     minimum: 5
     very_cheap: 15
     cheap: 50
@@ -40,7 +45,7 @@ Stardew Valley:
     randomized: 40
     randomized_not_winter: 40
     progressive: 20
-  cropsanity: #Override in trigger
+  cropsanity: # Override in trigger
     enabled: 75
     disabled: 25
   backpack_progression: early_progressive
@@ -58,7 +63,7 @@ Stardew Valley:
     progressive_very_cheap: 40
     progressive_cheap: 40
     progressive: 20
-  festival_locations: #Override in trigger
+  festival_locations: # Override in trigger
     disabled: 20
     easy: 40
     hard: 40
@@ -72,43 +77,47 @@ Stardew Valley:
     board: 10
     board_qi: 10
   quest_locations:
+    none: 5
     0: 50
     7: 25
     14: 25
-  fishsanity: #Override in trigger
+  fishsanity: # Override in trigger
     none: 10
     exclude_legendaries: 20
     exclude_hard_fish: 50
     only_easy_fish: 20
-  museumsanity: #Override in trigger
-    none: 60
+    all: 5
+  museumsanity: # Override in trigger
+    none: 40
     milestones: 30
+    randomized: 20
     all: 10
-  monstersanity: #Override in trigger
+  monstersanity: # Override in trigger
     one_per_category: 25
     one_per_monster: 25
     very_short_goals: 20
     short_goals: 20
     progressive_goals: 5
     split_goals: 5
-  shipsanity: #Override in trigger
+  shipsanity: # Override in trigger
     none: 60
     crops: 15
     fish: 15
     full_shipment: 5
     full_shipment_with_fish: 5
-  cooksanity: #Override in trigger
+  cooksanity: # Override in trigger
     none: 70
     queen_of_sauce: 20
     all: 10
-  chefsanity: #Override in trigger
-    none: 70
+  chefsanity: # Override in trigger
+    none: 60
     queen_of_sauce: 20
+    qos_and_purchases: 10
     all: 10
-  craftsanity: #Override in trigger
+  craftsanity: # Override in trigger
     none: 80
     all: 20
-  friendsanity: #Override in trigger
+  friendsanity: # Override in trigger
     none: 40
     bachelors: 25
     starting_npcs: 25
@@ -119,18 +128,41 @@ Stardew Valley:
     power: 50
     power_skill: 30
     all: 10
-  walnutsanity: ["Puzzles", "Bushes", "Repeatables"] # If Ginger island rolls excluded, this will automatically disable itself. I have disabled dig spots because they are not noob-friendly. Everything else is better shuffled
+  walnutsanity: ["Puzzles", "Bushes", "Repeatables"] # If Ginger Island rolls excluded, this will automatically disable itself. I have disabled dig spots because they are not noob-friendly. Everything else is better shuffled.
   movement_buff_number: random-range-4-8
   enabled_filler_buffs: ["Luck", "Damage", "Defense", "Immunity", "Health", "Energy", "Bite Rate", "Fish Trap", "Fishing Bar Size"]
-  luck_buff_number: random-range-4-12
   exclude_ginger_island:
     false: 50
     true: 50
-  trap_items:
+  trap_difficulty:
     no_traps: 15
     easy: 50
     medium: 25
     hard: 10
+  trap_distribution: # This makes unfavourable traps less frequent, like traps that can ruin a player's storage system, and increases the chances of other traps to account for this. As I understand it, there may be a bug that causes unlisted traps to never exist, so this setting ends up being bloated to account for a manual fail-safe.
+    Babies Trap: 300
+    Bark Trap: 200
+    Benjamin Budton Trap: 100
+    Bomb Trap: 50
+    Burnt Trap: 100
+    Darkness Trap: 100
+    Debris Trap: 100
+    Drought Trap: 100
+    Frozen Trap: 100
+    Inflation Trap: 50
+    Jinxed Trap: 100
+    Meow Trap: 200
+    Monsters Trap: 100
+    Nauseated Trap: 100
+    Nudge Trap: 50
+    Pariah Trap: 50
+    Random Teleport Trap: 200
+    Shuffle Trap: 10
+    Slimed Trap: 100
+    Taxes Trap: 100
+    The Crows Trap: 100
+    Time Flies Trap: 200
+    Weakness Trap: 100
   multiple_day_sleep_enabled: 'true'
   multiple_day_sleep_cost: 0
   experience_multiplier:
@@ -150,80 +182,80 @@ Stardew Valley:
   mods: []
   bundle_plando: []
   death_link: 'false'
-  triggers: #Added triggers to complement the goal (eg. add museumsanity to a museum goal)
+  triggers: # Added triggers to complement the goal (eg. add museumsanity to a museum goal).
     - option_category: Stardew Valley
       option_name: goal
       option_result: community_center
       options:
         Stardew Valley:
-          bundle_price: #Move minimal odds to very_expensive odds
+          bundle_price: # Move minimal odds to very_expensive odds
             very_cheap: 15
             cheap: 50
             normal: 25
             expensive: 5
             very_expensive: 5
-          cropsanity: #Remove Disabled odds
+          cropsanity: # Remove disabled odds
             enabled: 100
     - option_category: Stardew Valley
       option_name: goal
       option_result: grandpa_evaluation
       options:
         Stardew Valley:
-          cropsanity: #Remove Disabled odds
+          cropsanity: # Remove disabled odds
             enabled: 100
     - option_category: Stardew Valley
       option_name: goal
-      option_result: master_angler #catch all fishsanity fish
+      option_result: master_angler # Catch all fishsanity fish
       options:
         Stardew Valley:
-          fishsanity: #Move none odds to all, and only_easy_fish split between all and exclude_legendaries
+          fishsanity: # Move none odds to all, and only_easy_fish split between all and exclude_legendaries
             all: 20
             exclude_legendaries: 30
             exclude_hard_fish: 50
     - option_category: Stardew Valley
       option_name: goal
-      option_result: complete_collection #finish museum
+      option_result: complete_collection # Finish museum
       options:
         Stardew Valley:
-          museumsanity: #remove none odds
+          museumsanity: # Remove none and randomized odds
             milestones: 75
             all: 25
     - option_category: Stardew Valley
       option_name: goal
-      option_result: full_shipment # ship all items, follows shipsanity
+      option_result: full_shipment # Ship all items, follows shipsanity
       options:
         Stardew Valley:
-          shipsanity: #Remove none odds and rolled into into the other options
+          shipsanity: # Remove none odds and split into the other options
             crops: 35
             fish: 35
             full_shipment: 15
             full_shipment_with_fish: 15
-          cropsanity: #Remove Disabled odds
+          cropsanity: # Remove disabled odds
             enabled: 100
     - option_category: Stardew Valley
       option_name: goal
-      option_result: gourmet_chef # cook every recipe, follows cooksanity
+      option_result: gourmet_chef # Cook every recipe, follows cooksanity
       options:
         Stardew Valley:
-          cooksanity: #Remove none odds
+          cooksanity: # Remove none odds
             queen_of_sauce: 70
             all: 30
-          chefsanity: #Increase the odds shuffling recipes to add
+          chefsanity: # Increase the odds of shuffling recipes
             none: 30
             all: 30
             random: 40
     - option_category: Stardew Valley
       option_name: goal
-      option_result: craft_master #craft every item
+      option_result: craft_master # Craft every item
       options:
         Stardew Valley:
-          craftsanity: #Remove none odds
+          craftsanity: # Remove none odds
             all: 100
     - option_category: Stardew Valley
       option_name: goal
-      option_result: protector_of_the_valley # complete monsterslayer goals, follows monstersanity
+      option_result: protector_of_the_valley # Complete monsterslayer goals, follows monstersanity
       options: 
-        Stardew Valley: #Remove one_per_category odds, and bumped everything else by +5
+        Stardew Valley: # Remove one_per_category odds, and bumped everything else by +5
           monstersanity:
             one_per_monster: 30
             very_short_goals: 25
@@ -232,20 +264,20 @@ Stardew Valley:
             split_goals: 10
     - option_category: Stardew Valley
       option_name: goal
-      option_result: mystery_of_the_stardrops #find every stardrop
+      option_result: mystery_of_the_stardrops # Find every Stardrop
       options:
         Stardew Valley:
-          museumsanity: #Remove none odds
+          museumsanity: # Remove none odds
             milestones: 75
             all: 25
-          festival_locations: #Remove disable odds
+          festival_locations: # Remove disabled odds
             easy: 50
             hard: 50
-          friendsanity: #Remove none odds
+          friendsanity: # Remove none odds
             bachelors: 40
             starting_npcs: 40
             all: 20
-          fishsanity: #Replaced none with all
+          fishsanity: # Replaced none with all
             all: 10
             exclude_legendaries: 20
             exclude_hard_fish: 50

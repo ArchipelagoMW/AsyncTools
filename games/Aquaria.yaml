@@ -13,17 +13,20 @@
 
   turtle_randomizer:
     none: 1
-    all: 3
+    all_except_final: 3
+    all: 2
 
   early_energy_form:
     'false': 1
     'true': 5
 
-  light_needed_to_get_to_dark_places: true
+  early_bind_song:
+    'false': 1
+    'true': 3
 
   bind_song_needed_to_get_under_rock_bulb:
-    'false': 2
-    'true': 1
+    'false': 1
+    'true': 2
 
   unconfine_home_water:
     'off': 1
@@ -33,7 +36,7 @@
 
   no_progression_hard_or_hidden_locations:
     'false': 1
-    'true': 2
+    'true': 1
 
   ingredient_randomizer:
     'off': 5
@@ -48,9 +51,9 @@
     'false': 1
     'true': 1
 
-  skip_first_vision: false
+  skip_first_vision: true
 
-  local_items: ["Energy form"]
+  local_items: ["Energy Form", "Bind Song"]
   
   triggers:
     - option_category: null

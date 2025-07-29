@@ -12,8 +12,8 @@ DLCQuest:
     40: 20
     50: 20
   permanent_coins:
-    true: 50
-    false: 50
+    true: 75
+    false: 25
   ending_choice: 'true'
   campaign: both
   item_shuffle: shuffled

@@ -1,0 +1,953 @@
+The Wind Waker:
+  ### Trigger control to allow harder options for filler-only asyncs
+  trigger_harder_options:
+    'true': 100
+    'false': 0
+
+  # Triforce Shards usually end up solely as goal macguffins.
+  # There are 2 checks behind them all, the Master Sword Chamber Chest and the Ganon's Tower Maze Chest.
+  # The Ganon's Tower Maze Chest is behind the Barrier so has even more requirements than the Master Sword Chamber
+  # Chest.
+  # Mixed ER considers the Master Sword Chamber to be a miniboss entrance, so it is possible for a dungeon to be
+  # randomized to the Master Sword Chamber entrance. While it is possible for that to happen with this filler yaml, it
+  # is unlikely, so, for simplicity, Triforce Shards are set to local for all TWW filler yamls.
+  local_items:
+    - Triforce Shard 1
+    - Triforce Shard 2
+    - Triforce Shard 3
+    - Triforce Shard 4
+    - Triforce Shard 5
+    - Triforce Shard 6
+    - Triforce Shard 7
+    - Triforce Shard 8
+
+  ### Trigger control for starting inventory
+  trigger_start_inventory_from_pool:
+    # No specific items. May still include a sword or startwith keys/maps/compasses depending on other options.
+    nothing: 5
+    # Wind Waker
+    # Ballad of Gales
+    fast_travel_only: 15
+    # Basic items for getting around the world and passing time.
+    # Wind Waker
+    # Wind's Requiem
+    # Song of Passing
+    # Ballad of Gales
+    basics: 60
+    # The non-AP, base TWW rando currently always starts with the following items:
+    # Wind's Requiem
+    # Song of Passing
+    # Ballad of Gales
+    # Progressive Shield
+    # Progressive Magic Meter
+    base_rando: 20
+  # Added to by triggers.
+  start_inventory_from_pool: {}
+
+  ### Disabling too many locations can result in more progression items being required to reach the goal than the
+  # number of locations that exist.
+  # This trigger control picks a baseline set of locations to always enable to ensure there are enough.
+  trigger_base_location_source:
+    # Dungeons will always enabled. required_bosses being enabled may result in some dungeons being disabled, but the
+    # number of required dungeons will be prevented from ending up too low.
+    dungeons: 2
+    # Combat and Puzzle secret caves will always be enabled.
+    secret_caves: 1  # Enables 2 options, so has half the chance.
+    # Submarines and platforms+rafts will always be enabled.
+    sea: 1  # Enables 2 options, so has half the chance.
+    # Treasure salvaging will always be enabled.
+    salvage: 2
+
+  # Enabled locations
+  progression_dungeons:
+    'false': 10
+    'true': 90
+  progression_dungeon_secrets:  # Only relevant when dungeons are enabled
+    'false': 10
+    'true': 90
+  progression_tingle_chests:  # Only relevant when dungeons are enabled
+    'false': 10
+    'true': 90
+  ### Trigger for enabled secret caves
+  # The chance of both types of secret cave being enabled is also increased while decreasing the chance of only one type
+  # being enabled.
+  # progression_puzzle_secret_caves and progression_combat_secret_caves are set in triggers depending on the rolled
+  # value.
+  # Triggers ensure that secret cave ER will only ever be enabled when both types of secret cave are enabled.
+  trigger_progression_secret_caves:
+    both: 55
+    puzzle_only: 20
+    combat_only: 20
+    none: 5
+  # Extra trigger to reroll secret caves even more weighted towards `both` when secret cave ER *could* be enabled.
+  # This is set to 'true' by triggers when a reroll needs to occur.
+  trigger_reroll_secret_caves_more_weighted_to_both: 'false'
+  # Overwritten by triggers.
+  progression_puzzle_secret_caves: 'true'  # default value
+  # Overwritten by triggers.
+  progression_combat_secret_caves: 'false'  # default value
+  progression_savage_labyrinth:
+    'false': 70
+    'true': 30
+  progression_island_puzzles:
+    'false': 10
+    'true': 90
+  progression_great_fairies:
+    'false': 10
+    'true': 90
+  progression_submarines:
+    'false': 10
+    'true': 90
+  progression_platforms_rafts:
+    'false': 30
+    'true': 70
+  progression_short_sidequests:
+    'false': 10
+    'true': 90
+  progression_long_sidequests:
+    'false': 70
+    'true': 30
+  progression_spoils_trading:
+    'false': 70
+    'true': 30
+  progression_eye_reef_chests:
+    'false': 50
+    'true': 50
+  progression_big_octos_gunboats:
+    'false': 40
+    'true': 60
+  progression_misc:
+    'false': 10
+    'true': 90
+  progression_minigames:
+    'false': 10
+    'true': 90
+  progression_battlesquid:
+    'false': 10
+    'true': 90
+  progression_free_gifts:
+    'false': 10
+    'true': 90
+  progression_mail:
+    'false': 10
+    'true': 90
+  progression_expensive_purchases:
+    'false': 35
+    'true': 65
+  ### Trigger for enabled charts
+  # This trigger exists so that randomize_charts is always disabled when charts are disabled and so that triforce charts
+  # being disabled due to progressive_expensive_purchases being disabled can be accounted for.
+  # The trigger is also used to increase the chance of both being enabled compared to just triforce charts.
+  trigger_progression_charts:
+    disabled: 35
+    enabled: 65
+  trigger_progression_charts_choice:
+    both: 40
+    triforce_only: 20
+    treasure_only: 40
+    none: 0  # only set by triggers when trigger_progression_charts rolls disabled
+  # Always overwritten by triggers.
+  progression_treasure_charts: 'false'
+  # Always overwritten by triggers.
+  progression_triforce_charts: 'false'
+
+  # Item Randomizer Modes
+  ## Sword mode
+  sword_mode:
+    start_with_sword: 50
+    no_starting_sword: 25
+    swords_optional: 10
+    swordless: 10
+  ## Dungeon items
+  ### Map and compass are filler that do nothing for most players because the internet and the tracker can provide the
+  ### same information
+  randomize_mapcompass:
+    startwith: 100
+    vanilla: 0
+    dungeon: 0
+    any_dungeon: 0
+    local: 0
+    keylunacy: 0
+  ## Individual rolls for small and big keys when they are rolled separately.
+  randomize_smallkeys:
+    startwith: 5
+    vanilla: 1
+    dungeon: 40
+    any_dungeon: 5
+    local: 5
+    keylunacy: 50
+  randomize_bigkeys:
+    startwith: 5
+    vanilla: 10  # Increased vanilla weight for boss keys compared to small keys
+    dungeon: 40
+    any_dungeon: 5
+    local: 5
+    keylunacy: 50
+  ### Triggers for randomizing small and big keys together
+  trigger_randomize_keys_together:
+    'true': 75
+    'false': 25
+  # The option chosen when small keys are randomized together
+  trigger_randomize_keys_together_choice:
+    startwith: 5
+    vanilla: 2
+    dungeon: 40
+    any_dungeon: 5
+    local: 5
+    keylunacy: 50
+    ignore: 0 # Triggers set the option to this value when trigger_randomize_keys_together rolls 'false'
+
+  # Entrance Randomizer Options
+  # Note that the TWW AP PopTracker pack and the base rando tracker have full ER support.
+  # TWW has 44 randomizable entrances that are always coupled and form a tree without ever looping back.
+  # While a dungeon may have a main entrance, miniboss door and boss door that can be randomized, a dungeon will
+  # always be entered for the first time through its main entrance.
+  trigger_entrance_rando:
+    disabled: 40  # All ER options will be forcefully disabled via triggers when this is rolled.
+    enabled: 60
+  trigger_entrance_rando_mode:
+    dungeons_only: 30  # dungeon entrances only, separate pools (though there's only one pool)
+    dungeons_nested: 10  # dungeon entrances, miniboss entrances and boss entrances are mixed together
+    random_separate: 30  # All entrances that roll enabled for ER are mixed only within the same category
+    random_mixed: 10  # All entrances that roll enabled for ER are mixed together
+    all_separate: 15 # All entrances are enabled for ER (if possible) and are mixed only within the same category
+    all_mixed: 5  # All entrances are enabled for ER (if possible) and are mixed together
+    none: 0  # Set by triggers when trigger_entrance_rando rolls disabled
+  # Overwritten by triggers when ER is enabled.
+  mix_entrances: separate_pools
+  # Prepare a trigger to roll randomized entrances for the random_separate and random_mixed modes. Other modes directly
+  # set which entrances are randomized.
+  # The trigger allows for a weighted distribution of the average number of ER categories to enable.
+  # These are only averages, so any number between 0 and 6 ER categories can still be rolled by chance with any of the
+  # trigger values.
+  # The weights are set to above average because triggers will disable ER categories for disabled location categories,
+  # reducing the overall number of enabled ER categories on average compared to what is rolled.
+  trigger_entrance_rando_random_count:
+    1: 1
+    2: 2
+    3: 3
+    4: 5
+    5: 3
+  # These are all overwritten by triggers.
+  randomize_dungeon_entrances: 'false'
+  randomize_boss_entrances: 'false'
+  randomize_miniboss_entrances: 'false'
+  randomize_secret_cave_entrances: 'false'
+  randomize_secret_cave_inner_entrances: 'false'
+  randomize_fairy_fountain_entrances: 'false'
+
+  # Note: A chest containing a Useful item appears the same as a chest containing a Filler item currently, so this
+  # option is less helpful than it would appear.
+  chest_type_matches_contents: random
+
+  # Other Randomizers
+  randomize_charts: # Note: not supported by the PopTracker pack
+    'false': 90
+    'true': 10
+  randomize_starting_island: # Note: no effect on logic and quickly becomes irrelevant
+    'false': 20
+    'true': 80
+
+  # Convenience Tweaks
+  # swift_sail is always enabled (default)
+  # instant_text_boxes is always enabled (default)
+  # reveal_full_sea_chart is always enabled (default)
+  # The rematch bosses extend the length of go-mode and can increase the number of items logically required to goal.
+  # But there are no checks tied to the rematch bosses, so generally they only make an already fairly long go-mode even
+  # longer.
+  # The rematch bosses are always skipped unless dungeons are entirely disabled, in which case a trigger will give them
+  # a chance to not be skipped.
+  skip_rematch_bosses: 'true'
+  add_shortcut_warps_between_dungeons:
+    'false': 20
+    'true': 80
+  # remove_music is always disabled (default)
+
+  # Required Bosses
+  required_bosses:
+    'false': 30
+    'true': 70
+  num_required_bosses:
+    1: 5
+    2: 15
+    3: 25
+    4: 30
+    5: 15
+    6: 10
+
+  # Difficulty Options
+  # hero_mode is always disabled (default)
+  # All TWW logic is considered glitchless. Storage, bomb boosts, clips and more are not present in any logic
+  # difficulty.
+  trigger_logic_difficulty:
+    # Obscurity-Precision
+    # Obscurity can be looked up or asked about so is allowed higher more often than Precision which requires player
+    # skill.
+    # Difficulty up to normal accounts for 90% in filler-only big asyncs.
+    none_none: 40 # (default)
+    normal_none: 22
+    none_normal: 18
+    normal_normal: 10
+    # Only 10% roll some kind of hard logic.
+    # Hard logic is removed from filler yamls in big asyncs with custom yaml submissions.
+    hard_normal: 7
+    normal_hard: 2
+    hard_hard: 1
+  # Overwritten by triggers.
+  logic_obscurity: none
+  # Overwritten by triggers.
+  logic_precision: none
+  # enable_tuner_logic is always disabled (default)
+
+  # Work-in-Progress Options
+  # randomize_enemies is always disabled (default) until it has logic and does not result in game crashes or soft-locks.
+
+  triggers:
+    # Harder options are only allowed in all-filler big asyncs
+    - option_category: The Wind Waker
+      option_name: trigger_harder_options
+      option_result: 'false'
+      options:
+        The Wind Waker:
+          # Remove all time spent without a sword.
+          sword_mode: start_with_sword
+          # Disable ER.
+          trigger_entrance_rando: disabled
+          reveal_full_sea_chart: 'true'
+          # Remove hard logic options and reroll to favour easier logic more.
+          trigger_logic_difficulty:
+            none_none: 60
+            none_normal: 16
+            normal_none: 18
+            normal_normal: 6
+          # Disabling these options is debatable.
+          randomize_charts: 'false'
+          progression_long_sidequests: 'false'
+          progression_expensive_purchases: 'false'
+          # Remove the options of starting with nothing and fast_travel_only.
+          trigger_start_inventory_from_pool:
+            basics: 75
+            base_rando: 25
+
+    # Set logic
+    - option_category: The Wind Waker
+      option_name: trigger_logic_difficulty
+      option_result: normal_none
+      options:
+        The Wind Waker:
+          logic_obscurity: normal
+          logic_precision: none
+    - option_category: The Wind Waker
+      option_name: trigger_logic_difficulty
+      option_result: none_normal
+      options:
+        The Wind Waker:
+          logic_obscurity: none
+          logic_precision: normal
+    - option_category: The Wind Waker
+      option_name: trigger_logic_difficulty
+      option_result: normal_normal
+      options:
+        The Wind Waker:
+          logic_obscurity: normal
+          logic_precision: normal
+    - option_category: The Wind Waker
+      option_name: trigger_logic_difficulty
+      option_result: hard_normal
+      options:
+        The Wind Waker:
+          logic_obscurity: hard
+          logic_precision: normal
+    - option_category: The Wind Waker
+      option_name: trigger_logic_difficulty
+      option_result: normal_hard
+      options:
+        The Wind Waker:
+          logic_obscurity: normal
+          logic_precision: hard
+    - option_category: The Wind Waker
+      option_name: trigger_logic_difficulty
+      option_result: hard_hard
+      options:
+        The Wind Waker:
+          logic_obscurity: hard
+          logic_precision: hard
+
+    # Start inventory from pool
+    - option_category: The Wind Waker
+      option_name: trigger_start_inventory_from_pool
+      option_result: fast_travel_only
+      options:
+        The Wind Waker:
+          +start_inventory_from_pool:
+            "Wind Waker": 1
+            "Ballad of Gales": 1
+    - option_category: The Wind Waker
+      option_name: trigger_start_inventory_from_pool
+      option_result: basics
+      options:
+        The Wind Waker:
+          +start_inventory_from_pool:
+            "Wind Waker": 1
+            "Wind's Requiem": 1
+            "Song of Passing": 1
+            "Ballad of Gales": 1
+    - option_category: The Wind Waker
+      option_name: trigger_start_inventory_from_pool
+      option_result: base_rando
+      options:
+        The Wind Waker:
+          +start_inventory_from_pool:
+            "Wind Waker": 1
+            "Wind's Requiem": 1
+            "Song of Passing": 1
+            "Ballad of Gales": 1
+            "Progressive Shield": 1
+            "Progressive Magic Meter": 1
+
+    # Randomize keys together triggers
+    - option_category: The Wind Waker
+      option_name: trigger_randomize_keys_together
+      option_result: 'false'
+      options:
+        The Wind Waker:
+          trigger_randomize_keys_together_choice: ignore
+    - option_category: The Wind Waker
+      option_name: trigger_randomize_keys_together_choice
+      option_result: startwith
+      options:
+        The Wind Waker:
+          randomize_smallkeys: startwith
+          randomize_bigkeys: startwith
+    - option_category: The Wind Waker
+      option_name: trigger_randomize_keys_together_choice
+      option_result: vanilla
+      options:
+        The Wind Waker:
+          randomize_smallkeys: vanilla
+          randomize_bigkeys: vanilla
+    - option_category: The Wind Waker
+      option_name: trigger_randomize_keys_together_choice
+      option_result: dungeon
+      options:
+        The Wind Waker:
+          randomize_smallkeys: dungeon
+          randomize_bigkeys: dungeon
+    - option_category: The Wind Waker
+      option_name: trigger_randomize_keys_together_choice
+      option_result: any_dungeon
+      options:
+        The Wind Waker:
+          randomize_smallkeys: any_dungeon
+          randomize_bigkeys: any_dungeon
+    - option_category: The Wind Waker
+      option_name: trigger_randomize_keys_together_choice
+      option_result: local
+      options:
+        The Wind Waker:
+          randomize_smallkeys: local
+          randomize_bigkeys: local
+    - option_category: The Wind Waker
+      option_name: trigger_randomize_keys_together_choice
+      option_result: keylunacy
+      options:
+        The Wind Waker:
+          randomize_smallkeys: keylunacy
+          randomize_bigkeys: keylunacy
+
+    # Reroll secret caves to have a higher chance of both being enabled compared to only one type when ER that can roll
+    # secret caves is enabled.
+    ## Start by enabling the trigger if any of the random_ or all_ modes is picked.
+    - option_category: The Wind Waker
+      option_name: trigger_entrance_rando_mode
+      option_result: random_separate
+      options:
+        The Wind Waker:
+          trigger_reroll_secret_caves_more_weighted_to_both: 'true'
+    - option_category: The Wind Waker
+      option_name: trigger_entrance_rando_mode
+      option_result: random_mixed
+      options:
+        The Wind Waker:
+          trigger_reroll_secret_caves_more_weighted_to_both: 'true'
+    - option_category: The Wind Waker
+      option_name: trigger_entrance_rando_mode
+      option_result: all_separate
+      options:
+        The Wind Waker:
+          trigger_reroll_secret_caves_more_weighted_to_both: 'true'
+    - option_category: The Wind Waker
+      option_name: trigger_entrance_rando_mode
+      option_result: all_mixed
+      options:
+        The Wind Waker:
+          trigger_reroll_secret_caves_more_weighted_to_both: 'true'
+    ## Disable the trigger if ER is disabled
+    - option_category: The Wind Waker
+      option_name: trigger_entrance_rando
+      option_result: disabled
+      options:
+        The Wind Waker:
+          trigger_reroll_secret_caves_more_weighted_to_both: 'false'
+    ## Reroll the secret caves with a higher weight for both, if the trigger is enabled.
+    - option_category: The Wind Waker
+      option_name: trigger_reroll_secret_caves_more_weighted_to_both
+      option_result: 'true'
+      options:
+        The Wind Waker:
+          trigger_progression_secret_caves:
+            # The weight of `both` is increased, taking the weight from puzzle_only and combat_only.
+            both: 71
+            puzzle_only: 12
+            combat_only: 12
+            # The weight of `none` remains the same.
+            none: 5
+
+    # Enable secret caves based on the trigger
+    - option_category: The Wind Waker
+      option_name: trigger_progression_secret_caves
+      option_result: both
+      options:
+        The Wind Waker:
+          progression_puzzle_secret_caves: 'true'
+          progression_combat_secret_caves: 'true'
+    - option_category: The Wind Waker
+      option_name: trigger_progression_secret_caves
+      option_result: puzzle_only
+      options:
+        The Wind Waker:
+          progression_puzzle_secret_caves: 'true'
+          progression_combat_secret_caves: 'false'
+    - option_category: The Wind Waker
+      option_name: trigger_progression_secret_caves
+      option_result: combat_only
+      options:
+        The Wind Waker:
+          progression_puzzle_secret_caves: 'false'
+          progression_combat_secret_caves: 'true'
+    - option_category: The Wind Waker
+      option_name: trigger_progression_secret_caves
+      option_result: none
+      options:
+        The Wind Waker:
+          progression_puzzle_secret_caves: 'false'
+          progression_combat_secret_caves: 'false'
+
+    # Force enable location types that match the base location source trigger
+    ## Dungeons
+    - option_category: The Wind Waker
+      option_name: trigger_base_location_source
+      option_result: dungeons
+      options:
+        The Wind Waker:
+          # Force enable dungeons
+          progression_dungeons: 'true'
+          # Each non-require boss' dungeon will be removed from the world, so do not allow the number of required bosses
+          # to be set too low when dungeons are the main location source, to prevent the possibility of trying to
+          # generate with fewer locations than items required to reach the goal.
+          num_required_bosses: random-range-high-3-6
+    ## Secret Caves
+    - option_category: The Wind Waker
+      option_name: trigger_base_location_source
+      option_result: secret_caves
+      options:
+        The Wind Waker:
+          # Force enable both types of secret caves and update the trigger
+          trigger_progression_secret_caves: both
+          progression_puzzle_secret_caves: 'true'
+          progression_combat_secret_caves: 'true'
+    ## Salvage
+    - option_category: The Wind Waker
+      option_name: trigger_base_location_source
+      option_result: salvage
+      options:
+        The Wind Waker:
+          # Force enable treasure salvaging and update the trigger
+          progression_treasure_charts: 'true'
+          trigger_progression_charts: enabled
+          # Reroll without the triforce_only choice
+          trigger_progression_charts_choice:
+            both: 30
+            treasure_only: 30
+    ## Sea
+    - option_category: The Wind Waker
+      option_name: trigger_base_location_source
+      option_result: sea
+      options:
+        The Wind Waker:
+          # Force enable locations found out on the sea
+          progression_submarines: 'true'
+          progression_platforms_rafts: 'true'
+
+    # Set enabled charts
+    - option_category: The Wind Waker
+      option_name: trigger_progression_charts
+      option_result: disabled
+      options:
+        The Wind Waker:
+          progression_triforce_charts: 'false'
+          progression_treasure_charts: 'false'
+          trigger_progression_charts_choice: none
+    - option_category: The Wind Waker
+      option_name: trigger_progression_charts_choice
+      option_result: both
+      options:
+        The Wind Waker:
+          progression_triforce_charts: 'true'
+          progression_treasure_charts: 'true'
+    - option_category: The Wind Waker
+      option_name: trigger_progression_charts_choice
+      option_result: triforce_only
+      options:
+        The Wind Waker:
+          progression_triforce_charts: 'true'
+          progression_treasure_charts: 'false'
+    - option_category: The Wind Waker
+      option_name: trigger_progression_charts_choice
+      option_result: treasure_only
+      options:
+        The Wind Waker:
+          progression_triforce_charts: 'true'
+          progression_treasure_charts: 'false'
+
+    # Roll for random ER categories. This is used when the ER mode is set to random_separate or random_mixed.
+    # Average 1 enabled ER category.
+    # Approximate distribution:
+    #  0: 15723 | 33.5%
+    #  1: 18862 | 40.1%
+    #  2: 9437  | 20.1%
+    #  3: 2520  |  5.4%
+    #  4: 376   |  0.8%
+    #  5: 29    |  0.06%
+    #  6: 1     |  0.002%
+    - option_category: The Wind Waker
+      option_name: trigger_entrance_rando_random_count
+      option_result: 1
+      options:
+        The Wind Waker:
+          randomize_dungeon_entrances:
+            'false': 5
+            'true': 1
+          randomize_boss_entrances:
+            'false': 5
+            'true': 1
+          randomize_miniboss_entrances:
+            'false': 5
+            'true': 1
+          randomize_secret_cave_entrances:
+            'false': 5
+            'true': 1
+          randomize_secret_cave_inner_entrances:
+            'false': 5
+            'true': 1
+          randomize_fairy_fountain_entrances:
+            'false': 5
+            'true': 1
+    # Average 2 enabled ER categories.
+    # Approximate distribution:
+    #  0: 64  |  8.7%
+    #  1: 192 | 26.3%
+    #  2: 241 | 32.9%
+    #  3: 160 | 21.9%
+    #  4: 60  |  8.2%
+    #  5: 12  |  1.6%
+    #  6: 1   |  0.1%
+    - option_category: The Wind Waker
+      option_name: trigger_entrance_rando_random_count
+      option_result: 2
+      options:
+        The Wind Waker:
+          randomize_dungeon_entrances:
+            'false': 4
+            'true': 2
+          randomize_boss_entrances:
+            'false': 4
+            'true': 2
+          randomize_miniboss_entrances:
+            'false': 4
+            'true': 2
+          randomize_secret_cave_entrances:
+            'false': 4
+            'true': 2
+          randomize_secret_cave_inner_entrances:
+            'false': 4
+            'true': 2
+          randomize_fairy_fountain_entrances:
+            'false': 4
+            'true': 2
+    # Average 3 enabled ER categories.
+    # Approximate distribution:
+    #  0: 1  |  1.6%
+    #  1: 6  |  9.4%
+    #  2: 15 | 23.5%
+    #  3: 20 | 31.2%
+    #  4: 15 | 23.5%
+    #  5: 6  |  9.4%
+    #  6: 1  |  1.6%
+    - option_category: The Wind Waker
+      option_name: trigger_entrance_rando_random_count
+      option_result: 3
+      options:
+        The Wind Waker:
+          randomize_dungeon_entrances:
+            'false': 3
+            'true': 3
+          randomize_boss_entrances:
+            'false': 3
+            'true': 3
+          randomize_miniboss_entrances:
+            'false': 3
+            'true': 3
+          randomize_secret_cave_entrances:
+            'false': 3
+            'true': 3
+          randomize_secret_cave_inner_entrances:
+            'false': 3
+            'true': 3
+          randomize_fairy_fountain_entrances:
+            'false': 3
+            'true': 3
+    # Average 4 enabled ER categories.
+    #  0: 1   |  0.1%
+    #  1: 12  |  1.6%
+    #  2: 60  |  8.2%
+    #  3: 160 | 21.9%
+    #  4: 241 | 32.9%
+    #  5: 192 | 26.3%
+    #  6: 64  |  8.7%
+    - option_category: The Wind Waker
+      option_name: trigger_entrance_rando_random_count
+      option_result: 4
+      options:
+        The Wind Waker:
+          randomize_dungeon_entrances:
+            'false': 2
+            'true': 4
+          randomize_boss_entrances:
+            'false': 2
+            'true': 4
+          randomize_miniboss_entrances:
+            'false': 2
+            'true': 4
+          randomize_secret_cave_entrances:
+            'false': 2
+            'true': 4
+          randomize_secret_cave_inner_entrances:
+            'false': 2
+            'true': 4
+          randomize_fairy_fountain_entrances:
+            'false': 2
+            'true': 4
+    # Average 5 enabled ER categories.
+    #  0: 1     |  0.002%
+    #  1: 29    |  0.06%
+    #  2: 376   |  0.8%
+    #  3: 2520  |  5.4%
+    #  4: 9437  | 20.1%
+    #  5: 18862 | 40.1%
+    #  6: 15723 | 33.5%
+    - option_category: The Wind Waker
+      option_name: trigger_entrance_rando_random_count
+      option_result: 5
+      options:
+        The Wind Waker:
+          randomize_dungeon_entrances:
+            'false': 1
+            'true': 5
+          randomize_boss_entrances:
+            'false': 1
+            'true': 5
+          randomize_miniboss_entrances:
+            'false': 1
+            'true': 5
+          randomize_secret_cave_entrances:
+            'false': 1
+            'true': 5
+          randomize_secret_cave_inner_entrances:
+            'false': 1
+            'true': 5
+          randomize_fairy_fountain_entrances:
+            'false': 1
+            'true': 5
+
+    # Set ER mode:
+    - option_category: The Wind Waker
+      option_name: trigger_entrance_rando_mode
+      option_result: dungeons_only
+      options:
+        The Wind Waker:
+          randomize_dungeon_entrances: 'true'
+          randomize_boss_entrances: 'false'
+          randomize_miniboss_entrances: 'false'
+          randomize_secret_cave_entrances: 'false'
+          randomize_secret_cave_inner_entrances: 'false'
+          randomize_fairy_fountain_entrances: 'false'
+          mix_entrances: separate_pools
+    - option_category: The Wind Waker
+      option_name: trigger_entrance_rando_mode
+      option_result: dungeons_nested
+      options:
+        The Wind Waker:
+          randomize_dungeon_entrances: 'true'
+          randomize_boss_entrances: 'true'
+          randomize_miniboss_entrances: 'true'
+          randomize_secret_cave_entrances: 'false'
+          randomize_secret_cave_inner_entrances: 'false'
+          randomize_fairy_fountain_entrances: 'false'
+          mix_entrances: mix_pools
+    - option_category: The Wind Waker
+      option_name: trigger_entrance_rando_mode
+      option_result: random_separate
+      options:
+        The Wind Waker:
+          # Use whatever each ER option rolled
+          mix_entrances: separate_pools
+    - option_category: The Wind Waker
+      option_name: trigger_entrance_rando_mode
+      option_result: random_mixed
+      options:
+        The Wind Waker:
+          # Use whatever each ER option rolled
+          mix_entrances: mix_pools
+    - option_category: The Wind Waker
+      option_name: trigger_entrance_rando_mode
+      option_result: all_separate
+      options:
+        The Wind Waker:
+          # Enable all entrances (later triggers will disable entrances to areas which are disabled)
+          randomize_dungeon_entrances: 'true'
+          randomize_boss_entrances: 'true'
+          randomize_miniboss_entrances: 'true'
+          randomize_secret_cave_entrances: 'true'
+          randomize_secret_cave_inner_entrances: 'true'
+          randomize_fairy_fountain_entrances: 'true'
+          mix_entrances: separate_pools
+    - option_category: The Wind Waker
+      option_name: trigger_entrance_rando_mode
+      option_result: all_mixed
+      options:
+        The Wind Waker:
+          # Enable all entrances (later triggers will disable entrances to areas which are disabled)
+          randomize_dungeon_entrances: 'true'
+          randomize_boss_entrances: 'true'
+          randomize_miniboss_entrances: 'true'
+          randomize_secret_cave_entrances: 'true'
+          randomize_secret_cave_inner_entrances: 'true'
+          randomize_fairy_fountain_entrances: 'true'
+          mix_entrances: mix_pools
+
+    # Disable ER for disabled areas
+    ## Disable dungeon, miniboss and boss ER if dungeons are disabled
+    - option_category: The Wind Waker
+      option_name: progression_dungeons
+      option_result: 'false'
+      options:
+        The Wind Waker:
+          randomize_dungeon_entrances: 'false'
+          randomize_boss_entrances: 'false'
+          randomize_miniboss_entrances: 'false'
+    ## Disable secret cave ER if not all secret caves are enabled
+    - option_category: The Wind Waker
+      option_name: progression_puzzle_secret_caves
+      option_result: 'false'
+      options:
+        The Wind Waker:
+          randomize_secret_cave_entrances: 'false'
+          randomize_secret_cave_inner_entrances: 'false'
+    - option_category: The Wind Waker
+      option_name: progression_combat_secret_caves
+      option_result: 'false'
+      options:
+        The Wind Waker:
+          randomize_secret_cave_entrances: 'false'
+          randomize_secret_cave_inner_entrances: 'false'
+    ## Disable Great Fairy ER if great fairies are disabled
+    - option_category: The Wind Waker
+      option_name: progression_great_fairies
+      option_result: 'false'
+      options:
+        The Wind Waker:
+          randomize_fairy_fountain_entrances: 'false'
+    ## Disable all ER if ER rolled disabled
+    - option_category: The Wind Waker
+      option_name: trigger_entrance_rando
+      option_result: disabled
+      options:
+        The Wind Waker:
+          randomize_dungeon_entrances: 'false'
+          randomize_boss_entrances: 'false'
+          randomize_miniboss_entrances: 'false'
+          randomize_secret_cave_entrances: 'false'
+          randomize_secret_cave_inner_entrances: 'false'
+          randomize_fairy_fountain_entrances: 'false'
+          mix_entrances: separate_pools  # set back to the default
+
+    # Allow rematch bosses to be enabled if dungeons are entirely disabled
+    - option_category: The Wind Waker
+      option_name: progression_dungeons
+      option_result: 'false'
+      options:
+        The Wind Waker:
+          skip_rematch_bosses:
+            'false': 25
+            'true': 75
+
+    # Clean up options that depend on disabled options
+    ## Clean up for disabled dungeons
+    - option_category: The Wind Waker
+      option_name: progression_dungeons
+      option_result: 'false'
+      options:
+        The Wind Waker:
+          # All dungeon secret and tingle chest locations won't exist unless dungeons are enabled. Disabling the dungeon
+          # secret and tingle chest options when dungeons are disabled is not necessary for generation, but will result
+          # in an easier to read spreadsheet.
+          progression_dungeon_secrets: 'false'
+          progression_tingle_chests: 'false'
+          # required_bosses cannot be enabled when progression_dungeons is disabled
+          required_bosses: 'false'
+          # There are no keys/maps/compasses. Set them to startwith to try to reduce confusion.
+          randomize_mapcompass: startwith
+          randomize_smallkeys: startwith
+          randomize_bigkeys: startwith
+    ## Clean up for disabled expensive purchases
+    ### Triforce charts are disabled when expensive purchases are disabled, so update the option to match.
+    - option_category: The Wind Waker
+      option_name: progression_expensive_purchases
+      option_result: 'false'
+      options:
+        The Wind Waker:
+          progression_triforce_charts: 'false'
+          # Update the trigger that says if charts are enabled. The next trigger will set this back to enabled if
+          # treasure charts are enabled, so that randomize_charts is always disabled if there are no charts enabled.
+          trigger_progression_charts: disabled
+    # Update the trigger for trigger_progression_charts if treasure charts are enabled
+    - option_category: The Wind Waker
+      option_name: progression_treasure_charts
+      option_result: 'true'
+      options:
+        The Wind Waker:
+          trigger_progression_charts: enabled
+    # Probably can leave randomize_charts enabled even without charts being enabled. Any filler charts will have their
+    # islands randomized, but will always lead to 10 Rupees like other disabled locations.
+    # ## Clean up for disabled charts. This must be after the cleanup for disabled expensive purchases.
+    # - option_category: The Wind Waker
+      # option_name: trigger_progression_charts
+      # option_result: disabled
+      # options:
+        # The Wind Waker:
+          # randomize_charts: 'false'
+    ## Clean up for disabled required_bosses
+    - option_category: The Wind Waker
+      option_name: required_bosses
+      option_result: 'false'
+      options:
+        The Wind Waker:
+          num_required_bosses: 4  # cannot be set to zero, so use the default value
+    # Player naming
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: TWW-{player}

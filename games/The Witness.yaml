@@ -3,6 +3,9 @@ The Witness:
     sigma_normal: 75
     sigma_expert: 5
     umbra_variety: 20
+  is_it_April:
+    yes: 1
+    no: 0
   shuffle_symbols: random
   shuffle_doors:
     off: 50
@@ -23,6 +26,7 @@ The Witness:
   shuffle_discarded_panels: random
   shuffle_vault_boxes: random
   obelisk_keys: random
+  unlockable_warps: random
   shuffle_EPs:
     off: 50
     individual: 20
@@ -49,7 +53,7 @@ The Witness:
     off: 50
     add_to_pool: 25
     starting_inventory: 25
-  elevators_come_to_you: random
+  elevators_come_to_you: Quarry Elevator
   trap_percentage: random-range-0-50
   trap_weights:
     Bonk: 1
@@ -64,6 +68,26 @@ The Witness:
   area_hint_percentage: random-range-30-70
   laser_hints: random
   triggers:
+    - option_category: The Witness
+      option_name: is_it_April
+      option_result: yes
+      options:
+        The Witness:
+          easter_egg_hunt:
+            'off': 2
+            easy: 2
+            normal: 4
+            hard: 1
+    - option_category: The Witness
+      option_name: is_it_April
+      option_result: no
+      options:
+        The Witness:
+          easter_egg_hunt:
+            'off': 10
+            easy: 1
+            normal: 2
+            hard: 0
     - option_category: The Witness
       option_name: shuffle_doors
       option_result: off

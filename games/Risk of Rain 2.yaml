@@ -5,7 +5,6 @@ Risk of Rain 2:
   victory:
     any: 25
     mithrix: 25
-    limbo: 25
     voidling: 25
   total_locations: random-range-60-200
   chests_per_stage: random-range-high-5-15

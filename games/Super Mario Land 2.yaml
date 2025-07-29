@@ -1,0 +1,39 @@
+Super Mario Land 2:
+  shuffle_golden_coins:
+    vanilla: 50
+    shuffle: 50
+    mario_coin_fragment_hunt: 50
+  required_golden_coins: random-high
+  mario_coin_fragment_percentage: random-middle
+  mario_coin_fragments_required_percentage: random-range-50-90
+  coinsanity: random
+  coinsanity_checks: random-low
+  shuffle_midway_bells: true
+  marios_castle_midway_bell: true
+  shuffle_pipe_traversal: random
+  auto_scroll_mode:
+    always: 5
+    global_trap_item: 0
+    level_trap_items: 0
+    global_cancel_item: 5
+    level_cancel_items: 5
+    chaos: 0
+  auto_scroll_chances:
+    vanilla: 100
+    random-range-low-0-50: 50
+  difficulty_mode: random
+  randomize_enemies:
+    true: 25
+    false: 75
+  randomize_platforms:
+    true: 25
+    false: 75
+  randomize_music: random
+  energy_link: random
+  triggers:
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: SML2-{player}
