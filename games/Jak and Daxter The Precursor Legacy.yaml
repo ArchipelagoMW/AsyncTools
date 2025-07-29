@@ -58,6 +58,8 @@
     Teleport Trap: 1
     Trip Trap: 1
     Zoomer Trap: 1
+  local_items: 
+    [Freed The Green Sage, Freed The Blue Sage, Freed The Red Sage, Freed The Yellow Sage]
   triggers:
   - option_category: null
     option_name: name
