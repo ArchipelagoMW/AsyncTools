@@ -4,6 +4,12 @@ Sonic Adventure 2 Battle:
     Emeralds: 2
     minigame_madness: 2
   mission_shuffle: true
+  minigame_madness_requirement:
+    '4': 1
+    '5': 1
+  minigame_madness_minimum:
+    '5': 1
+    random-high: 1
   boss_rush_shuffle:
     vanilla: 2
     shuffled: 1
