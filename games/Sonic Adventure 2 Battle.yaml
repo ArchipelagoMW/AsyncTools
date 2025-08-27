@@ -1,9 +1,8 @@
 Sonic Adventure 2 Battle:
   goal:
-    biolizard: 3
-    cannons_core_boss_rush: 1
-    boss_rush_chaos_emerald_hunt: 1
-    finalhazard_chaos_emerald_hunt: 1
+    CC: 3
+    Emeralds: 2
+    minigame_madness: 2
   mission_shuffle: true
   boss_rush_shuffle:
     vanilla: 2
@@ -132,7 +131,6 @@ Sonic Adventure 2 Battle:
   cannons_core_mission_3: false
   cannons_core_mission_4: false
   cannons_core_mission_5: false
-  local_items: Chaos Emeralds
   triggers:
     - option_category: null
       option_name: name
@@ -155,7 +153,6 @@ Sonic Adventure 2 Battle:
             chao_stats_frequency: 
                 '1': 1
                 '2': 1
-                '5': 1
     - option_category: Sonic Adventure 2 Battle
       option_name: chao_race_difficulty
       option_result: none
@@ -194,7 +191,7 @@ Sonic Adventure 2 Battle:
                 standard: 2
                 expert: 5
                 super_override: 3
-            chao_stats: '60'
+            chao_stats: '70'
             chao_stats_frequency: 
                 '1': 1
                 '2': 1
@@ -205,7 +202,7 @@ Sonic Adventure 2 Battle:
       options:
         Sonic Adventure 2 Battle:
             chao_karate_difficulty: expert
-            chao_stats: '60'
+            chao_stats: '70'
             chao_stats_frequency: 
                 '1': 1
                 '2': 1
@@ -216,7 +213,7 @@ Sonic Adventure 2 Battle:
       options:
         Sonic Adventure 2 Battle:
             chao_karate_difficulty: super
-            chao_stats: '70'
+            chao_stats: '80'
             chao_stats_frequency: 
                 '1': 1
                 '2': 1
@@ -242,7 +239,6 @@ Sonic Adventure 2 Battle:
             chao_stats_frequency: 
                 '1': 1
                 '2': 1
-                '5': 1
     - option_category: Sonic Adventure 2 Battle
       option_name: whistlesanity
       option_result: both_plus
@@ -250,3 +246,26 @@ Sonic Adventure 2 Battle:
         Sonic Adventure 2 Battle:
             animalsanity: 'true'
             whistlesanity: both
+    - option_category: Sonic Adventure 2 Battle
+      option_name: goal
+      option_result: CC
+      options:
+        Sonic Adventure 2 Battle:
+            goal:
+                biolizard: 3
+                cannons_core_boss_rush: 1
+    - option_category: Sonic Adventure 2 Battle
+      option_name: goal
+      option_result: Emeralds
+      options:
+        Sonic Adventure 2 Battle:
+            local_items: Chaos Emeralds
+            goal:
+                boss_rush_chaos_emerald_hunt: 1
+                finalhazard_chaos_emerald_hunt: 1
+    - option_category: Sonic Adventure 2 Battle
+      option_name: goal
+      option_result: minigame_madness
+      options:
+        Sonic Adventure 2 Battle:
+            local_items: Minigames
