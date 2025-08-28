@@ -60,7 +60,6 @@ Super Mario World:
   sfx_shuffle:
     none: 6
     full: 3
-    singularity: 1
   mario_palette: random
   level_palette_shuffle:
     off: 3
