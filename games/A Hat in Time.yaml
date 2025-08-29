@@ -98,8 +98,8 @@ A Hat in Time:
   # possibility of nested Time Rift entrances.
   ActRandomizer:
     'false': 8 # Effectively only chapter and item randomization, not a common choice.
-    light: 51 # light is the default option
-    insanity: 41
+    light: 41 # light is the default option
+    insanity: 51 # insanity slots seem to be claimed the fastest, so insanity has the greatest weight
   # Removes the possibility of being walled for a long time by The Illness Has Spread (when ShuffleAlpineZiplines is
   # enabled) and Rush Hour (when EnableDLC2 is enabled with EndGoal is set to finale).
   FinaleShuffle:
@@ -235,8 +235,10 @@ A Hat in Time:
   BaseballBat: 'false' # Overridden by triggers. Set to random when DLC2 is enabled.
   #### DLC2 Shops ####
   MetroMinPonCost: 50
-  MetroMaxPonCost: 200
-  NyakuzaThugMinShopItems: random-range-low-2-5
+  # Max cost is reduced from the default of 200 because the default average number of items per shop is 2, but this yaml
+  # has an average of 3.5 items per shop.
+  MetroMaxPonCost: 150
+  NyakuzaThugMinShopItems: random-range-low-1-5  # (1+5)/3 = 2 on average
   NyakuzaThugMaxShopItems: 5
 
   ### Traps ###
