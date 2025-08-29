@@ -130,7 +130,3 @@ dmypy.json
 
 # Outputted yaml file
 output/
-
-# Visual Studio
-/.vs
-/.gitignore
