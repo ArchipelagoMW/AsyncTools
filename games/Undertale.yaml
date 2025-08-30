@@ -15,12 +15,6 @@ Undertale:
     5: 50
     7: 40
     10: 30
-  rando_love:
-    false: 50
-    true: 30
-  rando_stats:
-    false: 50
-    true: 30
   temy_include:
     false: 30
     true: 50
@@ -34,6 +28,21 @@ Undertale:
     false: 50
     true: 30
   triggers:
+    # Randomized LOVE and stats only do anything on the genocide route.
+    # Additionally, due to a bug, neutral route is affected in unintended ways if either of these are rolled.
+    # To avoid confusion, and the bug, only consider these options if genocide is rolled in the first place.
+    - option_category: Undertale
+      option_name: route_required
+      option_result: 'genocide'
+      options:
+        Undertale:
+          rando_love:
+            false: 50
+            true: 30
+          rando_stats:
+            false: 50
+            true: 30
+
     - option_category: null
       option_name: name
       option_result: Player{player}
