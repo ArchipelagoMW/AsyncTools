@@ -77,8 +77,9 @@ def main():
     # Merge together each game yaml into our mystery settings.
     for game in mystery["game"].keys():
         try:
-            print(f"Loading ./games/{game}.yaml...")
-            with open(f"games/{game}.yaml", encoding="utf-8-sig") as game_file:
+            safe_name = "".join(c for c in game if c not in '<>:/\\|?*')
+            print(f"Loading ./games/{safe_name}.yaml...")
+            with open(f"games/{safe_name}.yaml", encoding="utf-8-sig") as game_file:
                 game_settings: dict = yaml.unsafe_load(game_file)
 
                 # Ensure that game_settings only has one property which has the same name as the file.
