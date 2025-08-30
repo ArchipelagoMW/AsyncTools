@@ -1,6 +1,7 @@
 import os
 import yaml
 from colorama import Fore
+from datetime import date
 
 
 # Please don't look too closely at this code below. kthx -Phar
@@ -86,6 +87,10 @@ def main():
                     raise ValueError(f"Found {len(game_settings)} top-level keys in `./games/{game}.yaml`")
                 if game not in game_settings:
                     raise ValueError(f"Could not find `{game}` top-level key in `./games/{game}.yaml`")
+                
+                # Allow for certain yaml options to be set during a specific month. Note that this is set at yaml creation, not at generation start.
+                if "current_month" in game_settings[game]:
+                    game_settings[game]["current_month"] = date.today().strftime("%B")
 
                 mystery.update(game_settings)
         except FileNotFoundError:

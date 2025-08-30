@@ -3,9 +3,7 @@ The Witness:
     sigma_normal: 75
     sigma_expert: 5
     umbra_variety: 20
-  is_it_April:
-    yes: 1
-    no: 0
+  current_month: 'January'
   shuffle_symbols: random
   shuffle_doors:
     off: 50
@@ -67,10 +65,14 @@ The Witness:
     experimental: 0  # Experimental has turned out to be perfectly stable & fun, but it adds more chaos and confusion than is healthy for the big public async.
   area_hint_percentage: random-range-30-70
   laser_hints: random
+  easter_egg_hunt:
+    'off': 10
+    easy: 1
+    normal: 2
   triggers:
     - option_category: The Witness
-      option_name: is_it_April
-      option_result: yes
+      option_name: current_month
+      option_result: April
       options:
         The Witness:
           easter_egg_hunt:
@@ -78,16 +80,6 @@ The Witness:
             easy: 2
             normal: 4
             hard: 1
-    - option_category: The Witness
-      option_name: is_it_April
-      option_result: no
-      options:
-        The Witness:
-          easter_egg_hunt:
-            'off': 10
-            easy: 1
-            normal: 2
-            hard: 0
     - option_category: The Witness
       option_name: shuffle_doors
       option_result: off
