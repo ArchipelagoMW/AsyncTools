@@ -18,13 +18,58 @@ Overcooked! 2:
   always_preserve_cooking_progress: 'true'
   always_serve_oldest_order: 'true'
   display_leaderboard_scores: 'false'
-  stars_to_win: random-range-40-90
-  star_threshold_scale: random-range-25-45
+  difficulty:
+    easy: 1
+    medium: 1
+    hard: 1
+    brutal: 1
+  paid_dlcs:
+    'true': 15
+    'false': 85
   triggers:
+    - option_category: Overcooked! 2
+      option_name: difficulty
+      option_result: easy
+      options:
+        Overcooked! 2:
+          star_threshold_scale: random-range-25-29
+          stars_to_win: random-range-50-90
+    - option_category: Overcooked! 2
+      option_name: difficulty
+      option_result: medium
+      options:
+        Overcooked! 2:
+          star_threshold_scale: random-range-30-34
+          stars_to_win: random-range-50-85
+    - option_category: Overcooked! 2
+      option_name: difficulty
+      option_result: hard
+      options:
+        Overcooked! 2:
+          star_threshold_scale: random-range-35-39
+          stars_to_win: random-range-50-80
+    - option_category: Overcooked! 2
+      option_name: difficulty
+      option_result: brutal
+      options:
+        Overcooked! 2:
+          star_threshold_scale: random-range-40-45
+          stars_to_win: random-range-50-75
+    - option_category: Overcooked! 2
+      option_name: paid_dlcs
+      option_result: "true"
+      options:
+        Overcooked! 2:
+          include_dlcs:
+            - Story
+            - Seasonal
+            - Surf 'n' Turf
+            - Campfire Cook Off
+            - Night of the Hangry Horde
+            - Carnival of Chaos
     - option_category: null
       option_name: name
       option_result: Player{player}
       options:
         null:
           name: OC2-{player}
-
