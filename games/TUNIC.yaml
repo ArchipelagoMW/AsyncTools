@@ -41,6 +41,9 @@ TUNIC:
     'false': 100
   local_items:
     - Questagons
+  start_inventory_from_pool:
+    Torch: 1
+    Dath Stone: 1
 
   triggers:
     - option_category: TUNIC
