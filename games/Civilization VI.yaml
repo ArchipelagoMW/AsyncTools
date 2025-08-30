@@ -21,3 +21,24 @@ Civilization VI:
       options:
         null:
           name: CivVI-{player}
+    # Excluding Boosts That are missing Tech/Era requirements
+    - option_category: Civilization VI
+      option_name: boostsanity
+      option_result: 'true'
+      options:
+        Civilization VI:
+          exclude_locations: 
+            - BOOST_CIVIC_SPACE_RACE
+            # building a space port
+            - BOOST_CIVIC_URBANIZATION
+            # city with 10 pop
+            - BOOST_TECH_ADVANCED_FLIGHT
+            # Biplanes requires oil
+            - BOOST_TECH_REPLACEABLE_PARTS
+            # Line Infantry requires Military Engineering
+            - BOOST_TECH_SQUARE_RIGGING
+            # Musketman requires Military Engineering
+            - BOOST_TECH_NUCLEAR_FUSION
+            # Missing requirement for prog. Industrial zone x3
+            - BOOST_TECH_MILITARY_SCIENCE
+            # Knight requires Bronze Working
