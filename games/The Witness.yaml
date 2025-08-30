@@ -107,6 +107,18 @@ The Witness:
         The Witness: 
           challenge_lasers: random-range-7-11
     - option_category: The Witness
+      option_name: victory_condition
+      option_result: elevator
+      options:  
+        The Witness: 
+          mountain_lasers: random-range-3-11
+    - option_category: The Witness
+      option_name: victory_condition
+      option_result: challenge
+      options:  
+        The Witness: 
+          challenge_lasers: random-range-3-11
+    - option_category: The Witness
       option_name: shuffle_EPs
       option_result: individual
       options:
