@@ -10,8 +10,8 @@
     open_100_cell_door: 1
   enable_orbsanity:
     'off': 5
-    per_level: 1
-    global: 1
+    per_level: 3
+    global: 3
   global_orbsanity_bundle_size:
     20_orbs: 1
     25_orbs: 2
