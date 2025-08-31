@@ -1,0 +1,55 @@
+Paint:
+  goal_percent:
+    50: 3
+    60: 6
+    70: 6
+    80: 4
+    90: 1
+  half_percent_checks: random
+  quarter_percent_checks: random
+  canvas_size_increment: random
+  starting_tool: brush
+  trap_count:
+    0: 3
+    random-range-10-20: 1
+  death_link: false
+  triggers:
+    - option_category: Paint
+      option_name: goal_percent
+      option_result: 50
+      options:
+        Paint:
+          logic_percent: random-range-50-60
+          canvas_size_increment:
+            '50': 1
+            '100': 1
+    - option_category: Paint
+      option_name: goal_percent
+      option_result: 60
+      options:
+        Paint:
+          logic_percent: random-range-60-70
+    - option_category: Paint
+      option_name: goal_percent
+      option_result: 70
+      options:
+        Paint:
+          logic_percent: random-range-70-80
+    - option_category: Paint
+      option_name: goal_percent
+      option_result: 80
+      options:
+        Paint:
+          logic_percent: random-range-80-90
+    - option_category: Paint
+      option_name: goal_percent
+      option_result: 90
+      options:
+        Paint:
+          logic_percent: random-range-90-95
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: Paint-{player}
