@@ -30,6 +30,9 @@ Super Mario Land 2:
     false: 75
   randomize_music: random
   energy_link: random
+  local_items:
+    - Golden Coins
+    - Mario Coin Fragment
   triggers:
     - option_category: null
       option_name: name
