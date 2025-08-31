@@ -3,6 +3,10 @@ Wargroove:
   income_boost: 25
   commander_defense_boost: 2
   commander_choice: random
+  player_sacrifice_limit: random
+  player_summon_limit: random
+  ai_sacrifice_limit: random-range-0-2
+  ai_summon_limit: random-range-0-2
   local_items:
    - Final Bridges
    - Final Walls
