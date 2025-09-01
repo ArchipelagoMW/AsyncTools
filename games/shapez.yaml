@@ -82,12 +82,6 @@ shapez:
       options:
         shapez:
           goal_amount: random-range-12-25
-    - option_category: shapez
-      option_name: lock_belt_and_extractor
-      option_result: 'true'
-      options:
-        shapez:
-          include_achievements: 'true'
     - option_category: null
       option_name: name
       option_result: Player{player}
