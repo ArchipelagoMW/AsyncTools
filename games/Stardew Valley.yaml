@@ -1,13 +1,14 @@
+#When editing weights, please keep a total of 100 per category
 Stardew Valley:
   accessibility: full
   goal:
     community_center: 50
-    grandpa_evaluation: 20
+    grandpa_evaluation: 18
     bottom_of_the_mines: 3
-    master_angler: 4
+    master_angler: 3
     complete_collection: 2
     protector_of_the_valley: 4
-    full_shipment: 4
+    full_shipment: 3
     gourmet_chef: 3
     craft_master: 2
     mystery_of_the_stardrops: 8
@@ -17,6 +18,9 @@ Stardew Valley:
     allsanity: 0
     perfection: 0
     legend: 0
+    # Pseudo-goals, replaced in trigger
+    short_master_angler: 2
+    short_full_shipment: 2
   farm_type: random
   starting_money: random-range-1000-25000
   profit_margin:
@@ -78,12 +82,12 @@ Stardew Valley:
     board_qi: 10
   quest_locations:
     none: 5
-    0: 50
+    0: 45
     7: 25
     14: 25
   fishsanity: # Override in trigger
     none: 10
-    exclude_legendaries: 20
+    exclude_legendaries: 15
     exclude_hard_fish: 50
     only_easy_fish: 20
     all: 5
@@ -124,10 +128,10 @@ Stardew Valley:
     all: 10
   friendsanity_heart_size: random-range-3-5
   booksanity:
-    none: 10
-    power: 50
-    power_skill: 30
-    all: 10
+    none: 60
+    power: 25
+    power_skill: 10
+    all: 5
   walnutsanity: ["Puzzles", "Bushes", "Repeatables"] # If Ginger Island rolls excluded, this will automatically disable itself. I have disabled dig spots because they are not noob-friendly. Everything else is better shuffled.
   movement_buff_number: random-range-4-8
   enabled_filler_buffs: ["Luck", "Damage", "Defense", "Immunity", "Health", "Energy", "Bite Rate", "Fish Trap", "Fishing Bar Size"]
@@ -140,29 +144,29 @@ Stardew Valley:
     medium: 25
     hard: 10
   trap_distribution: # This makes unfavourable traps less frequent, like traps that can ruin a player's storage system, and increases the chances of other traps to account for this. As I understand it, there may be a bug that causes unlisted traps to never exist, so this setting ends up being bloated to account for a manual fail-safe.
-    Babies Trap: 300
-    Bark Trap: 200
-    Benjamin Budton Trap: 100
-    Bomb Trap: 50
-    Burnt Trap: 100
-    Darkness Trap: 100
-    Debris Trap: 100
-    Drought Trap: 100
-    Frozen Trap: 100
-    Inflation Trap: 50
-    Jinxed Trap: 100
-    Meow Trap: 200
-    Monsters Trap: 100
-    Nauseated Trap: 100
-    Nudge Trap: 50
-    Pariah Trap: 50
-    Random Teleport Trap: 200
-    Shuffle Trap: 10
-    Slimed Trap: 100
-    Taxes Trap: 100
-    The Crows Trap: 100
-    Time Flies Trap: 200
-    Weakness Trap: 100
+    Babies Trap: 12
+    Bark Trap: 8
+    Benjamin Budton Trap: 8
+    Bomb Trap: 1
+    Burnt Trap: 6
+    Darkness Trap: 4
+    Debris Trap: 6
+    Drought Trap: 6
+    Frozen Trap: 4
+    Inflation Trap: 2
+    Jinxed Trap: 4
+    Meow Trap: 8
+    Monsters Trap: 2
+    Nauseated Trap: 2
+    Nudge Trap: 2
+    Pariah Trap: 2
+    Random Teleport Trap: 4
+    Shuffle Trap: 1
+    Slimed Trap: 6
+    Taxes Trap: 4
+    The Crows Trap: 2
+    Time Flies Trap: 4
+    Weakness Trap: 2
   multiple_day_sleep_enabled: 'true'
   multiple_day_sleep_cost: 0
   experience_multiplier:
@@ -283,6 +287,63 @@ Stardew Valley:
             exclude_hard_fish: 50
             only_easy_fish: 20
           local_items: Stardrop
+    - option_category: Stardew Valley
+      option_name: goal
+      option_result: short_full_shipment      
+      options: 
+        Stardew Valley:
+          goal: full_shipment
+          shipsanity: # Remove non-crop options
+            crops: 75
+            full_shipment: 25
+          cropsanity: # Remove disabled odds
+            enabled: 100
+          bundle_price: # Bundles are minimum or very cheap
+            minimum: 25
+            very_cheap: 75
+          festival_locations: disabled # Remove checks
+          special_order_locations: vanilla # Remove checks
+          quest_locations: # Remove checks, skew toward none
+            none: 50
+            0: 50
+          museumsanity: none # Remove checks
+          monstersanity: none # Remove checks
+          cooksanity: none # Remove checks
+          chefsanity: none # Remove checks
+          fishsanity: none # Remove checks
+          craftsanity: none # Remove checks
+          friendsanity: none # Remove checks
+          booksanity: none # Remove checks
+          walnutsanity: [] # Remove checks
+    - option_category: Stardew Valley
+      option_name: goal
+      option_result: short_master_angler # Master angler with most sanities off
+      options: 
+        Stardew Valley:
+          goal: master_angler
+          fishsanity: # Remove none and only_easy_fish
+            all: 20
+            exclude_legendaries: 30
+            exclude_hard_fish: 50
+          shipsanity: # Remove non-fish options
+            none: 80
+            fish: 20
+          bundle_price: # Bundles are minimum or very cheap
+            minimum: 25
+            very_cheap: 75
+          festival_locations: disabled # Remove checks
+          special_order_locations: vanilla # Remove checks
+          quest_locations: # Remove checks, skew toward none
+            none: 50
+            0: 50
+          museumsanity: none # Remove checks
+          monstersanity: none # Remove checks
+          cooksanity: none # Remove checks
+          chefsanity: none # Remove checks
+          craftsanity: none # Remove checks
+          friendsanity: none # Remove checks
+          booksanity: none # Remove checks
+          walnutsanity: [] # Remove checks
     - option_category: null
       option_name: name
       option_result: Player{player}
