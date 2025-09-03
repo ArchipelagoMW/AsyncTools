@@ -144,29 +144,29 @@ Stardew Valley:
     medium: 25
     hard: 10
   trap_distribution: # This makes unfavourable traps less frequent, like traps that can ruin a player's storage system, and increases the chances of other traps to account for this. As I understand it, there may be a bug that causes unlisted traps to never exist, so this setting ends up being bloated to account for a manual fail-safe.
-    Babies Trap: 12
-    Bark Trap: 8
-    Benjamin Budton Trap: 8
-    Bomb Trap: 1
-    Burnt Trap: 6
-    Darkness Trap: 4
-    Debris Trap: 6
-    Drought Trap: 6
-    Frozen Trap: 4
-    Inflation Trap: 2
-    Jinxed Trap: 4
-    Meow Trap: 8
-    Monsters Trap: 2
-    Nauseated Trap: 2
-    Nudge Trap: 2
-    Pariah Trap: 2
-    Random Teleport Trap: 4
-    Shuffle Trap: 1
-    Slimed Trap: 6
-    Taxes Trap: 4
-    The Crows Trap: 2
-    Time Flies Trap: 4
-    Weakness Trap: 2
+    Babies Trap: 300
+    Bark Trap: 200
+    Benjamin Budton Trap: 100
+    Bomb Trap: 50
+    Burnt Trap: 100
+    Darkness Trap: 100
+    Debris Trap: 100
+    Drought Trap: 100
+    Frozen Trap: 100
+    Inflation Trap: 50
+    Jinxed Trap: 100
+    Meow Trap: 200
+    Monsters Trap: 100
+    Nauseated Trap: 100
+    Nudge Trap: 50
+    Pariah Trap: 50
+    Random Teleport Trap: 200
+    Shuffle Trap: 10
+    Slimed Trap: 100
+    Taxes Trap: 100
+    The Crows Trap: 100
+    Time Flies Trap: 200
+    Weakness Trap: 100
   multiple_day_sleep_enabled: 'true'
   multiple_day_sleep_cost: 0
   experience_multiplier:
