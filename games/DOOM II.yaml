@@ -3,23 +3,27 @@ DOOM II:
     baby: 2
     easy: 5
     medium: 3
-  random_monsters: shuffle
-  random_pickups: shuffle
+    hard: 1
+  random_monsters:
+    vanilla: 2
+    shuffle: 5
+    random_balanced: 3
+    random_chaotic: 1
+  random_pickups:
+    vanilla: 2
+    shuffle: 7
+    random_balanced: 3
   allow_death_logic: false
-  start_with_computer_area_maps:
-    false: 3
-    true: 2
+  start_with_computer_area_maps: random
   reset_level_on_death: false
   episode1: true
-  episode2:
-    false: 1
-    true: 1
-  episode3:
-    false: 1
-    true: 1
-  episode4:
-    false: 1
-    true: 1
+  episode2: random
+  episode3: random
+  episode4: random
+  split_backpack:
+    'false': 1
+    'true': 1
+  backpack_count: random-low
   triggers:
     - option_category: null
       option_name: name
@@ -27,4 +31,3 @@ DOOM II:
       options:
         null:
           name: DOOMII-{player}
-

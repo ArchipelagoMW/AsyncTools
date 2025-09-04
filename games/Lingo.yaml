@@ -1,8 +1,10 @@
 Lingo:
   shuffle_doors:
     none: 20
-    simple: 40
-    complex: 40
+    doors: 40
+  group_doors:
+    false: 50
+    true: 50
   shuffle_colors: true
   progressive_orange_tower: random
   progressive_colorful: random
@@ -19,7 +21,7 @@ Lingo:
     level_2: 25
     pilgrimage: 25
   mastery_achievements: random-high
-  level_2_requirement: random-range-200-500
+  level_2_requirement: random-range-350-650
   early_color_hallways: true
   trap_percentage: 20
   puzzle_skip_percentage: 20
@@ -33,18 +35,12 @@ Lingo:
     progressive: 10
     individual: 10
   shuffle_sunwarps: random
+  shuffle_postgame: false
   triggers:
     - option_name: shuffle_doors
       option_category: Lingo
-      option_result: simple
+      option_result: doors
       percentage: 25
-      options:
-        Lingo:
-          shuffle_colors: false
-    - option_name: shuffle_doors
-      option_category: Lingo
-      option_result: complex
-      percentage: 30
       options:
         Lingo:
           shuffle_colors: false

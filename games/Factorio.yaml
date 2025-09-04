@@ -1,45 +1,25 @@
 Factorio:
   max_science_pack:
-    utility_science_pack: 30
-    space_science_pack: 50
+    utility_science_pack: 3
+    space_science_pack: 5
   goal:
-    rocket: 50
-    satellite: 200
-  tech_tree_layout:
-    single: 1
-    small_diamonds: 1
-    medium_diamonds: 1
-    large_diamonds: 1
-    small_pyramids: 1
-    medium_pyramids: 1
-    large_pyramids: 1
-    small_funnels: 1
-    medium_funnels: 1
-    large_funnels: 1
-    trees: 1
-    choices: 1
-  min_tech_cost:
-    1: 50
-  max_tech_cost:
-    random-range-low-100-10000: 20
-  tech_cost_distribution:
-    even: 10
-    low: 10
-    middle: 10
-    high: 10
+    rocket: 1
+    satellite: 4
+  tech_tree_layout: random
+  min_tech_cost: 1
+  max_tech_cost: random-range-low-100-10000
+  tech_cost_distribution: random
   ramping_tech_costs:
-    true: 25
-    false: 50
-  tech_cost_mix:
-    random: 20
+    true: 1
+    false: 4
+  tech_cost_mix: random
   silo:
-    vanilla: 50
-    randomize_recipe: 20
-    spawn: 20
-  satellite:
-    vanilla: 50
-    randomize_recipe: 50
+    vanilla: 5
+    randomize_recipe: 2
+    spawn: 2
+  satellite: random
   free_samples: stack
+  free_samples_quality: random
   tech_tree_information: none
   starting_items:
     # Mapping of Factorio internal item-name to amount granted on start.
@@ -59,13 +39,11 @@ Factorio:
     rail_world: 40
     peaceful_rail_world: 20
   progressive: on
-  evolution_traps:
-    0: 50
-  attack_traps:
-    0: 50
+  evolution_traps: 0
+  attack_traps: 0
   evolution_trap_increase:
-    10: 50
-    random-low: 50
+    10: 1
+    random-low: 1
   energy_link: true
   triggers:
     - option_category: Factorio
@@ -110,7 +88,6 @@ Factorio:
               time_factor: 2.0e-06
             enemy_expansion:
               enabled: false
-            water: 2
     - option_category: Factorio
       option_name: world_type
       option_result: peaceful_rail_world
@@ -146,7 +123,6 @@ Factorio:
               time_factor: 2.0e-06
             enemy_expansion:
               enabled: false
-            water: 2
     - option_category: null
       option_name: name
       option_result: Player{player}

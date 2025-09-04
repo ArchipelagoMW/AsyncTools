@@ -2,7 +2,10 @@ Risk of Rain 2:
   goal:
     classic: 15
     explore: 100
-  victory: random
+  victory:
+    any: 25
+    mithrix: 25
+    voidling: 25
   total_locations: random-range-60-200
   chests_per_stage: random-range-high-5-15
   shrines_per_stage: random-low
@@ -40,3 +43,9 @@ Risk of Rain 2:
       options:
         null:
           name: RoR2-{player}
+    - option_category: Risk of Rain 2
+      option_name: victory
+      option_result: voidling
+      options:
+        Risk of Rain 2:
+          dlc_sotv: 'true'

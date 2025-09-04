@@ -1,39 +1,65 @@
 DOOM 1993:
+  goal: 
+    complete_boss_levels: 1
+    complete_all_levels: 4
   difficulty:
-    baby: 20
-    easy: 50
-    medium: 30
-  random_monsters: shuffle
-  random_pickups: shuffle
-  allow_death_logic: false
+    easy: 3
+    medium: 5
+    hard: 1
+  random_monsters:
+    vanilla: 2
+    shuffle: 5
+    random_balanced: 3
+    random_chaotic: 1
+  random_pickups:
+    vanilla: 2
+    shuffle: 7
+    random_balanced: 3
+  random_music: random
+  flip_levels: random
+  allow_death_logic:
+    true: 1
+    false: 4
+  pro: false
   start_with_computer_area_maps: random
   death_link: false
+  reset_level_on_death: true
   episode1: true
-  episode3:
-    false: 10
-    true: 90
+  episode2: 
+    true: 4
+    false: 1
+  episode3: false
   episode4: false
+  split_backpack:
+    'false': 1
+    'true': 1
+  backpack_count: random-low
   triggers:
-    - option_name: episode3
-      option_category: DOOM 1993
-      option_result: true
-      options:
-        DOOM 1993:
-          episode2:
-            true: 20
-            false: 80
-    - option_name: episode3
-      option_category: DOOM 1993
-      option_result: false
-      options:
-        DOOM 1993:
-          episode2:
-            true: 50
-            false: 50
     - option_category: null
       option_name: name
       option_result: Player{player}
       options:
         null:
           name: DOOM1993-{player}
-
+    - option_category: DOOM 1993
+      option_name: episode2
+      option_result: true
+      options:
+        DOOM 1993:
+          episode3: 
+            true: 4
+            false: 1
+    - option_category: DOOM 1993
+      option_name: episode3
+      option_result: true
+      options:
+        DOOM 1993:
+          episode4: 
+            true: 1
+            false: 3
+    - option_category: DOOM 1993
+      option_name: episode2
+      option_result: false
+      options:
+        DOOM 1993:
+          goal: complete_all_levels

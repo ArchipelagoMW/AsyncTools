@@ -1,7 +1,7 @@
 Landstalker - The Treasures of King Nole:
   goal:
-    beat_gola: 10
-    reach_kazalt: 90
+    beat_gola: 2
+    reach_kazalt: 3
   spawn_region:
     massan: 50
     gumi: 20

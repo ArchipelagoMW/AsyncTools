@@ -1,5 +1,9 @@
 The Witness:
-  puzzle_randomization: sigma_normal
+  puzzle_randomization:
+    sigma_normal: 75
+    sigma_expert: 5
+    umbra_variety: 20
+  current_month: 'January'
   shuffle_symbols: random
   shuffle_doors:
     off: 50
@@ -20,6 +24,7 @@ The Witness:
   shuffle_discarded_panels: random
   shuffle_vault_boxes: random
   obelisk_keys: random
+  unlockable_warps: random
   shuffle_EPs:
     off: 50
     individual: 20
@@ -31,13 +36,22 @@ The Witness:
     challenge: 50
     mountain_box_short: 50
     mountain_box_long: 50
+    panel_hunt: 70
   mountain_lasers: random
   challenge_lasers: random
+  panel_hunt_total: random-range-15-80
+  panel_hunt_postgame: 
+    everything_is_eligible: 50
+    disable_anything_locked_by_lasers: 50
+    # The other two options are rarely played & confusing for newcomers
+    disable_mountain_lasers_locations: 0  
+    disable_challenge_lasers_locations: 0
+  panel_hunt_required_percentage: random-range-50-90
   early_caves:
     off: 50
     add_to_pool: 25
     starting_inventory: 25
-  elevators_come_to_you: random
+  elevators_come_to_you: Quarry Elevator
   trap_percentage: random-range-0-50
   trap_weights:
     Bonk: 1
@@ -45,9 +59,27 @@ The Witness:
     Slowness: 6
   puzzle_skip_amount: random-range-10-25
   hint_amount: random-range-10-30
+  vague_hints:
+    off: 50
+    stable: 50
+    experimental: 0  # Experimental has turned out to be perfectly stable & fun, but it adds more chaos and confusion than is healthy for the big public async.
   area_hint_percentage: random-range-30-70
   laser_hints: random
+  easter_egg_hunt:
+    'off': 10
+    easy: 1
+    normal: 2
   triggers:
+    - option_category: The Witness
+      option_name: current_month
+      option_result: April
+      options:
+        The Witness:
+          easter_egg_hunt:
+            'off': 2
+            easy: 2
+            normal: 4
+            hard: 1
     - option_category: The Witness
       option_name: shuffle_doors
       option_result: off
@@ -66,6 +98,18 @@ The Witness:
       options:  
         The Witness: 
           challenge_lasers: random-range-7-11
+    - option_category: The Witness
+      option_name: victory_condition
+      option_result: elevator
+      options:  
+        The Witness: 
+          mountain_lasers: random-range-3-11
+    - option_category: The Witness
+      option_name: victory_condition
+      option_result: challenge
+      options:  
+        The Witness: 
+          challenge_lasers: random-range-3-11
     - option_category: The Witness
       option_name: shuffle_EPs
       option_result: individual

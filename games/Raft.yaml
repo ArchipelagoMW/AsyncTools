@@ -7,6 +7,7 @@ Raft:
   progressive_items: true
   big_island_early_crafting: false
   paddleboard_mode: false
+  local_items: ["Bolt", "Circuit board", "Hinge", "Antenna", "Receiver", "progressive-battery", "progressive-metals"]  
   triggers:
     - option_category: null
       option_name: name

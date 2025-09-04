@@ -1,5 +1,7 @@
 Heretic:
-  goal: complete_boss_levels
+  goal: 
+    complete_all_levels: 2
+    complete_boss_levels: 3
   difficulty:
     wet_nurse: 2
     easy: 5
@@ -22,6 +24,10 @@ Heretic:
   episode5:
     false: 3
     true: 2
+  split_bag_of_holding:
+    'false': 1
+    'true': 1
+  bag_of_holding_count: random-low
   triggers:
     - option_category: null
       option_name: name

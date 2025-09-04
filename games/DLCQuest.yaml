@@ -3,8 +3,8 @@ DLCQuest:
   double_jump_glitch: none
   time_is_money: required
   coinsanity:
-    none: 60
-    coin: 40
+    none: 30
+    coin: 70
   coinbundlequantity:
     10: 20
     20: 20
@@ -12,13 +12,27 @@ DLCQuest:
     40: 20
     50: 20
   permanent_coins:
-    true: 50
-    false: 50
+    true: 75
+    false: 25
   ending_choice: 'true'
   campaign: both
-  item_shuffle: shuffled
+  item_shuffle: 
+    shuffled: 80
+    disabled: 20
   death_link: 'false'
+  quick_start:
+    true: 60
+    false: 40
   triggers:
+    - option_category: DLCQuest
+      option_name: quick_start
+      option_result: true
+      options:
+        DLCQuest:
+          +start_inventory:
+            Day One Patch Pack: 1
+            Night Map Pack: 1
+            Pause Menu Pack: 1
     - option_category: null
       option_name: name
       option_result: Player{player}

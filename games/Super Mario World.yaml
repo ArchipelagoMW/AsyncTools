@@ -9,7 +9,7 @@ Super Mario World:
     - Literature Trap
   bosses_required: random-range-5-10
   max_yoshi_egg_cap: 50
-  percentage_of_yoshi_eggs: 100
+  percentage_of_yoshi_eggs: random-range-85-100
   dragon_coin_checks:
     false: 2
     true: 1
@@ -24,7 +24,7 @@ Super Mario World:
     true: 1
   blocksanity:
     false: 3
-    true: 1
+    true: 4
   bowser_castle_doors: vanilla
   bowser_castle_rooms:
     vanilla: 2
@@ -60,7 +60,6 @@ Super Mario World:
   sfx_shuffle:
     none: 6
     full: 3
-    singularity: 1
   mario_palette: random
   level_palette_shuffle:
     off: 3
@@ -84,7 +83,7 @@ Super Mario World:
       option_result: true
       options:
         Super Mario World:
-          max_yoshi_egg_cap: random-range-middle-50-255
+          max_yoshi_egg_cap: random-range-middle-50-150
           stun_trap_weight: random
           thwimp_trap_weight: random
           literature_trap_weight: random
@@ -94,4 +93,3 @@ Super Mario World:
       options:
         null:
           name: SMW-{player}
-

@@ -1,0 +1,102 @@
+shapez:
+  accessibility: full
+  goal:
+    vanilla: 10
+    mam: 40
+    even_fasterer: 15
+    efficiency_iii: 25
+  goal_amount: # Override in trigger
+    9: 50
+  required_shapes_multiplier: random-range-5-15
+  allow_floating_layers:
+    'false': 30
+    'true': 10
+  randomize_level_requirements:
+    'false': 10
+    'true': 50
+  randomize_upgrade_requirements:
+    'false': 10
+    'true': 50
+  randomize_level_logic:
+    vanilla: 5
+    vanilla_shuffled: 25
+    stretched: 10
+    stretched_shuffled: 50
+    quick: 5
+    quick_shuffled: 25
+    random_steps: 10
+    random_steps_shuffled: 50
+    hardcore: 7
+    dopamine: 7
+    dopamine_overflow: 1
+  randomize_upgrade_logic:
+    vanilla_like: 25
+    linear: 25
+    category: 25
+    category_random: 25
+    hardcore: 5
+  throughput_levels_ratio:
+    '0': 25
+    '100': 5
+    random: 5
+    vanilla: 25
+  complexity_growth_gradient: random-range-0.3-1.5
+  same_late_upgrade_requirements:
+    'false': 10
+    'true': 50
+  early_balancer_tunnel_and_trash:
+    5_buildings: 15
+    3_buildings: 30
+    sphere_1: 5
+  lock_belt_and_extractor:
+    'false': 35
+    'true': 5
+  include_achievements: # Override in trigger
+    'false': 25
+    'true': 25
+  exclude_softlock_achievements: 'true'
+  exclude_long_playtime_achievements:
+    'false': 5
+    'true': 45
+  exclude_progression_unreasonable: 'false'
+  shapesanity_amount:
+    '12': 15
+    '50': 25
+    random-range-100-200: 25
+  traps_percentage:
+    '0': 25
+    '4': 25
+    '10': 25
+  include_whacky_upgrades:
+    'false': 30
+    'true': 10
+  split_inventory_draining_trap:
+    random: 50
+  toolbar_shuffling:
+    'false': 25
+    'true': 25
+  triggers:
+    - option_category: shapez
+      option_name: goal
+      option_result: mam
+      options:
+        shapez:
+          goal_amount: random-range-40-100
+    - option_category: shapez
+      option_name: goal
+      option_result: even_fasterer
+      options:
+        shapez:
+          goal_amount: random-range-12-25
+    - option_category: shapez
+      option_name: lock_belt_and_extractor
+      option_result: 'true'
+      options:
+        shapez:
+          include_achievements: 'true'
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: shapez-{player}

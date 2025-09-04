@@ -8,17 +8,27 @@ Hollow Knight:
   RandomizeKeys: 'true'
   RandomizeMaskShards: 'true'
   RandomizeVesselFragments: 'true'
-  RandomizeCharmNotches: 'random'
+  RandomizeCharmNotches:
+    true: 4
+    false: 1
   RandomizePaleOre: 'true'
-  RandomizeGeoChests: 'random'
-  RandomizeJunkPitChests: 'false'
+  RandomizeGeoChests: 
+    true: 3
+    false: 1
+  RandomizeJunkPitChests: 
+    true: 1
+    false: 3
   RandomizeRancidEggs: 'true'
   RandomizeRelics: 'true'
-  RandomizeWhisperingRoots: 'random'
+  RandomizeWhisperingRoots: 
+    true: 2
+    false: 1
   RandomizeBossEssence: 'true'
   RandomizeGrubs: 'true'
   RandomizeMimics: 'random'
-  RandomizeMaps: 'random'
+  RandomizeMaps: 
+    true: 3
+    false: 1
   RandomizeStags: 'true'
   RandomizeLifebloodCocoons: 'random'
   RandomizeGrimmkinFlames: 'false'
@@ -32,13 +42,13 @@ Hollow Knight:
   RandomizeBossGeo: 'random'
   RandomizeSoulTotems:
     true: 1
-    false: 5
+    false: 2
   RandomizeLoreTablets:
     true: 1
     false: 5
   RandomizeElevatorPass:
     true: 1
-    false: 4
+    false: 3
   PreciseMovement: 'false'
   ProficientCombat: 'false'
   BackgroundObjectPogos: 'false'
@@ -57,12 +67,12 @@ Hollow Knight:
   RemoveSpellUpgrades: 'false'
   StartLocation: king's_pass
   Goal:
-    any: 1
-    hollowknight: 1
-    siblings: 1
-    radiance: 1
+    siblings: 8
+    radiance: 3
+    grub_hunt: 2
     godhome: 0
     godhome_flower: 0
+  GrubHuntGoal: random-range-middle-25-35
   WhitePalace: 
     exclude: 5
     kingfragment: 0
@@ -83,26 +93,29 @@ Hollow Knight:
   RandomCharmCosts: -2
   MinimumEggPrice: 1
   MaximumEggPrice: 10
-  EggShopSlots: 5
-  SlyShopSlots: 8
-  SlyKeyShopSlots: 6
-  IseldaShopSlots: 2
-  SalubraShopSlots: 5
-  SalubraCharmShopSlots: 5
-  LegEaterShopSlots: 3
-  GrubfatherRewardSlots: 7
-  SeerRewardSlots: 8
-  ExtraShopSlots: 0
+  EggShopSlots: 1
+  SlyShopSlots: 1
+  SlyKeyShopSlots: 1
+  IseldaShopSlots: 1
+  SalubraShopSlots: 1
+  SalubraCharmShopSlots: 1
+  LegEaterShopSlots: 1
+  GrubfatherRewardSlots: 1
+  SeerRewardSlots: 1
+  ExtraShopSlots: random-range-middle-30-50
   SplitCrystalHeart: 'random'
   SplitMothwingCloak: 'random'
   SplitMantisClaw: 'random'
-  CostSanity: off
+  CostSanity:
+    off: 4
+    shopsonly: 1
+    on: 1
   CostSanityHybridChance: 10
   CostSanityEggWeight: 1
-  CostSanityGrubWeight: 1
-  CostSanityEssenceWeight: 1
-  CostSanityCharmWeight: 1
-  CostSanityGeoWeight: 8
+  CostSanityGrubWeight: 2
+  CostSanityEssenceWeight: 2
+  CostSanityCharmWeight: 2
+  CostSanityGeoWeight: 16
   local_items:
     - Monomon
     - Lurien
@@ -111,6 +124,7 @@ Hollow Knight:
     - Queen_Fragment
     - Void_Heart
     - Godtuner
+    - Mimics
 
   skips:
     none: 4
@@ -118,6 +132,21 @@ Hollow Knight:
     medium: 1
   
   triggers:
+  - option_category: Hollow Knight
+    option_name: Goal
+    option_result: grub_hunt
+    options:
+      Hollow Knight:
+        +local_items:
+          - Grubs
+  - option_category: Hollow Knight
+    option_name: Goal
+    option_result: any
+    options:
+      Hollow Knight:
+        +local_items:
+          - Grubs
+  
   - option_category: Hollow Knight
     option_name: skips
     option_result: none
@@ -144,13 +173,13 @@ Hollow Knight:
     option_result: easy
     options:
       Hollow Knight:
-        PreciseMovement: 'true'
-        ProficientCombat: 'true'
+        PreciseMovement: 'random'
+        ProficientCombat: 'random'
         BackgroundObjectPogos: 'true'
         EnemyPogos: 'true'
         ObscureSkips: 'false'
         ShadeSkips: 'false'
-        InfectionSkips: 'true'
+        InfectionSkips: 'random'
         FireballSkips: 'false'
         SpikeTunnels: 'false'
         AcidSkips: 'false'
@@ -165,17 +194,29 @@ Hollow Knight:
     option_result: medium
     options:
       Hollow Knight:
-        PreciseMovement: 'true'
-        ProficientCombat: 'true'
+        PreciseMovement: 
+          true: 3
+          false: 1
+        ProficientCombat: 
+          true: 3
+          false: 1
         BackgroundObjectPogos: 'true'
         EnemyPogos: 'true'
-        ObscureSkips: 'true'
-        ShadeSkips: 'true'
+        ObscureSkips:
+            true: 3
+            false: 1
+        ShadeSkips:
+            true: 3
+            false: 2   
         InfectionSkips: 'true'
         FireballSkips: 'true'
         SpikeTunnels: 'false'
-        AcidSkips: 'true'
-        DamageBoosts: 'true'
+        AcidSkips:
+            true: 1
+            false: 2
+        DamageBoosts:
+            true: 1
+            false: 4        
         DangerousSkips: 'false'
         DarkRooms: 'false'
         ComplexSkips: 'false'

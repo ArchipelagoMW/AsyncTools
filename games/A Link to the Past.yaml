@@ -4,7 +4,6 @@ A Link to the Past:
     torches: 25
   big_key_shuffle:
     original_dungeon: 50
-    own_dungeons: 5
     own_world: 15
     any_world: 0
     different_world: 0

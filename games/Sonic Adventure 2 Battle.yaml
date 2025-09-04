@@ -1,24 +1,40 @@
 Sonic Adventure 2 Battle:
   goal:
-    biolizard: 3
-    cannons_core_boss_rush: 1
+    CC: 3
+    Emeralds: 2
+    minigame_madness: 2
   mission_shuffle: true
+  minigame_madness_requirement:
+    '4': 1
+    '5': 1
+  minigame_madness_minimum:
+    '5': 1
+    random-high: 1
   boss_rush_shuffle:
     vanilla: 2
     shuffled: 1
     chaos: 1
   keysanity:
-    false: 2
-    true: 1
+    false: 1
+    true: 2
   whistlesanity:
-    none: 2
-    pipes: 1
+    none: 8
+    pipes: 4
+    both: 1
+    both_plus: 1
   beetlesanity:
     false: 2
     true: 1
   omosanity:
     false: 2
     true: 1
+  itemboxsanity:
+    none: 5
+    extra_lives: 2
+    all: 1
+  bigsanity:
+    false: 5
+    true: 2
   kart_race_checks:
     none: 2
     mini: 1
@@ -37,15 +53,27 @@ Sonic Adventure 2 Battle:
   level_gate_costs:
     medium: 1
     high: 2
-  chao_garden_difficulty:
-    none: 5
-    beginner: 3
+  chao_race_difficulty:
+    none: 10
+    beginner: 4
     intermediate: 1
     expert: 1
-  include_chao_karate:
-    false: 2
-    true: 1 
-  chao_race_checks: all
+  chao_stadium_checks: all
+  black_market_slots:
+    0: 6
+    random-low: 2
+    random-high: 2
+    64: 2
+  black_market_unlock_costs:
+    low: 3
+    medium: 2
+    high: 1
+  black_market_price_multiplier:
+    0: 1
+    1: 3
+    2: 1
+    3: 1
+    4: 1
   junk_fill_percentage: random-low
   trap_fill_percentage: random-low
   omochao_trap_weight: random
@@ -58,6 +86,10 @@ Sonic Adventure 2 Battle:
   slow_trap_weight: random
   cutscene_trap_weight: random
   pong_trap_weight: random
+  literature_trap_weight: random
+  controller_drift_trap_weight: random
+  poison_trap_weight: random
+  bee_trap_weight: random
   minigame_trap_difficulty: easy
   ring_loss:
     classic: 1
@@ -65,21 +97,36 @@ Sonic Adventure 2 Battle:
   sadx_music: sa2b
   narrator: random
   logic_difficulty: standard
-  speed_mission_count: random-range-2-4
-  speed_mission_2: true
-  speed_mission_3: true
-  speed_mission_4: true
-  speed_mission_5: false
-  mech_mission_count: random-range-1-3
-  mech_mission_2: true
-  mech_mission_3: true
-  mech_mission_4: true
-  mech_mission_5: false
-  hunt_mission_count: random-range-1-3
-  hunt_mission_2: true
-  hunt_mission_3: true
-  hunt_mission_4: false
-  hunt_mission_5: false
+  sonic_mission_count: random-range-2-4
+  sonic_mission_2: 'true'
+  sonic_mission_3: 'true'
+  sonic_mission_4: 'true'
+  sonic_mission_5: 'false'
+  shadow_mission_count: random-range-2-4
+  shadow_mission_2: 'true'
+  shadow_mission_3: 'true'
+  shadow_mission_4: 'true'
+  shadow_mission_5: 'false'
+  tails_mission_count: random-range-1-3
+  tails_mission_2: 'true'
+  tails_mission_3: 'true'
+  tails_mission_4: 'true'
+  tails_mission_5: 'false'
+  eggman_mission_count: random-range-1-3
+  eggman_mission_2: 'true'
+  eggman_mission_3: 'true'
+  eggman_mission_4: 'true'
+  eggman_mission_5: 'false'
+  knuckles_mission_count: random-range-1-3
+  knuckles_mission_2: 'true'
+  knuckles_mission_3: 'true'
+  knuckles_mission_4: 'false'
+  knuckles_mission_5: 'false'
+  rouge_mission_count: random-range-1-3
+  rouge_mission_2: 'true'
+  rouge_mission_3: 'true'
+  rouge_mission_4: 'false'
+  rouge_mission_5: 'false'
   kart_mission_count: random-range-1-2
   kart_mission_2: true
   kart_mission_3: false
@@ -97,4 +144,134 @@ Sonic Adventure 2 Battle:
       options:
         null:
           name: SA2B-{player}
-
+    - option_category: Sonic Adventure 2 Battle
+      option_name: chao_race_difficulty
+      option_result: beginner
+      options:
+        Sonic Adventure 2 Battle:
+            chao_karate_difficulty:
+                none: 2
+                beginner: 5
+                standard_override: 2
+                expert_override: 1
+                super_override: 1
+            chao_stats: '20'
+            chao_stats_frequency: 
+                '1': 1
+                '2': 1
+    - option_category: Sonic Adventure 2 Battle
+      option_name: chao_race_difficulty
+      option_result: none
+      options:
+        Sonic Adventure 2 Battle:
+            chao_karate_difficulty:
+                none: 15
+                beginner_override: 3
+                standard_override: 1
+                expert_override: 1
+                super_override: 0
+    - option_category: Sonic Adventure 2 Battle
+      option_name: chao_race_difficulty
+      option_result: intermediate
+      options:
+        Sonic Adventure 2 Battle:
+            chao_karate_difficulty:
+                none: 2
+                beginner: 2
+                standard: 5
+                expert_override: 2
+                super_override: 1
+            chao_stats: '40'
+            chao_stats_frequency: 
+                '1': 1
+                '2': 1
+                '5': 1
+    - option_category: Sonic Adventure 2 Battle
+      option_name: chao_race_difficulty
+      option_result: expert
+      options:
+        Sonic Adventure 2 Battle:
+            chao_karate_difficulty:
+                none: 2
+                beginner: 1
+                standard: 2
+                expert: 5
+                super_override: 3
+            chao_stats: '70'
+            chao_stats_frequency: 
+                '1': 1
+                '2': 1
+                '5': 1
+    - option_category: Sonic Adventure 2 Battle
+      option_name: chao_karate_difficulty
+      option_result: expert_override
+      options:
+        Sonic Adventure 2 Battle:
+            chao_karate_difficulty: expert
+            chao_stats: '70'
+            chao_stats_frequency: 
+                '1': 1
+                '2': 1
+                '5': 1
+    - option_category: Sonic Adventure 2 Battle
+      option_name: chao_karate_difficulty
+      option_result: super_override
+      options:
+        Sonic Adventure 2 Battle:
+            chao_karate_difficulty: super
+            chao_stats: '80'
+            chao_stats_frequency: 
+                '1': 1
+                '2': 1
+                '5': 1
+    - option_category: Sonic Adventure 2 Battle
+      option_name: chao_karate_difficulty
+      option_result: standard_override
+      options:
+        Sonic Adventure 2 Battle:
+            chao_karate_difficulty: standard
+            chao_stats: '40'
+            chao_stats_frequency: 
+                '1': 1
+                '2': 1
+                '5': 1
+    - option_category: Sonic Adventure 2 Battle
+      option_name: chao_karate_difficulty
+      option_result: beginner_override
+      options:
+        Sonic Adventure 2 Battle:
+            chao_karate_difficulty: beginner
+            chao_stats: '20'
+            chao_stats_frequency: 
+                '1': 1
+                '2': 1
+    - option_category: Sonic Adventure 2 Battle
+      option_name: whistlesanity
+      option_result: both_plus
+      options:
+        Sonic Adventure 2 Battle:
+            animalsanity: 'true'
+            whistlesanity: both
+    - option_category: Sonic Adventure 2 Battle
+      option_name: goal
+      option_result: CC
+      options:
+        Sonic Adventure 2 Battle:
+            goal:
+                biolizard: 3
+                cannons_core_boss_rush: 1
+    - option_category: Sonic Adventure 2 Battle
+      option_name: goal
+      option_result: Emeralds
+      options:
+        Sonic Adventure 2 Battle:
+            local_items: Chaos Emeralds
+            goal:
+                boss_rush_chaos_emerald_hunt: 1
+                finalhazard_chaos_emerald_hunt: 1
+    - option_category: Sonic Adventure 2 Battle
+      option_name: goal
+      option_result: minigame_madness
+      options:
+        Sonic Adventure 2 Battle:
+            local_items: Minigames

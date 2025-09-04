@@ -1,0 +1,39 @@
+Faxanadu:
+  keep_shop_red_potions:
+    'false': 5
+    'true': 2
+  include_pendant:
+    'false': 5
+    'true': 2
+  include_poisons:
+    'false': 2
+    'true': 5
+  require_dragon_slayer:
+    'false': 5
+    'true': 2
+  random_musics:
+    'false': 1
+    'true': 1
+  random_sounds:
+    'false': 1
+    'true': 1
+  random_npcs:
+    'false': 1
+    'true': 1
+  random_monsters:
+    vanilla: 10
+    level_shuffle: 3
+    level_random: 3
+    world_shuffle: 3
+    world_random: 3
+    chaotic: 1
+  random_rewards:
+    'false': 5
+    'true': 2
+  triggers:
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: Faxanadu-{player}

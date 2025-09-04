@@ -1,8 +1,8 @@
 A Short Hike:
   goal: 
-    help_everyone: 3
-    fishmonger: 1
-    photo: 1
+    help_everyone: 40
+    photo: 40
+    races: 20
   coins_in_shops: false
   golden_feathers: random-range-12-20
   silver_feathers: random-range-0-10
@@ -10,7 +10,6 @@ A Short Hike:
   golden_feather_progression:
     easy: 2
     normal: 3
-  cost_multiplier: random-range-25-200
   filler_coin_amount: random
   triggers:
     - option_category: null

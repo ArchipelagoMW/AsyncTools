@@ -1,19 +1,58 @@
-Terraria:
+﻿Terraria: 
+  # Calamity is a mod for Terraria that adds many more bosses to the game.
+  # Sorry, I was wrong. Calamity is actually in much higher demand than I thought.
+  calamity:
+    'false': 1
+    'true': 1
+  # This is a very difficult secret seed in vanilla. It's probably too hard for a big async yaml.
+  getfixedboi: 'false'
+  # Overridden via triggers if calamity is rolled
   goal:
     golem: 1
     moon_lord: 3
     zenith: 2
-  achievements:
-    none: 2
-    exclude_grindy: 1
-    exclude_fishing: 2
+  # Early achievements add quite a bit to sphere 1. They have a chance to be disabled for the sake of variety.
+  early_achievements:
+    'false': 1
+    'true': 2
+  # Normal achievements are weighted roughly the same as before.
+  normal_achievements:
+    'false': 2
+    'true': 5
+  # Grindy achievements are achievements which can take a while to complete.
+  # This should hopefully be roughly the same weight that they had before.
+  grindy_achievements:
+    'false': 2
+    'true': 3
+  fishing_achievements: 'false'
   fill_extra_checks_with: useful_items
   death_link: 'false'
   triggers:
+    # Calamity is longer than vanilla, with bosses that go past vanilla progression. This forces the goal to require defeating Post-Moon Lord bosses.
+    # Zenith is still a valid goal here, as Calamity changes its crafting recipe to require Yharon to be defeated.
+    - option_category: Terraria
+      option_name: calamity
+      option_result: 'true'
+      options:
+        Terraria:
+          goal:
+            yharon_dragon_of_rebirth: 1
+            zenith: 2
+            calamity_final_bosses: 3
+    
+    # It doesn't make sense to have early or grindy achievements if normal achievements are disabled anyway.
+    # This is identical to how it worked before.
+    - option_category: Terraria
+      option_name: normal_achievements
+      option_result: 'false'
+      options:
+        Terraria:
+          early_achievements: 'false'
+          grindy_achievements: 'false'
+    
     - option_category: null
       option_name: name
       option_result: Player{player}
       options:
         null:
           name: Terraria-{player}
-

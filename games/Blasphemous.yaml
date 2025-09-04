@@ -16,9 +16,7 @@ Blasphemous:
     brotherhood: 8
     albero: 10
     convent: 3
-    knot_of_words: 3
     grievance: 2
-    rooftops: 1
   ending:
     any_ending: 4
     ending_c: 1
@@ -57,9 +55,21 @@ Blasphemous:
     anywhere: 3
     local: 1
   local_items: [wounds]
-  exclude_locations: ["Skill 1, Tier 3", "Skill 5, Tier 3"] #locations apparently bugged in 0.5.0 and can accidentally self-lock local progression, can remove in 0.5.1
   
   triggers:
+    - option_category: Blasphemous
+      option_name: difficulty
+      option_result: hard
+      options:
+        Blasphemous:
+          # knot_of_words and rooftops require hard difficulty or higher, so re-roll with them allowed.
+          starting_location:
+            brotherhood: 8
+            albero: 10
+            convent: 3
+            knot_of_words: 3
+            grievance: 2
+            rooftops: 1
     - option_category: Blasphemous
       option_name: starting_location
       option_result: brotherhood

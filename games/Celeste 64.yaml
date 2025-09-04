@@ -4,20 +4,30 @@ Celeste 64:
     'true': 2
   total_strawberries: random-high
   strawberries_required_percentage: random-range-70-90
-  friendsanity:
+  friendsanity: false
+  signsanity: false
+  carsanity: false
+  checkpointsanity:
     'false': 3
     'true': 2
-  signsanity:
-    'false': 3
-    'true': 2
-  carsanity:
-    'false': 3
-    'true': 2
+  madeline_one_dash_hair_color: any_color
+  madeline_two_dash_hair_color: any_color
+  madeline_feather_hair_color: any_color
+  sanities:
+    none: 1
+    all: 5    
   triggers:
+    - option_category: Celeste 64
+      option_name: sanities
+      option_result: all
+      options:
+        Celeste 64:
+          friendsanity: true
+          signsanity: true
+          carsanity: true
     - option_category: null
       option_name: name
       option_result: Player{player}
       options:
         null:
           name: Celeste64-{player}
-

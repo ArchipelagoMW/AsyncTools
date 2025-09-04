@@ -1,7 +1,9 @@
 TUNIC:
   # column order for the spreadsheet:
-  # Start with Sword | Keys Behind Bosses | Hexagon Quest | Gold Hexagons Required | Percentage of Extra Hexagons | Entrance Rando | Fewer Shops | Laurels Location
-  # if Hexagon Quest is disabled, put a - for Gold Hexagons Required and Percentage of Extra Hexagons since they are not relevant
+  # Start with Sword | Hexagon Quest | Breakable Shuffle | Addtl Combat Logic | Keys Behind Bosses | Entrance Rando | Direction Pairs | Decoupled | Fewer Shops
+  # Laurels Location | Laurels Zips | Ice Grappling | Ladder Storage | Gold Hexagons Required | Percentage of Extra Hexagons | Hexagon Quest Ability Type
+  # if Hexagon Quest is disabled, put a - for Gold Hexagons Required, Percentage of Extra Hexagons, and Hexagon Quest Ability Type since they are not relevant
+  # if Entrance Rando is disabled, put a - for Direction Pairs, Decoupled, and Fewer Shops since they are not relevant
   sword_progression: 'true'
   start_with_sword:
     'true': 25
@@ -12,26 +14,36 @@ TUNIC:
   entrance_rando:
     yes: 25
     no: 75
-  logic_rules:
-    restricted: 85
-    no_major_glitches: 10
-    unrestricted: 5
+  laurels_zips:
+    'false': 70
+    glitch_logic_on: 30
   fool_traps: off
   hexagon_quest:
     'true': 50
     'false': 50
-  hexagon_goal: random-middle
+  hexagon_goal: random-range-middle-15-50
   extra_hexagon_percentage: random-range-low-10-100
+  hexagon_quest_ability_type: random
   lanternless: 'false'
   maskless: 'false'
   laurels_location:
     anywhere: 50
     10_fairies: 50
+  combat_logic:
+    on: 40
+    bosses_only: 20
+    off: 40
+  breakable_shuffle:
+    'true': 40
+    'false': 60
+  grass_randomizer:
+    'true': 0
+    'false': 100
   local_items:
-    - Red Questagon
-    - Blue Questagon
-    - Green Questagon
-    - Gold Questagon
+    - Questagons
+  start_inventory_from_pool:
+    Torch: 1
+    Dath Stone: 1
 
   triggers:
     - option_category: TUNIC
@@ -48,9 +60,33 @@ TUNIC:
       option_result: 'yes'
       options:
         TUNIC:
-          fixed_shop:
-            'true': 50
-            'false': 50
+          entrance_layout:
+            standard: 25
+            direction_pairs: 50
+            fixed_shop: 25
+          decoupled:
+            'true': 10
+            'false': 90
+
+    - option_category: TUNIC
+      option_name: laurels_zips
+      option_result: glitch_logic_on
+      options:
+        TUNIC:
+          laurels_zips:
+            'true': 60
+            'false': 40
+          ice_grappling:
+            off: 20
+            easy: 60
+            medium: 20
+            hard: 0
+          ladder_storage:
+            off: 60
+            easy: 25
+            medium: 15
+            hard: 0
+    
     - option_category: null
       option_name: name
       option_result: Player{player}
