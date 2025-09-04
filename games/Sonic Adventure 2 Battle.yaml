@@ -76,20 +76,6 @@ Sonic Adventure 2 Battle:
     4: 1
   junk_fill_percentage: random-low
   trap_fill_percentage: random-low
-  omochao_trap_weight: random
-  timestop_trap_weight: random
-  confusion_trap_weight: random
-  tiny_trap_weight: random
-  gravity_trap_weight: random
-  exposition_trap_weight: random
-  ice_trap_weight: random
-  slow_trap_weight: random
-  cutscene_trap_weight: random
-  pong_trap_weight: random
-  literature_trap_weight: random
-  controller_drift_trap_weight: random
-  poison_trap_weight: random
-  bee_trap_weight: random
   minigame_trap_difficulty: easy
   ring_loss:
     classic: 1
@@ -260,6 +246,10 @@ Sonic Adventure 2 Battle:
             goal:
                 biolizard: 3
                 cannons_core_boss_rush: 1
+            trap_type_trigger:
+                none: 1
+                no_minigame: 1
+                all: 1
     - option_category: Sonic Adventure 2 Battle
       option_name: goal
       option_result: Emeralds
@@ -269,9 +259,118 @@ Sonic Adventure 2 Battle:
             goal:
                 boss_rush_chaos_emerald_hunt: 1
                 finalhazard_chaos_emerald_hunt: 1
+            trap_type_trigger:
+                none: 1
+                no_minigame: 1
+                all: 1
     - option_category: Sonic Adventure 2 Battle
       option_name: goal
       option_result: minigame_madness
       options:
         Sonic Adventure 2 Battle:
             local_items: Minigames
+            trap_type_trigger:
+                only_minigame: 1
+                all: 1
+    - option_category: Sonic Adventure 2 Battle
+      option_name: trap_type_trigger
+      option_result: none
+      options:
+        Sonic Adventure 2 Battle:
+            trap_fill_percentage: 0
+    - option_category: Sonic Adventure 2 Battle
+      option_name: trap_type_trigger
+      option_result: no_minigame
+      options:
+        Sonic Adventure 2 Battle:
+            omochao_trap_weight: random
+            timestop_trap_weight: random
+            confusion_trap_weight: random
+            tiny_trap_weight: random
+            gravity_trap_weight: random
+            exposition_trap_weight: random
+            ice_trap_weight: random
+            slow_trap_weight: random
+            cutscene_trap_weight: random
+            reverse_trap_weight: random
+            literature_trap_weight: random
+            controller_drift_trap_weight: random
+            poison_trap_weight: random
+            bee_trap_weight: random
+  
+            pong_trap_weight: none
+            breakout_trap_weight: none
+            fishing_trap_weight: none
+            trivia_trap_weight: none
+            pokemon_trivia_trap_weight: none
+            pokemon_count_trap_weight: none
+            number_sequence_trap_weight: none
+            light_up_path_trap_weight: none
+            pinball_trap_weight: none
+            math_quiz_trap_weight: none
+            snake_trap_weight: none
+            input_sequence_trap_weight: none
+    - option_category: Sonic Adventure 2 Battle
+      option_name: trap_type_trigger
+      option_result: only_minigame
+      options:
+        Sonic Adventure 2 Battle:
+            omochao_trap_weight: none
+            timestop_trap_weight: none
+            confusion_trap_weight: none
+            tiny_trap_weight: none
+            gravity_trap_weight: none
+            exposition_trap_weight: none
+            ice_trap_weight: none
+            slow_trap_weight: none
+            cutscene_trap_weight: none
+            reverse_trap_weight: none
+            literature_trap_weight: none
+            controller_drift_trap_weight: none
+            poison_trap_weight: none
+            bee_trap_weight: none
+  
+            pong_trap_weight: random
+            breakout_trap_weight: random
+            fishing_trap_weight: random
+            trivia_trap_weight: random
+            pokemon_trivia_trap_weight: random
+            pokemon_count_trap_weight: random
+            number_sequence_trap_weight: random
+            light_up_path_trap_weight: random
+            pinball_trap_weight: random
+            math_quiz_trap_weight: random
+            snake_trap_weight: random
+            input_sequence_trap_weight: random
+    - option_category: Sonic Adventure 2 Battle
+      option_name: trap_type_trigger
+      option_result: all
+      options:
+        Sonic Adventure 2 Battle:
+            omochao_trap_weight: random
+            timestop_trap_weight: random
+            confusion_trap_weight: random
+            tiny_trap_weight: random
+            gravity_trap_weight: random
+            exposition_trap_weight: random
+            ice_trap_weight: random
+            slow_trap_weight: random
+            cutscene_trap_weight: random
+            reverse_trap_weight: random
+            literature_trap_weight: random
+            controller_drift_trap_weight: random
+            poison_trap_weight: random
+            bee_trap_weight: random
+  
+            pong_trap_weight: random
+            breakout_trap_weight: random
+            fishing_trap_weight: random
+            trivia_trap_weight: random
+            pokemon_trivia_trap_weight: random
+            pokemon_count_trap_weight: random
+            number_sequence_trap_weight: random
+            light_up_path_trap_weight: random
+            pinball_trap_weight: random
+            math_quiz_trap_weight: random
+            snake_trap_weight: random
+            input_sequence_trap_weight: random
