@@ -1,27 +1,35 @@
 Starcraft 2:
-  harder_mode:
-    false: 75
-    true: 25 # Enable only for filler-only asyncs
-  game_format:
-    multi_campaign: 55
-    all_terran: 10
+  harder_mode: # Trigger only
+    false: 75 # Regular easier worlds. No difficult option combinations
+    true: 25 # Enable only for filler-only asyncs. Can contain worlds for those already experienced with APSC2
+  game_format: # Trigger only
+    multi_campaign: 45
+    all_vanilla_terran: 5
+    all_vanilla_protoss: 5
+    all_terran: 5
+    all_zerg: 5
     all_protoss: 5
     wol: 10
     hots: 10
     lotv: 10
   mission_order:
+    # See also trigger handling race swaps
     vanilla: 5
-    vanilla_shuffled: 40
-    grid: 40
-    mini_campaign: 15
+    vanilla_shuffled: 20
+    grid: 25
+    mini_campaign: 10
+    gauntlet: 10
+    golden_path: 15
+    hopscotch: 15
   game_difficulty:
     casual: 25
     normal: 35
     hard: 20
     brutal: 0
+  difficulty_damage_modifier: random
   all_in_map: random
-  maximum_campaign_size: 83
-  grid_two_start_positions: random
+  maximum_campaign_size: 195
+  two_start_positions: random
   shuffle_no_build:
     true: 75
     false: 25
@@ -35,19 +43,21 @@ Starcraft 2:
   generic_upgrade_research:
     auto_in_no_build: 75
     always_auto: 25
-  nco_items: true
-  bw_items: true
-  ext_items: true
-  enable_wol_missions: false
-  enable_prophecy_missions: false
-  enable_hots_missions: false
-  enable_lotv_prologue_missions: false
-  enable_lotv_missions: false
-  enable_nco_missions: false
-  enable_epilogue_missions: false
+  max_upgrade_level: random-range-3-5
+  generic_upgrade_research_speedup: random
+  generic_upgrade_items: random
+  vanilla_items_only: false
+  exclude_overpowered_items: false
+  war_council_nerfs: false
+  enabled_campaigns: []
+  enable_race_swap: disabled
+  selected_races:
+    - Zerg
+    - Terran
+    - Protoss
   grant_story_tech:
-    false: 75
-    true: 25
+    no_grant: 75
+    grant: 25
   grant_story_levels: minimum
   kerrigan_presence: not_present
   kerrigan_levels_per_mission_completed: 0
@@ -62,26 +72,36 @@ Starcraft 2:
   vanilla_locations: enabled
   extra_locations: enabled
   challenge_locations: enabled
-  mastery_locations: enabled
+  # Hard locations
+  mastery_locations: disabled
+  speedrun_locations: disabled
   exclude_very_hard_missions:
     default: 50
     true: 50
   excluded_missions: []
-  spear_of_adun_presence: lotv_protoss
+  spear_of_adun_presence: vanilla
   spear_of_adun_present_in_no_build: false
-  spear_of_adun_autonomously_cast_ability_presence: lotv_protoss
-  spear_of_adun_autonomously_cast_present_in_no_build: false
+  spear_of_adun_passive_ability_presence: vanilla
+  spear_of_adun_passive_present_in_no_build: false
+  key_mode: random
+  nova_ghost_of_a_chance_variant: wol
+  mercenary_highlanders: random
+  enable_morphling:
+    false: 75
+    true: 25
+  single_race_with_race_swaps: false # Trigger handling only
+  excluded_mission_class: unimportant # Trigger handling only
   triggers:
     # Link grant_story_levels to grant_story_tech
     - option_category: Starcraft 2
       option_name: grant_story_tech
-      option_result: false
+      option_result: no_grant
       options:
         Starcraft 2:
           grant_story_levels: disabled
     - option_category: Starcraft 2
       option_name: grant_story_tech
-      option_result: true
+      option_result: grant
       options:
         Starcraft 2:
           grant_story_levels:
@@ -93,48 +113,63 @@ Starcraft 2:
       option_result: multi_campaign
       options:
         Starcraft 2:
-          enable_wol_missions: true
-          enable_prophecy_missions: true
-          enable_hots_missions: true
-          enable_lotv_prologue_missions: true
-          enable_lotv_missions: true
-          enable_nco_missions: true
-          enable_epilogue_missions: true
+          enabled_campaigns: !!set
+            ? 'Wings of Liberty'
+            ? 'Prophecy'
+            ? 'Heart of the Swarm'
+            ? 'Whispers of Oblivion (Legacy of the Void: Prologue)'
+            ? 'Legacy of the Void'
+            ? 'Into the Void (Legacy of the Void: Epilogue)'
+            ? 'Nova Covert Ops'
+          mission_order:
+            vanilla: 5
+            vanilla_shuffled_no_both_disable_very_hards_and_no_builds: 20
+            grid: 25
+            mini_campaign: 10
+            gauntlet: 10
+            golden_path: 15
+            hopscotch: 15
           maximum_campaign_size:
-            83: 85
+            195: 45
+            83: 40
             40: 15
           spear_of_adun_presence:
             protoss: 50
             everywhere: 50
           spear_of_adun_present_in_no_build: random
-          spear_of_adun_autonomously_cast_ability_presence:
+          spear_of_adun_passive_ability_presence:
             protoss: 50
             everywhere: 50
-          spear_of_adun_autonomously_cast_present_in_no_build: random
+          spear_of_adun_passive_present_in_no_build: random
           take_over_ai_allies: random
           kerrigan_presence: vanilla
+          enable_race_swap: random
+          nova_ghost_of_a_chance_variant: auto
     - option_category: Starcraft 2
       option_name: game_format
-      option_result: all_terran
+      option_result: all_vanilla_terran
       options:
         Starcraft 2:
-          enable_wol_missions: true
-          enable_nco_missions: true
+          enabled_campaigns: !!set
+            ? 'Wings of Liberty'
+            ? 'Nova Covert Ops'
           maximum_campaign_size:
             34: 85
             17: 15
+          nova_ghost_of_a_chance_variant: auto
     - option_category: Starcraft 2
       option_name: game_format
-      option_result: all_protoss
+      option_result: all_vanilla_protoss
       options:
         Starcraft 2:
-          enable_prophecy_missions: true
-          enable_lotv_prologue_missions: true
-          enable_lotv_missions: true
+          enabled_campaigns: !!set
+            ? 'Prophecy'
+            ? 'Whispers of Oblivion (Legacy of the Void: Prologue)'
+            ? 'Legacy of the Void'
           spear_of_adun_presence: protoss
-          spear_of_adun_autonomously_cast_ability_presence: protoss
+          spear_of_adun_passive_ability_presence: protoss
           spear_of_adun_present_in_no_build: random
-          spear_of_adun_autonomously_cast_present_in_no_build: random
+          spear_of_adun_passive_present_in_no_build: random
           maximum_campaign_size:
             26: 85
             16: 15
@@ -143,7 +178,8 @@ Starcraft 2:
       option_result: wol
       options:
         Starcraft 2:
-          enable_wol_missions: true
+          enabled_campaigns: !!set
+            ? 'Wings of Liberty'
           maximum_campaign_size:
             25: 85
             16: 15
@@ -152,7 +188,8 @@ Starcraft 2:
       option_result: hots
       options:
         Starcraft 2:
-          enable_hots_missions: true
+          enabled_campaigns: !!set
+            ? 'Heart of the Swarm'
           maximum_campaign_size:
             20: 85
             12: 15
@@ -163,14 +200,220 @@ Starcraft 2:
       option_result: lotv
       options:
         Starcraft 2:
-          enable_lotv_missions: true
+          enabled_campaigns: !!set
+            ? 'Legacy of the Void'
           maximum_campaign_size:
             19: 85
             12: 15
-          grid_two_start_positions: false # Possibly not enough starters
+          two_start_positions: false # Possibly not enough starters
           shuffle_no_build: true
           spear_of_adun_present_in_no_build: random
-          spear_of_adun_autonomously_cast_present_in_no_build: random
+          spear_of_adun_passive_present_in_no_build: random
+    - option_category: Starcraft 2
+      option_name: game_format
+      option_result: all_terran
+      options:
+        Starcraft 2:
+          enabled_campaigns: !!set
+            ? 'Wings of Liberty'
+            ? 'Prophecy'
+            ? 'Heart of the Swarm'
+            ? 'Whispers of Oblivion (Legacy of the Void: Prologue)'
+            ? 'Legacy of the Void'
+            ? 'Into the Void (Legacy of the Void: Epilogue)'
+            ? 'Nova Covert Ops'
+          maximum_campaign_size:
+            83: 85
+            40: 15
+          spear_of_adun_presence:
+            not_present: 75
+            everywhere: 25
+          spear_of_adun_present_in_no_build: random
+          spear_of_adun_passive_ability_presence:
+            not_present: 75
+            everywhere: 25
+          spear_of_adun_passive_present_in_no_build: random
+          kerrigan_presence: vanilla
+          shuffle_no_build: true
+          enable_race_swap: shuffle_all
+          exclude_very_hard_missions: false
+          selected_races:
+            - Terran
+          single_race_with_race_swaps: true
+          nova_ghost_of_a_chance_variant: auto
+    - option_category: Starcraft 2
+      option_name: game_format
+      option_result: all_zerg
+      options:
+        Starcraft 2:
+          enabled_campaigns: !!set
+            ? 'Wings of Liberty'
+            ? 'Prophecy'
+            ? 'Heart of the Swarm'
+            ? 'Whispers of Oblivion (Legacy of the Void: Prologue)'
+            ? 'Legacy of the Void'
+            ? 'Into the Void (Legacy of the Void: Epilogue)'
+          maximum_campaign_size:
+            83: 85
+            40: 15
+          spear_of_adun_presence:
+            not_present: 75
+            everywhere: 25
+          spear_of_adun_present_in_no_build: random
+          spear_of_adun_passive_ability_presence:
+            not_present: 75
+            everywhere: 25
+          spear_of_adun_passive_present_in_no_build: random
+          kerrigan_presence: vanilla
+          shuffle_no_build: true
+          enable_race_swap: shuffle_all
+          exclude_very_hard_missions: false
+          selected_races:
+            - Zerg
+          single_race_with_race_swaps: true
+    - option_category: Starcraft 2
+      option_name: game_format
+      option_result: all_protoss
+      options:
+        Starcraft 2:
+          enabled_campaigns: !!set
+            ? 'Wings of Liberty'
+            ? 'Prophecy'
+            ? 'Heart of the Swarm'
+            ? 'Whispers of Oblivion (Legacy of the Void: Prologue)'
+            ? 'Legacy of the Void'
+            ? 'Into the Void (Legacy of the Void: Epilogue)'
+          maximum_campaign_size:
+            83: 85
+            40: 15
+          spear_of_adun_presence: protoss
+          spear_of_adun_present_in_no_build: random
+          spear_of_adun_passive_ability_presence: protoss
+          spear_of_adun_passive_present_in_no_build: random
+          kerrigan_presence: not_present
+          shuffle_no_build: true
+          enable_race_swap: shuffle_all
+          exclude_very_hard_missions: false
+          selected_races:
+            - Protoss
+          single_race_with_race_swaps: true
+    # Set Mission order away from Vanilla if race swaps are enabled so no off race missions will get rolled
+    - option_category: Starcraft 2
+      option_name: enable_race_swap
+      option_result: pick_one
+      options:
+        Starcraft 2:
+          mission_order:
+            vanilla_shuffled: 25
+            grid: 25
+            mini_campaign: 10
+            gauntlet: 10
+            golden_path: 15
+            hopscotch: 15
+    - option_category: Starcraft 2
+      option_name: enable_race_swap
+      option_result: pick_one_non_vanilla
+      options:
+        Starcraft 2:
+          mission_order:
+            vanilla_shuffled: 25
+            grid: 25
+            mini_campaign: 10
+            gauntlet: 10
+            golden_path: 15
+            hopscotch: 15
+    - option_category: Starcraft 2
+      option_name: enable_race_swap
+      option_result: shuffle_all
+      options:
+        Starcraft 2:
+          mission_order:
+            vanilla_shuffled: 25
+            grid: 25
+            mini_campaign: 10
+            gauntlet: 10
+            golden_path: 15
+            hopscotch: 15
+    - option_category: Starcraft 2
+      option_name: enable_race_swap
+      option_result: shuffle_all_non_vanilla
+      options:
+        Starcraft 2:
+          mission_order:
+            vanilla_shuffled: 25
+            grid: 25
+            mini_campaign: 10
+            gauntlet: 10
+            golden_path: 15
+            hopscotch: 15
+    # Single-race with race swaps: Disable Epilogue if the mission order is Vanilla Shuffled
+    # Vanilla order is disabled for the same case as above
+    - option_category: Starcraft 2
+      option_name: single_race_with_race_swaps
+      option_result: true
+      options:
+        Starcraft 2:
+          mission_order:
+            vanilla_shuffled_no_epilogue: 25
+            grid: 25
+            mini_campaign: 10
+            gauntlet: 10
+            golden_path: 15
+            hopscotch: 15
+    - option_category: Starcraft 2
+      option_name: mission_order
+      option_result: vanilla_shuffled_no_epilogue
+      options:
+        Starcraft 2:
+          mission_order: vanilla_shuffled
+          -enabled_campaigns: !!set # This trigger somehow doesn't work with YAML lists. Needs to be defined as a YAML set
+            ? 'Into the Void (Legacy of the Void: Epilogue)'
+    # Fix a case when nobuilds and very hards can't be disabled both in order to have enough missions to generate
+    - option_category: Starcraft 2
+      option_name: mission_order
+      option_result: vanilla_shuffled_no_both_disable_very_hards_and_no_builds
+      options:
+        Starcraft 2:
+          mission_order: vanilla_shuffled
+          excluded_mission_class:
+            very_hard: 25
+            no_build: 25
+            none: 50
+    - option_category: Starcraft 2
+      option_name: excluded_mission_class
+      option_result: very_hard
+      options:
+        Starcraft 2:
+          shuffle_no_build: true
+          exclude_very_hard_missions: true
+    - option_category: Starcraft 2
+      option_name: excluded_mission_class
+      option_result: no_build
+      options:
+        Starcraft 2:
+          shuffle_no_build: false
+          exclude_very_hard_missions: false
+    - option_category: Starcraft 2
+      option_name: excluded_mission_class
+      option_result: none
+      options:
+        Starcraft 2:
+          shuffle_no_build: true
+          exclude_very_hard_missions: false
+    # Short mission layout detection
+    # Consider those always as long ones
+    - option_category: Starcraft 2
+      option_name: mission_order
+      option_result: vanilla
+      options:
+        Starcraft 2:
+          maximum_campaign_size: 83
+    - option_category: Starcraft 2
+      option_name: mission_order
+      option_result: vanilla_shuffled
+      options:
+        Starcraft 2:
+          maximum_campaign_size: 83
     # Exclude missions requiring Kerrigan level in short orders
     # Mini campaign
     - option_category: Starcraft 2
@@ -182,14 +425,7 @@ Starcraft 2:
             - Supreme
             - The Infinite Cycle
           maximum_campaign_size: 40
-    # Short grids
-    # Don't treat vanilla shuffled as a short grid first
-    - option_category: Starcraft 2
-      option_name: mission_order
-      option_result: vanilla_shuffled
-      options:
-        Starcraft 2:
-          maximum_campaign_size: 83
+    # Short dynamic layouts
     - option_category: Starcraft 2
       option_name: maximum_campaign_size
       option_result: 12
@@ -226,18 +462,21 @@ Starcraft 2:
             normal: 25
             hard: 50
             brutal: 25
-          required_tactics: advanced
+          required_tactics:
+            standard: 50
+            advanced: 50
           max_number_of_upgrades: random-range-4-12
-    # Harder mode: Allow standard tactics + Brutal
+          war_council_nerfs: random
+          exclude_overpowered_items: random
+          mastery_locations: enabled
+          speedrun_locations: enabled
+    # Harder mode - long games - don't spawn many filler items giving the player too many resources
     - option_category: Starcraft 2
-      option_name: game_difficulty
-      option_result: brutal
+      option_name: maximum_campaign_size
+      option_result: 195
       options:
         Starcraft 2:
-          required_tactics:
-            standard: 25
-            advanced: 75
-    # Harder mode - full campaigns - don't spawn many filler items giving the player too many resources
+          max_number_of_upgrades: -1
     - option_category: Starcraft 2
       option_name: maximum_campaign_size
       option_result: 83
@@ -274,10 +513,10 @@ Starcraft 2:
       options:
         Starcraft 2:
           max_number_of_upgrades: -1
+    # Slot name
     - option_category: null
       option_name: name
       option_result: Player{player}
       options:
         null:
           name: SC2-{player}
-
