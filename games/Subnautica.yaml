@@ -3,6 +3,7 @@ Subnautica:
   goal:
     launch: 3
     free: 2
+    infected: 1
   creature_scans:
     random-range-40-50: 1
   creature_scan_logic:
@@ -19,6 +20,7 @@ Subnautica:
     easy: 5
     normal: 4
     items_easy: 5
+  empty_tanks: true
   triggers:
     - option_category: null
       option_name: name
