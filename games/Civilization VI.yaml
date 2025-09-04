@@ -4,8 +4,8 @@ Civilization VI:
     'false': 2
     'true': 5
   boostsanity:
-    'false': 5
-    'true': 2
+    'false': 4
+    'true': 5
   research_cost_multiplier:
     100: 50
   hide_item_names:

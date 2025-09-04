@@ -2,31 +2,27 @@
   enable_move_randomizer:
     'false': 3
     'true': 2
-  require_punch_for_klaww:
-    'false': 2
-    'true': 5
+  require_punch_for_klaww: 'true'
   jak_completion_condition:
     defeat_gol_and_maia: 10
     open_100_cell_door: 1
   enable_orbsanity:
     'off': 5
-    per_level: 1
-    global: 1
+    per_level: 3
+    global: 3
   global_orbsanity_bundle_size:
-    20_orbs: 1
-    25_orbs: 2
-    40_orbs: 3
-    50_orbs: 4
-    80_orbs: 5
-    100_orbs: 5
-    125_orbs: 5
-    200_orbs: 5
+    10_orbs: 2
+    20_orbs: 3
+    25_orbs: 4
+    40_orbs: 4
+    50_orbs: 3
+    80_orbs: 2
+    100_orbs: 1
   level_orbsanity_bundle_size:
+    10_orbs: 2
     25_orbs: 2
-    50_orbs: 5
-  enable_ordered_cell_counts:
-    'false': 2
-    'true': 5
+    50_orbs: 3
+  enable_ordered_cell_counts: 'true'
   fire_canyon_cell_count:
     random-range-15-25: 1
   mountain_pass_cell_count:

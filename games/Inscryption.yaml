@@ -11,7 +11,7 @@ Inscryption:
     starting_only: 3
   randomize_sigils:
     disable: 8
-    randomize_all: 2
+    randomize_all: 6
   optional_death_card: always_on
   skip_tutorial: true
   skip_epilogue: true
