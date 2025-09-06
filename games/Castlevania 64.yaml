@@ -23,6 +23,7 @@ Castlevania 64:
   draculas_condition:
     bosses: 3
     specials: 4
+    crystal: 1
   total_special2s: random-range-20-40
   percent_special2s_required: random-range-70-90
   bosses_required: 12
