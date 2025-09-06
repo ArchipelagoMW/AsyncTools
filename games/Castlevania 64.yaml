@@ -23,9 +23,8 @@ Castlevania 64:
   draculas_condition:
     bosses: 3
     specials: 4
-  total_special2s: random-range-15-30
+  total_special2s: random-range-20-40
   percent_special2s_required: random-range-70-90
-  total_special2s: 40
   bosses_required: 12
   carrie_logic:
     'true': 1
