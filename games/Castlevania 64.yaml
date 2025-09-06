@@ -12,7 +12,8 @@ Castlevania 64:
   warp_order: seed_stage_order
   sub_weapon_shuffle: anywhere
   spare_keys:
-    on: 5
+    off: 4
+    on: 2
     chance: 2
   hard_item_pool: 'false'
   ice_trap_percentage: 5
@@ -22,8 +23,9 @@ Castlevania 64:
   draculas_condition:
     bosses: 3
     specials: 4
-  special2s_required: 20
-  total_special2s: 40
+    crystal: 1
+  total_special2s: random-range-20-40
+  percent_special2s_required: random-range-70-90
   bosses_required: 12
   carrie_logic:
     'true': 1
@@ -48,7 +50,7 @@ Castlevania 64:
   loading_zone_heals: 'true'
   invisible_items: reveal_all
   drop_previous_sub_weapon: 'true'
-  permanent_power_ups:
+  permanent_powerups:
     'true': 2
     'false': 1
   disable_time_restrictions: 'true'
@@ -60,12 +62,6 @@ Castlevania 64:
     off: 1
   increase_shimmy_speed: 'true'
   fall_guard: 'true'
-  background_music: 
-    normal: 1
-    randomized: 1
-  map_lighting:
-    normal: 1
-    randomized: 1
   cinematic_experience: 'false'
   window_color_r: 'random'
   window_color_g: 'random'
