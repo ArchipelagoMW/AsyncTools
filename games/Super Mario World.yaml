@@ -7,24 +7,25 @@ Super Mario World:
     - Thwimp Trap
     - Stun Trap
     - Literature Trap
+    - Timer Trap
   bosses_required: random-range-5-10
-  max_yoshi_egg_cap: 50
-  percentage_of_yoshi_eggs: random-range-85-100
+  max_yoshi_egg_cap: random-range-20-50
+  percentage_of_yoshi_eggs: random-range-60-100
   dragon_coin_checks:
     false: 2
     true: 1
   moon_checks:
-    false: 2
+    false: 1
     true: 1
   hidden_1up_checks:
-    false: 5
-    true: 1
+    false: 4
+    true: 2
   bonus_block_checks:
-    false: 5
+    false: 2
     true: 1
   blocksanity:
-    false: 3
-    true: 4
+    false: 2
+    true: 5
   bowser_castle_doors: vanilla
   bowser_castle_rooms:
     vanilla: 2
@@ -43,9 +44,9 @@ Super Mario World:
   swap_donut_gh_exits: true
   junk_fill_percentage: 0
   trap_fill_percentage: random-low
-  stun_trap_weight: none
-  thwimp_trap_weight: none
-  literature_trap_weight: none
+  stun_trap_weight: random
+  thwimp_trap_weight: random
+  literature_trap_weight: random
   ice_trap_weight: random
   timer_trap_weight: random
   reverse_trap_weight: random
@@ -83,10 +84,7 @@ Super Mario World:
       option_result: true
       options:
         Super Mario World:
-          max_yoshi_egg_cap: random-range-middle-50-150
-          stun_trap_weight: random
-          thwimp_trap_weight: random
-          literature_trap_weight: random
+          max_yoshi_egg_cap: random-range-30-150
     - option_category: null
       option_name: name
       option_result: Player{player}
