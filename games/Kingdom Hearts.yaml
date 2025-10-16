@@ -1,31 +1,46 @@
 Kingdom Hearts:
-  goal:
-    postcards: 15
-    final_ansem: 60
+  final_rest_door_key:
+    superboss: 25
+    postcards: 25
+    lucky_emblems: 50
     puppies: 25
-  end_of_the_world_unlock: item #Even though reports is the default math wise, this is cleaner to write than manually setting it for other goals each time
-  final_rest_door: reports
-  required_reports_eotw: 0 #Same idea as the End of the World unlock
-  required_reports_door: 0
-  reports_in_pool: 0
+  end_of_the_world_unlock: item
+  required_lucky_emblems_door: 0
+  required_lucky_emblems_eotw: 0
+  lucky_emblems_in_pool: 0
+  required_postcards: 10
+  required_puppies: 80 
+  destiny_islands:
+    false: 50
+    true: 50
+  day_2_materials: 0
+  homecoming_materials: 0
+  materials_in_pool: 0
   super_bosses: false
   atlantica:
     false: 50
     true: 50
+  cups:
+    'off': 40
+    cups: 40
+    hades_cup: 20
   hundred_acre_wood:
     false: 80
     true: 20
-  cups:
+  jungle_slider:
+    false: 80
+    true: 20
+  randomize_emblem_pieces:
     false: 50
     true: 50
-  vanilla_emblem_pieces:
-    false: 50
-    true: 50
+  randomize_postcards: all
   exp_multiplier: 4x
-  level_checks: 100
-  force_stats_on_levels: 
-    all: 50
-    multiworld-to-level-50: 50
+  level_checks: 99
+  slot_2_level_checks:
+    0: 50
+    33: 50
+  max_level_for_slot_2_level_checks: 50
+  force_stats_on_levels: all
   strength_increase: 24
   defense_increase: 24
   hp_increase: 23
@@ -36,119 +51,186 @@ Kingdom Hearts:
   keyblades_unlock_chests:
     false: 75
     true: 25
-  randomize_keyblade_stats:
-    false: 50
-    true: 50
+  keyblade_stats:
+    randomize: 30
+    shuffle: 30
+    vanilla: 30
   bad_starting_weapons: false
   keyblade_min_str: 3
   keyblade_max_str: 14
+  keyblade_min_crit_rate: 0
+  keyblade_max_crit_rate: 200
+  keyblade_min_crit_str: 0
+  keyblade_max_crit_str: 16
+  keyblade_min_recoil: 1
+  keyblade_max_recoil: 90
   keyblade_min_mp: -2
   keyblade_max_mp: 3
-  puppies:
-    full: 25
-    triplets: 50
-    individual: 25
+  orichalcum_in_pool: 
+    17: 50
+    30: 50
+  orichalcum_price: 1000
+  mythril_in_pool: 30
+  mythril_price: 1000
+  randomize_ap_costs:
+    'off': 60
+    shuffle: 20
+    randomize: 10
+    distribute: 10
+  max_ap_cost: 5
+  min_ap_cost: 0
   starting_worlds: 0
+  starting_tools: true
+  randomize_puppies: true
+  puppy_value:
+    1: 25
+    3: 25
+    10: 25
+    99: 25
   interact_in_battle: true
-  advanced_logic: false
+  logic_difficulty:
+    beginner: 30
+    normal: 45
+    proud: 25
   extra_shared_abilities:
     false: 50
     true: 50
+  stacking_world_items: true
+  halloween_town_key_item_bundle: true
   exp_zero_in_pool: false
+  randomize_party_member_starting_accessories: true
+  death_link: toggle
   donald_death_link: false
   goofy_death_link: false
-  start_inventory_from_pool:
-    Scan: 1 #Nothing but love in our hearts for players
-    Dodge Roll: 1
-  
+  remote_items: full
+  shorten_go_mode:
+    false: 10
+    true: 90
+  one_hp: false
+  four_by_three: false
+  auto_attack: false
+  beep_hack: false
+  consistent_finishers: false
+  early_skip: true
+  fast_camera: false
+  faster_animations: true
+  unlock_0_volume: false
+  unskippable: true
+  auto_save: true
+  warp_anywhere: false
+  local_items: []
+  start_hints: []
+
   triggers:
-    #Set this here to not trigger superboss settings on other goals
-    - option_name: goal
+    #Beginner dfficulty turns off some options and rerolls goal to not include superbosses
+    - option_name: logic_difficulty
       option_category: Kingdom Hearts
-      option_result: final_ansem
+      option_result: beginner
       options:
         Kingdom Hearts:
-          final_rest_door:
-            reports: 75
-            superbosses: 25
-    #Local Superboss unlock items and final world so this goal has some macguffins
-    - option_name: final_rest_door
+          final_rest_door_key:
+            postcards: 15
+            lucky_emblems: 45
+            puppies: 40
+          exp_multiplier: 8x
+          atlantica: false
+          cups:
+            'off': 40
+            cups: 40
+          hundred_acre_wood: false
+          jungle_slider: false
+          shorten_go_mode: true
+    #Adds Emblems back into the pool and makes them local
+    - option_name: final_rest_door_key
       option_category: Kingdom Hearts
-      option_result: superbosses
+      option_result: lucky_emblems
       options:
         Kingdom Hearts:
-          super_bosses: true
-          vanilla_emblem_pieces: false
-          +local_items:
-            - Cups
-            - Emblem Piece (Flame)
-            - Emblem Piece (Chest)
-            - Emblem Piece (Statue)
-            - Emblem Piece (Fountain)
-            - End of the World
-    #Hints the local Postcards to vary this goal up from Puppies. Door set to Postcards so reports can be out of the pool on non-report goals and enable the final boss after goal just for fun
-    - option_name: goal
+          end_of_the_world_unlock: lucky_emblems
+          required_lucky_emblems_eotw: random-range-3-6
+          required_lucky_emblems_door: random-range-6-9
+          lucky_emblems_in_pool: random-range-9-13
+          +local_items: [Lucky Emblem]
+    #Hints the local Postcards to vary this goal up from Puppies
+    - option_name: final_rest_door_key
       option_category: Kingdom Hearts
       option_result: postcards
       options:
         Kingdom Hearts:
-          final_rest_door: postcards
-          super_bosses: true #Makes Postcards the only non-Superboss goal setting to have these checks enabled to set it apart from Puppies
+          randomize_postcards:
+            all: 75
+            chests: 25
           +start_hints: [Postcard]
-          +local_items: [Postcard]
-    #Locks Puppies to Triplets to be reasonable as a local goal. Same idea with the Final Door as Postcards
-    - option_name: goal
+          +local_items:
+            - Postcard
+            - End of the World
+    #Locks Puppies to Triplets to be reasonable as a local goal
+    - option_name: final_rest_door_key
       option_category: Kingdom Hearts
       option_result: puppies
       options:
         Kingdom Hearts:
-          final_rest_door: puppies
-          puppies: triplets
-          +local_items: [Puppies]
-    #Adds reports back into the pool and makes them local.
-    - option_name: final_rest_door
+          puppy_value: 3
+          +local_items: 
+            - Puppy
+            - End of the World
+    #If Goal is Superboss, pick a boss
+    - option_name: final_rest_door_key
       option_category: Kingdom Hearts
-      option_result: reports
+      option_result: superboss
       options:
         Kingdom Hearts:
-          end_of_the_world_unlock: reports
-          required_reports_eotw: random-range-3-6
-          required_reports_door: random-range-6-9
-          reports_in_pool: random-range-9-13
-          +local_items: [Reports]
-    #Makes the other stat increases local if level checks are on
-    - option_name: force_stats_on_levels
+          final_rest_door_key:
+            sephiroth: 50
+            unknown: 50
+    #Sephiroth and Unknown local goal items
+    - option_name: final_rest_door_key
       option_category: Kingdom Hearts
-      option_result: multiworld-to-level-50
+      option_result: sephiroth
       options:
         Kingdom Hearts:
-          +local_items: [Level Up, Limited Level Up]
-    #Exclude Hades Cup if superbosses are disabled
-    - option_name: super_bosses
+          +local_items:
+            - Cups
+            - Olympus Coliseum
+            - End of the World
+    - option_name: final_rest_door_key
       option_category: Kingdom Hearts
-      option_result: false
+      option_result: unknown
       options:
         Kingdom Hearts:
-          +exclude_locations:
-            - "Olympus Coliseum Gates Purple Jar After Defeating Hades"
-            - "Olympus Coliseum Defeat Hades Ansem's Report 8"
-            - "Complete Hades Cup"
-            - "Complete Hades Cup Solo"
-            - "Complete Hades Cup Time Trial"
-            - "Hades Cup Defeat Cloud and Leon Event"
-            - "Hades Cup Defeat Yuffie Event"
-            - "Hades Cup Defeat Cerberus Event"
-            - "Hades Cup Defeat Behemoth Event"
-            - "Hades Cup Defeat Hades Event"
-            - "Olympus Coliseum Defeat Ice Titan Diamond Dust Event"
-    #Exclude unreachable location on 0.5.1 when using Keyblades Unlock Chests
-    - option_name: keyblades_unlock_chests
+          randomize_emblem_pieces: true
+          +local_items:
+            - Emblem Piece (Flame)
+            - Emblem Piece (Chest)
+            - Emblem Piece (Statue)
+            - Emblem Piece (Fountain)
+            - Hollow Bastion
+            - End of the World
+    #If Destiny Islands is on, add Raft Materials to the pool
+    - option_name: destiny_islands
       option_category: Kingdom Hearts
       option_result: true
       options:
         Kingdom Hearts:
-          +exclude_locations:
-            - "Monstro Chamber 6 White Trinity Chest"
+          day_2_materials: random-range-4-9
+          homecoming_materials: random-range-10-16
+          materials_in_pool: random-range-16-20
+    #Enable superbosses on Proud logic for more difficult slots
+    - option_name: logic_difficulty
+      option_category: Kingdom Hearts
+      option_result: proud
+      options:
+        Kingdom Hearts:
+          super_bosses: true
+    #If Synth is a low amount in the pool, lower shop prices to buy materials
+    - option_name: orichalcum_in_pool
+      option_category: Kingdom Hearts
+      option_result: 17
+      options:
+        Kingdom Hearts:
+          orichalcum_price: 250
+          mythril_in_pool: 16
+          mythril_price: 250
     - option_category: null
       option_name: name
       option_result: Player{player}
