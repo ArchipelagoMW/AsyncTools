@@ -27,6 +27,8 @@
   fishing_achievements: 'false'
   fill_extra_checks_with: useful_items
   death_link: 'false'
+  # This is an awful location to check. If 200 fishing quests is considered "too grindy" for the big async, this isn't really any better.
+  exclude_locations: And Good Riddance!
   triggers:
     # Calamity is longer than vanilla, with bosses that go past vanilla progression. This forces the goal to require defeating Post-Moon Lord bosses.
     # Zenith is still a valid goal here, as Calamity changes its crafting recipe to require Yharon to be defeated.
