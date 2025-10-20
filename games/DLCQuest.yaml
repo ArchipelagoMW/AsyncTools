@@ -6,6 +6,8 @@ DLCQuest:
     none: 30
     coin: 70
   coinbundlequantity:
+    3: 10
+    5: 20
     10: 20
     20: 20
     30: 20
