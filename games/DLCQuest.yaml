@@ -11,8 +11,7 @@ DLCQuest:
     10: 20
     20: 20
     30: 20
-    40: 20
-    50: 20
+    40: 10
   permanent_coins:
     true: 75
     false: 25
