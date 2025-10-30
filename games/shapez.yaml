@@ -81,7 +81,7 @@ shapez:
       option_result: even_fasterer
       options:
         shapez:
-          goal_amount: random-range-12-25
+          goal_amount: random-range-12-18
     - option_category: null
       option_name: name
       option_result: Player{player}
