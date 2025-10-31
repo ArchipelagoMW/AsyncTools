@@ -5,7 +5,7 @@ A Short Hike:
     races: 20
   coins_in_shops: false
   golden_feathers: random-range-12-20
-  silver_feathers: random-range-0-10
+  silver_feathers: random-range-low-1-5
   buckets: random
   golden_feather_progression:
     easy: 2
