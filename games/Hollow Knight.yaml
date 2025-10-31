@@ -90,7 +90,7 @@ Hollow Knight:
   MaximumEssencePrice: 2000
   MinimumCharmPrice: 1
   MaximumCharmPrice: 30
-  RandomCharmCosts: -2
+  RandomCharmCosts: random-range-high-45-90
   MinimumEggPrice: 1
   MaximumEggPrice: 10
   EggShopSlots: 1
