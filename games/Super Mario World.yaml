@@ -44,12 +44,12 @@ Super Mario World:
   swap_donut_gh_exits: true
   junk_fill_percentage: 0
   trap_fill_percentage: random-low
-  stun_trap_weight: random
   thwimp_trap_weight: random
-  literature_trap_weight: random
   ice_trap_weight: random
-  timer_trap_weight: random
   reverse_trap_weight: random
+  stun_trap_weight: none
+  literature_trap_weight: none
+  timer_trap_weight: none
   autosave: true
   early_climb: false
   overworld_speed: fast
@@ -85,6 +85,9 @@ Super Mario World:
       options:
         Super Mario World:
           max_yoshi_egg_cap: random-range-30-150
+          stun_trap_weight: random
+          literature_trap_weight: random
+          timer_trap_weight: random
     - option_category: null
       option_name: name
       option_result: Player{player}
