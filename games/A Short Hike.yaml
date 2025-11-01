@@ -1,8 +1,8 @@
 A Short Hike:
   goal: 
-    help_everyone: 40
-    photo: 40
-    races: 20
+    help_everyone: 45
+    photo: 45
+    races: 10
   coins_in_shops: false
   golden_feathers: random-range-12-20
   silver_feathers: random-range-0-10
