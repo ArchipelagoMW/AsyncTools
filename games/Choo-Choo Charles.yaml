@@ -1,0 +1,8 @@
+Choo-Choo Charles:
+  triggers:
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: ChooChoo-{player}
