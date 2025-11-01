@@ -9,52 +9,96 @@ Overcooked! 2:
     original: 10
     excluded: 50
     all_you_can_eat: 40
-  kevin_levels:
-    'true': 50
-    'false': 50
   fix_bugs: 'true'
   shorter_level_duration: 'true'
   short_horde_levels: 'true'
   always_preserve_cooking_progress: 'true'
   always_serve_oldest_order: 'true'
   display_leaderboard_scores: 'false'
+
+  # Not having Kevin Levels means that 8 levels are unavailable.
+  # Therefore, seeds without Kevins should require fewer stars.
+  # To make the game more accessible, harder seeds require fewer stars.
   difficulty:
-    easy: 1
-    medium: 1
-    hard: 1
+    easy_kevin: 9
+    medium_kevin: 9
+    hard_kevin: 6
+    brutal_kevin: 3
+    easy: 3
+    medium: 3
+    hard: 2
     brutal: 1
   paid_dlcs:
     'true': 15
     'false': 85
+
   triggers:
+    - option_category: Overcooked! 2
+      option_name: difficulty
+      option_result: easy_kevin
+      options:
+        Overcooked! 2:
+          star_threshold_scale: random-range-25-29
+          stars_to_win: random-range-50-100
+          kevin_levels: 'true'
+    - option_category: Overcooked! 2
+      option_name: difficulty
+      option_result: medium_kevin
+      options:
+        Overcooked! 2:
+          star_threshold_scale: random-range-30-34
+          stars_to_win: random-range-50-95
+          kevin_levels: 'true'
+    - option_category: Overcooked! 2
+      option_name: difficulty
+      option_result: hard_kevin
+      options:
+        Overcooked! 2:
+          star_threshold_scale: random-range-35-39
+          stars_to_win: random-range-50-85
+          kevin_levels: 'true'
+    - option_category: Overcooked! 2
+      option_name: difficulty
+      option_result: brutal_kevin
+      options:
+        Overcooked! 2:
+          star_threshold_scale: random-range-40-45
+          stars_to_win: random-range-50-80
+          kevin_levels: 'true'
+
     - option_category: Overcooked! 2
       option_name: difficulty
       option_result: easy
       options:
         Overcooked! 2:
           star_threshold_scale: random-range-25-29
-          stars_to_win: random-range-50-90
+          stars_to_win: random-range-40-85
+          kevin_levels: 'false'
     - option_category: Overcooked! 2
       option_name: difficulty
       option_result: medium
       options:
         Overcooked! 2:
           star_threshold_scale: random-range-30-34
-          stars_to_win: random-range-50-85
+          stars_to_win: random-range-40-80
+          kevin_levels: 'false'
     - option_category: Overcooked! 2
       option_name: difficulty
       option_result: hard
       options:
         Overcooked! 2:
           star_threshold_scale: random-range-35-39
-          stars_to_win: random-range-50-80
+          stars_to_win: random-range-40-70
+          kevin_levels: 'false'
     - option_category: Overcooked! 2
       option_name: difficulty
       option_result: brutal
       options:
         Overcooked! 2:
           star_threshold_scale: random-range-40-45
-          stars_to_win: random-range-50-75
+          stars_to_win: random-range-40-65
+          kevin_levels: 'false'
+
     - option_category: Overcooked! 2
       option_name: paid_dlcs
       option_result: "true"
@@ -67,6 +111,7 @@ Overcooked! 2:
             - Campfire Cook Off
             - Night of the Hangry Horde
             - Carnival of Chaos
+
     - option_category: null
       option_name: name
       option_result: Player{player}
