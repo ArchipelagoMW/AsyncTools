@@ -81,10 +81,6 @@ Ocarina of Time:
   shuffle_ocarinas:
     off: 1
     on: 1
-  shuffle_child_trade:
-    vanilla: 2
-    shuffle: 3
-    skip_child_zelda: 1
 
   # If pot shuffle turns out to go badly, remove this
   pots_crates_freestanding:
@@ -130,6 +126,12 @@ Ocarina of Time:
     simple: 5
     advanced: 1
 
+  # Tedium options
+  # When false, automatically sets some of the more tedious/QoL options to more player-friendly settings.
+  tedium_enjoyer:
+    true: 1
+    false: 3
+
   # Triggers
   # Exclude skulltula rewards without tokensanity
   triggers:
@@ -144,6 +146,34 @@ Ocarina of Time:
             - Kak 30 Gold Skulltula Reward
             - Kak 40 Gold Skulltula Reward
             - Kak 50 Gold Skulltula Reward
+
+  # Tedium -- allows for some of the frequently complained about options to be rolled rarely
+    - option_category: Ocarina of Time
+      option_name: tedium_enjoyer
+      option_result: false
+      options:
+        Ocarina of Time:
+          shuffle_child_trade: skip_child_zelda
+          complete_mask_quest: true
+          adult_trade_start: claim_check
+          no_guard_stealth: true
+
+    - option_category: Ocarina of Time
+      option_name: tedium_enjoyer
+      option_result: true
+      options:
+        Ocarina of Time:
+          shuffle_child_trade:
+            skip_child_zelda: 1
+            shuffle: 3
+            vanilla: 2
+          complete_mask_quest:
+            true: 1
+            false: 1
+          adult_trade_start: random
+          no_guard_stealth:
+            true: 1
+            false: 1
 
   # Groups various shuffles together
     - option_category: Ocarina of Time
