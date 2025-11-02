@@ -3,9 +3,7 @@
     'false': 3
     'true': 2
   require_punch_for_klaww: 'true'
-  jak_completion_condition:
-    defeat_gol_and_maia: 10
-    open_100_cell_door: 0
+  jak_completion_condition: defeat_gol_and_maia
   enable_orbsanity:
     'off': 5
     per_level: 3
