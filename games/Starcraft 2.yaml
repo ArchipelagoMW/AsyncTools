@@ -465,6 +465,9 @@ Starcraft 2:
           required_tactics:
             standard: 50
             advanced: 50
+          starter_unit:
+            off: 50
+            balanced: 50
           max_number_of_upgrades: random-range-4-12
           war_council_nerfs: random
           exclude_overpowered_items: random
