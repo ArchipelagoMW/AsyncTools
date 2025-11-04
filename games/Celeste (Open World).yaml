@@ -2,7 +2,7 @@ Celeste (Open World):
   goal_area:
     the_summit_a: 25
     core_a: 20
-    empty_space: 8
+    empty_space: 5
     farewell: 2
   lock_goal_area: true
   goal_area_checkpointsanity: false
