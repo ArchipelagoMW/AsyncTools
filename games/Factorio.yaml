@@ -119,10 +119,7 @@ Factorio:
                 frequency: 0.333
                 richness: 1
                 size: 6
-            enemy_evolution:
-              time_factor: 2.0e-06
-            enemy_expansion:
-              enabled: false
+            peaceful_mode: true
     - option_category: null
       option_name: name
       option_result: Player{player}
