@@ -1,0 +1,77 @@
+Celeste (Open World):
+  goal_area:
+    the_summit_a: 25
+    core_a: 20
+    empty_space: 5
+    farewell: 2
+  lock_goal_area: true
+  goal_area_checkpointsanity: false
+  total_strawberries: random-range-30-70
+  strawberries_required_percentage: random-range-70-90
+  checkpointsanity: random
+  binosanity: random
+  keysanity:
+    "false": 3
+    "true": 1
+  gemsanity: random
+  carsanity: random
+  roomsanity:
+    "false": 4
+    "true": 1
+  include_goldens: false
+  include_farewell: none
+
+  local_items:
+    - Strawberry
+
+  triggers:
+    - option_category: Celeste (Open World)
+      option_name: goal_area
+      option_result: the_summit_a
+      options:
+        Celeste (Open World):
+            include_core: false
+            include_b_sides: false
+            include_c_sides: false
+            lock_goal_area: false
+    - option_category: Celeste (Open World)
+      option_name: goal_area
+      option_result: core_a
+      options:
+        Celeste (Open World):
+            include_core: false
+            include_b_sides:
+                "false": 2
+                "true": 1
+            include_c_sides:
+                "false": 4
+                "true": 1
+    - option_category: Celeste (Open World)
+      option_name: goal_area
+      option_result: empty_space
+      options:
+        Celeste (Open World):
+            include_core:
+                "false": 1
+                "true": 2
+            include_b_sides:
+                "false": 2
+                "true": 3
+            include_c_sides:
+                "false": 1
+                "true": 1
+    - option_category: Celeste (Open World)
+      option_name: goal_area
+      option_result: farewell
+      options:
+        Celeste (Open World):
+            include_core: true
+            include_farewell: empty_space
+            include_b_sides: true
+            include_c_sides: true
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: Celeste-{player}
