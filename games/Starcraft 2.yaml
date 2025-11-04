@@ -46,6 +46,9 @@ Starcraft 2:
   max_upgrade_level: random-range-3-5
   generic_upgrade_research_speedup: random
   generic_upgrade_items: random
+  generic_upgrade_missions:
+    0: 50
+    random-range-10-25: 50
   vanilla_items_only: false
   exclude_overpowered_items: false
   war_council_nerfs: false
@@ -86,6 +89,9 @@ Starcraft 2:
   key_mode: random
   nova_ghost_of_a_chance_variant: wol
   mercenary_highlanders: random
+  difficulty_curve: uneven
+  mission_race_balancing: random
+  victory_cache: 0
   enable_morphling:
     false: 75
     true: 25
@@ -415,6 +421,7 @@ Starcraft 2:
         Starcraft 2:
           maximum_campaign_size: 83
     # Exclude missions requiring Kerrigan level in short orders
+    # Also allow victory cache there
     # Mini campaign
     - option_category: Starcraft 2
       option_name: mission_order
@@ -425,6 +432,7 @@ Starcraft 2:
             - Supreme
             - The Infinite Cycle
           maximum_campaign_size: 40
+          victory_cache: random-range-0-3
     # Short dynamic layouts
     - option_category: Starcraft 2
       option_name: maximum_campaign_size
@@ -434,6 +442,7 @@ Starcraft 2:
           excluded_missions:
             - Supreme
             - The Infinite Cycle
+          victory_cache: random-range-0-3
     - option_category: Starcraft 2
       option_name: maximum_campaign_size
       option_result: 16
@@ -442,6 +451,16 @@ Starcraft 2:
           excluded_missions:
             - Supreme
             - The Infinite Cycle
+          victory_cache: random-range-0-3
+    - option_category: Starcraft 2
+      option_name: maximum_campaign_size
+      option_result: 17
+      options:
+        Starcraft 2:
+          excluded_missions:
+            - Supreme
+            - The Infinite Cycle
+          victory_cache: random-range-0-3
     - option_category: Starcraft 2
       option_name: maximum_campaign_size
       option_result: 40
@@ -449,7 +468,8 @@ Starcraft 2:
         Starcraft 2:
           excluded_missions:
             - Supreme
-            - The Infinite Cycle
+            - The Infinite
+          victory_cache: random-range-0-3
     # Harder mode (for filler-only asyncs)
     # Shouldn't be too challenging as truly challenging YAMLs are heavily customized
     - option_category: Starcraft 2
@@ -473,6 +493,10 @@ Starcraft 2:
           exclude_overpowered_items: random
           mastery_locations: enabled
           speedrun_locations: enabled
+          difficulty_curve: standard
+          kerrigan_presence:
+            vanilla: 50
+            not_present: 50
     # Harder mode - long games - don't spawn many filler items giving the player too many resources
     - option_category: Starcraft 2
       option_name: maximum_campaign_size
