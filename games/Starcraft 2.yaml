@@ -483,6 +483,7 @@ Starcraft 2:
                   - Protoss Missions
                 exit: true
                 goal: true
+        # Behave the same as multi-campaign now, except force race swaps in
         enabled_campaigns: !!set
           ? 'Wings of Liberty'
           ? 'Prophecy'
