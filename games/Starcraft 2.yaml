@@ -149,7 +149,9 @@ Starcraft 2:
             protoss: 50
             everywhere: 50
           spear_of_adun_passive_present_in_no_build: random
-          take_over_ai_allies: random
+          take_over_ai_allies:
+            false: 75
+            true: 25
           kerrigan_presence: vanilla
           enable_race_swap: random
           nova_ghost_of_a_chance_variant: auto
@@ -500,7 +502,9 @@ Starcraft 2:
           protoss: 50
           everywhere: 50
         spear_of_adun_passive_present_in_no_build: random
-        take_over_ai_allies: random
+        take_over_ai_allies:
+          false: 75
+          true: 25
         kerrigan_presence: vanilla
         enable_race_swap: shuffle_all # Requires race swaps to be enabled
         nova_ghost_of_a_chance_variant: auto
