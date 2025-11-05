@@ -471,18 +471,21 @@ Starcraft 2:
                   - group(T)
                 mission_pool:
                   - Terran Missions
+                difficulty: very_hard
                 exit: true
                 goal: true
               - index:
                   - group(Z)
                 mission_pool:
                   - Zerg Missions
+                difficulty: very_hard
                 exit: true
                 goal: true
               - index:
                   - group(P)
                 mission_pool:
                   - Protoss Missions
+                difficulty: very_hard
                 exit: true
                 goal: true
         # Behave the same as multi-campaign now, except force race swaps in
