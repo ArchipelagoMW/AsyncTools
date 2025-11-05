@@ -468,7 +468,7 @@ Starcraft 2:
         Starcraft 2:
           excluded_missions:
             - Supreme
-            - The Infinite
+            - The Infinite Cycle
           victory_cache: random-range-0-3
     # Harder mode (for filler-only asyncs)
     # Shouldn't be too challenging as truly challenging YAMLs are heavily customized
