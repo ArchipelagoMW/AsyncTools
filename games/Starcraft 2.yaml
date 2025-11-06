@@ -96,6 +96,32 @@ Starcraft 2:
   enable_morphling:
     false: 75
     true: 25
+  custom_mission_order:
+    # Must be declared as is overridden by a trigger. Set to default for safety.
+    # Always overridden by a trigger if this option is actually meaningful
+    Default Campaign:
+      Default Layout:
+        size: 9
+        type: grid
+      display_name: 'null'
+      entry_rules: [ ]
+      global:
+        display_name: 'null'
+        entry_rules: [ ]
+        exit: false
+        goal: false
+        max_difficulty: relative
+        min_difficulty: relative
+        mission_pool:
+          - all missions
+        missions: [ ]
+        unique_name: false
+        unique_progression_track: 0
+      goal: true
+      max_difficulty: relative
+      min_difficulty: relative
+      unique_name: false
+      unique_progression_track: 0
   single_race_with_race_swaps: false # Trigger handling only
   excluded_mission_class: unimportant # Trigger handling only
   triggers:
