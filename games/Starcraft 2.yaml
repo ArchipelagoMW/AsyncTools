@@ -12,7 +12,10 @@ Starcraft 2:
     wol: 10
     hots: 10
     lotv: 10
-    big_async_canvas: 5
+# Commented out as bugged by following bugs:
+# https://github.com/ArchipelagoMW/Archipelago/pull/5604
+# https://github.com/ArchipelagoMW/Archipelago/issues/5605
+#    big_async_canvas: 5
   mission_order:
     # See also trigger handling race swaps
     vanilla: 5
@@ -390,20 +393,22 @@ Starcraft 2:
       options:
         Starcraft 2:
           mission_order:
-            vanilla_shuffled_no_epilogue: 25
+# Commented out as https://github.com/ArchipelagoMW/Archipelago/issues/5605 isn't solved yet
+#            vanilla_shuffled_no_epilogue: 25
             grid: 25
             mini_campaign: 10
             gauntlet: 10
             golden_path: 15
             hopscotch: 15
-    - option_category: Starcraft 2
-      option_name: mission_order
-      option_result: vanilla_shuffled_no_epilogue
-      options:
-        Starcraft 2:
-          mission_order: vanilla_shuffled
-          -enabled_campaigns: !!set # This trigger somehow doesn't work with YAML lists. Needs to be defined as a YAML set
-            ? 'Into the Void (Legacy of the Void: Epilogue)'
+# Commented out as https://github.com/ArchipelagoMW/Archipelago/issues/5605 isn't solved yet
+#    - option_category: Starcraft 2
+#      option_name: mission_order
+#      option_result: vanilla_shuffled_no_epilogue
+#      options:
+#        Starcraft 2:
+#          mission_order: vanilla_shuffled
+#          -enabled_campaigns: !!set # This trigger somehow doesn't work with YAML lists. Needs to be defined as a YAML set
+#            ? 'Into the Void (Legacy of the Void: Epilogue)'
     # Fix a case when nobuilds and very hards can't be disabled both in order to have enough missions to generate
     - option_category: Starcraft 2
       option_name: mission_order
@@ -436,108 +441,111 @@ Starcraft 2:
         Starcraft 2:
           shuffle_no_build: true
           exclude_very_hard_missions: false
+# Commented out as bugged by following bugs:
+# https://github.com/ArchipelagoMW/Archipelago/pull/5604
+# https://github.com/ArchipelagoMW/Archipelago/issues/5605
     # Setup Canvas-type mission orders now.
     # Do this after all the mission order corrections have been made
     # as this picks a mission order along with other options
-    - option_category: Starcraft 2
-      option_name: game_format
-      option_result: big_async_canvas
-      options:
-        Starcraft 2:
-          mission_order: custom
-          custom_mission_order:
-            The Big Async:
-              type: canvas
-              canvas:
-                - ' bbb  aa  ccc   ' # 01
-                - ' z  z tt p      ' # 02
-                - ' z  z tt p      ' # 03
-                - ' zzz  tt p pp   ' # 04
-                - ' z  z tt p   p  ' # 05
-                - ' z  z tt p   p  ' # 06
-                - ' zzz  tt  ppp   ' # 07
-                - '                ' # 08
-                - ' t  p t tz  z pp' # 09
-                - ' t p pt tz  zp  ' # 10
-                - 't tp  t tzz zp  ' # 11
-                - 't t p  t zzzzp  ' # 12                   B + N = 35
-                - 'ttt  p t z zzp  ' # 13                   I + A + Y = 37
-                - 't tp p t z  zp  ' # 14                   G + S + C = 33
-                - 'T T P  T Z  Z PP' # 15
-              jump_distance_orthogonal: 2
-              jump_distance_diagonal: 1
-              missions:
-                - index:
-                    - group(a) # Terran starters
-                  mission_pool:
-                    - Terran Missions
-                  entrance: true
-                - index:
-                    - group(b) # Zerg starters
-                  mission_pool:
-                    - Zerg Missions
-                  entrance: true
-                - index:
-                    - group(c) # Protoss starters
-                  mission_pool:
-                    - Protoss Missions
-                  entrance: true
-                - index:
-                    - group(t)
-                  mission_pool:
-                    - Terran Missions
-                - index:
-                    - group(z)
-                  mission_pool:
-                    - Zerg Missions
-                - index:
-                    - group(p)
-                  mission_pool:
-                    - Protoss Missions
-                - index:
-                    - group(T)
-                  mission_pool:
-                    - Terran Missions
-                  difficulty: very_hard
-                  exit: true
-                  goal: true
-                - index:
-                    - group(Z)
-                  mission_pool:
-                    - Zerg Missions
-                  difficulty: very_hard
-                  exit: true
-                  goal: true
-                - index:
-                    - group(P)
-                  mission_pool:
-                    - Protoss Missions
-                  difficulty: very_hard
-                  exit: true
-                  goal: true
-          # Behave the same as multi-campaign now, except force race swaps in
-          enabled_campaigns: !!set
-            ? 'Wings of Liberty'
-            ? 'Prophecy'
-            ? 'Heart of the Swarm'
-            ? 'Whispers of Oblivion (Legacy of the Void: Prologue)'
-            ? 'Legacy of the Void'
-            ? 'Into the Void (Legacy of the Void: Epilogue)'
-            ? 'Nova Covert Ops'
-          spear_of_adun_presence:
-            protoss: 50
-            everywhere: 50
-          spear_of_adun_present_in_no_build: random
-          spear_of_adun_passive_ability_presence:
-            protoss: 50
-            everywhere: 50
-          spear_of_adun_passive_present_in_no_build: random
-          take_over_ai_allies:
-            false: 75
-            true: 25
-          kerrigan_presence: vanilla
-          enable_race_swap: shuffle_all # Requires race swaps to be enabled
-          nova_ghost_of_a_chance_variant: auto
+#    - option_category: Starcraft 2
+#      option_name: game_format
+#      option_result: big_async_canvas
+#      options:
+#        Starcraft 2:
+#          mission_order: custom
+#          custom_mission_order:
+#            The Big Async:
+#              type: canvas
+#              canvas:
+#                - ' bbb  aa  ccc   ' # 01
+#                - ' z  z tt p      ' # 02
+#                - ' z  z tt p      ' # 03
+#                - ' zzz  tt p pp   ' # 04
+#                - ' z  z tt p   p  ' # 05
+#                - ' z  z tt p   p  ' # 06
+#                - ' zzz  tt  ppp   ' # 07
+#                - '                ' # 08
+#                - ' t  p t tz  z pp' # 09
+#                - ' t p pt tz  zp  ' # 10
+#                - 't tp  t tzz zp  ' # 11
+#                - 't t p  t zzzzp  ' # 12                   B + N = 35
+#                - 'ttt  p t z zzp  ' # 13                   I + A + Y = 37
+#                - 't tp p t z  zp  ' # 14                   G + S + C = 33
+#                - 'T T P  T Z  Z PP' # 15
+#              jump_distance_orthogonal: 2
+#              jump_distance_diagonal: 1
+#              missions:
+#                - index:
+#                    - group(a) # Terran starters
+#                  mission_pool:
+#                    - Terran Missions
+#                  entrance: true
+#                - index:
+#                    - group(b) # Zerg starters
+#                  mission_pool:
+#                    - Zerg Missions
+#                  entrance: true
+#                - index:
+#                    - group(c) # Protoss starters
+#                  mission_pool:
+#                    - Protoss Missions
+#                  entrance: true
+#                - index:
+#                    - group(t)
+#                  mission_pool:
+#                    - Terran Missions
+#                - index:
+#                    - group(z)
+#                  mission_pool:
+#                    - Zerg Missions
+#                - index:
+#                    - group(p)
+#                  mission_pool:
+#                    - Protoss Missions
+#                - index:
+#                    - group(T)
+#                  mission_pool:
+#                    - Terran Missions
+#                  difficulty: very_hard
+#                  exit: true
+#                  goal: true
+#                - index:
+#                    - group(Z)
+#                  mission_pool:
+#                    - Zerg Missions
+#                  difficulty: very_hard
+#                  exit: true
+#                  goal: true
+#                - index:
+#                    - group(P)
+#                  mission_pool:
+#                    - Protoss Missions
+#                  difficulty: very_hard
+#                  exit: true
+#                  goal: true
+#          # Behave the same as multi-campaign now, except force race swaps in
+#          enabled_campaigns: !!set
+#            ? 'Wings of Liberty'
+#            ? 'Prophecy'
+#            ? 'Heart of the Swarm'
+#            ? 'Whispers of Oblivion (Legacy of the Void: Prologue)'
+#            ? 'Legacy of the Void'
+#            ? 'Into the Void (Legacy of the Void: Epilogue)'
+#            ? 'Nova Covert Ops'
+#          spear_of_adun_presence:
+#            protoss: 50
+#            everywhere: 50
+#          spear_of_adun_present_in_no_build: random
+#          spear_of_adun_passive_ability_presence:
+#            protoss: 50
+#            everywhere: 50
+#          spear_of_adun_passive_present_in_no_build: random
+#          take_over_ai_allies:
+#            false: 75
+#            true: 25
+#          kerrigan_presence: vanilla
+#          enable_race_swap: shuffle_all # Requires race swaps to be enabled
+#          nova_ghost_of_a_chance_variant: auto
     # Short mission layout detection
     # Consider those always as long ones
     - option_category: Starcraft 2
