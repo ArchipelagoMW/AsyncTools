@@ -29,8 +29,8 @@ Overcooked! 2:
     hard: 2
     brutal: 1
   paid_dlcs:
-    'true': 15
-    'false': 85
+    'true': 25
+    'false': 75
 
   triggers:
     - option_category: Overcooked! 2
