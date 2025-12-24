@@ -10,7 +10,7 @@ Super Mario World:
     - Timer Trap
   bosses_required: random-range-5-10
   max_yoshi_egg_cap: random-range-20-40
-  percentage_of_yoshi_eggs: random-range-75-95
+  percentage_of_yoshi_eggs: random-range-60-95
   dragon_coin_checks:
     false: 2
     true: 1
