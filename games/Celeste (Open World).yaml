@@ -30,50 +30,50 @@ Celeste (Open World):
       option_result: the_summit_a
       options:
         Celeste (Open World):
-            include_core: false
-            include_b_sides: false
-            include_c_sides: false
-            lock_goal_area: false
+          include_core: false
+          include_b_sides: false
+          include_c_sides: false
+          lock_goal_area: false
     - option_category: Celeste (Open World)
       option_name: goal_area
       option_result: core_a
       options:
         Celeste (Open World):
-            include_core: false
-            include_b_sides:
-                "false": 2
-                "true": 1
-            include_c_sides:
-                "false": 4
-                "true": 1
+          include_core: false
+          include_b_sides:
+            "false": 2
+            "true": 1
+          include_c_sides:
+            "false": 4
+            "true": 1
     - option_category: Celeste (Open World)
       option_name: goal_area
       option_result: empty_space
       options:
         Celeste (Open World):
-            include_core:
-                "false": 1
-                "true": 2
-            include_b_sides:
-                "false": 2
-                "true": 3
-            include_c_sides:
-                "false": 1
-                "true": 1
+          include_core:
+            "false": 1
+            "true": 2
+          include_b_sides:
+            "false": 2
+            "true": 3
+          include_c_sides:
+            "false": 1
+            "true": 1
     - option_category: Celeste (Open World)
       option_name: goal_area
       option_result: farewell
       options:
         Celeste (Open World):
-            include_core:
-                "false": 1
-                "true": 4
-            include_b_sides:
-                "false": 1
-                "true": 3
-            include_c_sides:
-                "false": 1
-                "true": 3
+          include_core:
+            "false": 1
+            "true": 4
+          include_b_sides:
+            "false": 1
+            "true": 3
+          include_c_sides:
+            "false": 1
+            "true": 3
     - option_category: null
       option_name: name
       option_result: Player{player}
