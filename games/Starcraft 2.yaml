@@ -90,7 +90,7 @@ Starcraft 2:
   spear_of_adun_present_in_no_build: false
   spear_of_adun_passive_ability_presence: vanilla
   spear_of_adun_passive_present_in_no_build: false
-  key_mode: random
+  key_mode: progressive_missions
   nova_ghost_of_a_chance_variant: wol
   mercenary_highlanders: random
   difficulty_curve: uneven
