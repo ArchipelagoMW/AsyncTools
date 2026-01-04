@@ -70,7 +70,7 @@ Links Awakening DX:
     disabled: 2
   overworld:
     normal: 1
-    open_mabe: 1
+    open_mabe: 3
   stabilize_item_pool:
     false: 1
     true: 1
