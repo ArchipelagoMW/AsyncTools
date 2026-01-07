@@ -727,4 +727,11 @@ Starcraft 2:
           starting_supply_per_item: 1
           maximum_supply_per_item: 1
           research_cost_reduction_per_item: 2
-    
+    # Slot name
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: SC2-{player}
+ 
