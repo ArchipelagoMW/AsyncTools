@@ -365,7 +365,7 @@ Starcraft 2:
       options:
         Starcraft 2:
           mission_order:
-            vanilla_shuffled: 25
+            vanilla_shuffled_no_both_disable_very_hards_and_no_builds: 25
             grid: 25
             mini_campaign: 10
             gauntlet: 10
@@ -377,7 +377,7 @@ Starcraft 2:
       options:
         Starcraft 2:
           mission_order:
-            vanilla_shuffled: 25
+            vanilla_shuffled_no_both_disable_very_hards_and_no_builds: 25
             grid: 25
             mini_campaign: 10
             gauntlet: 10
