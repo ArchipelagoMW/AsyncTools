@@ -437,8 +437,8 @@ Starcraft 2:
         Starcraft 2:
           mission_order: vanilla_shuffled
           excluded_mission_class:
-            very_hard: 25
-            no_build: 25
+            # very_hard: 25  # As of 0.6.5, vanilla shuffled seems to need both no-builds and very hard missions to generate
+            # no_build: 25   # Disable other options here for now
             none: 50
     - option_category: Starcraft 2
       option_name: excluded_mission_class
