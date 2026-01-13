@@ -30,10 +30,12 @@ def format_output_csv():
                     # retrieve the options-list to whitelist for the current lines game
                     game_option_whitelist = options_dict[game_name]
                     # temp list to store filtered options in
-                    slot_options = []
+                    slot_options = ["","",""]
                     # actually filter the whitelisted options based on the index of a given option into the temporary
                     # list
-                    for option in game_option_whitelist:
+                    # skip the first 3 options because those are only there to make is easy to past into the big
+                    # async sheet
+                    for option in game_option_whitelist[3:]:
                         option_index = all_options_indices[option]
                         slot_options.append(row[option_index])
                     # append that slots options into the output template

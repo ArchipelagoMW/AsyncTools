@@ -1,4 +1,7 @@
 A Hat in Time:
+    - A Hat in Time
+    - Locations
+    - Claimed by
     - Name
     - End Goal
     - Shuffle Acts
@@ -36,6 +39,9 @@ A Hat in Time:
     - Hat Items
     - Trap Chance
 A Link to the Past:
+    - A Link to the Past
+    - Locations
+    - Claimed by
     - Name
     - Goal
     - Mode
@@ -63,6 +69,9 @@ A Link to the Past:
     - Bombless Start
     - Tile Shuffle
 A Short Hike:
+    - A Short Hike
+    - Locations
+    - Claimed by
     - Name
     - Goal
     - Golden Feathers
@@ -71,12 +80,18 @@ A Short Hike:
     - Golden Feather Progression
     - Coins per Filler Item
 Adventure:
+    - Adventure
+    - Locations
+    - Claimed by
     - Name
     - Dragon Randomization
     - Rhindle MaxSpeed
     - Rhindle Min Speed
     - Start Castle
 Aquaria:
+    - Aquaria
+    - Locations
+    - Claimed by
     - Name
     - Objective
     - Minibosses to beat
@@ -90,6 +105,9 @@ Aquaria:
     - Dish Randomizer
     - Translate Aquarian
 Blasphemous:
+    - Blasphemous
+    - Locations
+    - Claimed by
     - Name
     - Ending
     - Corpse Hints
@@ -103,16 +121,25 @@ Blasphemous:
     - Boots of Pleading
     - Start with Wheel
 Bomb Rush Cyberfunk:
+    - Bomb Rush Cyberfunk
+    - Locations
+    - Claimed by
     - Name
     - Total REP
     - Extra REP Required
     - Starting Movestyle
 Bumper Stickers:
+    - Bumper Stickers
+    - Locations
+    - Claimed by
     - Name
     - Task Advances
     - Turners
     - Paint Cans
 Castlevania - Circle of the Moon:
+    - Castlevania - Circle of the Moon
+    - Locations
+    - Claimed by
     - Name
     - Completion Goal
     - Auto Run
@@ -134,6 +161,9 @@ Castlevania - Circle of the Moon:
     - Early Escape Item
     - Battle Arena Music
 Castlevania 64:
+    - Castlevania 64
+    - Locations
+    - Claimed by
     - Name
     - Stage Shuffle
     - Starting Stage
@@ -150,6 +180,9 @@ Castlevania 64:
     - Window Color B
     - Window Color A
 Celeste (Open World):
+    - Celeste (Open World)
+    - Locations
+    - Claimed by
     - Name
     - Goal Area
     - Lock Goal Area
@@ -166,6 +199,9 @@ Celeste (Open World):
     - Include B-Sides
     - Include C-Sides
 Celeste 64:
+    - Celeste 64
+    - Locations
+    - Claimed by
     - Name
     - Total Strawberries
     - Strawberries Required Percentage
@@ -175,16 +211,28 @@ Celeste 64:
     - Carsanity
     - Checkpointsanity
 ChecksFinder:
+    - ChecksFinder
+    - Locations
+    - Claimed by
     - Name
 Choo-Choo Charles:
+    - Choo-Choo Charles
+    - Locations
+    - Claimed by
     - Name
 Civilization VI:
+    - Civilization VI
+    - Locations
+    - Claimed by
     - Name
     - Shuffle Goody Hut Rewards
     - Boostsanity
     - Hide Item Names
     - Advisor Indicates Progression Items
 Dark Souls III:
+    - Dark Souls III
+    - Locations
+    - Claimed by
     - Name
     - Late Basin of Vows
     - Late DLC
@@ -198,12 +246,18 @@ Dark Souls III:
     - Randomize Weapon Level
     - Percentage of Randomized Weapons
 DLCQuest:
+    - DLCQuest
+    - Locations
+    - Claimed by
     - Name
     - CoinSanity
     - Coin Bundle Quantity
     - Permanent Coins
     - Item Shuffle
 Donkey Kong Country 3:
+    - Donkey Kong Country 3
+    - Locations
+    - Claimed by
     - Name
     - Goal
     - Krematoa Bonus Coins Cost
@@ -211,6 +265,9 @@ Donkey Kong Country 3:
     - KONGsanity
     - Level Shuffle
 DOOM 1993:
+    - DOOM 1993
+    - Locations
+    - Claimed by
     - Name
     - Goal
     - Difficulty
@@ -227,6 +284,9 @@ DOOM 1993:
     - Split Backpack
     - Backpack Count
 DOOM II:
+    - DOOM II
+    - Locations
+    - Claimed by
     - Name
     - Difficulty
     - Random Monsters
@@ -239,6 +299,9 @@ DOOM II:
     - Split Backpack
     - Backpack Count
 Factorio:
+    - Factorio
+    - Locations
+    - Claimed by
     - Name
     - Maximum Required Science Pack
     - Goal
@@ -253,6 +316,9 @@ Factorio:
     - Recipe Time
     - World Generation
 Faxanadu:
+    - Faxanadu
+    - Locations
+    - Claimed by
     - Name
     - Keep Shop Red Potions
     - Include Pendant
@@ -263,6 +329,9 @@ Faxanadu:
     - Random Monsters
     - Random Rewards
 Final Fantasy Mystic Quest:
+    - Final Fantasy Mystic Quest
+    - Locations
+    - Claimed by
     - Name
     - Logic
     - Sky Coin Mode
@@ -287,6 +356,9 @@ Final Fantasy Mystic Quest:
     - Shuffle Battlefield Rewards
     - Battlefields Battles Quantity
 Heretic:
+    - Heretic
+    - Locations
+    - Claimed by
     - Name
     - Goal
     - Difficulty
@@ -299,6 +371,9 @@ Heretic:
     - Split Bag of Holding
     - Bag of Holding Count
 Hollow Knight:
+    - Hollow Knight
+    - Locations
+    - Claimed by
     - Name
     - Goal
     - Randomize Swim
@@ -334,10 +409,16 @@ Hollow Knight:
     - Split Mantis Claw
     - Costsanity
 Hylics 2:
+    - Hylics 2
+    - Locations
+    - Claimed by
     - Name
     - Shuffle Party Members
     - Shuffle Gestures
 Inscryption:
+    - Inscryption
+    - Locations
+    - Claimed by
     - Name
     - Randomize Codes
     - Randomize Deck
@@ -345,6 +426,9 @@ Inscryption:
     - Epitaph Pieces Randomization
     - Painting Checks Balancing
 Jak and Daxter The Precursor Legacy:
+    - Jak and Daxter The Precursor Legacy
+    - Locations
+    - Claimed by
     - Name
     - Enable Move Randomizer
     - Enable Orbsanity
@@ -356,6 +440,9 @@ Jak and Daxter The Precursor Legacy:
     - Citizen Orb Trade Amount
     - Oracle Orb Trade Amount
 Kingdom Hearts 2:
+    - Kingdom Hearts 2
+    - Locations
+    - Claimed by
     - Name
     - Goal
     - Level Depth
@@ -371,6 +458,9 @@ Kingdom Hearts 2:
     - Olympus Cups
     - Atlantica Toggle
 Kingdom Hearts:
+    - Kingdom Hearts
+    - Locations
+    - Claimed by
     - Name
     - Final Rest Door Key
     - End of the World Unlock
@@ -401,6 +491,9 @@ Kingdom Hearts:
     - Homecoming Materials
     - Materials in Pool
 Kirby's Dream Land 3:
+    - Kirby's Dream Land 3
+    - Locations
+    - Claimed by
     - Name
     - Goal
     - Max Heart Stars
@@ -418,6 +511,9 @@ Kirby's Dream Land 3:
     - Music Randomization
     - Virtual Console Changes
 Landstalker - The Treasures of King Nole:
+    - Landstalker - The Treasures of King Nole
+    - Locations
+    - Claimed by
     - Name
     - Goal
     - Starting Region
@@ -425,6 +521,9 @@ Landstalker - The Treasures of King Nole:
     - Combat Difficulty
     - Hint Count
 Lingo:
+    - Lingo
+    - Locations
+    - Claimed by
     - Name
     - Victory Condition
     - Shuffle Doors
@@ -444,6 +543,9 @@ Lingo:
     - Level 2 Requirement
     - Trap Percentage
 Links Awakening DX:
+    - Links Awakening DX
+    - Locations
+    - Claimed by
     - Name
     - Goal
     - Trade Quest
@@ -464,6 +566,9 @@ Links Awakening DX:
     - Overworld
     - Stabilize Item Pool
 Lufia II Ancient Cave:
+    - Lufia II Ancient Cave
+    - Locations
+    - Claimed by
     - Name
     - Goal
     - Blue chest chance
@@ -484,6 +589,9 @@ Lufia II Ancient Cave:
     - Shuffle capsule monsters
     - Shuffle party members
 Mario & Luigi Superstar Saga:
+    - Mario & Luigi Superstar Saga
+    - Locations
+    - Claimed by
     - Name
     - Coin Blocks
     - Skip Bowser's Castle
@@ -505,6 +613,9 @@ Mario & Luigi Superstar Saga:
     - Mario's Pants Color
     - Luigi's Pants Color
 Mega Man 2:
+    - Mega Man 2
+    - Locations
+    - Claimed by
     - Name
     - EnergyLink
     - Starting Robot Master
@@ -518,21 +629,33 @@ Mega Man 2:
     - Palette Shuffle
     - Random Music
 MegaMan Battle Network 3:
+    - MegaMan Battle Network 3
+    - Locations
+    - Claimed by
     - Name
     - Extra Undernet Ranks
     - Include Jobs
     - Trade Quest Hinting
 Meritous:
+    - Meritous
+    - Locations
+    - Claimed by
     - Name
     - Goal
     - Include PSI Keys
 Muse Dash:
+    - Muse Dash
+    - Locations
+    - Claimed by
     - Name
     - DLC Packs
     - Additional Song Count
     - Song Difficulty
     - Trap Percentage
 Noita:
+    - Noita
+    - Locations
+    - Claimed by
     - Name
     - Victory Condition
     - Path Option
@@ -543,6 +666,9 @@ Noita:
     - Extra Orbs
     - Shop Price Reduction
 Ocarina of Time:
+    - Ocarina of Time
+    - Locations
+    - Claimed by
     - Name
     - Forest
     - Kakariko Gate
@@ -576,6 +702,9 @@ Ocarina of Time:
     - Adult Trade Sequence Start
     - Logic Tricks
 Overcooked! 2:
+    - Overcooked! 2
+    - Locations
+    - Claimed by
     - Name
     - Shuffle Level Order
     - Enabled DLC
@@ -585,6 +714,9 @@ Overcooked! 2:
     - Stars to Win
     - Star Difficulty %
 Paint:
+    - Paint
+    - Locations
+    - Claimed by
     - Name
     - Logic Percent
     - Goal Percent
@@ -593,6 +725,9 @@ Paint:
     - Canvas Size Increment
     - Trap Fill Percent
 Pokemon Emerald:
+    - Pokemon Emerald
+    - Locations
+    - Claimed by
     - Name
     - Goal
     - Randomize Badges
@@ -649,6 +784,9 @@ Pokemon Emerald:
     - Randomize Music
     - Randomize Fanfares
 Pokemon Red and Blue:
+    - Pokemon Red and Blue
+    - Locations
+    - Claimed by
     - Name
     - Game Version
     - Elite Four Badges Condition
@@ -699,8 +837,14 @@ Pokemon Red and Blue:
     - Better Shops
     - Master Ball Price
 Raft:
+    - Raft
+    - Locations
+    - Claimed by
     - Name
 Risk of Rain 2:
+    - Risk of Rain 2
+    - Locations
+    - Claimed by
     - Name
     - Game Mode
     - Victory Condition
@@ -720,12 +864,18 @@ Risk of Rain 2:
     - Enable Lunar Item Shuffling
     - Item Weights
 Saving Princess:
+    - Saving Princess
+    - Locations
+    - Claimed by
     - Name
     - Expanded Item Pool
     - Trap Chance
     - Cliff Weapon Upgrade
     - Music Shuffle
 Secret of Evermore:
+    - Secret of Evermore
+    - Locations
+    - Claimed by
     - Name
     - Difficulty
     - Energy Core
@@ -744,6 +894,9 @@ Secret of Evermore:
     - Trap Count
     - OHKO Trap Chance
 shapez:
+    - shapez
+    - Locations
+    - Claimed by
     - Name
     - Goal
     - Goal amount
@@ -765,6 +918,9 @@ shapez:
     - Split Inventory Draining Trap
     - Toolbar Shuffling
 Shivers:
+    - Shivers
+    - Locations
+    - Claimed by
     - Name
     - Number of Ixupi Captures Needed
     - Lobby Access
@@ -774,6 +930,9 @@ Shivers:
     - Full Pots
     - Ixupi Captures are Priority
 SMZ3:
+    - SMZ3
+    - Locations
+    - Claimed by
     - Name
     - Sword Location
     - Goal
@@ -782,6 +941,9 @@ SMZ3:
     - Ganon Vulnerable
     - Open Tourian
 Sonic Adventure 2 Battle:
+    - Sonic Adventure 2 Battle
+    - Locations
+    - Claimed by
     - Name
     - Goal
     - Boss Rush Shuffle
@@ -844,6 +1006,9 @@ Sonic Adventure 2 Battle:
     - Rouge Mission Count
     - Kart Mission Count
 Starcraft 2:
+    - Starcraft 2
+    - Locations
+    - Claimed by
     - Name
     - Game Difficulty
     - Difficulty Damage Modifier
@@ -886,6 +1051,9 @@ Starcraft 2:
     - Mastery Locations
     - Speedrun Locations
 Stardew Valley:
+    - Stardew Valley
+    - Locations
+    - Claimed by
     - Name
     - Goal
     - Farm Type
@@ -921,6 +1089,9 @@ Stardew Valley:
     - Number of Movement Buffs
     - Trap Difficulty
 Subnautica:
+    - Subnautica
+    - Locations
+    - Claimed by
     - Name
     - Swim Rule
     - Early Seaglide
@@ -929,6 +1100,9 @@ Subnautica:
     - Creature Scans
     - Aggressive Creature Scan Logic
 Super Mario 64:
+    - Super Mario 64
+    - Locations
+    - Claimed by
     - Name
     - Completion Goal
     - Entrance Randomizer
@@ -944,6 +1118,9 @@ Super Mario 64:
     - MIPS 2 Star %
     - Endless Stairs Star %
 Super Mario Land 2:
+    - Super Mario Land 2
+    - Locations
+    - Claimed by
     - Name
     - Shuffle Golden Coins
     - Golden Coins Required
@@ -960,6 +1137,9 @@ Super Mario Land 2:
     - Randomize Music
     - Energy Link
 Super Mario World:
+    - Super Mario World
+    - Locations
+    - Claimed by
     - Name
     - Goal
     - Bosses Required
@@ -990,6 +1170,9 @@ Super Mario World:
     - Overworld Palette Shuffle
     - Starting Life Count
 Super Metroid:
+    - Super Metroid
+    - Locations
+    - Claimed by
     - Name
     - Preset
     - Maximum Difficulty
@@ -1007,6 +1190,9 @@ Super Metroid:
     - Custom objectives
     - Custom objective count
 Terraria:
+    - Terraria
+    - Locations
+    - Claimed by
     - Name
     - Calamity Mod Integration
     - Goal
@@ -1014,11 +1200,17 @@ Terraria:
     - Normal Achievements
     - Grindy Achievements
 The Legend of Zelda:
+    - The Legend of Zelda
+    - Locations
+    - Claimed by
     - Name
     - Expanded Item Pool
     - Triforce Locations
     - Starting Position
 The Messenger:
+    - The Messenger
+    - Locations
+    - Claimed by
     - Name
     - Goal
     - Shuffle Mega Time Shards
@@ -1029,6 +1221,9 @@ The Messenger:
     - Total Power Seals
     - Percent Seals Required
 The Wind Waker:
+    - The Wind Waker
+    - Locations
+    - Claimed by
     - Name
     - Tingle Chests
     - Dungeon Secrets
@@ -1071,6 +1266,9 @@ The Wind Waker:
     - Add Shortcut Warps Between Dungeons
     - Start Inventory from Pool
 The Witness:
+    - The Witness
+    - Locations
+    - Claimed by
     - Name
     - Victory Condition
     - Puzzle Randomization
@@ -1098,6 +1296,9 @@ The Witness:
     - Area Hint Percentage
     - Laser Hints
 Timespinner:
+    - Timespinner
+    - Locations
+    - Claimed by
     - Name
     - Eye Spy
     - Quick seed
@@ -1120,6 +1321,9 @@ Timespinner:
     - Royal Roadblock
     - Pure Torcher
 TUNIC:
+    - TUNIC
+    - Locations
+    - Claimed by
     - Name
     - Start With Sword
     - Hexagon Quest
@@ -1136,6 +1340,9 @@ TUNIC:
     - Hexagon Quest Ability Unlocks
     - Shuffle Fuses
 Undertale:
+    - Undertale
+    - Locations
+    - Claimed by
     - Name
     - Required Route
     - Starting Area
@@ -1147,10 +1354,16 @@ Undertale:
     - Progressive Weapons
     - Randomize Item Button
 VVVVVV:
+    - VVVVVV
+    - Locations
+    - Claimed by
     - Name
     - Area Randomizer
     - Area Cost Randomizer
 Wargroove:
+    - Wargroove
+    - Locations
+    - Claimed by
     - Name
     - Commander Choice
     - Player Sacrifice Limit
@@ -1158,6 +1371,9 @@ Wargroove:
     - AI Sacrifice Limit
     - AI Summon Limit
 Yacht Dice:
+    - Yacht Dice
+    - Locations
+    - Claimed by
     - Name
     - Game difficulty
     - Score for last check
@@ -1177,6 +1393,9 @@ Yacht Dice:
     - Extra story chapters in the pool
     - Story
 Yoshi's Island:
+    - Yoshi's Island
+    - Locations
+    - Claimed by
     - Name
     - Starting World
     - Starting Life Count
@@ -1196,6 +1415,9 @@ Yoshi's Island:
     - Yoshi Colors
     - Singularity Yoshi Color
 Yu-Gi-Oh! 2006:
+    - Yu-Gi-Oh! 2006
+    - Locations
+    - Claimed by
     - Name
     - Structure Deck
     - Banlist
@@ -1212,6 +1434,9 @@ Yu-Gi-Oh! 2006:
     - Campaign Opponents Shuffle
     - OCG Arts
 Zillion:
+    - Zillion
+    - Locations
+    - Claimed by
     - Name
     - continues
     - floppies required
