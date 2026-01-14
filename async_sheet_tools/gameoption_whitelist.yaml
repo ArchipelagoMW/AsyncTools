@@ -219,7 +219,6 @@ Civilization VI:
     - Boostsanity
     - Hide Item Names
     - Advisor Indicates Progression Items
-    -
 Dark Souls III:
     - Dark Souls III
     - Locations
@@ -417,7 +416,7 @@ Inscryption:
     - Epitaph Pieces Randomization
     - Painting Checks Balancing
 Jak and Daxter The Precursor Legacy:
-    - "Jak and Daxter: The Precursor Legacy"
+    - Jak and Daxter The Precursor Legacy
     - Locations
     - Name
     - Enable Move Randomizer
@@ -982,7 +981,6 @@ shapez:
     - Include Whacky Upgrades
     - Split Inventory Draining Trap
     - Toolbar Shuffling
-    -
 Shivers:
     - Shivers
     - Locations
@@ -1005,6 +1003,72 @@ SMZ3:
     - Ganon Vulnerable
     - Open Tourian
 Sonic Adventure 2 Battle:
+    - Sonic Adventure 2 Battle
+    - Locations
+    - Name
+    - Goal
+    - Boss Rush Shuffle
+    - Minigame Madness Trap Requirement
+    - Minigame Madness Trap Minimum
+    - Ring Loss
+    - Emblem Percentage for Cannon's Core
+    - Number of Level Gates
+    - Level Gate Distribution
+    - Level Gate Costs
+    - Keysanity
+    - Whistlesanity
+    - Beetlesanity
+    - Omosanity
+    - Animalsanity
+    - Itemboxsanity
+    - Bigsanity
+    - Kart Race Checks
+    - Black Market Slots
+    - Black Market Unlock Costs
+    - Black Market Price Multiplier
+    - Chao Race Difficulty
+    - Chao Karate Difficulty
+    - Chao Stats
+    - Chao Stats Frequency
+    - Junk Fill Percentage
+    - Trap Fill Percentage
+    - OmoTrap Weight
+    - Chaos Control Trap Weight
+    - Confusion Trap Weight
+    - Tiny Trap Weight
+    - Gravity Trap Weight
+    - Exposition Trap Weight
+    - Ice Trap Weight
+    - Slow Trap Weight
+    - Cutscene Trap Weight
+    - Reverse Trap Weight
+    - Literature Trap Weight
+    - Controller Drift Trap Weight
+    - Poison Trap Weight
+    - Bee Trap Weight
+    - Pong Trap Weight
+    - Breakout Trap Weight
+    - Fishing Trap Weight
+    - Trivia Trap Weight
+    - Pokemon Trivia Trap Weight
+    - Pokemon Count Trap Weight
+    - Number Sequence Trap Weight
+    - Light Up Path Trap Weight
+    - Pinball Trap Weight
+    - Math Quiz Trap Weight
+    - Snake Trap Weight
+    - Input Sequence Trap Weight
+    - Music Shuffle Type
+    - Narrator
+    - Sonic Mission Count
+    - Shadow Mission Count
+    - Tails Mission Count
+    - Eggman Mission Count
+    - Knuckles Mission Count
+    - Rouge Mission Count
+    - Kart Mission Count
+    - Cannon's Core Mission Count
+Sonic Adventure DX:
     - Sonic Adventure DX
     - Locations
     - Name
