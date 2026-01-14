@@ -1,0 +1,321 @@
+﻿Luigi's Mansion:
+
+  toadsanity:
+    'false': 50
+    'true': 50
+
+  gold_mice:
+    'false': 50
+    'true': 50
+
+  boosanity:
+    'false': 50
+    'true': 50
+
+  portrification:
+    'false': 50
+    'true': 50
+
+  speedy_spirits:
+    'false': 50
+    'true': 50
+
+  lightsanity:
+    'false': 50
+    'true': 50
+
+  walksanity:
+    'false': 50
+    'true': 50
+
+  grassanity:
+    'false': 50
+    'true': 50
+
+  rank_requirement:
+    # Choose the required rank (H to A) to complete the game, with A being the highest.
+    # 
+    # Rank H requires any amount of money to finish the game, including 0
+    # 
+    # Rank A requires 5 Gold Diamonds (or equivalent money) to finish the game
+    rank_h: 50
+    rank_g: 20
+    rank_f: 15
+    rank_e: 12
+    rank_d: 10
+    rank_c: 8
+    rank_b: 5
+    rank_a: 2
+
+  game_mode:
+    default: 50
+    poltergust_hunt: 50
+
+  vacuum_start:
+    'false': 50
+    'true': 50
+
+  mario_items:
+    random-range-1-5: 50 # random value between 0 and 5
+    random-range-3-5: 50 # random value between 3 and 5
+
+  boo_gates:
+    'false': 50
+    'true': 50
+
+  balcony_boo_count:
+    random-range-0-35: 50 # random value between 0 and 35
+    random-range-1-12: 50 # random value between 1 and 12
+    random-range-18-35: 50 # random value between 18 and 35
+
+  final_boo_count:
+    random-range-40-50: 50 # random value between 40 and 50
+    random-range-1-25: 50 # random value between 1 and 25
+    random-range-26-50: 50 # random value between 26 and 50
+    random-range-10-30: 50 # random value between 10 and 30
+    random-range-20-45: 50 # random value between 20 and 45
+    random-range-30-50: 50 # random value between 30 and 50
+
+
+  enemizer:
+    vanilla: 60
+    randomized_elements: 20
+    no_elements: 40
+
+  door_rando:
+    'off': 10
+    randomized: 30
+    suit_doors: 25
+    all_doors_unlocked: 5
+    all_doors_locked: 10
+
+  random_spawn:
+    'false': 50
+    'true': 50
+
+  early_first_key:
+    'false': 50
+    'true': 50
+
+  walk_speed:
+    normal_speed: 10
+    kinda_fast: 30
+    schmoovin: 50
+
+  luigi_max_health:
+    random-range-1-1000: 50 # random value between 1 and 1000
+    random-range-200-800: 15 # random value between 1 and 1000
+    random-range-350-650: 20 # random value between 1 and 1000
+    random-range-500-950: 20 # random value between 1 and 1000
+
+  enable_fear_animation:
+    'false': 50
+    'true': 25
+
+  enable_pickup_animation:
+    'false': 50
+    'true': 25
+
+  self_item_messages:
+    all_messages: 50
+
+  energy_link:
+    'false': 50
+    'true': 50
+
+  vacuum_upgrades:
+    random-range-0-5: 50 # random value between 0 and 5
+    random-range-3-5: 5 # random value between 0 and 5
+    random-range-1-5: 25 # random value between 0 and 5
+    random-range-4-5: 10 # random value between 0 and 5
+
+
+  boo_radar:
+    start_with: 50
+    include: 50
+    exclude: 0
+
+  hidden_mansion:
+    'false': 50
+    'true': 50
+
+  hint_distribution:
+    balanced: 30
+    junk: 50
+    chaos: 20
+    strong: 15
+    vague: 10
+    disabled: 5
+
+  portrait_hints:
+    'false': 50
+    'true': 50
+
+  send_hints:
+    'false': 50
+    'true': 50
+
+  ###############
+  # Enemy Stats #
+  ###############
+  king_boo_health:
+    random-range-1-1000: 10 # random value between 1 and 1000
+    random-range-1-250: 50 # random value between 1 and 250
+    random-range-250-500: 50 # random value between 250 and 500
+    random-range-500-750: 50 # random value between 500 and 750
+    random-range-750-100: 50 # random value between 750 and 1000
+
+  boolossus_difficulty:
+    easy: 50
+    normal: 50
+    hard: 50
+
+  boo_health_option:
+    choice: 50
+    random_values: 0
+    boo_health_by_sphere: 0
+    vanilla: 0
+
+  boo_health_value:
+    30: 50
+
+  boo_speed:
+    15: 50
+
+  boo_escape_time:
+    120: 50
+
+  boo_anger:
+    'false': 50
+    'true': 50
+
+  extra_boo_spots:
+    'false': 50
+    'true': 50
+
+  random_music:
+    'false': 50
+    'true': 50
+
+  door_model_rando:
+    'false': 50
+    'true': 50
+
+  chest_types:
+    vanilla: 50
+    default: 50
+    full_random: 50
+    color: 50
+    size_and_color: 50
+    no_fuzzy_matching: 50
+
+  trap_chests:
+    filler: 50
+    progression: 50
+    anything: 50
+
+  spookiness:
+    vanilla: 10
+    full_spooky: 20
+    random_rooms: 30
+
+  call_mario:
+    'false': 50
+    'true': 50
+    
+  trap_percentage:
+    random-range-1-15: 50
+    random-range-10-30: 50
+    random-range-15-25: 50
+
+  bundle_weight:
+    10: 50
+
+  coin_weight:
+    15: 50
+
+  bill_weight:
+    10: 50
+    
+  bars_weight:
+    10: 50
+
+  gems_weight:
+    5: 50
+
+  poison_trap_weight:
+    15: 50
+
+  bomb_trap_weight:
+    15: 50
+
+  ice_trap_weight:
+    15: 50
+
+  banana_trap_weight:
+    15: 50
+
+  poss_trap_weight:
+    5: 50
+
+  bonk_trap_weight:
+    15: 50
+
+  ghost_weight:
+    15: 50
+
+  fear_weight:
+    25: 50
+
+  spooky_weight:
+    25: 50
+
+  squash_weight:
+    15: 50
+
+  vac_trap_weight:
+    5: 50
+
+  dust_weight:
+    40: 50
+    
+  heart_weight:
+    10: 50
+
+  furnisanity_fake:
+    walls: 1 # "Hangables" "Ceiling"
+    floors: 1 # "Decor" "Candles" "Seating" "Surfaces" "Plants"
+    insides: 1 # "Storage" "Drawers" "Treasures"
+    full: 1 # "Full"
+    none: 1
+  triggers:
+    - option_category: Luigi's Mansion
+      option_name: furnisanity_fake
+      option_result: walls
+      options:
+        Luigi's Mansion:
+          furnisanity: ["Hangables","Ceiling"]
+    - option_category: Luigi's Mansion
+      option_name: furnisanity_fake
+      option_result: floors
+      options:
+        Luigi's Mansion:
+          furnisanity: ["Decor","Candles","Seating","Surfaces","Plants"]
+    - option_category: Luigi's Mansion
+      option_name: furnisanity_fake
+      option_result: insides
+      options:
+        Luigi's Mansion:
+          furnisanity: ["Storage","Drawers","Treasures"]
+    - option_category: Luigi's Mansion
+      option_name: furnisanity_fake
+      option_result: full
+      options:
+        Luigi's Mansion:
+          furnisanity: ["Full"]
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: LM-{player}
