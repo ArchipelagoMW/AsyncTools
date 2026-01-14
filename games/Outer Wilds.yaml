@@ -1,0 +1,88 @@
+Outer Wilds:
+  progression_balancing: 50
+  accessibility: full
+  enable_eote_dlc:
+    false: 60
+    true: 40
+  goal:
+    song_of_five: 40
+    song_of_the_nomai: 60
+  # Trigger option because it's the simplest way to make the distribution of alt spawns not uniform
+  # and still makes a trigger for all non-vanilla values (needed to force randomized warp pads)
+  spawn_vanilla:
+    false: 40
+    true: 60
+  early_key_item: 'off'
+  randomize_coordinates: true
+  randomize_orbits: true
+  randomize_rotations: true
+  randomize_dark_bramble_layout: hub_start
+  trap_chance: 20
+  death_link: 'off'
+  logsanity:
+    false: 30
+    true: 70
+  # Bug that makes spacesuit gettable OoL makes me hesitant to enable this, plus it seems ass
+  shuffle_spacesuit: false
+  split_translator:
+    false: 30
+    true: 70
+  enable_hn1_mod: false
+  enable_outsider_mod: false
+  enable_ac_mod: false
+  enable_hn2_mod: false
+  enable_fq_mod: false
+
+  triggers:
+    # DLC Specific Options
+    - option_category: Outer Wilds
+      option_name: enable_eote_dlc
+      option_result: true
+      options:
+        Outer Wilds:
+          goal:
+            song_of_five: 20
+            song_of_six: 40
+            song_of_seven: 20
+            echoes_of_the_eye: 20
+
+    # Spawn Options
+    - option_category: Outer Wilds
+      option_name: spawn_vanilla
+      option_result: true
+      options:
+        Outer Wilds:
+          randomize_warp_platforms:
+            true: 60
+            false: 40
+          spawn: vanilla
+    - option_category: Outer Wilds
+      option_name: spawn_vanilla
+      option_result: false
+      options:
+        Outer Wilds:
+          randomize_warp_platforms: true
+          spawn:
+            hourglass_twins: 10
+            timber_hearth: 5      # If you're playing alt spawns you might as well not be on Timber Hearth
+            brittle_hollow: 10
+            giants_deep: 10
+          # This nested trigger only exists so the DLC area spawn can be rolled if DLC is on
+          triggers:
+            - option_category: Outer Wilds
+              option_name: enable_eote_dlc
+              option_result: true
+              options:
+                Outer Wilds:
+                  spawn:
+                    hourglass_twins: 10
+                    timber_hearth: 5
+                    brittle_hollow: 10
+                    giants_deep: 10
+                    stranger: 10
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: OuterWilds-{player}

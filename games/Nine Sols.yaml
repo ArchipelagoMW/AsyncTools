@@ -1,0 +1,39 @@
+Nine Sols:
+  progression_balancing: 0
+  accessibility: full
+  shuffle_sol_seals: true
+  seals_for_eigong: random-range-6-8
+  seals_for_prison: 3
+  prevent_weakened_prison_state: true
+  seals_for_ethereal: 4
+  skip_soulscape_platforming: random
+  prevent_annoying_runbacks: true
+  randomize_jade_costs: true
+  jade_cost_min: 1
+  jade_cost_max: random-range-2-4
+  shop_unlocks: unlock_items
+  first_root_node: 
+    apeman_facility_monitoring: 1
+    grotto_of_scriptures_entry: 1
+    outer_warehouse: 1
+    factory_great_hall: 1
+  shuffle_grapple: true
+  shuffle_wall_climb: random
+  shuffle_ledge_grab: false
+  logic_difficulty: vanilla
+  local_items:
+  - Seal of Nuwa
+  - Seal of Fuxi
+  - Seal of Ji
+  - Seal of Lady Ethereal
+  - Seal of Jiequan
+  - Seal of Yanlao
+  - Seal of Goumang
+  - Seal of Kuafu
+  triggers:
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: NineSols-{player}
