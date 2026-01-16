@@ -6,7 +6,7 @@ Muse Dash:
   song_difficulty_mode:
     medium: 67
     hard: 33
-  grade_needed: any
+  grade_needed: b
   music_sheet_count_percentage: 25
   music_sheet_win_count_percentage: 80
   chosen_traps:
