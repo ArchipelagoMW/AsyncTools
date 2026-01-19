@@ -41,9 +41,7 @@ Super Mario World:
     simple: 2
     full: 2
     singularity: 1
-  swap_donut_gh_exits:
-    'true': 1
-    'false': 1
+  swap_donut_gh_exits: true
   junk_fill_percentage: 0
   trap_fill_percentage: random-low
   thwimp_trap_weight: random
@@ -81,12 +79,6 @@ Super Mario World:
         Super Mario World:
           early_climb: true
           swap_donut_gh_exits: false
-    - option_category: Super Mario World
-      option_name: swap_donut_gh_exits
-      option_result: false
-      options:
-        Super Mario World:
-          start_hints: Carry
     - option_category: Super Mario World
       option_name: blocksanity
       option_result: true
