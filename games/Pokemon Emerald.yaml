@@ -196,6 +196,8 @@ Pokemon Emerald:
     true: 20
   death_link: false
   enable_wonder_trading: true
+  start_inventory:
+    Exp. Share: 6
 
   triggers:
     # Blacklist wild legendaries
