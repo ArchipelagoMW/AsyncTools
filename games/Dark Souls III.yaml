@@ -1,4 +1,4 @@
-﻿Dark Souls III:
+Dark Souls III:
   early_banner: early_local
   late_basin_of_vows:
     'off': 25
@@ -10,9 +10,11 @@
     after_basin: 50
   death_link: 'false'
   enable_dlc:
-    'false': 7
+    'false': 1
+    'true': 2
+  enable_ngp: 
+    'false': 1
     'true': 1
-  enable_ngp: 'false'
   random_starting_loadout:
     'false': 25
     'true': 75
@@ -59,7 +61,7 @@
     # Can be unobtainable in certain local locations
     ['Path of the Dragon']
   exclude_locations:
-    ['Small Souls', 'Miscellaneous', 'Hidden', 'Small Crystal Lizards', 'Upgrade', "AL: Aldrich's Ruby - dark cathedral, miniboss"]
+    ["AL: Aldrich's Ruby - dark cathedral, miniboss"]
   excluded_location_behavior: forbid_useful
   missable_location_behavior: forbid_useful
   triggers:
