@@ -149,8 +149,10 @@ Pokemon Emerald:
     true: 50
   exp_modifier:
     100: 30
-    random-range-80-100: 5
-    random-range-100-500: 65
+    200: 17
+    300: 17
+    400: 17
+    500: 17
   blind_trainers:
     false: 40
     true: 60
@@ -261,6 +263,18 @@ Pokemon Emerald:
         Pokemon Emerald:
           blind_trainers: false
 
+          
+    # Force xp gain to be >100% if trainer checks are disabled, to reduce grinding
+    - option_category: Pokemon Emerald
+      option_name: trainersanity
+      option_result: false
+      options:
+        Pokemon Emerald:
+          exp_modifier:
+            200: 1
+            300: 1
+            400: 1
+            500: 1
 
     # Blacklist trainer legendaries
     - option_category: Pokemon Emerald
