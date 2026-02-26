@@ -111,7 +111,7 @@ Pokemon Emerald:
     completely_random: 25
     follow_evolutions: 25
   ability_blacklist:
-    ["Wonder Guard"]
+    ["Wonder Guard", "Truant"]
   level_up_moves:
     vanilla: 50
     randomized: 25
