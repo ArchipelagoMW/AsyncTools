@@ -1,4 +1,7 @@
 #When editing weights, please keep a total of 100 per category
+name: Player{player}
+game: Stardew Valley
+
 Stardew Valley:
   accessibility: full
   goal:
@@ -123,7 +126,8 @@ Stardew Valley:
     none: 70
     queen_of_sauce: 20
     all: 10
-  chefsanity: # Override in trigger
+  chefsanity: [] # Override in trigger, can't random/weight OptionSets
+  chefsanity_trigger: # Override in trigger
     none: 60
     queen_of_sauce: 20
     qos_and_purchases: 10
@@ -261,10 +265,11 @@ Stardew Valley:
           cooksanity: # Remove none odds
             queen_of_sauce: 70
             all: 30
-          chefsanity: # Increase the odds of shuffling recipes
-            none: 30
-            all: 30
-            random: 40
+          chefsanity_trigger: # Increase the odds of shuffling recipes
+            none: 20
+            queen_of_sauce: 40
+            qos_and_purchases: 20
+            all: 20
     - option_category: Stardew Valley
       option_name: goal
       option_result: craft_master # Craft every item
@@ -328,7 +333,7 @@ Stardew Valley:
           museumsanity: none # Remove checks
           monstersanity: none # Remove checks
           cooksanity: none # Remove checks
-          chefsanity: none # Remove checks
+          chefsanity_trigger: none # Remove checks
           craftsanity: none # Remove checks
           friendsanity: none # Remove checks
           booksanity: none # Remove checks
@@ -344,6 +349,22 @@ Stardew Valley:
             non_progression: 25
             buildings_without_house: 0
             buildings: 0
+    # Chefsanity trigger setup, since OptionSet can't be randomized
+    - option_category: Stardew Valley
+      option_name: chefsanity_trigger
+      option_result: 'queen_of_sauce' 
+      options: 
+        +chefsanity_trigger: ["Queen of Sauce"]
+    - option_category: Stardew Valley
+      option_name: chefsanity_trigger
+      option_result: 'qos_and_purchases' 
+      options: 
+        +chefsanity_trigger: ["Queen of Sauce", "Purchases"]
+    - option_category: Stardew Valley
+      option_name: chefsanity_trigger
+      option_result: 'all' 
+      options: 
+        +chefsanity_trigger: ["Queen of Sauce", "Purchases", "Friendship", "Skills"]                 
     - option_category: null
       option_name: name
       option_result: Player{player}
