@@ -1,7 +1,4 @@
 #When editing weights, please keep a total of 100 per category
-name: Player{player}
-game: Stardew Valley
-
 Stardew Valley:
   accessibility: full
   goal:
