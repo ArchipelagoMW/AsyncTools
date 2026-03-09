@@ -351,20 +351,24 @@ Stardew Valley:
       option_name: chefsanity_trigger
       option_result: 'queen_of_sauce' 
       options: 
-        +chefsanity_trigger: ["Queen of Sauce"]
+        Stardew Valley:
+          +chefsanity: ["Queen of Sauce", "Purchases"]
     - option_category: Stardew Valley
       option_name: chefsanity_trigger
       option_result: 'qos_and_purchases' 
       options: 
-        +chefsanity_trigger: ["Queen of Sauce", "Purchases"]
+        Stardew Valley:
+          +chefsanity: ["Queen of Sauce", "Purchases"]
     - option_category: Stardew Valley
       option_name: chefsanity_trigger
       option_result: 'all' 
       options: 
-        +chefsanity_trigger: ["Queen of Sauce", "Purchases", "Friendship", "Skills"]                 
+        Stardew Valley:
+          +chefsanity: ["Queen of Sauce", "Purchases", "Friendship", "Skills"]                 
     - option_category: null
       option_name: name
       option_result: Player{player}
       options:
         null:
           name: Stardew-{player}
+          
