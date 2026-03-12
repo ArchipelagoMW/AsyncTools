@@ -3,34 +3,31 @@ Starcraft 2:
     # Overarching trigger, selecting one of these formats
     # Each format should consistently roll the exact amount of missions specified
     # This should provide a way to easily identify them in the options table
-    standard: 30
-    #   # 50 missions, Grid/Golden Path/Hopscotch/Blitz
-    challenge: 20
-    #   # 35 missions, Grid/Golden Path/Hopscotch/Blitz
-    #   # any_unit logic, reduced checks, always hard/brutal, trap items
+    standard: 25
+    # 50 missions, Grid/Golden Path/Hopscotch/Blitz
+    challenge: 15
+    # 40 missions, any_unit logic, reduced checks, always hard/brutal, trap items
     free_to_play: 20
-    #   # 30 missions, Grid/Golden Path/Hopscotch/Blitz
-    #   # only missions that are available for free (WoL, Prophecy, Prologue)
-    single_race_terran: 3
-    single_race_zerg: 3
-    single_race_protoss: 3
-    #   # 25 missions, Grid/Golden Path/Hopscotch/Blitz
-    #   # shorter mission order, only one race
-    vanilla: 3
-    vanilla_shuffled: 3
-    #   # 83 missions, vanilla/vanilla shuffled
-    #   # race-swaps disabled, vanilla-like experience
-    #   # will always have progressive keys to prevent huge early releases
+    # 35 missions, only f2p (WoL, Prophecy, Prologue)
+    single_race_terran: 5
+    single_race_zerg: 5
+    single_race_protoss: 5
+    # 25 missions, shorter mission order, only one race
+    vanilla: 5
+    vanilla_shuffled: 5
+    # 83 missions, vanilla/vanilla shuffled
+    # race-swaps disabled, vanilla-like experience
+    # will always have progressive keys to prevent huge early releases
     full_campaign: 5
-    #   # 195 missions, reduced checks, reduced effects of fillers 
-    #   # Designed to roll with all items, but not have too many fillers beyond that
-    #   # will always have progressive keys to prevent huge early releases
+    # 195 missions, reduced checks, reduced effects of fillers 
+    # Designed to roll with all items, but not have too many fillers beyond that
+    # will always have progressive keys to prevent huge early releases
     custom_big_async_logo: 5
-    #   # 105 missions, custom mission order
-    #   # canvas layout representing a Big Async logo
+    # 105 missions, custom mission order
+    # canvas layout representing a Big Async logo
     custom_swapped_campaigns: 5
-    #   # 42 missions, custom mission order
-    #   # 6 columns of 7 missions each, each column representing one campaign with swapped race
+    # 42 missions, custom mission order
+    # 6 columns of 7 missions each, each column representing one campaign with swapped race
 
 
   game_difficulty:
@@ -65,7 +62,9 @@ Starcraft 2:
   challenge_locations: enabled
 
   # These options will sometimes be overridden by a trigger
-  maximum_campaign_size: 10  # should always be changed by a trigger. If it ends up with 10, something went wrong
+  # size should always be changed by a trigger. 
+  # If it ends up with 10, something went wrong
+  maximum_campaign_size: 10  
   required_tactics: standard
   mission_order:
     # standard distribution for mission orders
@@ -104,6 +103,7 @@ Starcraft 2:
   kerrigan_levels_per_mission_completed_cap: -1
   kerrigan_level_item_sum: 70
   kerrigan_level_item_distribution: vanilla
+  kerrigan_primal_status: item
   mastery_locations: filler
   speedrun_locations: filler
   exclude_very_hard_missions: false
@@ -116,7 +116,10 @@ Starcraft 2:
   nova_max_weapons: 5
   kerrigan_max_active_abilities: 12
   kerrigan_max_passive_abilities: 5
-  key_mode: disabled
+  # key mode will always be overridden by triggers, and always use progressive options
+  # smaller slots <= 50 missions will have 20% chance for no keys
+  # bigger slots will always have keys
+  key_mode: disabled  
   victory_cache: 0
   filler_percentage: 0
   minerals_per_item: 10
@@ -146,7 +149,7 @@ Starcraft 2:
 
   excluded_missions:
     # tends to cause issues with Kerrigan levels/items
-    # unexcluded only for full campaign
+    # unexcluded for full campaign and vanilla mission orders
     - 'The Infinite Cycle'
 
   triggers: 
@@ -164,7 +167,7 @@ Starcraft 2:
       option_result: challenge
       options:
         Starcraft 2:
-          maximum_campaign_size: 30
+          maximum_campaign_size: 40
           enable_race_swap: pick_one
           required_tactics: any_units
           game_difficulty: 
@@ -193,6 +196,7 @@ Starcraft 2:
             ? 'Wings of Liberty'
             ? 'Prophecy'
             ? 'Whispers of Oblivion (Legacy of the Void: Prologue)'
+          kerrigan_presence: not_present
 
     - option_category: Starcraft 2
       option_name: game_format
@@ -204,8 +208,6 @@ Starcraft 2:
           selected_races: !!set
             ? 'Terran'
           kerrigan_presence: not_present
-          spear_of_adun_presence: not_present
-          spear_of_adun_passive_present_in_no_build: not_present
 
     - option_category: Starcraft 2
       option_name: game_format
@@ -216,8 +218,6 @@ Starcraft 2:
           enable_race_swap: pick_one
           selected_races: !!set
             ? 'Zerg'
-          spear_of_adun_presence: not_present
-          spear_of_adun_passive_present_in_no_build: not_present
 
     - option_category: Starcraft 2
       option_name: game_format
@@ -257,13 +257,11 @@ Starcraft 2:
         Starcraft 2:
           maximum_campaign_size: 195
           full_campaign_mission_order: 
-            # only allow grid or golden path for 195 missions
-            # and force them to always have keys
-            # to prevent huge early releases
-            # grid_keys: 40
+            # always force keys to prevent huge early releases
+            grid_keys: 40
             golden_path_keys: 40 
-            # blitz_keys: 20 
-            # don't include hopscotch here, that does become jarring on 195 missions
+            blitz_keys: 20 
+            # don't include hopscotch here
           excluded_missions: []  # un-do all exclusions
 
     # Match key mode to mission orders
@@ -277,6 +275,7 @@ Starcraft 2:
             progressive_missions: 40
             progressive_questlines: 30
             progressive_per_questline: 30
+            # only used for big  mission orders, so always force keys
     - option_category: Starcraft 2
       option_name: mission_order
       option_result: vanilla_shuffled
@@ -286,6 +285,7 @@ Starcraft 2:
             progressive_missions: 40
             progressive_questlines: 30
             progressive_per_questline: 30
+            # only used for big  mission orders, so always force keys
     - option_category: Starcraft 2
       option_name: mission_order
       option_result: grid
@@ -345,9 +345,9 @@ Starcraft 2:
           kerrigan_level_item_sum: 70
           kerrigan_level_item_distribution: vanilla
           mastery_locations: disabled
-          spear_of_adun_presence: protoss
+          spear_of_adun_presence: everywhere
           spear_of_adun_present_in_no_build: true
-          spear_of_adun_passive_ability_presence: protoss
+          spear_of_adun_passive_ability_presence: everywhere
           spear_of_adun_passive_present_in_no_build: true
           spear_of_adun_max_active_abilities: 13
           spear_of_adun_max_passive_abilities: 3
@@ -389,9 +389,9 @@ Starcraft 2:
           kerrigan_level_item_sum: 70
           kerrigan_level_item_distribution: vanilla
           mastery_locations: filler
-          spear_of_adun_presence: protoss
+          spear_of_adun_presence: any_race_lotv
           spear_of_adun_present_in_no_build: false
-          spear_of_adun_passive_ability_presence: protoss
+          spear_of_adun_passive_ability_presence: any_race_lotv
           spear_of_adun_passive_present_in_no_build: true
           spear_of_adun_max_active_abilities: 8
           spear_of_adun_max_passive_abilities: 3
@@ -438,10 +438,10 @@ Starcraft 2:
           kerrigan_levels_per_mission_completed_cap: -1
           kerrigan_level_item_sum: 70
           kerrigan_level_item_distribution: vanilla
-          spear_of_adun_presence: protoss
+          spear_of_adun_presence:
+            protoss: 50
+            any_race_lotv: 50
           spear_of_adun_present_in_no_build: false
-          spear_of_adun_passive_ability_presence: protoss
-          spear_of_adun_passive_present_in_no_build: false
           spear_of_adun_max_active_abilities: 5
           spear_of_adun_max_passive_abilities: 2
           nova_max_weapons: 3
@@ -475,10 +475,9 @@ Starcraft 2:
           kerrigan_levels_per_mission_completed_cap: 0
           kerrigan_level_item_sum: 0
           kerrigan_level_item_distribution: vanilla
-          spear_of_adun_presence: vanilla
-          spear_of_adun_present_in_no_build: false
-          spear_of_adun_passive_ability_presence: vanilla
-          spear_of_adun_passive_present_in_no_build: false
+          spear_of_adun_presence:
+            not_present: 50
+            protoss: 50
           spear_of_adun_max_active_abilities: 4
           spear_of_adun_max_passive_abilities: 1
           nova_max_weapons: 2
@@ -777,6 +776,8 @@ Starcraft 2:
           spear_of_adun_passive_ability_presence: not_present
           spear_of_adun_present_in_no_build: false
           spear_of_adun_passive_present_in_no_build: false
+          spear_of_adun_max_active_abilities: 0
+          spear_of_adun_max_passive_abilities: 0
 
     - option_category: Starcraft 2
       option_name: spear_of_adun_presence
@@ -795,12 +796,12 @@ Starcraft 2:
           spear_of_adun_passive_ability_presence: protoss
 
     - option_category: Starcraft 2
-      option_name: spear_of_adun_present_in_no_build
-      option_result: false
+      option_name: spear_of_adun_presence
+      option_result: any_race_lotv
       # match active + passive settings
       options:
         Starcraft 2:
-          spear_of_adun_passive_present_in_no_build: false
+          spear_of_adun_passive_ability_presence: any_race_lotv
 
     - option_category: Starcraft 2
       option_name: spear_of_adun_present_in_no_build
