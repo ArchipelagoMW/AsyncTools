@@ -56,7 +56,7 @@ Dark Souls III:
   all_chests_are_mimics: 'false'
   impatient_mimics: 'false'
   local_items:
-    ["Cinders of a Lord - Abyss Watcher", "Cinders of a Lord - Yhorm the Giant", "Cinders of a Lord - Aldrich", "Cinders of a Lord - Lothric Prince"]
+    ["Cinders of a Lord - Abyss Watcher", "Cinders of a Lord - Yhorm the Giant", "Cinders of a Lord - Aldrich", "Cinders of a Lord - Lothric Prince", "Transposing Kiln", "Pyromancy Flame"]
   non_local_items:
     # Can be unobtainable in certain local locations
     ['Path of the Dragon']
