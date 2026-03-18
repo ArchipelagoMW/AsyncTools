@@ -102,10 +102,9 @@ Pokemon Emerald:
     match_base_stats_and_type: 5
     completely_random: 65
   types:
-    vanilla: 60
+    vanilla: 75
     shuffle: 20
-    completely_random: 10
-    follow_evolutions: 10
+    follow_evolutions: 5
   abilities:
     vanilla: 50
     completely_random: 25
