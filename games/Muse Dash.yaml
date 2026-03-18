@@ -9,25 +9,17 @@ Muse Dash:
   grade_needed: any
   music_sheet_count_percentage: 25
   music_sheet_win_count_percentage: 80
-  chosen_traps:
-    - Background Freeze Trap
-    - Bad Apple Trap
-    #- Chromatic Aberration Trap
-    - Error SFX Trap
-    - Focus Line Trap
-    - Gray Scale Trap
-    - Nyaa SFX Trap
-    - Pixelate Trap
-    - Ripple Trap
-    - Vignette Trap
-  trap_count_percentage:
-    0: 50
-    random-range-5-25: 50
-  death_link: false
+
+  traps_on:
+    yes: 50
+    no: 50
+  chosen_traps: []
+  trap_count_percentage: 0
   
   allow_dlc: #custom setting now for trigger due to DLC handling changes in 0.5.0
     false: 34
     true: 66
+
   triggers:
     # Reduce song count if hard difficulty selected due to fewer songs available for base game + hard diff
     - option_category: Muse Dash
@@ -44,6 +36,25 @@ Muse Dash:
         Muse Dash:
           +dlc_packs: [Muse Plus]
           additional_song_count: random-range-80-150
+    # Only add traps if traps are enabled
+    - option_category: Muse Dash
+      option_name: traps_on
+      option_result: yes
+      options:
+          Muse Dash:
+            chosen_traps:
+            - Background Freeze Trap
+            - Bad Apple Trap
+            - Error SFX Trap
+            - Focus Line Trap
+            - Gray Scale Trap
+            - Nyaa SFX Trap
+            - Pixelate Trap
+            - Ripple Trap
+            - Vignette Trap
+            trap_count_percentage: random-range-5-25
+
+    # Set player name
     - option_category: null
       option_name: name
       option_result: Player{player}
