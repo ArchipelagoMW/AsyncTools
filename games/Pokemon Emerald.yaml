@@ -55,7 +55,7 @@ Pokemon Emerald:
   elite_four_requirement:
     badges: 70
     gyms: 30
-  elite_four_count: random-high
+  elite_four_count: random-range-high-4-8
   norman_requirement:
     badges: 70
     gyms: 30
