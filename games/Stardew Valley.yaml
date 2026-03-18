@@ -352,7 +352,7 @@ Stardew Valley:
       option_result: 'queen_of_sauce' 
       options: 
         Stardew Valley:
-          +chefsanity: ["Queen of Sauce", "Purchases"]
+          +chefsanity: ["Queen of Sauce"]
     - option_category: Stardew Valley
       option_name: chefsanity_trigger
       option_result: 'qos_and_purchases' 
