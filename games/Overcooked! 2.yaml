@@ -20,14 +20,14 @@ Overcooked! 2:
   # Therefore, seeds without Kevins should require fewer stars.
   # To make the game more accessible, harder seeds require fewer stars.
   difficulty:
-    easy_kevin: 9
-    medium_kevin: 9
-    hard_kevin: 6
-    brutal_kevin: 3
-    easy: 3
-    medium: 3
-    hard: 2
-    brutal: 1
+    easy_kevin: 12
+    medium_kevin: 12
+    hard_kevin: 9
+    brutal_kevin: 6
+    easy: 4
+    medium: 4
+    hard: 3
+    brutal: 2
   paid_dlcs:
     'true': 25
     'false': 75
@@ -55,7 +55,7 @@ Overcooked! 2:
       options:
         Overcooked! 2:
           star_threshold_scale: random-range-35-39
-          stars_to_win: random-range-50-85
+          stars_to_win: random-range-50-90
           kevin_levels: 'true'
     - option_category: Overcooked! 2
       option_name: difficulty
@@ -63,7 +63,7 @@ Overcooked! 2:
       options:
         Overcooked! 2:
           star_threshold_scale: random-range-40-45
-          stars_to_win: random-range-50-80
+          stars_to_win: random-range-50-85
           kevin_levels: 'true'
 
     - option_category: Overcooked! 2
@@ -88,7 +88,7 @@ Overcooked! 2:
       options:
         Overcooked! 2:
           star_threshold_scale: random-range-35-39
-          stars_to_win: random-range-40-70
+          stars_to_win: random-range-40-75
           kevin_levels: 'false'
     - option_category: Overcooked! 2
       option_name: difficulty
@@ -96,7 +96,7 @@ Overcooked! 2:
       options:
         Overcooked! 2:
           star_threshold_scale: random-range-40-45
-          stars_to_win: random-range-40-65
+          stars_to_win: random-range-40-70
           kevin_levels: 'false'
 
     - option_category: Overcooked! 2
