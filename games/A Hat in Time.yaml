@@ -67,7 +67,7 @@ A Hat in Time:
   NoTicketSkips: 'true'
 
   ### Shuffles ###
-  # The chance of having every shuffle option enabled is about 33.3%.
+  # The chance of having every shuffle option enabled is about 26.7%.
   # Shuffle zipline unlocks into the item pool. All ziplines are unlocked from the start when disabled.
   ShuffleAlpineZiplines:
     'false': 30
@@ -85,6 +85,10 @@ A Hat in Time:
   ShuffleSubconPaintings:
     'false': 30
     'true': 70
+  # Adds additional checks to a few Chapter 2 levels, and additional junk to the item pool.
+  ShuffleDirectorTokens:
+    'false': 20
+    'true': 80
 
   ### Badge Seller/Mafia Boss Shop ###
   MinPonCost: 75
