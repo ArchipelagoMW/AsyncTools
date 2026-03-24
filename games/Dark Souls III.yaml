@@ -1,4 +1,4 @@
-﻿Dark Souls III:
+Dark Souls III:
   early_banner: early_local
   late_basin_of_vows:
     'off': 25
@@ -10,9 +10,11 @@
     after_basin: 50
   death_link: 'false'
   enable_dlc:
-    'false': 7
+    'false': 4
     'true': 1
-  enable_ngp: 'false'
+  enable_ngp: 
+    'false': 1
+    'true': 1
   random_starting_loadout:
     'false': 25
     'true': 75
@@ -54,7 +56,7 @@
   all_chests_are_mimics: 'false'
   impatient_mimics: 'false'
   local_items:
-    ["Cinders of a Lord - Abyss Watcher", "Cinders of a Lord - Yhorm the Giant", "Cinders of a Lord - Aldrich", "Cinders of a Lord - Lothric Prince"]
+    ["Cinders of a Lord - Abyss Watcher", "Cinders of a Lord - Yhorm the Giant", "Cinders of a Lord - Aldrich", "Cinders of a Lord - Lothric Prince", "Transposing Kiln", "Pyromancy Flame"]
   non_local_items:
     # Can be unobtainable in certain local locations
     ['Path of the Dragon']
