@@ -58,7 +58,12 @@ def format_output_csv(filename:str = "output.csv", output_filename:str = "format
     for game in options_dict.keys():
         # this creates a sheet for every game
         # maybe it's possible to do that all in one sheet but this is a simple and clean way for now
-        output.update({game: [*generated_options_per_slot[game]]})
+        game_name_cleaned = game
+        # these characters are forbidden as names for sheets so i need to remove them here.
+        for forbidden_char in ["[", "]", ":", "/", "?", "\\", "*"]:
+            if forbidden_char in game_name_cleaned:
+                game_name_cleaned = game_name_cleaned.replace(forbidden_char, "")
+        output.update({game_name_cleaned: [*generated_options_per_slot[game]]})
     # actually save as .ods
     save_data(f"{output_filename}.ods", output)
     print("done")
