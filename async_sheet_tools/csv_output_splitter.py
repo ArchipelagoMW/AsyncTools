@@ -4,13 +4,12 @@ import argparse
 import tkinter as tk
 from tkinter import filedialog
 from pyexcel_ods import save_data
-from collections import OrderedDict
 
 def format_output_csv(filename:str = "output.csv", output_filename:str = "formatted_options.ods"):
     # this simply reads the gameoption_whitelist.yaml into a dictionary to have all game relevant options available
     # when filtering for the game name
     with open("gameoption_whitelist.yaml", "r") as options:
-        options_dict = yaml.load(options, Loader=yaml.FullLoader)
+        options_dict = yaml.load(options, Loader=yaml.SafeLoader)
         # print(options_dict)
 
     # this creates the template for the output where all the actually rolled options gets appended line by line for
@@ -49,7 +48,7 @@ def format_output_csv(filename:str = "output.csv", output_filename:str = "format
                     print(f"skipped option for {game_name}, option: {option}")
                     pass
     # prep for saving as .ods
-    output = OrderedDict()
+    output = dict()
     for game in options_dict.keys():
         # this creates a sheet for every game
         # maybe it's possible to do that all in one sheet but this is a simple and clean way for now
