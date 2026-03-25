@@ -51,10 +51,8 @@ def format_output_csv(filename:str = "output.csv", output_filename:str = "format
                         slot_options.append(row[option_index])
                     # append that slots options into the output template
                     generated_options_per_slot[game_name].append(slot_options)
-                except KeyError as e: error_message(game_name, option, e)
-                except TypeError as e: error_message(game_name, option, e)
-                except IndexError as e: error_message(game_name, option, e)
-                except AttributeError as e: error_message(game_name, option, e)
+                except (KeyError, TypeError, IndexError, AttributeError) as e:
+                    error_message(game_name, option, e)
     # prep for saving as .ods
     output = dict()
     for game in options_dict.keys():
