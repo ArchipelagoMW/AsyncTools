@@ -5,7 +5,7 @@ Stardew Valley:
     community_center: 50
     grandpa_evaluation: 18
     bottom_of_the_mines: 3
-    master_angler: 3
+    master_angler: 5
     complete_collection: 2
     protector_of_the_valley: 4
     full_shipment: 3
@@ -18,9 +18,8 @@ Stardew Valley:
     allsanity: 0
     perfection: 0
     legend: 0
-    # Pseudo-goals, replaced in trigger
+    # Pseudo-goal, replaced in trigger
     short_master_angler: 2
-    short_full_shipment: 2
   farm_type: random
   starting_money: random-range-1000-25000
   profit_margin:
@@ -39,7 +38,12 @@ Stardew Valley:
     cheap: 50
     normal: 25
     expensive: 5
-  entrance_randomization:
+  bundle_per_room:
+    two_fewer: 20
+    one_fewer: 20
+    normal: 40
+    one_extra: 20
+  entrance_randomization: # Override in trigger
     disabled: 50
     pelican_town: 10
     non_progression: 20
@@ -53,6 +57,11 @@ Stardew Valley:
     enabled: 75
     disabled: 25
   backpack_progression: early_progressive
+  backpack_size:
+    '3': 25
+    '4': 25
+    '6': 25
+    '12': 25
   tool_progression:
     progressive_very_cheap: 30
     progressive_cheap: 40
@@ -105,15 +114,17 @@ Stardew Valley:
     split_goals: 5
   shipsanity: # Override in trigger
     none: 60
-    crops: 15
-    fish: 15
-    full_shipment: 5
-    full_shipment_with_fish: 5
+    crops: 14
+    fish: 14
+    crops_and_fish: 4
+    full_shipment: 4
+    full_shipment_with_fish: 4
   cooksanity: # Override in trigger
     none: 70
     queen_of_sauce: 20
     all: 10
-  chefsanity: # Override in trigger
+  chefsanity: [] # Override in trigger, can't random/weight OptionSets
+  chefsanity_trigger: # Override in trigger
     none: 60
     queen_of_sauce: 20
     qos_and_purchases: 10
@@ -132,9 +143,15 @@ Stardew Valley:
     power: 25
     power_skill: 10
     all: 5
+  moviesanity:
+    none: 30
+    one: 50
+    all_movies: 15
+    all_movies_loved: 5
   walnutsanity: ["Puzzles", "Bushes", "Repeatables"] # If Ginger Island rolls excluded, this will automatically disable itself. I have disabled dig spots because they are not noob-friendly. Everything else is better shuffled.
   movement_buff_number: random-range-4-8
   enabled_filler_buffs: ["Luck", "Damage", "Defense", "Immunity", "Health", "Energy", "Bite Rate", "Fish Trap", "Fishing Bar Size"]
+  allowed_filler_items: ['Currencies', 'Consumables', 'Food', 'Fishing Items', 'Farming Items', 'Machines', 'Money', 'Quality Of Life', 'Fruit Trees', 'Materials', 'Storage', 'Rings', 'Buff Food'] # Removed decorations and hats, so that fillers are less filler
   exclude_ginger_island:
     false: 50
     true: 50
@@ -184,7 +201,8 @@ Stardew Valley:
   quick_start: 'true'
   gifting: 'true'
   mods: []
-  bundle_plando: []
+  bundle_whitelist: []
+  bundle_blacklist: []
   death_link: 'false'
   triggers: # Added triggers to complement the goal (eg. add museumsanity to a museum goal).
     - option_category: Stardew Valley
@@ -244,10 +262,11 @@ Stardew Valley:
           cooksanity: # Remove none odds
             queen_of_sauce: 70
             all: 30
-          chefsanity: # Increase the odds of shuffling recipes
-            none: 30
-            all: 30
-            random: 40
+          chefsanity_trigger: # Increase the odds of shuffling recipes
+            none: 20
+            queen_of_sauce: 40
+            qos_and_purchases: 20
+            all: 20
     - option_category: Stardew Valley
       option_name: goal
       option_result: craft_master # Craft every item
@@ -289,34 +308,6 @@ Stardew Valley:
           local_items: Stardrop
     - option_category: Stardew Valley
       option_name: goal
-      option_result: short_full_shipment      
-      options: 
-        Stardew Valley:
-          goal: full_shipment
-          shipsanity: # Remove non-crop options
-            crops: 75
-            full_shipment: 25
-          cropsanity: # Remove disabled odds
-            enabled: 100
-          bundle_price: # Bundles are minimum or very cheap
-            minimum: 25
-            very_cheap: 75
-          festival_locations: disabled # Remove checks
-          special_order_locations: vanilla # Remove checks
-          quest_locations: # Remove checks, skew toward none
-            none: 50
-            0: 50
-          museumsanity: none # Remove checks
-          monstersanity: none # Remove checks
-          cooksanity: none # Remove checks
-          chefsanity: none # Remove checks
-          fishsanity: none # Remove checks
-          craftsanity: none # Remove checks
-          friendsanity: none # Remove checks
-          booksanity: none # Remove checks
-          walnutsanity: [] # Remove checks
-    - option_category: Stardew Valley
-      option_name: goal
       option_result: short_master_angler # Master angler with most sanities off
       options: 
         Stardew Valley:
@@ -339,14 +330,45 @@ Stardew Valley:
           museumsanity: none # Remove checks
           monstersanity: none # Remove checks
           cooksanity: none # Remove checks
-          chefsanity: none # Remove checks
+          chefsanity_trigger: none # Remove checks
           craftsanity: none # Remove checks
           friendsanity: none # Remove checks
           booksanity: none # Remove checks
           walnutsanity: [] # Remove checks
+    - option_category: Stardew Valley
+      option_name: exclude_ginger_island
+      option_result: 'false' # When GI is enabled, we remove the Buildings ER which often drags the slot for way longer than it should
+      options: 
+        Stardew Valley:
+          entrance_randomization:
+            disabled: 60
+            pelican_town: 15
+            non_progression: 25
+            buildings_without_house: 0
+            buildings: 0
+    # Chefsanity trigger setup, since OptionSet can't be randomized
+    - option_category: Stardew Valley
+      option_name: chefsanity_trigger
+      option_result: 'queen_of_sauce' 
+      options: 
+        Stardew Valley:
+          +chefsanity: ["Queen of Sauce"]
+    - option_category: Stardew Valley
+      option_name: chefsanity_trigger
+      option_result: 'qos_and_purchases' 
+      options: 
+        Stardew Valley:
+          +chefsanity: ["Queen of Sauce", "Purchases"]
+    - option_category: Stardew Valley
+      option_name: chefsanity_trigger
+      option_result: 'all' 
+      options: 
+        Stardew Valley:
+          +chefsanity: ["Queen of Sauce", "Purchases", "Friendship", "Skills"]                 
     - option_category: null
       option_name: name
       option_result: Player{player}
       options:
         null:
           name: Stardew-{player}
+          
