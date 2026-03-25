@@ -5,6 +5,14 @@ import tkinter as tk
 from tkinter import filedialog
 from pyexcel_ods import save_data
 
+
+def error_message(game_name, option, error_type):
+    # print skipped games
+    print(f"error {error_type} for Key {game_name} in options_dict or subsequent usage. \n"
+          f"skipped option for {game_name}, option: {option}")
+    pass
+
+
 def format_output_csv(filename:str = "output.csv", output_filename:str = "formatted_options.ods"):
     # this simply reads the gameoption_whitelist.yaml into a dictionary to have all game relevant options available
     # when filtering for the game name
@@ -43,10 +51,10 @@ def format_output_csv(filename:str = "output.csv", output_filename:str = "format
                         slot_options.append(row[option_index])
                     # append that slots options into the output template
                     generated_options_per_slot[game_name].append(slot_options)
-                except:
-                    # print skipped games
-                    print(f"skipped option for {game_name}, option: {option}")
-                    pass
+                except KeyError as e: error_message(game_name, option, e)
+                except TypeError as e: error_message(game_name, option, e)
+                except IndexError as e: error_message(game_name, option, e)
+                except AttributeError as e: error_message(game_name, option, e)
     # prep for saving as .ods
     output = dict()
     for game in options_dict.keys():
@@ -75,10 +83,13 @@ if __name__ == "__main__":
 Please select the CSV-File you got from the generation output.
         """)
         input_file_path = tk.filedialog.askopenfile()
-        input_file_path = input_file_path.name
+        try:
+            input_file_path = input_file_path.name
+        except AttributeError as e:
+            print("ERROR. No input file provided.")
+            exit()
     else:
         input_file_path = cmd_args.input
-
     if cmd_args.output is None: # check for cmd parameter used for output filename
         output_file_name = "formatted_options"
     else:
