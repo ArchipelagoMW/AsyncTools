@@ -1,0 +1,123 @@
+Sonic Adventure DX:
+  #Default options
+  goal_requires_chaos_emeralds: false
+  goal_requires_emblems: false
+  max_emblem_cap: 130
+  goal_requires_missions: false
+  goal_requires_bosses: false
+  sonic_action_stage_missions: c
+  tails_action_stage_missions: c
+  knuckles_action_stage_missions: c
+  amy_action_stage_missions: c
+  big_action_stage_missions: c
+  gamma_action_stage_missions: c
+  unify_chaos4: true
+  mission_mode_checks: false
+  enemy_sanity: false
+  capsule_sanity: false
+
+  # levels default is "true" but since this is handled by a trigger, I'll set it to false
+  goal_requires_levels: false
+  levels_percentage: random-range-60-80
+  emblems_percentage: random-range-50-80
+  mission_percentage: random-range-60-85
+  boss_percentage: random-range-70-100
+  logic_level:
+    normal_logic: 70
+    hard_logic: 30
+  guaranteed_starting_checks: 4
+  #unify_chaos4 and 6 have opposite defaults, so this is just to make the options the same.
+  unify_chaos6: true
+  auto_start_missions: true
+  #I've been told that enabling lazy fishing makes Big's segments more bearable.
+  lazy_fishing: enabled_all
+  chao_egg_checks: false
+  ring_capsule_sanity: false
+
+  # There are many different options for SADX, and for my own sanity I would like to simplify them into three categroies
+  # This may change in the future after getting feedback from players and deciding how we want to handle customs.
+  # level_emblem will require completing a certain number of levels and obtaining a number of emblems to goal.
+  # level_mission will require completing a certain number of levels and completion a number of missions to goal.
+  # boss_emerald will require beating certain bosses and collecting 7 chaos emeralds.
+  Goal_Type:
+    level_emblem: 40
+    level_mission: 20
+    boss_emerald: 30
+
+  triggers:
+    - option_name: Goal_Type
+      option_category: Sonic Adventure DX
+      option_result: level_emblem
+      options:
+        Sonic Adventure DX:
+          goal_requires_levels: true
+          goal_requires_emblems: true
+          capsule_sanity:
+            true: 40
+            false: 60
+          # Determine if only C rank gives checks or if B and A ranks also give checks
+          Ranks:
+            clear: 50
+            complete: 50
+    - option_name: Goal_Type
+      option_category: Sonic Adventure DX
+      option_result: level_mission
+      options:
+        Sonic Adventure DX:
+          goal_requires_levels: true
+          goal_requires_missions: true
+          fish_sanity:
+            true: 40
+            false: 60
+          Ranks:
+            clear: 50
+            complete: 50
+          mission_mode_checks: true
+    - option_name: Goal_Type
+      option_category: Sonic Adventure DX
+      option_result: boss_emerald
+      options:
+        Sonic Adventure DX:
+          goal_requires_chaos_emeralds: true
+          goal_requires_bosses: true
+          enemy_sanity:
+            true: 40
+            false: 60
+    - option_name: Ranks
+      option_category: Sonic Adventure DX
+      option_result: complete
+      options:
+        Sonic Adventure DX:
+          sonic_action_stage_missions: c_b_a
+          tails_action_stage_missions: c_b_a
+          knuckles_action_stage_missions: c_b_a
+          amy_action_stage_missions: c_b_a
+          big_action_stage_missions: c_b_a
+          gamma_action_stage_missions: c_b_a
+    - option_name: capsule_sanity
+      option_category: Sonic Adventure DX
+      option_result: true
+      options:
+        Sonic Adventure DX:
+          max_emblem_cap: 400
+          ring_capsules:
+            true: 50
+            false: 50
+          # The max number of emblems in the pool are 130 by default.
+          # This number will decrease based on the number of available locations.
+          # Any higher than this should be local only.
+          +local_items: [Emblem]
+    # Separate out ring capsule checks just due to the sheer mumber of them
+    - option_name: ring_capsules
+      option_category: Sonic Adventure DX
+      option_result: true
+      options:
+        Sonic Adventure DX:
+          max_emblem_cap: 600
+          ring_capsule_sanity: true
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: SADX-{player}
