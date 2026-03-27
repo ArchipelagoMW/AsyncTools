@@ -1097,60 +1097,21 @@ Starcraft 2:
     - Starcraft 2
     - Locations
     - Name
-    - Game Difficulty
-    - Difficulty Damage Modifier
-    - All In Map
-    - Mission Order
     - Maximum Campaign Size
-    - Two start missions
-    - Key Mode
+    - Game Difficulty
+    - Mission Order
+    - Required Tactics
     - Select Playable Races
     - Enabled Campaigns
     - Enable Race-Swapped Mission Variants
-    - Enable Mission Race Balancing
-    - Shuffle No-Build Missions
-    - Starter Unit
-    - Required Tactics
-    - Allow Workers in Void Trade
-    - Maximum number of upgrades per unit/structure
-    - Mercenary Highlanders
-    - Maximum Upgrade Level
-    - Generic Upgrade Missions
-    - Generic Upgrade Research
-    - Generic Upgrade Research Speedup
-    - Generic Upgrade Items
+    - Key Mode
     - Kerrigan Presence
-    - Kerrigan Level Item Sum
-    - Kerrigan Level Item Distribution
-    - Kerrigan Maximum Active Abilities
-    - Kerrigan Maximum Passive Abilities
-    - Enable Morphling
-    - Allow Unit Nerfs
     - Spear of Adun Presence
-    - Spear of Adun Present in No-Build
-    - Spear of Adun Passive Ability Presence
-    - Spear of Adun Passive Abilities Present in No-Build
-    - Spear of Adun Maximum Active Abilities
-    - Spear of Adun Maximum Passive Abilities
-    - Grant Story Tech
-    - Grant Story Levels
-    - Nova Maximum Weapons
-    - Nova Maximum Gadgets
-    - Nova Ghost of Chance Variant
-    - Take Over AI Allies
-    - Excluded Missions
-    - Difficulty Curve
+    - Maximum number of upgrades per unit/structure
+    - Shuffle No-Build Missions
     - Exclude Very Hard Missions
     - Exclude Overpowered Items
-    - Victory Cache
-    - Mastery Locations
-    - Speedrun Locations
-    - Filler Percentage
-    - Minerals Per Item
-    - Vespene Per Item
-    - Starting Supply Per Item
-    - Maximum Supply Per Item
-    - Upgrade Cost Discount Per Item
+    - Allow Unit Nerfs
 Stardew Valley:
     - Stardew Valley
     - Locations
