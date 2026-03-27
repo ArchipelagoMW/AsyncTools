@@ -8,7 +8,8 @@ Dark Souls III:
     'off': 25
     after_small_doll: 50
     after_basin: 50
-  death_link: 'false'
+  death_link: 'off'
+  death_link_amnesty: 1
   enable_dlc:
     'false': 4
     'true': 1
@@ -19,8 +20,6 @@ Dark Souls III:
     'false': 25
     'true': 75
   require_one_handed_starting_weapons: 'true'
-  auto_equip: 'false'
-  lock_equip: 'false'
   no_equip_load:
     'false': 2
     'true': 3
@@ -55,8 +54,11 @@ Dark Souls III:
   reduce_harmless_enemies: 'false'
   all_chests_are_mimics: 'false'
   impatient_mimics: 'false'
+  goal:
+    - Kiln of the First Flame Boss
   local_items:
-    ["Cinders of a Lord - Abyss Watcher", "Cinders of a Lord - Yhorm the Giant", "Cinders of a Lord - Aldrich", "Cinders of a Lord - Lothric Prince", "Transposing Kiln", "Pyromancy Flame"]
+    - Pyromancy Flame
+    - Transposing Kiln
   non_local_items:
     # Can be unobtainable in certain local locations
     ['Path of the Dragon']
@@ -64,7 +66,70 @@ Dark Souls III:
     ['Small Souls', 'Miscellaneous', 'Hidden', 'Small Crystal Lizards', 'Upgrade', "AL: Aldrich's Ruby - dark cathedral, miniboss"]
   excluded_location_behavior: forbid_useful
   missable_location_behavior: forbid_useful
+
+  #This will trigger which goal would be selected
+  GoalOption:
+    Soul_of_Cinder: 2
+    Base_Game_Bosses: 1
+    Slave_Knight_Gael: 0
+    DLC_Bosses: 0
+    All_Bosses: 0
+
   triggers:
+    # This trigger rerolls the GoalOption to include dlc bosses if dlc is enabled
+    - option_category: Dark Souls III
+      option_name: enable_dlc
+      option_result: 'true'
+      options:
+        Dark Souls III:
+          GoalOption:
+            Soul_of_Cinder: 2
+            Base_Game_Bosses: 1
+            Slave_Knight_Gael: 8
+            DLC_Bosses: 6
+            All_Bosses: 3
+    # Triggers for the goal
+    - option_category: Dark Souls III
+      option_name: GoalOption
+      option_result: Soul_of_Cinder
+      options:
+        Dark Souls III:
+          goal: 
+          - Kiln of the First Flame Boss
+          +local_items:
+            - Cinders of a Lord - Abyss Watcher
+            - Cinders of a Lord - Yhorm the Giant
+            - Cinders of a Lord - Aldrich
+            - Cinders of a Lord - Lothric Prince
+    - option_category: Dark Souls III
+      option_name: GoalOption
+      option_result: Base_Game_Bosses
+      options:
+        Dark Souls III:
+          goal: 
+          - Base Game Bosses
+    - option_category: Dark Souls III
+      option_name: GoalOption
+      option_result: Slave_Knight_Gael
+      options:
+        Dark Souls III:
+          goal: 
+          - Ringed City End Boss
+    - option_category: Dark Souls III
+      option_name: GoalOption
+      option_result: DLC_Bosses
+      options:
+        Dark Souls III:
+          goal: 
+          - DLC Bosses
+    - option_category: Dark Souls III
+      option_name: GoalOption
+      option_result: All_Bosses
+      options:
+        Dark Souls III:
+          goal: 
+          - All Bosses
+
     - option_category: null
       option_name: name
       option_result: Player{player}
