@@ -506,6 +506,7 @@ Landstalker - The Treasures of King Nole:
     - Goal
     - Starting Region
     - Jewel Count
+    - Combat Difficulty
     - Hint Count
 Lingo:
     - Lingo
@@ -683,6 +684,7 @@ Meritous:
     - Name
     - Goal
     - Include PSI Keys
+    - Include Evolution Traps
     - Item cache cost scaling
 Muse Dash:
     - Muse Dash
@@ -1484,10 +1486,14 @@ Zillion:
     - Name
     - continues
     - floppies required
+    - early scope
     - jump levels
+    - gun levels
     - randomize alarms
     - max level
     - start character
+    - skill
+    - map generation
 Zork Grand Inquisitor:
     - Zork Grand Inquisitor
     - Locations
