@@ -1,0 +1,93 @@
+﻿Ori and the Blind Forest:
+  progression_balancing: 0
+  accessibility: full
+  
+  #goal settings
+  goal:
+    # Choose the end goal. All goals determine what unlocks the final Horu escape sequence
+    # All Skill Trees: Find all 10 skill trees (including Kuro's feather)
+    # All Maps: Place all 9 mapstones around the map
+    # Warmth Fragments: Collect the required number of Warmth Fragments
+    # World Tour: Collect the required number of Relics. Up to 11 areas (default 8) around Nibel will be chosen to contain a relic in a random location
+    # None: No extra conditions, just reach and finish the final escape
+    all_skill_trees: 10
+    all_maps: 10
+    warmth_fragments: 50
+    world_tour: 30
+
+  warmth_fragments_available: random-range-32-40
+  warmth_fragments_required: random-range-30-35
+
+  relic_count:
+    9: 20
+    10: 50
+    11: 30
+  
+  #Logic major settings  
+  logic_difficulty:
+    casual: 20
+    standard: 50
+    expert: 30
+    
+  keystone_logic: area_specific
+  mapstone_logic: progressive
+  extra_mapstones: random-low
+  deathlink_logic: disabled
+  
+  #logic
+  enable_damage_boost: 'true'
+  enable_grenade_jump: 'false'
+  
+  enable_lure:
+    # Allows luring enemies to be considered for logic. Affects standard and above, 
+    # but higher difficulties may require more difficult lures.
+    'false': 50
+    'true': 50
+
+  enable_double_bash:
+    # Allows double bash technique to be considered for logic. Affects expert and above.
+    'false': 50
+    'true': 50
+
+  enable_air_dash:
+    # Allows air dash ability to be considered for logic. Affects standard and above. 
+    # At least 3 ability cells will be in logic before needing to use this ability.
+    'false': 20
+    'true': 80
+
+  enable_charge_dash:
+    # Allows charge dash ability to be considered for logic. Affects expert and above. 
+    # At least 6 ability cells will be in logic before needing to use this ability.
+    'false': 20
+    'true': 80
+
+  enable_triple_jump:
+    # Allows triple jump ability to be considered for logic. Only affects master. 
+    # At least 12 ability cells will be in logic before needing to use this ability.
+    'false': 20
+    'true': 80
+
+  enable_charge_flame_burn:
+    # Allows charge flame burn ability to be considered for logic. Only affects master. 
+    # At least 3 ability cells will be in logic before needing to use this ability.
+    'false': 20
+    'true': 80
+
+  enable_rekindle:
+    # Allows rekindle ability to be considered for logic. Only affects standard, expert, and master
+    # for specifically the Ghost Lever trick in Blackroot Burrows
+    'false': 50
+    'true': 50
+
+  restrict_dungeon_keys: 'true'
+  
+  start_hints: ["Relic"]
+  local_items: ["WarmthFragment"]
+  
+  triggers:
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: OriBF-{player}
