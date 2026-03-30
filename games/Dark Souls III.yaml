@@ -10,8 +10,8 @@ Dark Souls III:
     after_basin: 50
   death_link: 'false'
   enable_dlc:
-    'false': 4
-    'true': 1
+    'false': 66
+    'true': 34
   enable_ngp: 
     'false': 1
     'true': 1
