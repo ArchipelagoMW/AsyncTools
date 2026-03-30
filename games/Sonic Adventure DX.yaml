@@ -1,120 +1,468 @@
 Sonic Adventure DX:
-  #Default options
-  goal_requires_chaos_emeralds: false
-  goal_requires_emblems: false
-  max_emblem_cap: 130
-  goal_requires_missions: false
-  goal_requires_bosses: false
-  sonic_action_stage_missions: c
-  tails_action_stage_missions: c
-  knuckles_action_stage_missions: c
-  amy_action_stage_missions: c
-  big_action_stage_missions: c
-  gamma_action_stage_missions: c
-  unify_chaos4: true
-  mission_mode_checks: false
-  enemy_sanity: false
-  capsule_sanity: false
 
-  # levels default is "true" but since this is handled by a trigger, I'll set it to false
-  goal_requires_levels: false
-  levels_percentage: random-range-60-80
-  emblems_percentage: random-range-50-80
-  mission_percentage: random-range-60-85
-  boss_percentage: random-range-70-100
   logic_level:
-    normal_logic: 70
-    hard_logic: 30
-  guaranteed_starting_checks: 4
-  #unify_chaos4 and 6 have opposite defaults, so this is just to make the options the same.
-  unify_chaos6: true
-  auto_start_missions: true
-  #I've been told that enabling lazy fishing makes Big's segments more bearable.
-  lazy_fishing: enabled_all
-  chao_egg_checks: false
-  ring_capsule_sanity: false
+    normal_logic: 50
 
-  # There are many different options for SADX, and for my own sanity I would like to simplify them into three categroies
-  # This may change in the future after getting feedback from players and deciding how we want to handle customs.
-  # level_emblem will require completing a certain number of levels and obtaining a number of emblems to goal.
-  # level_mission will require completing a certain number of levels and completion a number of missions to goal.
-  # boss_emerald will require beating certain bosses and collecting 7 chaos emeralds.
-  Goal_Type:
-    level_emblem: 40
-    level_mission: 20
-    boss_emerald: 30
+  gating_mode:
+    emblems_gating: 50
+    key_items_gating: 50
+
+  goal_requires_levels:
+    'false': 50
+    'true': 50
+
+  levels_percentage:
+    random-range-50-100: 50 
+
+  goal_requires_chaos_emeralds:
+    'false': 50
+    'true': 30
+
+  goal_requires_emblems:
+    'false': 20
+    'true': 50
+
+  max_emblem_cap:
+    random-range-100-300: 50 
+
+  emblems_percentage:
+    random-range-65-85: 50 
+
+  goal_requires_missions:
+    'false': 50
+    'true': 30
+
+  mission_percentage:
+    random-range-50-75: 50 
+
+  goal_requires_bosses:
+    'false': 50
+    'true': 25
+
+  boss_percentage:
+    random-range-50-100: 50 
+
+  goal_requires_chao_races:
+    'false': 50
+
+  starting_character:
+    random_character: 50
+    sonic: 10
+    tails: 10
+    knuckles: 10
+    amy: 10
+    big: 10
+    gamma: 10
+
+  starting_location:
+    random_location_per_character: 50
+
+  egg_carrier_starts_transformed:
+    'false': 50
+    'true': 50
+
+  entrance_randomizer:
+    disabled: 50
+    stages: 20
+    stages_and_bosses: 10
+
+
+  ring_loss:
+    classic: 50
+    modern: 50
+
+  playable_sonic:
+    'true': 50
+
+  playable_tails:
+    'true': 50
+
+  playable_knuckles:
+    'true': 50
+
+  playable_amy:
+    'true': 50
+
+  playable_big:
+    'true': 50
+
+  playable_gamma:
+    'true': 50
+
+  sonic_action_stage_missions:
+    c: 50
+    c_b: 20
+    c_b_a: 10
+
+  tails_action_stage_missions:
+    c: 50
+    c_b: 20
+
+
+  knuckles_action_stage_missions:
+    c: 50
+    c_b: 20
+
+
+  amy_action_stage_missions:
+    c: 50
+    c_b: 20
+
+
+  big_action_stage_missions:
+    c: 50
+    c_b: 20
+    c_b_a: 0
+    c_b_a_s: 0
+
+  gamma_action_stage_missions:
+    c: 50
+    c_b: 50
+
+
+  music_shuffle:
+    disabled: 50
+    curated: 20
+    by_type: 5
+    full: 5
+
+  music_shuffle_consistency:
+    static: 50
+
+
+  boss_checks:
+    'false': 20
+    'true': 50
+
+  unify_chaos4:
+    'false': 50
+    'true': 30
+
+  unify_chaos6:
+    'false': 50
+    'true': 20
+
+  unify_egg_hornet:
+    'false': 50
+    'true': 10
+
+  enemy_sanity:
+    'true': 50
+
+  enemy_sanity_list:
+    []
+    
+  base_enemies:
+    sonic: 10
+    gamma: 10
+    tails_and_amy: 15
+    knuckles_and_big: 15
+    all: 5
+    none: 60
+    
+  missable_enemies:
+    'false': 50
+
+  capsule_sanity:
+    'true': 50
+
+  capsule_sanity_list:
+    []
+    
+  base_capsules:
+    sonic: 10
+    gamma: 10
+    tails_and_amy: 15
+    knuckles_and_big: 15
+    all: 5
+    none: 50
+    
+  missable_capsules:
+    'false': 20
+    'true': 50
+
+  pinball_capsules:
+    'false': 50
+
+  fish_sanity:
+    'false': 50
+    'true': 30
+
+  lazy_fishing:
+    enabled_fishsanity: 50
+    enabled_all: 20
+
+
+  randomized_upgrades:
+    'true': 50
+
+  field_emblems_checks:
+    'false': 20
+    'true': 50
+
+  chao_egg_checks:
+    'false': 50
+    'true': 30
+
+  chao_races_checks:
+    'false': 50
+
+  mission_mode_checks:
+    'false': 50
+    'true': 30
+
+  auto_start_missions:
+    'true': 50
+
+  mission_blacklist:
+    ['49', '58', '54', '53']
+
+  twinkle_circuit_checks:
+    disabled: 25
+    enabled: 50
+    enabled_multiple: 30
+
+  sand_hill_checks:
+    disabled: 20
+    enabled: 50
+
+  sky_chase_checks:
+    disabled: 20
+    enabled: 50
+
+
+  junk_fill_percentage:
+    random-range-20-45: 50 
+
+  trap_fill_percentage:
+    0: 10
+    random-range-0-10: 30 
+    random-range-11-15: 10 
+
+  ice_trap_weight:
+    none: 10
+    low: 20
+    medium: 30
+
+
+  spring_trap_weight:
+    none: 10
+    low: 20
+    medium: 30
+
+  police_trap_weight:
+    none: 50
+    low: 20
+    medium: 10
+
+  buyon_trap_weight:
+    none: 50
+    low: 20
+    medium: 10
+
+  reverse_trap_weight:
+    none: 50
+    low: 20
+    medium: 10
+
+
+  gravity_trap_weight:
+    none: 50
+    low: 20
+    medium: 10
+
+  reverse_trap_duration:
+    5: 25
+    10: 50
+    15: 25
+    20: 5
+
+  traps_and_filler_on_adventure_fields:
+    'false': 50
+
+  traps_and_filler_on_boss_fights:
+    'false': 20
+    'true': 50
+
+  traps_and_filler_on_perfect_chaos_fight:
+    'false': 50
+    'true': 15
 
   triggers:
-    - option_name: Goal_Type
+    - option_name: starting_character
       option_category: Sonic Adventure DX
-      option_result: level_emblem
+      option_result: sonic
       options:
         Sonic Adventure DX:
-          goal_requires_levels: true
-          goal_requires_emblems: true
-          capsule_sanity:
-            true: 40
-            false: 60
-          # Determine if only C rank gives checks or if B and A ranks also give checks
-          Ranks:
-            clear: 50
-            complete: 50
-    - option_name: Goal_Type
+            +enemy_sanity_list:
+              ['Sonic']
+            +capsule_sanity_list:
+              ['Sonic-Life', 'Sonic-PowerUp', 'Sonic-Shield']
+            sonic_action_stage_missions: c_b_a
+              
+    - option_name: starting_character
       option_category: Sonic Adventure DX
-      option_result: level_mission
+      option_result: tails
       options:
         Sonic Adventure DX:
-          goal_requires_levels: true
-          goal_requires_missions: true
-          fish_sanity:
-            true: 40
-            false: 60
-          Ranks:
-            clear: 50
-            complete: 50
-          mission_mode_checks: true
-    - option_name: Goal_Type
+            +enemy_sanity_list:
+              ['Tails']
+            +capsule_sanity_list:
+              ['Tails-Life', 'Tails-PowerUp', 'Tails-Shield']
+            tails_action_stage_missions: c_b_a
+              
+    - option_name: starting_character
       option_category: Sonic Adventure DX
-      option_result: boss_emerald
+      option_result: knuckles
       options:
         Sonic Adventure DX:
-          goal_requires_chaos_emeralds: true
-          goal_requires_bosses: true
-          enemy_sanity:
-            true: 40
-            false: 60
-    - option_name: Ranks
+            +enemy_sanity_list:
+              ['Knuckles']
+            +capsule_sanity_list:
+              ['Knuckles-Life', 'Knuckles-PowerUp', 'Knuckles-Shield']
+            knuckles_action_stage_missions: c_b_a
+              
+    - option_name: starting_character
       option_category: Sonic Adventure DX
-      option_result: complete
+      option_result: amy
       options:
         Sonic Adventure DX:
-          sonic_action_stage_missions: c_b_a
-          tails_action_stage_missions: c_b_a
-          knuckles_action_stage_missions: c_b_a
-          amy_action_stage_missions: c_b_a
-          big_action_stage_missions: c_b_a
-          gamma_action_stage_missions: c_b_a
-    - option_name: capsule_sanity
+            +enemy_sanity_list:
+              ['Amy']
+            +capsule_sanity_list:
+              ['Amy-Life', 'Amy-PowerUp', 'Amy-Shield']
+            amy_action_stage_missions: c_b_a
+              
+    - option_name: starting_character
       option_category: Sonic Adventure DX
-      option_result: true
+      option_result: big
       options:
         Sonic Adventure DX:
-          max_emblem_cap: 400
-          ring_capsules:
-            true: 50
-            false: 50
-          # The max number of emblems in the pool are 130 by default.
-          # This number will decrease based on the number of available locations.
-          # Any higher than this should be local only.
-          +local_items: [Emblem]
-    # Separate out ring capsule checks just due to the sheer mumber of them
-    - option_name: ring_capsules
+            +enemy_sanity_list:
+              ['Big']
+            +capsule_sanity_list:
+              ['Big-Life', 'Big-PowerUp', 'Big-Shield']
+            fish_sanity: 'true'
+            big_action_stage_missions: c_b_a
+            lazy_fishing: enabled_all 
+            
+    - option_name: starting_character
       option_category: Sonic Adventure DX
-      option_result: true
+      option_result: gamma
       options:
         Sonic Adventure DX:
-          max_emblem_cap: 600
-          ring_capsule_sanity: true
+            +enemy_sanity_list:
+              ['Gamma']
+            +capsule_sanity_list:
+              ['Gamma-Life', 'Gamma-PowerUp', 'Gamma-Shield']
+            gamma_action_stage_missions: c_b_a
+           
+    - option_name: base_capsules
+      option_category: Sonic Adventure DX
+      option_result: sonic
+      options:
+        Sonic Adventure DX:
+            +capsule_sanity_list:
+              ['Sonic-Life', 'Sonic-PowerUp', 'Sonic-Shield']
+
+    - option_name: base_enemies
+      option_category: Sonic Adventure DX
+      option_result: sonic
+      options:
+        Sonic Adventure DX:
+            +enemy_sanity_list:
+              ['Sonic']
+
+    - option_name: base_capsules
+      option_category: Sonic Adventure DX
+      option_result: gamma
+      options:
+        Sonic Adventure DX:
+            +capsule_sanity_list:
+              ['Gamma-Life', 'Gamma-PowerUp', 'Gamma-Shield']
+
+    - option_name: base_enemies
+      option_category: Sonic Adventure DX
+      option_result: gamma
+      options:
+        Sonic Adventure DX:
+            +enemy_sanity_list:
+              ['Gamma']
+
+
+    - option_name: base_capsules
+      option_category: Sonic Adventure DX
+      option_result: tails_and_amy
+      options:
+        Sonic Adventure DX:
+            +capsule_sanity_list:
+              ['Tails-Life', 'Tails-PowerUp', 'Tails-Shield', 'Amy-Life', 'Amy-PowerUp', 'Amy-Shield',]
+
+    - option_name: base_enemies
+      option_category: Sonic Adventure DX
+      option_result: tails_and_amy
+      options:
+        Sonic Adventure DX:
+            +enemy_sanity_list:
+              ['Tails', 'Amy']
+
+
+    - option_name: base_capsules
+      option_category: Sonic Adventure DX
+      option_result: knuckles_and_big
+      options:
+        Sonic Adventure DX:
+            +capsule_sanity_list:
+              ['Knuckles-Life', 'Knuckles-PowerUp', 'Knuckles-Shield', 'Big-Life', 'Big-PowerUp', 'Big-Shield']
+
+    - option_name: base_enemies
+      option_category: Sonic Adventure DX
+      option_result: knuckles_and_big
+      options:
+        Sonic Adventure DX:
+            +enemy_sanity_list:
+              ['Knuckles', 'Big']
+
+
+    - option_name: base_capsules
+      option_category: Sonic Adventure DX
+      option_result: all
+      options:
+        Sonic Adventure DX:
+            +capsule_sanity_list:
+              ['Knuckles-PowerUp', 'Big-Shield', 'Sonic-Life', 'Amy-Life', 'Knuckles-Shield', 'Gamma-Shield', 'Sonic-PowerUp', 'Big-PowerUp', 'Gamma-Life', 'Big-Life', 'Amy-Shield', 'Knuckles-Life', 'Amy-PowerUp', 'Tails-Shield', 'Tails-PowerUp', 'Sonic-Shield', 'Gamma-PowerUp', 'Tails-Life']
+            +local_items: [Emblem]
+            goal_requires_emblems: 'true'
+            gating_mode: key_items_gating
+            max_emblem_cap: 400
+
+    - option_name: base_enemies
+      option_category: Sonic Adventure DX
+      option_result: all
+      options:
+        Sonic Adventure DX:
+            +enemy_sanity_list:
+              ['Amy', 'Big', 'Gamma', 'Tails', 'Knuckles', 'Sonic']
+            +local_items: [Emblem]
+            goal_requires_emblems: 'true'
+            gating_mode: key_items_gating
+            max_emblem_cap: 400
+
+    - option_name: goal_requires_chaos_emeralds
+      option_category: Sonic Adventure DX
+      option_result: 'true'
+      options:
+        Sonic Adventure DX:
+            +local_items: [Chaos Emeralds]
+
+    - option_name: gating_mode
+      option_category: Sonic Adventure DX
+      option_result: emblems_gating
+      options:
+        Sonic Adventure DX:
+              starting_location: random_location
+
+
     - option_category: null
       option_name: name
       option_result: Player{player}
