@@ -31,8 +31,11 @@ Super Mario World:
     vanilla: 2
     random_two_room: 1
   level_shuffle:
-    false: 2
-    true: 1
+    false: 1
+    true: 2
+  castles_anywhere:
+    false: 1
+    true: 2
   exclude_special_zone:
     true: 2
     false: 1
@@ -41,7 +44,18 @@ Super Mario World:
     simple: 2
     full: 2
     singularity: 1
+  koopaling_health: random-range-3-5
+  bowser_health: random-range-2-4
   swap_donut_gh_exits: true
+  level_name_shuffle:
+    vanilla: 6
+    consistent: 3
+    sane: 1
+  level_tile_shuffle:
+    matching: 6
+    consistent_matching: 9
+    full: 4
+    singularity: 1
   junk_fill_percentage: 0
   trap_fill_percentage: random-low
   thwimp_trap_weight: random
@@ -50,6 +64,10 @@ Super Mario World:
   stun_trap_weight: none
   literature_trap_weight: none
   timer_trap_weight: none
+  dry_trap_weight: random
+  ice_untrap_weight: random
+  reverse_untrap_weight: random
+  timer_untrap_weight: random
   autosave: true
   early_climb: false
   overworld_speed: fast
