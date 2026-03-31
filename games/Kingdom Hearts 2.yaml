@@ -5,6 +5,9 @@ Kingdom Hearts 2:
     hitlist: 25
   Promise_Charm: true
   FinalXemnas: true
+  CasualBounties:
+    true: 50
+    false: 50
   LevelDepth:
     level_50: 50
     level_50_sanity: 50
@@ -73,9 +76,6 @@ Kingdom Hearts 2:
           Cups: cups_and_hades_paradox
           BountyAmount: random-range-18-23
           BountyRequired: random-range-12-17
-          CasualBounties:
-            true: 50
-            false: 50
           BountyStartingHintToggle: true
     #Hitlist changes to accomodate Casual Bounties
     - option_name: CasualBounties
