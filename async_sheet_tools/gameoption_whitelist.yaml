@@ -1122,10 +1122,12 @@ Stardew Valley:
     - Goal
     - Farm Type
     - Bundle Randomization
+    - Bundle Per Room
     - Bundle Price
     - Entrance Randomization
     - Season Randomization
     - Cropsanity
+    - Backpack Size
     - Tool Progression
     - Skill Progression
     - Building Progression
@@ -1142,6 +1144,7 @@ Stardew Valley:
     - Craftsanity
     - Friendsanity
     - Friendsanity Heart Size
+    - Moviesanity
     - Booksanity
     - Walnutsanity
     - Exclude Ginger Island
