@@ -73,7 +73,17 @@ Kingdom Hearts 2:
           Cups: cups_and_hades_paradox
           BountyAmount: random-range-18-23
           BountyRequired: random-range-12-17
+          CasualBounties:
+            true: 50
+            false: 50
           BountyStartingHintToggle: true
+    #Hitlist changes to accomodate Casual Bounties
+    - option_name: CasualBounties
+      option_category: Kingdom Hearts 2
+      option_result: true
+      options:
+        BountyAmount: random-range-27-35
+        BountyRequired: random-range-18-25
     - option_category: null
       option_name: name
       option_result: Player{player}
