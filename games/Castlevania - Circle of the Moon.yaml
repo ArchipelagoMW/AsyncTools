@@ -1,0 +1,96 @@
+Castlevania - Circle of the Moon:
+  accessibility: items
+  local_items:
+    - Last Key
+  completion_goal:
+    dracula: 1
+    battle_arena: 1
+    battle_arena_and_dracula: 1
+  ignore_cleansing: 'false'
+  auto_run:
+    'true': 1
+    'false': 1
+  dss_patch:
+    'true': 1
+    'false': 1
+  always_allow_speed_dash:
+    'true': 2
+    'false': 1
+  iron_maiden_behavior:
+    vanilla: 1
+    start_broken: 1
+    detonator_in_pool: 1
+  required_last_keys: random-range-4-8
+  available_last_keys: random-range-5-9
+  buff_ranged_familiars:
+    'true': 1
+    'false': 1
+  buff_sub_weapons:
+    'true': 1
+    'false': 1
+  buff_shooter_strength:
+    'true': 1
+    'false': 1
+  item_drop_randomization:
+    normal: 1
+    tiered: 1
+  halve_dss_cards_placed: 'false'
+  countdown:
+    majors: 1
+    all_locations: 1
+  sub_weapon_shuffle:
+    'true': 1
+    'false': 1
+  disable_battle_arena_mp_drain:
+    'true': 2
+    'false': 1
+  required_skirmishes:
+    none: 1
+    all_bosses: 1
+  pluto_griffin_air_speed:
+    'true': 1
+    'false': 1
+  skip_dialogues: 'true'
+  skip_tutorials: 'true'
+  early_escape_item:
+    double: 1
+    double_or_roc_wing: 0
+  nerf_roc_wing:
+    'true': 1
+    'false': 1
+  battle_arena_music: # 50/50 chance between picking nothing or a random track.
+    nothing: 17
+    requiem: 1
+    a_vision_of_dark_secrets: 1
+    inversion: 1
+    awake: 1
+    the_sinking_old_sanctuary: 1
+    clockwork: 1
+    shudder: 1
+    fate_to_despair: 1
+    aquarius: 1
+    clockwork_mansion: 1
+    big_battle: 1
+    nightmare: 1
+    vampire_killer: 1
+    illusionary_dance: 1
+    proof_of_blood: 1
+    repose_of_souls: 1
+    circle_of_the_moon: 1
+  death_link: off
+  triggers:
+    # If Nerf Roc Wing gets enabled, give the Roc Wing a chance to appear early instead of the Double.
+    - option_category: "Castlevania - Circle of the Moon"
+      option_name: nerf_roc_wing
+      option_result: 'true'
+      options:
+        "Castlevania - Circle of the Moon":
+          early_escape_item:
+            double: 0
+            double_or_roc_wing: 1
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: CVCotM-{player}

@@ -1,0 +1,63 @@
+'Jak and Daxter: The Precursor Legacy':
+  enable_move_randomizer:
+    'false': 3
+    'true': 2
+  require_punch_for_klaww: 'true'
+  jak_completion_condition: defeat_gol_and_maia
+  enable_orbsanity:
+    'off': 5
+    per_level: 3
+    global: 3
+  global_orbsanity_bundle_size:
+    10_orbs: 2
+    20_orbs: 3
+    25_orbs: 4
+    40_orbs: 4
+    50_orbs: 3
+    80_orbs: 2
+    100_orbs: 1
+  level_orbsanity_bundle_size:
+    10_orbs: 2
+    25_orbs: 2
+    50_orbs: 3
+  enable_ordered_cell_counts: 'true'
+  fire_canyon_cell_count:
+    random-range-15-25: 1
+  mountain_pass_cell_count:
+    random-range-35-50: 1
+  lava_tube_cell_count:
+    random-range-65-85: 1
+  citizen_orb_trade_amount:
+    random-range-60-100: 1
+  oracle_orb_trade_amount:
+    random-range-60-130: 1
+  filler_power_cells_replaced_with_traps:
+    0: 1
+  filler_orb_bundles_replaced_with_traps:
+    0: 1
+  trap_effect_duration:
+    30: 1
+  trap_weights:
+    Camera Trap: 1
+    Darkness Trap: 1
+    Despair Trap: 1
+    Earthquake Trap: 1
+    Ecoless Trap: 1
+    Gravity Trap: 1
+    Health Trap: 1
+    Ledge Trap: 1
+    Mirror Trap: 1
+    Pacifism Trap: 1
+    Slippery Trap: 1
+    Teleport Trap: 1
+    Trip Trap: 1
+    Zoomer Trap: 1
+  local_items: 
+    [Freed The Green Sage, Freed The Blue Sage, Freed The Red Sage, Freed The Yellow Sage]
+  triggers:
+  - option_category: null
+    option_name: name
+    option_result: Player{player}
+    options:
+      null:
+        name: Jak-{player}

@@ -1,6 +1,7 @@
 import os
 import yaml
 from colorama import Fore
+from datetime import date
 
 
 # Please don't look too closely at this code below. kthx -Phar
@@ -77,8 +78,9 @@ def main():
     # Merge together each game yaml into our mystery settings.
     for game in mystery["game"].keys():
         try:
-            print(f"Loading ./games/{game}.yaml...")
-            with open(f"games/{game}.yaml", encoding="utf-8-sig") as game_file:
+            safe_name = "".join(c for c in game if c not in '<>:/\\|?*')
+            print(f"Loading ./games/{safe_name}.yaml...")
+            with open(f"games/{safe_name}.yaml", encoding="utf-8-sig") as game_file:
                 game_settings: dict = yaml.unsafe_load(game_file)
 
                 # Ensure that game_settings only has one property which has the same name as the file.
@@ -86,6 +88,10 @@ def main():
                     raise ValueError(f"Found {len(game_settings)} top-level keys in `./games/{game}.yaml`")
                 if game not in game_settings:
                     raise ValueError(f"Could not find `{game}` top-level key in `./games/{game}.yaml`")
+                
+                # Allow for certain yaml options to be set during a specific month. Note that this is set at yaml creation, not at generation start.
+                if "current_month" in game_settings[game]:
+                    game_settings[game]["current_month"] = date.today().strftime("%B")
 
                 mystery.update(game_settings)
         except FileNotFoundError:

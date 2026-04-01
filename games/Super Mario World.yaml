@@ -7,31 +7,35 @@ Super Mario World:
     - Thwimp Trap
     - Stun Trap
     - Literature Trap
+    - Timer Trap
   bosses_required: random-range-5-10
-  max_yoshi_egg_cap: 50
-  percentage_of_yoshi_eggs: random-range-85-100
+  max_yoshi_egg_cap: random-range-20-40
+  percentage_of_yoshi_eggs: random-range-60-95
   dragon_coin_checks:
     false: 2
     true: 1
   moon_checks:
-    false: 2
+    false: 1
     true: 1
   hidden_1up_checks:
-    false: 5
-    true: 1
+    false: 4
+    true: 2
   bonus_block_checks:
-    false: 5
+    false: 2
     true: 1
   blocksanity:
-    false: 3
-    true: 4
+    false: 2
+    true: 5
   bowser_castle_doors: vanilla
   bowser_castle_rooms:
     vanilla: 2
     random_two_room: 1
   level_shuffle:
-    false: 2
-    true: 1
+    false: 1
+    true: 2
+  castles_anywhere:
+    false: 1
+    true: 2
   exclude_special_zone:
     true: 2
     false: 1
@@ -40,15 +44,30 @@ Super Mario World:
     simple: 2
     full: 2
     singularity: 1
+  koopaling_health: random-range-3-5
+  bowser_health: random-range-2-4
   swap_donut_gh_exits: true
+  level_name_shuffle:
+    vanilla: 6
+    consistent: 3
+    sane: 1
+  level_tile_shuffle:
+    matching: 6
+    consistent_matching: 9
+    full: 4
+    singularity: 1
   junk_fill_percentage: 0
   trap_fill_percentage: random-low
-  stun_trap_weight: none
-  thwimp_trap_weight: none
-  literature_trap_weight: none
+  thwimp_trap_weight: random
   ice_trap_weight: random
-  timer_trap_weight: random
   reverse_trap_weight: random
+  stun_trap_weight: none
+  literature_trap_weight: none
+  timer_trap_weight: none
+  dry_trap_weight: random
+  ice_untrap_weight: random
+  reverse_untrap_weight: random
+  timer_untrap_weight: random
   autosave: true
   early_climb: false
   overworld_speed: fast
@@ -60,7 +79,6 @@ Super Mario World:
   sfx_shuffle:
     none: 6
     full: 3
-    singularity: 1
   mario_palette: random
   level_palette_shuffle:
     off: 3
@@ -84,10 +102,10 @@ Super Mario World:
       option_result: true
       options:
         Super Mario World:
-          max_yoshi_egg_cap: random-range-middle-50-150
+          max_yoshi_egg_cap: random-range-30-150
           stun_trap_weight: random
-          thwimp_trap_weight: random
           literature_trap_weight: random
+          timer_trap_weight: random
     - option_category: null
       option_name: name
       option_result: Player{player}

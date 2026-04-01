@@ -55,7 +55,7 @@ Pokemon Emerald:
   elite_four_requirement:
     badges: 70
     gyms: 30
-  elite_four_count: random-high
+  elite_four_count: random-range-high-4-8
   norman_requirement:
     badges: 70
     gyms: 30
@@ -102,16 +102,15 @@ Pokemon Emerald:
     match_base_stats_and_type: 5
     completely_random: 65
   types:
-    vanilla: 60
+    vanilla: 75
     shuffle: 20
-    completely_random: 10
-    follow_evolutions: 10
+    follow_evolutions: 5
   abilities:
     vanilla: 50
     completely_random: 25
     follow_evolutions: 25
   ability_blacklist:
-    ["Wonder Guard"]
+    ["Wonder Guard", "Truant"]
   level_up_moves:
     vanilla: 50
     randomized: 25
@@ -149,8 +148,10 @@ Pokemon Emerald:
     true: 50
   exp_modifier:
     100: 30
-    random-range-80-100: 5
-    random-range-100-500: 65
+    200: 17
+    300: 17
+    400: 17
+    500: 17
   blind_trainers:
     false: 40
     true: 60
@@ -196,6 +197,7 @@ Pokemon Emerald:
     true: 20
   death_link: false
   enable_wonder_trading: true
+  local_items: Letter
 
   triggers:
     # Blacklist wild legendaries
@@ -261,6 +263,18 @@ Pokemon Emerald:
         Pokemon Emerald:
           blind_trainers: false
 
+          
+    # Force xp gain to be >100% if trainer checks are disabled, to reduce grinding
+    - option_category: Pokemon Emerald
+      option_name: trainersanity
+      option_result: false
+      options:
+        Pokemon Emerald:
+          exp_modifier:
+            200: 1
+            300: 1
+            400: 1
+            500: 1
 
     # Blacklist trainer legendaries
     - option_category: Pokemon Emerald

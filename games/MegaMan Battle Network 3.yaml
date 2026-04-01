@@ -11,7 +11,9 @@ MegaMan Battle Network 3:
     Local: 3
     Anywhere: 2
     
-  exclude_locations: Chocolate Shop 07
+  exclude_locations:
+  - Chocolate Shop 07
+  - Undernet 2 Upper BMD
     
   triggers:
     - option_category: null
@@ -40,3 +42,4 @@ MegaMan Battle Network 3:
                 '1': 1
                 '2': 4
                 '3': 3
+

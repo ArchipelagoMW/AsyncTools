@@ -73,6 +73,9 @@ Pokemon Red and Blue:
   bicycle_gate_skips: patched
 
   #Other
+  game_version:
+    red: 50
+    blue: 50
   all_pokemon_seen: true
   randomize_rock_tunnel:
     true: 0
@@ -99,7 +102,13 @@ Pokemon Red and Blue:
   minimum_steps_between_encounters: 12
   exp_modifier: 32
   lose_money_on_blackout: false
-  better_shops: true
+  better_shops: 
+    'On': 50
+    add_master_ball: 25
+  master_ball_price: 
+    '200': 50
+    '600': 25
+    '1200': 25
   fix_combat_bugs: true
   level_scaling: auto
 
@@ -193,6 +202,7 @@ Pokemon Red and Blue:
           elite_four:
             badges: 20
             dex: 50
+          better_shops: add_master_ball
     - option_category: Pokemon Red and Blue
       option_name: elite_four
       option_result: dex
@@ -219,6 +229,7 @@ Pokemon Red and Blue:
             16: 50
             32: 25
           safari_zone_normal_battles: true
+          better_shops: add_master_ball
     - option_category: Pokemon Red and Blue
       option_name: cerulean_cave_condition
       option_result: badges
@@ -271,9 +282,15 @@ Pokemon Red and Blue:
           hm_same_type_compatibility: vanilla
           hm_normal_type_compatibility: vanilla
           hm_other_type_compatibility: vanilla
-    - option_category: null
-      option_name: name
-      option_result: Player{player}
+    - option_category: Pokemon Red and Blue
+      option_name: game_version
+      option_result: red
       options:
         null:
-          name: PokeRedBlue-{player}
+          name: PokeRed-{player}
+    - option_category: Pokemon Red and Blue
+      option_name: game_version
+      option_result: blue
+      options:
+        null:
+          name: PokeBlue-{player}

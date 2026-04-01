@@ -1,283 +1,806 @@
 Starcraft 2:
-  harder_mode:
-    false: 75
-    true: 25 # Enable only for filler-only asyncs
   game_format:
-    multi_campaign: 55
-    all_terran: 10
-    all_protoss: 5
-    wol: 10
-    hots: 10
-    lotv: 10
-  mission_order:
+    # Overarching trigger, selecting one of these formats
+    # Each format should consistently roll the exact amount of missions specified
+    # This should provide a way to easily identify them in the options table
+    standard: 25
+    # 50 missions, Grid/Golden Path/Hopscotch/Blitz
+    challenge: 15
+    # 40 missions, any_unit logic, reduced checks, always hard/brutal, trap items
+    free_to_play: 20
+    # 35 missions, only f2p (WoL, Prophecy, Prologue)
+    single_race_terran: 5
+    single_race_zerg: 5
+    single_race_protoss: 5
+    # 25 missions, shorter mission order, only one race
     vanilla: 5
-    vanilla_shuffled: 40
-    grid: 40
-    mini_campaign: 15
+    vanilla_shuffled: 5
+    # 83 missions, vanilla/vanilla shuffled
+    # race-swaps disabled, vanilla-like experience
+    # will always have progressive keys to prevent huge early releases
+    full_campaign: 5
+    # 195 missions, reduced checks, reduced effects of fillers 
+    # Designed to roll with all/most items, but not have too many fillers beyond that
+    # will always have progressive keys to prevent huge early releases
+    custom_big_async_logo: 5
+    # 105 missions, custom mission order
+    # canvas layout representing a Big Async logo
+    custom_swapped_campaigns: 5
+    # 42 missions, custom mission order
+    # 6 columns of 7 missions each, each column representing one campaign with swapped race
+
+
   game_difficulty:
-    casual: 25
-    normal: 35
-    hard: 20
-    brutal: 0
+    # Affects all game formats, sets the ingame difficulty setting
+    # Additionally affects several other settings, which have an effect on difficulty
+    # most notably limits to upgrades per unit, limits to SoA and Kerrigan abilities
+    # as well as settings for Weapon/Armor upgrades and difficult checks
+    casual: 20
+    normal: 25
+    hard: 30
+    brutal: 25
+
+  # These options are not affected by triggers
+  # They will always roll as stated in this section
   all_in_map: random
-  maximum_campaign_size: 83
-  grid_two_start_positions: random
-  shuffle_no_build:
-    true: 75
-    false: 25
-  starter_unit:
-    balanced: 75
-    any_starter_unit: 25
-  required_tactics: standard
   ensure_generic_items: 25
-  min_number_of_upgrades: 2
-  max_number_of_upgrades: -1
-  generic_upgrade_research:
-    auto_in_no_build: 75
-    always_auto: 25
-  nco_items: true
-  bw_items: true
-  ext_items: true
-  enable_wol_missions: false
-  enable_prophecy_missions: false
-  enable_hots_missions: false
-  enable_lotv_prologue_missions: false
-  enable_lotv_missions: false
-  enable_nco_missions: false
-  enable_epilogue_missions: false
-  grant_story_tech:
-    false: 75
-    true: 25
-  grant_story_levels: minimum
-  kerrigan_presence: not_present
-  kerrigan_levels_per_mission_completed: 0
-  kerrigan_levels_per_mission_completed_cap: -1
-  kerrigan_level_item_sum: random-range-70-140
-  kerrigan_level_item_distribution:
-    size_7: 15
-    size_10: 30
-    size_14: 40
-    size_35: 15
+  generic_upgrade_research_speedup: false
+  vanilla_items_only: false
+  grant_story_tech: allow_substitutes
+  mission_order_scouting: completed
+  enable_void_trade: true
+  void_trade_age_limit: 1_week
+  void_trade_workers: false
+  enable_morphling: true
   take_over_ai_allies: false
+  nova_ghost_of_a_chance_variant: auto
+  mercenary_highlanders: true
+  difficulty_curve: standard
+  mission_race_balancing: semi_balanced
   vanilla_locations: enabled
   extra_locations: enabled
   challenge_locations: enabled
-  mastery_locations: enabled
-  exclude_very_hard_missions:
-    default: 50
-    true: 50
-  excluded_missions: []
-  spear_of_adun_presence: lotv_protoss
+
+  # These options will sometimes be overridden by a trigger
+  # size should always be changed by a trigger. 
+  # If it ends up with 10, something went wrong
+  maximum_campaign_size: 10  
+  required_tactics: 
+    standard: 50
+    advanced: 50
+  mission_order:
+    # standard distribution for mission orders
+    grid: 30
+    golden_path: 40
+    hopscotch: 20
+    Blitz: 10
+  enabled_campaigns:
+    - 'Wings of Liberty'
+    - 'Prophecy'
+    - 'Heart of the Swarm'
+    - 'Whispers of Oblivion (Legacy of the Void: Prologue)'
+    - 'Legacy of the Void'
+    - 'Into the Void (Legacy of the Void: Epilogue)'
+    - 'Nova Covert Ops'
+  selected_races:
+    - 'Terran'
+    - 'Zerg'
+    - 'Protoss'
+  enable_race_swap: shuffle_all
+  shuffle_no_build: true
+  starter_unit: off
+  two_start_positions: true
+  difficulty_damage_modifier: false
+  min_number_of_upgrades: 2
+  max_number_of_upgrades: -1
+  generic_upgrade_research: vanilla
+  max_upgrade_level: 3
+  generic_upgrade_items: individual_items
+  generic_upgrade_missions: 25
+  exclude_overpowered_items: true
+  war_council_nerfs: true
+  grant_story_levels: disabled
+  kerrigan_presence: vanilla
+  kerrigan_levels_per_mission_completed: 0
+  kerrigan_levels_per_mission_completed_cap: -1
+  kerrigan_total_level_cap: -1
+  kerrigan_level_item_sum: 70
+  kerrigan_level_item_distribution: vanilla
+  kerrigan_primal_status: item
+  start_primary_abilities: 0
+  mastery_locations: filler
+  speedrun_locations: filler
+  exclude_very_hard_missions: false
+  spear_of_adun_presence: vanilla
   spear_of_adun_present_in_no_build: false
-  spear_of_adun_autonomously_cast_ability_presence: lotv_protoss
-  spear_of_adun_autonomously_cast_present_in_no_build: false
-  triggers:
-    # Link grant_story_levels to grant_story_tech
-    - option_category: Starcraft 2
-      option_name: grant_story_tech
-      option_result: false
-      options:
-        Starcraft 2:
-          grant_story_levels: disabled
-    - option_category: Starcraft 2
-      option_name: grant_story_tech
-      option_result: true
-      options:
-        Starcraft 2:
-          grant_story_levels:
-            additive: 50
-            minimum: 50
+  spear_of_adun_passive_ability_presence: vanilla
+  spear_of_adun_passive_present_in_no_build: false
+  spear_of_adun_max_active_abilities: 13
+  spear_of_adun_max_passive_abilities: 3
+  nova_max_weapons: 5
+  nova_max_gadgets: 5
+  kerrigan_max_active_abilities: 12
+  kerrigan_max_passive_abilities: 5
+  # key mode will always be overridden by triggers, and always use progressive options
+  # smaller slots <= 50 missions will have 20% chance for no keys
+  # bigger slots will always have keys
+  key_mode: disabled  
+  victory_cache: 0
+  filler_percentage: 0
+  minerals_per_item: 10
+  vespene_per_item: 10
+  starting_supply_per_item: 2
+  maximum_supply_per_item: 2
+  maximum_supply_reduction_per_item: 1
+  lowest_maximum_supply: 200
+  research_cost_reduction_per_item: 5
+  filler_items_distribution:
+    1 Kerrigan Level: 0
+    Additional Maximum Supply: 1
+    Additional Starting Minerals: 1
+    Additional Starting Supply: 1
+    Additional Starting Vespene: 1
+    Decreased Maximum Supply: 0
+    Increased Building Construction Speed: 1
+    Increased Shield Regeneration: 1
+    Increased Upgrade Research Speed: 1
+    Reduced Upgrade Research Cost: 1
+
+  full_campaign_mission_order: 0 # needs to exist, so we can override it with triggers
+
+  custom_mission_order: 
+    # needs to exist, so we can override it with triggers
+    # fill with minimum values to be valid
+    Empty:
+      type: column
+      size: 1
+
+  excluded_missions:
+    - 'The Infinite Cycle'
+    # tends to cause issues with Kerrigan levels/items
+    # gets unexcluded for full campaign and vanilla mission orders
+    - 'Maw of the Void (Zerg)'
+    # way too high logic requirements, often causes fill errors in smaller mission orders
+    # logic will be remade, until then exclude this for safety
+    # gets unexcluded for full campaign
+
+  triggers: 
     # Game formats
     - option_category: Starcraft 2
       option_name: game_format
-      option_result: multi_campaign
+      option_result: standard
       options:
         Starcraft 2:
-          enable_wol_missions: true
-          enable_prophecy_missions: true
-          enable_hots_missions: true
-          enable_lotv_prologue_missions: true
-          enable_lotv_missions: true
-          enable_nco_missions: true
-          enable_epilogue_missions: true
-          maximum_campaign_size:
-            83: 85
-            40: 15
-          spear_of_adun_presence:
-            protoss: 50
-            everywhere: 50
-          spear_of_adun_present_in_no_build: random
-          spear_of_adun_autonomously_cast_ability_presence:
-            protoss: 50
-            everywhere: 50
-          spear_of_adun_autonomously_cast_present_in_no_build: random
-          take_over_ai_allies: random
-          kerrigan_presence: vanilla
+          maximum_campaign_size: 50
+          enable_race_swap: pick_one
+
     - option_category: Starcraft 2
       option_name: game_format
-      option_result: all_terran
+      option_result: challenge
       options:
         Starcraft 2:
-          enable_wol_missions: true
-          enable_nco_missions: true
-          maximum_campaign_size:
-            34: 85
-            17: 15
+          maximum_campaign_size: 40
+          enable_race_swap: pick_one
+          required_tactics: any_units
+          game_difficulty: 
+              hard: 40
+              brutal: 60
+          maximum_supply_reduction_per_item: 10
+          lowest_maximum_supply: 200
+          filler_items_distribution:
+              1 Kerrigan Level: 0
+              Additional Maximum Supply: 10
+              Additional Starting Minerals: 10
+              Additional Starting Supply: 10
+              Additional Starting Vespene: 10
+              Decreased Maximum Supply: 1
+              Increased Building Construction Speed: 10
+              Increased Shield Regeneration: 10
+              Increased Upgrade Research Speed: 10
+              Reduced Upgrade Research Cost: 10
+
     - option_category: Starcraft 2
       option_name: game_format
-      option_result: all_protoss
+      option_result: free_to_play
       options:
         Starcraft 2:
-          enable_prophecy_missions: true
-          enable_lotv_prologue_missions: true
-          enable_lotv_missions: true
-          spear_of_adun_presence: protoss
-          spear_of_adun_autonomously_cast_ability_presence: protoss
-          spear_of_adun_present_in_no_build: random
-          spear_of_adun_autonomously_cast_present_in_no_build: random
-          maximum_campaign_size:
-            26: 85
-            16: 15
+          maximum_campaign_size: 35
+          enabled_campaigns: !!set
+            ? 'Wings of Liberty'
+            ? 'Prophecy'
+            ? 'Whispers of Oblivion (Legacy of the Void: Prologue)'
+          kerrigan_presence: not_present
+
     - option_category: Starcraft 2
       option_name: game_format
-      option_result: wol
+      option_result: single_race_terran
       options:
         Starcraft 2:
-          enable_wol_missions: true
-          maximum_campaign_size:
-            25: 85
-            16: 15
+          maximum_campaign_size: 25
+          enable_race_swap: pick_one
+          selected_races: !!set
+            ? 'Terran'
+          kerrigan_presence: not_present
+
     - option_category: Starcraft 2
       option_name: game_format
-      option_result: hots
+      option_result: single_race_zerg
       options:
         Starcraft 2:
-          enable_hots_missions: true
-          maximum_campaign_size:
-            20: 85
-            12: 15
-          shuffle_no_build: true
-          kerrigan_presence: vanilla
+          maximum_campaign_size: 25
+          enable_race_swap: pick_one
+          selected_races: !!set
+            ? 'Zerg'
+
     - option_category: Starcraft 2
       option_name: game_format
-      option_result: lotv
+      option_result: single_race_protoss
       options:
         Starcraft 2:
-          enable_lotv_missions: true
-          maximum_campaign_size:
-            19: 85
-            12: 15
-          grid_two_start_positions: false # Possibly not enough starters
-          shuffle_no_build: true
-          spear_of_adun_present_in_no_build: random
-          spear_of_adun_autonomously_cast_present_in_no_build: random
-    # Exclude missions requiring Kerrigan level in short orders
-    # Mini campaign
+          maximum_campaign_size: 25
+          enable_race_swap: pick_one
+          selected_races: !!set
+            ? 'Protoss'
+          kerrigan_presence: not_present
+
+    - option_category: Starcraft 2
+      option_name: game_format
+      option_result: vanilla
+      options:
+        Starcraft 2:
+          maximum_campaign_size: 83
+          mission_order: vanilla
+          enable_race_swap: disabled
+          excluded_missions: []  # un-do all exclusions
+
+    - option_category: Starcraft 2
+      option_name: game_format
+      option_result: vanilla_shuffled
+      options:
+        Starcraft 2:
+          maximum_campaign_size: 83
+          mission_order: vanilla_shuffled
+          enable_race_swap: pick_one
+          excluded_missions: []  # un-do all exclusions
+
+    - option_category: Starcraft 2
+      option_name: game_format
+      option_result: full_campaign
+      options:
+        Starcraft 2:
+          maximum_campaign_size: 195
+          full_campaign_mission_order: 
+            # always force keys to prevent huge early releases
+            grid_keys: 40
+            golden_path_keys: 40 
+            blitz_keys: 20 
+            # don't include hopscotch here
+          excluded_missions: []  # un-do all exclusions
+
+    # Match key mode to mission orders
     - option_category: Starcraft 2
       option_name: mission_order
-      option_result: mini_campaign
+      option_result: vanilla
       options:
         Starcraft 2:
-          excluded_missions:
-            - Supreme
-            - The Infinite Cycle
-          maximum_campaign_size: 40
-    # Short grids
-    # Don't treat vanilla shuffled as a short grid first
+          enable_race_swap: disabled
+          key_mode: 
+            progressive_missions: 40
+            progressive_questlines: 30
+            progressive_per_questline: 30
+            # only used for big  mission orders, so always force keys
     - option_category: Starcraft 2
       option_name: mission_order
       option_result: vanilla_shuffled
       options:
         Starcraft 2:
-          maximum_campaign_size: 83
+          key_mode: 
+            progressive_missions: 40
+            progressive_questlines: 30
+            progressive_per_questline: 30
+            # only used for big  mission orders, so always force keys
     - option_category: Starcraft 2
-      option_name: maximum_campaign_size
-      option_result: 12
+      option_name: mission_order
+      option_result: grid
       options:
         Starcraft 2:
-          excluded_missions:
-            - Supreme
-            - The Infinite Cycle
+          key_mode: 
+            progressive_missions: 80
+            disabled: 20
     - option_category: Starcraft 2
-      option_name: maximum_campaign_size
-      option_result: 16
+      option_name: mission_order
+      option_result: golden_path
       options:
         Starcraft 2:
-          excluded_missions:
-            - Supreme
-            - The Infinite Cycle
+          key_mode: 
+            progressive_missions: 30
+            progressive_questlines: 20
+            progressive_per_questline: 30
+            disabled: 20
     - option_category: Starcraft 2
-      option_name: maximum_campaign_size
-      option_result: 40
+      option_name: mission_order
+      option_result: hopscotch
       options:
         Starcraft 2:
-          excluded_missions:
-            - Supreme
-            - The Infinite Cycle
-    # Harder mode (for filler-only asyncs)
-    # Shouldn't be too challenging as truly challenging YAMLs are heavily customized
+          key_mode: 
+            progressive_missions: 80
+            disabled: 20
     - option_category: Starcraft 2
-      option_name: harder_mode
-      option_result: true
+      option_name: mission_order
+      option_result: blitz
       options:
         Starcraft 2:
-          game_difficulty:
-            casual: 0
-            normal: 25
-            hard: 50
-            brutal: 25
-          required_tactics: advanced
-          max_number_of_upgrades: random-range-4-12
-    # Harder mode: Allow standard tactics + Brutal
+          key_mode: 
+            progressive_missions: 80
+            disabled: 20
+
+    # difficulty
+    # casual: auto upgrades, no limits on upgrades per unit
+    # no war council nerfs, all OP items, mastery locations disabled
+    - option_category: Starcraft 2
+      option_name: game_difficulty
+      option_result: casual
+      options:
+        Starcraft 2:
+          starter_unit: balanced
+          difficulty_damage_modifier: true # makes your units take less damage on casual
+          min_number_of_upgrades: 5
+          max_number_of_upgrades: -1
+          generic_upgrade_research: always_auto
+          max_upgrade_level: 5
+          generic_upgrade_items: bundle_all
+          generic_upgrade_missions: 15
+          exclude_overpowered_items: false
+          war_council_nerfs: false
+          kerrigan_presence: vanilla
+          mastery_locations: disabled
+          spear_of_adun_presence: everywhere
+          spear_of_adun_present_in_no_build: true
+          spear_of_adun_passive_ability_presence: everywhere
+          spear_of_adun_passive_present_in_no_build: true
+          spear_of_adun_max_active_abilities: 13
+          spear_of_adun_max_passive_abilities: 3
+          nova_max_weapons: 5
+          nova_max_gadgets: 5
+          kerrigan_max_active_abilities: 12
+          kerrigan_max_passive_abilities: 5
+          filler_percentage: 0
+          filler_items_distribution:
+            Additional Maximum Supply: 1
+            Additional Starting Minerals: 1
+            Additional Starting Supply: 1
+            Additional Starting Vespene: 1
+            Decreased Maximum Supply: 0
+            Increased Building Construction Speed: 1
+            Increased Shield Regeneration: 1
+            Increased Upgrade Research Speed: 0
+            Reduced Upgrade Research Cost: 0
+
+    # normal: auto upgrades in no-builds, no limits on upgrades per unit
+    # no war council nerfs, OP items disabled
+    - option_category: Starcraft 2
+      option_name: game_difficulty
+      option_result: normal
+      options:
+        Starcraft 2:
+          starter_unit: any_starter_unit
+          difficulty_damage_modifier: false
+          min_number_of_upgrades: 3
+          max_number_of_upgrades: -1
+          generic_upgrade_research: auto_in_no_build
+          max_upgrade_level: 4
+          generic_upgrade_items: individual_items
+          generic_upgrade_missions: 0
+          exclude_overpowered_items: true
+          war_council_nerfs: false
+          kerrigan_presence: vanilla
+          mastery_locations: filler
+          spear_of_adun_presence: any_race_lotv
+          spear_of_adun_present_in_no_build: false
+          spear_of_adun_passive_ability_presence: any_race_lotv
+          spear_of_adun_passive_present_in_no_build: true
+          spear_of_adun_max_active_abilities: 8
+          spear_of_adun_max_passive_abilities: 3
+          nova_max_weapons: 4
+          nova_max_gadgets: 4
+          kerrigan_max_active_abilities: 8
+          kerrigan_max_passive_abilities: 4
+          filler_percentage: 10
+          minerals_per_item: 10
+          vespene_per_item: 10
+          starting_supply_per_item: 2
+          maximum_supply_per_item: 2
+
+    # hard: upgrades need research, some limits on upgrades per unit
+    # limits on SoA/Kerrigan, war council nerfs, some forced fillers
+    - option_category: Starcraft 2
+      option_name: game_difficulty
+      option_result: hard
+      options:
+        Starcraft 2:
+          starter_unit: off
+          difficulty_damage_modifier: false
+          min_number_of_upgrades: 2
+          max_number_of_upgrades: 5
+          generic_upgrade_research: vanilla
+          max_upgrade_level: 3
+          generic_upgrade_items: individual_items
+          generic_upgrade_missions: 0
+          exclude_overpowered_items: true
+          war_council_nerfs: true
+          kerrigan_presence: vanilla
+          spear_of_adun_presence:
+            protoss: 50
+            any_race_lotv: 50
+          spear_of_adun_present_in_no_build: false
+          spear_of_adun_max_active_abilities: 5
+          spear_of_adun_max_passive_abilities: 2
+          nova_max_weapons: 3
+          nova_max_gadgets: 3
+          kerrigan_max_active_abilities: 5
+          kerrigan_max_passive_abilities: 3
+          filler_percentage: 20
+          minerals_per_item: 10
+          vespene_per_item: 10
+          starting_supply_per_item: 2
+          maximum_supply_per_item: 2
+
+    # brutal: upgrades need research, stricter limits on upgrades per unit
+    # Kerrigan disabled, limits on SoA, war council nerfs, more forced fillers, trap items
     - option_category: Starcraft 2
       option_name: game_difficulty
       option_result: brutal
       options:
         Starcraft 2:
-          required_tactics:
-            standard: 25
-            advanced: 75
-    # Harder mode - full campaigns - don't spawn many filler items giving the player too many resources
+          starter_unit: off
+          difficulty_damage_modifier: 
+            false: 50
+            true: 50
+          min_number_of_upgrades: 1
+          max_number_of_upgrades: 3
+          generic_upgrade_research: vanilla
+          max_upgrade_level: 3
+          generic_upgrade_items: individual_items
+          generic_upgrade_missions: 0
+          exclude_overpowered_items: true
+          war_council_nerfs: true
+          kerrigan_presence: not_present
+          spear_of_adun_presence:
+            not_present: 50
+            protoss: 50
+          spear_of_adun_max_active_abilities: 4
+          spear_of_adun_max_passive_abilities: 1
+          nova_max_weapons: 2
+          nova_max_gadgets: 2
+          kerrigan_max_active_abilities: 0
+          kerrigan_max_passive_abilities: 0
+          filler_percentage: 30
+          minerals_per_item: 10
+          vespene_per_item: 10
+          starting_supply_per_item: 2
+          maximum_supply_per_item: 2
+
+    # very big mission orders, always force keys to prevent huge early release
     - option_category: Starcraft 2
-      option_name: maximum_campaign_size
-      option_result: 83
+      option_name: full_campaign_mission_order
+      option_result: grid_keys
       options:
         Starcraft 2:
-          max_number_of_upgrades: -1
+          mission_order: grid
+          key_mode: progressive_missions
     - option_category: Starcraft 2
-      option_name: maximum_campaign_size
-      option_result: 34
+      option_name: full_campaign_mission_order
+      option_result: blitz_keys
       options:
         Starcraft 2:
-          max_number_of_upgrades: -1
+          mission_order: blitz
+          key_mode: progressive_missions
     - option_category: Starcraft 2
-      option_name: maximum_campaign_size
-      option_result: 26
+      option_name: full_campaign_mission_order
+      option_result: golden_path_keys
       options:
         Starcraft 2:
-          max_number_of_upgrades: -1
+          mission_order: golden_path
+          key_mode: 
+            progressive_missions: 50
+            progressive_per_questline: 50
+
+    # Custom Big Async canvas
     - option_category: Starcraft 2
-      option_name: maximum_campaign_size
-      option_result: 25
+      option_name: game_format
+      option_result: custom_big_async_logo
       options:
         Starcraft 2:
-          max_number_of_upgrades: -1
+          maximum_campaign_size: 105  # has no effect, just for clarity
+          mission_order: custom
+          key_mode: progressive_per_questline  # has no effect, but the keys function similarly 
+          custom_mission_order:
+            The Big Async:
+              type: canvas
+              canvas:
+                # Big Async logo
+                - ' bbb  aa  ccc   '  # 01
+                - ' z  z tt p      '  # 02
+                - ' z  z tt p      '  # 03
+                - ' zzz  tt p pp   '  # 04
+                - ' z  z tt p   p  '  # 05
+                - ' z  z tt p   p  '  # 06
+                - ' zzz  tt  ppp   '  # 07
+                - '                '  # 08
+                - ' t  p t tz  z pp'  # 09
+                - ' t p pt tz  zp  '  # 10
+                - 't tp  t tzz zp  '  # 11
+                - 't t p  t zzzzp  '  # 12
+                - 'ttt  p t z zzp  '  # 13
+                - 't tp p t z  zp  '  # 14
+                - 'T T P  T Z  Z PP'  # 15
+                
+                # 105 missions total
+                # Terran: I + A + Y = 37 missions
+                # Zerg: B + N = 35 missions
+                # Protoss: G + S + C = 33 missions
+                
+              jump_distance_orthogonal: 2
+              jump_distance_diagonal: 1
+              missions:
+                - index:
+                    - group(a)  # Terran starters
+                  mission_pool:
+                    - Terran Missions
+                  entrance: true
+                - index:
+                    - group(b)  # Zerg starters
+                  mission_pool:
+                    - Zerg Missions
+                  entrance: true
+                - index:
+                    - group(c)  # Protoss starters
+                  mission_pool:
+                    - Protoss Missions
+                  entrance: true
+                - index:
+                    - group(t)
+                  mission_pool:
+                    - Terran Missions
+                  entry_rules:
+                  - items: 
+                        Progressive Key: 2
+                - index:
+                    - group(z)
+                  mission_pool:
+                    - Zerg Missions
+                  entry_rules:
+                  - items: 
+                        Progressive Key: 1
+                - index:
+                    - group(p)
+                  mission_pool:
+                    - Protoss Missions
+                  entry_rules:
+                  - items: 
+                        Progressive Key: 3
+                - index:
+                    - group(T)
+                  mission_pool:
+                    - Terran Missions
+                  entry_rules:
+                  - items: 
+                        Progressive Key: 2
+                  difficulty: very_hard
+                  exit: true
+                  goal: true
+                - index:
+                    - group(Z)
+                  mission_pool:
+                    - Zerg Missions
+                  entry_rules:
+                  - items: 
+                        Progressive Key: 1
+                  difficulty: very_hard
+                  exit: true
+                  goal: true
+                - index:
+                    - group(P)
+                  mission_pool:
+                    - Protoss Missions
+                  entry_rules:
+                  - items: 
+                        Progressive Key: 3
+                  difficulty: very_hard
+                  exit: true
+                  goal: true
+
+    # Custom race-swapped campaigns
     - option_category: Starcraft 2
-      option_name: maximum_campaign_size
-      option_result: 20
+      option_name: game_format
+      option_result: custom_swapped_campaigns
       options:
         Starcraft 2:
-          max_number_of_upgrades: -1
+          maximum_campaign_size: 42  # has no effect, just for clarity
+          enable_race_swap: pick_one_non_vanilla
+          mission_order: custom
+          kerrigan_presence: not_present  # Kerrigan currently cannot appear in forced race swaps
+          spear_of_adun_presence: protoss  # override vanilla setting, as that would not work in forced race swaps
+          key_mode: progressive_per_questline  # has no effect, but the keys function similarly
+          custom_mission_order:
+            Swap of the Race:
+                #  6 columns times 7 missions = 42 missions
+                Wings of the Swarm:
+                    size: 7
+                    type: column
+                    mission_pool: 
+                        - Terran Missions
+                        - ^ HotS Missions
+                    missions: 
+                        - index: [1, 3, 5]
+                          entry_rules:
+                            - items: 
+                                Progressive Key: 1  # each key unlocks 2 missions
+                        - index: [6]
+                          goal: true
+                Heart of the Void:
+                    size: 7
+                    type: column
+                    mission_pool: 
+                        - LotV Missions
+                        - Prophecy Missions
+                        - Prologue Missions
+                        - ^ Zerg Missions
+                    missions: 
+                        - index: [1, 3, 5]
+                          entry_rules:
+                            - items: 
+                                Progressive Key: 2
+                        - index: [6]
+                          goal: true
+                Legacy of Liberty:
+                    size: 7
+                    type: column
+                    mission_pool: 
+                        - Protoss Missions
+                        - ^ WoL Missions
+                    missions: 
+                        - index: [1, 3, 5]
+                          entry_rules:
+                            - items: 
+                                Progressive Key: 3
+                        - index: [6]
+                          goal: true
+                Wings of the Void:
+                    size: 7
+                    type: column
+                    mission_pool: 
+                        - LotV Missions
+                        - Prophecy Missions
+                        - Prologue Missions
+                        - ^ Terran Missions
+                    missions: 
+                        - index: [1, 3, 5]
+                          entry_rules:
+                            - items: 
+                                Progressive Key: 4
+                        - index: [6]
+                          goal: true
+                Heart of Liberty:
+                    size: 7
+                    type: column
+                    mission_pool: 
+                        - Zerg Missions
+                        - ^ WoL Missions
+                    missions: 
+                        - index: [1, 3, 5]
+                          entry_rules:
+                            - items: 
+                                Progressive Key: 5
+                        - index: [6]
+                          goal: true
+                Legacy of the Swarm:
+                    size: 7
+                    type: column
+                    mission_pool: 
+                        - Protoss Missions
+                        - ^ HotS Missions
+                    missions: 
+                        - index: [1, 3, 5]
+                          entry_rules:
+                            - items: 
+                                Progressive Key: 6
+                        - index: [6]
+                          goal: true         
+
+    # long games - reduce effect of fillers
     - option_category: Starcraft 2
       option_name: maximum_campaign_size
-      option_result: 19
+      option_result: 195  # Game Format: Full Campaign
       options:
         Starcraft 2:
-          max_number_of_upgrades: -1
+          minerals_per_item: 5
+          vespene_per_item: 5
+          starting_supply_per_item: 1
+          maximum_supply_per_item: 1
+          research_cost_reduction_per_item: 2
+    - option_category: Starcraft 2
+      option_name: maximum_campaign_size
+      option_result: 83  # Game Format: Vanilla
+      options:
+        Starcraft 2:          
+          minerals_per_item: 8
+          vespene_per_item: 8
+          starting_supply_per_item: 2
+          maximum_supply_per_item: 1
+          research_cost_reduction_per_item: 3
+    - option_category: Starcraft 2
+      option_name: maximum_campaign_size
+      option_result: 105  # Game Format: Custom Big Async Canvas
+      options:
+        Starcraft 2:          
+          minerals_per_item: 8
+          vespene_per_item: 8
+          starting_supply_per_item: 2
+          maximum_supply_per_item: 1
+          research_cost_reduction_per_item: 3
+
+    # match options for clarity
+    # Kerrigan
+    - option_category: Starcraft 2
+      option_name: kerrigan_presence
+      option_result: not_present
+      # if Kerrigan is not present, disable/null all related options
+      options:
+        Starcraft 2:
+          kerrigan_max_active_abilities: 0
+          kerrigan_max_passive_abilities: 0
+          # don't change any other options, they will not show up in the options table
+
+    # Spear of Adun
+    - option_category: Starcraft 2
+      option_name: spear_of_adun_presence
+      option_result: not_present
+      # if SoA is not present, disable/null all related options
+      options:
+        Starcraft 2:
+          spear_of_adun_passive_ability_presence: not_present
+          spear_of_adun_present_in_no_build: false
+          spear_of_adun_passive_present_in_no_build: false
+          spear_of_adun_max_active_abilities: 0
+          spear_of_adun_max_passive_abilities: 0
+
+    - option_category: Starcraft 2
+      option_name: spear_of_adun_presence
+      option_result: vanilla
+      # match active + passive settings
+      options:
+        Starcraft 2:
+          spear_of_adun_passive_ability_presence: vanilla
+
+    - option_category: Starcraft 2
+      option_name: spear_of_adun_presence
+      option_result: protoss
+      # match active + passive settings
+      options:
+        Starcraft 2:
+          spear_of_adun_passive_ability_presence: protoss
+
+    - option_category: Starcraft 2
+      option_name: spear_of_adun_presence
+      option_result: any_race_lotv
+      # match active + passive settings
+      options:
+        Starcraft 2:
+          spear_of_adun_passive_ability_presence: any_race_lotv
+
+    - option_category: Starcraft 2
+      option_name: spear_of_adun_present_in_no_build
+      option_result: true
+      # match active + passive settings
+      options:
+        Starcraft 2:
+          spear_of_adun_passive_present_in_no_build: true
+
+    # Slot name
     - option_category: null
       option_name: name
       option_result: Player{player}
       options:
         null:
           name: SC2-{player}
-

@@ -4,6 +4,23 @@ The Wind Waker:
     'true': 100
     'false': 0
 
+  # Triforce Shards usually end up solely as goal macguffins.
+  # There are 2 checks behind them all, the Master Sword Chamber Chest and the Ganon's Tower Maze Chest.
+  # The Ganon's Tower Maze Chest is behind the Barrier so has even more requirements than the Master Sword Chamber
+  # Chest.
+  # Mixed ER considers the Master Sword Chamber to be a miniboss entrance, so it is possible for a dungeon to be
+  # randomized to the Master Sword Chamber entrance. While it is possible for that to happen with this filler yaml, it
+  # is unlikely, so, for simplicity, Triforce Shards are set to local for all TWW filler yamls.
+  local_items:
+    - Triforce Shard 1
+    - Triforce Shard 2
+    - Triforce Shard 3
+    - Triforce Shard 4
+    - Triforce Shard 5
+    - Triforce Shard 6
+    - Triforce Shard 7
+    - Triforce Shard 8
+
   ### Trigger control for starting inventory
   trigger_start_inventory_from_pool:
     # No specific items. May still include a sword or startwith keys/maps/compasses depending on other options.

@@ -6,7 +6,7 @@ Kirby's Dream Land 3:
     mg5: 10
     jumping: 10
   goal_speed: normal
-  total_heart_stars: random-range-30-50 # Never go below the vanilla count of Heart Stars
+  max_heart_stars: random-range-30-50 # Never go below the vanilla count of Heart Stars
   heart_stars_required: random-range-40-80
   filler_percentage: 25
   trap_percentage: 0

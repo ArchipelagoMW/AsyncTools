@@ -1,10 +1,15 @@
 Sonic Adventure 2 Battle:
   goal:
-    biolizard: 3
-    cannons_core_boss_rush: 1
-    boss_rush_chaos_emerald_hunt: 1
-    finalhazard_chaos_emerald_hunt: 1
+    CC: 3
+    Emeralds: 2
+    minigame_madness: 2
   mission_shuffle: true
+  minigame_madness_requirement:
+    '4': 1
+    '5': 1
+  minigame_madness_minimum:
+    '5': 1
+    random-high: 1
   boss_rush_shuffle:
     vanilla: 2
     shuffled: 1
@@ -23,6 +28,13 @@ Sonic Adventure 2 Battle:
   omosanity:
     false: 2
     true: 1
+  itemboxsanity:
+    none: 5
+    extra_lives: 2
+    all: 1
+  bigsanity:
+    false: 5
+    true: 2
   kart_race_checks:
     none: 2
     mini: 1
@@ -64,16 +76,6 @@ Sonic Adventure 2 Battle:
     4: 1
   junk_fill_percentage: random-low
   trap_fill_percentage: random-low
-  omochao_trap_weight: random
-  timestop_trap_weight: random
-  confusion_trap_weight: random
-  tiny_trap_weight: random
-  gravity_trap_weight: random
-  exposition_trap_weight: random
-  ice_trap_weight: random
-  slow_trap_weight: random
-  cutscene_trap_weight: random
-  pong_trap_weight: random
   minigame_trap_difficulty: easy
   ring_loss:
     classic: 1
@@ -81,21 +83,36 @@ Sonic Adventure 2 Battle:
   sadx_music: sa2b
   narrator: random
   logic_difficulty: standard
-  speed_mission_count: random-range-2-4
-  speed_mission_2: true
-  speed_mission_3: true
-  speed_mission_4: true
-  speed_mission_5: false
-  mech_mission_count: random-range-1-3
-  mech_mission_2: true
-  mech_mission_3: true
-  mech_mission_4: true
-  mech_mission_5: false
-  hunt_mission_count: random-range-1-3
-  hunt_mission_2: true
-  hunt_mission_3: true
-  hunt_mission_4: false
-  hunt_mission_5: false
+  sonic_mission_count: random-range-2-4
+  sonic_mission_2: 'true'
+  sonic_mission_3: 'true'
+  sonic_mission_4: 'true'
+  sonic_mission_5: 'false'
+  shadow_mission_count: random-range-2-4
+  shadow_mission_2: 'true'
+  shadow_mission_3: 'true'
+  shadow_mission_4: 'true'
+  shadow_mission_5: 'false'
+  tails_mission_count: random-range-1-3
+  tails_mission_2: 'true'
+  tails_mission_3: 'true'
+  tails_mission_4: 'true'
+  tails_mission_5: 'false'
+  eggman_mission_count: random-range-1-3
+  eggman_mission_2: 'true'
+  eggman_mission_3: 'true'
+  eggman_mission_4: 'true'
+  eggman_mission_5: 'false'
+  knuckles_mission_count: random-range-1-3
+  knuckles_mission_2: 'true'
+  knuckles_mission_3: 'true'
+  knuckles_mission_4: 'false'
+  knuckles_mission_5: 'false'
+  rouge_mission_count: random-range-1-3
+  rouge_mission_2: 'true'
+  rouge_mission_3: 'true'
+  rouge_mission_4: 'false'
+  rouge_mission_5: 'false'
   kart_mission_count: random-range-1-2
   kart_mission_2: true
   kart_mission_3: false
@@ -106,7 +123,6 @@ Sonic Adventure 2 Battle:
   cannons_core_mission_3: false
   cannons_core_mission_4: false
   cannons_core_mission_5: false
-  local_items: Chaos Emeralds
   triggers:
     - option_category: null
       option_name: name
@@ -129,7 +145,6 @@ Sonic Adventure 2 Battle:
             chao_stats_frequency: 
                 '1': 1
                 '2': 1
-                '5': 1
     - option_category: Sonic Adventure 2 Battle
       option_name: chao_race_difficulty
       option_result: none
@@ -168,7 +183,7 @@ Sonic Adventure 2 Battle:
                 standard: 2
                 expert: 5
                 super_override: 3
-            chao_stats: '60'
+            chao_stats: '70'
             chao_stats_frequency: 
                 '1': 1
                 '2': 1
@@ -179,7 +194,7 @@ Sonic Adventure 2 Battle:
       options:
         Sonic Adventure 2 Battle:
             chao_karate_difficulty: expert
-            chao_stats: '60'
+            chao_stats: '70'
             chao_stats_frequency: 
                 '1': 1
                 '2': 1
@@ -190,7 +205,7 @@ Sonic Adventure 2 Battle:
       options:
         Sonic Adventure 2 Battle:
             chao_karate_difficulty: super
-            chao_stats: '70'
+            chao_stats: '80'
             chao_stats_frequency: 
                 '1': 1
                 '2': 1
@@ -216,7 +231,6 @@ Sonic Adventure 2 Battle:
             chao_stats_frequency: 
                 '1': 1
                 '2': 1
-                '5': 1
     - option_category: Sonic Adventure 2 Battle
       option_name: whistlesanity
       option_result: both_plus
@@ -224,3 +238,139 @@ Sonic Adventure 2 Battle:
         Sonic Adventure 2 Battle:
             animalsanity: 'true'
             whistlesanity: both
+    - option_category: Sonic Adventure 2 Battle
+      option_name: goal
+      option_result: CC
+      options:
+        Sonic Adventure 2 Battle:
+            goal:
+                biolizard: 3
+                cannons_core_boss_rush: 1
+            trap_type_trigger:
+                none: 1
+                no_minigame: 1
+                all: 1
+    - option_category: Sonic Adventure 2 Battle
+      option_name: goal
+      option_result: Emeralds
+      options:
+        Sonic Adventure 2 Battle:
+            local_items: Chaos Emeralds
+            goal:
+                boss_rush_chaos_emerald_hunt: 1
+                finalhazard_chaos_emerald_hunt: 1
+            trap_type_trigger:
+                none: 1
+                no_minigame: 1
+                all: 1
+    - option_category: Sonic Adventure 2 Battle
+      option_name: goal
+      option_result: minigame_madness
+      options:
+        Sonic Adventure 2 Battle:
+            local_items: Minigames
+            trap_type_trigger:
+                only_minigame: 1
+                all: 1
+    - option_category: Sonic Adventure 2 Battle
+      option_name: trap_type_trigger
+      option_result: none
+      options:
+        Sonic Adventure 2 Battle:
+            trap_fill_percentage: 0
+    - option_category: Sonic Adventure 2 Battle
+      option_name: trap_type_trigger
+      option_result: no_minigame
+      options:
+        Sonic Adventure 2 Battle:
+            omochao_trap_weight: random
+            timestop_trap_weight: random
+            confusion_trap_weight: random
+            tiny_trap_weight: random
+            gravity_trap_weight: random
+            exposition_trap_weight: random
+            ice_trap_weight: random
+            slow_trap_weight: random
+            cutscene_trap_weight: random
+            reverse_trap_weight: random
+            literature_trap_weight: random
+            controller_drift_trap_weight: random
+            poison_trap_weight: random
+            bee_trap_weight: random
+  
+            pong_trap_weight: none
+            breakout_trap_weight: none
+            fishing_trap_weight: none
+            trivia_trap_weight: none
+            pokemon_trivia_trap_weight: none
+            pokemon_count_trap_weight: none
+            number_sequence_trap_weight: none
+            light_up_path_trap_weight: none
+            pinball_trap_weight: none
+            math_quiz_trap_weight: none
+            snake_trap_weight: none
+            input_sequence_trap_weight: none
+    - option_category: Sonic Adventure 2 Battle
+      option_name: trap_type_trigger
+      option_result: only_minigame
+      options:
+        Sonic Adventure 2 Battle:
+            omochao_trap_weight: none
+            timestop_trap_weight: none
+            confusion_trap_weight: none
+            tiny_trap_weight: none
+            gravity_trap_weight: none
+            exposition_trap_weight: none
+            ice_trap_weight: none
+            slow_trap_weight: none
+            cutscene_trap_weight: none
+            reverse_trap_weight: none
+            literature_trap_weight: none
+            controller_drift_trap_weight: none
+            poison_trap_weight: none
+            bee_trap_weight: none
+  
+            pong_trap_weight: random
+            breakout_trap_weight: random
+            fishing_trap_weight: random
+            trivia_trap_weight: random
+            pokemon_trivia_trap_weight: random
+            pokemon_count_trap_weight: random
+            number_sequence_trap_weight: random
+            light_up_path_trap_weight: random
+            pinball_trap_weight: random
+            math_quiz_trap_weight: random
+            snake_trap_weight: random
+            input_sequence_trap_weight: random
+    - option_category: Sonic Adventure 2 Battle
+      option_name: trap_type_trigger
+      option_result: all
+      options:
+        Sonic Adventure 2 Battle:
+            omochao_trap_weight: random
+            timestop_trap_weight: random
+            confusion_trap_weight: random
+            tiny_trap_weight: random
+            gravity_trap_weight: random
+            exposition_trap_weight: random
+            ice_trap_weight: random
+            slow_trap_weight: random
+            cutscene_trap_weight: random
+            reverse_trap_weight: random
+            literature_trap_weight: random
+            controller_drift_trap_weight: random
+            poison_trap_weight: random
+            bee_trap_weight: random
+  
+            pong_trap_weight: random
+            breakout_trap_weight: random
+            fishing_trap_weight: random
+            trivia_trap_weight: random
+            pokemon_trivia_trap_weight: random
+            pokemon_count_trap_weight: random
+            number_sequence_trap_weight: random
+            light_up_path_trap_weight: random
+            pinball_trap_weight: random
+            math_quiz_trap_weight: random
+            snake_trap_weight: random
+            input_sequence_trap_weight: random
