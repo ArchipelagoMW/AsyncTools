@@ -11,6 +11,9 @@ Super Mario 64:
   enable_move_rando:
     true: 1
     false: 1
+  enable_locked_paintings:
+    false: 1
+    true: 1
   move_rando_actions:
     - Triple Jump
     - Long Jump
