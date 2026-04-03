@@ -45,6 +45,9 @@ Factorio:
     10: 1
     random-low: 1
   energy_link: true
+  craftsanity:
+    random-range-0-183: 2
+    disabled: 1
   triggers:
     - option_category: Factorio
       option_name: world_type
