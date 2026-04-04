@@ -1,0 +1,155 @@
+﻿'SMW: Spicy Mycena Waffles':
+  energy_link: true
+  early_climb: 'false'
+  goal: random
+  yoshi_egg_count: random-range-20-40
+  yoshi_egg_placement:
+    # - Special Zone
+    - Switch Palaces
+    - Ghost Houses
+    - Castles
+    # - Every Level
+
+  percentage_of_yoshi_eggs: random-range-60-95
+  ability_shuffle: ['Swim', 'P-Switch', 'Yellow Switch Palace', 'Item Box', 'Midway Points', 'Special World', 'Carry', 'Run', 'Green Switch Palace', 'Blue Switch Palace', 'Powerups', 'Super Star', 'Red Switch Palace', 'Climb', 'P-Balloon', 'Spin Jump', 'Yoshi']
+
+  game_logic_difficulty:
+    easy: 6
+    medium: 3
+    hard: 1
+
+  alternate_logic: []
+
+  inventory_yoshi_logic: random
+
+  dragon_coin_checks:
+    false: 2
+    true: 1
+  moon_checks:
+    false: 1
+    true: 1
+  hidden_1up_checks:
+    false: 4
+    true: 2
+  star_block_checks:
+    false: 2
+    true: 1
+  midway_point_checks:
+    false: 1
+    true: 1
+  room_checks:
+    false: 2
+    true: 1
+  
+  blocksanity_trigger:
+    none: 2
+    light: 2 # Only adds checks for coin blocks and item blocks
+    insanity: 3
+  
+  block_checks: []
+
+  starting_location:
+    yoshis_island: 1
+    donut_plains: 1
+    vanilla_dome: 1
+    forest_of_illusion: 1
+    special_zone: 0
+
+  level_shuffle: 'true'
+  level_effects:
+    0: 5
+    random-low: 2
+
+  carryless_exits: random
+  swap_level_exits: random
+  swap_exit_count: random
+  swap_donut_gh_exits: 'true'
+  map_teleport_shuffle:
+    'off': 2
+    on_only_stars: 1
+    on_only_pipes: 1
+    on_both_same_type: 1
+    on_both_mix: 1
+
+  map_transition_shuffle: random
+
+  enemy_shuffle:
+    'false': 1
+    'true': 2
+
+  bowser_castle_doors: vanilla
+  bowser_castle_rooms:
+    vanilla: 2
+    random_two_room: 1
+
+  boss_shuffle:
+    none: 2
+    simple: 2
+    full: 2
+    singularity: 1
+
+  junk_fill_percentage: 0
+  trap_fill_percentage: random-low
+
+  ice_trap_weight: random
+  stun_trap_weight: none
+  literature_trap_weight: none
+  timer_trap_weight: none
+  reverse_trap_weight: random
+  thwimp_trap_weight: random
+  fishin_trap_weight: random
+  screen_flip_trap_weight: random
+  sticky_floor_trap_weight: random
+  sticky_hands_trap_weight: random
+  pixelate_trap_weight: random
+  spotlight_trap_weight: random
+  bullet_time_trap_weight: random
+  invisibility_trap_weight: random
+  empty_item_box_trap_weight: random
+
+  music_shuffle:
+    none: 6
+    consistent: 4
+    full: 2
+    singularity: 1
+  sfx_shuffle:
+    none: 6
+    full: 3
+  
+  mario_palette: random
+  ungolden_eggs: 'true'
+
+  local_items:
+    - Golden Yoshi Egg
+    - Thwimp Trap
+    - Stun Trap
+    - Literature Trap
+    - Timer Trap
+
+  triggers:
+    - option_category: 'SMW: Spicy Mycena Waffles'
+      option_name: blocksanity_trigger
+      option_result: light
+      options:
+        'SMW: Spicy Mycena Waffles':
+          yoshi_egg_count: random-range-30-100
+          stun_trap_weight: random
+          literature_trap_weight: random
+          timer_trap_weight: random
+          block_checks: ['Coin Blocks', 'Item Blocks']
+    - option_category: 'SMW: Spicy Mycena Waffles'
+      option_name: blocksanity_trigger
+      option_result: insanity
+      options:
+        'SMW: Spicy Mycena Waffles':
+          yoshi_egg_count: random-range-50-200
+          stun_trap_weight: random
+          literature_trap_weight: random
+          timer_trap_weight: random
+          block_checks: ['Coin Blocks', 'Item Blocks', 'Green Switch Palace Blocks', 'Flying Blocks', 'Invisible Blocks', 'Yellow Switch Palace Blocks', 'P-Switch Blocks']
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: Waffles-{player}

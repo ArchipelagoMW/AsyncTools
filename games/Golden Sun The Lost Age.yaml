@@ -1,0 +1,137 @@
+﻿Golden Sun The Lost Age:
+
+  ################
+  # Game Options #
+  ################
+  accessibility: full
+  coop: all
+    # Ensure all items are considered remote so that if players drop a slot it can be picked up easily by other players. This does not affect djinn unfortunately.
+
+  ################
+  # General Pool #
+  ################
+  item_shuffle: random
+  omit_locations: omit_superbosses_and_inner_sanctum
+  add_elvenshirt_clericsring: true
+  add_non_obtainable_items: true
+
+  ########
+  # Goal #
+  ########
+  goal:
+    ['Doom Dragon', 'Reunion', 'Djinn Hunt']
+  random_goals: 1
+  djinn_hunt_count: random-range-50-60
+  summon_hunt_count: 10
+  #summon_hunt_count setting is ignored as it is not a goal
+
+  #####################
+  # Logic Adjustments #
+  #####################
+  reveal_hidden_item: true
+  lemurian_ship:
+    ship_door_unlocked: 1
+    available_from_start: 1
+  start_with_wings_of_anemos: random
+  anemos_inner_sanctum_access: vanilla
+  djinn_logic: 100
+  name_puzzles: vanilla
+  shortcut_mars_lighthouse: random
+  shortcut_magma_rock: random
+
+  #####################
+  # Character Changes #
+  #####################
+  shuffle_characters: anywhere
+  second_starting_character: random
+  scale_characters: true
+  max_scaled_level: 24
+  character_stats: adjust_character_stats
+  character_elements: shuffle_character_elements
+  randomize_class_stat_boosts: false
+
+  ####################
+  # Psynergy Changes #
+  ####################
+  no_util_psynergy_from_classes: true
+  class_psynergy: randomize_by_psynergy_group
+  psynergy_levels: adjust_learning_levels
+  adjust_psynergy_power: false
+  adjust_psynergy_cost: false
+  randomize_psynergy_aoe: false
+  adjust_enemy_psynergy_power: false
+  randomize_enemy_psynergy_aoe: false
+  enemy_elemental_resistance: vanilla
+
+  ############################
+  # Djinn and Summon Changes #
+  ############################
+  shuffle_djinn: vanilla_shuffled
+  shuffle_djinn_stat_boosts: true
+  adjust_djinn_attack_power: false
+  randomize_djinn_attack_aoe: false
+  scale_djinni_battle_difficulty: true
+  randomize_summon_costs: false
+  adjust_summon_power: false
+
+  #####################
+  # Equipment Changes #
+  #####################
+  randomize_equip_compatibility: false
+  adjust_equip_prices: false
+  adjust_equip_stats: false
+  shuffle_weapon_attack: false
+  shuffle_weapon_effect: false
+  shuffle_armour_defense: false
+  shuffle_armour_effect: false
+  randomize_curses: false
+  remove_all_curses: true
+
+  ###################
+  # Quality Of Life #
+  ###################
+  start_with_healing_psynergy: true
+  start_with_revive: true
+  free_avoid: true
+  avoid_always_works: true
+  free_retreat: true
+  manual_retreat_glitch: false
+  sanctum_revive_cost: reduced
+  enable_hard_mode: 
+    false: 4
+    true: 1
+  reduced_encounter_rate: false
+  easier_bosses: false
+  teleport_to_dungeons_and_towns: true
+  scale_exp: 3
+  scale_coins: 4
+  starting_levels: 5
+  show_items_outside_chest: true
+  shuffle_music: false
+  auto_run: true
+  disable_shop_gametickets: true
+
+  ################################
+  # Trap and Filler Distribution #
+  ################################
+  forge_materials_are_filler: true
+  artifacts_are_filler: false
+  trap_chance: 0
+  mimic_trap_weight: 5
+  scale_mimics: false
+  forge_material_filler_weight: 10
+  rusty_material_filler_weight: 5
+  stat_boost_filler_weight: 10
+  uncommon_consumable_filler_weight: 10
+  forged_equipment_filler_weight: 5
+  lucky_equipment_filler_weight: 5
+  shop_equipment_filler_weight: 2
+  coins_filler_weight: 10
+  common_consumable_filler_weight: 10
+  triggers:
+  - option_category: null
+    option_name: name
+    option_result: Player{player}
+    options:
+      null:
+        name: GoldenSun-{player}

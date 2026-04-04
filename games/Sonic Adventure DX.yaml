@@ -4,6 +4,7 @@ Sonic Adventure DX:
     normal_logic: 50
 
   gating_mode:
+    emblems_gating: 50
     key_items_gating: 50
 
   goal_requires_levels:

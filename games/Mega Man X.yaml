@@ -1,0 +1,148 @@
+﻿Mega Man X:
+  # Forced EnergyLink
+  energy_link: true
+
+  # Not forced, but should have a high chance to roll
+  pickupsanity:
+    'false': 30
+    'true': 70
+
+  # Not forced, but should have a high chance to roll
+  early_legs:
+    'false': 30
+    'true': 70
+
+  # Solving skill issue a bit
+  starting_life_count: 9
+
+  # Fixed numbers because anything else is going to be horrid to manage via triggers I think
+  starting_hp_trigger:
+    low: 33
+    medium: 33
+    high: 33
+  starting_hp: 16
+  heart_tank_effectiveness: 2
+
+  # Chance to happen, somewhat evil
+  jammed_buster:
+    'false': 60
+    'true': 40
+  
+  # These are a bit controversial as they're QoL settings, I'm just gonna force them
+  better_walljump: "true"
+  long_jumps: "true"
+  air_dash: "true"
+
+  # Only unlock fortress via medals or an access code
+  sigma_fortress_openess:
+    medals: 50
+    access_code: 50
+  sigma_open: []
+  sigma_medal_count: 0
+  sigma_all_levels: random
+
+  # Always require legs
+  logic_leg_sigma: true
+
+  # Evil, but fun
+  boss_weakness_rando:
+    vanilla: 20
+    shuffled: 50
+    chaotic_double: 30
+
+  # Makes the setting above less evil
+  boss_weakness_strictness: 
+    not_strict: 30
+    weakness_and_buster: 40
+    weakness_and_upgraded_buster: 10
+    only_weakness: 20
+
+  # Makes them evil again
+  boss_randomize_hp:
+    'off': 0
+    weak: 40
+    regular: 40
+    strong: 10
+    chaotic: 10
+
+  palette_default: random
+  palette_homing_torpedo: random
+  palette_chameleon_sting: random
+  palette_rolling_shield: random
+  palette_fire_wave: random
+  palette_storm_tornado: random
+  palette_electric_spark: random
+  palette_boomerang_cutter: random
+  palette_shotgun_ice: random
+
+  triggers:
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: MMX1-{player}
+
+    - option_category: Mega Man X
+      option_name: starting_hp_trigger
+      option_result: low
+      options:
+        Mega Man X:
+          starting_hp: random-range-8-12
+          heart_tank_effectiveness:
+            3: 10
+            4: 45
+            5: 45
+
+    - option_category: Mega Man X
+      option_name: starting_hp_trigger
+      option_result: medium
+      options:
+        Mega Man X:
+          starting_hp: random-range-12-16
+          heart_tank_effectiveness:
+            1: 5
+            2: 35
+            3: 30
+            4: 20
+
+    - option_category: Mega Man X
+      option_name: starting_hp_trigger
+      option_result: high
+      options:
+        Mega Man X:
+          starting_hp: random-range-16-24
+          heart_tank_effectiveness:
+            1: 60
+            2: 35
+            3: 5
+
+      # These should 100% depend on more checks being available, otherwise gen failures can happen
+    - option_category: Mega Man X
+      option_name: pickupsanity
+      option_result: false
+      options:
+        Mega Man X:
+          quick_charge_in_pool: false
+          speedster_in_pool: false
+          super_recover_in_pool: false
+          rapid_five_in_pool: false
+          speed_shot_in_pool: false
+          buster_plus_in_pool: false
+          weapon_plus_in_pool: false
+
+    - option_category: Mega Man X
+      option_name: sigma_fortress_openess
+      option_result: medals
+      options:
+        Mega Man X:
+          sigma_open: 
+            - Medals
+          sigma_medal_count: random-high
+
+    - option_category: Mega Man X
+      option_name: sigma_fortress_openess
+      option_result: access_code
+      options:
+        Mega Man X:
+          sigma_open: []

@@ -1,0 +1,275 @@
+﻿Banjo-Tooie:
+  logic_type: easy_tricks
+
+  victory_condition:
+    hag1: 50
+    minigame_hunt: 50
+    boss_hunt: 50
+    jinjo_family_rescue: 50
+    wonderwing_challenge: 50
+    token_hunt: 50
+    boss_hunt_and_hag1: 50
+
+  open_hag1:
+    'false': 50
+    'true': 50
+
+  minigame_hunt_length: random-range-8-15
+  boss_hunt_length: random-range-5-8
+  jinjo_family_rescue_length: random-range-4-9
+  tokens_in_pool: 15 # Triggers for nestsanity
+  token_hunt_length: random-range-10-15
+  local_items: [Mumbo Token]
+
+  world_requirements:
+    randomize: 50
+    normal: 50
+    quick: 50
+    long: 50
+
+  # Trigger value
+  randomize_moves:
+    vanilla: 20
+    bk: 50
+    bt: 50
+    bkbt: 50
+  randomize_bk_moves: none
+  randomize_bt_moves: false
+
+  jamjars_silo_costs: # Triggers
+    vanilla: 50
+
+  # These all have default values for when bkbt doesn't get rolled. triggers for bkbt moves
+  egg_behaviour: start_with_blue_eggs
+  progressive_beak_buster: false
+  progressive_shoes: false
+  progressive_water_training: none
+  progressive_flight: false
+  progressive_egg_aiming: none
+  progressive_bash_attack: 'false'
+
+  randomize_notes: true
+
+  randomize_treble:
+    'false': 50
+    'true': 50
+
+  extra_trebleclefs_count: random
+  bass_clef_amount: random
+
+  randomize_jinjos:
+    'false': 50
+    'true': 50
+  randomize_doubloons:
+    'false': 50
+    'true': 50
+  randomize_cheato:
+    'false': 50
+    'true': 50
+  cheato_rewards:
+    'false': 50
+    'true': 50
+  randomize_honeycombs:
+    'false': 50
+    'true': 50
+  honeyb_rewards:
+    'false': 50
+    'true': 50
+  randomize_tickets:
+    'false': 50
+    'true': 50
+  randomize_green_relics:
+    'false': 50
+    'true': 50
+  randomize_beans:
+    'false': 50
+    'true': 50
+  randomize_glowbos:
+    'false': 50
+    'true': 50
+  randomize_stop_n_swap:
+    'false': 50
+    'true': 50
+  randomize_dino_roar:
+    'false': 50
+    'true': 50
+  nestsanity:
+    'false': 50
+    'true': 50
+  randomize_signposts:
+    'false': 50
+    'true': 50
+
+  randomize_stations:
+    'false': 50
+    'true': 50
+  randomize_chuffy:
+    'false': 50
+    'true': 50
+  randomize_warp_pads:
+    'false': 50
+    'true': 50
+  randomize_silos:
+    'false': 50
+    'true': 50
+  open_silos: random-range-2-4 # Many combinations of options require at least 2 silos. Keep it a minimum of 2.
+  skip_puzzles: true # Since triggers can't verify multiple options as once, it's easier to leave this option true.
+
+  randomize_worlds:
+    'false': 50
+    'true': 50
+  randomize_world_entrance_loading_zones: false # Triggers for if BT moves are randomised.
+  randomize_boss_loading_zones: false # Until a big rewrite is made, it's not advised to randomise boss loading zones with random options.
+  backdoors:
+    'false': 50
+    'true': 50
+  open_gi_frontdoor:
+    'false': 50
+    'true': 50
+  signpost_hints: random
+  signpost_move_hints: random
+  hint_clarity: clear # I don't think cryptic hint are that enjoyable in an async. From testing, cryptic fast enough to gen that they could be done in a big async, if there's a demand for it.
+  add_signpost_hints_to_ap:
+    never: 50
+    progression: 50
+    always: 50
+
+  easy_canary: true
+  speed_up_minigames:
+    'true': 50
+    'false': 50
+  tower_of_tragedy:
+    skip: 50
+    round_3: 50
+    full: 50
+  skip_klungo:
+    'false': 50
+    'true': 50
+  auto_enable_cheats:
+    'false': 50
+    'true': 50
+  extra_cheats:
+    'false': 50
+    'true': 50
+  jingaling_jiggy:
+    'false': 50
+    'true': 50
+  replace_extra_jiggies:
+    'false': 50
+    'true': 50
+  replace_extra_notes:
+    'false': 50
+    'true': 50
+
+  extra_jiggies_weight: random
+  extra_notes_weight: random
+  extra_doubloons_weight: random
+
+  egg_nests_weight: random
+  feather_nests_weight: random
+  big_o_pants_weight: random
+  golden_eggs_weight: random
+  trip_trap_weight: random
+  slip_trap_weight: random
+  transform_trap_weight: random
+  squish_trap_weight: random
+  tip_trap_weight: random
+  max_traps: random-range-0-20
+
+  dialog_character: complete_random
+
+  # If you want to add/remove triggers, double or triple-check that the yaml still gives valid combination of options!
+  # Double-check with the Banjo-Tooie devs if unsure.
+  triggers:
+    - option_category: Banjo-Tooie
+      option_name: nestsanity
+      option_result: true
+      options:
+        Banjo-Tooie:
+          tokens_in_pool: 100
+          token_hunt_length: random-range-60-100
+
+    - option_category: Banjo-Tooie
+      option_name: randomize_moves
+      option_result: bk
+      options:
+        Banjo-Tooie:
+          randomize_bk_moves:
+            mcjiggy_special: 50
+            all: 50
+          randomize_bt_moves: "false"
+    - option_category: Banjo-Tooie
+      option_name: randomize_moves
+      option_result: bt
+      options:
+        Banjo-Tooie:
+          randomize_bk_moves: none
+          randomize_bt_moves: "true"
+          egg_behaviour:
+            start_with_blue_eggs: 50
+            progressive_eggs: 50
+          randomize_world_entrance_loading_zones:
+            'false': 50
+            'true': 50
+    - option_category: Banjo-Tooie
+      option_name: randomize_moves
+      option_result: bkbt
+      options:
+        Banjo-Tooie:
+          randomize_bk_moves:
+            mcjiggy_special: 50
+            all: 50
+          randomize_bt_moves: "true"
+          egg_behaviour:
+            start_with_blue_eggs: 50
+            random_starting_egg: 50
+            progressive_eggs: 50
+            simple_random_starting_egg: 50
+          progressive_beak_buster:
+            'false': 50
+            'true': 50
+          progressive_water_training:
+            none: 50
+            basic: 50
+            advanced: 50
+          progressive_flight:
+            'false': 50
+            'true': 50
+          progressive_egg_aiming:
+            none: 50
+            basic: 50
+            advanced: 50
+          progressive_bash_attack:
+            'false': 50
+            'true': 50
+          randomize_world_entrance_loading_zones:
+            'false': 50
+            'true': 50
+    - option_category: Banjo-Tooie
+      option_name: randomize_moves
+      option_result: vanilla
+      options:
+        Banjo-Tooie:
+          randomize_bk_moves: none
+          randomize_bt_moves: "false"
+    - option_category: Banjo-Tooie
+      option_name: randomize_bt_moves
+      option_result: true
+      options:
+        Banjo-Tooie:
+          jamjars_silo_costs:
+            vanilla: 50
+            progressive: 50
+            randomized: 50
+    - option_category: Banjo-Tooie
+      option_name: randomize_stop_n_swap
+      option_result: 'false'
+      options:
+        Banjo-Tooie:
+          progressive_bash_attack: 'false'
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: Tooie-{player}

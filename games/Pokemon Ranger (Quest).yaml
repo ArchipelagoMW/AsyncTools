@@ -1,0 +1,13 @@
+﻿Pokemon Ranger (Quest):
+  quest_count: 100
+  goal_amount: random-range-20-60
+  modify_quest_pool:
+    ['Captures (off-mission)', 'Legendary captures (off-mission)', 'Poké Assists']
+  duplicate_quests: true
+  triggers:
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: PokeRanger-{player}

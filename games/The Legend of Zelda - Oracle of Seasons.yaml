@@ -1,0 +1,91 @@
+﻿The Legend of Zelda - Oracle of Seasons:
+  logic_difficulty:
+    casual: 40
+    medium: 50
+    hard: 10
+  advance_shop: true
+  shuffle_old_men:
+    shuffled_values: 25
+    random_positive_values: 25
+    turn_into_locations: 50
+  shuffle_golden_ore_spots: true
+  deterministic_gasha_locations:
+    0: 90
+    16: 10
+  er_trigger:
+    enabled: 50
+    disabled: 50
+  keysanity_trigger:
+    enabled: 50
+    disabled: 50
+  randomize_puzzles:
+    "true": 25
+    "false": 75
+  shop_prices:
+    reasonable: 25
+    expensive: 50
+    outrageous: 25
+  secret_locations:
+    'false': 50
+    'true': 50
+  normalize_horon_village_season:
+    'false': 50
+    'true': 50
+  goal:
+    beat_onox: 50
+    beat_ganon: 50
+  shuffle_essences:
+    "true": 25
+    "false": 75
+  local_items: ["Essences"]
+  triggers:
+    - option_category: The Legend of Zelda - Oracle of Seasons
+      option_name: er_trigger
+      option_result: "enabled"
+      options:
+        The Legend of Zelda - Oracle of Seasons:
+          shuffle_portals:
+            shuffle_outwards: 50
+            shuffle: 50
+          shuffle_dungeons: true
+    - option_category: The Legend of Zelda - Oracle of Seasons
+      option_name: keysanity_trigger
+      option_result: "enabled"
+      options:
+        The Legend of Zelda - Oracle of Seasons:
+          keysanity_small_keys: true
+          keysanity_boss_keys: true
+          keysanity_maps_compasses: true
+    - option_category: The Legend of Zelda - Oracle of Seasons
+      option_name: logic_difficulty
+      option_result: "casual"
+      options:
+        The Legend of Zelda - Oracle of Seasons:
+          randomize_lost_woods_main_sequence:
+            "false": 50
+            "true": 50
+          enforce_potion_in_shop: true
+    - option_category: The Legend of Zelda - Oracle of Seasons
+      option_name: logic_difficulty
+      option_result: "medium"
+      options:
+        The Legend of Zelda - Oracle of Seasons:
+          randomize_lost_woods_main_sequence: true
+          randomize_samasa_gate_code: true
+          default_seed: random
+          duplicate_seed_tree: random
+    - option_category: The Legend of Zelda - Oracle of Seasons
+      option_name: logic_difficulty
+      option_result: "hard"
+      options:
+        The Legend of Zelda - Oracle of Seasons:
+          randomize_lost_woods_main_sequence: true
+          randomize_samasa_gate_code: true
+          default_seed: random
+          duplicate_seed_tree: random
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: OoS-{player}
