@@ -1,0 +1,206 @@
+Satisfactory:
+  death_link:
+    'false': 100
+  accessibility: full
+  milestone_cost_multiplier:
+    200: 15
+    150: 15
+    100: 30
+    60: 20
+    40: 20
+  energy_link:
+    'true': 50
+  final_elevator_phase:
+    phase 2 (tiers 1-4): 30
+    phase 3 (tiers 1-6): 45
+    phase 4 (tiers 1-8): 15
+    phase 5 (tiers 1-9): 10
+  hard_drive_progression_limit:
+    0: 30
+    10: 30
+    25: 25
+    50: 15
+  goal_selection:
+    Space Elevator Phase: 30
+    AWESOME Sink Points (total): 30
+    AWESOME Sink Points (per minute): 30
+    Exploration Collectables: 10
+  goal_requirement:
+    require_all_goals: 100
+  goal_awesome_sink_points_total:
+    200 coupons (~145m points): 25 # equivalent to 145053500
+    250 coupons (~284m points): 25 # equivalent to 284442000
+    300 coupons (~493m points): 25 # equivalent to 492825000
+    350 coupons (~784m points): 25 # equivalent to 784191000
+  goal_awesome_sink_points_per_minute:
+    ~100 modular frame/min: 20 # equivalent to 40000
+    ~20 crystal oscillator/min: 20 # equivalent to 60000
+    ~50 motor/min: 20 # equivalent to 76000
+    ~10 heavy modular frame/min: 20 # equivalent to 100000
+    ~10 radio control unit/min: 20 # equivalent to 300000
+  goal_exploration_collectables_amount:
+    5: 50
+    10: 50
+  starting_inventory_preset:
+    barebones: 5
+    skip_tutorial_inspired: 10
+    archipelago: 25
+    foundations: 15
+    foundation_lover: 15
+    explorer: 30
+  randomize_starter_recipes:
+    'false': 20
+    'true': 80
+  mam_logic_placement:
+    unlocked_from_start: 30
+    early_game: 50
+    somewhere: 20
+  awesome_logic_placement:
+    unlocked_from_start: 30
+    early_game: 50
+    somewhere: 20
+  splitter_placement:
+    unlocked_from_start: 100
+  energy_link_logic_placement:
+    unlocked_from_start: 60
+    early_game: 40
+  free_sample_equipment:
+    1: 100
+  free_sample_buildings:
+    5: 70
+    10: 30
+  free_sample_parts:
+    half_stack: 50 # equivalent to -2
+    one_stack: 50 # equivalent to -1
+  free_sample_radioactive:
+    'false': 50
+  trap_chance:
+    0: 50
+    10: 25
+    20: 25
+  trap_selection_preset:
+    gentle: 40
+    normal: 40
+    harder: 20
+  trap_selection_override:
+    []
+  triggers:
+# Disables side goals for Phase 2
+    - option_category: Satisfactory
+      option_name: final_elevator_phase
+      option_result: phase 2 (tiers 1-4)
+      options:
+        Satisfactory:
+          goal_selection: ['Space Elevator Phase']
+    - option_category: Satisfactory
+      option_name: final_elevator_phase
+      option_result: phase 2 (tiers 1-4)
+      options:
+        Satisfactory:
+          hard_drive_progression_limit: random-range-0-10
+
+# Adds Space Elevator Phase as goal to side goals
+    - option_category: Satisfactory
+      option_name: goal_selection
+      option_result: AWESOME Sink Points (total)
+      options:
+        Satisfactory:
+          goal_selection: ['Space Elevator Phase', 'AWESOME Sink Points (total)']
+    - option_category: Satisfactory
+      option_name: goal_selection
+      option_result: AWESOME Sink Points (per minute)
+      options:
+        Satisfactory:
+          goal_selection: ['Space Elevator Phase', 'AWESOME Sink Points (per minute)']
+    - option_category: Satisfactory
+      option_name: goal_selection
+      option_result: Exploration Collectables
+      options:
+        Satisfactory:
+          goal_selection: ['Space Elevator Phase', 'Exploration Collectables']
+
+# Sets side goals and HDDs to random amount adjusted for phase
+    - option_category: Satisfactory
+      option_name: final_elevator_phase
+      option_result: phase 3 (tiers 1-6)
+      options:
+        Satisfactory:
+          goal_awesome_sink_points_total: random-range-2166000-284442000
+    - option_category: Satisfactory
+      option_name: final_elevator_phase
+      option_result: phase 3 (tiers 1-6)
+      options:
+        Satisfactory:
+          goal_awesome_sink_points_per_minute: random-range-12000-40000
+    - option_category: Satisfactory
+      option_name: final_elevator_phase
+      option_result: phase 3 (tiers 1-6)
+      options:
+        Satisfactory:
+          goal_exploration_collectables_amount: random-range-5-10
+    - option_category: Satisfactory
+      option_name: final_elevator_phase
+      option_result: phase 3 (tiers 1-6)
+      options:
+        Satisfactory:
+          hard_drive_progression_limit: random-range-10-30
+
+# Sets side goals and HDDs to random amount adjusted for phase
+    - option_category: Satisfactory
+      option_name: final_elevator_phase
+      option_result: phase 4 (tiers 1-8)
+      options:
+        Satisfactory:
+          goal_awesome_sink_points_total: random-range-284442000-1172329500
+    - option_category: Satisfactory
+      option_name: final_elevator_phase
+      option_result: phase 4 (tiers 1-8)
+      options:
+        Satisfactory:
+          goal_awesome_sink_points_per_minute: random-range-50000-100000
+    - option_category: Satisfactory
+      option_name: final_elevator_phase
+      option_result: phase 4 (tiers 1-8)
+      options:
+        Satisfactory:
+          goal_exploration_collectables_amount: random-range-10-15
+    - option_category: Satisfactory
+      option_name: final_elevator_phase
+      option_result: phase 4 (tiers 1-8)
+      options:
+        Satisfactory:
+          hard_drive_progression_limit: random-range-20-60
+
+# Sets side goals and HDDs to random amount adjusted for phase
+    - option_category: Satisfactory
+      option_name: final_elevator_phase
+      option_result: phase 5 (tiers 1-9)
+      options:
+        Satisfactory:
+          goal_awesome_sink_points_total: random-range-784191000-2294578500
+    - option_category: Satisfactory
+      option_name: final_elevator_phase
+      option_result: phase 5 (tiers 1-9)
+      options:
+        Satisfactory:
+          goal_awesome_sink_points_per_minute: random-range-100000-300000
+    - option_category: Satisfactory
+      option_name: final_elevator_phase
+      option_result: phase 5 (tiers 1-9)
+      options:
+        Satisfactory:
+          goal_exploration_collectables_amount: random-range-15-20
+    - option_category: Satisfactory
+      option_name: final_elevator_phase
+      option_result: phase 5 (tiers 1-9)
+      options:
+        Satisfactory:
+          hard_drive_progression_limit: random-range-40-100
+
+# Sets names up for slots
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: Satisfact-{player}

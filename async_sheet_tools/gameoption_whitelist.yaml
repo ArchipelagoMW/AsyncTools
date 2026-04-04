@@ -769,17 +769,14 @@ Ori and the Blind Forest:
     - Locations
     - Name
     - Goal
+    - Require Final Escape
     - Warmth Fragments Available
     - Warmth Fragments Required
     - Relic Count
     - Difficulty
     - Extra Mapstones
-    - Enable Lure
-    - Enable Double Bash
-    - Enable Air Dash
-    - Enable Charge Dash
-    - Enable Charge Flame Burn
-    - Enable Rekindle
+    - Extra Skills
+    - Logic Modifiers
 Outer Wilds:
     - Outer Wilds
     - Locations
