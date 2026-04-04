@@ -1,0 +1,113 @@
+Satisfactory:
+  death_link:
+    'false': 100
+  accessibility: full
+  milestone_cost_multiplier:
+    100: 50
+    80: 15
+    60: 15
+    40: 10
+    20: 10
+  energy_link:
+    'true': 50
+  final_elevator_phase:
+    phase 3 (tiers 1-6): 40
+    phase 4 (tiers 1-8): 30
+    phase 5 (tiers 1-9): 30
+  hard_drive_progression_limit:
+    0: 10
+    10: 30
+    25: 25
+    50: 15
+    100: 20
+  goal_selection:
+    Space Elevator Phase: 30
+    AWESOME Sink Points (total): 30
+    AWESOME Sink Points (per minute): 30
+    Exploration Collectables: 10
+  goal_requirement:
+    require_all_goals: 100
+  goal_awesome_sink_points_total:
+    200 coupons (~145m points): 25 # equivalent to 145053500
+    300 coupons (~493m points): 30 # equivalent to 492825000
+    400 coupons (~1,2b points): 25 # equivalent to 1172329500
+    500 coupons (~2b points): 20 # equivalent to 2294578500
+  goal_awesome_sink_points_per_minute:
+    ~100 stator/min: 20 # equivalent to 24000
+    ~100 smart plating/min: 20 # equivalent to 50000
+    ~10 heavy modular frame/min: 20 # equivalent to 100000
+    ~10 radio control unit/min: 20 # equivalent to 300000
+    ~10 fused modular frame/min: 20 # equivalent to 625000
+  goal_exploration_collectables_amount:
+    5: 25
+    10: 25
+    20: 25
+    30: 25
+  starting_inventory_preset:
+    barebones: 5
+    skip_tutorial_inspired: 10
+    archipelago: 25
+    foundations: 15
+    foundation_lover: 15
+    explorer: 30
+  randomize_starter_recipes:
+    'false': 20
+    'true': 80
+  mam_logic_placement:
+    unlocked_from_start: 20
+    early_game: 50
+    somewhere: 30
+  awesome_logic_placement:
+    unlocked_from_start: 20
+    early_game: 50
+    somewhere: 30
+  splitter_placement:
+    unlocked_from_start: 100
+  energy_link_logic_placement:
+    unlocked_from_start: 40
+    early_game: 50
+    somewhere: 10
+  free_sample_equipment:
+    0: 20
+    1: 80
+  free_sample_buildings:
+    5: 70
+    10: 30
+  free_sample_parts:
+    half_stack: 50 # equivalent to -2
+    one_stack: 50 # equivalent to -1
+  free_sample_radioactive:
+    'false': 50
+  trap_chance:
+    0: 50
+    10: 25
+    20: 25
+  trap_selection_preset:
+    normal: 50
+  trap_selection_override:
+    []
+  triggers:
+    - option_category: Satisfactory
+      option_name: goal_selection
+      option_result: AWESOME Sink Points (total)
+      options:
+        Satisfactory:
+          goal_selection: ['Space Elevator Phase', 'AWESOME Sink Points (total)']
+    - option_category: Satisfactory
+      option_name: goal_selection
+      option_result: AWESOME Sink Points (per minute)
+      options:
+        Satisfactory:
+          goal_selection: ['Space Elevator Phase', 'AWESOME Sink Points (per minute)']
+    - option_category: Satisfactory
+      option_name: goal_selection
+      option_result: Exploration Collectables
+      options:
+        Satisfactory:
+          goal_selection: ['Space Elevator Phase', 'Exploration Collectables']
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: Satisfact-{player}
