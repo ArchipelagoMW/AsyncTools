@@ -1,0 +1,102 @@
+﻿
+Mario Kart Double Dash:
+
+  goal:
+    all_cup_tour: 50
+    trophies: 30
+
+  trophy_requirement:
+    random-range-10-16: 50 
+
+  grand_prix_trophies:
+    'false': 50
+    'true': 50
+
+
+  logic_difficulty:
+    easy: 50 
+    normal: 50 
+
+  shuffle_extra_trophies: 0
+
+  time_trials:
+    disable: 50
+    basic: 50
+
+  course_shuffle:
+    shuffle_once: 50
+
+  all_cup_tour_length:
+    random-range-7-16: 50 
+
+  mirror_200cc:
+    'false': 50
+    'true': 50
+
+  shorter_courses:
+    'false': 50
+
+  custom_lap_counts:
+    Wario Colosseum: 2
+
+  items_for_everybody:
+    random-range-3-9: 50
+
+  items_per_character:
+    2: 50
+
+  start_items_per_character:
+    5: 30
+    4: 20
+    3: 10
+
+  kart_upgrades:
+
+    10: 10
+    20: 20
+    30: 20
+
+  speed_upgrades:
+    'true': 50
+
+  item_boxes_as_locations:
+    disabled: 50
+    
+  local_items:
+    Trophy
+    
+  triggers:
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: MKDD-{player}
+          
+    - option_category: Mario Kart Double Dash
+      option_name:  start_items_per_character
+      option_result: 5
+      options:
+        Mario Kart Double Dash:
+          items_per_character: 2
+          
+    - option_category: Mario Kart Double Dash
+      option_name:  start_items_per_character
+      option_result: 4
+      options:
+        Mario Kart Double Dash:
+          items_per_character: 3
+          
+    - option_category: Mario Kart Double Dash
+      option_name:  start_items_per_character
+      option_result: 3
+      options:
+        Mario Kart Double Dash:
+          items_per_character: 4 
+          
+    - option_category: Mario Kart Double Dash
+      option_name:  grand_prix_trophies
+      option_result: 'false'
+      options:
+        Mario Kart Double Dash:
+          shuffle_extra_trophies: 16
