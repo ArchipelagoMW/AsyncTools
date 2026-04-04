@@ -16,6 +16,14 @@
     'false': 50
     'true': 50
 
+  silver_ghosts:
+    'false': 50
+    'true': 50
+
+  gold_ghosts:
+    'false': 50
+    'true': 50
+
   speedy_spirits:
     'false': 50
     'true': 50
@@ -29,6 +37,10 @@
     'true': 50
 
   grassanity:
+    'false': 50
+    'true': 50
+
+  WDYM_checks:
     'false': 50
     'true': 50
 
@@ -56,7 +68,7 @@
     'true': 50
 
   mario_items:
-    random-range-1-5: 50 # random value between 0 and 5
+    random-range-1-5: 50 # random value between 1 and 5
     random-range-3-5: 50 # random value between 3 and 5
 
   boo_gates:
@@ -75,7 +87,6 @@
     random-range-10-30: 50 # random value between 10 and 30
     random-range-20-45: 50 # random value between 20 and 45
     random-range-30-50: 50 # random value between 30 and 50
-
 
   enemizer:
     vanilla: 60
@@ -119,8 +130,12 @@
   self_item_messages:
     all_messages: 50
 
-  energy_link:
+  trap_link:
     'false': 50
+    'true': 50
+
+  enable_trap_client_msg:
+    'false': 0
     'true': 50
 
   vacuum_upgrades:
@@ -128,7 +143,6 @@
     random-range-3-5: 5 # random value between 0 and 5
     random-range-1-5: 25 # random value between 0 and 5
     random-range-4-5: 10 # random value between 0 and 5
-
 
   boo_radar:
     start_with: 50
@@ -140,7 +154,7 @@
     'true': 50
 
   hint_distribution:
-    balanced: 30
+    balanced: 20
     junk: 50
     chaos: 20
     strong: 15
@@ -171,19 +185,25 @@
     hard: 50
 
   boo_health_option:
-    choice: 50
-    random_values: 0
-    boo_health_by_sphere: 0
-    vanilla: 0
+    choice: 10
+    random_values: 10
+    boo_health_by_sphere: 10
+    vanilla: 10
 
   boo_health_value:
-    30: 50
+    random-range-1-150: 50 # random value between 1 and 150
+    random-range-25-100: 50 # random value between 25 and 100
+    random-range-150-300: 50 # random value between 150 and 300
 
   boo_speed:
-    15: 50
+    random-range-1-15: 50 # random value between 1 and 15
+    random-range-16-36: 50 # random value between 16 and 36
+    random-range-5-25: 50 # random value between 5 and 25
 
   boo_escape_time:
-    120: 50
+    random-range-120-300: 50 # random value between 120 and 300
+    random-range-150-250: 50 # random value between 150 and 250
+    random-range-180-300: 50 # random value between 180 and 300
 
   boo_anger:
     'false': 50
@@ -192,6 +212,19 @@
   extra_boo_spots:
     'false': 50
     'true': 50
+
+  portrait_health_option:
+    choice: 10
+    random_values: 10
+    portrait_health_by_sphere: 10
+    vanilla: 10
+
+  portrait_health_value:
+    random-range-1-650: 10
+    random-range-150-400: 10
+    random-range-200-450: 10
+    random-range-300-500: 10
+    random-range-400-650: 10
 
   random_music:
     'false': 50
@@ -228,59 +261,27 @@
     random-range-10-30: 50
     random-range-15-25: 50
 
-  bundle_weight:
-    10: 50
+  filler_weights:
+    Bars: 10
+    Bills: 10
+    Bundles: 10
+    Coins: 10
+    Dust: 40
+    Gems: 10
+    Hearts: 10
 
-  coin_weight:
-    15: 50
-
-  bill_weight:
-    10: 50
-    
-  bars_weight:
-    10: 50
-
-  gems_weight:
-    5: 50
-
-  poison_trap_weight:
-    15: 50
-
-  bomb_trap_weight:
-    15: 50
-
-  ice_trap_weight:
-    15: 50
-
-  banana_trap_weight:
-    15: 50
-
-  poss_trap_weight:
-    5: 50
-
-  bonk_trap_weight:
-    15: 50
-
-  ghost_weight:
-    15: 50
-
-  fear_weight:
-    25: 50
-
-  spooky_weight:
-    25: 50
-
-  squash_weight:
-    15: 50
-
-  vac_trap_weight:
-    5: 50
-
-  dust_weight:
-    40: 50
-    
-  heart_weight:
-    10: 50
+  trap_weights:
+    Banana Trap: 10
+    Bomb: 10
+    Bonk Trap: 10
+    Fear Trap: 30
+    Ghost: 10
+    Ice Trap: 10
+    No Vac Trap: 30
+    Poison Mushroom: 5
+    Possession Trap: 15
+    Spooky Time: 30
+    Squash Trap: 10
 
   furnisanity_fake:
     walls: 1 # "Hangables" "Ceiling"
