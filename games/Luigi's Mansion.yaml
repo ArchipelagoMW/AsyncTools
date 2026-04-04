@@ -287,6 +287,10 @@
     floors: 1 # "Decor" "Candles" "Seating" "Surfaces" "Plants"
     insides: 1 # "Storage" "Drawers" "Treasures"
     full: 1 # "Full"
+    basement: 1 # Basement only Furniture
+    first_floor: 1 # 1st Floor only Furniture
+    second_floor: 1 # 2nd Floor only Furniture
+    attic: 1 # Attic only Furniture
     none: 1
   triggers:
     - option_category: Luigi's Mansion
@@ -313,6 +317,30 @@
       options:
         Luigi's Mansion:
           furnisanity: ["Full"]
+    - option_category: Luigi's Mansion
+      option_name: furnisanity_fake
+      option_result: basement
+      options:
+        Luigi's Mansion:
+          furnisanity: ["Basement"]
+    - option_category: Luigi's Mansion
+      option_name: furnisanity_fake
+      option_result: first_floor
+      options:
+        Luigi's Mansion:
+          furnisanity: ["1st Floor"]
+    - option_category: Luigi's Mansion
+      option_name: furnisanity_fake
+      option_result: second_floor
+      options:
+        Luigi's Mansion:
+          furnisanity: ["2nd Floor"]
+    - option_category: Luigi's Mansion
+      option_name: furnisanity_fake
+      option_result: attic
+      options:
+        Luigi's Mansion:
+          furnisanity: ["Attic"]
     - option_category: null
       option_name: name
       option_result: Player{player}
