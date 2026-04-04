@@ -1,0 +1,260 @@
+﻿Final Fantasy Tactics Ivalice Island:
+  ################
+  # Game Options #
+  ################
+  accessibility:
+    # Set rules for reachability of your items/locations.
+    # 
+    # **Full:** ensure everything can be reached and acquired.
+    # 
+    # **Minimal:** ensure what is needed to reach your goal can be acquired.
+    full: 50
+    minimal: 0
+
+  ################
+  # Main Options #
+  ################
+  zodiac_stones_in_pool:
+    # How many Zodiac Stones will be in the item pool.
+    # If set to less than the number required, will instead become however many are required.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 1
+    # Maximum value is 13
+    6: 0
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-6-13: 50 # random value between 1 and 13
+
+  zodiac_stones_required:
+    # How many Zodiac Stones will be required to beat the game.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 1
+    # Maximum value is 13
+    6: 0
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-6-13: 50 # random value between 1 and 13
+
+  zodiac_stone_locations:
+    # Where can Zodiac Stones appear?
+    # Vanilla limits their possible locations to those events which had one in the vanilla game.
+    # This limits the number maximum number of stones in the pool from 8-12, depending on sidequest and Altima options.
+    # Anywhere Local means stones can be at any location in your world.
+    # Anywhere means stones can be anywhere in the multiworld.
+    vanilla_stones: 50
+    anywhere_local: 50
+    anywhere: 0
+
+  final_battles:
+    # What the final goal is, located at the Murond Death City world map dot near Deep Dungeon.
+    # Vanilla requires the completion of all six final battles in sequence at Murond Death City.
+    # Altima Only requires only Altima at Murond Death City, and the other endgame battles will be located at Orbonne.
+    vanilla: 50
+    altima_only: 50
+
+  sidequest_battles:
+    # Are sidequest battles (Colliery, Nelveska, Zarghidas, Deep Dungeon) in the pool of locations?
+    'false': 50
+    'true': 50
+
+  job_unlocks:
+    # Are job unlocks in the item and location pools?
+    'false': 0
+    'true': 50
+
+  poach_locations:
+    # Are poaches in the location pool? WARNING: Can be grindy and RNG-heavy.
+    # Will be disabled if Enemy Randomizer is set to Randomized.
+    'false': 50
+    'true': 0
+
+  rare_battles:
+    # Are the rare battles for each battleground in the location pool?
+    'false': 50
+    'true': 50
+
+  logical_difficulty:
+    # Affects the placement of logically required shop levels and jobs in the multiworld.
+    easy: 0
+    normal: 50
+    difficult: 0
+    extreme: 0
+
+  ################
+  # Item Options #
+  ################
+  chemist_placement:
+    # Where Chemist is placed in the multiworld when Job Unlocks are enabled.
+    # Starting will have you start with Chemist.
+    # Early will ensure Chemist is one of your first items in the multiworld.
+    # Shuffled will shuffle Chemist into the pool like other jobs.
+    starting: 50
+    early: 50
+    shuffled: 0
+
+  early_pass:
+    # Will a Pass for a neighboring region be an early item?
+    'false': 50
+    'true': 0
+
+  starting_shop_level:
+    # The starting shop level of your game.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 14
+    0: 50
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-0-14: 0 # random value between 0 and 14
+
+  ##################
+  # Filler Options #
+  ##################
+  normal_item_weight:
+    # Weight of items normally sold in shops in the filler pool.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 10
+    3: 50
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-0-10: 0 # random value between 0 and 10
+
+  rare_item_weight:
+    # Weight of items not normally sold in shops in the filler pool.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 10
+    1: 50
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-0-10: 0 # random value between 0 and 10
+
+  bonus_gil_item_weight:
+    # Weight of bonus items in the filler pool.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 10
+    2: 50
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-0-10: 0 # random value between 0 and 10
+
+  jp_boon_item_weight:
+    # Weight of JP Boon items that award JP to the team in the filler pool
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 10
+    1: 50
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-0-10: 0 # random value between 0 and 10
+
+  bonus_gil_item_size:
+    # Adjusts the value of bonus gil items in the pool.
+    # Normal is 5000/10000/40000. Frugal halves that, Expensive doubles.
+    frugal: 0
+    normal: 50
+    expensive: 0
+
+  jp_boon_size:
+    # Adjusts the value of JP Boon items. Normal is 50/100/250 JP. Frugal halves that, Expensive doubles.
+    frugal: 0
+    normal: 50
+    expensive: 0
+
+  ############################
+  # Enemy Randomizer Options #
+  ############################
+  enemy_randomizer:
+    # Randomizes enemies.
+    # Disabled leaves enemies as vanilla.
+    # Boss Shuffle shuffles only unique story bosses amongst each other.
+    # Randomized randommizes all enemies per other settings in this section.
+    disabled: 50
+    boss_shuffle: 0
+    randomized: 0
+
+  randomize_gariland:
+    # Whether to randomize the Gariland story fight.
+    'false': 50
+    'true': 0
+
+  cross_enemy_randomizer:
+    # If enabled, generic jobs can randomize into special units and vice versa.
+    'false': 50
+    'true': 0
+
+  cross_species_randomizer:
+    # If enabled, randomized humans can become monster units and vice versa.
+    'false': 50
+    'true': 0
+
+  randomize_story_fights_only:
+    # If enabled, only story and sidequest fights will be randomized,
+    # and random encounters will be left alone
+    'false': 50
+    'true': 0
+
+  enemy_randomizer_locality:
+    # Controls the scope of enemy randomization.
+    # Battle randomizes enemy units of the same job differently per battle.
+    # Region randomizes enemy units of the same job differently per region.
+    # Global randomizes all enemy units in the game of the same job to the same randomized job.
+    battle: 50
+    region: 0
+    global: 0
+
+  lucavi_randomizer:
+    # Controls if Lucavi and Altima are included in randomization.
+    # Disabled leaves Lucavi (Queklain, Velius, Zalera, Adramelk, Hashmalum, Elidibs) the same as vanilla.
+    # Lucavi enables those locations and jobs to be included in randomization.
+    # Include Altima also includes Altima 1 and 2 in the randomization. Will cause graphical glitches.
+    disabled: 50
+    lucavi: 0
+    include_altima: 0
+
+  enemy_randomizer_method:
+    # Controls the randomization method for determining randomized units.
+    # Shuffle will attempt to map vanilla units to new unique jobs,
+    # such that only Squires will become Chemists, for example.
+    # Chaos allows duplicates, such that multiple jobs could become Chemists, for example.
+    shuffle: 50
+    chaos: 0
+
+  ###############
+  # QOL Options #
+  ###############
+  exp_gain_multiplier:
+    # Multiplier to in-battle EXP gains.
+    normal: 0
+    double: 50
+    quadruple: 0
+
+  jp_gain_multiplier:
+    # Multiplier to in-battle JP gains.
+    normal: 0
+    double: 50
+    quadruple: 0
+  
+  triggers:
+  - option_category: null
+    option_name: name
+    option_result: Player{player}
+    options:
+      null:
+        name: FFTII-{player}

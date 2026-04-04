@@ -1,0 +1,99 @@
+﻿Slay the Spire:
+  num_chars_goal: 0
+  pick_num_characters: random-range-2-4
+  lock_characters: locked_random
+  use_advanced_characters: false
+  final_act:
+    'false': 1
+    'true': 1
+
+  downfall:
+    'false': 9
+    'true': 1
+
+  ascension:
+    random-range-1-6: 1
+  ascension_down: 0
+  death_link: 0
+  include_floor_checks: true
+
+  campfire_sanity:
+    'false': 3
+    'true': 1
+
+  gold_sanity:
+    'false': 4
+    'true': 1
+
+  potion_sanity:
+    'false': 2
+    'true': 1
+
+  key_sanity: false
+
+  shop_sanity:
+    'false': 1
+    'true': 3
+
+  shop_card_slots: random
+  shop_neutral_card_slots: random
+  shop_relic_slots: random
+  shop_potion_slots: random
+
+  shop_remove_slots:
+    'false': 1
+    'true': 2
+
+  shop_sanity_costs:
+    fixed: 1
+    super_discount_tiered: 4
+    discount_tiered: 5
+    tiered: 0
+
+  trap_chance:
+    0: 5
+    random-range-1-10: 1
+
+  trap_weights:
+    Buff Trap: 3
+    Debuff Trap: 3
+    Gremlin Trap: 3
+    Killer Debuff Trap: 1
+    Status Card Trap: 2
+    Strong Buff Trap: 1
+    Strong Debuff Trap: 2
+
+  chatty_mc: true
+
+  filler_weights:
+    1 Gold: 4
+    5 Gold: 6
+    CAW CAW: 1
+    Combat Buff: 1
+
+  seeded: false
+  
+  triggers:
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: StS-{player}
+    - option_category: Slay the Spire
+      option_name: downfall
+      option_result: 'true'
+      options:
+        Slay the Spire:
+          characters:
+            - Hermit
+            - SlimeBoss
+            - Guardian
+            - Hexaghost
+            - Champ
+            - Gremlins
+            - Automaton
+            - Snecko
+            - Collector
+            - AwakenedOne
+
