@@ -40,8 +40,8 @@ Super Mario 64:
     locations: 2
   buddy_checks: random
   exclamation_boxes:
-    off: 1
-    1ups_only: 1
+    false: 1
+    true: 1
   completion_type:
     last_bowser_stage: 5
     all_bowser_stages: 3
