@@ -16,7 +16,7 @@ Celeste (Open World):
   gemsanity: random
   carsanity: random
   roomsanity:
-    "false": 2
+    "false": 3
     "true": 1
   include_goldens: false
   include_farewell: none
@@ -72,6 +72,14 @@ Celeste (Open World):
             "false": 1
             "true": 3
           include_c_sides:
+            "false": 1
+            "true": 3
+    - option_category: Celeste (Open World)
+      option_name: include_b_sides
+      option_result: "true"
+      options:
+        Celeste (Open World):
+          roomsanity:
             "false": 1
             "true": 3
     - option_category: null
