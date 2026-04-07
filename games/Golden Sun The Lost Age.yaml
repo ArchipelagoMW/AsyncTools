@@ -44,7 +44,7 @@
   #####################
   shuffle_characters: anywhere
   second_starting_character: random
-  scale_characters: true
+  scale_characters: false
   max_scaled_level: 24
   character_stats: adjust_character_stats
   character_elements: shuffle_character_elements
