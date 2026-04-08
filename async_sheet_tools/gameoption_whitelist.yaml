@@ -616,7 +616,7 @@ Factorio:
     - Satellite
     - Free Samples Quality
     - Recipe Time
-    - Craftsanity
+    - CraftSanity
     - World Generation
 Factorio - Space Age Without Space:
     - Factorio - Space Age Without Space
@@ -633,7 +633,7 @@ Factorio - Space Age Without Space:
     - Satellite
     - Free Samples Quality
     - Recipe Time
-    - Craftsanity
+    - CraftSanity
     - World Generation
 Faxanadu:
     - Faxanadu
@@ -978,7 +978,7 @@ Luigi's Mansion:
     - Hint Distribution
     - Send Hints
     - Toadsanity
-    - Gold Mice
+    - " Gold Mice"
     - Furnisanity
     - Boosanity
     - Portrification
@@ -1747,17 +1747,42 @@ Sonic Adventure DX:
     - Mission Requirement Percentage
     - Goal Requires Bosses
     - Boss Requirement Percentage
-    - Logic Level
-    - Sonic's Action Stage Missions
-    - Tails' Action Stage Missions
-    - Knuckles' Action Stage Missions
-    - Amy's Action Stage Missions
-    - Big's Action Stage Missions
-    - Gamma's Action Stage Missions
+    - Starting Character
+    - Entrance Randomizer
+    - Ring Loss
+    - "Sonic's Action Stage Missions"
+    - "Tails' Action Stage Missions"
+    - "Knuckles' Action Stage Missions"
+    - "Amy's Action Stage Missions"
+    - "Big's Action Stage Missions"
+    - "Gamma's Action Stage Missions"
+    - Music Shuffle
+    - Boss Checks
+    - Unify Chaos 4
+    - Unify Chaos 6
+    - Unify Egg Hornet
+    - Field Emblems Checks
+    - Secret Chao Egg Checks
     - Enable Mission Checks
-    - Enemy Sanity
-    - Capsule Sanity
-    - Ring Capsule Sanity
+    - Twinkle Circuit Check
+    - Sand Hill Check
+    - Sky Chase Checks
+    - EnemySanityList
+    - Include Missable Capsules
+    - CapsuleSanityList
+    - Fish Sanity
+    - Lazy Fishing
+    - Junk Fill Percentage
+    - Trap Fill Percentage
+    - Ice Trap Weight
+    - Spring Trap Weight
+    - Police Trap Weight
+    - Buyon Trap Weight
+    - Reverse Controls Trap Weight
+    - Gravity Trap Weight
+    - Reverse Control Trap Duration
+    - Traps and filler on Boss Fights
+    - Traps and filler on Perfect Chaos Fight
 Starcraft 2:
     - Starcraft 2
     - Locations
