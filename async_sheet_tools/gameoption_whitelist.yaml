@@ -1023,6 +1023,8 @@ Mario & Luigi Superstar Saga:
     - Item Block Visibility
     - Chuckle Beans
     - Goal
+    - Emblems Required
+    - Emblems Available
     - Music Options
     - Randomize Enemies
     - Randomize Bosses
@@ -2189,6 +2191,7 @@ Yu-Gi-Oh! 2006:
     - Structure Deck
     - Banlist
     - Final Campaign Boss challenges unlock amount
+    - Final Campaign Boss campaign opponent unlock amount
     - Fourth Tier 5 Campaign Boss campaign opponent unlock amount
     - Third Tier 5 Campaign Boss campaign opponent unlock amount
     - Number of Challenges
