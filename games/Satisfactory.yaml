@@ -20,11 +20,12 @@ Satisfactory:
     10: 30
     25: 25
     50: 15
-  goal_selection:
+  goal_selection_for_trigger:
     Space Elevator Phase: 30
     AWESOME Sink Points (total): 30
     AWESOME Sink Points (per minute): 30
     Exploration Collectables: 10
+  goal_selection: [] # Set by triggers
   goal_requirement:
     require_all_goals: 100
   goal_awesome_sink_points_total:
@@ -91,7 +92,7 @@ Satisfactory:
       option_result: phase 2 (tiers 1-4)
       options:
         Satisfactory:
-          goal_selection: ['Space Elevator Phase']
+          goal_selection_for_trigger: 'Space Elevator Phase'
     - option_category: Satisfactory
       option_name: final_elevator_phase
       option_result: phase 2 (tiers 1-4)
@@ -101,23 +102,29 @@ Satisfactory:
 
 # Adds Space Elevator Phase as goal to side goals
     - option_category: Satisfactory
-      option_name: goal_selection
+      option_name: goal_selection_for_trigger
       option_result: AWESOME Sink Points (total)
       options:
         Satisfactory:
           goal_selection: ['Space Elevator Phase', 'AWESOME Sink Points (total)']
     - option_category: Satisfactory
-      option_name: goal_selection
+      option_name: goal_selection_for_trigger
       option_result: AWESOME Sink Points (per minute)
       options:
         Satisfactory:
           goal_selection: ['Space Elevator Phase', 'AWESOME Sink Points (per minute)']
     - option_category: Satisfactory
-      option_name: goal_selection
+      option_name: goal_selection_for_trigger
       option_result: Exploration Collectables
       options:
         Satisfactory:
           goal_selection: ['Space Elevator Phase', 'Exploration Collectables']
+    - option_category: Satisfactory
+      option_name: goal_selection_for_trigger
+      option_result: Space Elevator Phase
+      options:
+        Satisfactory:
+          goal_selection: ['Space Elevator Phase']
 
 # Sets side goals and HDDs to random amount adjusted for phase
     - option_category: Satisfactory
