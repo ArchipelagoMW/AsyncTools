@@ -199,7 +199,7 @@ Pokemon Emerald:
     true: 20
   death_link: false
   enable_wonder_trading: true
-  local_items: Letter
+  local_items: []
 
   triggers:
     # Blacklist wild legendaries
