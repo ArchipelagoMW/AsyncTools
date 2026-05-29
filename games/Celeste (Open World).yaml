@@ -6,8 +6,9 @@ Celeste (Open World):
     farewell: 15
   lock_goal_area: true
   goal_area_checkpointsanity: false
-  total_strawberries: random-range-30-70
+  total_strawberries: random-range-100-150
   strawberries_required_percentage: random-range-70-90
+  junk_fill_percentage: 0
   checkpointsanity: random
   binosanity: random
   keysanity:
