@@ -52,6 +52,15 @@ Super Mario 64:
       options:
         Super Mario 64:
           progressive_keys: false
+    - option_category: Super Mario 64
+      option_name: enable_locked_paintings
+      option_result: true
+      options:
+        Super Mario 64:
+          local_items:
+            - Progressive Key
+            - Basement Key
+            - Second Floor Key
     - option_category: null
       option_name: name
       option_result: Player{player}
