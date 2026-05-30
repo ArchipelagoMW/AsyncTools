@@ -1653,6 +1653,7 @@ Pokemon Crystal:
     mild: 9
     wild: 1 # palnote: mercy.
 
+  local_items: [Aerodactyl Tile, Ho-Oh Tile, Kabuto Tile, Omanyte Tile]
 
   ## TRIGGERS
   coffee:
