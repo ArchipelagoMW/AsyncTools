@@ -8,15 +8,13 @@
     all_both: 50
 
   obelisks:
-    'false': 5
-    'true': 45
+    'true': 50
 
   mirror_shards:
     'false': 10
     'true': 40
 
   portals:
-    'false': 0
     'true': 50
 
   goal:
@@ -24,11 +22,11 @@
     defeat_x_bosses: 25
 
   boss_goal_count:
-    random-high: 50
+    random-range-2-6: 50
 
   max_difficulty:
-    4: 45
-    random-range-1-4: 5
+    4: 40
+    random-range-1-4: 10
 
   instant_max:
     'true': 50
@@ -45,7 +43,7 @@
     ['Death', 'Crossbow Shooter', 'Bomb Thrower', 'Bomb Runner', 'Golem']
 
   traps_frequency:
-    random-low: 50
+    random-range-0-40: 50
 
   local_filler_frequency:
     40: 50
