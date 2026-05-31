@@ -32,7 +32,9 @@
   tech_cost_mix:
     100: 1
     random: 4
-  ramping_tech_costs: 'false'
+  ramping_tech_costs:
+    true: 1
+    false: 4
   silo: randomize_recipe
   satellite: randomize_recipe
   free_samples: stack
