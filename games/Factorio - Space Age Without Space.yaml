@@ -23,7 +23,7 @@
     trees: 20
     choices: 20
   min_tech_cost: 5
-  max_tech_cost: 500
+  max_tech_cost: random-range-low-100-10000
   tech_cost_distribution:
     even: 100
     low: 40
