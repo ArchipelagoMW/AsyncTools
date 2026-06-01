@@ -1,0 +1,120 @@
+EarthBound:
+  progression_balancing: 50
+  accessibility: full
+  giygas_required:
+    'false': 10
+    'true': 50
+  sanctuaries_required: random-range-4-8
+  alternate_sanctuary_goal:
+    'true': 50
+    'false': 50
+  local_teleports: false
+  character_shuffle:
+    shuffled: 50
+    anywhere: 50
+  progressive_weapons:
+    'false': 30
+    'true': 10
+  progressive_armor:
+    'false': 30
+    'true': 10
+  money_weight: 5
+  prefixed_items:
+    'false': 25
+    'true': 80
+  total_photos: 15
+  armorizer:
+    'off': 60
+    'keep_type': 10
+  weaponizer:
+    'off': 60
+    'keep_type': 10
+  random_start_location: 'random'
+  magicant_mode:
+    psi_location: 70
+    required: 50
+    alternate_goal: 0
+    optional_boost: 30
+    removed: 0
+  monkey_caves_mode:
+    hunt: 50
+    solved: 50
+  no_free_sanctuaries: 'random'
+  starting_character:
+    ness: 75
+    paula: 25
+    jeff: 25
+    poo: 25
+  psi_shuffle:
+    none: 60
+    basic: 30
+    extended: 10
+  enemy_shuffle:
+    'false': 90
+    'true': 10
+  boss_shuffle:
+    'false': 60
+    'true': 25
+  decouple_diamond_dog: 'random'
+  boss_shuffle_add_giygas: 'random'
+  shuffle_enemy_drops: 'random'
+  randomize_enemy_attributes:
+    'false': 70
+    'true': 10
+  shop_randomizer:
+    'off': 70
+    'local_filler': 30
+    'shopsanity': 10
+  dungeon_shuffle:
+    'false': 75
+    'true': 25
+  skip_prayer_sequences:
+    'true': 25
+  easy_deaths:
+    'true': 25
+  starting_money: random-range-20-500
+  auto_scale_party_members:
+    'true': 25
+  random_swirl_colors:
+    'false': 80
+    'true': 102
+  random_battle_backgrounds:
+    'false': 75
+    'true': 20
+  map_palette_shuffle:
+    normal: 60
+    nice: 20
+  nonlocal_items_use_local_presents: 'random'
+  randomize_overworld_music:
+    normal: 76
+    match_type: 20
+  randomize_fanfares:
+    'off': 80
+    'on_no_sound_stone_fanfares': 40
+  energy_link:
+    'false': 60
+    'true': 10
+  triggers:
+    - option_category: EarthBound
+      option_name: shop_randomizer
+      option_result: shopsanity
+      options:
+        EarthBound:
+          starting_money: random-range-500-2000
+          money_drop_multiplier: 3
+          money_weight: 90
+
+    - option_category: EarthBound
+      option_name: randomize_enemy_attributes
+      option_result: true
+      options:
+        EarthBound:
+          randomize_enemy_attacks: true
+          randomize_enemy_stats: true
+
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: EB-{player}

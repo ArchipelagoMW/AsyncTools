@@ -1,0 +1,1711 @@
+﻿# PLEASE READ:
+# I annotated some of the choices I made with "palnote". Just search for that phrase in here to find them!
+Pokemon Crystal:
+  accessibility:
+    # Set rules for reachability of your items/locations.
+    # 
+    # **Full:** ensure everything can be reached and acquired.
+    # 
+    # **Minimal:** ensure what is needed to reach your goal can be acquired.
+    full: 50
+    minimal: 0
+
+  goal:
+    # Elite Four: Defeat the Champion and enter the Hall of Fame
+    # Red: Defeat Red in Mt. Silver
+    # Diploma: Catch all logically available Pokemon and receive the diploma in Celadon City
+    # Rival: Win all possible rival battles
+    # Defeat Team Rocket: Vanquish Team Rocket in Slowpoke Well, Mahogany Town, Radio Tower and defeat the grunt
+    # on Route 24 (if Kanto is accessible)
+    # Unown Hunt: Catch all 26 Unown forms that are attached to signs across the region(s) and show the completed Unown dex
+    #  to the scientist in Ruins of Alph. In order to encounter the Unown you'll need to solve their corresponding tile puzzle.
+    #  Each puzzle requires 16 pieces which must be found first.
+    elite_four: 4
+    red: 3
+    diploma: 1
+    rival: 3
+    defeat_team_rocket: 3
+    unown_hunt: 2
+    # Diploma Hunt is very long; Unown Hunt is second longest; Elite four is the default goal and is the most common at 25% with diploma having a chance of 6%
+
+  #######
+  # Map #
+  #######
+  randomize_starting_town:
+    # Randomly chooses a town to start in.
+    # Any Pokemon Center except Indigo Plateau, Cinnabar Island and Silver Cave can be chosen.
+    # Lake of Rage can also be chosen.
+    # 
+    # Other settings may additionally restrict which Pokemon Centers can be chosen.
+    # 
+    # WARNING: Some starting towns without level scaling may produce difficult starts.
+    'false': 1
+    'true': 2
+
+  starting_town_blocklist:
+    # Specify places which cannot be chosen as a starting town. If you block every valid option, this list will do
+    # nothing.
+    # Indigo Plateau, Cinnabar Island and Silver Cave cannot be chosen as starting towns and are not valid options
+    # "_Johto" and "_Kanto" are shortcuts for all Johto and Kanto towns respectively
+    []
+
+  johto_only:
+    # Excludes all of Kanto, disables Kanto access
+    # Forces Goal to Elite Four unless Silver Cave is included
+    # Goal badges will be limited to 8 if badges are shuffled or vanilla
+    'off': 8
+    'on': 1
+    include_silver_cave: 1
+
+  ##############
+  # Roadblocks #
+  ##############
+  elite_four_requirement:
+    # Sets the requirement to pass the Victory Road badge check
+    badges: 50
+    gyms: 50
+    johto_badges: 50
+
+  elite_four_count:
+    # Sets the number of badges/gyms required to enter Victory Road
+    # 
+    # This will be limited to 8 if the requirement is Johto Badges
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 16
+    random-range-6-10: 50
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-0-16: 0 # random value between 0 and 16
+
+  red_requirement:
+    # Sets the requirement to battle Red
+    badges: 50
+    gyms: 50
+
+  red_count:
+    # Number of badges/gyms required to battle Red
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 16
+    random-range-14-16: 50
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-0-16: 0 # random value between 0 and 16
+
+  mt_silver_requirement:
+    # Sets the requirement to access Mt. Silver and Silver Cave
+    badges: 50
+    gyms: 50
+
+  mt_silver_count:
+    # Number of badges/gyms required to access Mt. Silver and Silver Cave
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 16
+    random-range-12-14: 50
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-0-16: 0 # random value between 0 and 16
+
+  radio_tower_requirement:
+    # Sets the requirement for Team Rocket to take over the Goldenrod Radio Tower
+    badges: 50
+    gyms: 50
+
+  radio_tower_count:
+    # Number of badges/gyms at which Team Rocket takes over the Goldenrod Radio Tower
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 16
+    random-range-5-9: 50
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-0-16: 0 # random value between 0 and 16
+
+  route_44_access_requirement:
+    # Sets the requirement to pass between Mahogany Town and Route 44
+    badges: 50
+    gyms: 50
+
+  route_44_access_count:
+    # Sets the number of badges/gyms required to pass between Mahogany Town and Route 44
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 16
+    random-range-5-9: 50
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-0-16: 0 # random value between 0 and 16
+
+  kanto_access_requirement:
+    # Sets the requirement to pass between Victory Road gate and Kanto
+    # - Wake Snorlax: Wake the Snorlax outside of Diglett's Cave
+    # - Badges: Requires the number of badges specified by kanto_access_count
+    # - Gyms: Requires beating the number of gyms specified by kanto_access_count
+    # - Become Champion: Defeat Lance and enter the Hall of Fame
+    # 
+    # This setting does nothing if Johto Only is enabled
+    wake_snorlax: 50
+    badges: 50
+    gyms: 50
+    become_champion: 50
+
+  kanto_access_count:
+    # Sets the number of badges/gyms required to pass between Victory Road gate and Kanto
+    # Only applies if Kanto Access Condition is set to badges or gyms
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 16
+    random-range-6-10: 50
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-0-16: 0 # random value between 0 and 16
+
+  victory_road_access:
+    # Sets the requirement to pass through Victory Road to Indigo Plateau
+    # - Vanilla: No requirement
+    # - Strength: Strength is required
+    vanilla: 2
+    strength: 1
+
+  dark_areas:
+    # Sets which areas are dark until Flash is used
+    # 
+    # - _All includes all areas
+    # - _Random has a 50% chance to include each area that is not already included
+    # 
+    # Allowed areas: Burned Tower, Dark Cave, Digletts Cave, Dragons Den, Goldenrod Underground, Ice Path, Ilex Forest, Mount Moon, Mount Mortar, Olivine Lighthouse, Rock Tunnel, Silver Cave, Slowpoke Well, Tohjo Falls, Union Cave, Victory Road, Whirl Islands
+    ['Dark Cave', 'Rock Tunnel', 'Silver Cave', 'Whirl Islands']
+    # will be overwritten by trigger!
+
+  route_32_condition:
+    # Sets the condition required to pass between the north and south parts of Route 32
+    # - Egg from aide: Collect the Egg from the aide in the Violet City Pokemon Center after beating Falkner
+    # - Any badge: Obtain any badge
+    # - Any gym: Beat any gym
+    # - Zephyr Badge: Obtain the Zephyr Badge
+    # - None: No requirement
+    egg_from_aide: 2
+    any_badge: 1
+    any_gym: 1
+    zephyr_badge: 3
+    none: 0
+
+  route_2_access:
+    # Sets the roadblock for moving between the west of Route 2 and Diglett's cave
+    # - Vanilla: Cut is required
+    # - Ledge: A ledge is added north of Diglett's cave allowing east -> west access without Cut
+    # - Open: No requirement
+    vanilla: 1
+    ledge: 2
+    open: 1
+
+  route_3_access:
+    # Sets the roadblock for moving between Pewter City and Route 3
+    # - Vanilla: No requirement
+    # - Boulder Badge: The Boulder Badge is required to pass
+    vanilla: 1
+    boulder_badge: 2
+
+  route_42_access:
+    # Sets the requirement to traverse the water on Route 42
+    # - Vanilla: Route 42 can be traversed with Surf
+    # - Whirlpool: Access to Central Route 42 is blocked by a whirlpool
+    # - Blocked: Access to Central Route 42 is completely blocked, requiring going through Mount Mortar instead.
+    # Mount Mortar 1F gets an extra map connection between the Inside and Central Outside
+    # - Whirlpool Open Mortar: Route 42 has whirlpools and Mount Mortar 1F has the extra map connection.
+    vanilla: 3
+    whirlpool: 1
+    blocked: 1
+    whirlpool_open_mortar: 1
+
+  mount_mortar_access:
+    # Sets the requirement to pass through Mount Mortar east <> west
+    # - Vanilla: No requirement
+    # - Rock Smash: Rock Smash is required
+    vanilla: 1
+    rock_smash: 2
+
+  red_gyarados_access:
+    # Sets the access requirement for the red Gyarados
+    # - Vanilla requires Surf
+    # - Whirlpool requires Surf and Whirlpool
+    # - Shore requires nothing
+    vanilla: 3
+    whirlpool: 2
+    shore: 1
+
+  blackthorn_dark_cave_access:
+    # Sets the roadblock for travelling from Route 31 to Blackthorn City through Dark Cave
+    # - Vanilla: Traversal is not possible
+    # - Waterfall: A waterfall is added to the Violet side of Dark Cave and a ledge is removed on the Blackthorn side,
+    # allowing passage with Flash, Surf and Waterfall
+    vanilla: 1
+    waterfall: 2
+
+  national_park_access:
+    # Sets the requirement to enter National Park
+    # - Vanilla: No requirement
+    # - Bicycle: The Bicycle is required
+    vanilla: 1
+    bicycle: 2
+
+  saffron_gatehouse_tea:
+    # Sets which Saffron City gatehouses require Tea to pass. Obtaining the Tea will unlock them all.
+    # If any gatehouses are enabled, adds a new location in Celadon Mansion 1F and adds Tea to the item pool.
+    # Valid options are: North, East, South and West in any combination.
+    # _Random gives each gate that is not already included a 50% chance to be included.
+    # _All is shorthand for all valid options except _Random of course.
+    []
+    # will be overwritten bys triggers!
+
+  remove_ilex_cut_tree:
+    # Removes the Cut tree in Ilex Forest
+    'false': 2
+    'true': 1
+
+  undergrounds_require_power:
+    # Specifies which of the Kanto Underground Passes require the Machine Part to be returned to access.
+    both: 50
+    north_south: 50
+    east_west: 50
+    neither: 50
+
+  east_west_underground:
+    # Adds an Underground Pass between Route 7 and Route 8 in Kanto.
+    'false': 1
+    'true': 2
+
+  vanilla_clair:
+    # Clair refuses to give you the Rising Badge until you prove your worth
+    # to the Elders in the Dragon's Den Shrine, which requires Whirlpool to access.
+    'false': 2
+    'true': 1
+
+  route_12_access:
+    # Sets the requirement to pass between the north and south parts of Route 12
+    # - Vanilla: No requirement
+    # - Weird Tree: Requires Squirtbottle
+    # 
+    # The roadblock is north of the path to Route 11 and can be bypassed with Surf
+    vanilla: 2
+    weird_tree: 1
+
+  magnet_train_access:
+    # Sets the requirement to ride the Magnet Train
+    # 
+    # - Pass requires only the Pass
+    # - Pass and Power requires the Pass and restoring power to Kanto by returning the Machine Part
+    pass: 3
+    pass_and_power: 1
+
+  ss_aqua_access:
+    # Sets the requirement to sail on the S.S. Aqua
+    # - Vanilla: S.S. Ticket is required
+    # - Lighthouse and Ticket: Healing Amphy in the Olivine lighthouse and the S.S Ticket are required
+    vanilla: 3
+    lighthouse_and_ticket: 1
+
+  route_30_access:
+    # Sets the requirement to end the Pokemon battle on Route 30
+    # - Mr. Pokemon: Visit Mr. Pokemon in his house
+    # - Mystery Egg: Return the Mystery Egg to Professor Elm
+    mr_pokemon: 50
+    mystery_egg: 50
+
+  route_30_battle:
+    # Sets which directions the battle on Route 30 blocks
+    blocks_northbound: 50
+    blocks_both: 50
+
+  south_kanto_access:
+    # Sets where the landslide that is normally south of Fuchsia City is located
+    route_19: 2
+    route_21: 2
+    neither: 1
+
+  south_kanto_condition:
+    # Sets the condition which clears the south Kanto landslide
+    enter_south_kanto: 50
+    power_restored: 50
+
+  #########
+  # Items #
+  #########
+  randomize_badges:
+    # Shuffles gym badge locations into the pool
+    # - Vanilla: Does not randomize gym badges
+    # - Shuffle: Randomizes gym badges between gym leaders
+    # - Completely Random: Randomizes badges with all other items
+    vanilla: 0
+    shuffle: 0
+    completely_random: 50
+
+  randomize_pokegear:
+    # Shuffles the Pokegear and cards into the pool
+    'false': 0
+    'true': 50
+
+  randomize_hidden_items:
+    # Shuffles hidden item locations into the pool
+    'false': 1
+    'true': 2
+
+  randomize_berry_trees:
+    # Shuffles berry tree locations into the pool
+    'false': 1
+    'true': 2
+
+  randomize_pokedex:
+    # Sets whether the Pokedex is shuffled into the pool
+    # 
+    # The Pokedex is required for Dexsanity, Dexcountsanity, trades and Pokemon request locations.
+    vanilla: 50
+    start_with: 50
+    randomize: 50
+
+  randomize_pokemon_requests:
+    # Shuffles the items given by Bill's Grandpa after showing him specific Pokemon into the pool, as well as the reward
+    # for showing a Magikarp to the fisher in the house at Lake of Rage
+    # 
+    # Optionally also randomizes the requested Pokemon, except the Magikarp
+    # 
+    # Trainers which need you to show them a Pokemon to get their phone number require both this option and Randomize Phone Call Items to be enabled.
+    'off': 6
+    items: 1
+    pokemon: 1
+    items_and_pokemon: 1
+
+  randomize_fly_unlocks:
+    # Shuffles Fly destination unlocks into the pool
+    # 
+    # Indigo Plateau is not included.
+    'off': 50
+    'on': 0
+    exclude_silver_cave: 0
+
+  randomize_bug_catching_contest:
+    # Shuffles the bug catching contest prizes into the pool
+    # - All: shuffles all prizes into the pool. WARNING: It can be very difficult to get second or third place.
+    # - Combine second and third: Combines second and third place into a single prize. Shuffles 1st, 2nd+3rd and 4th.
+    # - Participate: Shuffles a single participation award into the pool, which is obtained by completing the contest.
+    'off': 90
+    all: 0
+    combine_second_third: 1
+    participate: 9
+
+  randomize_phone_call_items:
+    # Shuffles items given by trainers after registering their phone numbers into the pool
+    # - On Vanilla: Trainers will only call you and allow you to call them at specific times and after their
+    #   condition has been met. Whether the correct phone call triggers can be random depending on the trainer.
+    #   IMPORTANT: Triggering phone calls this way can require resetting the clock, toggling DST and a lot of patience.
+    # 
+    # - On Simple: Trainers will allow you to call them for their item any time after their condition has been met.
+    #   They will always have an item ready in this case.
+    # 
+    # The Pokegear is required to register trainer phone numbers and the Phone Card is required to make and receive calls.
+    # 
+    # Trainers that need you to show them a Pokemon require both this option and Randomize Pokemon Requests to be enabled.
+    'off': 3
+    on_vanilla: 0
+    on_simple: 1
+
+  require_itemfinder:
+    # Hidden items require Itemfinder in logic
+    # 
+    # - Not Required: Hidden items do not require the Itemfinder at all
+    # - Logically Required: Hidden items will expect you to have Itemfinder for logic but can be picked up without it
+    # - Hard Required: Hidden items cannot be picked up without the Itemfinder
+    not_required: 0
+    logically_required: 2
+    hard_required: 1
+
+  remote_items:
+    # Instead of placing your own items directly into the ROM, all items are received from the server, including items you find for yourself.
+    # This enables co-op of a single slot and recovering more items after a lost save file (if you're so unlucky).
+    # But it changes pickup behavior slightly and requires connection to the server to receive any items.
+    'false': 0
+    'true': 1 # palnote: highly recommended to be remote so that slots can be later picked up by people!
+
+  item_pool_fill:
+    # Changes how non-progression items are put into the pool.
+    # 
+    # - Vanilla: item pool filled similarly to vanilla.
+    # - Balanced: all filler items uniformly randomized.
+    # - Youngster: item pool filled with items reflecting that of a young trainer.
+    # - Cooltrainer: item pool filled with items reflecting that of a cooltrainer.
+    # - Shuckle: item pool filled with items reflecting that of a Shuckle.
+    vanilla: 50
+    balanced: 50
+    youngster: 50
+    cooltrainer: 50
+    shuckle: 0
+
+  add_missing_useful_items:
+    # Adds useful items which are unobtainable to the pool, these replace filler
+    'false': 50
+    'true': 50
+
+  exclude_post_goal_locations:
+    # Excludes locations which require becoming champion when goal is becoming champion
+    'false': 0
+    'true': 50
+
+  grasssanity:
+    # Adds Cutting grass tiles as locations, each one adds a Grass to the item pool, Grass smells good and sells for ¥1
+    # Long grass tiles in National Park must be Cut twice and as such contribute two locations
+    # 
+    # - One Per Area: Selects a random grass tile in each Route or Area to be a location
+    # - Full: Every grass tile is a location
+    # 
+    # WARNING: This option is dumb, it can add over 700 locations and over 700 useless filler items
+    'off': 90
+    one_per_area: 9
+    full: 1
+
+  randomize_item_values:
+    # Randomizes the base value of items, this affects sell price and can affect buy price depending on other options
+    'false': 50
+    'true': 0 # palnote: too advanced for the average user
+
+  minimum_item_value:
+    # Sets the minimum value of items when Randomize Item Values is enabled
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 10000
+    0: 50
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-0-10000: 0 # random value between 0 and 10000
+
+  maximum_item_value:
+    # Sets the maximum value of items when Randomize Item Values is enabled
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 10000
+    10000: 50
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-0-10000: 0 # random value between 0 and 10000
+
+  ##############
+  # Shopsanity #
+  ##############
+  shopsanity:
+    # Adds shop purchases as locations, items in shops are added to the item pool
+    # - Johto Marts: Adds Johto Poke Marts, including the Goldenrod Dept. Store.
+    # - Kanto Marts: Adds Kanto Poke Marts, including the Celadon Dept. Store.
+    # - Blue Card: Adds the Blue Card prize shop, accessing this shop requires the Blue Card and buying items requires
+    # points. Five Blue Card Points are added to the item pool. Points are not spent when purchasing.
+    # - Game Corners: The Game Corner TM shops are added.
+    # - Apricorns: Kurt's Apricorn Ball shop is added, each slot requires a different Apricorn. Apricorns are progression.
+    # - _All: Includes all valid options.
+    # - _Random: Each option that is not included has a 50% chance to be additionally included.
+    # 
+    # IMPORTANT NOTE: There is a non-randomized shop on Pokecenter 2F, you can always buy Poke Balls and Escape Ropes there.
+    []
+    # will be overwritten by triggers
+
+  shopsanity_prices:
+    # Sets how shop item prices are determined when Shopsanity is enabled
+    # - Vanilla: Shop prices are unchanged
+    # - Item Price: Shop prices are determined by the value of the item being sold
+    # - Spheres: Shop prices are determined by sphere access
+    # - Classification: Shop prices are determined by item classifications (Progression, Useful, Filler/Trap)
+    # - Spheres and Classifications: Shop prices are determined by both sphere access and item classifications
+    # - Completely Random: Shop prices will be completely random
+    vanilla: 0
+    item_price: 0
+    spheres: 0
+    classification: 0
+    spheres_and_classification: 50
+    completely_random: 0
+
+  shopsanity_minimum_price:
+    # Sets the minimum cost of shop items when Shopsanity is enabled
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 10000
+    100: 50
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-0-10000: 0 # random value between 0 and 10000
+
+  shopsanity_maximum_price:
+    # Sets the maximum cost of shop items when Shopsanity is enabled
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 10000
+    3000: 50
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-0-10000: 0 # random value between 0 and 10000
+
+  provide_shop_hints:
+    # Sends out hints when a randomized shop is accessed
+    'off': 0
+    progression: 0
+    progression_and_useful: 50
+    all: 0
+
+  shopsanity_restrict_rare_candies:
+    # Makes Rare Candies in shops only purchasable once
+    'false': 50
+    'true': 0
+
+  shopsanity_x_items:
+    # Determines how Shopsanity treats X Items
+    # - Anywhere: X Items will be shuffled into the multiworld pool
+    # - Any Shop: At least one of each X Item will be available for purchase in a local shop
+    # 
+    # NOTE: You cannot purchase any shop item repeatedly when Remote Items is active
+    anywhere: 0
+    any_shop: 50
+
+  #######
+  # HMs #
+  #######
+  hm_compatibility:
+    # Percent chance for Pokemon to be compatible with each HM
+    # Headbutt and Rock Smash are considered HMs when applying compatibility
+    # 
+    # Minimal compatibility will ensure only the minimum required number of Pokemon can learn each HM, usually one
+    # 
+    # You can look up HM compatible Pokemon in the Pokedex using the search function
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is -1
+    # Maximum value is 100
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range--1-100: 0 # random value between -1 and 100
+    vanilla: 1 # equivalent to -1
+    minimal: 0 # equivalent to 0
+    fully_compatible: 3 # equivalent to 100
+
+  hm_compatibility_override:
+    # Allows overriding compatibility percentage for specific HMs
+    # 
+    # Uses the following format:
+    # hm_compatibility_override:
+    #   Headbutt: 10
+    #   Fly: 100
+    #   Flash: 0
+    # 
+    # Headbutt and Rock Smash are considered HMs for this setting.
+    {}
+
+  hm_badge_requirements:
+    # - Vanilla: HMs require their vanilla badges
+    # - No Badges: HMs do not require a badge to use
+    # - Add Kanto: HMs can be used with the Johto or Kanto badge
+    # - Regional: HMs can be used in Johto with the Johto badge or in Kanto with the Kanto badge
+    #     This does not apply to Fly which will accept either badge
+    #     Routes 26, 27, 28 and Tohjo Falls are in Johto for HM purposes
+    vanilla: 2
+    no_badges: 1
+    add_kanto: 2
+    regional: 2
+
+  remove_badge_requirement:
+    # Specify which HMs do not require a badge to use. This overrides the HM Badge Requirements setting.
+    # 
+    # _Random has a 50% chance to include HMs which are not already included
+    # _All will include all HMs
+    # 
+    # HMs should be provided in the form: "Fly".
+    []
+
+  require_flash:
+    # Determines if the ability to use Flash is required to traverse dark areas
+    # 
+    # - Not Required: Dark areas do not require Flash at all
+    # - Logically Required: Dark areas will expect you to be able to use Flash for logic, but you can traverse them without
+    # - Hard Required: You will not be able to traverse dark areas without the ability to use Flash there
+    not_required: 0
+    logically_required: 2
+    hard_required: 1
+
+  field_moves_always_usable:
+    # Decouples TM/HM Compatibility for Battle Moves and Field Moves.
+    # If enabled, Field Moves will always be considered usable, regardless of TM or HM compatibility. Badge requirements still apply.
+    'false': 50
+    'true': 0
+
+  free_fly_location:
+    # - Free Fly: Unlocks a random Fly destination when Fly is obtained.
+    # - Free Fly and Map Card: Additionally unlocks a random Fly destination after obtaining both the Pokegear and Map Card.
+    # - Map Card: Unlocks a single random Fly destination only after obtaining both the Pokegear and Map card.
+    # 
+    # Indigo Plateau cannot be chosen as a free Fly location.
+    'off': 0
+    free_fly: 0
+    free_fly_and_map_card: 0
+    map_card: 50
+
+  free_fly_blocklist:
+    # These locations won't be given to you as fly locations, either as your free one or from receiving the map card.
+    # Locations should be provided in the form: "Ecruteak City"
+    # Indigo Plateau cannot be chosen as a free fly location and is not a valid option
+    # If you blocklist enough locations that there aren't enough locations left for your total number of free fly locations, the blocklist will simply do nothing
+    # "_Johto" and "_Kanto" are shortcuts for all Johto and Kanto towns respectively
+    []
+
+  early_fly:
+    # HM02 Fly will be placed early in the game
+    # If this option is enabled, you will be able to Fly before being forced to use an item to progress
+    # Early Fly is a best effort setting, if Fly and its badge cannot be placed early, then they will be placed
+    #     randomly
+    'false': 0
+    'true': 50
+
+  fly_cheese:
+    # Determines whether the Vermilion and Mahogany Fly unlocks can be accessed from behind Snorlax and the
+    # Ragecandybar salesman respectively
+    # - Out of logic allows access but does not consider them in logic
+    # - Disallow prevents access to Fly unlocks beyond the roadblocks
+    # - In logic allows access and considers them in logic
+    out_of_logic: 50
+    disallow: 0
+    in_logic: 0
+
+  ###########
+  # Pokemon #
+  ###########
+  randomize_wilds:
+    # Randomizes species of wild Pokemon
+    # 
+    # Base Forms: Ensures that at least every Pokemon that cannot be obtained through evolution is available in the wild
+    # Evolution Lines: Ensures that at least one Pokemon from each evolutionary line can be obtained in the wild
+    # Catch 'em All: Ensures that every Pokemon will be obtainable in the wild
+    # 
+    # If this setting is anything other than vanilla, bug catching contest encounters will be completely random.
+    vanilla: 50
+    completely_random: 50
+    base_forms: 50
+    evolution_lines: 50
+    catch_em_all: 50
+
+  wild_encounter_blocklist:
+    # These Pokemon will not appear in the wild
+    # Does nothing if wild Pokemon are not randomized
+    # Blocklists are best effort, other constraints may cause them to be ignored
+    # This setting does not affect the bug catching contest.
+    # You can use _Legendaries or _Non-Legendaries as shortcuts, or _<Type> (e.g. _Fire, _Water) to include all Pokemon of that type.
+    []
+
+  randomize_static_pokemon:
+    # Randomizes species of static Pokemon encounters
+    # This includes overworld Pokemon, gift Pokemon and gift egg Pokemon
+    # 
+    # NOTE: If this setting is disabled, the Odd Egg will still be fixed to a single possible Pokemon
+    'false': 1
+    'true': 2
+
+  static_blocklist:
+    # These Pokemon will not appear as static overworld encounters, gift eggs or gift Pokemon
+    # Does nothing if static Pokemon are not randomized
+    # Blocklists are best effort, other constraints may cause them to be ignored
+    # You can use _Legendaries or _Non-Legendaries as shortcuts, or _<Type> (e.g. _Fire, _Water) to include all Pokemon of that type.
+    []
+
+  randomize_base_stats:
+    # - Vanilla: Vanilla base stats
+    # - Keep BST: Random base stats, but base stat total is preserved
+    # - Completely Random: Base stats and BST are completely random
+    vanilla: 3
+    keep_bst: 1
+    completely_random: 0
+
+  base_stats_multiples_of_five:
+    # When randomizing base stats, aim to make the new base stats multiples of 5.
+    # When using Keep BST, any remainder will be added to one stat.
+    'false': 50
+    'true': 0
+
+  randomize_types:
+    # - Vanilla: Vanilla Pokemon types
+    # - Follow Evolutions: Types are randomized but preserved when evolved
+    # - Completely Random: Types are completely random
+    vanilla: 9
+    follow_evolutions: 1
+    completely_random: 0
+
+  shared_primary_type:
+    # If types are randomized, all Pokemon will share this type
+    'off': 50
+    normal: 0
+    fighting: 0
+    flying: 0
+    poison: 0
+    ground: 0
+    rock: 0
+    bug: 0
+    ghost: 0
+    steel: 0
+    fire: 0
+    water: 0
+    grass: 0
+    electric: 0
+    psychic: 0
+    ice: 0
+    dragon: 0
+    dark: 0
+
+  randomize_evolution: # palnote: too complicated for the average user
+    # - Vanilla: Pokemon evolve into the same Pokemon they do in vanilla
+    # - Match a Type: Pokemon evolve into a random Pokemon with a higher base stat total, that shares at least one type with it.
+    # - Increase BST: Pokemon evolve into a random Pokemon with a higher base stat total.
+    # 
+    # Note: If random BST, random types, or the evolution blocklist cause a Pokemon to have no valid evolution within
+    # your chosen setting here, it will evolve into the closest available thing to a valid evolution.
+    # 
+    # Note: All Pokemon will be standardized to the medium-fast EXP curve when any evolution randomization is enabled.
+    vanilla: 50
+    match_a_type: 0
+    increase_bst: 0
+
+  convergent_evolution:
+    # Random evolution can cause multiple Pokemon to evolve into the same Pokemon.
+    # - Avoid: Each Pokemon can only evolve from one Pokemon.
+    # - Allow: Multiple Pokemon can evolve into the same Pokemon.
+    avoid: 50
+    allow: 0
+
+  evolution_blocklist:
+    # No Pokemon will evolve into these Pokemon. Does nothing if evolution is not randomized.
+    # Blocklists are best effort, other constraints may cause them to be ignored.
+    # You can use _Legendaries or _Non-Legendaries as shortcuts, or _<Type> (e.g. _Fire, _Water) to include all Pokemon of that type.
+    []
+
+  maximum_evolution_level:
+    # Reduces all level-based evolution levels to at most the specified level.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 1
+    # Maximum value is 100
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-1-100: 0 # random value between 1 and 100
+    disabled: 50 # equivalent to 100
+
+  randomize_breeding: # palnote: too complicated for the average user
+    # - Vanilla: Breeding is unchanged
+    # - Random Line Base: Each Pokemon will produce eggs for a random base Pokemon that evolves into it
+    # - Random Any Base: Each Pokemon will produce eggs for a random base Pokemon
+    # - Random Lower BST: Each Pokemon will produce eggs for a random Pokemon with equal or lower BST
+    # - Completely Random: Each Pokemon will produce eggs for a random Pokemon
+    vanilla: 50
+    line_base: 0
+    any_base: 0
+    decrease_bst: 0
+    completely_random: 0
+
+  breeding_blocklist:
+    # No Pokemon will produce eggs containing these Pokemon.
+    # Blocklists are best effort, other constraints may cause them to be ignored.
+    # You can use _Legendaries or _Non-Legendaries as shortcuts, or _<Type> (e.g. _Fire, _Water) to include all Pokemon of that type.
+    []
+
+  randomize_trades:
+    # Randomizes species of in-game trades
+    vanilla: 50
+    received: 50
+    requested: 50
+    both: 50
+
+  encounter_grouping:
+    # Determines how randomized wild Pokemon are grouped in encounter tables.
+    # 
+    # - All Split: Each encounter area will have each slot randomized separately. For example, grass areas will have seven
+    # randomized encounter slots.
+    # - One to One: Each encounter area will retain its vanilla slot grouping. For example, if an area has two encounters
+    # in vanilla, it will be randomized as two slots.
+    # - One per Method: Each encounter method on a route will be treated as a single slot. For example, the grass on a route
+    # will contain only a single encounter. Each rod is a separate encounter.
+    # 
+    # This setting has no effect if wild Pokemon are not randomized.
+    # This setting does not affect the bug catching contest.
+    all_split: 1
+    one_to_one: 3
+    one_per_method: 2
+
+  encounter_slot_distribution:
+    # Sets how the Pokemon encounter slots in an area are distributed.
+    # 
+    # Remove 1%'s modifies grass/cave encounters to 30%/25%/20%/10%/5%/5%/5% and does not modify any others.
+    # Balanced sets the following:
+    #     Grass/Cave: 20%/20%/15%/15%/10%/10%/10%
+    #     Surf (unchanged): 60%/30%/10%
+    #     Headbutt:  20%/20%/20%/15%/15%/10%
+    #     Rock Smash: 70%/30%
+    #     Fishing (unchanged):
+    #         Old Rod: 70%/15%/15%
+    #         Good Rod: 35%/35%/20%/10%
+    #         Super Rod: 40%/30%/20%/10%
+    #     Bug Catching Contest (unchanged): 20%/20%/10%/10%/10%/10%/5%/5%/5%/5%
+    # Equal sets all encounter slots to have (almost) equal probability.
+    vanilla: 0
+    remove_one_percents: 0
+    balanced: 0
+    equal: 50
+
+  ############
+  # Starters #
+  ############
+  randomize_starters:
+    # Randomizes species of starter Pokemon
+    vanilla: 1
+    unevolved_only: 2
+    completely_random: 2
+    first_stage_can_evolve: 2
+    base_stat_mode: 2
+
+  starters_bst_average:
+    # If you chose Base Stat Mode for your starters, what is the average base stat total you want your available starters to be?
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 195
+    # Maximum value is 680
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-195-680: 0 # random value between 195 and 680
+    normal_starters: 50 # equivalent to 310
+
+  starter_blocklist:
+    # These Pokemon will not be chosen as starter Pokemon
+    # Does nothing if starter Pokemon are not randomized
+    # Blocklists are best effort, other constraints may cause them to be ignored
+    # You can use _Legendaries or _Non-Legendaries as shortcuts, or _<Type> (e.g. _Fire, _Water) to include all Pokemon of that type.
+    []
+
+  #########
+  # Moves #
+  #########
+  randomize_learnsets:
+    # - Vanilla: Vanilla learnsets
+    # - Randomize: Random learnsets
+    # - Start With Four Moves: Random learnsets with 4 starting moves
+    vanilla: 1
+    randomize: 2
+    start_with_four_moves: 3
+
+  learnset_type_bias:
+    # This option will have an effect only if Randomize Learnset option is enabled.
+    # 
+    # Percentage chance of each move in a Pokemon's learnset to match one of its types.
+    # Default value is none (-1). This means there will be no bias.
+    # The lowest possible type matching value is 0. This means there will be no STAB moves in a Pokemon's learnset.
+    # If set to 100 all moves that a Pokemon will learn by levelling up will match one of its types.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is -1
+    # Maximum value is 100
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range--1-100: 0 # random value between -1 and 100
+    none: 50 # equivalent to -1
+
+  metronome_only: # palnote: pain and suffering
+    # Only Metronome is usable in battle, PP is infinite
+    # You can still teach HMs and useful TMs
+    'false': 50
+    'true': 0
+
+  randomize_moves:
+    # Randomizes the properties of moves.
+    # 
+    # The following options can be provided:
+    # - Power Restricted: Multiplies the power of each move by a random number between 0.5 and 1.5
+    # - PP Restricted: Adds or subtracts 0, 5 or 10 from original move PP. Base PP is limited to 5-40.
+    # - Power Full: Randomizes the power of each move in the range 20-150.
+    #   Multi hit moves have their power divided by average hit count.
+    # - PP Full: Randomizes the PP of each move in the range 5-40.
+    # - Accuracy: Randomizes the accuracy of each move. Accuracy has a 70% chance to be 100% for each move,
+    #   otherwise it is linearly distributed in the range 30-100.
+    # - Type: Randomizes the type of each move.
+    # 
+    # Full options override Restricted options.
+    []
+
+  randomize_type_chart:
+    # Randomizes the type matchup chart
+    # - Vanilla: Type matchups are unchanged
+    # - Shuffle: Shuffles type matchups around, keeping the same number of each possible matchup
+    # - Completely Random: Generates a random matchup for each type pair. WARNING: This can result in a lot of immunities
+    vanilla: 50
+    shuffle: 0
+    completely_random: 0
+
+  physical_special_split:
+    # Sets how moves are determined to be Physical or Special
+    # - Vanilla: Determined by move type, for example: all Fire moves are Special
+    # - Modern: Determined by the move, for example: Flame Wheel is Physical and Ember is Special
+    # - Random by type: Vanilla, but shuffled randomly for each type
+    # - Random by move: Modern, but shuffled randomly for each move
+    vanilla: 3
+    modern: 1
+    random_by_type: 0
+    random_by_move: 0
+
+  hm_power_cap:
+    # Lowers the power of damaging HM moves that exceed the set power down to match it.
+    # Headbutt and Rock Smash are considered HMs for this setting.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 20
+    # Maximum value is 255
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-20-255: 0 # random value between 20 and 255
+    none: 50 # equivalent to 255
+
+  randomize_tm_moves:
+    # Randomizes the moves available as TMs
+    'false': 1
+    'true': 2
+
+  tm_plando:
+    # Specify what move a TM will contain.
+    # TMs 02 and 08 can never be plandoed. This also means Headbutt and Rock Smash cannot be plandoed onto other TMs.
+    # If Dexsanity or Dexcountsanity are enabled, and Sweet Scent hasn't been plandoed, it will be forced to TM12.
+    # This option takes priority over the TM Blocklist and vanilla TMs, and is ignored in Metronome Only mode.
+    # 
+    # A single move or a weighted dict of moves can be provided per TM:
+    # tm_plando:
+    #   1: Dynamicpunch
+    #   3: Curse
+    #   10:
+    #     Ice Beam: 50
+    #     Blizzard: 50
+    {}
+
+  tm_compatibility:
+    # Percent chance for Pokemon to be compatible with each TM
+    # Headbutt and Rock Smash are considered HMs when applying compatibility
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is -1
+    # Maximum value is 100
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range--1-100: 0 # random value between -1 and 100
+    vanilla: 1 # equivalent to -1
+    none: 0 # equivalent to 0
+    fully_compatible: 2 # equivalent to 100
+
+  reusable_tms:
+    # TMs can be used an infinite number of times
+    'false': 0
+    'true': 1
+
+  move_blocklist:
+    # Pokemon won't learn these moves via learnsets.
+    # Moves should be provided in the form: "Ice Beam"
+    # Does not apply to vanilla learnsets
+    []
+
+  tm_blocklist:
+    # No TM will contain these moves.
+    # Moves should be provided in the form: "Ice Beam"
+    # Does not apply to vanilla TMs
+    []
+
+  modernise_moves_generation:
+    # Selects the generation to update moves to.
+    # This affects power, PP and accuracy only and is applied before any randomization.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 3
+    # Maximum value is 9
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-3-9: 0 # random value between 3 and 9
+    disabled: 50 # equivalent to 0
+
+  modernise_moves_type:
+    # Selects whether generational buffs, nerfs or both are applied to moves.
+    # Only has an effect if a generation is selected to modernise moves to.
+    buffs_and_nerfs: 50
+    buffs_only: 0
+    nerfs_only: 0
+
+  ############
+  # Trainers #
+  ############
+  randomize_trainer_parties:
+    # Randomizes Pokemon in enemy trainer parties
+    vanilla: 1
+    match_types: 2
+    completely_random: 3
+
+  trainer_party_blocklist:
+    # These Pokemon will not appear in enemy trainer parties
+    # Does nothing if trainer parties are not randomized
+    # Blocklists are best effort, other constraints may cause them to be ignored
+    # You can use _Legendaries or _Non-Legendaries as shortcuts, or _<Type> (e.g. _Fire, _Water) to include all Pokemon of that type.
+    []
+
+  boost_trainers: # palnote: difficulty is not good
+    # Boost levels of every trainer's Pokemon. There are 2 different boost modes:
+    # Percentage Boost: Increases every trainer Pokemon's level by the boost percentage.
+    # Set Min Level: Trainer Pokemon will be the specified level or higher.
+    vanilla: 50
+    percentage_boost: 0
+    set_min_level: 0
+
+  trainer_level_boost:
+    # This Value only works if Boost Trainer Pokemon Levels is being used.
+    # The meaning of this value depends on Trainer Boost Mode.
+    # 
+    # Percentage Boost: This value represents the boost amount percentage
+    # Set Min Level: Trainer Pokemon will never be lower than this level
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 1
+    # Maximum value is 100
+    1: 50
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-1-100: 0 # random value between 1 and 100
+
+  force_fully_evolved:
+    # When an opponent uses a Pokemon of the specified level or higher, restricts the species to only fully evolved Pokemon.
+    # 
+    # Only applies when trainer parties are randomized.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 100
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-0-100: 0 # random value between 0 and 100
+    disabled: 50 # equivalent to 0
+
+  ###############
+  # Dexsanities #
+  ###############
+  dexsanity:
+    # Adds checks for catching Pokemon
+    # Pokemon that cannot be logically obtained will never be included
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 251
+    random: 0
+    random-high: 0 # random value weighted towards higher values
+    random-range-0-251: 0 # random value between 0 and 251
+    none: 75 # equivalent to 0
+    random-low: 20
+    full: 5
+
+  dexcountsanity: # palnote: this will be just confusing for newcomers so I'm leaving it off.
+    # Adds checks for completing Pokedex milestones
+    # This setting specifies number of caught Pokemon on which you'll get your last check
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 251
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-0-251: 0 # random value between 0 and 251
+    none: 50 # equivalent to 0
+    full: 0 # equivalent to 251
+
+  dexcountsanity_step:
+    # If Dexcountsanity is enabled, specifies the step interval at which your checks are placed.
+    # For example, if you have Dexcountsanity 50 and Dexcountsanity Step 10, you will have checks at
+    # 10, 20, 30, 40 and 50 total Pokemon caught.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 1
+    # Maximum value is 251
+    1: 50
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-1-251: 0 # random value between 1 and 251
+
+  dexcountsanity_leniency:
+    # If Dexcountsanity is enabled, specifies the logic leniency for checks.
+    # For example, if you set Dexcountsanity Leniency to 5 and have a Dexcountsanity check at 10, you will not be
+    # logically required to obtain this check until you can obtain 15 Pokemon
+    # 
+    # Checks that would go over the total number of logically available Pokemon will be clamped to that limit
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 251
+    0: 50
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-0-251: 0 # random value between 0 and 251
+
+  dexsanity_starters:
+    # Controls how Dexsanity treats starter Pokemon
+    # - Allow: Starter Pokemon will be allowed as Dexsanity checks
+    # - Block: Starter Pokemon will not be allowed as Dexsanity Checks
+    # - Available Early: Starter Pokemon will all be obtainable in the wild immediately, unless there is nowhere to obtain
+    # wild Pokemon immediately
+    allow: 0
+    block: 0
+    available_early: 50 # palnote: users can then see if the other starters are any good
+
+  #################
+  # Trainersanity #
+  #################
+  johto_trainersanity:
+    # Adds checks for defeating Johto trainers.
+    # 
+    # You can turn trainers that have checks grayscale by setting the "trainersanity_indication" in-game option.
+    # 
+    # Trainers are no longer missable. Each trainer will add a random filler item into the pool.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 242
+    random: 0
+    random-high: 0 # random value weighted towards higher values
+    random-range-0-242: 0 # random value between 0 and 242
+    none: 75 # equivalent to 0
+    random-low: 20
+    full: 5
+
+  kanto_trainersanity:
+    # Adds checks for defeating Kanto trainers.
+    # 
+    # You can turn trainers that have checks grayscale by setting the "trainersanity_indication" in-game option.
+    # 
+    # Trainers are no longer missable. Each trainer will add a random filler item into the pool.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 131
+    random: 0
+    random-high: 0 # random value weighted towards higher values
+    random-range-0-131: 0 # random value between 0 and 131
+    none: 75 # equivalent to 0
+    random-low: 20
+    full: 5
+
+  #################
+  # Pokemon Logic #
+  #################
+  wild_encounter_methods_required:
+    # Sets which wild encounter types may be logically required
+    # 
+    # _Random has a 50% chance to include types which are not already included
+    # _All will include all types
+    # 
+    # Swarms and roamers are NEVER in logic
+    ['Land', 'Surfing', 'Fishing', 'Headbutt', 'Rock Smash']
+    # palnote: FUN FACT. Rare Headbutt Trees are the SAME in the SAME Room! So Big Async users can help each other figure out where they are!
+
+  enforce_wild_encounter_methods_logic:
+    # Sets whether the game will prevent capture of Pokemon found through disabled wild encounter methods
+    # Statics, roamers and contest encounters can always be caught
+    # 
+    # You can always re-catch Pokemon you have already caught
+    'false': 50
+    'true': 0
+
+  static_pokemon_required:
+    # Sets whether static Pokemon may be logically required
+    'false': 0
+    'true': 50
+
+  trades_required:
+    # Specifies if in-game trades may be logically required
+    'false': 50
+    'true': 0
+
+  evolution_methods_required: # palnote: People CAN still evolve but it won't be in logic as it's hard and tedious to get BK'd with evolutions and even more to check progress for hosts
+    # Sets which types of evolutions may be logically required
+    # 
+    # _Random has a 50% chance to include types which are not already included
+    # _All will include all types
+    []
+
+  evolution_gym_levels:
+    # Sets how many levels each accessible gym puts into logic for level (and Tyrogue) evolutions
+    # 
+    # For example, if you set this to 4 and have access to 5 gyms, evolutions up to level 20 would be in logic.
+    # 
+    # If Johto only is enabled the minimum for this setting is 8.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 4
+    # Maximum value is 69
+    8: 50
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-4-69: 0 # random value between 4 and 69
+
+  breeding_methods_required:
+    # Specifies which breeding methods may be logically required.
+    none: 50
+    with_ditto: 0
+    any: 0
+
+  enforce_breeding_methods_logic:
+    # Sets whether the game will prevent the breeding of Pokemon that do not match the selected breeding logic
+    'false': 50
+    'true': 0
+
+  #########
+  # Traps #
+  #########
+  filler_trap_percentage:
+    # Percentage chance each filler item is replaced with a trap
+    # 
+    # If no traps have any weight, this option does nothing
+    # 
+    # NOTE: This option has a maximum of 20 by default, this can be changed by setting maximum_filler_trap_percentage in host.yaml
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 100
+    0: 75
+    10: 25
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-0-100: 0 # random value between 0 and 100
+
+  trap_weights:
+    # Specifies the weights at which traps become each trap type
+    # 
+    # - Burn, Paralysis, Sleep, Poison and Freeze traps afflict the corresponding status on your party
+    # - Phone Traps trigger random Pokegear calls (NOTE: Phone Traps loop after you receive 32 of them)
+    # - Tutorial Traps trigger the catch tutorial
+    # - Teleport Traps use the move Teleport (both in battle and out of battle)
+    # - Whirlpool Traps spin you around in the overworld or trap you in Whirlpool for 99 turns in battle
+    # - Ice Traps make the overworld slippery for 40-60 steps
+    # - Explosion Traps faint a party member in the overworld or use Explosion in battle
+    # - Sandstorm Traps slow you in the overworld for 20-40 steps or activate Sandstorm for 99 turns in battle
+    # - Metronome Traps trigger a random other move trap in the overworld or use Metronome in battle
+    Burn Trap: 0
+    Explosion Trap: 0
+    Freeze Trap: 0
+    Ice Trap: 0
+    Metronome Trap: 0
+    Paralysis Trap: 0
+    Phone Trap: 1
+    Poison Trap: 0
+    Sandstorm Trap: 0
+    Sleep Trap: 0
+    Teleport Trap: 0
+    Tutorial Trap: 0
+    Whirlpool Trap: 0
+
+  trap_link:
+    # Games that support traplink will all receive similar traps when a matching trap is sent from another traplink game
+    # 
+    # This only applies to traps you have enabled
+    'false': 0
+    'true': 50
+
+  ###################
+  # Quality of Life #
+  ###################
+  game_options: # palnote: left these vanilla; except for text box & time of day, those I set to random
+    # Presets in-game options. These can be changed in-game later. Any omitted options will use their default.
+    # 
+    # Allowed options and values, with default first:
+    # 
+    # ap_item_sound: on/off - Sets whether a sound is played when a remote item is received
+    # auto_hms: off/on - HMs will be used automatically where possible, if their usage conditions are met
+    # auto_run: off/on - Sets whether run activates automatically, if on you can hold B to walk
+    # battle_animations: all/no_scene/no_bars/speedy - Sets which battle animations are played:
+    #     all: All animations play, including entry and moves
+    #     no_scene: Entry and move animations do not play
+    #     no_bars: Entry, move and HP/EXP bar animations do not play
+    #     speedy: No battle animations play and many delays are removed to make battles faster
+    # battle_move_stats: off/on - Sets whether or not to display power and accuracy of moves in battle
+    # battle_shift: shift/set - Sets whether you are asked to switch between trainer Pokemon
+    # bike_music: on/off - Sets whether the bike music will play
+    # blind_trainers: off/on - Sets whether trainers will see you without talking to them directly
+    # catch_exp: off/on - Sets whether or not you get EXP for catching a Pokemon
+    # dex_area_beep: off/on - Sets whether the Pokedex beeps for land and Surf encounters in the current area
+    # exp_distribution: gen2/gen6/gen8/no_exp - Sets the EXP distribution method:
+    #     gen2: EXP is split evenly among battle participants, EXP Share splits evenly between participants and non-participants
+    #     gen6: Participants earn 100% of EXP, non-participants earn 50% of EXP when EXP Share is enabled
+    #     gen8: Participants earn 100% of EXP, non-participants earn 100% of EXP when EXP Share is enabled
+    #     no_exp: EXP is disabled
+    # fast_egg_hatch: off/on - Sets whether eggs take a single cycle to hatch
+    # fast_egg_make: off/on - Sets whether eggs are guaranteed after one cycle at the day care
+    # fast_surf: off/on - Sets whether Surfing is bike speed
+    # guaranteed_catch: off/on - Sets whether balls have a 100% success rate
+    # hms_require_teaching: on/off - Sets whether it is required to teach field moves to use them in the field
+    # item_notification: popup/sound/none - Sets how Trainersanity, Dex(count)sanity and Grasssanity locations show item notifications
+    # low_hp_beep: on/off - Sets whether the low HP beep is played in battle
+    # menu_account: on/off - Sets whether extra information is shown on the Start menu
+    # more_uncaught_encounters: on/off - Sets whether wild encounters of Pokemon you have not caught are more likely
+    # poison_flicker: on/off - Sets whether the overworld poison flash effect is played
+    # rods_always_work: off/on - Sets whether the fishing rods always succeed
+    # short_fanfares: off/on - Sets whether item receive fanfares are shortened
+    # skip_dex_registration: off/on - Sets whether the Pokedex registration screen is skipped
+    # skip_nicknames: off/on - Sets whether you are asked to nickname a Pokemon upon receiving it
+    # sound: mono/stereo - Sets the sound mode
+    # spinners: normal/rotators/heck/hell - Sets the overworld behaviour of trainers
+    #     normal: Trainers will behave as they do in vanilla
+    #     rotators: Trainers that spin randomly will rotate consistently
+    #     heck: All trainers with vision rotate consistently, they have their original vision range but can spot you through obstacles
+    #     hell: All trainers with vision will spin randomly, have max vision and can spot you through obstacles
+    # surf_music: on/off - Sets whether the surf music will play
+    # text_frame: 1-8 - Sets the textbox frame, "random" will pick a random frame
+    # text_speed: mid/slow/fast/instant - Sets the speed at which text advances
+    # time_of_day: auto/morn/day/nite - Sets a time of day override, auto follows the clock, "random" will pick a random time
+    # tracker_slot: 0-255 - Sets which tracker slot is used for map tracking, used for co-op seeds
+    # trainersanity_indication: off/on - Sets whether Trainersanity trainers have grayscale sprites until they are beaten
+    # turbo_button: none/a/b/a_or_b - Sets which buttons auto advance text when held
+    ap_item_sound: 'on'
+    auto_hms: 'off'
+    auto_run: 'off'
+    battle_animations: all
+    battle_move_stats: 'off'
+    battle_shift: shift
+    bike_music: 'on'
+    blind_trainers: 'off'
+    catch_exp: 'off'
+    dex_area_beep: 'off'
+    exp_distribution: gen2
+    fast_egg_hatch: 'off'
+    fast_egg_make: 'off'
+    fast_surf: 'off'
+    guaranteed_catch: 'off'
+    hms_require_teaching: 'on'
+    item_notification: popup
+    low_hp_beep: 'on'
+    menu_account: 'on'
+    more_uncaught_encounters: 'off'
+    poison_flicker: 'on'
+    rods_always_work: 'off'
+    short_fanfares: 'off'
+    skip_dex_registration: 'off'
+    skip_nicknames: 'off'
+    sound: mono
+    spinners: normal
+    surf_music: 'on'
+    text_frame: random
+    text_speed: mid
+    time_of_day: random
+    tracker_slot: 0
+    trainersanity_indication: 'off'
+    turbo_button: none
+
+  level_scaling:
+    # Sets whether Trainer, Wild Pokemon and Static Pokemon levels are scaled based on sphere access.
+    # 
+    # - Off: Vanilla levels are used.
+    # - Spheres: Levels are scaled based on sphere access only.
+    # - Spheres and Distance: Levels are scaled based on both sphere access and distance from starting town.
+    'off': 1 # palnote: some people apparently enjoy this.
+    spheres: 9
+    spheres_and_distance: 0
+
+  level_curve: # palnote: i don't fuck with this
+    # When level scaling is enabled, use a custom level curve instead of deriving levels from vanilla data.
+    # The curve distributes levels from min to max across all scaled levels (trainers, statics, and wild encounters).
+    # 
+    # - Vanilla: Use vanilla levels as the basis for scaling.
+    # - Linear: Levels increase at a constant rate from min to max.
+    # - Sqrt: Levels rise quickly early then taper off. Harder early game, compressed late game.
+    # - Quadratic: Levels stay low early then rise steeply. Easier early game, rapid late-game growth.
+    # - S Curve: Slow start, fast middle, slow finish.
+    vanilla: 50
+    linear: 0
+    sqrt: 0
+    quadratic: 0
+    s_curve: 0
+
+  level_curve_min_level:
+    # The starting level for the custom level curve. Only used when Level Curve is not vanilla.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 1
+    # Maximum value is 100
+    2: 50
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-1-100: 0 # random value between 1 and 100
+
+  level_curve_max_level:
+    # The ending level for the custom level curve. Only used when Level Curve is not vanilla.
+    # 
+    # Red will be scaled so his lowest level matches this value. Wilds and statics will be scaled up to 2/3 of this value.
+    # 
+    # NOTE: Trainers are scaled based on their lowest level party member, so they can have levels above this value.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 1
+    # Maximum value is 100
+    73: 50
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-1-100: 0 # random value between 1 and 100
+
+  lock_kanto_gyms:
+    # Logically lock entering all Kanto gyms, Mt. Moon and Trainer House behind access to a high level Pokemon, included locations:
+    # - Snorlax
+    # - Ho-oh
+    # - Lugia
+    # - Suicune
+    # - Silver Cave entrance
+    # - Victory Road
+    # 
+    # You can still enter gyms, Mt. Moon and Trainer House without access to any of these.
+    # 
+    # NOTE: This option is automatically disabled when Level Scaling is enabled.
+    'off': 0
+    high_level_pokemon: 50 # palnote: this does nothing when level scaling is on so we leave it on
+
+  all_pokemon_seen:
+    # Start with all Pokemon seen in your Pokedex.
+    # This allows you to see where the Pokemon can be encountered in the wild.
+    'false': 3
+    'true': 1
+
+  starting_money:
+    # Sets your starting money.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 999999
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-0-999999: 0 # random value between 0 and 999999
+    6969: 50 # equivalent to 3000
+
+  better_marts:
+    # Improves the selection of items at Pokemarts
+    'false': 0
+    'true': 1
+
+  build_a_mart:
+    # Create a custom shop in place of the better mart with your own item selection, this also affects the final upgraded
+    # Pokecenter 2F mart.
+    # The first two shop items will always be Poke Ball and Escape Rope.
+    # Maximum of 14 items, any extra items will be discarded.
+    # 
+    # Available items: Antidote, Awakening, Burn Heal, Calcium, Carbos, Dire Hit, Elixer, Ether, Fresh Water, 
+    # Full Heal, Full Restore, Great Ball, Guard Spec, HP Up, Hyper Potion, Ice Heal, Iron, Lemonade, Max Elixer, 
+    # Max Ether, Max Potion, Max Repel, Max Revive, Park Ball, Parlyz Heal, Potion, Protein, PP Up, Rare Candy, Repel, 
+    # Revive, Soda Pop, Super Potion, Super Repel, Ultra Ball, X Accuracy, X Attack, X Defend, X Special, X Speed.
+    []
+
+  experience_modifier: # palnote: this can be modified ingame up to 12x
+    # Scale the amount of Experience Points given in battle
+    # Default is 20, for double set to 40, for half set to 10, etc
+    # 
+    # You can modify this value in-game, the CUSTOM option will use the value provided here.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 1
+    # Maximum value is 255
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-1-255: 0 # random value between 1 and 255
+    half: 0 # equivalent to 10
+    normal: 0 # equivalent to 20
+    double: 50 # equivalent to 40
+    triple: 0 # equivalent to 60
+    quadruple: 0 # equivalent to 80
+    quintuple: 0 # equivalent to 100
+    sextuple: 0 # equivalent to 120
+    septuple: 0 # equivalent to 140
+    octuple: 0 # equivalent to 160
+
+  skip_elite_four:
+    # Go straight to Lance when challenging the Elite Four
+    'false': 50
+    'true': 0
+
+  minimum_catch_rate:
+    # Sets a minimum catch rate for wild Pokemon
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 255
+    0: 50
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-0-255: 0 # random value between 0 and 255
+
+  always_unlock_fly_destinations:
+    # Always unlock Fly destinations when entering a town, even if Randomize Fly Unlocks is enabled
+    'false': 50
+    'true': 0
+
+  trainer_name:
+    # Preset your trainer name, this skips the name prompt.
+    # 
+    # Only the first seven characters will be used, unsupported characters will be replaced with '?'.
+    '': 50
+
+  field_move_menu_order:
+    # Defines which order the entries of the Field Move Menu (accessible if hms_require_teaching is set to 'off') appear in.
+    # 
+    # Provided values will appear on top of the menu in the given order.
+    # Omitted values will appear below in the following order: Cut, Fly, Surf, Strength, Flash, Whirlpool, Waterfall, Rock Smash, Headbutt, Dig, Teleport, Sweet Scent.
+    # Duplicates will be omitted.
+    ['Cut', 'Fly', 'Surf', 'Strength', 'Flash', 'Whirlpool', 'Waterfall', 'Rock Smash', 'Headbutt', 'Dig', 'Teleport', 'Sweet Scent']
+
+  default_pokedex_mode:
+    # Sets the default Pokedex mode
+    new: 50
+    old: 0
+    a_to_z: 0
+
+  progressive_rods:
+    # Sets whether fishing rods are always received in order (Old -> Good -> Super)
+    'false': 2
+    'true': 1
+
+  require_pokegear_for_phone_numbers:
+    # Sets whether the Pokegear is required to register trainer phone numbers and whether the Pokegear and Phone Card
+    # are required to receive calls
+    # 
+    # The Pokegear and Phone Card will always be logically required for phone call locations
+    'false': 0
+    'true': 50
+
+  death_link:
+    # When you die, everyone who enabled death link dies. Of course, the reverse is true too.
+    # 
+    # In Pokemon Crystal, whiting out sends a death and receiving a death causes you to white out.
+    # 
+    # Being seen by a trainer when spinner heck or hell is enabled will send a deathlink.
+    'false': 50
+    'true': 0
+
+  ############
+  # Cosmetic #
+  ############
+  randomize_palettes:
+    # - Vanilla: Vanilla Pokemon color palettes
+    # - Match Types: Color palettes match Pokemon Type
+    # - Completely Random: Color palettes are completely random
+    vanilla: 3
+    match_types: 1
+    completely_random: 0
+
+  randomize_music:
+    # Randomize all music
+    # - Shuffle will map each music track to a new track
+    # - Completely Random will map each music area to a new track
+    'off': 3
+    shuffle: 1
+    completely_random: 0
+
+  trainer_palette:
+    # Sets the palette used for the player character
+    vanilla: 3
+    red: 1
+    blue: 1
+    green: 1
+    brown: 1
+
+  ######
+  # :3 #
+  ######
+  enable_mischief:
+    # If I told you what this does, it would ruin the surprises :)
+    'off': 90
+    mild: 9
+    wild: 1 # palnote: mercy.
+
+
+  ## TRIGGERS
+  coffee:
+    none: 1
+    all: 2
+    some: 3
+    
+  scawwy_caves:
+    none: 1
+    all: 1
+    vanilla: 2
+    some: 3
+    
+  triggers:
+    - option_category: Pokemon Crystal
+      option_name: coffee
+      option_result: none
+      options:
+        Pokemon Crystal:
+          saffron_gatehouse_tea: []
+    - option_category: Pokemon Crystal
+      option_name: coffee
+      option_result: all
+      options:
+        Pokemon Crystal:
+          saffron_gatehouse_tea: ["_All"]
+    - option_category: Pokemon Crystal
+      option_name: coffee
+      option_result: some
+      options:
+        Pokemon Crystal:
+          saffron_gatehouse_tea: ["_Random"]
+    - option_category: Pokemon Crystal
+      option_name: scawwy_caves
+      option_result: some
+      options:
+        Pokemon Crystal:
+          dark_areas: ["_Random"]
+    - option_category: Pokemon Crystal
+      option_name: scawwy_caves
+      option_result: all
+      options:
+        Pokemon Crystal:
+          dark_areas: ["_All"]
+    - option_category: Pokemon Crystal
+      option_name: scawwy_caves
+      option_result: none
+      options:
+        Pokemon Crystal:
+          dark_areas: []
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: PokeCrystal-{player}

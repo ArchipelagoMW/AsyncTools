@@ -1,0 +1,46 @@
+﻿Dark Cloud 1:
+  accessibility: full
+
+  boss_goal:
+    6: 5
+    5: 4
+    4: 1
+
+  all_bosses: true
+    
+  open_dungeon:
+    open: 4
+    closed: 1
+
+  starter_weapons: true
+
+  miracle_sanity:
+    'false': 2
+    'true': 8
+
+  abs_multiplier:
+    double: 5
+    double_and_half: 3
+    triple: 1
+
+  attach_multiplier:
+    one_and_half: 5
+    double: 3
+
+  attach_mult_config: all
+    
+  auto_build:
+    'off': 3
+    hundo: 2
+    muska_robot_only: 2
+    
+  # The game is miserable without these found early
+  local_items:
+    ["Progressive Gaffer's Buggy", "Progressive Paige's House"]
+  triggers:
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: DarkCloud-{player}

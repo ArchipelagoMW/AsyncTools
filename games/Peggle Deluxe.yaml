@@ -1,0 +1,107 @@
+﻿Peggle Deluxe:
+  accessibility:
+    full: 1
+
+  goal:
+    gold_pegs_final_level: 1
+    gold_peg_hunt: 1
+  gold_pegs_total:
+    20: 1
+  gold_pegs_required:
+    15: 1
+  master_selection_mode:
+    multiple_masters: 1
+  master_selection:
+    Bjorn: true
+    Claude: true
+    Jimmy Lightning: true
+    Kat Tut: true
+    Lord Cinderbottom: true
+    Master Hu: true
+    Renfield: true
+    Splork: true
+    Tula: true
+    Warren: true
+  master_count:
+    3: 1
+  level_selection:
+    1-1 Peggleland: true
+    1-2 Slip and Slide: true
+    1-3 Bjorn's Gazebo: true
+    1-4 Das Bucket: true
+    1-5 Snow Day: true
+    10-1 Spin Cycle: true
+    10-2 The Dude Abides: true
+    10-3 When Pigs Fly: true
+    10-4 Yang, Yin: true
+    10-5 Zen Frog: true
+    11-1 Paw Reader: true
+    11-2 End of Time: true
+    11-3 Billions & Billions: true
+    11-4 Don't Panic: true
+    11-5 Beyond Reason: true
+    2-1 Birdy's Crib: true
+    2-2 Buffalo Wings: true
+    2-3 Skate Park: true
+    2-4 Spiral of Doom: true
+    2-5 Mr. Peepers: true
+    3-1 Scarab Crunch: true
+    3-2 Infinite Cheese: true
+    3-3 Ra Deal: true
+    3-4 Croco-Gator Pit: true
+    3-5 The Fever Level: true
+    4-1 The Amoeban: true
+    4-2 The Last Flower: true
+    4-3 We Come in Peace: true
+    4-4 Maid in Space: true
+    4-5 Getting the Spare: true
+    5-1 Pearl Clam: true
+    5-2 Insane Aquarium: true
+    5-3 Tasty Waves: true
+    5-4 Our Favorite Eel: true
+    5-5 Love Story: true
+    6-1 Waves: true
+    6-2 Spiderweb: true
+    6-3 Blockers: true
+    6-4 Baseball: true
+    6-5 Vermin: true
+    7-1 Holland Oats: true
+    7-2 I Heart Flowers: true
+    7-3 Workin from Home: true
+    7-4 Tula's Ride: true
+    7-5 70 and Sunny: true
+    8-1 Win a Monkey: true
+    8-2 Dog Pinball: true
+    8-3 Spin Again: true
+    8-4 Roll 'Em: true
+    8-5 Five of a Kind: true
+    9-1 The Love Moat: true
+    9-2 Doom with a View: true
+    9-3 Rhombi: true
+    9-4 9 Luft Balloons: true
+    9-5 Twisted Sisters: true
+  level_count:
+    35: 1
+  include_full_clears:
+    'false': 1
+    'true': 1
+  target_score_requirement_mode:
+    random_per_level: 1
+  target_score_requirement_percentage:
+    125: 1
+  maximum_starting_ball_count:
+    15: 1
+  useful_item_percentage:
+    random-range-40-70: 1
+  useful_item_weights:
+    Fever Meter Permanent Bonus: 1
+    Full Clear Discount: 3
+    Score Multiplier: 2
+    Target Score Discount: 1
+  triggers:
+  - option_category: null
+    option_name: name
+    option_result: Player{player}
+    options:
+      null:
+        name: PeggleDX-{player}

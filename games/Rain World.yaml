@@ -1,0 +1,138 @@
+﻿Rain World:
+  # This weight is determining the chance a vanilla campaign will have the More Slugcats Expansion (DLC) enabled.
+  # A large portion of the randomizer's content is gated behind this DLC. Players will need to own it to connect to slots with this setting enabled.
+  # With the additional triggers defined below, the effective chance for a slot to require MSC is 82%
+  is_msc_enabled:
+    'false': 50
+    'true': 50
+  # Watcher DLC is still fairly new. It is less likely that a player will own it, and it hasn't been implemented in the randomizer long enough for me to be fully confident in its stability for the Big Async.
+  is_watcher_enabled: 'false'
+
+  # When a DLC campaign is selected (any but the first 3), the DLC is automatically enabled by triggers defined below.
+  which_campaign:
+    monk: 1
+    survivor: 1
+    hunter: 2
+    gourmand: 2
+    artificer: 2
+    rivulet: 2
+    spearmaster: 2
+    saint: 2
+    sofanthiel: 0
+    watcher: 0
+
+  which_victory_condition:
+    ascension: 30
+    story: 30
+    echoes: 30
+    food_quest: 10
+    weaver: 0
+    true_ending: 0
+
+  which_gate_behavior: key_only
+
+  randomize_starting_region: weighted_choice
+
+  # Choosing only the easier / simpler starting locations
+  possible_starting_regions:
+    Chimney Canopy: 10
+    Drainage System / Undergrowth: 0
+    Farm Arrays: 10
+    Five Pebbles / The Rot: 0
+    Garbage Wastes: 10
+    Industrial Complex: 10
+    Looks to the Moon: 0
+    Metropolis: 0
+    Outer Expanse: 0
+    Outskirts: 10
+    Pipeyard: 10
+    Shaded Citadel / Silent Construct: 0
+    Shoreline / Waterfront Facility: 10
+    Sky Islands: 10
+    Subterranean: 0
+    The Exterior: 0
+
+  difficulty_hunter: 4
+  difficulty_outlaw: 5
+  difficulty_nomad: 6
+  difficulty_chieftain: 'true'
+  difficulty_glow: 'true'
+  difficulty_extreme_threats: 'false'
+  difficulty_submerged: longer_cycles
+  difficulty_echo_low_karma: unaltered
+
+  checks_sheltersanity:
+    'false': 60
+    'true': 40
+  checks_flowersanity:
+    'false': 60
+    'true': 40
+
+  # These check options can also only be active when MSC is enabled
+  checks_foodquest:
+    all_slugcats: 60
+    'off': 40
+  checks_foodquest_expanded:
+    'false': 60
+    'true': 40
+  checks_devtokens:
+    'false': 60
+    'true': 40
+
+  checks_submerged: only_aquatic
+  passage_priority: 0
+
+  extra_karma_cap_increases: 3
+  damage_upgrades: 6
+  expedition_perks:
+    [Back Spear Perk, Dual Wielding Perk, Blast Resistance Perk, Explosive Parry Perk, Explosive Jump Perk, Crafting Perk, Aquatic Perk, Agility Perk]
+  pct_traps: 5
+
+  triggers:
+
+  # Avoids OptionErrors from not selecting the proper DLC for chosen campaign / goal
+  - option_category: Rain World
+    option_name: which_victory_condition
+    option_result: food_quest
+    options:
+      Rain World:
+        is_msc_enabled: 'true'
+        checks_foodquest: 'true'
+  - option_category: Rain World
+    option_name: which_campaign
+    option_result: gourmand
+    options:
+      Rain World:
+        is_msc_enabled: 'true'
+  - option_category: Rain World
+    option_name: which_campaign
+    option_result: artificer
+    options:
+      Rain World:
+        is_msc_enabled: 'true'
+  - option_category: Rain World
+    option_name: which_campaign
+    option_result: rivulet
+    options:
+      Rain World:
+        is_msc_enabled: 'true'
+  - option_category: Rain World
+    option_name: which_campaign
+    option_result: spearmaster
+    options:
+      Rain World:
+        is_msc_enabled: 'true'
+  - option_category: Rain World
+    option_name: which_campaign
+    option_result: saint
+    options:
+      Rain World:
+        is_msc_enabled: 'true'
+
+  # Name
+  - option_category: null
+    option_name: name
+    option_result: Player{player}
+    options:
+      null:
+        name: RainWorld-{player}

@@ -1,0 +1,71 @@
+﻿Gauntlet Legends:
+  included_areas:
+    ['Castle', 'Town', 'Ice', 'Battlefield']
+
+  chests_barrels:
+    all_chests: 10
+    all_barrels: 10
+    all_both: 50
+
+  obelisks:
+    'false': 5
+    'true': 45
+
+  mirror_shards:
+    'false': 10
+    'true': 40
+
+  portals:
+    'false': 0
+    'true': 50
+
+  goal:
+    defeat_skorne: 25
+    defeat_x_bosses: 25
+
+  boss_goal_count:
+    random-high: 50
+
+  max_difficulty:
+    4: 45
+    random-range-1-4: 5
+
+  instant_max:
+    'true': 50
+
+  infinite_keys:
+    'false': 25
+    'true': 25
+
+  permanent_speed:
+    'false': 5
+    'true': 45
+
+  included_traps:
+    ['Death', 'Crossbow Shooter', 'Bomb Thrower', 'Bomb Runner', 'Golem']
+
+  traps_frequency:
+    random-low: 50
+
+  local_filler_frequency:
+    40: 50
+
+  unlock_character_one:
+    random: 50
+
+  unlock_character_two:
+    random: 50
+
+  unlock_character_three:
+    random: 50
+
+  unlock_character_four:
+    random: 50
+  
+  triggers:
+  - option_category: null
+    option_name: name
+    option_result: Player{player}
+    options:
+      null:
+        name: GL-{player}

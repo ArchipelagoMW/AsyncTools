@@ -1,0 +1,208 @@
+﻿Factorio - Space Age Without Space:
+  progression_balancing: disabled
+  accessibility: full
+  max_science_pack:
+    electromagnetic_science_pack: 100
+    cryogenic_science_pack: 50
+    space_science_pack: 20
+  goal:
+    rocket: 50
+    satellite: 20
+  craftsanity: random-range-0-20
+  tech_tree_layout:
+    single: 20
+    small_diamonds: 20
+    medium_diamonds: 20
+    large_diamonds: 20
+    small_pyramids: 20
+    medium_pyramids: 20
+    large_pyramids: 20
+    small_funnels: 20
+    medium_funnels: 20
+    large_funnels: 20
+    trees: 20
+    choices: 20
+  min_tech_cost: 5
+  max_tech_cost: 500
+  tech_cost_distribution:
+    even: 100
+    low: 40
+    middle: 20
+    high: 10
+  tech_cost_mix: 100
+  ramping_tech_costs: 'false'
+  silo: randomize_recipe
+  satellite: randomize_recipe
+  free_samples: stack
+  quality_scaling: 500
+  free_samples_quality: rare
+  tech_tree_information: advancement
+  starting_items:
+    burner-mining-drill: 50
+    raw-fish: 50
+    stone-furnace: 50
+    gun-turret: 50
+    coal: 50
+  recipe_time:
+    vanilla: 50
+    fast: 100
+    normal: 50
+    slow: 20
+    chaos: 10
+    new_fast: 50
+    new_normal: 20
+    new_slow: 10
+  recipe_ingredients: science_pack
+  recipe_ingredients_offset: 0
+  imported_blueprints: 'true'
+  world_gen:
+    autoplace_controls:
+      ammoniacal_ocean:
+        frequency: 3
+        richness: 6
+        size: 3
+      calcite:
+        frequency: 3
+        richness: 6
+        size: 3
+      coal:
+        frequency: 3
+        richness: 6
+        size: 3
+      copper-ore:
+        frequency: 3
+        richness: 6
+        size: 3
+      crude-oil:
+        frequency: 3
+        richness: 6
+        size: 3
+      enemy-base:
+        frequency: 1
+        richness: 1
+        size: 1
+      fluorine_vent:
+        frequency: 3
+        richness: 6
+        size: 3
+      gleba_plants:
+        frequency: 1
+        richness: 1
+        size: 1
+      iron-ore:
+        frequency: 3
+        richness: 6
+        size: 3
+      lithium_brine:
+        frequency: 3
+        richness: 6
+        size: 3
+      nauvis_cliff:
+        frequency: 1
+        richness: 1
+        size: 1
+      oil_sand:
+        frequency: 3
+        richness: 6
+        size: 3
+      scrap:
+        frequency: 3
+        richness: 6
+        size: 3
+      starting_area_moisture:
+        frequency: 1
+        richness: 1
+        size: 1
+      stone:
+        frequency: 3
+        richness: 6
+        size: 3
+      sulfuric_acid_geyser:
+        frequency: 3
+        richness: 6
+        size: 3
+      trees:
+        frequency: 1
+        richness: 1
+        size: 1
+      tungsten_ore:
+        frequency: 3
+        richness: 6
+        size: 3
+      uranium-ore:
+        frequency: 3
+        richness: 6
+        size: 3
+      vulcanus_volcanism:
+        frequency: 1
+        richness: 6
+        size: 3
+      water:
+        frequency: 1
+        richness: 1
+        size: 1
+    cliff_settings:
+      cliff_elevation_0: 10
+      cliff_elevation_interval: 40
+      name: cliff
+      richness: 1
+    enemy_evolution:
+      destroy_factor: 0.002
+      enabled: true
+      pollution_factor: 9.0e-07
+      time_factor: 4.0e-06
+    enemy_expansion:
+      enabled: false
+      max_expansion_cooldown: 216000
+      max_expansion_distance: 7
+      min_expansion_cooldown: 14400
+      settler_group_max_size: 20
+      settler_group_min_size: 5
+    peaceful_mode: false
+    pollution:
+      ageing: 1
+      diffusion_ratio: 0.02
+      enabled: true
+      enemy_attack_pollution_consumption_modifier: 1
+      min_pollution_to_damage_trees: 60
+      pollution_restored_per_tree_damage: 10
+    property_expression_names:
+      control-setting:aux:bias: 0
+      control-setting:aux:frequency:multiplier: 1
+      control-setting:moisture:bias: 0
+      control-setting:moisture:frequency:multiplier: 1
+    seed: null
+    starting_area: 3
+  progressive: 'on'
+  teleport_traps:
+    0: 100
+    5: 10
+  grenade_traps:
+    0: 100
+    5: 10
+  cluster_grenade_traps:
+    0: 100
+    5: 5
+  artillery_traps:
+    0: 100
+    5: 10
+  atomic_rocket_traps:
+    0: 100
+    5: 0
+  attack_traps:
+    0: 100
+    5: 10
+  evolution_traps:
+    0: 100
+    5: 10
+  evolution_trap_increase: 5
+  death_link: 'false'
+  energy_link: 'true'
+    
+  triggers:
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: SAWS-{player}

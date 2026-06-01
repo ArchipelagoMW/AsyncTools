@@ -1,0 +1,125 @@
+﻿Peggle Nights:
+  progression_balancing:
+    0: 1
+  accessibility:
+    full: 1
+
+  goal:
+    shadow_pegs_final_level: 1
+    shadow_peg_hunt: 1
+  shadow_pegs_total:
+    20: 1
+  shadow_pegs_required:
+    15: 1
+  master_selection_mode:
+    multiple_masters: 1
+  master_selection:
+    Bjorn: true
+    Claude: true
+    Jimmy Lightning: true
+    Kat Tut: true
+    Lord Cinderbottom: true
+    Marina: true
+    Master Hu: true
+    Renfield: true
+    Splork: true
+    Tula: true
+    Warren: true
+  master_count:
+    3: 1
+  level_selection:
+    1-1 Crimewave: true
+    1-2 Call For Help: true
+    1-3 Horsepower: true
+    1-4 Just Desserts: true
+    1-5 Bjorn Identity: true
+    10-1 Pick One: true
+    10-2 Turn It To Zen: true
+    10-3 Wild Thing: true
+    10-4 We Will Rock You: true
+    10-5 Feel The Noize: true
+    11-1 Jelly Jeopardy: true
+    11-2 Ouroboros: true
+    11-3 The Deep: true
+    11-4 Water Whirled: true
+    11-5 Diploma, See?: true
+    12-1 Psyclone: true
+    12-2 Why You Buggin'?: true
+    12-3 Wyrm Sign: true
+    12-4 The Rising: true
+    12-5 Shadowshine: true
+    13-1 Plants v. Zombies: true
+    13-2 The Guardians: true
+    13-3 Spaint!: true
+    13-4 To The Limit: true
+    13-5 Blue Slough: true
+    14-1 Lolly Drop: true
+    14-2 Bloomin': true
+    14-3 Magic Hour: true
+    14-4 Tulip Leaves: true
+    14-5 Fluffy Sunnies: true
+    2-1 Experiment X: true
+    2-2 Brrrzap!: true
+    2-3 Antitoxic: true
+    2-4 Breakthrough: true
+    2-5 Smartiness: true
+    3-1 Scary Night: true
+    3-2 Seasick: true
+    3-3 Nooooo!!!: true
+    3-4 Twitching Hour: true
+    3-5 Nowhere Stairs: true
+    4-1 Step Right Up: true
+    4-2 Parade!: true
+    4-3 Me-Yowwww!: true
+    4-4 Jump The Squid: true
+    4-5 Death Defying: true
+    5-1 Bowl Of Drome: true
+    5-2 Arrivance: true
+    5-3 Last Ball: true
+    5-4 Explodious: true
+    5-5 Perfectified: true
+    6-1 Pollution Picnic: true
+    6-2 Vast Visitor: true
+    6-3 Eiffel Power: true
+    6-4 Old Friends: true
+    6-5 Au Revoir: true
+    7-1 Founding Fathers: true
+    7-2 The Henge: true
+    7-3 Many Minarets: true
+    7-4 It's A Dry Heat: true
+    7-5 Wall Flower: true
+    8-1 Inferno: true
+    8-2 Water Wings: true
+    8-3 Steppin' Out: true
+    8-4 Fire Eater: true
+    8-5 Letting Off Steam: true
+    9-1 X Marks The Loot: true
+    9-2 Beats Driving: true
+    9-3 Tomb Of Doom: true
+    9-4 I Love Carats: true
+    9-5 Great Ball of Ire: true
+  level_count:
+    35: 1
+  include_full_clears:
+    'false': 1
+    'true': 1
+  target_score_requirement_mode:
+    random_per_level: 1
+  target_score_requirement_percentage:
+    125: 1
+  maximum_starting_ball_count:
+    15: 1
+  useful_item_percentage:
+    random-range-40-70: 1
+  useful_item_weights:
+    Fever Meter Permanent Bonus: 1
+    Full Clear Discount: 3
+    Score Multiplier: 2
+    Target Score Discount: 1
+  triggers:
+  - option_category: null
+    option_name: name
+    option_result: Player{player}
+    options:
+      null:
+        name: PeggleNight-{player}

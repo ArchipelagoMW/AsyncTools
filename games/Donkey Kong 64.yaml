@@ -1,0 +1,411 @@
+﻿Donkey Kong 64:
+  accessibility:
+    full: 50
+
+  goal:
+    dk_rap: 20
+    keys: 20
+    krools_challenge: 60
+
+  require_beating_krool:
+    "false": 30
+    "true": 70
+
+  goal_quantity:
+    blueprints: 20
+    bonuses: 15
+    bosses: 7
+    company_coins: 2
+    crowns: 5
+    fairies: 15
+    golden_bananas: 100
+    keys: 8
+    medals: 15
+    pearls: 3
+    rainbow_coins: 10
+
+  pregiven_keys:
+    random-range-0-2: 50
+
+  helm_phase_count:
+    random: 50
+
+  crown_door_item:
+    opened: 40
+    hard_random: 60
+
+  coin_door_item:
+    opened: 40
+    hard_random: 60
+
+  helm_door_item_count:
+    bean: "random"
+    blueprints: "random"
+    company_coins: "random"
+    crowns: "random"
+    fairies: "random"
+    golden_bananas: "random"
+    keys: "random"
+    medals: "random"
+    pearls: "random"
+    rainbow_coins: "random"
+
+  krool_phase_count:
+    random: 50
+    random-low: 0
+    random-high: 0
+    random-range-1-5: 0
+
+  krool_in_boss_pool:
+    "false": 50
+    "true": 50
+
+  randomize_blocker_required_amounts:
+    "false": 30
+    "true": 70
+
+  blocker_max:
+    random-range-64-150: 50
+
+  enable_chaos_blockers:
+    "false": 50
+    "true": 50
+
+  maximize_level8_blocker:
+    "false": 50
+    "true": 50
+
+  chaos_ratio:
+    random-range-32-64: 50
+
+  level_blockers:
+    level_1: 0
+    level_2: 0
+    level_3: 0
+    level_4: 0
+    level_5: 0
+    level_6: 0
+    level_7: 0
+    level_8: 167
+
+  starting_kong_count:
+    random-low: 50
+
+  select_starting_kong:
+    any: 50
+
+  starting_move_count:
+    random-range-0-7: 50
+
+  helm_key_lock:
+    "true": 50
+
+  climbing_shuffle:
+    "false": 50
+    "true": 50
+
+  shopowners_in_pool:
+    "false": 50
+    "true": 50
+
+  boulders_in_pool:
+    "false": 50
+    "true": 50
+
+  dropsanity:
+    "false": 50
+    "true": 50
+
+  hints_in_item_pool:
+    "false": 50
+    "true": 50
+
+  half_medals_in_pool:
+    "false": 50
+    "true": 50
+
+  snide_turnins_to_pool:
+    "false": 50
+    "true": 50
+
+  maximum_snide:
+    16: 10
+    24: 30
+    32: 60
+
+  shop_prices:
+    free: 50
+
+  smaller_shops:
+    "false": 50
+    "true": 50
+
+  enable_shared_shops:
+    "false": 50
+
+  shuffle_helm_level_order:
+    "false": 50
+    "true": 50
+
+  open_lobbies:
+    "false": 50
+    "true": 50
+
+  switchsanity:
+    "off": 50
+    helm_access: 50
+    all: 50
+
+  remove_barriers_selected:
+    [
+      "japes_coconut_gates",
+      "aztec_tunnel_door",
+      "aztec_5dtemple_switches",
+      "aztec_tiny_temple_ice",
+      "factory_testing_gate",
+      "galleon_shipyard_area_gate",
+      "galleon_seasick_ship",
+      "forest_green_tunnel",
+      "caves_ice_walls",
+      "helm_star_gates",
+      "helm_punch_gates",
+    ]
+
+  loading_zone_rando:
+    "no": 30
+    "yes": 70
+
+  galleon_water_level:
+    raised: 50
+    lowered: 50
+
+  logic_type:
+    glitchless: 50
+
+  tricks_selected:
+    []
+
+  glitches_selected:
+    []
+
+  cbs_required_for_medal:
+    random-range-20-60: 50
+
+  medal_distribution:
+    pre_selected: 50
+    progressive: 50
+
+  pearls_required_for_mermaid:
+    random: 50
+
+  fairies_required_for_bfi:
+    random: 50
+
+  jetpac_requirement:
+    random: 50
+
+  puzzle_rando:
+    easy: 50
+    medium: 50
+    hard: 50
+    chaos: 50
+
+  shuffled_bonus_barrels:
+    [
+      "batty_barrel_bandit",
+      "big_bug_bash",
+      "busy_barrel_barrage",
+      "mad_maze_maul",
+      "minecart_mayhem",
+      "beaver_bother",
+      "teetering_turtle_trouble",
+      "stealthy_snoop",
+      "stash_snatch",
+      "splish_splash_salvage",
+      "speedy_swing_sortie",
+      "krazy_kong_klamour",
+      "searchlight_seek",
+      "kremling_kosh",
+      "peril_path_panic",
+      "helm_minigames",
+      "arenas",
+      "training_minigames",
+      "arcade",
+    ]
+
+  hard_minigames:
+    "false": 50
+    "true": 50
+
+  auto_complete_bonus_barrels:
+    "false": 50
+    "true": 50
+
+  helm_room_bonus_count:
+    random: 50
+
+  alternate_minecart_mayhem:
+    "false": 50
+    "true": 50
+
+  hard_mode_selected:
+    []
+
+  harder_bosses:
+    []
+
+  mirror_mode:
+    "false": 50
+
+  enemies_selected:
+    [
+      "Kosha",
+      "Gimpfish",
+      "GreenKlaptrap",
+      "Ruler",
+      "MushroomMan",
+      "Krossbones",
+      "ZingerRobo",
+      "GreenDice",
+      "Bug",
+      "RedKlaptrap",
+      "ZingerLime",
+      "SpiderSmall",
+      "PurpleKlaptrap",
+      "LankyKasplat",
+      "GetOut",
+      "Pufftup",
+      "ZingerCharger",
+      "Bat",
+      "DisableTaggingKop",
+      "RoboKremling",
+      "Shuri",
+      "SirDomino",
+      "DiddyKasplat",
+      "BeaverBlue",
+      "BeaverGold",
+      "ChunkyKasplat",
+      "Klump",
+      "Kremling",
+      "RedDice",
+      "Ghost",
+      "GetOutKop",
+      "DisableZKop",
+      "Klobber",
+      "TinyKasplat",
+      "DisableAKop",
+      "Kop",
+      "Kaboom",
+      "DKKasplat",
+      "FireballGlass",
+    ]
+
+  hint_style:
+    "off": 50
+
+  shopkeeper_hints:
+    "false": 50
+
+  microhints:
+    "off": 50
+
+  junk_filler_weight:
+    none: 50
+
+  banana_filler_weight:
+    none: 50
+
+  crown_filler_weight:
+    none: 50
+
+  fairy_filler_weight:
+    none: 50
+
+  medal_filler_weight:
+    none: 50
+
+  pearl_filler_weight:
+    none: 50
+
+  rainbowcoin_filler_weight:
+    none: 50
+
+  trap_fill_percentage:
+    0: 50
+
+  bubble_trap_weight:
+    none: 50
+
+  slow_trap_weight:
+    none: 50
+
+  reverse_trap_weight:
+    none: 50
+
+  disable_a_trap_weight:
+    none: 50
+
+  disable_b_trap_weight:
+    none: 50
+
+  disable_c_trap_weight:
+    none: 50
+
+  disable_z_trap_weight:
+    none: 50
+
+  get_out_trap_weight:
+    none: 50
+
+  dry_trap_weight:
+    none: 50
+
+  flip_trap_weight:
+    none: 50
+
+  ice_floor_weight:
+    none: 50
+
+  paper_weight:
+    none: 50
+
+  slip_weight:
+    none: 50
+
+  animal_trap_weight:
+    none: 50
+
+  rockfall_trap_weight:
+    none: 50
+
+  disabletag_trap_weight:
+    none: 50
+
+  tag_link:
+    "false": 50
+
+  ring_link:
+    "false": 50
+
+  trap_link:
+    "false": 50
+
+  death_link:
+    "false": 50
+
+  enable_cutscenes:
+    "false": 50
+
+  remove_bait_potions:
+    "false": 50
+
+  receive_notifications:
+    display_only_progression: 50
+
+  triggers:
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: DK64-{player}

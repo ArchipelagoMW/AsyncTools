@@ -1,42 +1,55 @@
-﻿Ori and the Blind Forest:
+Ori and the Blind Forest:
   progression_balancing: 0
   accessibility: full
   
   #goal settings
-  goal:
-    # Choose the end goal. All goals determine what unlocks the final Horu escape sequence
-    # All Skill Trees: Find all 10 skill trees (including Kuro's feather)
-    # All Maps: Place all 9 mapstones around the map
-    # Warmth Fragments: Collect the required number of Warmth Fragments
-    # World Tour: Collect the required number of Relics. Up to 11 areas (default 8) around Nibel will be chosen to contain a relic in a random location
-    # None: No extra conditions, just reach and finish the final escape
-    all_skill_trees: 10
-    all_maps: 10
-    warmth_fragments: 50
-    world_tour: 30
+  pseudo_goal: #Converted to set as-is in triggers
+    # Choose the end goal. You may choose multiple
+    # AllSkillTrees: Find all 10 skill trees (including Kuro's feather)
+    # AllMaps: Place all 9 mapstones around the map
+    # WarmthFragments: Collect the required number of Warmth Fragments
+    # WorldTour: Collect the required number of Relics. Up to 11 areas (default 8) around Nibel will be chosen to contain a relic in a random location
+    all_skill_trees: 15
+    all_maps: 15
+    warmth_fragments: 35
+    world_tour: 35
+
+  require_final_escape:
+    # Whether or not the final escape in Mount Horu is required to goal
+    # If true, the final escape will need to be completed. The door to the escape will only open once other all other goals are complete.
+    # If false, the player only needs to reach the escape door once all other goals are complete
+    'false': 10
+    'true': 90
 
   warmth_fragments_available: random-range-32-40
   warmth_fragments_required: random-range-30-35
 
   relic_count:
-    9: 20
-    10: 50
-    11: 30
+    7: 5
+    8: 10
+    9: 25
+    10: 45
+    11: 15
   
   #Logic major settings  
   logic_difficulty:
-    casual: 20
-    standard: 50
-    expert: 30
+    casual: 25
+    standard: 60
+    expert: 15
     
   keystone_logic: area_specific
   mapstone_logic: progressive
   extra_mapstones: random-low
   deathlink_logic: disabled
   
-  #logic
+  extra_skills: random
+  restrict_dungeon_keys: 'true'
+  
+  #logic, these are converted in triggers into a Set
+  logic_modifiers: []
   enable_damage_boost: 'true'
-  enable_grenade_jump: 'false'
+  enable_charge_flame_burn: 'false'
+  enable_triple_jump: 'false'
   
   enable_lure:
     # Allows luring enemies to be considered for logic. Affects standard and above, 
@@ -61,30 +74,95 @@
     'false': 20
     'true': 80
 
-  enable_triple_jump:
-    # Allows triple jump ability to be considered for logic. Only affects master. 
-    # At least 12 ability cells will be in logic before needing to use this ability.
-    'false': 20
-    'true': 80
-
-  enable_charge_flame_burn:
-    # Allows charge flame burn ability to be considered for logic. Only affects master. 
-    # At least 3 ability cells will be in logic before needing to use this ability.
-    'false': 20
-    'true': 80
-
   enable_rekindle:
     # Allows rekindle ability to be considered for logic. Only affects standard, expert, and master
     # for specifically the Ghost Lever trick in Blackroot Burrows
     'false': 50
     'true': 50
+  
+  local_items: ["WarmthFragment", "Relic"] #Relic is forced local, but this makes it clearer
+  
 
-  restrict_dungeon_keys: 'true'
-  
-  start_hints: ["Relic"]
-  local_items: ["WarmthFragment"]
-  
+
   triggers:
+    #goal triggers
+    - option_category: Ori and the Blind Forest
+      option_name: pseudo_goal
+      option_result: all_maps
+      options:
+        Ori and the Blind Forest:
+          +goal: ['AllMaps']
+    - option_category: Ori and the Blind Forest
+      option_name: pseudo_goal
+      option_result: all_skill_trees
+      options:
+        Ori and the Blind Forest:
+          +goal: ['AllSkillTrees']
+    - option_category: Ori and the Blind Forest
+      option_name: pseudo_goal
+      option_result: warmth_fragments
+      options:
+        Ori and the Blind Forest:
+          +goal: ['WarmthFragments']
+    - option_category: Ori and the Blind Forest
+      option_name: pseudo_goal
+      option_result: world_tour
+      options:
+        Ori and the Blind Forest:
+          +goal: ['WorldTour']
+          
+    #logic triggers (disable options that are ignored, so that the sheet doesn't lie, then convert to a Set)
+    - option_category: Ori and the Blind Forest
+      option_name: logic_difficulty
+      option_result: casual
+      options:
+        Ori and the Blind Forest:
+          enable_lure: 'false'
+          enable_double_bash: 'false'
+          enable_air_dash: 'false'
+          enable_charge_dash: 'false'
+          enable_rekindle: 'false'
+    - option_category: Ori and the Blind Forest
+      option_name: logic_difficulty
+      option_result: standard
+      options:
+        Ori and the Blind Forest:
+          enable_lure: 'false'
+          enable_air_dash: 'false'
+          enable_rekindle: 'false'
+          
+    - option_category: Ori and the Blind Forest
+      option_name: enable_lure
+      option_result: 'true'
+      options:
+        Ori and the Blind Forest:
+          +logic_modifiers: ['Lure']
+    - option_category: Ori and the Blind Forest
+      option_name: enable_double_bash
+      option_result: 'true'
+      options:
+        Ori and the Blind Forest:
+          +logic_modifiers: ['DoubleBash']
+    - option_category: Ori and the Blind Forest
+      option_name: enable_air_dash
+      option_result: 'true'
+      options:
+        Ori and the Blind Forest:
+          +logic_modifiers: ['AirDash']
+    - option_category: Ori and the Blind Forest
+      option_name: enable_charge_dash
+      option_result: 'true'
+      options:
+        Ori and the Blind Forest:
+          +logic_modifiers: ['ChargeDash']
+    - option_category: Ori and the Blind Forest
+      option_name: enable_rekindle
+      option_result: 'true'
+      options:
+        Ori and the Blind Forest:
+          +logic_modifiers: ['Rekindle']
+          
+    #meta triggers
     - option_category: null
       option_name: name
       option_result: Player{player}

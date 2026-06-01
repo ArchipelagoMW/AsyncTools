@@ -30,6 +30,7 @@ Faxanadu:
   random_rewards:
     'false': 5
     'true': 2
+  local_items: ["Key Jack"]
   triggers:
     - option_category: null
       option_name: name

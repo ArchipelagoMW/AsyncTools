@@ -1,8 +1,8 @@
 shapez:
   accessibility: full
   goal:
-    vanilla: 10
-    mam: 40
+    vanilla: 20
+    mam: 30
     even_fasterer: 15
     efficiency_iii: 25
   goal_amount: # Override in trigger

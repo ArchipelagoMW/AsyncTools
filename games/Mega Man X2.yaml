@@ -1,0 +1,138 @@
+﻿Mega Man X2:
+  # Forced EnergyLink
+  energy_link: true
+
+  # Not forced, but should have a high chance to roll
+  pickupsanity:
+    'false': 30
+    'true': 70
+
+  # Solving skill issue a bit
+  starting_life_count: 9
+  
+  # Fixed numbers because anything else is going to be horrid to manage via triggers I think
+  starting_hp_trigger:
+    low: 33
+    medium: 33
+    high: 33
+  starting_hp: 16
+  heart_tank_effectiveness: 2
+
+  # Chance to happen, somewhat evil
+  jammed_buster:
+    'false': 60
+    'true': 40
+
+  # It's a bit controversial as it's a QoL setting, I'm just gonna force it
+  long_jumps: true
+
+  # Evil, but fun
+  boss_weakness_rando:
+    vanilla: 20
+    shuffled: 50
+    chaotic_double: 30
+
+  # Makes the setting above less evil
+  boss_weakness_strictness: 
+    not_strict: 30
+    weakness_and_buster: 40
+    weakness_and_upgraded_buster: 10
+    only_weakness: 20
+
+  # Makes them evil again
+  boss_randomize_hp:
+    'off': 0
+    weak: 40
+    regular: 40
+    strong: 10
+    chaotic: 10
+
+  # Should not take very long for them to appear
+  x_hunters_medal_count: random-range-1-5
+
+  # Only unlock fortress via medals or an access code
+  base_openess:
+    medals: 50
+    access_code: 50
+  base_open: []
+  base_medal_count: 0
+  base_boss_rematch_count: random-range-1-8
+  base_all_levels: random
+
+  palette_default: random 
+  palette_crystal_hunter: random 
+  palette_bubble_splash: random 
+  palette_silk_shot: random 
+  palette_spin_wheel: random 
+  palette_sonic_slicer: random 
+  palette_strike_chain: random 
+  palette_magnet_mine: random 
+  palette_speed_burner: random 
+
+  triggers:
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: MMX2-{player}
+
+    - option_category: Mega Man X2
+      option_name: starting_hp_trigger
+      option_result: low
+      options:
+        Mega Man X2:
+          starting_hp: random-range-8-12
+          heart_tank_effectiveness:
+            3: 10
+            4: 45
+            5: 45
+
+    - option_category: Mega Man X2
+      option_name: starting_hp_trigger
+      option_result: medium
+      options:
+        Mega Man X2:
+          starting_hp: random-range-12-16
+          heart_tank_effectiveness:
+            1: 5
+            2: 35
+            3: 30
+            4: 20
+
+    - option_category: Mega Man X2
+      option_name: starting_hp_trigger
+      option_result: high
+      options:
+        Mega Man X2:
+          starting_hp: random-range-16-24
+          heart_tank_effectiveness:
+            1: 60
+            2: 35
+            3: 5
+
+      # These should 100% depend on more checks being available, otherwise gen failures can happen
+    - option_category: Mega Man X2
+      option_name: pickupsanity
+      option_result: false
+      options:
+        Mega Man X2:
+          quick_charge_in_pool: false
+          speedster_in_pool: false
+          super_recover_in_pool: false
+
+    - option_category: Mega Man X2
+      option_name: base_openess
+      option_result: medals
+      options:
+        Mega Man X2:
+          base_open: 
+            - Medals
+          base_medal_count: random-high
+
+    - option_category: Mega Man X2
+      option_name: base_openess
+      option_result: access_code
+      options:
+        Mega Man X2:
+          base_open: []

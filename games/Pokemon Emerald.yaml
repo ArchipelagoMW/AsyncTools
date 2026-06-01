@@ -37,6 +37,8 @@ Pokemon Emerald:
   dexsanity:
     false: 70
     true: 30
+  dexsanity_type: none # Set in triggers
+  dexsanity_encounter_types: []
   trainersanity:
     false: 70
     true: 30
@@ -254,6 +256,85 @@ Pokemon Emerald:
           wild_encounter_blacklist: []
           normalize_encounter_rates: true
           guaranteed_catch: true
+
+    # only actually set dexsanity encounter types with dexsanity enabled for cleaner options output
+    - option_category: Pokemon Emerald
+      option_name: dexsanity
+      option_result: true
+      options:
+        Pokemon Emerald:
+          dexsanity_type:
+            all: 10
+            landsurf: 3
+            fishsurf: 3
+            landfish: 3
+            fishing: 1
+            grass: 1
+            surf: 1
+            none: 0
+  
+   # Dexsanity types time!
+    - option_category: Pokemon Emerald
+      option_name: dexsanity_type
+      option_result: all
+      options:
+        Pokemon Emerald:
+          dexsanity_encounter_types:
+            - Land
+            - Water
+            - Fishing
+
+    - option_category: Pokemon Emerald
+      option_name: dexsanity_type
+      option_result: landsurf
+      options:
+        Pokemon Emerald:
+          dexsanity_encounter_types:
+            - Land
+            - Water
+
+    - option_category: Pokemon Emerald
+      option_name: dexsanity_type
+      option_result: fishsurf
+      options:
+        Pokemon Emerald:
+          dexsanity_encounter_types:
+            - Water
+            - Fishing
+            
+    - option_category: Pokemon Emerald
+      option_name: dexsanity_type
+      option_result: landfish
+      options:
+        Pokemon Emerald:
+          dexsanity_encounter_types:
+            - Land
+            - Fishing
+
+    - option_category: Pokemon Emerald
+      option_name: dexsanity_type
+      option_result: fishing
+      options:
+        Pokemon Emerald:
+          dexsanity_encounter_types:
+            - Fishing
+
+    - option_category: Pokemon Emerald
+      option_name: dexsanity_type
+      option_result: grass
+      options:
+        Pokemon Emerald:
+          dexsanity_encounter_types:
+            - Land
+
+    - option_category: Pokemon Emerald
+      option_name: dexsanity_type
+      option_result: surf
+      options:
+        Pokemon Emerald:
+          dexsanity_encounter_types:
+            - Water
+
           
     # No blind trainers if trainersanity is enabled
     - option_category: Pokemon Emerald

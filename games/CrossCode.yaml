@@ -1,0 +1,78 @@
+﻿CrossCode:
+  # Creator is the most common goal, Monkey is a slightly shorter game, and Observatory is situational
+  goal:
+    creator: 50
+    monkey: 40
+    observatory: 10
+  closed_gaia: random
+  rhombus_hub_unlock:
+    'false': 10
+    'true': 40
+  progressive_area_unlocks:
+    none: 15
+    split: 20
+    combined: 15
+  progressive_equipment:
+    'false': 20
+    'true': 30
+  keyrings:
+    'false': 40
+    'true': 10
+  quest_rando: random
+  # May want to turn off to avoid hint spam (though it only creates useful/progressive hints)
+  quest_dialog_hints: true
+  shop_rando: random
+  # May want to turn off to avoid hint spam (though it only creates useful/progressive hints)
+  shop_dialog_hints: true
+  # Favor more accessible options for shops
+  shop_send_mode:
+    per_item_type: 5
+    per_slot: 10
+  shop_receive_mode:
+    per_item_type: 10
+    per_shop: 10
+    per_slot: 5
+  # This option expands sphere 1 and makes grinding accessible immediately. Enable or weight if desired.
+  start_with_green_leaf_shade: false
+  small_key_shuffle:
+    own_world: 10
+    any_world: 5
+    own_dungeons: 10
+    original_dungeons: 5
+  master_key_shuffle:
+    own_world: 10
+    any_world: 10
+    own_dungeons: 10
+    original_dungeons: 5
+  chest_lock_randomization:
+    'false': 25
+    'true': 75
+  no_chest_lock_weight: random
+  bronze_chest_lock_weight: random-high
+  silver_chest_lock_weight: random-low
+  gold_chest_lock_weight: random-low
+
+  # non-standard option for triggers
+  x_weight_pools:
+    'false': 50
+    'true': 50
+
+  triggers:
+    # randomize the likelihood of placing different types of drops
+    - option_category: CrossCode
+      option_name: x_weight_pools
+      option_result: 'true'
+      options:
+        CrossCode:
+          common_pool_weight: random
+          rare_pool_weight: random
+          epic_pool_weight: random-low
+          legendary_pool_weight: random-low
+          consumable_weight: random
+          drop_weight: random
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: CrossCode-{player}

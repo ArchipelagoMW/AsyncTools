@@ -1,0 +1,100 @@
+
+Brotato:
+  num_victories:
+    random-range-10-20: 50
+  num_characters:
+    random-range-15-30: 50
+  num_starting_characters:
+    random-range-1-10: 50
+  starting_characters:
+    default_all: 50
+    random_all: 50
+    default_base_game: 50
+    random_base_game: 50
+    default_abyssal_terrors: 50
+    random_abyssal_terrors: 50
+  include_base_game_characters:
+    [Vagabond, Pacifist, Wildling, Mage, One Armed,
+    Golem, Bull, Artificer, Streamer, Apprentice, Crazy, Well Rounded, Speedy, 
+      Engineer, King, Mutant, Lucky, Saver, Lich, Technomage, Loud, Jack, Demon, 
+      Arms Dealer, Explorer, Brawler, Vampire, Knight, Hunter, Baby, Chunky, 
+      Entrepreneur, Sick, Old, Cyborg, Soldier, Masochist, Ranger, Renegade, 
+      Multitasker, Beast Master, Farmer, Fisherman, Doctor, Gladiator, Ghost, 
+      Generalist, Glutton, Cryptid]
+  waves_per_drop:
+    random-range-1-20: 50
+  gold_reward_mode:
+    one_time: 50
+    all_every_time: 50
+  xp_reward_mode:
+    one_time: 50
+    all_every_time: 50
+  enable_enemy_xp:
+    false: 50
+    true: 50
+  spawn_normal_loot_crates:
+    'false': 50
+    'true': 50
+  num_common_crate_drops:
+    random-range-20-50: 50
+  num_common_crate_drops_per_check:
+    random-range-1-5: 50
+  num_common_crate_drop_groups:
+    random-range-5-10: 50
+  num_legendary_crate_drops:
+    random-range-5-15: 50
+  num_legendary_crate_drops_per_check:
+    1: 50
+  num_legendary_crate_drop_groups:
+    random-range-1-5: 50
+  num_starting_shop_slots:
+    random-range-0-4: 50
+  shop_lock_buttons_mode:
+    all: 25
+    none: 25
+    match_shop_slots: 50
+  common_item_weight:
+    random-range-25-75: 50
+  uncommon_item_weight:
+    random-range-15-45: 50
+  rare_item_weight:
+    random-range-5-30: 50
+  legendary_item_weight:
+    random-range-5-25: 50
+  common_upgrade_weight:
+    random-range-25-75: 50
+  uncommon_upgrade_weight:
+    random-range-15-45: 50
+  rare_upgrade_weight:
+    random-range-5-30: 50
+  legendary_upgrade_weight:
+    random-range-5-25: 50
+  gold_weight:
+    10: 50
+  xp_weight:
+    10: 50
+  enable_abyssal_terrors_dlc:
+    true: 50
+    false: 50
+  include_abyssal_terrors_characters:
+    [Romantic, Curious, Creature, Buccaneer, 
+      Dwarf, Druid, Builder, Ogre, Gangster, Captain, Diver, Hiker, Sailor, Chef]
+  
+  triggers:
+    # Make sure we don't set starting characters to Abyssal Terrors if the DLC is disabled.
+    - option_name: enable_abyssal_terrors_dlc
+      option_category: Brotato
+      option_result: false
+      options:
+        Brotato:
+          starting_characters:
+            default_all: 50
+            random_all: 50
+            default_base_game: 50
+            random_base_game: 50
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: Brotato-{player}

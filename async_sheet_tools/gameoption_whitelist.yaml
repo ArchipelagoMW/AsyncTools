@@ -243,6 +243,7 @@ DLCQuest:
     - Coin Bundle Quantity
     - Permanent Coins
     - Item Shuffle
+    - Start Inventory
 Donkey Kong Country 3:
     - Donkey Kong Country 3
     - Locations
@@ -283,6 +284,17 @@ DOOM II:
     - Secret Levels
     - Split Backpack
     - Backpack Count
+EarthBound:
+    - EarthBound
+    - Locations
+    - Name
+    - Shop Randomizer
+    - Dungeon Shuffle
+    - Magicant Mode
+    - Monkey Caves Mode
+    - No Free Sanctuaries
+    - Starting Character
+    - PSI Shuffle
 Factorio:
     - Factorio
     - Locations
@@ -757,17 +769,14 @@ Ori and the Blind Forest:
     - Locations
     - Name
     - Goal
+    - Require Final Escape
     - Warmth Fragments Available
     - Warmth Fragments Required
     - Relic Count
     - Difficulty
     - Extra Mapstones
-    - Enable Lure
-    - Enable Double Bash
-    - Enable Air Dash
-    - Enable Charge Dash
-    - Enable Charge Flame Burn
-    - Enable Rekindle
+    - Extra Skills
+    - Logic Modifiers
 Outer Wilds:
     - Outer Wilds
     - Locations
@@ -1123,10 +1132,12 @@ Stardew Valley:
     - Goal
     - Farm Type
     - Bundle Randomization
+    - Bundle Per Room
     - Bundle Price
     - Entrance Randomization
     - Season Randomization
     - Cropsanity
+    - Backpack Size
     - Tool Progression
     - Skill Progression
     - Building Progression
@@ -1143,6 +1154,7 @@ Stardew Valley:
     - Craftsanity
     - Friendsanity
     - Friendsanity Heart Size
+    - Moviesanity
     - Booksanity
     - Walnutsanity
     - Exclude Ginger Island

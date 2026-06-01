@@ -1,0 +1,178 @@
+﻿Donkey Kong Country:
+  # Forced EnergyLink
+  energy_link: true
+
+  # Starts with some lives to avoid skill issue
+  starting_life_count: 30
+
+  # Small chance to roll fast-ish seeds, small chance to roll slow seeds
+  gangplank_tokens:
+    4: 25
+    5: 50
+    6: 25
+  required_jungle_levels:
+    3: 20
+    4: 50
+    5: 30
+  required_mines_levels:
+    3: 20
+    4: 50
+    5: 30
+  required_valley_levels:
+    3: 20
+    4: 50
+    5: 20
+    6: 10
+  required_glacier_levels:
+    3: 20
+    4: 50
+    5: 20
+    6: 10
+  required_industries_levels:
+    3: 20
+    4: 50
+    5: 20
+    6: 10
+  required_caverns_levels:
+    3: 20
+    4: 50
+    5: 30
+
+  # Forced loose logic because strict may be too hard on item requirements and expert is too hard
+  # Also no glitches in logic
+  logic: "loose"
+  glitched_world_access: "false"
+
+  # All checks have a small chance to appear
+  kong_checks:
+    'false': 60
+    'true': 40
+  balloon_checks:
+    'false': 60
+    'true': 40
+  banana_checks:
+    'false': 60
+    'true': 40
+  token_checks:
+    'false': 60
+    'true': 40
+
+  # Always a random world. DKC1 has protection agaisnt too locked down seeds.
+  starting_world: "random"
+
+  # Monke
+  starting_kong:
+    donkey: 30
+    diddy: 30
+    both: 40
+
+  # Animal bonus should always be present no matter what
+  trap_fill_percentage: random-high
+  jump_trap_weight: random
+  ice_trap_weight: random
+  stun_trap_weight: random
+  nut_trap_weight: random
+  army_trap_weight: random
+  animal_bonus_trap_weight:
+    low: 2
+    medium: 1
+    high: 1
+  sticky_floor_trap_weight: random
+  
+  player_palette_filters:
+    Diddy: 0
+    Diddy Inactive: 0
+    Donkey: 0
+    Donkey Inactive: 0
+
+  palette_donkey_active: random
+  palette_donkey_inactive: random
+  palette_diddy_active:  random
+  palette_diddy_inactive: random
+
+  # FUN
+  kong_letters:
+    KONG: 1
+    MIKU: 1
+    TETO: 1
+    KING: 1
+    PKMN: 1
+    NEKO: 1
+    COIN: 1
+    PEKO: 1
+    BRUH: 1
+    VOID: 1
+    IKEA: 1
+    HELP: 1
+    ONGO: 1
+    QUIT: 1
+    JUNK: 1
+    PAIN: 1
+    PLOP: 1
+    JUNK: 1
+    LOAF: 1
+    TONY: 1
+    HAWK: 1
+    FISH: 1
+    FOIL: 1
+    SLAP: 1
+    DUNK: 1
+    SLAM: 1
+    DOPE: 1
+    WOOF: 1
+    DUMP: 1
+    CORE: 1
+    YEET: 1
+    DOOM: 1
+    BOSS: 1
+    BONK: 1
+    WELP: 1
+    ROPE: 1
+    DIET: 1
+    DARK: 1
+    ZERO: 1
+    DIRT: 1
+    FEET: 1
+    BEEF: 1
+    WHAM: 1
+    SALT: 1
+    SURF: 1
+    SOAP: 1
+    BIRD: 1
+    LOAD: 1
+    LONG: 1
+    WIDE: 1
+    GONG: 1
+    IRON: 1
+    FUNK: 1
+    LMAO: 1
+    ROFL: 1
+    TLDR: 1
+    DRIP: 1
+    FOMO: 1
+    VIBE: 1
+    HYPE: 1
+    ICON: 1
+    PEAK: 1
+    GOAT: 1
+
+  # It's good to start with DK Barrels
+  start_inventory:
+    Backup DK Barrel: 20
+
+  triggers:
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: DKC1-{player}
+
+    - option_category: Donkey Kong Country
+      option_name: banana_checks
+      option_result: true
+      options:
+        Donkey Kong Country:
+          start_inventory_from_pool:
+            Cache Detector: 1
+

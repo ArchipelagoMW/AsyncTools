@@ -5,6 +5,7 @@ Risk of Rain 2:
     any: 25
     mithrix: 25
     voidling: 25
+    falseson: 25
   total_locations: random-range-60-200
   chests_per_stage: random-range-high-5-15
   shrines_per_stage: random-low
@@ -15,6 +16,7 @@ Risk of Rain 2:
   start_with_revive: 'true'
   final_stage_death: random
   dlc_sotv: 'false'
+  dlc_sots: 'false'
   require_stages: random
   progressive_stages: random
   item_pickup_step: random-range-low-0-2
@@ -48,3 +50,9 @@ Risk of Rain 2:
       options:
         Risk of Rain 2:
           dlc_sotv: 'true'
+    - option_category: Risk of Rain 2
+      option_name: victory
+      option_result: falseson
+      options:
+        Risk of Rain 2:
+          dlc_sots: 'true'
