@@ -23,7 +23,7 @@
     trees: 20
     choices: 20
   min_tech_cost: 5
-  max_tech_cost: random-range-low-100-10000
+  max_tech_cost: random-range-low-200-10000
   tech_cost_distribution:
     even: 100
     low: 40
@@ -34,7 +34,7 @@
     random: 4
   ramping_tech_costs:
     true: 1
-    false: 4
+    false: 1
   silo: randomize_recipe
   satellite: randomize_recipe
   free_samples: stack
@@ -204,6 +204,12 @@
   energy_link: 'true'
     
   triggers:
+    - option_category: Factorio - Space Age Without Space
+      option_name: ramping_tech_costs
+      option_result: true
+      options:
+        Factorio - Space Age Without Space:
+          max_tech_cost: random-range-1000-5000
     - option_category: null
       option_name: name
       option_result: Player{player}
