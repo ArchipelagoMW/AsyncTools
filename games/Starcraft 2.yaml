@@ -14,7 +14,7 @@ Starcraft 2:
     single_race_terran: 5
     single_race_zerg: 5
     single_race_protoss: 5
-    # 25 missions, shorter mission order, only one race
+    # 30 missions, shorter mission order, only one race
     vanilla: 5
     vanilla_shuffled: 5
     # 83 missions, vanilla/vanilla shuffled
