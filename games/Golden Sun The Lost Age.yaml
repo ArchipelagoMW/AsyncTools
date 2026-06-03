@@ -31,7 +31,7 @@
   reveal_hidden_item: true
   lemurian_ship:
     ship_door_unlocked: 1
-    available_from_start: 1
+    available_from_start: 2
   start_with_wings_of_anemos: random
   anemos_inner_sanctum_access: vanilla
   djinn_logic: 100
@@ -44,7 +44,7 @@
   #####################
   shuffle_characters: anywhere
   second_starting_character: random
-  scale_characters: true
+  scale_characters: false
   max_scaled_level: 24
   character_stats: adjust_character_stats
   character_elements: shuffle_character_elements
@@ -95,7 +95,7 @@
   free_avoid: true
   avoid_always_works: true
   free_retreat: true
-  manual_retreat_glitch: false
+  manual_retreat_glitch: true
   sanctum_revive_cost: reduced
   enable_hard_mode: 
     false: 4
