@@ -54,31 +54,31 @@ Ori and the Blind Forest:
   enable_lure:
     # Allows luring enemies to be considered for logic. Affects standard and above, 
     # but higher difficulties may require more difficult lures.
-    'false': 50
-    'true': 50
+    'false': 25
+    'true': 75
 
   enable_double_bash:
     # Allows double bash technique to be considered for logic. Affects expert and above.
-    'false': 50
-    'true': 50
+    'false': 35
+    'true': 65
 
   enable_air_dash:
     # Allows air dash ability to be considered for logic. Affects standard and above. 
     # At least 3 ability cells will be in logic before needing to use this ability.
-    'false': 20
-    'true': 80
+    'false': 25
+    'true': 75
 
   enable_charge_dash:
     # Allows charge dash ability to be considered for logic. Affects expert and above. 
     # At least 6 ability cells will be in logic before needing to use this ability.
-    'false': 20
-    'true': 80
+    'false': 25
+    'true': 75
 
   enable_rekindle:
     # Allows rekindle ability to be considered for logic. Only affects standard, expert, and master
     # for specifically the Ghost Lever trick in Blackroot Burrows
-    'false': 50
-    'true': 50
+    'false': 25
+    'true': 75
   
   local_items: ["WarmthFragment", "Relic"] #Relic is forced local, but this makes it clearer
   
@@ -127,10 +127,16 @@ Ori and the Blind Forest:
       option_result: standard
       options:
         Ori and the Blind Forest:
-          enable_lure: 'false'
+          enable_double_bash: 'false'
           enable_air_dash: 'false'
-          enable_rekindle: 'false'
+          enable_charge_dash: 'false'
           
+    - option_category: Ori and the Blind Forest
+      option_name: enable_damage_boost
+      option_result: 'true'
+      options:
+        Ori and the Blind Forest:
+          +logic_modifiers: ['DamageBoost']
     - option_category: Ori and the Blind Forest
       option_name: enable_lure
       option_result: 'true'
