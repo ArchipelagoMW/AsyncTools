@@ -117,7 +117,7 @@ Kingdom Hearts:
   unlock_0_volume: false
   unskippable: true
   auto_save: true
-  warp_anywhere: false
+  warp_anywhere: true
   local_items: []
   start_hints: []
 
