@@ -67,11 +67,11 @@ Hollow Knight:
   RemoveSpellUpgrades: 'false'
   StartLocation: king's_pass
   Goal:
-    siblings: 8
-    radiance: 3
-    grub_hunt: 2
-    godhome: 0
-    godhome_flower: 0
+    siblings: 55
+    radiance: 20
+    grub_hunt: 15
+    godhome: 7
+    godhome_flower: 3
   GrubHuntGoal: random-range-middle-25-35
   WhitePalace: 
     exclude: 5
