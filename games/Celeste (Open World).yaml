@@ -83,6 +83,12 @@ Celeste (Open World):
           roomsanity:
             "false": 1
             "true": 3
+    - option_category: Celeste (Open World)
+      option_name: roomsanity
+      option_result: "true"
+      options:
+        Celeste (Open World):
+          total_strawberries: random-range-400-500
     - option_category: null
       option_name: name
       option_result: Player{player}
