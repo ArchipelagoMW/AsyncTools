@@ -84,6 +84,8 @@ Satisfactory:
     harder: 20
   trap_selection_override:
     []
+  local_items:
+    - "Building: Manufacturer"
   triggers:
 # Disables side goals for Phase 2
     - option_category: Satisfactory
