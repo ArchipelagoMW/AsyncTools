@@ -88,7 +88,7 @@ Celeste (Open World):
       option_result: "true"
       options:
         Celeste (Open World):
-          total_strawberries: random-range-400-500
+          total_strawberries: random-range-150-202
     - option_category: null
       option_name: name
       option_result: Player{player}
