@@ -12,7 +12,7 @@
     'true': 1
 
   ascension:
-    random-range-1-6: 1
+    random-range-1-8: 1
   ascension_down: 0
   death_link: 0
   include_floor_checks: true
@@ -71,7 +71,7 @@
     CAW CAW: 1
     Combat Buff: 1
 
-  seeded: false
+  seeded: true
   
   triggers:
     - option_category: null
