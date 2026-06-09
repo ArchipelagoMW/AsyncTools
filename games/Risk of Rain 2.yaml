@@ -18,7 +18,7 @@ Risk of Rain 2:
   dlc_sotv: 'false'
   dlc_sots: 'false'
   require_stages: random
-  progressive_stages: random
+  progressive_stages: 'true'
   item_pickup_step: random-range-low-0-2
   shrine_use_step: 0
   enable_lunar: random
