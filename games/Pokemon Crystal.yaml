@@ -20,14 +20,13 @@ Pokemon Crystal:
     # Unown Hunt: Catch all 26 Unown forms that are attached to signs across the region(s) and show the completed Unown dex
     #  to the scientist in Ruins of Alph. In order to encounter the Unown you'll need to solve their corresponding tile puzzle.
     #  Each puzzle requires 16 pieces which must be found first.
-    elite_four: 4
-    red: 3
-    diploma: 1
-    rival: 3
-    defeat_team_rocket: 3
-    unown_hunt: 2
-    # Diploma Hunt is very long; Unown Hunt is second longest; Elite four is the default goal and is the most common at 25% with diploma having a chance of 6%
-
+    elite_four: 3
+    red: 4
+    diploma: 3
+    rival: 1
+    defeat_team_rocket: 1
+    unown_hunt: 3
+    
   #######
   # Map #
   #######
@@ -678,7 +677,7 @@ Pokemon Crystal:
     # If this option is enabled, you will be able to Fly before being forced to use an item to progress
     # Early Fly is a best effort setting, if Fly and its badge cannot be placed early, then they will be placed
     #     randomly
-    'false': 0
+    'false': 50
     'true': 50
 
   fly_cheese:
@@ -1125,9 +1124,9 @@ Pokemon Crystal:
     random: 0
     random-high: 0 # random value weighted towards higher values
     random-range-0-251: 0 # random value between 0 and 251
-    none: 75 # equivalent to 0
-    random-low: 20
-    full: 5
+    none: 50 # equivalent to 0
+    random-low: 40
+    full: 10
 
   dexcountsanity: # palnote: this will be just confusing for newcomers so I'm leaving it off.
     # Adds checks for completing Pokedex milestones
@@ -1199,9 +1198,9 @@ Pokemon Crystal:
     random: 0
     random-high: 0 # random value weighted towards higher values
     random-range-0-242: 0 # random value between 0 and 242
-    none: 75 # equivalent to 0
-    random-low: 20
-    full: 5
+    none: 50 # equivalent to 0
+    random-low: 40
+    full: 10
 
   kanto_trainersanity:
     # Adds checks for defeating Kanto trainers.
@@ -1216,9 +1215,9 @@ Pokemon Crystal:
     random: 0
     random-high: 0 # random value weighted towards higher values
     random-range-0-131: 0 # random value between 0 and 131
-    none: 75 # equivalent to 0
-    random-low: 20
-    full: 5
+    none: 50 # equivalent to 0
+    random-low: 40
+    full: 10
 
   #################
   # Pokemon Logic #
