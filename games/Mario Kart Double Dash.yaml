@@ -1,14 +1,14 @@
-﻿Mario Kart Double Dash:
+Mario Kart Double Dash:
 
   goal:
     all_cup_tour: 50
-    trophies: 30
+    trophies: 20
 
-  trophy_requirement:
-    random-range-10-16: 50 
+  trophy_requirement_percent:
+    random-range-60-95: 50 
 
   grand_prix_trophies:
-    'false': 50
+    'false': 20
     'true': 50
 
 
@@ -16,7 +16,19 @@
     easy: 50 
     normal: 50 
 
-  shuffle_extra_trophies: 0
+  shuffle_extra_trophies: 4
+
+  all_cup_tour_min_cc:
+    50cc: 20
+    100cc: 50
+    150cc: 30
+    mirror: 5
+
+  all_cup_tour_min_rank:
+    gold: 50
+    silver: 20
+    bronze: 5
+
 
   time_trials:
     disable: 50
@@ -26,11 +38,11 @@
     shuffle_once: 50
 
   all_cup_tour_length:
-    random-range-7-16: 50 
+    random-range-5-16: 50 
 
   mirror_200cc:
     'false': 50
-    'true': 50
+    'true': 30
 
   shorter_courses:
     'false': 50
@@ -51,15 +63,44 @@
 
   kart_upgrades:
 
-    10: 10
-    20: 20
+    20: 10
     30: 20
+    40: 20
 
   speed_upgrades:
     'true': 50
 
   item_boxes_as_locations:
-    disabled: 50
+    disabled: 20
+    interesting_locations: 50
+    box_groups: 30
+    boxsanity: 5
+    
+  add_custom_item_boxes:
+    'true': 50
+    'false': 20
+    
+  shortcuts_as_locations:
+    'false': 50
+    'true': 50
+
+  frantic_items:
+    random-range-20-80: 30 
+    vanilla: 30 
+    frantic: 10 
+    
+  guaranteed_items:
+    'false': 30
+    'true': 50
+  
+  trap_chance:
+    0: 30
+    random-range-1-7: 10
+    
+  banana_rain_trap_weight: random-range-low-0-10
+  shell_rain_trap_weight: random-range-low-0-10
+  bomb_rain_trap_weight: random-range-low-0-10
+  overlapping_start_trap_weight: random-range-low-0-10
     
   local_items:
     Trophy
@@ -99,3 +140,24 @@
       options:
         Mario Kart Double Dash:
           shuffle_extra_trophies: 16
+          
+    - option_category: Mario Kart Double Dash
+      option_name:  item_boxes_as_locations
+      option_result: boxsanity
+      options:
+        Mario Kart Double Dash:
+          shuffle_extra_trophies: random-range-16-32
+          items_per_character: 5
+          kart_upgrades:
+              70: 10
+              80: 20
+              90: 20
+              100: 10
+                
+    - option_category: Mario Kart Double Dash
+      option_name:  shortcuts_as_locations
+      option_result: 'true'
+      options:
+        Mario Kart Double Dash:
+          guaranteed_items: 'true'
+          time_trials: basic
