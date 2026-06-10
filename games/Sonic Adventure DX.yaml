@@ -4,7 +4,7 @@ Sonic Adventure DX:
     normal_logic: 50
 
   gating_mode:
-    emblems_gating: 50
+    emblems_gating: 0
     key_items_gating: 50
 
   goal_requires_levels:
@@ -434,7 +434,7 @@ Sonic Adventure DX:
             +local_items: [Emblem]
             goal_requires_emblems: 'true'
             gating_mode: key_items_gating
-            max_emblem_cap: 400
+            max_emblem_cap: random-range-200-250
 
     - option_name: base_enemies
       option_category: Sonic Adventure DX
@@ -446,7 +446,7 @@ Sonic Adventure DX:
             +local_items: [Emblem]
             goal_requires_emblems: 'true'
             gating_mode: key_items_gating
-            max_emblem_cap: 400
+            max_emblem_cap: random-range-200-250
 
     - option_name: goal_requires_chaos_emeralds
       option_category: Sonic Adventure DX
