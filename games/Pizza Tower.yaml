@@ -1,0 +1,107 @@
+﻿Pizza Tower:
+  progression_balancing: 0
+  character:
+    peppino: 1
+    the_noise: 1
+    swap: 1
+
+  difficulty: normal
+  completion_goal: ctop
+  open_world:
+    'false': 4
+    'true': 1
+
+  bonus_ladders: random-range-3-5
+  snotty_floor: random
+  toppin_count: random-range-20-40
+  floor_1_cost: random-range-0-5
+  floor_2_cost: random-range-10-15
+  floor_3_cost: random-range-25-30
+  floor_4_cost: random-range-35-40
+  floor_5_cost: random-range-60-70
+  shuffle_boss_keys:
+    'false': 1
+    'true': 2
+  treasure_checks:
+    'false': 1
+    'true': 3
+  secret_checks:
+    'false': 1
+    'true': 2
+  srank_checks:
+    'false': 3
+    'true': 2
+  prank_checks: 'false' # overridden by trigger if s rank checks rolls true
+  cheftask_checks:
+    'false': 3
+    'true': 1
+  pumpkin_checks:
+    'false': 1
+    'true': 1
+  pumpkin_count: random-range-10-15
+  tricky_treat_cost: random-range-40-50
+  trap_percentage: 0
+  clothing_filler: 'true'
+  filler_weights: # cross buff and pizza shield do nothing if you receive them in the hub. it feels bad to send something with zero value
+    Cross Buff: 0
+    Nothing: 0
+    Permanent 10 Points: 35
+    Permanent 100 Points: 5
+    Permanent 50 Points: 10
+    Pizza Shield: 0
+    Primo Burg: 10
+  randomize_levels:
+    'false': 1
+    'true': 3
+  randomize_bosses:
+    'false': 1
+    'true': 2
+  randomize_secrets:
+    'false': 1
+    'true': 1
+  do_move_rando:
+    'false': 1
+    'true': 3
+  move_rando_list: ['Mach 4', 'Uppercut', 'Superjump', 'Grab', 'Taunt', 'Supertaunt', 'Bodyslam', 'Breakdance', 'Wallclimb', 'Double Jump', 'Rat Kick', 'Spin Attack', 'Wallbounce', 'Tornado', 'Crusher', 'Bomb']
+  do_transfo_rando:
+    'false': 1
+    'true': 1
+  transfo_rando_list: ['Ball', 'Knight', 'Firemouth', 'Ghost', 'Mort', 'Weenie', 'Barrel', 'Olive Bubble', 'Rocket', 'Pizzabox', 'Sticky Cheese', "Satan's Choice", 'Shotgun', 'Revolver']
+  shuffle_lap2: 'false'
+  randomize_music:
+    'false': 2
+    'true': 1
+  randomize_enemies:
+    'false': 1
+    'true': 1
+  fairly_random: 'true'
+  local_items:
+    - Toppin
+    #- Pumpkin
+  triggers:
+    - option_category: Pizza Tower
+      option_name: srank_checks
+      option_result: 'true'
+      options:
+        Pizza Tower:
+          prank_checks:
+            'false': 2
+            'true': 1
+          shuffle_lap2:
+            'false': 1
+            'true': 2
+          randomize_secrets: 'false'
+    # Because macguffins are local, a Pizza Tower without either move or transformation randomization might straight up be a sphere 1 goal in some cases.
+    # Don't allow that.
+    - option_category: Pizza Tower
+      option_name: do_transfo_rando
+      option_result: 'false'
+      options:
+        Pizza Tower:
+          do_move_rando: 'true'
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: PizzaTower-{player}

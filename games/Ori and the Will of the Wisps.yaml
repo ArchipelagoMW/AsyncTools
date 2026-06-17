@@ -1,0 +1,196 @@
+﻿Ori and the Will of the Wisps:
+  progression_balancing: 0
+  accessibility: full
+
+  difficulty_trigger:
+    moki: 20
+    gorlek: 50
+    kii: 30
+
+  glitches:
+    'true': 30
+    'false': 70
+
+  spawn: marsh
+
+  door_rando: 'false'
+
+  goal_trigger:
+    'trees': 30
+    'wisps': 30
+    'quests': 15
+    'relics': 25
+
+  relic_count: random-range-6-11
+
+  launch_fragments:
+    'true': 75
+    'false': 25
+
+  free_teleporters:
+    'true': 30
+    'false': 70
+
+  knowledge_hints: 'false'
+
+  extratp:
+    'true': 20
+    'false': 80
+
+  bonus_trigger:
+    none: 20
+    bonus: 50
+    bonus+: 30
+
+  skill_upgrade:
+    'true': 30
+    'false': 70
+
+  better_spawn: 'false'
+
+  better_wellspring:
+    'true': 50
+    'false': 50
+
+  no_rain:
+    'true': 50
+    'false': 50
+
+  combat_trigger:
+    all: 60
+    no_boss: 20
+    no_combat: 20
+
+  no_trials: 
+    'true': 25
+    'false': 75
+
+  no_hearts:
+    'true': 60
+    'false': 40
+
+  quests:
+    none: 20
+    no_hand: 10
+    all: 70
+
+  glades_done:
+    'true': 25
+    'false': 75
+
+  local_items: ['Relic']  # Relics are already local
+
+  triggers:
+    # Combat triggers
+    - option_category: Ori and the Will of the Wisps
+      option_name: combat_trigger
+      option_result: all
+      options:
+        Ori and the Will of the Wisps:
+          no_combat: []
+    - option_category: Ori and the Will of the Wisps
+      option_name: combat_trigger
+      option_result: no_boss
+      options:
+        Ori and the Will of the Wisps:
+          no_combat: ['bosses', 'demi bosses']
+    - option_category: Ori and the Will of the Wisps
+      option_name: combat_trigger
+      option_result: no_combat
+      options:
+        Ori and the Will of the Wisps:
+          no_combat: ['everything']
+
+    # Logic difficulty triggers
+    - option_category: Ori and the Will of the Wisps
+      option_name: difficulty_trigger
+      option_result: moki
+      options:
+        Ori and the Will of the Wisps:
+          difficulty: moki
+          glitches: 'false'  # Just for clarity on the sheet, as moki has no glitched logic anyway
+          knowledge_hints: 'true'
+          free_teleporters: 'false'
+          sword:
+            'true': 60
+            'false': 40
+          regenerate:
+            'true': 60
+            'false': 40
+    - option_category: Ori and the Will of the Wisps
+      option_name: difficulty_trigger
+      option_result: gorlek
+      options:
+        Ori and the Will of the Wisps:
+          difficulty: gorlek
+          sword:
+            'true': 25
+            'false': 75
+          regenerate:
+            'true': 40
+            'false': 60
+    - option_category: Ori and the Will of the Wisps
+      option_name: difficulty_trigger
+      option_result: kii
+      options:
+        Ori and the Will of the Wisps:
+          difficulty: kii
+
+    # Goal triggers
+    - option_category: Ori and the Will of the Wisps
+      option_name: goal_trigger
+      option_result: trees
+      options:
+        Ori and the Will of the Wisps:
+          goal: ['trees']
+    - option_category: Ori and the Will of the Wisps
+      option_name: goal_trigger
+      option_result: wisps
+      options:
+        Ori and the Will of the Wisps:
+          goal: ['wisps']
+          no_combat: []
+    - option_category: Ori and the Will of the Wisps
+      option_name: goal_trigger
+      option_result: relics
+      options:
+        Ori and the Will of the Wisps:
+          goal: ['relics']
+    - option_category: Ori and the Will of the Wisps
+      option_name: goal_trigger
+      option_result: quests
+      options:
+        Ori and the Will of the Wisps:
+          goal: ['quests']
+          quests: all
+          glades_done: 'false'
+          no_combat: []
+    
+    # Bonus items triggers
+    - option_category: Ori and the Will of the Wisps
+      option_name: bonus_trigger
+      option_result: none
+      options:
+        Ori and the Will of the Wisps:
+          bonus: 'false'
+          extra_bonus: 'false'
+    - option_category: Ori and the Will of the Wisps
+      option_name: bonus_trigger
+      option_result: bonus
+      options:
+        Ori and the Will of the Wisps:
+          bonus: 'true'
+          extra_bonus: 'false'
+    - option_category: Ori and the Will of the Wisps
+      option_name: bonus_trigger
+      option_result: bonus+
+      options:
+        Ori and the Will of the Wisps:
+          bonus: 'true'
+          extra_bonus: 'true'
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: OriWotW-{player}

@@ -367,7 +367,7 @@ CrossCode:
     - Progressive Area Unlocks
     - Progressive Equipment
     - Keyrings
-    - Botanity
+    - Botanics Randomization
     - Small Key Shuffle
     - Master Key Shuffle
     - Chest Lock Randomization
@@ -709,6 +709,33 @@ Frogmonster:
     - Shuffle Bug-Eating Effects
     - Shuffle Workshop Key
     - Open City
+Funi Raccoon Game:
+    - Funi Raccoon Game
+    - Locations
+    - Name
+    - Goal
+    - Eurosanity
+    - Gemsanity
+    - Catsanity
+    - Hatsanity
+    - Dumpster Weight Blocking
+"Garfield Kart - Furious Racing":
+    - "Garfield Kart - Furious Racing"
+    - Locations
+    - Name
+    - Goal
+    - CC Requirement
+    - Randomize Races
+    - Progressive Cups
+    - Randomize Puzzle Pieces
+    - Puzzle Piece Count
+    - Randomize Characters
+    - Randomize Karts
+    - Randomize Hats
+    - Randomize Spoilers
+    - Stat Randomizer
+    - Randomize Items
+    - Lap Sanity
 Gauntlet Legends:
     - Gauntlet Legends
     - Locations
@@ -738,6 +765,38 @@ Golden Sun The Lost Age:
     - Start with Ship Wings
     - Second Starting Character
     - Enable Hard Mode
+Here Comes Niko!:
+    - Here Comes Niko!
+    - Locations
+    - Name
+    - Enable Achievements
+    - Shuffle Handsome Frog
+    - Shuffle Gary's Garden
+    - Gary's Garden Access
+    - Level Specific Keys
+    - Cassette Logic
+    - Extra Cassettes in Item Pool
+    - Progressive Contact List
+    - Snail Shop
+    - Speed Boost in Item Pool
+    - Completion Goal
+    - Safety Helmet
+    - Bug net
+    - Soda Cans
+    - Parasols
+    - Swimming
+    - Textbox
+    - Air Conditioners
+    - Apple Basket
+    - Fishsanity
+    - Seedsanity
+    - Flowersanity
+    - Bonesanity
+    - Applesanity
+    - Bugsanity
+    - Chatsanity
+    - Thoughtsanity
+    - Trap Chance
 Heretic:
     - Heretic
     - Locations
@@ -1052,10 +1111,10 @@ Mario Kart Double Dash:
     - Locations
     - Name
     - Goal
-    - Trophy Requirement
+    - Trophy Requirement Percent
     - Grand Prix Trophies
     - Shuffle Extra Trophies
-    - Logic Difficulty.
+    - Logic Difficulty
     - Time Trials
     - All Cup Tour Length
     - Mirror is 200cc
@@ -1237,6 +1296,29 @@ Ori and the Blind Forest:
     - Extra Mapstones
     - Extra Skills
     - Logic Modifiers
+Ori and the Will of the Wisps:
+    - Ori and the Will of the Wisps
+    - Locations
+    - Name
+    - Goal
+    - Logic difficulty
+    - Glitches
+    - Launch Fragments
+    - Relic Count
+    - Remove Quests
+    - Glades Done
+    - No Combat
+    - No Trials
+    - No Willow hearts
+    - No Rain
+    - Better Wellspring
+    - Spawn with Sword
+    - Spawn with Regenerate
+    - Extra teleporters
+    - Bonus items
+    - Extra bonus items
+    - Skill upgrades
+    - Free Teleporters
 Outer Wilds:
     - Outer Wilds
     - Locations
@@ -1268,6 +1350,48 @@ Paint:
     - Quarter Percent Checks
     - Canvas Size Increment
     - Trap Fill Percent
+"Paper Mario: The Thousand-Year Door":
+    - "Paper Mario: The Thousand-Year Door"
+    - Locations
+    - Name
+    - Goal
+    - Goal Crystal Stars
+    - Palace Crystal Stars
+    - Star Shuffle
+    - Tattlesanity
+    - Star Piecesanity
+    - Shopsanity
+    - Shop Purchase Limit
+    - Shinesanity
+    - Keysanity
+    - Dazzle Rewards
+    - Pit Items
+    - Limit Chapter Logic
+    - Blue Pipe Warp
+    - Palace Skip
+    - Skip Cutscenes
+    - Disable Intermissions
+    - Fast Travel
+    - Always Succeed Conditions
+    - Open West Side
+    - Grubba Bribe Cost
+    - Enemy Randomizer
+    - Enemy Stat Scaling
+    - Permanent Peekaboo
+    - Full Run Bar
+    - 0 BP First Attack
+    - Badge BP Cost
+    - Badge FP Cost
+    - Partner FP Cost
+    - Music Settings
+    - Block Visibility
+    - Experience Multiplier
+    - Starting HP
+    - Starting FP
+    - Starting BP
+    - Starting Coins
+    - Starting Partner
+    - Yoshi Color
 Peggle Deluxe:
     - Peggle Deluxe
     - Locations
@@ -1288,6 +1412,37 @@ Peggle Nights:
     - Include Full Clears
     - Maximum Starting Ball Count
     - Useful Item Percentage
+Pizza Tower:
+    - Pizza Tower
+    - Locations
+    - Name 
+    - Character
+    - Toppin Count
+    - Floor 1 Boss Toppins
+    - Floor 2 Boss Toppins
+    - Floor 3 Boss Toppins
+    - Floor 4 Boss Toppins
+    - Floor 5 Boss Toppins
+    - Treasures Award Checks
+    - Secrets Award Checks
+    - S Ranks Award Checks
+    - P Ranks Award Checks
+    - Chef Tasks Award Checks
+    - Shuffle Boss Keys
+    - Shuffle Level Gates
+    - Shuffle Boss Gates
+    - Shuffle Secrets
+    - Open World
+    - Bonus Ladders
+    - Randomize Moves
+    - Randomize Transformations
+    - Shuffle Lap 2 Portals
+    - Pumpkin Checks
+    - Pumpkin Count
+    - Tricky Treat Door Pumpkins
+    - Randomize Music
+    - Snotty's Home Floor
+    - Randomize Enemies
 Pokemon Black and White:
     - Pokemon Black and White
     - Locations
@@ -2093,7 +2248,6 @@ The Witness:
     - Vague Hints
     - Area Hint Percentage
     - Laser Hints
-    - Easter Egg Hunt
 Timespinner:
     - Timespinner
     - Locations
