@@ -1659,13 +1659,26 @@ Pokemon Crystal:
     none: 1
     all: 2
     some: 3
-    
+
   scawwy_caves:
     none: 1
     all: 1
     vanilla: 2
     some: 3
-    
+
+  shopsanity_marts:
+    true: 80
+    false: 20
+  shopsanity_apricorns:
+    true: 60
+    false: 40
+  shopsanity_blue_card:
+    true: 60
+    false: 40
+  shopsanity_game_corners:
+    true: 30
+    false: 70
+
   triggers:
     - option_category: Pokemon Crystal
       option_name: coffee
@@ -1685,6 +1698,7 @@ Pokemon Crystal:
       options:
         Pokemon Crystal:
           saffron_gatehouse_tea: ["_Random"]
+
     - option_category: Pokemon Crystal
       option_name: scawwy_caves
       option_result: some
@@ -1703,6 +1717,37 @@ Pokemon Crystal:
       options:
         Pokemon Crystal:
           dark_areas: []
+
+    - option_category: Pokemon Crystal
+      option_name: shopsanity_marts
+      option_result: true
+      options:
+        Pokemon Crystal:
+          +shopsanity:
+            - Johto Marts
+            - Kanto Marts
+    - option_category: Pokemon Crystal
+      option_name: shopsanity_apricorns
+      option_result: true
+      options:
+        Pokemon Crystal:
+          +shopsanity:
+            - Apricorns
+    - option_category: Pokemon Crystal
+      option_name: shopsanity_blue_card
+      option_result: true
+      options:
+        Pokemon Crystal:
+          +shopsanity:
+            - Blue Card
+    - option_category: Pokemon Crystal
+      option_name: shopsanity_game_corners
+      option_result: true
+      options:
+        Pokemon Crystal:
+          +shopsanity:
+            - Game Corners
+
     - option_category: null
       option_name: name
       option_result: Player{player}
