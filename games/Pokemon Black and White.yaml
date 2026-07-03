@@ -92,6 +92,11 @@
     simple: 10
     none: 10
 
+  early_parcel:
+    yes_please: 50  # Add Parcel to start_inventory
+    no_thanks: 40   # Parcel can be anywhere
+    maybe_worse: 10 # Add Parcel to local_items. Can be behind Surf/Strength/Basement Key
+
   triggers:
     - option_category: Pokemon Black and White
       option_name: t_randomize_wild_pokemon_restrictions
@@ -222,3 +227,31 @@
       options:
         null:
           name: PokeWhite-{player}
+
+    - option_category: Pokemon Black and White
+      option_name: early_parcel
+      option_result: yes_please
+      options:
+        Pokemon Black and White:
+          +start_inventory:
+            Parcel: 1
+          -local_items:
+            - Parcel
+    - option_category: Pokemon Black and White
+      option_name: early_parcel
+      option_result: no_thanks
+      options:
+        Pokemon Black and White:
+          -start_inventory:
+            Parcel: 1
+          -local_items:
+            - Parcel
+    - option_category: Pokemon Black and White
+      option_name: early_parcel
+      option_result: maybe_worse
+      options:
+        Pokemon Black and White:
+          -start_inventory:
+            Parcel: 1
+          +local_items:
+            - Parcel
