@@ -1,0 +1,122 @@
+﻿Tony Hawk's Pro Skater 1 + 2:
+  accessibility:
+    full: 1
+
+  goal:
+    secret_tapes_final_level: 1
+    secret_tape_hunt: 1
+  secret_tapes_total:
+    20: 1
+  secret_tapes_required:
+    15: 1
+  skater_selection:
+    Andrew Reynolds: true
+    Aori Nishimura: true
+    Bob Burnquist: true
+    Bucky Lasek: true
+    Chad Muska: true
+    Elissa Steamer: true
+    Eric Koston: true
+    Geoff Rowley: true
+    Jamie Thomas: true
+    Kareem Campbell: true
+    Leo Baker: true
+    Leticia Bufoni: true
+    Lizzie Armanto: true
+    Nyjah Huston: true
+    Officer Dick: false  # Secret Skater
+    Riley Hawk: true
+    Rodney Mullen: true
+    Roswell Alien: false  # Secret Skater
+    Rune Glifberg: true
+    Shane O'Neill: true
+    Steve Caballero: true
+    Tony Hawk: true
+    Tyshawn Jones: true
+  skater_count:
+    1: 1
+    2: 1
+    3: 1
+    5: 1
+  level_selection:
+    Burnside: true
+    Chopper Drop: true
+    Downhill Jam: true
+    Downtown: true
+    Mall: true
+    Marseille: true
+    NY City: true
+    Philadelphia: true
+    Roswell: true
+    School: true
+    School II: true
+    Skate Heaven: true
+    Skate Park: true
+    Skatestreet: true
+    Streets: true
+    The Bullring: true
+    The Hangar: true
+    Venice Beach: true
+    Warehouse: true
+  level_count:
+    10: 1
+    12: 1
+    15: 1
+    18: 1
+  include_platinum_scores:
+    'true': 1
+  include_platinum_combo_scores:
+    'true': 1
+  include_signature_specials:
+    'false': 1
+    'true': 1
+  include_long_tricks:
+    'false': 1
+    'true': 1
+  include_gaps:
+    'false': 1
+    'true': 1
+  gap_count_per_level:
+    3: 1
+    5: 1
+  score_requirement_mode:
+    random_per_level: 1
+  score_requirement_percentage:
+    150: 1
+  combo_score_requirement_mode:
+    random_per_level: 1
+  combo_score_requirement_percentage:
+    150: 1
+  starting_trick_type_weights:
+    Flip Tricks: 0
+    Grab Tricks: 1
+    Grind Tricks: 1
+    Lip Tricks: 0
+    Manual Tricks: 1
+  include_overpowered_abilities:
+    'true': 1
+  trap_percentage:
+    0: 1
+    10: 1
+  trap_weights:
+    Black and White Trap: 1
+    Bloom Trap: 1
+    Chromatic Trap: 1
+    Color Inversion Trap: 1
+    Giant Trap: 1
+    High Gravity Trap: 1
+    Low Gravity Trap: 1
+    Mobile Game Trap: 1
+    Retro Trap: 1
+    Reverse Directional Controls Trap: 1
+    Super Speed Trap: 1
+    Tiny Trap: 1
+    Tunnel Vision Trap: 1
+    Wide Trap: 1
+  triggers:
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: THPS12-{player}
