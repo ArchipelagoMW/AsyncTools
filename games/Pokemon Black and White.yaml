@@ -95,7 +95,7 @@
   early_parcel:
     yes_please: 50  # Add Parcel to start_inventory
     no_thanks: 40   # Parcel can be anywhere
-    maybe_worse: 10 # Add Parcel to local_items. Can be behind Surf/Strength/Basement Key
+    maybe_worse: 10 # Add Parcel to local_items. Can be behind Surf/Strength/Basement Key/Cut
 
   triggers:
     - option_category: Pokemon Black and White
@@ -216,19 +216,6 @@
             - 'Consider form change'
 
     - option_category: Pokemon Black and White
-      option_name: version
-      option_result: black
-      options:
-        null:
-          name: PokeBlack-{player}
-    - option_category: Pokemon Black and White
-      option_name: version
-      option_result: white
-      options:
-        null:
-          name: PokeWhite-{player}
-
-    - option_category: Pokemon Black and White
       option_name: early_parcel
       option_result: yes_please
       options:
@@ -255,3 +242,16 @@
             Parcel: 1
           +local_items:
             - Parcel
+
+    - option_category: Pokemon Black and White
+      option_name: version
+      option_result: black
+      options:
+        null:
+          name: PokeBlack-{player}
+    - option_category: Pokemon Black and White
+      option_name: version
+      option_result: white
+      options:
+        null:
+          name: PokeWhite-{player}
