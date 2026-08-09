@@ -1,8 +1,7 @@
 ﻿Terraria: 
   # Calamity is a mod for Terraria that adds many more bosses to the game.
-  # Sorry, I was wrong. Calamity is actually in much higher demand than I thought.
   calamity:
-    'false': 1
+    'false': 4
     'true': 1
   # This is a very difficult secret seed in vanilla. It's probably too hard for a big async yaml.
   getfixedboi: 'false'
