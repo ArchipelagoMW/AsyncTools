@@ -163,7 +163,7 @@ Mario & Luigi Superstar Saga:
       option_result: vanilla
       options:
         Mario & Luigi Superstar Saga:
-          local_items: ["Peach's Extra Dress", "Fake Beanstar"]
+          +local_items: ["Peach's Extra Dress", "Fake Beanstar"]
 
     - option_category: null
       option_name: name
