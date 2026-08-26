@@ -104,9 +104,11 @@
     'false': 50
     'true': 50
 
+  # Luigi's Mansion has a high potential for early BKs when the player gets trapped in a small starting area
+  # and can't reach the main hallways. Mitigate this somewhat by forcing an early key on all slots.
   early_first_key:
-    'false': 50
-    'true': 50
+    'false': 0
+    'true': 100
 
   walk_speed:
     normal_speed: 10
