@@ -92,7 +92,145 @@
     simple: 10
     none: 10
 
+  plugin_options:
+    # See https://github.com/Radis7Noir/pokemon_bw_extra_logic_plugin/tree/v10 for what the options do
+    extra_logic: &base_extra_logic # Using v10
+      randomize_starting_town:
+        true: 1
+        false: 1
+      starting_town_blacklist: []  # list in README
+      add_ss_ticket:
+        true: 1
+        false: 1
+      add_pass:
+        true: 1
+        false: 1
+      hm_with_badges:
+        true: 1
+        false: 1
+      add_rock_smash: false
+      add_rock_smash_musharna: false # requires add_rock_smash - Use triggers
+      extra_cut_trees: false
+      extra_cut_trees_kyurem: false # requires extra_cut_trees - Use triggers
+      move_strength_boulders: false
+      move_strength_boulders_vi_road: false # requires move_strength_boulders - Use triggers
+      dark_areas: ["Wellspring Cave B1F", "Mistralton Cave", "Challengers Cave"]  # supports "_All" and "_Random", see README
+  t_extra_logic_hm_roadblocks:
+    none: 1
+    rock_smash: 1
+    cut: 1
+    strength: 1
+    rock_smash_cut: 1
+    rock_smash_strength: 1
+    cut_strength: 1
+    all: 1
+
   triggers:
+    - option_category: Pokemon Black and White
+      option_name: t_extra_logic_hm_roadblocks
+      option_result: rock_smash
+      options:
+        Pokemon Black and White:
+          plugin_options:
+            extra_logic:
+              <<: *base_extra_logic
+              add_rock_smash: true
+              add_rock_smash_musharna:
+                true: 1
+                false: 1
+    - option_category: Pokemon Black and White
+      option_name: t_extra_logic_hm_roadblocks
+      option_result: cut
+      options:
+        Pokemon Black and White:
+          plugin_options:
+            extra_logic:
+              <<: *base_extra_logic
+              extra_cut_trees: true
+              extra_cut_trees_kyurem:
+                true: 1
+                false: 1
+    - option_category: Pokemon Black and White
+      option_name: t_extra_logic_hm_roadblocks
+      option_result: strength
+      options:
+        Pokemon Black and White:
+          plugin_options:
+            extra_logic:
+              <<: *base_extra_logic
+              move_strength_boulders: true
+              move_strength_boulders_vi_road:
+                true: 1
+                false: 1
+    - option_category: Pokemon Black and White
+      option_name: t_extra_logic_hm_roadblocks
+      option_result: rock_smash_cut
+      options:
+        Pokemon Black and White:
+          plugin_options:
+            extra_logic:
+              <<: *base_extra_logic
+              add_rock_smash: true
+              add_rock_smash_musharna:
+                true: 1
+                false: 1
+              extra_cut_trees: true
+              extra_cut_trees_kyurem:
+                true: 1
+                false: 1
+    - option_category: Pokemon Black and White
+      option_name: t_extra_logic_hm_roadblocks
+      option_result: rock_smash_strength
+      options:
+        Pokemon Black and White:
+          plugin_options:
+            extra_logic:
+              <<: *base_extra_logic
+              add_rock_smash: true
+              add_rock_smash_musharna:
+                true: 1
+                false: 1
+              move_strength_boulders: true
+              move_strength_boulders_vi_road:
+                true: 1
+                false: 1
+    - option_category: Pokemon Black and White
+      option_name: t_extra_logic_hm_roadblocks
+      option_result: cut_strength
+      options:
+        Pokemon Black and White:
+          plugin_options:
+            extra_logic:
+              <<: *base_extra_logic
+              extra_cut_trees: true
+              extra_cut_trees_kyurem:
+                true: 1
+                false: 1
+              move_strength_boulders: true
+              move_strength_boulders_vi_road:
+                true: 1
+                false: 1
+    - option_category: Pokemon Black and White
+      option_name: t_extra_logic_hm_roadblocks
+      option_result: all
+      options:
+        Pokemon Black and White:
+          plugin_options:
+            extra_logic:
+              <<: *base_extra_logic
+              add_rock_smash: true
+              add_rock_smash_musharna:
+                true: 1
+                false: 1
+              extra_cut_trees: true
+              extra_cut_trees_kyurem:
+                true: 1
+                false: 1
+              move_strength_boulders: true
+              move_strength_boulders_vi_road:
+                true: 1
+                false: 1
+
     - option_category: Pokemon Black and White
       option_name: t_randomize_wild_pokemon_restrictions
       option_result: none
