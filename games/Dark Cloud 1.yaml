@@ -6,7 +6,7 @@
     5: 4
     4: 1
 
-  all_bosses: true
+  all_bosses: false
   
   progressive_chars: true
   extra_char_buildings: true
@@ -17,10 +17,20 @@
     closed: 1
 
   starter_weapons: true
+  
+  gem_set: true
+
+  shop_sanity:
+    true: 2
+    false: 8
+
+  floor_sanity:
+    most_floors: 2
+    none: 8
 
   miracle_sanity:
     'false': 2
-    'true': 8
+    'true': 12
 
   abs_multiplier:
     double: 5
@@ -34,9 +44,9 @@
   attach_mult_config: all
     
   auto_build:
-    'off': 2
-    hundo: 3
-    muska_robot_only: 2
+    'off': 3
+    hundo: 12
+    muska_robot_only: 5
     
   # The game is miserable without these found early
   local_items:
