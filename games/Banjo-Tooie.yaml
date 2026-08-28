@@ -89,7 +89,7 @@
 
   signpost_hints: random
   signpost_move_hints: random
-  hint_clarity: random
+  hint_clarity: clear
   add_signpost_hints_to_ap: progression
 
   easy_canary: 'true' # Most people cannot beat default Canary Mary.
