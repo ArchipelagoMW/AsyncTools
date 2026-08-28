@@ -239,24 +239,11 @@
         Pokemon Black and White:
           +start_inventory:
             Parcel: 1
-          -local_items:
-            - Parcel
-    - option_category: Pokemon Black and White
-      option_name: early_parcel
-      option_result: no_thanks
-      options:
-        Pokemon Black and White:
-          -start_inventory:
-            Parcel: 1
-          -local_items:
-            - Parcel
     - option_category: Pokemon Black and White
       option_name: early_parcel
       option_result: maybe_worse
       options:
         Pokemon Black and White:
-          -start_inventory:
-            Parcel: 1
           +local_items:
             - Parcel
 
@@ -267,24 +254,11 @@
         Pokemon Black and White:
           +start_inventory:
             Loot Sack: 1
-          -local_items:
-            - Loot Sack
-    - option_category: Pokemon Black and White
-      option_name: early_loot_sack
-      option_result: no_thanks
-      options:
-        Pokemon Black and White:
-          -start_inventory:
-            Loot Sack: 1
-          -local_items:
-            - Loot Sack
     - option_category: Pokemon Black and White
       option_name: early_loot_sack
       option_result: maybe_worse
       options:
         Pokemon Black and White:
-          -start_inventory:
-            Loot Sack: 1
           +local_items:
             - Loot Sack
 
@@ -295,24 +269,11 @@
         Pokemon Black and White:
           +start_inventory:
             Dragon Skull: 1
-          -local_items:
-            - Dragon Skull
     - option_category: Pokemon Black and White
-      option_name: early_loot_sack
-      option_result: no_thanks
-      options:
-        Pokemon Black and White:
-          -start_inventory:
-            Dragon Skull: 1
-          -local_items:
-            - Dragon Skull
-    - option_category: Pokemon Black and White
-      option_name: early_loot_sack
+      option_name: early_dragon_skull
       option_result: maybe_worse
       options:
         Pokemon Black and White:
-          -start_inventory:
-            Dragon Skull: 1
           +local_items:
             - Dragon Skull
 
