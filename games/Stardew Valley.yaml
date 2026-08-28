@@ -147,6 +147,50 @@ Stardew Valley:
     one: 50
     all_movies: 15
     all_movies_loved: 5
+  # start_without: Everything except backpack. Each has a 20% chance of being rolled.
+  start_without: []
+  start_without_tools:
+    'false': 80
+    'true': 20
+  start_without_landslide:
+    'false': 80
+    'true': 20
+  start_without_community_center:
+    'false': 80
+    'true': 20
+  start_without_buildings:
+    'false': 80
+    'true': 20
+  # eatsanity: Not crops, each value has a 20% chance of being rolled. Cooking only if cooksanity is enabled.
+  eatsanity: []
+  eatsanity_cooking:
+    'false': 80
+    'true': 20
+  eatsanity_fish:
+    'false': 80
+    'true': 20
+  eatsanity_artisan:
+    'false': 80
+    'true': 20
+  eatsanity_shop:
+    'false': 80
+    'true': 20
+  eatsanity_poisonous:
+    'false': 80
+    'true': 20
+  # secretsanity: Fishing, Secret Notes, 20% each. TODO: Add easy secrets once the secret names are clearer.
+  secretsanity: []
+  secretsanity_fishing:
+    'false': 80
+    'true': 20
+  secretsanity_secret_notes:
+    'false': 80
+    'true': 20
+  # hatsanity: Only Easy, may consider normal in the future?
+  hatsanity: []
+  hatsanity_easy:
+    'false': 70
+    'true': 30
   walnutsanity: ["Puzzles", "Bushes", "Repeatables"] # If Ginger Island rolls excluded, this will automatically disable itself. I have disabled dig spots because they are not noob-friendly. Everything else is better shuffled.
   movement_buff_number: random-range-4-8
   enabled_filler_buffs: ["Luck", "Damage", "Defense", "Immunity", "Health", "Energy", "Bite Rate", "Fish Trap", "Fishing Bar Size"]
@@ -276,7 +320,7 @@ Stardew Valley:
     - option_category: Stardew Valley
       option_name: goal
       option_result: protector_of_the_valley # Complete monsterslayer goals, follows monstersanity
-      options: 
+      options:
         Stardew Valley: # Remove one_per_category odds, and bumped everything else by +5
           monstersanity:
             one_per_monster: 30
@@ -308,7 +352,7 @@ Stardew Valley:
     - option_category: Stardew Valley
       option_name: goal
       option_result: short_master_angler # Master angler with most sanities off
-      options: 
+      options:
         Stardew Valley:
           goal: master_angler
           fishsanity: # Remove none and only_easy_fish
@@ -337,7 +381,7 @@ Stardew Valley:
     - option_category: Stardew Valley
       option_name: exclude_ginger_island
       option_result: 'false' # When GI is enabled, we remove the Buildings ER which often drags the slot for way longer than it should
-      options: 
+      options:
         Stardew Valley:
           entrance_randomization:
             disabled: 60
@@ -348,26 +392,107 @@ Stardew Valley:
     # Chefsanity trigger setup, since OptionSet can't be randomized
     - option_category: Stardew Valley
       option_name: chefsanity_trigger
-      option_result: 'queen_of_sauce' 
-      options: 
+      option_result: 'queen_of_sauce'
+      options:
         Stardew Valley:
           +chefsanity: ["Queen of Sauce"]
     - option_category: Stardew Valley
       option_name: chefsanity_trigger
-      option_result: 'qos_and_purchases' 
-      options: 
+      option_result: 'qos_and_purchases'
+      options:
         Stardew Valley:
           +chefsanity: ["Queen of Sauce", "Purchases"]
     - option_category: Stardew Valley
       option_name: chefsanity_trigger
-      option_result: 'all' 
-      options: 
+      option_result: 'all'
+      options:
         Stardew Valley:
-          +chefsanity: ["Queen of Sauce", "Purchases", "Friendship", "Skills"]                 
+          +chefsanity: ["Queen of Sauce", "Purchases", "Friendship", "Skills"]
+    # Start Without
+    - option_category: Stardew Valley
+      option_name: start_without_tools
+      option_result: 'true'
+      options:
+        Stardew Valley:
+          +start_without: ["Tools"]
+    - option_category: Stardew Valley
+      option_name: start_without_landslide
+      option_result: 'true'
+      options:
+        Stardew Valley:
+          +start_without: ["Landslide"]
+    - option_category: Stardew Valley
+      option_name: start_without_community_center
+      option_result: 'true'
+      options:
+        Stardew Valley:
+          +start_without: ["Community Center"]
+    - option_category: Stardew Valley
+      option_name: start_without_buildings
+      option_result: 'true'
+      options:
+        Stardew Valley:
+          +start_without: ["Buildings"]
+    # Eatsanity
+    - option_category: Stardew Valley
+      option_name: cooksanity
+      option_result: none
+      options:
+        Stardew Valley:
+          eatsanity_cooking: 'false'
+    - option_category: Stardew Valley
+      option_name: eatsanity_cooking
+      option_result: 'true'
+      options:
+        Stardew Valley:
+          +eatsanity: ["Cooking"]
+    - option_category: Stardew Valley
+      option_name: eatsanity_fish
+      option_result: 'true'
+      options:
+        Stardew Valley:
+          +eatsanity: ["Fish"]
+    - option_category: Stardew Valley
+      option_name: eatsanity_artisan
+      option_result: 'true'
+      options:
+        Stardew Valley:
+          +eatsanity: ["Artisan"]
+    - option_category: Stardew Valley
+      option_name: eatsanity_shop
+      option_result: 'true'
+      options:
+        Stardew Valley:
+          +eatsanity: ["Shop"]
+    - option_category: Stardew Valley
+      option_name: eatsanity_poisonous
+      option_result: 'true'
+      options:
+        Stardew Valley:
+          +eatsanity: ["Poisonous"]
+    # Secretsanity
+    - option_category: Stardew Valley
+      option_name: secretsanity_fishing
+      option_result: 'true'
+      options:
+        Stardew Valley:
+          +secretsanity: ["Fishing"]
+    - option_category: Stardew Valley
+      option_name: secretsanity_secret_notes
+      option_result: 'true'
+      options:
+        Stardew Valley:
+          +secretsanity: ["Secret Notes"]
+    # Hatsanity — Easy only
+    - option_category: Stardew Valley
+      option_name: hatsanity_easy
+      option_result: 'true'
+      options:
+        Stardew Valley:
+          +hatsanity: ["Easy"]
     - option_category: null
       option_name: name
       option_result: Player{player}
       options:
         null:
           name: Stardew-{player}
-          
