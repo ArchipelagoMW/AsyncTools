@@ -17,6 +17,16 @@
     closed: 1
 
   starter_weapons: true
+  
+  gem_set: true
+
+  shop_sanity:
+    true: 2
+    false: 8
+
+  floor_sanity:
+    most_floors: 2
+    none: 8
 
   miracle_sanity:
     'false': 2
