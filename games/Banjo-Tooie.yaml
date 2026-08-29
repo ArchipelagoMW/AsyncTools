@@ -69,6 +69,8 @@
   honeyb_rewards: random
   randomize_tickets: random
   randomize_green_relics: random
+  green_relics_chamber_requirement: random-range-1-12
+  green_relics_boss_requirement: random-range-13-25
   randomize_beans: random
   randomize_glowbos: random
   randomize_dino_roar: random
