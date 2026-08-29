@@ -1464,6 +1464,7 @@ Pokemon Crystal:
     - Locations
     - Name
     - Goal
+    - Johto Only
     - Elite Four Requirement
     - Elite Four Count
     - Red Requirement
@@ -1520,9 +1521,11 @@ Pokemon Crystal:
     - Randomize TM Moves
     - TM Compatibility
     - HM Compatibility
+    - Randomize Base Stats
     - Randomize Types
     - Randomize Palettes
     - Randomize Music
+    - Early Fly
     - Require Flash
     - HM Badge Requirements
     - Remove Ilex Forest Cut Tree
@@ -1535,6 +1538,7 @@ Pokemon Crystal:
     - Grasssanity
     - Trainer Palette
     - Progressive Rods
+    - Local Items
 Pokemon Emerald:
     - Pokemon Emerald
     - Locations
