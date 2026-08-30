@@ -3,17 +3,23 @@
   accessibility: full
 
   difficulty_trigger:
-    moki: 20
-    gorlek: 50
-    kii: 30
+    moki: 30
+    gorlek: 45
+    kii: 25
 
   glitches:
     'true': 30
     'false': 70
 
-  spawn: marsh
+  spawn:
+    vanilla: 40
+    random_tp: 35
+    random_loc: 25
 
-  door_rando: 'false'
+  door_rando:
+    disabled: 65
+    enabled: 25
+    decoupled: 10
 
   goal_trigger:
     'trees': 30
@@ -108,6 +114,8 @@
       options:
         Ori and the Will of the Wisps:
           difficulty: moki
+          spawn: vanilla
+          door_rando: disabled
           glitches: 'false'  # Just for clarity on the sheet, as moki has no glitched logic anyway
           knowledge_hints: 'true'
           free_teleporters: 'false'
