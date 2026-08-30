@@ -1443,6 +1443,35 @@ Pizza Tower:
     - Randomize Music
     - Snotty's Home Floor
     - Randomize Enemies
+PokePark:
+    - PokePark
+    - Locations
+    - Name
+    - Goal
+    - Skygarden Prisma Requirement
+    - Harder Power Competition AI
+    - Separate Pokemon Locations by Zone
+    - Starting Fast Travel Items
+    - Starting Power Item Preset
+    - In-Zone Roadblock Items
+    - Remove Attraction Record Locations
+    - Randomize Attraction Entrances
+    - Unlock Fast Travel at Taxi Stops
+    - Randomize Fast Travel Routes
+    - Randomize Treehouse Gates
+    - Randomize General Entrances
+    - Mix Entrance Randomization Pools
+    - Required Battle Win Streak
+    - Remove Battle Power Competition Locations
+    - Remove Chase Power Competition Locations
+    - Remove Quiz Power Competition Locations
+    - Remove Hide-and-Seek Power Competition Locations
+    - Remove Errand Locations
+    - Remove Miscellaneous Friendship Locations
+    - Remove Legendary Pokemon Locations
+    - Remove Power Training Locations
+    - Remove Attraction Prisma Locations
+    - Remove Pokemon Unlock Locations
 Pokemon Black and White:
     - Pokemon Black and White
     - Locations
