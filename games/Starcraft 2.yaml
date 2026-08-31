@@ -53,10 +53,14 @@ Starcraft 2:
   enable_void_trade: true
   void_trade_age_limit: 1_week
   void_trade_workers: false
-  enable_morphling: true
-  take_over_ai_allies: false
+  enable_morphling:
+    false: 10
+    true: 90
+  take_over_ai_allies:
+    false: 90
+    true: 10
   nova_ghost_of_a_chance_variant: auto
-  mercenary_highlanders: true
+  mercenary_highlanders: random
   difficulty_curve: standard
   mission_race_balancing: semi_balanced
 
@@ -176,7 +180,7 @@ Starcraft 2:
         Starcraft 2:
           maximum_campaign_size: 60
           enable_race_swap: pick_one
-
+          shuffle_no_build: random
     - option_category: Starcraft 2
       option_name: game_format
       option_result: challenge
@@ -184,6 +188,7 @@ Starcraft 2:
         Starcraft 2:
           maximum_campaign_size: 50
           enable_race_swap: pick_one
+          shuffle_no_build: random
           required_tactics: any_units
           game_difficulty:
             hard: 40
@@ -217,6 +222,7 @@ Starcraft 2:
             ? 'Prophecy'
             ? 'Whispers of Oblivion (Legacy of the Void: Prologue)'
           kerrigan_presence: not_present
+          shuffle_no_build: random
 
     - option_category: Starcraft 2
       option_name: game_format
@@ -231,6 +237,7 @@ Starcraft 2:
             ? 'Whispers of Oblivion (Legacy of the Void: Prologue)'
             ? 'Legacy of the Void'
             ? 'Into the Void (Legacy of the Void: Epilogue)'
+          shuffle_no_build: random
 
     - option_category: Starcraft 2
       option_name: game_format
@@ -242,6 +249,7 @@ Starcraft 2:
           selected_races: !!set
             ? 'Terran'
           kerrigan_presence: not_present
+          shuffle_no_build: random
 
     - option_category: Starcraft 2
       option_name: game_format
@@ -250,6 +258,7 @@ Starcraft 2:
         Starcraft 2:
           maximum_campaign_size: 30
           enable_race_swap: pick_one
+          shuffle_no_build: random
           selected_races: !!set
             ? 'Zerg'
 
@@ -260,6 +269,7 @@ Starcraft 2:
         Starcraft 2:
           maximum_campaign_size: 30
           enable_race_swap: pick_one
+          shuffle_no_build: random
           selected_races: !!set
             ? 'Protoss'
           kerrigan_presence: not_present
@@ -376,6 +386,9 @@ Starcraft 2:
           war_council_nerfs: false
           kerrigan_presence: vanilla
           mastery_locations: disabled
+          exclude_very_hard_missions:
+            false: 50
+            true: 50
           spear_of_adun_presence: everywhere
           spear_of_adun_present_in_no_build: true
           spear_of_adun_passive_ability_presence: everywhere
@@ -751,6 +764,7 @@ Starcraft 2:
       option_result: 195  # Game Format: Full Campaign
       options:
         Starcraft 2:
+          exclude_very_hard_missions: false
           minerals_per_item: 5
           vespene_per_item: 5
           starting_supply_per_item: 1
@@ -761,6 +775,7 @@ Starcraft 2:
       option_result: 83  # Game Format: Vanilla
       options:
         Starcraft 2:
+          exclude_very_hard_missions: false
           minerals_per_item: 8
           vespene_per_item: 8
           starting_supply_per_item: 2
@@ -833,6 +848,14 @@ Starcraft 2:
       options:
         Starcraft 2:
           spear_of_adun_passive_present_in_no_build: true
+
+    - option_category: Starcraft 2
+      option_name: exclude_very_hard_missions
+      option_result: true
+      # never exclude both very hard and no-build missions
+      options:
+        Starcraft 2:
+          shuffle_no_build: true
 
     # Slot name
     - option_category: null
