@@ -1,5 +1,18 @@
 ChecksFinder:
+  # 1 in 3 chance to start with one of each progression item.
+  start_with_map_items:
+    'false': 2
+    'true': 1
   triggers:
+    - option_category: ChecksFinder
+      option_name: start_with_map_items
+      option_result: 'true'
+      options:
+        ChecksFinder:
+          +start_inventory:
+            Map Width: 1
+            Map Height: 1
+            Map Bombs: 1
     - option_category: null
       option_name: name
       option_result: Player{player}
