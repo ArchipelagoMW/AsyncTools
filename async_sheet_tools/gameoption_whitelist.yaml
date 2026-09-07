@@ -339,6 +339,7 @@ ChecksFinder:
     - ChecksFinder
     - Locations
     - Name
+    - Start Inventory
 Choo-Choo Charles:
     - Choo-Choo Charles
     - Locations
