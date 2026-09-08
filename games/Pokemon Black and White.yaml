@@ -92,27 +92,9 @@
     simple: 10
     none: 10
 
-  early_parcel:
-    # Add Parcel to start_inventory
-    yes_please: 50
-    # Parcel can be anywhere
-    no_thanks: 40
-    # Add Parcel to local_items. Can be behind Surf/Strength/Basement Key/Cut
-    maybe_worse: 10
-  early_loot_sack:
-    # Add Loot Sack to start_inventory
-    yes_please: 50
-    # Loot Sack  can be anywhere
-    no_thanks: 40
-    # Add Loot Sack to local_items. Can be behind Surf/Strength/Basement Key/Cut/Parcel
-    maybe_worse: 10
-  early_dragon_skull:
-    # Add Dragon Skull to start_inventory
-    yes_please: 50
-    # Dragon Skull can be anywhere
-    no_thanks: 40
-    # Add Dragon Skull to local_items. Can be behind Surf/Strength/Basement Key/Cut/Loot Sack
-    maybe_worse: 10
+  start_inventory:
+    Parcel: 1
+    Loot Sack: 1
 
   triggers:
     - option_category: Pokemon Black and White
@@ -231,51 +213,6 @@
           +modify_logic:
             - 'Consider static pokemon'
             - 'Consider form change'
-
-    - option_category: Pokemon Black and White
-      option_name: early_parcel
-      option_result: yes_please
-      options:
-        Pokemon Black and White:
-          +start_inventory:
-            Parcel: 1
-    - option_category: Pokemon Black and White
-      option_name: early_parcel
-      option_result: maybe_worse
-      options:
-        Pokemon Black and White:
-          +local_items:
-            - Parcel
-
-    - option_category: Pokemon Black and White
-      option_name: early_loot_sack
-      option_result: yes_please
-      options:
-        Pokemon Black and White:
-          +start_inventory:
-            Loot Sack: 1
-    - option_category: Pokemon Black and White
-      option_name: early_loot_sack
-      option_result: maybe_worse
-      options:
-        Pokemon Black and White:
-          +local_items:
-            - Loot Sack
-
-    - option_category: Pokemon Black and White
-      option_name: early_dragon_skull
-      option_result: yes_please
-      options:
-        Pokemon Black and White:
-          +start_inventory:
-            Dragon Skull: 1
-    - option_category: Pokemon Black and White
-      option_name: early_dragon_skull
-      option_result: maybe_worse
-      options:
-        Pokemon Black and White:
-          +local_items:
-            - Dragon Skull
 
     - option_category: Pokemon Black and White
       option_name: version
