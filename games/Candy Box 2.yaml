@@ -2,14 +2,27 @@
   x_potion_brewing: simultaneously
   enable_computer: 'false'
   scouting: 'true'
-  font_traps: random
+
+  # If "play_stones" is picked, the tower will stay at its vanilla location. None of the other goal options do this.
+  goal_trigger:
+    play_stones: 3
+    play_stones_and_trap_room: 1
+    3000_meters: 2
+    3000_meters_and_trap_room: 1
+    all_goals: 2
+
+  font_traps:
+    0: 2
+    random-range-1-5: 3
+    random-low: 1 # upwards of 20 traps
 
   quest_randomisation:
     'off': 2
     quests_only: 3
     quests_and_rooms_separate: 2
     everything: 1
-  randomise_tower: 'false'
+  
+  randomise_tower: 'true' # may be overridden by trigger
   randomise_x_potion: random
 
   starting_weapon:
@@ -38,6 +51,52 @@
   gifting: 'true'
 
   triggers:
+    - option_category: Candy Box 2
+      option_name: goal_trigger
+      option_result: play_stones
+      options:
+        Candy Box 2:
+          randomise_tower: 'false'
+          goal_conditions:
+            Die to the Castle Trap Room at least once: 0
+            Obtain the PLAY Stones: 1
+            Swim 3000 meters: 0
+    - option_category: Candy Box 2
+      option_name: goal_trigger
+      option_result: play_stones_and_trap_room
+      options:
+        Candy Box 2:
+          goal_conditions:
+            Die to the Castle Trap Room at least once: 1
+            Obtain the PLAY Stones: 1
+            Swim 3000 meters: 0
+    - option_category: Candy Box 2
+      option_name: goal_trigger
+      option_result: 3000_meters
+      options:
+        Candy Box 2:
+          goal_conditions:
+            Die to the Castle Trap Room at least once: 0
+            Obtain the PLAY Stones: 0
+            Swim 3000 meters: 1
+    - option_category: Candy Box 2
+      option_name: goal_trigger
+      option_result: 3000_meters_and_trap_room
+      options:
+        Candy Box 2:
+          goal_conditions:
+            Die to the Castle Trap Room at least once: 1
+            Obtain the PLAY Stones: 0
+            Swim 3000 meters: 1
+    - option_category: Candy Box 2
+      option_name: goal_trigger
+      option_result: all_goals
+      options:
+        Candy Box 2:
+          goal_conditions:
+            Die to the Castle Trap Room at least once: 1
+            Obtain the PLAY Stones: 1
+            Swim 3000 meters: 1
     - option_category: null
       option_name: name
       option_result: Player{player}
