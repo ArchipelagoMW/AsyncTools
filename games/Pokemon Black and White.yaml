@@ -75,22 +75,26 @@
     big_range: 10
     small_range: 10
 
-  modify_item_pool: 
+  modify_item_pool:
     []
   t_modify_item_pool:
     silly: 10
     qol: 10
     none: 10
 
-  modify_logic: 
+  modify_logic:
     []
   t_modify_logic_require:
     'false': 10
     'true': 10
-  t_modify_logic_consider: 
+  t_modify_logic_consider:
     with_evo: 10
     simple: 10
     none: 10
+
+  start_inventory:
+    Parcel: 1
+    Loot Sack: 1
 
   triggers:
     - option_category: Pokemon Black and White
