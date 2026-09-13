@@ -2,7 +2,7 @@
 
 ## Mystery Settings YAML Generator
 
-To generate a mystery settings yaml with pre-determined settings in the `games` directory, run `python GenerateMystery.py`. A file will be created in the `output` directory that can then be used to generate filler seeds for Archipelago Asyncs (or whatever purposes you need it for).
+To generate mystery settings yamls with pre-determined settings in the `games` directory, run `python GenerateMystery.py`. Two files will be created in the `output` directory that can then be used to generate filler seeds for Archipelago Asyncs (or whatever purposes you need it for), one named `games` that creates a slot for every game and one named `weights` that creates one random world.
 
 ### Add a new game to the MSYG
 
@@ -19,6 +19,13 @@ Cool Game 2 - Electric Boogaloo:
   option_2: true
   option_3: false
   death_link: true
+  triggers:
+  - option_category: null
+    option_name: name
+    option_result: Player{player}
+    options:
+      null:
+        name: CoolGame-{player}
 ```
 
 Then, in `./games/__meta__.yaml`, add the game along with a weighting for it:
@@ -27,7 +34,7 @@ Then, in `./games/__meta__.yaml`, add the game along with a weighting for it:
 name: Player{player}
 description: Archipelago Async Mystery Filler Settings
 requires:
-  version: 0.3.2
+  version: 0.6.4
   plando: bosses, items, texts, connections
 
 # Define your game here!
@@ -47,7 +54,3 @@ To update an existing game's settings, just open the corresponding game file in 
 To update the weighting for a particular game being rolled, open the `./games/__meta__.yaml` file and adjust the number for how much that game is weighted and save the file.
 
 Then run `python GenerateMystery.py` to generate a new `weights.yaml` file.
-
-## YAML Output Converter
-
-`// TODO, write whatever this does`

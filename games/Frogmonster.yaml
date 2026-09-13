@@ -1,0 +1,29 @@
+﻿Frogmonster:
+  game_difficulty:
+    normal: 5
+    hard: 1
+  goal:
+    myzand_2: 1
+    eye_chest: 1
+  shuffle_puzzles:
+    'false': 1
+    'true': 1
+  shuffle_bug_effects:
+    true: 1
+    false: 1
+  shuffle_workshop_key:
+    enabled: 1
+    disabled: 3
+    startwith: 1
+  shop_multiplier: 50
+  open_city:
+    'false': 1
+    'true': 3
+  well_light_logic: both
+  triggers:
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: Frogmonster-{player}

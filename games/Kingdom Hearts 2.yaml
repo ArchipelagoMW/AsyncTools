@@ -1,10 +1,12 @@
 Kingdom Hearts 2:
   Goal:
-    three_proofs: 15
-    lucky_emblem_hunt: 60
-    hitlist: 25
+    three_proofs: 12
+    lucky_emblem_hunt: 48
+    hitlist: 40
   Promise_Charm: true
   FinalXemnas: true
+  CasualBounties: false
+  DisableGeneralBounties: false
   LevelDepth:
     level_50: 50
     level_50_sanity: 50
@@ -46,13 +48,14 @@ Kingdom Hearts 2:
     Aerial Recovery: 1
   
   triggers:
-    #Turn off the need to kill Final Xemnas if Lucky Emblem Hunt and set other details
     - option_name: Goal
       option_category: Kingdom Hearts 2
       option_result: lucky_emblem_hunt
       options:
         Kingdom Hearts 2:
-          FinalXemnas: false
+          FinalXemnas:
+            true: 25
+            false: 75
           LuckyEmblemsAmount: random-range-40-50
           LuckyEmblemsRequired: random-range-30-39
           +local_items: [Lucky Emblem]
@@ -69,11 +72,35 @@ Kingdom Hearts 2:
       option_result: hitlist
       options:
         Kingdom Hearts 2:
+          CasualBounties:
+            true: 34
+            false: 6
           SuperBosses: true
           Cups: cups_and_hades_paradox
           BountyAmount: random-range-18-23
           BountyRequired: random-range-12-17
           BountyStartingHintToggle: true
+    #Hitlist changes to accomodate Casual Bounties
+    - option_name: CasualBounties
+      option_category: Kingdom Hearts 2
+      option_result: true
+      options:
+        Kingdom Hearts 2:
+          DisableGeneralBounties:
+            true: 24
+            false: 10
+          BountyAmount: random-range-27-35
+          BountyRequired: random-range-18-25
+    #Fake option to allow Casual Hitlist to roll without General Hitlist.
+    - option_name: DisableGeneralBounties
+      option_category: Kingdom Hearts 2
+      option_result: true
+      options:
+        Kingdom Hearts 2:
+          SuperBosses: false
+          BountyAmount: random-range-9-16
+          BountyRequired: random-range-6-13
+          +exclude_locations: ["General Bounties"]
     - option_category: null
       option_name: name
       option_result: Player{player}

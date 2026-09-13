@@ -1,0 +1,44 @@
+Mega Man 3:
+  energy_link:
+    'false': 1
+    'true': 1
+  starting_robot_master: random
+  consumables:
+    none: 1
+    1up_etank: 4
+    weapon_health: 4
+    all: 8
+  enemy_weakness:
+    'false': 5
+    'true': 2
+  strict_weakness:
+    'false': 5
+    'true': 2
+  random_weakness:
+    none: 7
+    shuffled: 2
+    randomized: 2
+  wily_4_requirement: random-range-5-8
+  palette_shuffle:
+    none: 7
+    shuffled: 1
+    randomized: 1
+    singularity: 1
+  reduce_flashing: true
+  music_shuffle:
+    none: 5
+    shuffled: 2
+    randomized: 2
+  triggers:
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: MegaMan3-{player}
+    - option_category: Mega Man 3
+      option_name: random_weakness
+      option_result: randomized
+      options:
+        Mega Man 3:
+          energy_link: 'true'

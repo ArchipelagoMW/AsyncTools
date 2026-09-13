@@ -1,0 +1,47 @@
+Nine Sols:
+  progression_balancing: 0
+  accessibility: full
+  shuffle_sol_seals: random
+  seals_for_eigong: random-range-7-8
+  seals_for_prison: random-range-2-3
+  prevent_weakened_prison_state: true
+  seals_for_ethereal: random-range-4-5
+  skip_soulscape_platforming: random
+  prevent_annoying_runbacks: true
+  randomize_jade_costs: true
+  jade_cost_min: 1
+  jade_cost_max: random-range-3-4
+  shop_unlocks:
+    sol_seals: 1
+    unlock_items: 1
+  kuafu_shop_unlock_sol_seals: random-range-1-2
+  chiyou_shop_unlock_sol_seals: random-range-3-4
+  kuafu_extra_inventory_unlock_sol_seals: random-range-5-7
+  randomize_shops:
+    true: 1
+    false: 1
+  first_root_node:
+    apeman_facility_monitoring: 1
+    grotto_of_scriptures_entry: 1
+    outer_warehouse: 1
+    factory_great_hall: 1
+    lake_yaochi_ruins: 1
+    power_reservoir_east: 1
+  shuffle_some_root_nodes:
+    true: 1
+    false: 1
+  shuffle_grapple: true
+  shuffle_wall_climb: random
+  shuffle_ledge_grab: false
+  logic_difficulty:
+    vanilla: 2
+    medium: 1
+  local_items:
+   - "Sol Seals"
+  triggers:
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: NineSols-{player}

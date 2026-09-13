@@ -11,6 +11,9 @@ Super Mario 64:
   enable_move_rando:
     true: 1
     false: 1
+  enable_locked_paintings:
+    false: 1
+    true: 1
   move_rando_actions:
     - Triple Jump
     - Long Jump
@@ -37,8 +40,8 @@ Super Mario 64:
     locations: 2
   buddy_checks: random
   exclamation_boxes:
-    off: 1
-    1ups_only: 1
+    false: 1
+    true: 1
   completion_type:
     last_bowser_stage: 5
     all_bowser_stages: 3
@@ -49,6 +52,15 @@ Super Mario 64:
       options:
         Super Mario 64:
           progressive_keys: false
+    - option_category: Super Mario 64
+      option_name: enable_locked_paintings
+      option_result: true
+      options:
+        Super Mario 64:
+          local_items:
+            - Progressive Key
+            - Basement Key
+            - Second Floor Key
     - option_category: null
       option_name: name
       option_result: Player{player}

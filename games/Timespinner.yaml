@@ -70,6 +70,9 @@ Timespinner:
   royal_roadblock:
     false: 5
     true: 2
+  pure_torcher:
+    'false': 7
+    'true': 2
   triggers:
     # greatly reduce Cantoran odds on an inverted start - it's an endgame boss location that can be as early as sphere 1 if inverted and quick seed are both true
     - option_category: Timespinner

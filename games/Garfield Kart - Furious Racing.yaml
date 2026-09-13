@@ -1,0 +1,69 @@
+﻿Garfield Kart - Furious Racing:
+  goal:
+    grand_prix: 50
+    races: 25
+    puzzle_piece_hunt: 25
+
+  cc_requirement:
+    any: 50
+    50cc: 10
+    100cc: 10
+    150cc: 10
+
+  randomize_races:
+    cups: 50
+    races: 25
+    cups_and_races: 25
+
+  progressive_cups:
+    'false': 5
+    'true': 3
+
+  randomize_puzzle_pieces:
+    'false': 5
+    'true': 2
+
+  puzzle_piece_count:
+    random-range-30-48: 1
+
+  randomize_characters:
+    'false': 5
+    'true': 2
+
+  randomize_karts:
+    'false': 5
+    'true': 2
+
+  randomize_hats:
+    'off': 5
+    progressive: 2
+    combine_tiers: 1
+
+  randomize_spoilers:
+    'off': 5
+    progressive: 2
+    combine_tiers: 1
+
+  stat_randomizer:
+    'off': 5
+    karts: 1
+    characters: 1
+    both: 1
+
+  randomize_items:
+    'false': 5
+    'true': 2
+
+  lap_sanity:
+    'false': 5
+    'true': 1
+    
+  local_items: ["Puzzle Piece"]
+
+  triggers:
+  - option_category: null
+    option_name: name
+    option_result: Player{player}
+    options:
+      null:
+        name: Garfield-{player}

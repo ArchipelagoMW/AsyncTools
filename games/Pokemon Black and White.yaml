@@ -1,0 +1,224 @@
+﻿Pokemon Black and White:
+  version:
+    black: 10
+    white: 10
+
+  goal:
+    ghetsis: 30
+    champion: 10
+    cynthia: 10
+    cobalion: 10
+    tmhm_hunt: 5
+    seven_sages_hunt: 10
+    legendary_hunt: 15
+
+  # If any modifier is included, then always **Prevent rare encounters** alongside it
+  randomize_wild_pokemon:
+    []
+  t_randomize_wild_pokemon_restrictions:
+    no_random: 10
+    none: 10
+    stats: 10
+    type: 10
+  t_randomize_wild_pokemon_merge:
+    true: 10
+    false: 10
+
+  randomize_trainer_pokemon:
+    []
+  t_randomize_trainer_pokemon:
+    stats: 10
+    simple: 4
+    none: 10
+
+  pokemon_randomization_adjustments:
+    Rare encounters threshold: 10
+    Stats leniency: 30
+
+  shuffle_badges:
+    shuffle: 10
+    anything: 10
+
+  shuffle_tm_hm:
+    shuffle: 10
+    hm_with_badge: 10
+    anything: 10
+
+  dexsanity:
+    0: 10
+    random-range-0-100: 10
+
+  season_control:
+    vanilla: 10
+    changeable: 10
+    randomized: 10
+
+  adjust_levels:
+    ['Wild', 'Trainer']
+
+  modify_encounter_rates:
+    vanilla: 20
+    try_normalized: 10
+    try_normalized_alt: 10
+
+  # Can be changed ingame anytime
+  exp_multiplier: 2
+
+  all_pokemon_seen:
+    'false': 10
+    'true': 10
+
+  master_ball_seller:
+    ['Ns Castle', 'PC', 'Cherens Mom', 'Undella Mansion seller']
+  t_master_ball_seller:
+    free: 10
+    big_range: 10
+    small_range: 10
+
+  modify_item_pool: 
+    []
+  t_modify_item_pool:
+    silly: 10
+    qol: 10
+    none: 10
+
+  modify_logic: 
+    []
+  t_modify_logic_require:
+    'false': 10
+    'true': 10
+  t_modify_logic_consider: 
+    with_evo: 10
+    simple: 10
+    none: 10
+
+  triggers:
+    - option_category: Pokemon Black and White
+      option_name: t_randomize_wild_pokemon_restrictions
+      option_result: none
+      options:
+        Pokemon Black and White:
+          +randomize_wild_pokemon:
+            - 'Prevent rare encounters'
+    - option_category: Pokemon Black and White
+      option_name: t_randomize_wild_pokemon_restrictions
+      option_result: stats
+      options:
+        Pokemon Black and White:
+          +randomize_wild_pokemon:
+            - 'Similar base stats'
+            - 'Prevent rare encounters'
+    - option_category: Pokemon Black and White
+      option_name: t_randomize_wild_pokemon_restrictions
+      option_result: type
+      options:
+        Pokemon Black and White:
+          +randomize_wild_pokemon:
+            - 'Type themed areas'
+            - 'Prevent rare encounters'
+    - option_category: Pokemon Black and White
+      option_name: t_randomize_wild_pokemon_merge
+      option_result: true
+      options:
+        Pokemon Black and White:
+          +randomize_wild_pokemon:
+            - 'Area 1 to 1'
+            - 'Merge phenomena'
+            - 'Prevent rare encounters'
+
+    - option_category: Pokemon Black and White
+      option_name: t_randomize_trainer_pokemon
+      option_result: stats
+      options:
+        Pokemon Black and White:
+          +randomize_trainer_pokemon:
+            - 'Similar base stats'
+    - option_category: Pokemon Black and White
+      option_name: t_randomize_trainer_pokemon
+      option_result: simple
+      options:
+        Pokemon Black and White:
+          +randomize_trainer_pokemon:
+            - 'Randomize'
+
+    - option_category: Pokemon Black and White
+      option_name: t_master_ball_seller
+      option_result: free
+      options:
+        Pokemon Black and White:
+          +master_ball_seller:
+            - 'Cost Free'
+    - option_category: Pokemon Black and White
+      option_name: t_master_ball_seller
+      option_result: big_range
+      options:
+        Pokemon Black and White:
+          +master_ball_seller:
+            - 'Cost Free'
+            - 'Cost 10000'
+    - option_category: Pokemon Black and White
+      option_name: t_master_ball_seller
+      option_result: small_range
+      options:
+        Pokemon Black and White:
+          +master_ball_seller:
+            - 'Cost 1000'
+            - 'Cost 3000'
+
+    - option_category: Pokemon Black and White
+      option_name: t_modify_item_pool
+      option_result: silly
+      options:
+        Pokemon Black and White:
+          +modify_item_pool:
+            - 'Useless key items'
+    - option_category: Pokemon Black and White
+      option_name: t_modify_item_pool
+      option_result: qol
+      options:
+        Pokemon Black and White:
+          +modify_item_pool:
+            - 'Useful filler'
+            - 'Ban bad filler'
+
+    - option_category: Pokemon Black and White
+      option_name: t_modify_logic_require
+      option_result: true
+      options:
+        Pokemon Black and White:
+          +modify_logic:
+            - 'Require Dowsing Machine'
+            - 'Require flash'
+    - option_category: Pokemon Black and White
+      option_name: t_modify_logic_consider
+      option_result: with_evo
+      options:
+        Pokemon Black and White:
+          +modify_logic:
+            - 'Consider evolutions'
+            - 'Consider static pokemon'
+            - 'Consider form change'
+          dexsanity:
+            0: 10
+            random-range-0-30: 10
+    - option_category: Pokemon Black and White
+      option_name: t_modify_logic_consider
+      option_result: simple
+      options:
+        Pokemon Black and White:
+          +modify_logic:
+            - 'Consider static pokemon'
+            - 'Consider form change'
+
+    - option_category: Pokemon Black and White
+      option_name: version
+      option_result: black
+      options:
+        null:
+          name: PokeBlack-{player}
+    - option_category: Pokemon Black and White
+      option_name: version
+      option_result: white
+      options:
+        null:
+          name: PokeWhite-{player}

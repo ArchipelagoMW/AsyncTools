@@ -1,0 +1,182 @@
+﻿Dragon Warrior:
+  accessibility:
+    full: 50
+
+  #######################
+  # Archipelago Options #
+  #######################
+  levelsanity:
+    # This adds between 15-30 checks depending on on the LevelSanity Range option below.
+    'false': 20
+    'true': 80
+  levelsanity_range:
+    random-range-15-30: 50
+  searchsanity:
+    # This adds 3 checks, and shuffles an extra progression item needed to goal into the itempool.
+    'false': 20
+    'true': 80
+  shopsanity:
+    # This adds 13 checks + Progressive Equipment Items. Entering a town will also create AP Hints for items in the shop there, if any.
+    'false': 50
+    'true': 50
+  monstersanity:
+    # This adds 40 checks.
+    'false': 70
+    'true': 30
+  death_link:
+    'false': 50
+
+  ##################
+  # Random Options #
+  ##################
+  # The remaining options in this YAML are pulled directly from the DWRandomizer used to patch the game.
+  # Many of them are forced off/on for the sake of stability.
+
+  random_growth:
+    'false': 70
+    'true': 30
+  random_map:
+    'false': 50
+  random_map_size:
+    normal: 50
+  random_spell_learning:
+    'false': 80
+    'true': 20
+  random_weapon_shops:
+    'false': 50
+  random_weapon_prices:
+    'false': 50
+  heal_hurt_before_more:
+    'true': 50
+  random_xp_requirements:
+    'false': 50
+  random_monster_abilities:
+    'false': 50
+  random_monster_zones:
+    'false': 50
+  random_monster_stats:
+    'false': 50
+  random_monster_xp:
+    'false': 50
+  make_random_stats_consistent:
+    'false': 50
+
+  #####################
+  # Challenge Options #
+  #####################
+  scared_metal_slimes:
+    'false': 80
+    'true': 20
+  scaled_metal_slime_xp:
+    'false': 80
+    'true': 20
+  no_hurtmore:
+    'false': 50
+  only_healmore:
+    'false': 50
+  no_numbers:
+    'false': 50
+  invisible_hero:
+    'false': 50
+  invisible_npcs:
+    'false': 50
+  bonk_damage:
+    none: 80
+    1_hp: 15
+    2_hp: 5
+
+  ###############
+  # QOL Options #
+  ###############
+  enable_menu_wrapping:
+    'true': 50
+  enable_death_necklace:
+    'false': 20
+    'true': 80
+  enable_battle_torches:
+    'false': 20
+    'true': 80
+  repel_in_dungeons:
+    'false': 20
+    'true': 80
+  permanent_repel:
+    'false': 50
+  permanent_torch:
+    'false': 50
+    'true': 50
+  fast_text:
+    'false': 50
+  speed_hacks:
+    'false': 50
+  summer_sale:
+    'false': 70
+    'true': 30
+  levelling_speed:
+    normal: 20
+    fast: 50
+    very_fast: 30
+  level_1_radiant:
+    'false': 50
+  level_1_repel:
+    'false': 50
+  easy_charlock:
+    'false': 70
+    'true': 30
+  modern_spell_names:
+    'false': 50
+  skip_original_credits:
+    'true': 50
+  return_escapes:
+    'false': 50
+    'true': 50
+  return_to_town:
+    'false': 50
+    'true': 50
+  warp_whistle:
+    'false': 50
+    'true': 50
+  levelup_refill:
+    'false': 70
+    'true': 30
+  ascetic_king:
+    'true': 50
+  run_mechanics:
+    safer_dw1: 50
+  charlock_inn:
+    'false': 70
+    'true': 30
+  dl1_crits:
+    'false': 50
+    'true': 50
+  dl2_crits:
+    'false': 50
+    'true': 50
+
+  #################
+  # Other Options #
+  #################
+  shuffle_music:
+    'false': 50
+  disable_music:
+    'false': 50
+  show_death_counter:
+    'true': 50
+  # Below two options are set to true just in case of epilepsy concerns
+  disable_spell_flashing:
+    'true': 50
+  disable_red_flashes:
+    'true': 50
+  noir_mode:
+    'false': 50
+  magic_herbs:
+    'false': 50
+  normal_flute_speed:
+    'true': 50
+
+  triggers:
+  - option_category: null
+    option_name: name
+    option_result: Player{player}
+    options:
+      null:
+        name: DragWarrior-{player}

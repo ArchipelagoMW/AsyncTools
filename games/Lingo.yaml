@@ -9,8 +9,8 @@ Lingo:
   progressive_orange_tower: random
   progressive_colorful: random
   location_checks:
-    normal: 70
-    insanity: 30
+    normal: 55
+    insanity: 45
   shuffle_panels: random
   shuffle_paintings:
     false: 67

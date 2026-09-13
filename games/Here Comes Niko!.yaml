@@ -1,0 +1,109 @@
+﻿Here Comes Niko!:
+  progression_balancing: 0
+  goal_completion:
+    hired: 3
+    employee: 1
+    custom: 2
+    garden: 1
+    friend: 3
+  min_kiosk_cost: 20
+  max_kiosk_cost: 50
+  min_elevator_cost: 50
+  max_elevator_cost: 70
+  min_custom_goal_cost: 60
+  max_custom_goal_cost: 75
+  shuffle_kiosk_reward: 'true'
+  start_with_ticket: 'true'
+  cassette_logic:
+    level_based: 1
+    progressive: 1
+    scattered: 1
+  extra_cassettes: random-range-10-30
+  enable_achievements:
+    all_achievements: 1
+    except_snail_fashion_show: 2
+    disabled: 2
+  shuffle_handsome_frog: random
+  shuffle_garys_garden: random
+  access_garys_garden:
+    tadpole_hq: 1
+    tadpole_and_garden: 1
+    garden: 1
+  snail_shop: random
+  speed_boost_amount: random-low
+  level_based_keys: random
+  progressive_contact_list: random
+  bonk_permit: random
+  bug_catching: random
+  soda_cans: random
+  parasols: random
+  swimming:
+    'false': 2
+    'true': 1
+  precisejumps: 'false'
+  textbox:
+    vanilla: 3
+    global: 1
+    level: 2
+  ac_repair: random
+  applebasket: random
+  fishsanity:
+    vanilla: 1
+    location: 2
+    insanity: 2
+  seedsanity:
+    vanilla: 1
+    location: 2
+    insanity: 2
+  flowersanity:
+    vanilla: 1
+    location: 2
+    insanity: 2
+  bonesanity:
+    vanilla: 1
+    location: 2
+    insanity: 2
+  applesanity:
+    'false': 2
+    'true': 1
+  bugsanity:
+    'false': 2
+    'true': 1
+  chatsanity:
+    vanilla: 5
+    level_based: 2
+    global: 3
+  thoughtsanity: random
+  trapchance:
+    0: 2
+    25: 1
+  local_items:
+    # Coins, and traps that are only meaningful if you receive them while connected
+    # Debated putting cassettes in here but didn't want to make too many things local
+    - Coin
+    - Whoops! Trap
+    - Home Trap
+    - Phone Trap
+  triggers:
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: HCNiko-{player}
+    # Niko probably has failsafes for these situations, but this makes the options sheet easier to follow
+    - option_category: Here Comes Niko!
+      option_name: goal_completion
+      option_result: friend
+      options:
+        Here Comes Niko!:
+          fishsanity: insanity
+          seedsanity: insanity
+          flowersanity: insanity
+          bonesanity: insanity
+    - option_category: Here Comes Niko!
+      option_name: goal_completion
+      option_result: garden
+      options:
+        Here Comes Niko!:
+          shuffle_garys_garden: 'true'

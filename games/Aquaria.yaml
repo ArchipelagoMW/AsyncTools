@@ -2,6 +2,8 @@
   objective:
     kill_the_creator: 2
     obtain_secrets_and_kill_the_creator: 1
+    killing_the_four_gods: 1
+    gods_and_creator: 1
 
   mini_bosses_to_beat:
     random-low: 5
@@ -28,6 +30,10 @@
     'false': 1
     'true': 2
 
+  light_needed_to_get_to_dark_places:
+    'on': 1
+    sun_form: 1
+
   unconfine_home_water:
     'off': 1
     via_energy_door: 1
@@ -51,9 +57,37 @@
     'false': 1
     'true': 1
 
-  skip_first_vision: true
+  blind_goal:
+    'false': 2
+    'true': 1
+
+  infinite_hot_soup:
+    'false': 1
+    'true': 3
+
+  open_body_tongue:
+    'false': 2
+    'true': 1
+
+  maximum_ingredient_amount:
+    8: 2
+    random: 0
+
+  skip_final_boss_3rd_form:
+    'false': 1
+    'true': 1
+
+  save_healing:
+    'false': 1
+    'true': 5
+
+  throne_as_location:
+    'false': 1
+    'true': 1
 
   local_items: ["Energy Form", "Bind Song"]
+
+  skip_first_vision: true
   
   triggers:
     - option_category: null

@@ -1,0 +1,46 @@
+﻿Candy Box 2:
+  x_potion_brewing: simultaneously
+  enable_computer: 'false'
+  scouting: 'true'
+  font_traps: random
+
+  quest_randomisation:
+    'off': 2
+    quests_only: 3
+    quests_and_rooms_separate: 2
+    everything: 1
+  randomise_tower: 'false'
+  randomise_x_potion: random
+
+  starting_weapon:
+    nothing: 1
+    progressive_weapons: 1
+    wooden_sword: 1
+  
+  progressive_jump: random
+  grimoires: random
+  pain_au_chocolat_count: random
+  randomise_hp_bar: 'true'
+
+  candy_production_multiplier: random-range-1-3
+  candy_drop_multiplier: random-range-1-3
+  lollipop_production_multiplier: random-range-1-3
+
+  # Random range between "greatly reduced from vanilla" and "slightly higher than vanilla"
+  candy_merchant_hat_price: random-range-100-1000
+  sorceress_hat_price: random-range-500-3000
+
+  # Random range between "minimum value possible" and "equal to vanilla"
+  teapot_hp: random-range-low-1000-1000000
+
+  death_link: 'false'
+  energy_link: random
+  gifting: 'true'
+
+  triggers:
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: CandyBox2-{player}

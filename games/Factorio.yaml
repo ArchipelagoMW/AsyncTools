@@ -45,6 +45,9 @@ Factorio:
     10: 1
     random-low: 1
   energy_link: true
+  craftsanity:
+    random-range-0-183: 2
+    disabled: 1
   triggers:
     - option_category: Factorio
       option_name: world_type
@@ -119,10 +122,7 @@ Factorio:
                 frequency: 0.333
                 richness: 1
                 size: 6
-            enemy_evolution:
-              time_factor: 2.0e-06
-            enemy_expansion:
-              enabled: false
+            peaceful_mode: true
     - option_category: null
       option_name: name
       option_result: Player{player}

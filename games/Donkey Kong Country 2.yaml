@@ -1,0 +1,183 @@
+﻿Donkey Kong Country 2:
+  # Forced EnergyLink
+  energy_link: true
+
+  # Can only receive messages about prog items being received and sent
+  display_messages: on_everything
+  received_message_filter:
+    - Progression
+  sent_message_filter:
+    - Progression
+
+  # Starts with some lives to avoid skill issue
+  starting_life_count: 30
+
+  # Kompletionist is long, lets give it a lower chance to appear, lost world is a bit BK-able too
+  goal:
+    flying_krock: 55
+    lost_world: 35
+    kompletionist: 10
+  krock_boss_tokens: 1
+  required_krock_levels: 1
+
+  # Small chance to roll fast-ish seeds, small chance to roll slow seeds
+  required_galleon_levels:
+    3: 30
+    4: 50
+    5: 20
+  required_cauldron_levels:
+    3: 30
+    4: 50
+    5: 20
+  required_quay_levels:
+    3: 30
+    4: 40
+    5: 20
+    6: 10
+  required_kremland_levels:
+    3: 30
+    4: 40
+    5: 20
+    6: 10
+  required_gulch_levels:
+    3: 30
+    4: 50
+    5: 20
+  required_keep_levels:
+    3: 30
+    4: 40
+    5: 20
+    6: 10
+
+  # Random amount of lost world rocks will be placed anywhere locally
+  lost_world_rocks: random-range-4-8
+  extra_lost_world_rocks: 0
+  lost_world_rock_placement: lost_world_anywhere
+
+  # Forced loose logic because strict may be too hard on item requirements and expert is too hard
+  logic: "loose"
+
+  # All checks have a small-ish chance to appear
+  kong_checks:
+    'false': 60
+    'true': 40
+  dk_coin_checks:
+    'false': 60
+    'true': 40
+  balloonsanity:
+    'false': 60
+    'true': 40
+  coinsanity:
+    'false': 60
+    'true': 40
+  bananasanity:
+    'false': 60
+    'true': 40
+  swanky_checks:
+    'false': 60
+    'true': 40
+
+  # Monke
+  starting_kong:
+    diddy: 30
+    dixie: 30
+    both: 40
+
+  # Lean more into shuffling levels
+  shuffle_levels:
+    'false': 40
+    'true': 60
+
+  # TNTs should always be present
+  trap_fill_percentage: random-high
+  freeze_trap_weight: random
+  reverse_trap_weight: random
+  honey_trap_weight: random
+  ice_trap_weight: random
+  tnt_barrel_trap_weight:
+    low: 1
+    medium: 2
+    high: 1
+
+  palette_filters:
+    Diddy: 0
+    Diddy Frozen: 0
+    Diddy Inactive: 0
+    Diddy Invincible: 0
+    Diddy Reversed: 0
+    Diddy Slow: 0
+    Dixie: 0
+    Dixie Frozen: 0
+    Dixie Inactive: 0
+    Dixie Invincible: 0
+    Dixie Reversed: 0
+    Dixie Slow: 0
+    Enguarde: 0
+    Quawks: 0
+    Rambi: 0
+    Rattly: 0
+    Squawks: 0
+    Squitter: 0
+
+  palette_diddy_active: random
+  palette_diddy_inactive: random
+  palette_diddy_invincible: random
+  palette_diddy_frozen: random
+  palette_diddy_reversed: random
+  palette_diddy_slow: random
+  palette_dixie_active: random
+  palette_dixie_inactive: random
+  palette_dixie_invincible: random
+  palette_dixie_frozen: random
+  palette_dixie_reversed: random
+  palette_dixie_slow: random
+  palette_rambi: random
+  palette_enguarde: random
+  palette_squitter: random
+  palette_rattly: random
+  palette_squawks: random
+  palette_quawks: random
+
+  # It's good to start with DK Barrels
+  start_inventory:
+    Backup DK Barrel: 20
+
+  triggers:
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: DKC2-{player}
+
+    - option_category: Donkey Kong Country 2
+      option_name: goal
+      option_result: lost_world
+      options:
+        Donkey Kong Country 2:
+          krock_boss_tokens: 0
+
+    - option_category: Donkey Kong Country 2
+      option_name: goal
+      option_result: flying_krock
+      options:
+        Donkey Kong Country 2:
+          krock_boss_tokens: 
+            3: 1
+            4: 2
+            5: 1
+          required_krock_levels:
+            1: 75
+            0: 25
+
+    - option_category: Donkey Kong Country 2
+      option_name: goal
+      option_result: kompletionist
+      options:
+        Donkey Kong Country 2:
+          krock_boss_tokens:
+            2: 1
+            3: 2
+            4: 1
+          required_krock_levels: random
+

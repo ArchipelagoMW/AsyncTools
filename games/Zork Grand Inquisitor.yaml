@@ -1,0 +1,68 @@
+﻿Zork Grand Inquisitor:
+  goal:
+    three_artifacts: 1
+    artifact_of_magic_hunt: 1
+    spell_heist: 1
+    zork_tour: 1
+    grim_journey: 1
+  artifacts_of_magic_total:
+    10: 1
+  artifacts_of_magic_required:
+    8: 1
+  landmarks_required:
+    18: 1
+  deaths_required:
+    20: 1
+  starting_location:
+    port_foozle: 1
+    crossroads: 1
+    dm_lair: 1
+    dm_lair_house: 1
+    gue_tech: 1
+    spell_lab: 1
+    hades_shore: 1
+    flood_control_dam_3: 1
+    monastery_totemizer: 1
+    monastery_exhibit: 1
+  hotspots:
+    require_item_per_region: 1
+    require_item_per_hotspot: 1
+  craftable_spells:
+    anything: 1
+  wild_voxam:
+    'false': 1
+  wild_voxam_chance:
+    5: 1
+  deathsanity:
+    'false': 1
+    'true': 1
+  landmarksanity:
+    'false': 1
+    'true': 1
+  entrance_randomizer:
+    disabled: 3
+    coupled: 2
+    uncoupled: 1
+  entrance_randomizer_include_subway_destinations:
+    'true': 1
+  trap_percentage:
+    0: 1
+  infinite_corridor_trap_weight:
+    1: 1
+  reverse_controls_trap_weight:
+    1: 1
+  teleport_trap_weight:
+    1: 1
+  zvision_trap_weight:
+    1: 1
+  grant_missable_location_checks:
+    'true': 1
+  client_seed_information:
+    reveal_goal_and_options: 1
+  triggers:
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: Zork-{player}

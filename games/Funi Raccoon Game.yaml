@@ -1,0 +1,35 @@
+﻿Funi Raccoon Game:
+
+  eurosanity:
+    'false': 25
+    'true': 25
+
+  gemsanity:
+    'false': 0
+    'true': 50
+
+  catsanity:
+    'false': 0
+    'true': 50
+
+  hatsanity:
+    'false': 10
+    'true': 40
+
+  goal:
+    orb: 20
+    museum: 5
+    fellowship: 10
+    lugh: 10
+
+  dumpster_weight_blocking:
+    'false': 10
+    'true': 40
+
+  triggers:
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: Funi-{player}

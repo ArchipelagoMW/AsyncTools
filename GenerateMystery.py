@@ -69,7 +69,7 @@ def main():
             data = yaml.unsafe_load(file)
             mystery = MysterySettings(data["name"], data["description"], data["requires"], data["game"])
     except FileNotFoundError:
-        print(Fore.RED + "__meta__.yaml not found. Please ensure file exists and rerun generator.")
+        print(Fore.RED + "__meta__.yaml not found. Please ensure file exists and rerun generator." + Fore.RESET)
         exit(3)
 
     print(f"Estimated chance of a particular game being rolled...\n\n{mystery}")
@@ -95,10 +95,10 @@ def main():
 
                 mystery.update(game_settings)
         except FileNotFoundError:
-            print(Fore.RED + f"\nUnable to find game settings file `./games/{game}.yaml` in games directory.")
+            print(Fore.RED + f"\nUnable to find game settings file `./games/{game}.yaml` in games directory." + Fore.RESET)
             exit(1)
         except ValueError as e:
-            print(Fore.RED + f"\nGame settings dict should only have 1 key named after the game.\n\t{e}")
+            print(Fore.RED + f"\nGame settings dict should only have 1 key named after the game.\n\t{e}" + Fore.RESET)
             exit(2)
         meta_path = os.path.join("games", f"{game}.meta.yaml")
         if os.path.exists(meta_path):
@@ -124,7 +124,7 @@ def main():
     meta_path = os.path.join("output", "meta.yaml")
     with open(meta_path, "w+") as file:
         yaml.dump(meta, file)
-    print(Fore.GREEN + f"\nOutputted meta file to `{meta_path}`")
+    print(Fore.GREEN + f"\nOutputted meta file to `{meta_path}`" + Fore.RESET)
 
 
 if __name__ == "__main__":

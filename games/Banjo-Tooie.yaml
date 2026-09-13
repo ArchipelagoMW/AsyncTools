@@ -1,0 +1,334 @@
+﻿Banjo-Tooie:
+  progression_balancing: 0 # Disabled for big asyncs
+  accessibility:
+    full: 50
+    minimal: 50 # For cryptic hint users, can be good to rule out sections of the game that don't need to be done.
+
+  # Trigger value for logic type.
+  # Intended logic is notoriously restrictive with the options that can be rolled with it, so we need a trigger for this.
+  logic_type_trigger:
+    intended_no_bk: 15
+    intended_no_world: 15
+    easy_tricks: 40
+    hard_tricks: 20
+    glitches: 10
+
+  #McGuffins, and and all trap types except Squish Trap, because starting a session with Stompadon that tries to kill you is still funny.
+  local_items: [Mumbo Token, Golden Egg Nest, Trip Trap, Slip Trap, Transform Trap, Tip Trap]
+
+  victory_condition: random
+  open_hag1: random
+  minigame_hunt_length: random-range-10-15
+  boss_hunt_length: random-range-5-8
+  jinjo_family_rescue_length: random-range-3-9 # 3 jinjo families can still be long.
+  tokens_in_pool: 15 # Can be overwritten by nestsanity trigger
+  token_hunt_length: random-range-10-15 # Can be overwritten by nestsanity trigger
+
+  # If puzzles are not skipped, world costs are vanilla, and worlds order is not randomised.
+  world_requirements_trigger:
+    no_skip: 10
+    quick: 20
+    normal: 20
+    long: 20
+    randomize: 20
+
+  # Overwritten by MANY triggers to false.
+  randomize_worlds: random
+
+  # Progressive moves are dependant on BK and/or BT moves being randomised.
+  # This value can be overwritten by the logic trigger to exclude bk all when intendednobk is chosen.
+  move_rando_trigger:
+    vanilla: 10
+    bkmcjiggy: 18
+    bkall: 18
+    bt: 18
+    bkmcjiggybt: 18
+    bkallbt: 18
+
+  jamjars_silo_costs: vanilla # Overwritten by move_rando_trigger trigger.
+
+  # All the options in this section are overwritten by the move_rando_trigger trigger.
+  egg_behaviour: start_with_blue_eggs
+  progressive_beak_buster: 'false'
+  progressive_shoes: 'false'
+  progressive_water_training: none
+  progressive_flight: 'false'
+  progressive_egg_aiming: none
+  progressive_bash_attack: 'false'
+
+  # The only randomisation option always forced true in the Banjo-Tooie yaml. Randos with vanilla notes tend to feel like a solo seed.
+  randomize_notes: 'true'
+  randomize_treble: random
+  extra_trebleclefs_count: random
+  bass_clef_amount: random
+  randomize_jinjos: random
+  randomize_doubloons: random
+  randomize_cheato: random
+  cheato_rewards: random
+  randomize_honeycombs: random
+  honeyb_rewards: random
+  randomize_tickets: random
+  randomize_green_relics: random
+  randomize_beans: random
+  randomize_glowbos: random
+  randomize_dino_roar: random
+  nestsanity: random
+  randomize_signposts: random
+  randomize_stop_n_swap: 'false' # Override in triggers when moves get randomised.
+
+  randomize_stations: random
+  randomize_chuffy: random
+  randomize_warp_pads: random
+  randomize_silos: random
+  open_silos:
+    0: 50
+    random-range-2-7: 50
+  randomize_boss_loading_zones: random
+  backdoors: random
+  open_gi_frontdoor: random
+
+  signpost_hints: random
+  signpost_move_hints: random
+  hint_clarity: random
+  add_signpost_hints_to_ap: progression
+
+  easy_canary: 'true' # Most people cannot beat default Canary Mary.
+  speed_up_minigames: random
+  tower_of_tragedy: random
+  skip_klungo: random
+  auto_enable_cheats: random
+  extra_cheats: random
+  jingaling_jiggy: random
+
+  replace_extra_jiggies: random
+  replace_extra_notes: random
+  extra_jiggies_weight: random
+  extra_notes_weight: random
+  extra_doubloons_weight: random
+  egg_nests_weight: random
+  feather_nests_weight: random
+  big_o_pants_weight: random
+  golden_eggs_weight: random
+  trip_trap_weight: random
+  slip_trap_weight: random
+  transform_trap_weight: random
+  squish_trap_weight: random
+  tip_trap_weight: random
+  max_traps: random-range-0-100
+
+  dialog_character: random
+
+  # If you want to add/remove triggers, double or triple-check that the yaml still gives valid combination of options!
+  triggers:
+    # Manage the restrictions caused by logic type.
+    - option_category: Banjo-Tooie
+      option_name: logic_type_trigger
+      option_result: intended_no_bk
+      options:
+        Banjo-Tooie:
+          logic_type: intended
+          move_rando_trigger:
+            bt: 60
+            vanilla: 40
+    - option_category: Banjo-Tooie
+      option_name: logic_type_trigger
+      option_result: intended_no_world
+      options:
+        Banjo-Tooie:
+          logic_type: intended
+          randomize_worlds: 'false'
+    - option_category: Banjo-Tooie
+      option_name: logic_type_trigger
+      option_result: easy_tricks
+      options:
+        Banjo-Tooie:
+          logic_type: easy_tricks
+    - option_category: Banjo-Tooie
+      option_name: logic_type_trigger
+      option_result: hard_tricks
+      options:
+        Banjo-Tooie:
+          logic_type: hard_tricks
+    - option_category: Banjo-Tooie
+      option_name: logic_type_trigger
+      option_result: glitches
+      options:
+        Banjo-Tooie:
+          logic_type: glitches
+
+    # Manage restrictions caused by skip_puzzle false.
+    - option_category: Banjo-Tooie
+      option_name: world_requirements_trigger
+      option_result: no_skip
+      options:
+        Banjo-Tooie:
+          skip_puzzles: 'false'
+          world_requirements: 'normal'
+          randomize_worlds: 'false'
+    - option_category: Banjo-Tooie
+      option_name: world_requirements_trigger
+      option_result: quick
+      options:
+        Banjo-Tooie:
+          skip_puzzles: 'true'
+          world_requirements: quick
+    - option_category: Banjo-Tooie
+      option_name: world_requirements_trigger
+      option_result: normal
+      options:
+        Banjo-Tooie:
+          skip_puzzles: 'true'
+          world_requirements: normal
+    - option_category: Banjo-Tooie
+      option_name: world_requirements_trigger
+      option_result: long
+      options:
+        Banjo-Tooie:
+          skip_puzzles: 'true'
+          world_requirements: long
+    - option_category: Banjo-Tooie
+      option_name: world_requirements_trigger
+      option_result: randomize
+      options:
+        Banjo-Tooie:
+          skip_puzzles: 'true'
+          world_requirements: randomize
+
+    # Apply move randomisation options based on triggers.
+    - option_category: Banjo-Tooie
+      option_name: move_rando_trigger
+      option_result: vanilla
+      options:
+        Banjo-Tooie:
+          randomize_bk_moves: 'none'
+          randomize_bt_moves: 'false'
+    - option_category: Banjo-Tooie
+      option_name: move_rando_trigger
+      option_result: bkmcjiggy
+      options:
+        Banjo-Tooie:
+          randomize_bk_moves: mcjiggy_special
+          randomize_bt_moves: 'false'
+    - option_category: Banjo-Tooie
+      option_name: move_rando_trigger
+      option_result: bkall
+      options:
+        Banjo-Tooie:
+          randomize_bk_moves: 'all'
+          randomize_bt_moves: 'false'
+    - option_category: Banjo-Tooie
+      option_name: move_rando_trigger
+      option_result: bt
+      options:
+        Banjo-Tooie:
+          randomize_bk_moves: 'none'
+          randomize_bt_moves: 'true'
+    - option_category: Banjo-Tooie
+      option_name: move_rando_trigger
+      option_result: bkmcjiggybt
+      options:
+        Banjo-Tooie:
+          randomize_bk_moves: mcjiggy_special
+          randomize_bt_moves: 'true'
+    - option_category: Banjo-Tooie
+      option_name: move_rando_trigger
+      option_result: bkallbt
+      options:
+        Banjo-Tooie:
+          randomize_bk_moves: 'all'
+          randomize_bt_moves: 'true'
+
+    # Set progressive move options based on what moves are randomised.
+    - option_category: Banjo-Tooie
+      option_name: randomize_bt_moves
+      option_result: 'false'
+      options:
+        Banjo-Tooie:
+          randomize_worlds: 'false'
+          randomize_world_entrance_loading_zones: 'false'
+          jamjars_silo_costs: 'vanilla'
+    - option_category: Banjo-Tooie
+      option_name: randomize_bt_moves
+      option_result: 'true'
+      options:
+        Banjo-Tooie:
+          egg_behaviour:
+            start_with_blue_eggs: 50
+            progressive_eggs: 50
+          randomize_world_entrance_loading_zones: random
+          jamjars_silo_costs: random
+    # These next 2 triggers are the same, except checking for bk mc jiggy special, and bk moves all.
+    - option_category: Banjo-Tooie
+      option_name: move_rando_trigger
+      option_result: bkmcjiggybt
+      options:
+        Banjo-Tooie:
+          egg_behaviour: random
+          progressive_beak_buster: random
+          progressive_shoes: random
+          progressive_water_training: random
+          progressive_flight: random
+          progressive_egg_aiming: random
+          randomize_stop_n_swap: random
+    - option_category: Banjo-Tooie
+      option_name: move_rando_trigger
+      option_result: bkallbt
+      options:
+        Banjo-Tooie:
+          egg_behaviour: random
+          progressive_beak_buster: random
+          progressive_shoes: random
+          progressive_water_training: random
+          progressive_flight: random
+          progressive_egg_aiming: random
+          randomize_stop_n_swap: random
+
+    # Stop and Swap.
+    - option_category: Banjo-Tooie
+      option_name: randomize_stop_n_swap
+      option_result: 'true'
+      options:
+        Banjo-Tooie:
+          progressive_bash_attack: random
+
+    # Triggers that help the generation success rate.
+    - option_category: Banjo-Tooie
+      option_name: logic_type
+      option_result: intended
+      options:
+        Banjo-Tooie:
+          randomize_boss_loading_zones: 'false'
+    - option_category: Banjo-Tooie
+      option_name: randomize_bt_moves
+      option_result: 'false'
+      options:
+        Banjo-Tooie:
+          randomize_boss_loading_zones: 'false'
+    - option_category: Banjo-Tooie
+      option_name: world_requirements
+      option_result: 'randomize'
+      options:
+        Banjo-Tooie:
+          randomize_jinjos: 'true'
+
+    # Misc triggers.
+    - option_category: Banjo-Tooie
+      option_name: randomize_signposts
+      option_result: 'true'
+      options:
+        Banjo-Tooie:
+          tokens_in_pool: 60
+          token_hunt_length: random-range-40-60
+    - option_category: Banjo-Tooie
+      option_name: nestsanity
+      option_result: 'true'
+      options:
+        Banjo-Tooie:
+          tokens_in_pool: 100
+          token_hunt_length: random-range-60-100
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: Tooie-{player}
