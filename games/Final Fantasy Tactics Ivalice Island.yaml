@@ -25,7 +25,7 @@
     random: 0
     random-low: 0 # random value weighted towards lower values
     random-high: 0 # random value weighted towards higher values
-    random-range-1-13: 50 # random value between 1 and 13
+    random-range-6-13: 50 # random value between 1 and 13
 
   zodiac_stones_required:
     # How many Zodiac Stones will be required to beat the game.
@@ -37,7 +37,7 @@
     random: 0
     random-low: 0 # random value weighted towards lower values
     random-high: 0 # random value weighted towards higher values
-    random-range-1-13: 50 # random value between 1 and 13
+    random-range-6-13: 50 # random value between 1 and 13
 
   zodiac_stone_locations:
     # Where can Zodiac Stones appear?
