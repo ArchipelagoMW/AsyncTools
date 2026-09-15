@@ -56,9 +56,7 @@ Starcraft 2:
   enable_morphling:
     false: 10
     true: 90
-  take_over_ai_allies:
-    false: 90
-    true: 10
+  take_over_ai_allies: false
   nova_ghost_of_a_chance_variant: auto
   mercenary_highlanders: random
   difficulty_curve: standard
