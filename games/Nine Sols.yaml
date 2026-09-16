@@ -20,6 +20,9 @@ Nine Sols:
   randomize_shops:
     true: 1
     false: 1
+  randomize_skill_tree:
+    true: 1
+    false: 1
   first_root_node:
     apeman_facility_monitoring: 1
     grotto_of_scriptures_entry: 1
