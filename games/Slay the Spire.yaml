@@ -8,8 +8,8 @@
     'true': 1
 
   downfall:
-    'false': 9
-    'true': 1
+    'false': 3
+    'true': 2
 
   ascension:
     random-range-1-8: 1
@@ -71,7 +71,9 @@
     CAW CAW: 1
     Combat Buff: 1
 
-  seeded: true
+  seeded:
+    'true': 1
+    'false': 3
   
   triggers:
     - option_category: null
