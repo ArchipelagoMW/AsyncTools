@@ -1,0 +1,286 @@
+﻿name: ManicMiners-{number}
+
+description: Manic Miners - Big Async
+
+game: Manic Miners
+requires:
+  version: 0.6.7 # Version of Archipelago required for this yaml to work as expected.
+  game:
+    Manic Miners: 1.5.1 # Version of the world required for this yaml to work as expected.
+
+Manic Miners:
+
+  progression_balancing: 0
+  accessibility: 'full'
+
+  ###################
+  # Level Selection #
+  ###################
+  available_levels:
+    # How many levels are available to play, selected randomly from the chosen campaigns.
+    # If a number higher than the number of selected campaign levels is given, all selected levels will be available.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 10
+    # Maximum value is 108
+    # 25: 50
+    50: 50
+    random-range-50-108: 50
+
+  available_levels_at_start:
+    # How many levels are available initially to the player.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 1
+    # Maximum value is 108
+    5: 50
+
+  sphere1_levels_at_start:
+    # How many of your initially available levels are guaranteed to be beatable before receiving items.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 1
+    # Maximum value is 18
+    5: 50
+
+  campaign_selection_lrr:
+    # Whether your game will include the Standard campaign levels.
+    # If no campaigns are selected, this one will automatically enable.
+    'false': 30
+    'true': 70
+
+  campaign_selection_lrrr:
+    # Whether your game will include the Remastered campaign levels.
+    'false': 30
+    'true': 70
+
+  campaign_selection_lrrc:
+    # Whether your game will include the Classic campaign levels.
+    'false': 70
+    'true': 30
+
+  campaign_selection_baz:
+    # Whether your game will include the Baz's Mod campaign levels.
+    'false': 30
+    'true': 70
+
+  no_duplicate_levels:
+    # If this is enabled, instead of all selected levels, you will have only one of each, selected randomly from the enabled campaigns. 
+    # For example, you will have a random Rocky Horror, but only one.
+    # You are guaranteed to start with Driller Night.
+    'false': 50
+
+  include_baz_unique_levels:
+    # When using No Duplicate Levels and Baz's Mod, whether to include the Baz-unique levels. Has no effect if not using both of these options.
+    # If disabled, only the original 25 levels will be shuffled. 
+    # If enabled, all 33 levels will be shuffled, which means the Baz-unique 8 will always be present.
+    'false': 0
+    'true': 50
+
+  ########
+  # Goal #
+  ########
+  victory_condition:
+    # What the victory condition for the overall game is. 
+    # Clear X Levels: You must clear X total levels to goal the game.
+    # Beat X Par Times: You must beat the target time on X total levels.
+    # Beat X Crystal Targets: You must beat the crystal target on X total levels.
+    # Coordinate Hunt: You must find X "Transporter Coordinates" items to gain access to Rocky Horror, which you must then clear to win the game.
+    clear_x_levels: 50
+    beat_x_par_times: 50
+    beat_x_crystal_targets: 50
+    coordinate_hunt: 50
+
+  target_level_count:
+    # Sets the value of X for the chosen Victory Condition. Does not affect Coordinate Hunt. 
+    # If a target number higher than the number of available levels is given, target will automatically cap at 'all levels'.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 1
+    # Maximum value is 108
+    random-range-25-75: 50
+
+  locked_coordinates:
+    # Only relevant if Victory Condition is set to "Coordinate Hunt". 
+    # If true, then clearing each level unlocks one "Transporter Coordinates" item. 
+    # If false, then the "Transporter Coordinates" can be anywhere in the multiworld. An extra location is still added to each level.
+    'false': 70
+    'true': 30
+
+  coordinates_required:
+    # Sets the number of Transporter Coordinate items required for Coordinate Hunt.
+    # If higher than the number in the pool, will be automatically lowered.
+    # "0" is a special case that means "every".
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 108
+    0: 50
+    random-range-50-108: 50
+
+  coordinates_in_pool:
+    # Sets the number of Transporter Coordinates items shuffled into the item pool, if Locked Coordinates are disabled. 
+    # Does not have an effect otherwise - there will still be exactly one Transporter Coordinate on every level.
+    # "0" is a special case that means "1 per level".
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 108
+    0: 50
+    # random-range-50-108: 50
+
+  #############
+  # Locations #
+  #############
+  target_times_are_locations:
+    # Whether target times for levels are Locations.
+    'false': 30
+    'true': 70
+
+  target_time_difficulty:
+    # How difficult the target times are per level. 
+    # Caution is strongly advised when using Rock Hard targets in a multiplayer game - they are very difficult.
+    easy: 30
+    medium: 45
+    hard: 25
+    rock_hard: 0
+
+  crystal_targets_are_locations:
+    # Whether target crystal counts for levels are Locations.
+    'false': 30
+    'true': 70
+
+  crystal_target_percentage:
+    # The percentage of the total possible crystals required to clear the extra Location.
+    # Has no effect if Crystal Targets Are Locations is disabled.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 50
+    # Maximum value is 95
+    85: 50
+
+  bonus_clear_locations:
+    # When enabled, clearing a level will award 2-5 Locations instead of 1. Harder levels are worth more.
+    'false': 0
+    'true': 50
+
+  #########
+  # Items #
+  #########
+  buildings_are_items:
+    # Whether Buildings must be found in the multiworld to be unlocked.
+    'false': 10
+    'true': 90
+
+  items_are_items:
+    # Whether Items (Electric Fences and Dynamite) must be found in the multiworld to be unlocked.
+    'false': 10
+    'true': 90
+
+  vehicles_are_items:
+    # Whether Vehicles must be found in the multiworld to be unlocked.
+    'false': 10
+    'true': 90
+
+  progressive_items:
+    # Affects behaviour of unlockable Buildings/Items/Vehicles.
+    # 'Normal' puts a single unlockable copy into the itempool. Finding the unlock item allows you build as many copies of that unlockable as you like.
+    # 'Duplicates' adds a second copy of certain unlock items, to increase the chances of finding one sooner. Receiving the second copy has no effect.
+    # 'Progressive' adds split copies of several unlock items, where getting the first item allows you to build a single copy of the unlockable, and further copies of the unlock items increase that limit. 
+    # NB: Small Digger and Small Mobile Laser Cutter instead increment by +2 each time. 
+    # 'Progressive And Duplicate' will act like 'Progressive', but also attempt to add some duplicates of certain non-progressive items into the pool, to increase their chances of being found. This will depend on the number of items vs number of locations your other settings allow.
+    normal: 30
+    duplicates: 10
+    progressive: 50
+    progressive_and_duplicate: 10
+
+  miner_cap:
+    # Adds a limit to the number of miners you can have at once, increasable by items in the multiworld.
+    'false': 50
+    'true': 50
+
+  miner_cap_base_level:
+    # If Miner Cap is enabled, sets the base level of miners you start with. 
+    # Does not affect the amount of increases in the multiworld. 
+    # (For now, logic all assumes this is set to 5.)
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 5
+    # Maximum value is 20
+    5: 50
+
+  no_infinite_stt:
+    # If using Progressive Items, this turns off the 'infinite build allowed' for Small Transport Truck, that normally comes when you have enough progressive items. 
+    # Filler copies of Progressive Small Transport Truck will be added to the pool, with a low chance.
+    'false': 30
+    'true': 70
+
+  bonus_truck:
+    # Whether to include a bonus starting Small Transport Truck in the Item pool.
+    'false': 50
+    'true': 50
+
+  useful_filler_only:
+    # If enabled, only gameplay-affecting filler will be included, instead of 'empty' items. Can affect game balance slightly.
+    'false': 50
+    'true': 0
+
+  #########
+  # Logic #
+  #########
+  breathing_always_in_logic:
+    # Whether the ability to build a Support Station is logically required for all levels with limited air.
+    # When enabled, some levels that can be comfortably beaten before the air runs out will remain out of logic. 
+    # Has no effect if Buildings Are Items is disabled.
+    'false': 50
+    'true': 0
+
+  faster_blasting_always_in_logic:
+    # The Small Mobile Laser Cutter and Small Digger are often in logic for their ability to get through hard rock walls, but both are quite slow at it. The Upgrade Station allows some improvement. 
+    # When this setting is enabled, any time that the Small Digger or SMLC is required by logic, so is the Upgrade Station.
+    'false': 0
+    'true': 50
+
+  electric_fences_in_logic:
+    # Puts the Electric Fence in logic for certain levels with heavy monster issues.
+    'false': 0
+    'true': 50
+
+  ###########################
+  # Item & Location Options #
+  ###########################
+  local_items:
+    # Forces these items to be in their native world.
+    []
+
+  non_local_items:
+    # Forces these items to be outside their native world.
+    []
+
+  start_inventory:
+    # Start with the specified amount of these items. Example: "Bomb: 1"
+    {}
+
+  start_hints:
+    # Start with these item's locations prefilled into the ``!hint`` command.
+    []
+
+  start_location_hints:
+    # Start with these locations and their item prefilled into the ``!hint`` command.
+    []
+
+  exclude_locations:
+    # Prevent these locations from having an important item.
+    []
+
+  priority_locations:
+    # Prevent these locations from having an unimportant item.
+    []
+
+  item_links:
+    # Share part of your item pool with other players.
+    []
+
+  plando_items:
+    # Generic items plando.
+    []
