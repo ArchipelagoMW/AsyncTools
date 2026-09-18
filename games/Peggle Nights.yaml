@@ -123,7 +123,6 @@
   useful_item_percentage:
     random-range-40-70: 1
   useful_item_weights:
-    Fever Meter Permanent Bonus: 1
     Full Clear Discount: 3
     Score Multiplier: 2
     Target Score Discount: 1
