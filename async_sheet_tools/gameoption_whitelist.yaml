@@ -1546,6 +1546,86 @@ Pokemon Crystal:
     - Trainer Palette
     - Progressive Rods
     - Local Items
+Pokemon FireRed and LeafGreen:
+    - Pokemon FireRed and LeafGreen
+    - Locations
+    - Name
+    - Game Version
+    - Goal
+    - Kanto Only
+    - Random Starting Town
+    - Shuffle Dungeon Entrances
+    - Shuffle Hidden Items
+    - Extra Key Items
+    - Shopsanity
+    - Vending Machines
+    - Prizesanity
+    - Shop Prices
+    - Kanto Trainersanity
+    - Sevii Trainersanity
+    - Dexsanity
+    - Famesanity
+    - Shuffle Pokedex
+    - Shuffle TM Case
+    - Shuffle Jumping Shoes
+    - Silph Co. Card Key
+    - Sevii Island Passes
+    - Fishing Rods
+    - Split Teas
+    - Gym Keys
+    - Itemfinder Required
+    - Flash Required
+    - Acrobatic Bicycle
+    - Oak's Aide Route 2
+    - Oak's Aide Route 10
+    - Oak's Aide Route 11
+    - Oak's Aide Route 16
+    - Oak's Aide Route 15
+    - Pokemon Lab Fossil Count
+    - Viridian City Roadblock
+    - Pewter City Roadblock
+    - Digletts Cave Roadblock
+    - Block Underground Paths
+    - Route 9 Roadblock
+    - Route 10 Waterfall
+    - Route 12 Boulders
+    - Route 12 Rocks
+    - Route 16 Rock
+    - Victory Road Rocks
+    - Early Gossipers
+    - Additional Dark Caves
+    - Viridian Gym Requirement
+    - Viridian Gym Count
+    - Route 22 Gate Requirement
+    - Route 22 Gate Count
+    - Route 23 Guard Requirement
+    - Route 23 Guard Count
+    - Elite Four Requirement
+    - Elite Four Count
+    - Elite Four Rematch Requirement
+    - Elite Four Rematch Count
+    - Cerulean Cave Requirement
+    - Cerulean Cave Count
+    - HM Compatibility
+    - Randomize Wild Pokemon
+    - Wild Pokemon Groups
+    - Randomize Starters
+    - Randomize Trainer Parties
+    - Randomize Legendary Pokemon
+    - Randomize Misc Pokemon
+    - Randomize Types
+    - Randomize Abilities
+    - Randomize Base Stats
+    - Randomize Moves
+    - Move Match Type Bias
+    - Move Normal Type Bias
+    - Physical/Special Split
+    - Randomize Move Types
+    - Randomize TM/Tutor Moves
+    - TM/Tutor Compatibility
+    - Randomize Music
+    - Randomize Fanfares
+    - Local Items
 Pokemon Emerald:
     - Pokemon Emerald
     - Locations

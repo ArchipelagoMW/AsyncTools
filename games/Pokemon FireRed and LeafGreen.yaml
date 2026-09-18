@@ -1,0 +1,466 @@
+﻿Pokemon FireRed and LeafGreen:
+  ################
+  # Game Options #
+  ################
+  accessibility: full
+  game_version: random
+  goal:
+    champion: 3
+    champion_rematch: 2
+
+  #########
+  # World #
+  #########
+  kanto_only:
+    'false': 4
+    'true': 1
+  random_starting_town:
+    'false': 1
+    'true': 2
+  starting_town_blacklist: []
+  shuffle_pokemon_centers: false
+  shuffle_gyms: false
+  shuffle_marts: false
+  shuffle_harbors: false
+  shuffle_buildings: off
+  shuffle_dungeons:
+    off: 1
+    seafoam: 1
+  shuffle_interiors: false
+  shuffle_warp_tiles: off
+  shuffle_dropdowns: off
+  mix_entrance_warp_pools: []
+  decouple_entrances_warps: false
+  randomize_fly_destinations: off
+  fly_destination_plando: {}
+
+  ###########
+  # Shuffle #
+  ###########
+  shuffle_badges: true
+  shuffle_hidden:
+    off: 4
+    nonrecurring: 5
+    all: 3
+  extra_key_items:
+    false: 1
+    true: 2
+  shopsanity:
+    false: 2
+    true: 1
+  vending_machines: false # Will be set to true by triggers if shopsanity is true
+  prizesanity: false # Will be set to true by triggers if shopsanity is true
+  shop_slots: all
+  shop_prices:
+    vanilla: 5
+    cheap: 2
+    affordable: 3
+  consistent_shop_prices: true
+  # Both trainersanities will use the same option through triggers
+  kanto_trainersanity:
+    none: 5
+    random-low: 4
+    all: 1
+  sevii_trainersanity:
+    none: 5
+    random-low: 4
+    all: 1
+  rematchsanity: false
+  rematch_requirements: gyms
+  dexsanity:
+    none: 5
+    random-low: 4
+    all: 1
+  famesanity:
+    false: 2
+    true: 1
+  shuffle_fly_unlocks: off
+  pokemon_request_locations: false
+  shuffle_pokedex:
+    shuffle: 2
+    start_with: 3
+  shuffle_running_shoes: start_with
+  shuffle_berry_pouch: true
+  shuffle_tm_case:
+    false: 4
+    true: 1
+  shuffle_jumping_shoes:
+    false: 3
+    true: 2
+  post_goal_locations: false
+  card_key:
+    vanilla: 3
+    split: 2
+  island_passes:
+    vanilla: 3
+    split: 2
+  fishing_rods:
+    vanilla: 2
+    progressive: 1
+  split_teas:
+    false: 1
+    true: 3
+  gym_keys:
+    false: 3
+    true: 2
+
+  ##############
+  # Item Logic #
+  ##############
+  itemfinder_required:
+    logic: 2
+    required: 1
+  flash_required:
+    logic: 2
+    required: 1
+  fame_checker_required: true
+  bicycle_requires_jumping_shoes: true
+  acrobatic_bicycle:
+    false: 3
+    true: 1
+  remove_badge_requirement: []
+  oaks_aide_route_2: random-range-1-5
+  oaks_aide_route_10: random-range-6-10
+  oaks_aide_route_11: random-range-11-15
+  oaks_aide_route_16: random-range-16-20
+  oaks_aide_route_15: random-range-21-25
+  fossil_count: random
+
+  ###############
+  # World Logic #
+  ###############
+  viridian_city_roadblock:
+    early_parcel: 1
+    open: 1
+  pewter_city_roadblock: random
+  digletts_cave_roadblock: random
+  remove_cerulean_city_roadblocks: false
+  block_underground_paths: random
+  route_9_roadblock: random
+  route_10_waterfall: random
+  block_pokemon_tower: true
+  route_12_boulders: random
+  route_12_rocks: random
+  route_16_rock: random
+  open_silph_co: false
+  remove_saffron_rockets: false
+  route_23_trees: false
+  route_23_waterfall: false
+  victory_road_rocks: random
+  block_vermilion_sailing: true
+  early_gossipers: false # Will be set to true by triggers if goal is champion
+  elevators_condition: open
+  additional_dark_caves: [] # Will be set by triggers
+  # All badge/gym roadblocks will be set to the same option by triggers
+  viridian_gym_requirement: random
+  route22_gate_requirement: random
+  route23_guard_requirement: random
+  elite_four_requirement: random
+  elite_four_rematch_requirement: random
+  cerulean_cave_requirement: random
+  viridian_gym_count: random-range-high-3-7
+  # These will be set to lower ranges by triggers if the goal is champion rematch
+  route22_gate_count: random-range-2-4
+  route23_guard_count: random-range-4-6
+  elite_four_count:
+    6: 1
+    7: 2
+    8: 3
+  elite_four_rematch_count: 8
+  cerulean_cave_count: random-range-high-4-7
+
+  #################
+  # Pokemon Logic #
+  #################
+  evolutions_required: ['HM Requirement', "Oak's Aides", 'Dexsanity']
+  evolution_methods_required: ['Level', 'Evo Item', 'Evo & Held Item', 'Friendship']
+
+  ##########
+  # Levels #
+  ##########
+  level_scaling: spheres
+  modify_trainer_levels: 100
+  force_fully_evolved: never
+
+  #######
+  # HMs #
+  #######
+  hm_compatibility:
+    vanilla: 1
+    full: 3
+  free_fly_location: false
+  free_fly_blacklist: ["Indigo Plateau"]
+  town_map_fly_location: true
+  town_map_fly_blacklist: ["Indigo Plateau"]
+
+  ###########
+  # Pokemon #
+  ###########
+  # All pokemon randomization will be set to the same option by triggers, legendaries will either be vanilla or
+  # randomized to other legendaries
+  wild_pokemon: random
+  wild_pokemon_groups: random
+  wild_pokemon_blacklist: ["Legendaries"]
+  starters: random
+  starter_blacklist: ["Legendaries"]
+  trainers: random
+  trainer_blacklist: ["Legendaries"]
+  legendary_pokemon: legendaries
+  legendary_pokemon_blacklist: []
+  misc_pokemon: random
+  misc_pokemon_blacklist: ["Legendaries"]
+  types:
+    vanilla: 7
+    shuffle: 2
+    follow_evolutions: 1
+  abilities:
+    vanilla: 1
+    follow_evolutions: 1
+  ability_blacklist: ["Wonder Guard", "Truant", "Arena Trap", "Shadow Tag"]
+  base_stats:
+    vanilla: 4
+    keep_bst: 1
+
+  #########
+  # Moves #
+  #########
+  moves:
+    vanilla: 2
+    randomized: 1
+    start_with_four_moves: 1
+  move_match_type_bias:
+    0: 7
+    random-range-10-40: 3
+  move_normal_type_bias:
+    0: 7
+    random-range-10-40: 3
+  move_blacklist: ["Dragon Rage"]
+  physical_special_split: random
+  move_types:
+    vanilla: 7
+    shuffle: 2
+    completely_random: 1
+  damage_categories: vanilla
+  tm_tutor_moves:
+    'false': 2
+    'true': 3
+  tm_tutor_moves_blacklist: []
+  tm_tutor_compatibility:
+    vanilla: 1
+    full: 3
+
+  ###################
+  # Quality of Life #
+  ###################
+  game_options: {Experience Multiplier: 200}
+  skip_intro: true
+  skip_elite_four: false
+  item_appearance_matches_contents: false
+  reusable_tm_tutors: true
+  min_catch_rate: 255
+  all_pokemon_seen: false
+  starting_money: 3000
+  better_shops: true
+  cheaper_coins: true
+  total_darkness: random
+  remote_items: true
+  provide_hints: progression_and_useful
+  death_link: false
+
+  #############
+  # Cosmetics #
+  #############
+  randomize_music:
+    false: 3
+    true: 2
+  randomize_fanfares:
+    false: 3
+    true: 2
+
+  ############
+  # Triggers #
+  ############
+  trainersanity:
+    none: 5
+    random-low: 4
+    all: 1
+
+  mt_moon_dark:
+    false: 1
+    true: 1
+
+  digletts_cave_dark:
+    false: 1
+    true: 1
+
+  victory_road_dark:
+    false: 1
+    true: 1
+
+  roadblock_requirement:
+    badges: 1
+    gyms: 1
+
+  pokemon_randomization:
+    vanilla: 25
+    match_base_stats: 25
+    match_type: 10
+    match_base_stats_and_type: 10
+    completely_random: 30
+
+  triggers:
+    - option_category: Pokemon FireRed and LeafGreen
+      option_name: shopsanity
+      option_result: true
+      options:
+        Pokemon FireRed and LeafGreen:
+          vending_machines: true
+          prizesanity: true
+    - option_category: Pokemon FireRed and LeafGreen
+      option_name: trainersanity
+      option_result: none
+      options:
+        Pokemon FireRed and LeafGreen:
+          kanto_trainersanity: none
+          sevii_trainersanity: none
+    - option_category: Pokemon FireRed and LeafGreen
+      option_name: trainersanity
+      option_result: random-low
+      options:
+        Pokemon FireRed and LeafGreen:
+          kanto_trainersanity: random-low
+          sevii_trainersanity: random-low
+    - option_category: Pokemon FireRed and LeafGreen
+      option_name: trainersanity
+      option_result: all
+      options:
+        Pokemon FireRed and LeafGreen:
+          kanto_trainersanity: all
+          sevii_trainersanity: all
+    - option_category: Pokemon FireRed and LeafGreen
+      option_name: goal
+      option_result: champion
+      options:
+        Pokemon FireRed and LeafGreen:
+          early_gossipers: true
+    - option_category: Pokemon FireRed and LeafGreen
+      option_name: goal
+      option_result: champion_rematch
+      options:
+        Pokemon FireRed and LeafGreen:
+          route22_gate_count: random-range-0-1
+          route23_guard_count: random-range-1-3
+          elite_four_count:
+            3: 1
+            4: 2
+            5: 3
+          elite_four_rematch_count:
+            6: 1
+            7: 2
+            8: 3
+          cerulean_cave_count: random-range-high-3-5
+    - option_category: Pokemon FireRed and LeafGreen
+      option_name: mt_moon_dark
+      option_result: true
+      options:
+        Pokemon FireRed and LeafGreen:
+          +additional_dark_caves:
+            - Mt. Moon
+    - option_category: Pokemon FireRed and LeafGreen
+      option_name: digletts_cave_dark
+      option_result: true
+      options:
+        Pokemon FireRed and LeafGreen:
+          +additional_dark_caves:
+            - Diglett's Cave
+    - option_category: Pokemon FireRed and LeafGreen
+      option_name: victory_road_dark
+      option_result: true
+      options:
+        Pokemon FireRed and LeafGreen:
+          +additional_dark_caves:
+            - Victory Road
+    - option_category: Pokemon FireRed and LeafGreen
+      option_name: roadblock_requirement
+      option_result: badges
+      options:
+        Pokemon FireRed and LeafGreen:
+          viridian_gym_requirement: badges
+          route22_gate_requirement: badges
+          route23_guard_requirement: badges
+          elite_four_requirement: badges
+          elite_four_rematch_requirement: badges
+          cerulean_cave_requirement: badges
+    - option_category: Pokemon FireRed and LeafGreen
+      option_name: roadblock_requirement
+      option_result: gyms
+      options:
+        Pokemon FireRed and LeafGreen:
+          viridian_gym_requirement: gyms
+          route22_gate_requirement: gyms
+          route23_guard_requirement: gyms
+          elite_four_requirement: gyms
+          elite_four_rematch_requirement: gyms
+          cerulean_cave_requirement: gyms
+    - option_category: Pokemon FireRed and LeafGreen
+      option_name: pokemon_randomization
+      option_result: vanilla
+      options:
+        Pokemon FireRed and LeafGreen:
+          wild_pokemon: vanilla
+          starters: vanilla
+          trainers: vanilla
+          legendary_pokemon: vanilla
+          misc_pokemon: vanilla
+    - option_category: Pokemon FireRed and LeafGreen
+      option_name: pokemon_randomization
+      option_result: match_base_stats
+      options:
+        Pokemon FireRed and LeafGreen:
+          wild_pokemon: match_base_stats
+          starters: match_base_stats
+          trainers: match_base_stats
+          legendary_pokemon: legendaries
+          misc_pokemon: match_base_stats
+    - option_category: Pokemon FireRed and LeafGreen
+      option_name: pokemon_randomization
+      option_result: match_type
+      options:
+        Pokemon FireRed and LeafGreen:
+          wild_pokemon: match_type
+          starters: match_type
+          trainers: match_type
+          legendary_pokemon: legendaries
+          misc_pokemon: match_type
+    - option_category: Pokemon FireRed and LeafGreen
+      option_name: pokemon_randomization
+      option_result: match_base_stats_and_type
+      options:
+        Pokemon FireRed and LeafGreen:
+          wild_pokemon: match_base_stats_and_type
+          starters: match_base_stats_and_type
+          trainers: match_base_stats_and_type
+          legendary_pokemon: legendaries
+          misc_pokemon: match_base_stats_and_type
+    - option_category: Pokemon FireRed and LeafGreen
+      option_name: pokemon_randomization
+      option_result: completely_random
+      options:
+        Pokemon FireRed and LeafGreen:
+          wild_pokemon: completely_random
+          starters: completely_random
+          trainers: completely_random
+          legendary_pokemon: legendaries
+          misc_pokemon: completely_random
+    - option_category: Pokemon FireRed and LeafGreen
+      option_name: game_version
+      option_result: firered
+      options:
+        null:
+          name: PokeFireRed-{player}
+    - option_category: Pokemon FireRed and LeafGreen
+      option_name: game_version
+      option_result: leafgreen
+      options:
+        null:
+          name: PokeLeafGreen-{player}
