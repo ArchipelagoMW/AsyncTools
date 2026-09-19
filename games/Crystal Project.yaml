@@ -88,3 +88,10 @@ Crystal Project:
   earned_item_info_percent: 50
   randomize_music: false
   use_mods: false
+  triggers:
+  - option_category: null
+    option_name: name
+    option_result: Player{player}
+    options:
+      null:
+        name: CrystalP-{player}
