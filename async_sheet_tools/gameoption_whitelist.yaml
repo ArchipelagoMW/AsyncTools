@@ -254,7 +254,9 @@ Candy Box 2:
     - Candy Box 2
     - locations
     - Name
+    - Goal Conditions
     - Entrance Randomisation
+    - Randomise Tower Entrance
     - Randomise X Potion
     - Starting Weapon
     - Progressive Jump
@@ -703,6 +705,9 @@ Final Fantasy Tactics Ivalice Island:
     - Sidequest Battles
     - Rare Battles
     - Chemist Placement
+    - Poach Locations
+    - Move-Find Item Locations
+    - Move-Find Item Location Logic
 Frogmonster:
     - Frogmonster
     - Locations
@@ -1085,6 +1090,24 @@ Luigi's Mansion:
     - Spookiness
     - EnergyLink
     - Trap Percentage
+Manic Miners:
+    - Victory Condition
+    - Target Level Count
+    - Available Levels
+    - Locked Coordinates
+    - Coordinates Required
+    - Target Times Are Locations
+    - Target Time Difficulty
+    - Crystal Targets Are Locations
+    - Buildings Are Items
+    - Items Are Items
+    - Vehicles Are Items
+    - Progressive Items
+    - Miner Cap
+    - Campaign Selection LRR
+    - Campaign Selection LRRR
+    - Campaign Selection LRRC
+    - Campaign Selection BAZ
 Mario & Luigi Superstar Saga:
     - Mario & Luigi Superstar Saga
     - Locations
@@ -1307,9 +1330,11 @@ Ori and the Will of the Wisps:
     - Goal
     - Logic difficulty
     - Glitches
+    - Starting location
+    - Randomize Doors
     - Launch Fragments
     - Relic Count
-    - Remove Quests
+    - Quests
     - Glades Done
     - No Combat
     - No Trials
@@ -1447,6 +1472,35 @@ Pizza Tower:
     - Randomize Music
     - Snotty's Home Floor
     - Randomize Enemies
+PokePark:
+    - PokePark
+    - Locations
+    - Name
+    - Goal
+    - Skygarden Prisma Requirement
+    - Harder Power Competition AI
+    - Separate Pokemon Locations by Zone
+    - Starting Fast Travel Items
+    - Starting Power Item Preset
+    - In-Zone Roadblock Items
+    - Remove Attraction Record Locations
+    - Randomize Attraction Entrances
+    - Unlock Fast Travel at Taxi Stops
+    - Randomize Fast Travel Routes
+    - Randomize Treehouse Gates
+    - Randomize General Entrances
+    - Mix Entrance Randomization Pools
+    - Required Battle Win Streak
+    - Remove Battle Power Competition Locations
+    - Remove Chase Power Competition Locations
+    - Remove Quiz Power Competition Locations
+    - Remove Hide-and-Seek Power Competition Locations
+    - Remove Errand Locations
+    - Remove Miscellaneous Friendship Locations
+    - Remove Legendary Pokemon Locations
+    - Remove Power Training Locations
+    - Remove Attraction Prisma Locations
+    - Remove Pokemon Unlock Locations
 Pokemon Black and White:
     - Pokemon Black and White
     - Locations
