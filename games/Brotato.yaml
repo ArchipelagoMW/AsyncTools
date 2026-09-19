@@ -1,11 +1,11 @@
 
 Brotato:
   num_victories:
-    random-range-10-20: 50
+    random-range-10-25: 50
   num_characters:
     random-range-15-30: 50
   num_starting_characters:
-    random-range-1-10: 50
+    random-range-1-20: 50
   starting_characters:
     default_all: 50
     random_all: 50
@@ -22,7 +22,11 @@ Brotato:
       Multitasker, Beast Master, Farmer, Fisherman, Doctor, Gladiator, Ghost, 
       Generalist, Glutton, Cryptid]
   waves_per_drop:
-    random-range-1-20: 50
+    random-range-1-5: 50
+  num_wave_caps:
+    two: 50
+    four: 50
+    ten: 50
   gold_reward_mode:
     one_time: 50
     all_every_time: 50
@@ -36,13 +40,13 @@ Brotato:
     'false': 50
     'true': 50
   num_common_crate_drops:
-    random-range-20-50: 50
+    random-range-20-25: 50
   num_common_crate_drops_per_check:
     random-range-1-5: 50
   num_common_crate_drop_groups:
     random-range-5-10: 50
   num_legendary_crate_drops:
-    random-range-5-15: 50
+    random-range-5-10: 50
   num_legendary_crate_drops_per_check:
     1: 50
   num_legendary_crate_drop_groups:
@@ -92,6 +96,14 @@ Brotato:
             random_all: 50
             default_base_game: 50
             random_base_game: 50
+    # Make sure we have enough locations for all the wave cap items if set to 10 caps.
+    - option_name: num_wave_caps
+      option_category: Brotato
+      option_result: ten
+      options:
+        Brotato:
+          waves_per_drop:
+            1: 50
     - option_category: null
       option_name: name
       option_result: Player{player}
