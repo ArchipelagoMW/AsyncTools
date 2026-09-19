@@ -43,3 +43,11 @@ A Space Archipelago:
     
   early_colony_ship:
     'true': 50
+ 
+  triggers:
+  - option_category: null
+    option_name: name
+    option_result: Player{player}
+    options:
+      null:
+        name: ASpaceAP-{player}
