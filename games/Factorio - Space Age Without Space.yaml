@@ -9,6 +9,9 @@
     rocket: 50
     satellite: 20
   craftsanity: random-range-0-20
+  free_power:
+    true: 25
+    false: 75
   tech_tree_layout:
     single: 20
     small_diamonds: 20
@@ -196,13 +199,16 @@
   attack_traps:
     0: 100
     5: 10
+  quality_traps:
+    0: 100
+    5: 10
   evolution_traps:
     0: 100
     5: 10
   evolution_trap_increase: 5
   death_link: 'false'
   energy_link: 'true'
-    
+
   triggers:
     - option_category: Factorio - Space Age Without Space
       option_name: ramping_tech_costs

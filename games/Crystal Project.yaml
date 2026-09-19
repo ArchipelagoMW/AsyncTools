@@ -1,0 +1,97 @@
+Crystal Project:
+  accessibility: full
+  skip_intro_crawl:
+    "true": 3
+    "false": 1
+  trap_likelihood:
+    0: 2
+    10: 2
+    15: 1
+  goal: 
+    "clamshells": 5
+    "astley": 2
+    "true_astley": 0
+  astley_job_quantity: 
+    12: 4
+    18: 1
+  clamshell_goal_quantity: 
+    20: 3
+    30: 1
+  extra_clamshells_in_pool: 
+    5: 1
+    10: 1
+    20: 1
+  job_rando: full
+  starting_job_quantity: 
+    6: 4
+    4: 3
+    1: 1
+  disable_sparks: 
+    "false": 1
+    "true": 2
+  kill_bosses_mode: 
+    "true": 3
+    "false": 1
+  shopsanity: 
+    "disabled": 1
+    "enabled": 1
+  regionsanity: enabled
+  regionsanity_starter_region_min_level: 0
+  regionsanity_starter_region_max_level: 30
+  home_point_hustle: 
+    "disabled": 1
+    "mixed": 1
+  included_regions: 
+    "advanced": 1
+    "expert": 2
+    "all": 1
+  skip_quizard_quiz: true
+  progressive_mount_mode: 
+    "true": 1
+    "false": 1
+  starting_level: 3
+  level_gating: level_catch_up
+  level_compared_to_enemies: 0
+  progressive_level_size: 6
+  max_level: 
+    60: 1
+    70: 1
+    80: 1
+    99: 1
+  starting_passive_points: 10
+  maximum_passive_points: 10
+  passive_point_boost_size: 2
+  key_mode: 
+    "vanilla": 1
+    "skeleton": 1
+    "key_ring": 1
+    "key_ring_skelefree": 1
+    "vanilla_skelefree": 1
+  obscure_routes: false
+  hop_to_it: no_tricks
+  prioritize_crystals: false
+  auto_spend_lp: false
+  auto_equip_passives: false
+  easy_leveling: true
+  progressive_equipment_mode: 
+    "true": 1
+    "false": 1
+  start_with_treasure_finder: true
+  start_with_maps: true
+  fill_full_map: true
+  include_summon_abilities: true
+  include_scholar_abilities: true
+  item_info_mode: 
+    "full": 1
+    "earned": 2
+    "obscured": 2
+  earned_item_info_percent: 50
+  randomize_music: false
+  use_mods: false
+  triggers:
+  - option_category: null
+    option_name: name
+    option_result: Player{player}
+    options:
+      null:
+        name: CrystalP-{player}

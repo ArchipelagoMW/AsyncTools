@@ -5,9 +5,10 @@ requires:
 
 # Define your game here!
 game:
-  A Hat in Time: 73
-  A Link to the Past: 55
-  A Short Hike: 23
+  A Hat in Time: 64
+  A Link to the Past: 58
+  A Short Hike: 27
+  A Space Archipelago: 7
   Adventure: 2
   Aquaria: 2
   Blasphemous: 8
@@ -85,42 +86,45 @@ game:
   Zillion: 2
 
   
-  Banjo-Tooie: 17
-  Brotato: 7
-  Candy Box 2: 9
-  CrossCode: 17
-  Dark Cloud 1: 22
-  Donkey Kong 64: 28
-  Donkey Kong Country 2: 9
-  Donkey Kong Country: 9
-  Dragon Warrior: 3
-  Factorio - Space Age Without Space: 18
+  Banjo-Tooie: 24
+  Brotato: 8
+  Candy Box 2: 12
+  CrossCode: 23
+  Crystal Project: 10
+  Dark Cloud 1: 21
+  Donkey Kong 64: 32
+  Donkey Kong Country 2: 10
+  Donkey Kong Country: 11
+  Dragon Warrior: 7
+  Factorio - Space Age Without Space: 10
   Final Fantasy Tactics Ivalice Island: 6
-  Frogmonster: 4
-  Funi Raccoon Game: 8
-  Garfield Kart - Furious Racing: 11
-  Gauntlet Legends: 5
-  Golden Sun The Lost Age: 25
-  Here Comes Niko!: 12
-  Luigi's Mansion: 29
-  Mario Kart Double Dash: 39
-  Mega Man X: 11
-  Mega Man X2: 8
-  Mega Man X3: 9
-  Nine Sols: 73
-  Outer Wilds: 78
-  Ori and the Blind Forest: 28
-  Ori and the Will of the Wisps: 38
-  'Paper Mario: The Thousand-Year Door': 59
-  Peggle Deluxe: 32
-  Peggle Nights: 11
-  Pizza Tower: 23
-  Pokemon Black and White: 70
-  Pokemon Crystal: 70
-  Pokemon Ranger (Quest): 8
-  Rain World: 4
-  Slay the Spire: 40
-  "SMW: Spicy Mycena Waffles": 39
-  Sonic Adventure DX: 24
-  The Legend of Zelda - Oracle of Seasons: 19
-  Zork Grand Inquisitor: 2
+  Frogmonster: 2
+  Funi Raccoon Game: 10
+  Garfield Kart - Furious Racing: 5
+  Gauntlet Legends: 10
+  Golden Sun The Lost Age: 15
+  Here Comes Niko!: 10
+  Luigi's Mansion: 34
+  Manic Miners: 7
+  Mario Kart Double Dash: 28
+  Mega Man X: 15
+  Mega Man X2: 14
+  Mega Man X3: 14
+  Nine Sols: 25
+  Outer Wilds: 81
+  Ori and the Blind Forest: 26
+  Ori and the Will of the Wisps: 20
+  'Paper Mario: The Thousand-Year Door': 30
+  Peggle Deluxe: 21
+  Peggle Nights: 10
+  Pizza Tower: 15
+  Pokemon Black and White: 47
+  Pokemon Crystal: 40
+  Pokemon FireRed and LeafGreen: 40
+  Pokemon Ranger (Quest): 7
+  Rain World: 10
+  Slay the Spire: 31
+  "SMW: Spicy Mycena Waffles": 23
+  Sonic Adventure DX: 22
+  The Legend of Zelda - Oracle of Seasons: 17
+  Tony Hawk's Pro Skater 1 + 2: 7
