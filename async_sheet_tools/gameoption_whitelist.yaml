@@ -75,6 +75,23 @@ A Short Hike:
     - Buckets
     - Golden Feather Progression
     - Coins per Filler Item
+A Space Archipelago:
+    - A Short Hike
+    - Locations
+    - Name
+    - Goal
+    - Start Planet
+    - Soft Logic
+    - Early Construction Slots
+    - Early Colony Ship
+    - Double Important Items
+    - Minimum General Science Pack Cost
+    - Maximum General Science Pack Cost
+    - Minimum Specialized Science Pack Cost
+    - Maximum Specialized Science Pack Cost
+    - Research Tree Layout
+    - Research With General Science
+    - Technology Cost Bias
 Adventure:
     - Adventure
     - Locations
