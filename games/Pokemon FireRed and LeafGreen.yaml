@@ -457,10 +457,10 @@
       option_result: firered
       options:
         null:
-          name: PokeFireRed-{player}
+          name: PokeFR-{player}
     - option_category: Pokemon FireRed and LeafGreen
       option_name: game_version
       option_result: leafgreen
       options:
         null:
-          name: PokeLeafGreen-{player}
+          name: PokeLG-{player}
