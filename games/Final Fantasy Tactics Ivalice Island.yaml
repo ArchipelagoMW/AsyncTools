@@ -42,7 +42,8 @@
   zodiac_stone_locations:
     # Where can Zodiac Stones appear?
     # Vanilla limits their possible locations to those events which had one in the vanilla game.
-    # This limits the number maximum number of stones in the pool from 8-12, depending on sidequest and Altima options.
+    # This limits the maximum number of stones in the pool from 8-12, depending on sidequest and Altima options.
+    # Note that with fewer stones in the pool, potential Stone locations can have other items.
     # Anywhere Local means stones can be at any location in your world.
     # Anywhere means stones can be anywhere in the multiworld.
     vanilla_stones: 50
@@ -68,9 +69,8 @@
 
   poach_locations:
     # Are poaches in the location pool? WARNING: Can be grindy and RNG-heavy.
-    # Will be disabled if Enemy Randomizer is set to Randomized.
     'false': 50
-    'true': 0
+    'true': 50
 
   rare_battles:
     # Are the rare battles for each battleground in the location pool?
@@ -113,6 +113,16 @@
     random-high: 0 # random value weighted towards higher values
     random-range-0-14: 0 # random value between 0 and 14
 
+  randomize_poach_rewards:
+    # Whether Fur Shop awards from poaching should be randomized.
+    # Split will make the rare result (12% of the time) always be an item unavailable in shops,
+    # while the common result will always be an item available in shops.
+    'off': 0
+    'on': 0
+    split: 0
+    weighted: 0
+    weighted_split: 50
+
   ##################
   # Filler Options #
   ##################
@@ -122,7 +132,7 @@
     # You can define additional values between the minimum and maximum values.
     # Minimum value is 0
     # Maximum value is 10
-    3: 50
+    9: 50
     random: 0
     random-low: 0 # random value weighted towards lower values
     random-high: 0 # random value weighted towards higher values
@@ -146,7 +156,7 @@
     # You can define additional values between the minimum and maximum values.
     # Minimum value is 0
     # Maximum value is 10
-    2: 50
+    4: 50
     random: 0
     random-low: 0 # random value weighted towards lower values
     random-high: 0 # random value weighted towards higher values
@@ -158,7 +168,7 @@
     # You can define additional values between the minimum and maximum values.
     # Minimum value is 0
     # Maximum value is 10
-    1: 50
+    2: 50
     random: 0
     random-low: 0 # random value weighted towards lower values
     random-high: 0 # random value weighted towards higher values
@@ -185,9 +195,12 @@
     # Disabled leaves enemies as vanilla.
     # Boss Shuffle shuffles only unique story bosses amongst each other.
     # Randomized randommizes all enemies per other settings in this section.
+    # Boss Shuffle Randomized combines the above two options: bosses will be shuffled and
+    # all other slots will be randomized per other settings.
     disabled: 50
     boss_shuffle: 0
     randomized: 0
+    boss_shuffle_randomized: 0
 
   randomize_gariland:
     # Whether to randomize the Gariland story fight.
@@ -206,7 +219,7 @@
 
   randomize_story_fights_only:
     # If enabled, only story and sidequest fights will be randomized,
-    # and random encounters will be left alone
+    # and random encounters will be left alone.
     'false': 50
     'true': 0
 
@@ -236,6 +249,33 @@
     shuffle: 50
     chaos: 0
 
+  ##########################
+  # Move-Find Item Options #
+  ##########################
+  move_find_item_locations:
+    # Will Move-Find Item locations contain multiworld items? WARNING: Will be more annoying than you think.
+    'false': 50
+    'true': 50
+
+  move_find_item_location_logic:
+    # Controls what is needed and used to access MFI locations.
+    # Vanilla requires Move-Find Item to be equipped.
+    # Chemist Innate makes Move-Find Item innate to Chemists.
+    # Player Innate makes Move-Find Item innate to all player units.
+    vanilla: 0
+    chemist_innate: 50
+    player_innate: 50
+
+  randomize_move_find_item_rewards:
+    # Should MFI tile rewards be randomized?
+    # If Split is chosen, the rare slot (more likely with lower Brave)
+    # will always have an item unavailable in shops while the common slot will only have shop items.
+    'off': 0
+    'on': 0
+    split: 0
+    weighted: 0
+    weighted_split: 50
+
   ###############
   # QOL Options #
   ###############
@@ -250,6 +290,30 @@
     normal: 0
     double: 50
     quadruple: 0
+
+  vanilla_changes:
+    # Controls changes from vanilla.
+    # SwordskillUsersSwordOnly locks swordskill users like Orlandu and Beowulf to swords and knightswords.
+    #   Most impactful for enemy randomizer.
+    # MateriaBladeNotRequired changes Limit to require any sword, not specifically the Materia Blade.
+    # RandomMagicHitsIncreased increases the number of hits of Truth, Un-Truth, and Holy Bracelet to ten, like in WotL/TIC.
+    # Improved Shops adds in an early katana and spear as well as adding guns to trade cities.
+    ['MateriaBladeNotRequired', 'RandomMagicHitsIncreased', 'ImprovedShops']
+
+  ###########################
+  # Transmooglifier Options #
+  ###########################
+  enable_transmooglifier:
+    # Enables Transmooglifier, which gives Rad, Alicia, and Lavian new special jobs.
+    # Check the Transmooglifier wiki page at https://github.com/Rosalie-A/Archipelago/wiki/FFT-Transmooglifier-Reference
+    # for more info.
+    'false': 0
+    'true': 50
+
+  transmooglifier_options:
+    # Which jobs are options for Transmooglifier. If fewer than three, the remainder will be picked at random.
+    ['Berserker', 'Red Mage', 'Testudo', 'Hunter', 'Time Master', 'Librarian', 'Dark Magician', 'Vampire Lord', 'Sage']
+
   
   triggers:
   - option_category: null
