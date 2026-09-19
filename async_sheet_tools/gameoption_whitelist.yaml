@@ -1090,6 +1090,24 @@ Luigi's Mansion:
     - Spookiness
     - EnergyLink
     - Trap Percentage
+Manic Miners:
+    - Victory Condition
+    - Target Level Count
+    - Available Levels
+    - Locked Coordinates
+    - Coordinates Required
+    - Target Times Are Locations
+    - Target Time Difficulty
+    - Crystal Targets Are Locations
+    - Buildings Are Items
+    - Items Are Items
+    - Vehicles Are Items
+    - Progressive Items
+    - Miner Cap
+    - Campaign Selection LRR
+    - Campaign Selection LRRR
+    - Campaign Selection LRRC
+    - Campaign Selection BAZ
 Mario & Luigi Superstar Saga:
     - Mario & Luigi Superstar Saga
     - Locations
