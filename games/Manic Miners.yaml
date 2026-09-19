@@ -1,17 +1,4 @@
-﻿name: ManicMiners-{number}
-
-description: Manic Miners - Big Async
-
-game: Manic Miners
-requires:
-  version: 0.6.7 # Version of Archipelago required for this yaml to work as expected.
-  game:
-    Manic Miners: 1.5.1 # Version of the world required for this yaml to work as expected.
-
 Manic Miners:
-
-  progression_balancing: 0
-  accessibility: 'full'
 
   ###################
   # Level Selection #
@@ -246,41 +233,10 @@ Manic Miners:
     'false': 0
     'true': 50
 
-  ###########################
-  # Item & Location Options #
-  ###########################
-  local_items:
-    # Forces these items to be in their native world.
-    []
-
-  non_local_items:
-    # Forces these items to be outside their native world.
-    []
-
-  start_inventory:
-    # Start with the specified amount of these items. Example: "Bomb: 1"
-    {}
-
-  start_hints:
-    # Start with these item's locations prefilled into the ``!hint`` command.
-    []
-
-  start_location_hints:
-    # Start with these locations and their item prefilled into the ``!hint`` command.
-    []
-
-  exclude_locations:
-    # Prevent these locations from having an important item.
-    []
-
-  priority_locations:
-    # Prevent these locations from having an unimportant item.
-    []
-
-  item_links:
-    # Share part of your item pool with other players.
-    []
-
-  plando_items:
-    # Generic items plando.
-    []
+  triggers:
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: MagicMiners-{player}
