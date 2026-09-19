@@ -1,4 +1,5 @@
 Celeste (Open World):
+  progression_balancing: 0
   goal_area:
     the_summit_a: 20
     core_a: 10
@@ -6,7 +7,7 @@ Celeste (Open World):
     farewell: 15
   lock_goal_area: true
   goal_area_checkpointsanity: false
-  total_strawberries: random-range-100-150
+  total_strawberries: random-range-70-100
   strawberries_required_percentage: random-range-70-90
   junk_fill_percentage: 0
   checkpointsanity: random
@@ -17,10 +18,21 @@ Celeste (Open World):
   gemsanity: random
   carsanity: random
   roomsanity:
-    "false": 3
+    "false": 15
     "true": 1
+  split_interactables:
+    none: 15
+    per_level: 20
+  movement_shuffle:
+    "true": 1
+    "false": 3
+  logic_difficulty:
+    developer_intended: 3
+    vanilla_movement: 1
+    assist_mode: 0
   include_goldens: false
   include_farewell: none
+  reduce_raspberries: true
 
   local_items:
     - Strawberry
@@ -31,6 +43,7 @@ Celeste (Open World):
       option_result: the_summit_a
       options:
         Celeste (Open World):
+          logic_difficulty: developer_intended
           include_core: false
           include_b_sides: false
           include_c_sides: false
@@ -42,8 +55,8 @@ Celeste (Open World):
         Celeste (Open World):
           include_core: false
           include_b_sides:
-            "false": 3
-            "true": 2
+            "false": 4
+            "true": 1
           include_c_sides:
             "false": 2
             "true": 1
@@ -56,7 +69,7 @@ Celeste (Open World):
             "false": 1
             "true": 2
           include_b_sides:
-            "false": 2
+            "false": 5
             "true": 3
           include_c_sides:
             "false": 1
@@ -71,7 +84,7 @@ Celeste (Open World):
             "true": 4
           include_b_sides:
             "false": 1
-            "true": 3
+            "true": 1
           include_c_sides:
             "false": 1
             "true": 3
@@ -80,15 +93,35 @@ Celeste (Open World):
       option_result: "true"
       options:
         Celeste (Open World):
-          roomsanity:
-            "false": 1
-            "true": 3
+          roomsanity: "true"
     - option_category: Celeste (Open World)
       option_name: roomsanity
       option_result: "true"
       options:
         Celeste (Open World):
-          total_strawberries: random-range-150-202
+          total_strawberries: random-range-170-202
+          split_interactables:
+            none: 0
+            per_level: 10
+            per_side: 0
+            per_level_and_side: 20
+    - option_category: Celeste (Open World)
+      option_name: movement_shuffle
+      option_result: "true"
+      options:
+        Celeste (Open World):
+          dash_shuffle:
+            unified: 0
+            cardinal_loose: 10
+            cardinal_restrictive: 5
+            octal: 5
+          climb_shuffle: # NOTE: This is always off on the Developed Intended difficulty
+            none: 2
+            unified: 2
+            split: 1
+          crouch_shuffle:
+            'false': 1
+            'true': 0
     - option_category: null
       option_name: name
       option_result: Player{player}
