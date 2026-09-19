@@ -1,0 +1,53 @@
+A Space Archipelago:
+
+  goal:
+    warp_sling_array: 1
+    megastructures: 1
+
+  start_planet:
+    riger_2: 1
+    riger_4: 1
+    both: 1
+
+  soft_logic:
+    'true': 50
+
+  double_important_items:
+    'true': 50
+
+  min_tech_cost:
+    5: 50
+
+  max_tech_cost:
+    500000: 50
+
+  min_special_tech_cost:
+    5: 50
+    
+  max_special_tech_cost:
+    100000: 50
+
+  research_tree_layout:
+    individual_trees: 1
+    single_tree: 1
+    layered_tree: 1
+
+  research_with_general_science:
+    10: 50
+
+  tech_cost_bias:
+    3: 50
+
+  early_construction_slots:
+    1: 50
+    
+  early_colony_ship:
+    'true': 50
+ 
+  triggers:
+  - option_category: null
+    option_name: name
+    option_result: Player{player}
+    options:
+      null:
+        name: ASpaceAP-{player}
