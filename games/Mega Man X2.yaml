@@ -45,15 +45,17 @@
     chaotic: 10
 
   # Should not take very long for them to appear
-  x_hunters_medal_count: random-range-1-5
+  x_hunters_arena_medal_count: random-range-1-3
 
   # Only unlock fortress via medals or an access code
-  base_openess:
-    item: 50
-    medals: 50
-  x_hunter_base_medal_count: 0
+  x_hunter_base_open:
+    item: 40
+    medals: 60
+  x_hunter_base_medal_count: random-high
   x_hunter_base_boss_rematch_count: random-range-1-8
-  x_hunter_base_level_unlock: random
+  x_hunter_base_level_unlock:
+    vanilla: 60
+    all_open: 40
 
   triggers:
     - option_category: null
