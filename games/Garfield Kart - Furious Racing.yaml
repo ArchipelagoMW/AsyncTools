@@ -37,12 +37,10 @@
   randomize_hats:
     'off': 5
     progressive: 2
-    combine_tiers: 1
 
   randomize_spoilers:
     'off': 5
     progressive: 2
-    combine_tiers: 1
 
   stat_randomizer:
     'off': 5
