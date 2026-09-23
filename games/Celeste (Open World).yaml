@@ -122,6 +122,15 @@ Celeste (Open World):
           crouch_shuffle:
             'false': 1
             'true': 0
+    - option_category: Celeste (Open World)
+      option_name: logic_difficulty
+      option_result: developer_intended
+      options: 
+        Celeste (Open World):
+         climb_shuffle: 
+            none: 1
+            unified: 0
+            split: 0
     - option_category: null
       option_name: name
       option_result: Player{player}
