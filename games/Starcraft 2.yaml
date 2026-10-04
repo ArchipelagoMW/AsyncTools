@@ -74,7 +74,7 @@ Starcraft 2:
     grid: 30
     golden_path: 35
     hopscotch: 15
-    Blitz: 20
+    blitz: 20
   enabled_campaigns:
     - 'Wings of Liberty'
     - 'Prophecy'
