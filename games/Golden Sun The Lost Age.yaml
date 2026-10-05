@@ -18,13 +18,18 @@
   ########
   # Goal #
   ########
-  goal:
-    ['Doom Dragon', 'Reunion', 'Djinn Hunt']
-  random_goals: 1
-  djinn_hunt_count: random-range-50-60
-  summon_hunt_count: 10
-  #summon_hunt_count setting is ignored as it is not a goal
+  
+  # trigger for clarity on the options sheet
+  goal_trigger:
+    doom_dragon: 33
+    reunion: 33
+    djinn_hunt: 33
 
+  goal: []
+  random_goals: 1
+  djinn_hunt_count: 1
+  summon_hunt_count: 1
+  
   #####################
   # Logic Adjustments #
   #####################
@@ -129,9 +134,31 @@
   coins_filler_weight: 10
   common_consumable_filler_weight: 10
   triggers:
-  - option_category: null
-    option_name: name
-    option_result: Player{player}
-    options:
-      null:
-        name: GoldenSun-{player}
+    - option_category: Golden Sun The Lost Age
+      option_name: goal_trigger
+      option_result: doom_dragon
+      options:
+        Golden Sun The Lost Age:
+          goal: ['Doom Dragon']
+            
+    - option_category: Golden Sun The Lost Age
+      option_name: goal_trigger
+      option_result: reunion
+      options:
+        Golden Sun The Lost Age:
+          goal: ['Reunion']
+            
+    - option_category: Golden Sun The Lost Age
+      option_name: goal_trigger
+      option_result: djinn_hunt
+      options:
+        Golden Sun The Lost Age:
+          goal: ['Djinn Hunt']
+          djinn_hunt_count: random-range-50-60
+          
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: GoldenSun-{player}
