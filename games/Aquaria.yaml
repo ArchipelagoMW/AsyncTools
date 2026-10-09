@@ -58,8 +58,8 @@
     'true': 1
 
   blind_goal:
-    'false': 2
-    'true': 1
+    'false': 1
+    'true': 0
 
   infinite_hot_soup:
     'false': 1
