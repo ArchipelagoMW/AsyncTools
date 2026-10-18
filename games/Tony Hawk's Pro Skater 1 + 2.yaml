@@ -113,6 +113,8 @@ Tony Hawk's Pro Skater 1 + 2:
     Tiny Trap: 1
     Tunnel Vision Trap: 1
     Wide Trap: 1
+  local_items: 
+    - Secret Tape
   triggers:
     - option_category: null
       option_name: name
