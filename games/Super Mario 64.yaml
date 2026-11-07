@@ -9,7 +9,7 @@ Super Mario 64:
     false: 5
     true: 2
   enable_move_rando:
-    true: 1
+    true: 3
     false: 1
   enable_locked_paintings:
     false: 1
