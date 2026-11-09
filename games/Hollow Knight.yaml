@@ -72,12 +72,14 @@ Hollow Knight:
     grub_hunt: 15
     godhome: 7
     godhome_flower: 3
-  GrubHuntGoal: random-range-middle-25-35
+  GrubHuntGoal: 
+    random-range-middle-25-35: 70
+    46: 30
   WhitePalace: 
-    exclude: 5
+    exclude: 40
     kingfragment: 0
-    nopathofpain: 3
-    include: 1
+    nopathofpain: 30
+    include: 30
   StartingGeo: 0
   DeathLink: off
   ExtraPlatforms: 'true'
@@ -146,6 +148,19 @@ Hollow Knight:
       Hollow Knight:
         +local_items:
           - Grubs
+  - option_category: Hollow Knight
+    option_name: WhitePalace
+    option_result: include
+    options:
+      Hollow Knight:
+        RandomizeJournalEntries: 'true'
+        RandomizeSoulTotems: 'true'
+  - option_category: Hollow Knight
+    option_name: WhitePalace
+    option_result: nopathofpain
+    options:
+      Hollow Knight:
+        RandomizeSoulTotems: 'true'
   
   - option_category: Hollow Knight
     option_name: skips
