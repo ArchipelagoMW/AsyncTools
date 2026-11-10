@@ -34,8 +34,9 @@ Celeste (Open World):
   include_farewell: none
   reduce_raspberries: true
 
-  local_items:
-    - Strawberry
+  # Keeping this here just incase
+  # local_items:
+  #   - Strawberry
 
   triggers:
     - option_category: Celeste (Open World)
