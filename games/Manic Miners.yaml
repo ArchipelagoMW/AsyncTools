@@ -156,18 +156,18 @@ Manic Miners:
   #########
   buildings_are_items:
     # Whether Buildings must be found in the multiworld to be unlocked.
-    'false': 10
-    'true': 90
+    'false': 0
+    'true': 50
 
   items_are_items:
     # Whether Items (Electric Fences and Dynamite) must be found in the multiworld to be unlocked.
-    'false': 10
-    'true': 90
+    'false': 0
+    'true': 50
 
   vehicles_are_items:
     # Whether Vehicles must be found in the multiworld to be unlocked.
-    'false': 10
-    'true': 90
+    'false': 0
+    'true': 50
 
   progressive_items:
     # Affects behaviour of unlockable Buildings/Items/Vehicles.
