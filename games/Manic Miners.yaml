@@ -102,7 +102,6 @@ Manic Miners:
     # Minimum value is 0
     # Maximum value is 108
     0: 50
-    random-range-50-108: 50
 
   coordinates_in_pool:
     # Sets the number of Transporter Coordinates items shuffled into the item pool, if Locked Coordinates are disabled. 
