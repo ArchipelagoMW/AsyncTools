@@ -239,4 +239,4 @@ Manic Miners:
       option_result: Player{player}
       options:
         null:
-          name: MagicMiners-{player}
+          name: ManicMiners-{player}
