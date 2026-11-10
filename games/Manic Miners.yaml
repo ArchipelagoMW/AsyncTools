@@ -11,8 +11,7 @@ Manic Miners:
     # Minimum value is 10
     # Maximum value is 108
     # 25: 50
-    50: 50
-    random-range-50-108: 50
+    108: 50
 
   available_levels_at_start:
     # How many levels are available initially to the player.
@@ -85,7 +84,7 @@ Manic Miners:
     # You can define additional values between the minimum and maximum values.
     # Minimum value is 1
     # Maximum value is 108
-    random-range-25-75: 50
+    random-range-60-108: 50
 
   locked_coordinates:
     # Only relevant if Victory Condition is set to "Coordinate Hunt". 
