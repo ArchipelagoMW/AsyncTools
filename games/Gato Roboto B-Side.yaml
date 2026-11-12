@@ -1,0 +1,36 @@
+﻿Gato Roboto B-Side:
+  accessibility: full
+  use_smallmech:
+    'false': 1
+    'true': 1
+  use_watermech:
+    'false': 1
+    'true': 1
+  gato_tech:
+    medium: 8
+    hard: 2
+    vanilla_expert: 0
+  nexus_start:
+    'false': 1
+    'true': 1
+  aqueduct_goal: random
+  heatercore_goal: random
+  ventilation_goal: random
+  deathlink: 'false'
+  loresanity:
+    'false': 1
+    'true': 9
+  bosssanity:
+    'false': 2
+    'true': 3
+  local_start: 'false'    
+  glitched_logic_display: all_glitches
+  health_filler: 'false'
+  triggers:
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: GatoRoboto-{player}
+
