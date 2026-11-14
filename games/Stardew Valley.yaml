@@ -171,8 +171,8 @@ Stardew Valley:
     'false': 80
     'true': 20
   eatsanity_fish:
-    'false': 50
-    'true': 50
+    'false': 80
+    'true': 20
   eatsanity_artisan:
     'false': 70
     'true': 30
