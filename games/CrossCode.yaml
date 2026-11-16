@@ -37,7 +37,6 @@
     per_item_type: 10
     per_shop: 10
     per_slot: 5
-  # This option expands sphere 1 and makes grinding accessible immediately. Enable or weight if desired.
   start_with_green_leaf_shade: false
   small_key_shuffle:
     own_world: 10
@@ -56,6 +55,28 @@
   bronze_chest_lock_weight: random-high
   silver_chest_lock_weight: random-low
   gold_chest_lock_weight: random-low
+  trap_weights:
+    "Artless Trap": 10
+    "Bomb Trap": 20
+    "Burglar's Rope Trap": 5
+    "Clumsy Trap": 20
+    "Combo Breaker Trap": 5
+    "Death Trap": 10
+    "Drunk Trap": 20
+    "Element Swap Trap": 10
+    "Forgetfulness Trap": 5
+    "Full Course Trap": 10
+    "Laser Of Doom Trap": 15
+    "Naked Trap": 5
+    "Overload Trap": 10
+    "SP Trap": 10
+    "Slip Trap": 20
+    "Voidout Trap": 5
+    "Winded Trap": 5
+    "Zoom Trap": 20
+  trap_percentage:
+    0: 20
+    random-range-10-30: 80
 
   # non-standard option for triggers
   x_weight_pools:
@@ -75,13 +96,6 @@
           legendary_pool_weight: random-low
           consumable_weight: random
           drop_weight: random
-    - option_category: CrossCode
-      option_name: goal
-      option_result: creator
-      options:
-        CrossCode:
-          # This goal is known to be broken with the DLC in apworld 0.9.1
-          enable_dlc: false
     - option_category: CrossCode
       option_name: goal
       option_result: monkey
