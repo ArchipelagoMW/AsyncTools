@@ -5,6 +5,7 @@
     creator: 35
     monkey: 25
     observatory: 10
+    facility_x: 10
     diorbis: 30
   closed_gaia: random
   rhombus_hub_unlock:
@@ -101,7 +102,7 @@
       option_result: monkey
       options:
         CrossCode:
-          # This is the short goal, so disable the DLC to keep it shorter
+          # This a the short goal, so disable the DLC to keep it shorter
           enable_dlc: false
     - option_category: CrossCode
       option_name: goal
@@ -125,6 +126,15 @@
             - Broken Sword
             - Broken Shield
             - Broken Gauntlet
+    - option_category: CrossCode
+      option_name: goal
+      option_result: facility_x
+      options:
+        CrossCode:
+          # This is a short goal, so disable the DLC to keep it shorter
+          enable_dlc: false
+          # This goal can only be selected if quest randomization is on
+          quest_rando: true
     - option_category: null
       option_name: name
       option_result: Player{player}
