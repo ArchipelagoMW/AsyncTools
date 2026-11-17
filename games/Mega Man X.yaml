@@ -146,3 +146,6 @@
       options:
         Mega Man X:
           sigma_open: []
+          boss_weakness_strictness:
+            weakness_and_upgraded_buster: 40
+            only_weakness: 60
