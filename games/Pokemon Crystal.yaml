@@ -634,8 +634,8 @@ Pokemon Crystal:
     #
     # WARNING: This option is dumb, it can add over 800 locations and over 800 useless filler items
     'off': 80
-    one_per_area: 15
-    full: 5
+    one_per_area: 19
+    full: 1
 
   randomize_item_values:
     # Randomizes the base value of items, this affects sell price and can affect buy price depending on other options
