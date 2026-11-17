@@ -1116,9 +1116,9 @@ Pokemon Crystal:
     # - Vanilla: Type matchups are unchanged
     # - Shuffle: Shuffles type matchups around, keeping the same number of each possible matchup
     # - Completely Random: Generates a random matchup for each type pair. WARNING: This can result in a lot of immunities
-    vanilla: 90
+    vanilla: 95
     shuffle: 5
-    completely_random: 5
+    completely_random: 0
 
   physical_special_split:
     # Sets how moves are determined to be Physical or Special
