@@ -61,9 +61,9 @@ EarthBound:
     'false': 70
     'true': 10
   shop_randomizer:
-    'off': 35
-    'local_filler': 15
-    'shopsanity': 50
+    'off': 50
+    'local_filler': 25
+    'shopsanity': 25
   dungeon_shuffle:
     'false': 75
     'true': 25
