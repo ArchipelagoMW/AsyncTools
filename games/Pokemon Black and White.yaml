@@ -157,6 +157,7 @@ Pokemon Black and White:
 
   dexsanity: 0
   seensanity: 0
+  formsanity: 0
   shinysanity: 0
   dexcountsanity:
     Leniency: 0
@@ -164,12 +165,11 @@ Pokemon Black and White:
     Steps: 1
   t_pokemon_sanities:
     none: 50
-    dexsanity: 10
+    dexsanity: 15
     seensanity: 10
-    shinysanity: 7
-    dexcountsanity: 10
-    mixedsanity: 10
-    seeninsanity: 3
+    shinysanity: 5
+    dexcountsanity: 15
+    mixedsanity: 5
 
   season_control:
     vanilla: 5
@@ -278,13 +278,13 @@ Pokemon Black and White:
       option_result: dexsanity
       options:
         Pokemon Black and White:
-          dexsanity: random-range-0-200
+          dexsanity: random-range-0-150
     - option_category: Pokemon Black and White
       option_name: t_pokemon_sanities
       option_result: seensanity
       options:
         Pokemon Black and White:
-          seensanity: random-range-0-300
+          seensanity: random-range-0-200
           formsanity:
             0: 20
             random-range-0-72: 10
@@ -293,7 +293,7 @@ Pokemon Black and White:
       option_result: shinysanity
       options:
         Pokemon Black and White:
-          shinysanity: random-range-0-100
+          shinysanity: random-range-0-50
     - option_category: Pokemon Black and White
       option_name: t_pokemon_sanities
       option_result: dexcountsanity
@@ -301,31 +301,21 @@ Pokemon Black and White:
         Pokemon Black and White:
           dexcountsanity:
             Leniency: random-range-0-10
-            Maximum: random-range-0-250
+            Maximum: random-range-0-200
             Steps: random-range-2-5
     - option_category: Pokemon Black and White
       option_name: t_pokemon_sanities
       option_result: mixedsanity
       options:
         Pokemon Black and White:
-          dexsanity: random-range-0-60
-          seensanity: random-range-0-100
+          dexsanity: random-range-0-40
+          seensanity: random-range-0-50
           shinysanity: random-range-0-10
           dexcountsanity:
             Leniency: random-range-0-10
             Maximum: random-range-0-50
             Steps: random-range-1-2
           formsanity: random-range-0-10
-    - option_category: Pokemon Black and White
-      option_name: t_pokemon_sanities
-      option_result: seeninsanity
-      options:
-        Pokemon Black and White:
-          seensanity: 649
-          formsanity: 72
-          +randomize_wild_pokemon:
-            - Ensure all obtainable
-          modify_encounter_rates: try_normalized
 
     - option_category: Pokemon Black and White
       option_name: version
