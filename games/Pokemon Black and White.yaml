@@ -1,65 +1,206 @@
-﻿Pokemon Black and White:
-  version:
-    black: 10
-    white: 10
+Pokemon Black and White:
+  # This game has a lot of custom handling for most of the options.
+  # Everything in here has to be written exactly that way.
+  # See https://github.com/SparkyDaDoggo/Archipelago/blob/main/worlds/pokemon_bw/docs/options%20guides.md for more information.
+
+  version: dynamic
 
   goal:
-    ghetsis: 30
-    champion: 10
-    cynthia: 10
-    cobalion: 10
-    tmhm_hunt: 5
-    seven_sages_hunt: 10
-    legendary_hunt: 15
+  - [{ghetsis: 20, champion: 10, cynthia: 10, cobalion: 10, tmhm_hunt: 5, seven_sages_hunt: 10, legendary_hunt: 10}]
+  - [{ghetsis: 20, champion: 10, cynthia: 10, cobalion: 10, tmhm_hunt: 5, seven_sages_hunt: 10, legendary_hunt: 10}]
+  - [{ghetsis: 20, champion: 10, cynthia: 10, cobalion: 10, tmhm_hunt: 5, seven_sages_hunt: 10, legendary_hunt: 10}]
+  - [{ghetsis: 20, champion: 10, cynthia: 10, cobalion: 10, tmhm_hunt: 5, seven_sages_hunt: 10, legendary_hunt: 10}]
+  - [{ghetsis: 20, champion: 10, cynthia: 10, cobalion: 10, tmhm_hunt: 5, seven_sages_hunt: 10, legendary_hunt: 10}]
+  - [{ghetsis: 20, champion: 10, cynthia: 10, cobalion: 10, tmhm_hunt: 5, seven_sages_hunt: 10, legendary_hunt: 10}]
+  - [{ghetsis: 20, champion: 10, cynthia: 10, cobalion: 10, tmhm_hunt: 5, seven_sages_hunt: 10, legendary_hunt: 10}]
+  - [[ghetsis, champion, cynthia], [ghetsis, null], [champion, null], [cynthia, null]]
+  - [[ghetsis, champion, cynthia, seven_sages_hunt, legendary_hunt], [ghetsis, null], [champion, null], [cynthia, null], [seven_sages_hunt, null], [legendary_hunt, null]]
+  - [[ghetsis, cobalion, cynthia], [ghetsis, null], [cobalion, null], [cynthia, null]]
+  - [[ghetsis, seven_sages_hunt, legendary_hunt], [ghetsis, null], [seven_sages_hunt, null], [legendary_hunt, null]]
 
-  # If any modifier is included, then always **Prevent rare encounters** alongside it
   randomize_wild_pokemon:
-    []
-  t_randomize_wild_pokemon_restrictions:
-    no_random: 10
-    none: 10
-    stats: 10
-    type: 10
-  t_randomize_wild_pokemon_merge:
-    true: 10
-    false: 10
+  - [Type themed areas, null]
+  - [Similar base stats, null]
+  - Prevent rare encounters
+  - {Merge phenomena: 3, null: 1}
+  - {Area 1 to 1: 2, Dungeon 1 to 1: 1, Global 1 to 1: 1, null: 4}
+  t_randomize_wild_pokemon:
+    vanilla: 5
+    randomized: 30
 
   randomize_trainer_pokemon:
-    []
+  - null: 15
+    'Shuffle gym leader types': 15
+    'Shuffle gym leader types, Themed gym trainers': 10
+    'Shuffle gym leader types, Themed gym trainers, Type themed': 5
+  - 'Prevent overpowered pokemon, Rivals keep starter': 5
+    'Similar base stats, Rivals keep starter': 20
+    'Force not underpowered, Force fully evolved, Evolve when possible': 10
   t_randomize_trainer_pokemon:
-    stats: 10
-    simple: 4
-    none: 10
+    vanilla: 5
+    randomized: 25
+
+  randomize_starter_pokemon:
+  - 'Only official starters, Type variety': 5
+    'Base with 2 evolutions, Type variety, Vanilla types, Similar base stats': 10
+    'Any base': 10
+    'Randomize': 10
+    null: 20
+
+  randomize_static_pokemon:
+  - null: 5
+    "Similar base stats, No legendaries, Split mimics, Split statues": 10
+    "Split mimics, Split statues": 10
+
+  randomize_gift_pokemon:
+  - null: 5
+    "Similar base stats, No legendaries, Any base, Split monkeys": 10
+    "Split monkeys": 10
+
+  randomize_legendary_pokemon:
+  - null: 5
+    "Similar base stats, Same type": 10
+    "Keep legendary": 10
+    "Keep legendary, No legendaries": 10
+    "Randomize": 15
 
   pokemon_randomization_adjustments:
-    Rare encounters threshold: 10
+    Force threshold: 36
+    Overpowered threshold: 500
+    Rare encounters threshold: 12
     Stats leniency: 30
+    Underpowered threshold: 400
+
+  randomize_base_stats:
+  - null: 20
+    'Follow evolutions': 4
+    'Random total': 2
+
+  randomize_evolutions:
+  - null: 125
+    'Every level, Looping evolution lines, Multiple pre-evolutions': 5
+    'Increasing stats, Multiple pre-evolutions': 5
+    'Increasing stats, Multiple pre-evolutions, Common type': 5
+    'Increasing stats, Multiple pre-evolutions, Follow type': 5
+    'Increasing stats, Multiple pre-evolutions, Looping evolution lines': 5
+
+  randomize_types:
+  - null: 285
+    'Randomize, Follow evolutions': 10
+    'Randomize, Force evolutions': 5
+  - null: 190
+    'Randomize, Mono only': 5
+    'Randomize, Dual only': 5
+  - null: 95
+    'Randomize, Usual combinations': 5
+  - null: 20
+    'Shuffle': 5
+
+  randomize_level_up_movesets:
+  - null: 10
+    'Start with 4, Keep levels and amount': 20
+    'Match types, Follow evolutions': 5
+    'Progressive power': 5
+
+  randomize_tm_hm_compatibility:
+  - null: 10
+    'Force all TMs, Force all HMs': 20
+    'Match types, Follow evolutions': 10
+    'Follow evolutions': 5
+
+  randomize_catch_rates:
+    []
+  t_randomize_catch_rates:
+    vanilla: 5
+    shuffle: 5
+    pidgey: 10
+
+  stats_randomization_adjustments:
+    Catch rates maximum: 255
+    Catch rates minimum: 3
+    Level up evo weight: 10
+    Levelup moves amount maximum: 15
+    Levelup moves amount minimum: 10
+    Maximum evo level: 100
+    Stats total maximum: 800
+    Stats total minimum: 200
+
+  randomize_move_data:
+  - null: 200
+    'Correlate power and PP, Shuffle power, Shuffle PP': 5
+    'Correlate power and PP, Shuffle power, Shuffle PP, Randomize type': 5
+    'Correlate power and PP, Randomize power, Randomize PP, Randomize type': 30
+    'Randomize power, Randomize PP, Randomize type, Randomize category, Randomize accuracy': 10
+
+  randomize_type_chart:
+  - Disable immunities: 1
+    Shuffle: 1
+    null: 14
+
+  move_data_randomization_adjustments:
+    Accuracy maximum: 100
+    Accuracy minimum: 70
+    Move power maximum: 150
+    Move power minimum: 10
+    Normal type probability: 10
+    PP maximum: 40
+    PP minimum: 5
 
   shuffle_badges:
-    shuffle: 10
+    shuffle: 5
     anything: 10
 
   shuffle_tm_hm:
     shuffle: 10
-    hm_with_badge: 10
-    anything: 10
+    hm_with_badge: 5
+    anything: 15
 
-  dexsanity:
-    0: 10
-    random-range-0-100: 10
+  dexsanity: 0
+  seensanity: 0
+  shinysanity: 0
+  dexcountsanity:
+    Leniency: 0
+    Maximum: 0
+    Steps: 1
+  t_pokemon_sanities:
+    none: 50
+    dexsanity: 10
+    seensanity: 10
+    shinysanity: 7
+    dexcountsanity: 10
+    mixedsanity: 10
+    seeninsanity: 3
 
   season_control:
-    vanilla: 10
+    vanilla: 5
     changeable: 10
     randomized: 10
 
+  modify_item_pool:
+  - - null
+    - "Useful filler, Ban bad filler"
+  - - null
+    - Useless key items
+
+  modify_logic:
+  - 'Require flash'
+  - ['Require Dowsing Machine', 'Require Dowsing Machine', null]
+  - ['Consider evolutions', null, null]
+  - ['Consider static pokemon', null, null]
+  - ['Consider form change', null, null]
+  - ['Consider trainers', null]
+
   adjust_levels:
-    ['Wild', 'Trainer']
+  - 'Trainer by distance'
+  - 'Wild by distance'
+  - ['Wild by sphere, Trainer by sphere, Tolerance 50', null]
 
   modify_encounter_rates:
-    vanilla: 20
-    try_normalized: 10
-    try_normalized_alt: 10
+    vanilla: 5
+    try_normalized: 5
+    try_normalized_alt: 5
+    one_per_method: 10
+    dexsanity_friendly: 20
 
   # Can be changed ingame anytime
   exp_multiplier: 2
@@ -68,161 +209,127 @@
     'false': 10
     'true': 10
 
+  replace_evo_methods:
+  - - null
+    - "Locations, Friendship, PID, Stats"
+
   master_ball_seller:
-    ['Ns Castle', 'PC', 'Cherens Mom', 'Undella Mansion seller']
-  t_master_ball_seller:
-    free: 10
-    big_range: 10
-    small_range: 10
+  - 'Ns Castle'
+  - 'AP Menu'
+  - 'Cherens Mom'
+  - 'Undella Mansion seller'
+  - ["Cost Free", "Cost Free, Cost 10000", "Cost 1000, Cost 3000"]
 
-  modify_item_pool:
-    []
-  t_modify_item_pool:
-    silly: 10
-    qol: 10
-    none: 10
-
-  modify_logic:
-    []
-  t_modify_logic_require:
+  funny_dialog:
     'false': 10
     'true': 10
-  t_modify_logic_consider:
-    with_evo: 10
-    simple: 10
-    none: 10
+
+  reusable_tms:
+    'on': 10
+    yes_please: 10
+    of_course: 10
+    im_not_a_masochist: 10
 
   start_inventory:
     Parcel: 1
-    Loot Sack: 1
 
   triggers:
     - option_category: Pokemon Black and White
-      option_name: t_randomize_wild_pokemon_restrictions
-      option_result: none
+      option_name: t_randomize_wild_pokemon
+      option_result: vanilla
       options:
         Pokemon Black and White:
-          +randomize_wild_pokemon:
-            - 'Prevent rare encounters'
-    - option_category: Pokemon Black and White
-      option_name: t_randomize_wild_pokemon_restrictions
-      option_result: stats
-      options:
-        Pokemon Black and White:
-          +randomize_wild_pokemon:
-            - 'Similar base stats'
-            - 'Prevent rare encounters'
-    - option_category: Pokemon Black and White
-      option_name: t_randomize_wild_pokemon_restrictions
-      option_result: type
-      options:
-        Pokemon Black and White:
-          +randomize_wild_pokemon:
-            - 'Type themed areas'
-            - 'Prevent rare encounters'
-    - option_category: Pokemon Black and White
-      option_name: t_randomize_wild_pokemon_merge
-      option_result: true
-      options:
-        Pokemon Black and White:
-          +randomize_wild_pokemon:
-            - 'Area 1 to 1'
-            - 'Merge phenomena'
-            - 'Prevent rare encounters'
+          randomize_wild_pokemon: []
+          modify_encounter_rates: try_normalized
 
     - option_category: Pokemon Black and White
       option_name: t_randomize_trainer_pokemon
-      option_result: stats
+      option_result: vanilla
       options:
         Pokemon Black and White:
-          +randomize_trainer_pokemon:
-            - 'Similar base stats'
+          randomize_trainer_pokemon: []
+
     - option_category: Pokemon Black and White
-      option_name: t_randomize_trainer_pokemon
-      option_result: simple
+      option_name: t_randomize_catch_rates
+      option_result: shuffle
       options:
         Pokemon Black and White:
-          +randomize_trainer_pokemon:
+          +randomize_catch_rates:
+            - 'Shuffle'
+    - option_category: Pokemon Black and White
+      option_name: t_randomize_catch_rates
+      option_result: pidgey
+      options:
+        Pokemon Black and White:
+          +randomize_catch_rates:
             - 'Randomize'
+          stats_randomization_adjustments:
+            Catch rates maximum: 255
+            Catch rates minimum: 255
+            Level up evo weight: 10
+            Levelup moves amount maximum: 15
+            Levelup moves amount minimum: 10
+            Maximum evo level: 100
+            Stats total maximum: 800
+            Stats total minimum: 200
 
     - option_category: Pokemon Black and White
-      option_name: t_master_ball_seller
-      option_result: free
+      option_name: t_pokemon_sanities
+      option_result: dexsanity
       options:
         Pokemon Black and White:
-          +master_ball_seller:
-            - 'Cost Free'
+          dexsanity: random-range-0-200
     - option_category: Pokemon Black and White
-      option_name: t_master_ball_seller
-      option_result: big_range
+      option_name: t_pokemon_sanities
+      option_result: seensanity
       options:
         Pokemon Black and White:
-          +master_ball_seller:
-            - 'Cost Free'
-            - 'Cost 10000'
+          seensanity: random-range-0-300
+          formsanity:
+            0: 20
+            random-range-0-72: 10
     - option_category: Pokemon Black and White
-      option_name: t_master_ball_seller
-      option_result: small_range
+      option_name: t_pokemon_sanities
+      option_result: shinysanity
       options:
         Pokemon Black and White:
-          +master_ball_seller:
-            - 'Cost 1000'
-            - 'Cost 3000'
-
+          shinysanity: random-range-0-100
     - option_category: Pokemon Black and White
-      option_name: t_modify_item_pool
-      option_result: silly
+      option_name: t_pokemon_sanities
+      option_result: dexcountsanity
       options:
         Pokemon Black and White:
-          +modify_item_pool:
-            - 'Useless key items'
+          dexcountsanity:
+            Leniency: random-range-0-10
+            Maximum: random-range-0-250
+            Steps: random-range-2-5
     - option_category: Pokemon Black and White
-      option_name: t_modify_item_pool
-      option_result: qol
+      option_name: t_pokemon_sanities
+      option_result: mixedsanity
       options:
         Pokemon Black and White:
-          +modify_item_pool:
-            - 'Useful filler'
-            - 'Ban bad filler'
-
+          dexsanity: random-range-0-60
+          seensanity: random-range-0-100
+          shinysanity: random-range-0-10
+          dexcountsanity:
+            Leniency: random-range-0-10
+            Maximum: random-range-0-50
+            Steps: random-range-1-2
+          formsanity: random-range-0-10
     - option_category: Pokemon Black and White
-      option_name: t_modify_logic_require
-      option_result: true
+      option_name: t_pokemon_sanities
+      option_result: seeninsanity
       options:
         Pokemon Black and White:
-          +modify_logic:
-            - 'Require Dowsing Machine'
-            - 'Require flash'
-    - option_category: Pokemon Black and White
-      option_name: t_modify_logic_consider
-      option_result: with_evo
-      options:
-        Pokemon Black and White:
-          +modify_logic:
-            - 'Consider evolutions'
-            - 'Consider static pokemon'
-            - 'Consider form change'
-          dexsanity:
-            0: 10
-            random-range-0-30: 10
-    - option_category: Pokemon Black and White
-      option_name: t_modify_logic_consider
-      option_result: simple
-      options:
-        Pokemon Black and White:
-          +modify_logic:
-            - 'Consider static pokemon'
-            - 'Consider form change'
+          seensanity: 649
+          formsanity: 72
+          +randomize_wild_pokemon:
+            - Ensure all obtainable
+          modify_encounter_rates: try_normalized
 
     - option_category: Pokemon Black and White
       option_name: version
-      option_result: black
+      option_result: dynamic
       options:
         null:
-          name: PokeBlack-{player}
-    - option_category: Pokemon Black and White
-      option_name: version
-      option_result: white
-      options:
-        null:
-          name: PokeWhite-{player}
+          name: PokeBW-{player}
