@@ -38,7 +38,7 @@
     per_item_type: 10
     per_shop: 10
     per_slot: 5
-  start_with_green_leaf_shade: false
+  start_with_green_leaf_shade: true
   small_key_shuffle:
     own_world: 10
     any_world: 5
