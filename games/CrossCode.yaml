@@ -102,7 +102,7 @@
       option_result: monkey
       options:
         CrossCode:
-          # This a the short goal, so disable the DLC to keep it shorter
+          # This is a short goal, so disable the DLC to keep it shorter
           enable_dlc: false
     - option_category: CrossCode
       option_name: goal
