@@ -73,13 +73,13 @@ Hollow Knight:
     godhome: 7
     godhome_flower: 3
   GrubHuntGoal: 
-    random-range-middle-25-35: 70
+    random-range-high-25-40: 70
     46: 30
   WhitePalace: 
-    exclude: 40
+    exclude: 45
     kingfragment: 0
-    nopathofpain: 30
-    include: 30
+    nopathofpain: 35
+    include: 20
   StartingGeo: 0
   DeathLink: off
   ExtraPlatforms: 'true'
@@ -137,13 +137,6 @@ Hollow Knight:
   - option_category: Hollow Knight
     option_name: Goal
     option_result: grub_hunt
-    options:
-      Hollow Knight:
-        +local_items:
-          - Grubs
-  - option_category: Hollow Knight
-    option_name: Goal
-    option_result: any
     options:
       Hollow Knight:
         +local_items:
