@@ -157,6 +157,10 @@
       options:
         Mega Man X3:
           doppler_open: []
+          doppler_lab_3_boss_rematch_count: random-range-4-8
+          boss_weakness_strictness: 
+            weakness_and_upgraded_buster: 40
+            only_weakness: 60
 
     - option_category: Mega Man X3
       option_name: vile_openess
