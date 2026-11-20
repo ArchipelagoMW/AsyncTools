@@ -670,13 +670,6 @@ Pokemon Crystal:
     "false": 50
     "true": 50
 
-  pokemon_request_logic:
-    - _Random
-
-  filler_trap_percentage:
-    "0": 80
-    random-range-1-20: 20
-
   pokemon_request_logic: ["_Random"]
 
   filler_trap_percentage:
