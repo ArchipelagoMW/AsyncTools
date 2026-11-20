@@ -1832,7 +1832,7 @@ Pokemon Crystal:
   ###########################
   local_items:
     # Forces these items to be in their native world.
-    []
+    ["Alph Puzzle Tile"]
 
   non_local_items:
     # Forces these items to be outside their native world.
