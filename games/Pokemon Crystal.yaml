@@ -1016,10 +1016,10 @@ Pokemon Crystal:
     #         Super Rod: 40%/30%/20%/10%
     #     Bug Catching Contest (unchanged): 20%/20%/10%/10%/10%/10%/5%/5%/5%/5%
     # Equal sets all encounter slots to have (almost) equal probability.
-    vanilla: 50
-    remove_one_percents: 50
-    balanced: 50
-    equal: 50
+    vanilla: 0
+    remove_one_percents: 40
+    balanced: 60
+    equal: 60
 
   ############
   # Starters #
