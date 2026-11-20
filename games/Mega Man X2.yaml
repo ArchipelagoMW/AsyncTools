@@ -98,3 +98,13 @@
             1: 60
             2: 35
             3: 5
+
+    - option_category: Mega Man X2
+      option_name: x_hunter_base_open
+      option_result: item
+      options:
+        Mega Man X2:
+          boss_weakness_strictness:  
+              weakness_and_upgraded_buster: 40
+              only_weakness: 60
+          x_hunter_base_boss_rematch_count: random-range-4-8
