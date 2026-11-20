@@ -344,6 +344,11 @@ Celeste (Open World):
     - Include Core
     - Include B-Sides
     - Include C-Sides
+    - Dash Shuffle
+    - Climb Shuffle
+    - Crouch Shuffle
+    - Split Interactables
+    - Logic Difficulty
 Celeste 64:
     - Celeste 64
     - Locations
@@ -402,6 +407,53 @@ CrossCode:
     - Legendary Pool Weight
     - Consumable Weight
     - Drop Weight
+Crystal Project:
+    - Crystal Project
+    - locations
+    - Name
+    - Goal
+    - Job count that unlocks Astley's throne room
+    - Clamshells needed to win
+    - Extra Clamshells in the pool
+    - Job Rando
+    - Starting Job Quantity
+    - Disable Sparks
+    - Kill Bosses Mode
+    - Shopsanity
+    - Regionsanity
+    - Regionsanity Starter Region Minimum Level
+    - Regionsanity Starter Region Maximum Level
+    - Home Point Hustle
+    - Regions to include in game
+    - Progressive Mount Mode
+    - Starting Level
+    - Level Gating
+    - Level Compared to Enemies
+    - Progressive Level Size
+    - Max Level
+    - Starting Passive Points
+    - Maximum Passive Points
+    - Passive Point Boost Size
+    - Key Mode
+    - Obscure Routes
+    - Hop To It
+    - Skip Quizard Quiz
+    - Prioritize Crystals
+    - Automatically Spend LP
+    - Automatically Equip Passives
+    - Easy Leveling
+    - Progressive Equipment
+    - Begin with Treasure Finder
+    - Begin with Area Maps
+    - Fill Full Map
+    - Skip Intro Crawl
+    - Include Summons in the item pool
+    - Include Scholar Abilities in the item pool
+    - Trap Likelihood
+    - Item Info Mode
+    - Percent of checks that must be collected to earn info on treasure and store icons.
+    - Randomize Music
+    - Use Mods
 Dark Cloud 1:
     - Dark Cloud 1
     - locations
@@ -671,6 +723,7 @@ Factorio - Space Age Without Space:
     - Free Samples Quality
     - Recipe Time
     - CraftSanity
+    - Free Power
     - World Generation
 Faxanadu:
     - Faxanadu
@@ -741,10 +794,16 @@ Funi Raccoon Game:
     - Name
     - Goal
     - Eurosanity
-    - Gemsanity
-    - Catsanity
+    - Jewelsanity
     - Hatsanity
     - Dumpster Weight Blocking
+    - Lugh Quest Locking
+    - Trap Toggle
+    - Museum Threshold
+    - Act 2 Threshold
+    - Act 3 Threshold
+    - Act 4 Threshold
+    - Raccoon Color Randomization
 "Garfield Kart - Furious Racing":
     - "Garfield Kart - Furious Racing"
     - Locations
@@ -783,6 +842,7 @@ Golden Sun The Lost Age:
     - Golden Sun The Lost Age
     - Locations
     - Name
+    - Goal
     - Djinn Hunt Count
     - Item Shuffle
     - Shortcut Mars Lighthouse
@@ -1105,6 +1165,9 @@ Luigi's Mansion:
     - EnergyLink
     - Trap Percentage
 Manic Miners:
+    - Manic Miners
+    - Locations
+    - Name
     - Victory Condition
     - Target Level Count
     - Locked Coordinates
@@ -1113,10 +1176,10 @@ Manic Miners:
     - Crystal Targets Are Locations
     - Progressive Items
     - Miner Cap
-    - Campaign Selection LRR
-    - Campaign Selection LRRR
-    - Campaign Selection LRRC
-    - Campaign Selection BAZ
+    - Include 'Standard' Campaign Levels
+    - Include 'Remastered' Campaign Levels
+    - Include 'Classic' Campaign Levels
+    - Include 'Baz's Mod' Campaign Levels
 Mario & Luigi Superstar Saga:
     - Mario & Luigi Superstar Saga
     - Locations
@@ -1157,6 +1220,12 @@ Mario Kart Double Dash:
     - Items for Everybody
     - Start Items per Character
     - Kart Upgrades
+    - Item Boxes as Locations
+    - Add Custom Item Boxes
+    - Shortcuts as Locations
+    - Frantic Items
+    - Guaranteed Items
+    - Trap Chance
 Mega Man 2:
     - Mega Man 2
     - Locations
@@ -1204,17 +1273,22 @@ Mega Man X2:
     - Mega Man X2
     - Locations
     - Name
+    - Energy Link
+    - Death Link
+    - Damage Link
     - Starting HP
     - Heart Tank Effectiveness
     - Boss Weakness Randomization
     - Boss Weakness Strictness
-    - Boss Randomize HP
-    - Pickupsanity
+    - Boss Randomize HP               
+    - Pickup Locations
     - Jammed Buster
+    - Enhancement Chips
+    - Shoryuken In Pool
+    - X-Hunter Base Open
+    - X-Hunter Base Medal Count
     - X-Hunter Base 4 Rematch count
-    - Base Levels Bundle Unlock
-    - Base Rules
-    - Base Medal Count
+    - X-Hunter Level Unlock
     - X-Hunters Medal Count
 Mega Man X3:
     - Mega Man X3
@@ -1266,11 +1340,11 @@ Nine Sols:
     - Logic Difficulty
     - Shuffle Sol Seals
     - Seals For Eigong
-    - randomize_shops
+    - Randomize Shops
     - Skip Soulscape Platforming
     - Jade Cost Maximum
     - First Root Node
-    - shuffle_some_root_nodes
+    - Shuffle Some Root Nodes
     - Shuffle Wall Climb
 Noita:
     - Noita
@@ -1609,6 +1683,66 @@ Pokemon Crystal:
     - Trainer Palette
     - Progressive Rods
     - Local Items
+Pokemon Emerald:
+    - Pokemon Emerald
+    - Locations
+    - Name
+    - Goal
+    - Randomize Badges
+    - Randomize HMs
+    - Randomize Bikes
+    - Randomize Event Tickets
+    - Randomize Fishing Rods
+    - Randomize Overworld Items
+    - Randomize Hidden Items
+    - Randomize NPC Gifts
+    - Randomize Berry Trees
+    - Dexsanity
+    - Dexsanity Encounter Types
+    - Trainersanity
+    - Item Pool Type
+    - Require Itemfinder
+    - Require Flash
+    - Elite Four Requirement
+    - Elite Four Count
+    - Norman Requirement
+    - Norman Count
+    - Legendary Hunt Count
+    - Randomize Wild Pokemon
+    - Wild Encounter Blacklist
+    - Randomize Starters
+    - Randomize Trainer Parties
+    - Trainer Party Blacklist
+    - Force Fully Evolved
+    - Randomize Legendary Encounters
+    - Randomize Misc Pokemon
+    - Randomize Types
+    - Randomize Abilities
+    - Level Up Moves
+    - Move Match Type Bias
+    - Move Normal Type Bias
+    - TM/Tutor Compatibility
+    - HM Compatibility
+    - TM/Tutor Moves
+    - Reusable TMs and Tutors
+    - Minimum Catch Rate
+    - Guaranteed Catch
+    - Normalize Encounter Rates
+    - Exp Modifier
+    - Blind Trainers
+    - Purge Spinners
+    - Match Trainer Levels
+    - Match Trainer Levels Modifier
+    - Double Battle Chance
+    - Better Shops
+    - Extra Boulders
+    - Extra Bumpy Slope
+    - Modify Route 118
+    - Free Fly Location
+    - HM Requirements
+    - Randomize Music
+    - Randomize Fanfares
+    - Local Items
 Pokemon FireRed and LeafGreen:
     - Pokemon FireRed and LeafGreen
     - Locations
@@ -1686,65 +1820,6 @@ Pokemon FireRed and LeafGreen:
     - Randomize Move Types
     - Randomize TM/Tutor Moves
     - TM/Tutor Compatibility
-    - Randomize Music
-    - Randomize Fanfares
-    - Local Items
-Pokemon Emerald:
-    - Pokemon Emerald
-    - Locations
-    - Name
-    - Goal
-    - Randomize Badges
-    - Randomize HMs
-    - Randomize Bikes
-    - Randomize Event Tickets
-    - Randomize Fishing Rods
-    - Randomize Overworld Items
-    - Randomize Hidden Items
-    - Randomize NPC Gifts
-    - Randomize Berry Trees
-    - Dexsanity
-    - Dexsanity Encounter Types
-    - Trainersanity
-    - Item Pool Type
-    - Require Itemfinder
-    - Require Flash
-    - Elite Four Requirement
-    - Elite Four Count
-    - Norman Requirement
-    - Norman Count
-    - Legendary Hunt Count
-    - Randomize Wild Pokemon
-    - Wild Encounter Blacklist
-    - Randomize Starters
-    - Randomize Trainer Parties
-    - Trainer Party Blacklist
-    - Force Fully Evolved
-    - Randomize Legendary Encounters
-    - Randomize Misc Pokemon
-    - Randomize Types
-    - Randomize Abilities
-    - Level Up Moves
-    - Move Match Type Bias
-    - Move Normal Type Bias
-    - TM/Tutor Compatibility
-    - HM Compatibility
-    - TM/Tutor Moves
-    - Reusable TMs and Tutors
-    - Minimum Catch Rate
-    - Guaranteed Catch
-    - Normalize Encounter Rates
-    - Exp Modifier
-    - Blind Trainers
-    - Purge Spinners
-    - Match Trainer Levels
-    - Double Battle Chance
-    - Better Shops
-    - Extra Boulders
-    - Extra Bumpy Slope
-    - Modify Route 118
-    - Free Fly Location
-    - HM Requirements
     - Randomize Music
     - Randomize Fanfares
     - Local Items
@@ -1946,6 +2021,7 @@ Slay the Spire:
     - Shop Potion Slots
     - Shop Remove Slots
     - Shop Sanity Costs
+    - Seeded Run
 "SMW: Spicy Mycena Waffles":
     - "SMW: Spicy Mycena Waffles"
     - Locations
@@ -2119,6 +2195,7 @@ Sonic Adventure DX:
     - Reverse Control Trap Duration
     - Traps and filler on Boss Fights
     - Traps and filler on Perfect Chaos Fight
+    - Egg Carrier starts transformed
 Starcraft 2:
     - Starcraft 2
     - Locations
