@@ -1,16 +1,18 @@
 #When editing weights, please keep a total of 100 per category
 Stardew Valley:
-  accessibility: full
+  accessibility:
+    full: 70
+    minimal: 30
   goal:
     community_center: 50
     grandpa_evaluation: 18
-    bottom_of_the_mines: 3
+    bottom_of_the_mines: 2
     master_angler: 6
     complete_collection: 0
     protector_of_the_valley: 4
     full_shipment: 3
     gourmet_chef: 3
-    craft_master: 2
+    craft_master: 3
     mystery_of_the_stardrops: 8
     cryptic_note: 0
     full_house: 0
@@ -28,17 +30,18 @@ Stardew Valley:
     triple: 20
     quadruple: 10
   bundle_randomization:
-    thematic: 20
-    remixed: 40
-    remixed_anywhere: 35
-    shuffled: 5
+    vanilla: 10
+    thematic: 25
+    remixed: 30
+    remixed_anywhere: 20
+    shuffled: 15
   bundle_price: # Override in trigger
     minimum: 5
     very_cheap: 15
     cheap: 50
     normal: 25
     expensive: 5
-  bundle_per_room:
+  bundle_per_room: # Override in trigger
     two_fewer: 15
     one_fewer: 15
     normal: 30
@@ -76,9 +79,9 @@ Stardew Valley:
     progressive_cheap: 40
     progressive: 20
   festival_locations: # Override in trigger
-    disabled: 20
+    disabled: 30
     easy: 40
-    hard: 40
+    hard: 30
   arcade_machine_locations: disabled
   special_order_locations:
     vanilla: 10
@@ -89,10 +92,8 @@ Stardew Valley:
     board: 10
     board_qi: 10
   quest_locations:
-    none: 5
-    0: 45
-    7: 25
-    14: 25
+    random-range-1-21: 75
+    0: 25
   fishsanity: # Override in trigger
     none: 10
     exclude_legendaries: 15
@@ -100,10 +101,10 @@ Stardew Valley:
     only_easy_fish: 20
     all: 5
   museumsanity: # Override in trigger
-    none: 40
-    milestones: 30
-    randomized: 20
-    all: 10
+    none: 50
+    milestones: 10
+    randomized: 25
+    all: 15
   monstersanity: # Override in trigger
     one_per_category: 25
     one_per_monster: 25
@@ -136,7 +137,7 @@ Stardew Valley:
     bachelors: 25
     starting_npcs: 25
     all: 10
-  friendsanity_heart_size: random-range-3-5
+  friendsanity_heart_size: random-range-2-5
   booksanity:
     none: 60
     power: 25
@@ -147,11 +148,14 @@ Stardew Valley:
     one: 50
     all_movies: 15
     all_movies_loved: 5
-  # start_without: Everything except backpack. Each has a 20% chance of being rolled.
+  # start_without: Each option adds its item when rolled true.
   start_without: []
+  start_without_backpack:
+    'false': 70
+    'true': 30
   start_without_tools:
-    'false': 80
-    'true': 20
+    'false': 70
+    'true': 30
   start_without_landslide:
     'false': 80
     'true': 20
@@ -159,9 +163,9 @@ Stardew Valley:
     'false': 80
     'true': 20
   start_without_buildings:
-    'false': 80
-    'true': 20
-  # eatsanity: Not crops, each value has a 20% chance of being rolled. Cooking only if cooksanity is enabled.
+    'false': 20
+    'true': 80
+  # Eatsanity: not crops, due to how redundant with cropsanity it is.
   eatsanity: []
   eatsanity_cooking:
     'false': 80
@@ -170,11 +174,11 @@ Stardew Valley:
     'false': 80
     'true': 20
   eatsanity_artisan:
-    'false': 80
-    'true': 20
+    'false': 70
+    'true': 30
   eatsanity_shop:
-    'false': 80
-    'true': 20
+    'false': 60
+    'true': 40
   eatsanity_poisonous:
     'false': 80
     'true': 20
@@ -191,7 +195,7 @@ Stardew Valley:
   hatsanity_easy:
     'false': 70
     'true': 30
-  walnutsanity: ["Puzzles", "Bushes", "Repeatables"] # If Ginger Island rolls excluded, this will automatically disable itself. I have disabled dig spots because they are not noob-friendly. Everything else is better shuffled.
+  walnutsanity: ["Puzzles", "Bushes", "Repeatables", "Dig Spots"] # If Ginger Island rolls excluded, this will automatically disable itself.
   movement_buff_number: random-range-4-8
   enabled_filler_buffs: ["Luck", "Damage", "Defense", "Immunity", "Health", "Energy", "Bite Rate", "Fish Trap", "Fishing Bar Size"]
   allowed_filler_items: ['Currencies', 'Consumables', 'Food', 'Fishing Items', 'Farming Items', 'Machines', 'Money', 'Quality Of Life', 'Fruit Trees', 'Materials', 'Storage', 'Rings', 'Buff Food'] # Removed decorations and hats, so that fillers are less filler
@@ -199,8 +203,8 @@ Stardew Valley:
     false: 50
     true: 50
   trap_difficulty:
-    no_traps: 15
-    easy: 50
+    no_traps: 30
+    easy: 35
     medium: 25
     hard: 10
   trap_distribution: # This makes unfavourable traps less frequent, like traps that can ruin a player's storage system, and increases the chances of other traps to account for this. As I understand it, there may be a bug that causes unlisted traps to never exist, so this setting ends up being bloated to account for a manual fail-safe.
@@ -233,7 +237,7 @@ Stardew Valley:
     double: 25
     triple: 50
     quadruple: 25
-  friendship_multiplier:
+  friendship_multiplier: # Override in trigger
     double: 25
     triple: 50
     quadruple: 25
@@ -259,8 +263,18 @@ Stardew Valley:
             normal: 25
             expensive: 5
             very_expensive: 5
-          cropsanity: # Remove disabled odds
-            enabled: 100
+          bundle_per_room:
+            two_fewer: 5
+            one_fewer: 15
+            normal: 25
+            one_extra: 25
+            two_extra: 15
+            three_extra: 10
+            four_extra: 5
+          start_without_community_center:
+            'false': 70
+            'true': 30
+          cropsanity: enabled
     - option_category: Stardew Valley
       option_name: goal
       option_result: grandpa_evaluation
@@ -410,6 +424,15 @@ Stardew Valley:
           +chefsanity: ["Queen of Sauce", "Purchases", "Friendship", "Skills"]
     # Start Without
     - option_category: Stardew Valley
+      option_name: start_without_backpack
+      option_result: 'true'
+      options:
+        Stardew Valley:
+          +start_without: ["Backpack"]
+          backpack_size:
+            '12': 50
+            random: 50
+    - option_category: Stardew Valley
       option_name: start_without_tools
       option_result: 'true'
       options:
@@ -435,12 +458,6 @@ Stardew Valley:
           +start_without: ["Buildings"]
     # Eatsanity
     - option_category: Stardew Valley
-      option_name: cooksanity
-      option_result: none
-      options:
-        Stardew Valley:
-          eatsanity_cooking: 'false'
-    - option_category: Stardew Valley
       option_name: eatsanity_cooking
       option_result: 'true'
       options:
@@ -452,6 +469,13 @@ Stardew Valley:
       options:
         Stardew Valley:
           +eatsanity: ["Fish"]
+          fishsanity:
+            exclude_legendaries: 25
+            exclude_hard_fish: 50
+            all: 25
+          eatsanity_poisonous:
+            'false': 60
+            'true': 40
     - option_category: Stardew Valley
       option_name: eatsanity_artisan
       option_result: 'true'
@@ -483,6 +507,15 @@ Stardew Valley:
       options:
         Stardew Valley:
           +secretsanity: ["Secret Notes"]
+    # Friendsanity 2 = at most 200% multiplier
+    - option_category: Stardew Valley
+      option_name: friendsanity_heart_size
+      option_result: 2
+      options:
+        Stardew Valley:
+          friendship_multiplier:
+            150: 50
+            200: 50
     # Hatsanity — Easy only
     - option_category: Stardew Valley
       option_name: hatsanity_easy

@@ -1080,9 +1080,6 @@ Links Awakening DX:
     - Foreign Item Icons
     - Shuffle Nightmare Keys
     - Shuffle Small Keys
-    - Shuffle Maps
-    - Shuffle Compasses
-    - Shuffle Stone Beaks
     - Music
     - Shuffle Instruments
     - Stealing
@@ -1173,15 +1170,10 @@ Manic Miners:
     - Name
     - Victory Condition
     - Target Level Count
-    - Available Levels
-    - Locked Coordinate Locations
-    - Coordinates Required
+    - Locked Coordinates
     - Target Times Are Locations
     - Target Time Difficulty
     - Crystal Targets Are Locations
-    - Buildings Are Items
-    - Items Are Items
-    - Vehicles Are Items
     - Progressive Items
     - Miner Cap
     - Include 'Standard' Campaign Levels

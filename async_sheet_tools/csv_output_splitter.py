@@ -44,7 +44,7 @@ def format_output_csv(filename:str = "output.csv", output_filename:str = "format
                     slot_options = ["",""]
                     # actually filter the whitelisted options based on the index of a given option into the temporary
                     # list
-                    # skip the first 2 options because those are only there to make is easy to past into the big
+                    # skip the first 2 options because those are only there to make it easy to paste into the big
                     # async sheet
                     for option in game_option_whitelist[2:]:
                         option_index = all_options_indices[option]
@@ -71,8 +71,8 @@ def format_output_csv(filename:str = "output.csv", output_filename:str = "format
 if __name__ == "__main__":
     cmd_parser = argparse.ArgumentParser(
         prog="Big Async Options Sheet creator",
-        description="""This script is used for converting the generations options-CSV into the format of the 
-        Big-Async spreadsheet and separating each games the options  
+        description="""This script is used for converting the generation's options-CSV into the format of the 
+        Big-Async spreadsheet and separating each game's options  
         """,
     )
     cmd_parser.add_argument("-I", "--input", type=str)
@@ -102,6 +102,6 @@ Using '{input_file_path}' as input filename.
 Using '{output_file_name}' as output filename.
     """)
     # print(f"input csv-file: {input_file_path}")
-    # print(f"outout ods-file: {output_file_path}")
+    # print(f"output ods-file: {output_file_path}")
 
     format_output_csv(input_file_path, output_file_name)
