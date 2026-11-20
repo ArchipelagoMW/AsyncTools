@@ -13,36 +13,21 @@ Links Awakening DX:
     easy: 2
     normal: 5
     hard: 2
-  shuffle_nightmare_keys:
-    original_dungeon: 5
-    own_dungeons: 3
-    own_world: 3
-    any_world: 4
-    different_world: 4
-  shuffle_small_keys:
+
+  # Base value, will be overwritten by keysanity_trigger if it rolls differently
+  shuffle_nightmare_keys: original_dungeon
+  shuffle_small_keys: original_dungeon
+
+  # Trigger to roll nightmare and small keys together so keysanity is consistent for the slot
+  keysanity_trigger:
     original_dungeon: 5
     own_dungeons: 1
     own_world: 1
-    any_world: 4
-    different_world: 4
-  shuffle_maps:
-    original_dungeon: 5
-    own_dungeons: 5
-    own_world: 5
-    any_world: 3
-    different_world: 1
-  shuffle_compasses:
-    original_dungeon: 5
-    own_dungeons: 5
-    own_world: 5
-    any_world: 3
-    different_world: 1
-  shuffle_stone_beaks:
-    original_dungeon: 5
-    own_dungeons: 5
-    own_world: 5
-    any_world: 3
-    different_world: 1
+    any_world: 8
+
+  shuffle_maps: any_world
+  shuffle_compasses: any_world
+  shuffle_stone_beaks: any_world
   warps: improved_additional
   shuffle_instruments:
     original_dungeon: 10
@@ -87,6 +72,27 @@ Links Awakening DX:
         Links Awakening DX:
           local_items:
             - Seashell
+    - option_category: Links Awakening DX
+      option_name: keysanity_trigger
+      option_result: own_dungeons
+      options:
+        Links Awakening DX:
+          shuffle_nightmare_keys: own_dungeons
+          shuffle_small_keys: own_dungeons
+    - option_category: Links Awakening DX
+      option_name: keysanity_trigger
+      option_result: own_world
+      options:
+        Links Awakening DX:
+          shuffle_nightmare_keys: own_world
+          shuffle_small_keys: own_world
+    - option_category: Links Awakening DX
+      option_name: keysanity_trigger
+      option_result: any_world
+      options:
+        Links Awakening DX:
+          shuffle_nightmare_keys: any_world
+          shuffle_small_keys: any_world
     - option_category: null
       option_name: name
       option_result: Player{player}
