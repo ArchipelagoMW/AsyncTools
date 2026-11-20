@@ -1592,15 +1592,37 @@ Pokemon Black and White:
     - Goal
     - Randomize Wild Pokemon
     - Randomize Trainer Pokemon
+    - Randomize Starter Pokemon
+    - Randomize Static Pokemon
+    - Randomize Gift Pokemon
+    - Randomize Legendary Pokemon
+    - Pokemon Randomization Adjustments
+    - Randomize Base Stats
+    - Randomize Evolutions
+    - Randomize Types
+    - Randomize Level Up Movesets
+    - "Randomize TM/HM Compatibility"
+    - Randomize Catch Rates
+    - Stats Randomization Adjustments
+    - Randomize Move Data
+    - Randomize Type Chart
+    - Move Data Randomization Adjustments
     - Shuffle Badge Rewards
     - Shuffle TM Rewards
     - Dexsanity
+    - Seensanity
+    - Formsanity
+    - Shinysanity
+    - Dexcountsanity
     - Season Control
-    - Modify Encounter Rates
-    - All Pokemon Seen
-    - Master Ball Seller
     - Modify Item Pool
     - Modify Logic
+    - Adjust Levels
+    - Modify Encounter Rates
+    - All Pokemon Seen
+    - Replace Evolution Methods
+    - Master Ball Seller
+    - Funny Dialog
     - Start Inventory
 Pokemon Crystal:
     - Pokemon Crystal
