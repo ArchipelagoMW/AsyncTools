@@ -1221,9 +1221,9 @@ Pokemon Crystal:
     # You can define additional values between the minimum and maximum values.
     # Minimum value is 0
     # Maximum value is 251
-    0: 75
-    random-range-1-250: 20
-    full: 5
+    0: 50
+    random-range-low-1-250: 40
+    full: 10
 
   dexsanity_logic:
     # Restricts which encounter sources may provide Pokemon for Dexsanity and Dexcountsanity locations.
@@ -1297,9 +1297,9 @@ Pokemon Crystal:
     # You can define additional values between the minimum and maximum values.
     # Minimum value is 0
     # Maximum value is 243
-    0: 75
-    random-range-1-242: 20
-    full: 5
+    0: 50
+    random-range-low-1-242: 40
+    full: 10
 
   kanto_trainersanity:
     # Adds checks for defeating Kanto trainers.
@@ -1311,9 +1311,9 @@ Pokemon Crystal:
     # You can define additional values between the minimum and maximum values.
     # Minimum value is 0
     # Maximum value is 131
-    0: 75
-    random-range-1-130: 20
-    full: 5
+    0: 50
+    random-range-low-1-130: 40
+    full: 10
 
   rematchsanity:
     # Adds the phone-trainer rematch fights as checks.
