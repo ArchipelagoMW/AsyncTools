@@ -24,12 +24,18 @@ DOOM 1993:
   start_with_computer_area_maps: random
   death_link: false
   reset_level_on_death: true
-  episode1: true
+  episode1: 
+    true: 4
+    false: 1
   episode2: 
     true: 4
     false: 1
-  episode3: false
-  episode4: false
+  episode3: 
+    true: 4
+    false: 1
+  episode4: 
+    true: 1
+    false: 4
   split_backpack:
     'false': 1
     'true': 1
@@ -41,25 +47,14 @@ DOOM 1993:
       options:
         null:
           name: DOOM1993-{player}
+    
+    # If the "Complete Boss Levels" goal is rolled, forcefully enable all episodes except the fourth, to prevent the possibility of a slot with literally a one item go mode.
+    # Not that a three item go mode is that much better, but...
     - option_category: DOOM 1993
-      option_name: episode2
-      option_result: true
+      option_name: goal
+      option_result: complete_boss_levels
       options:
         DOOM 1993:
-          episode3: 
-            true: 4
-            false: 1
-    - option_category: DOOM 1993
-      option_name: episode3
-      option_result: true
-      options:
-        DOOM 1993:
-          episode4: 
-            true: 1
-            false: 3
-    - option_category: DOOM 1993
-      option_name: episode2
-      option_result: false
-      options:
-        DOOM 1993:
-          goal: complete_all_levels
+          episode1: true
+          episode2: true
+          episode3: true

@@ -1,5 +1,5 @@
 The Legend of Zelda:
-  local_items: [Triforce Fragment]
+  local_items: [Triforce Fragment, Silver Arrow]
   ExpandedPool:
     false: 20
     true: 80

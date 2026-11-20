@@ -1,0 +1,210 @@
+PokePark:
+  # Set only by triggers.
+  goal: mew
+
+  power_starting_mode:
+    full: 5
+    none: 15
+    vanilla: 35
+    thunderbolt: 10
+    dash: 10
+    iron_tail: 10
+    randomize: 15
+
+  start_fast_travel:
+    none: 75
+    one: 20
+    all: 5
+
+  num_required_battle_count:
+    0: 10
+    2: 25
+    4: 25
+    5: 20
+    6: 5
+    7: 5
+    random: 10
+
+  num_required_prisma_count_skygarden:
+    6: 10
+    8: 15
+    10: 20
+    12: 20
+    14: 25
+    random-range-6-14: 10
+
+  in_zone_road_blocks:
+    false: 30
+    true: 70
+
+  harder_enemy_ai:
+    false: 60
+    true: 40
+
+  unlock_fast_travel_with_taxi_stop:
+    false: 25
+    true: 75
+
+  # These can be triggered in the client, so weighting is meaningless.
+  show_client_text_ingame: true
+  fps_enhancement_patch: true
+
+  randomize_attraction_entrances:
+    false: 80
+    true: 20
+
+  randomize_treehouse_gates_entrances:
+    false: 80
+    true: 20
+
+  randomize_fast_travel_entrances:
+    false: 80
+    true: 20
+
+  randomize_general_entrances:
+    false: 80
+    true: 20
+
+  mix_entrance_pools:
+    false: 80
+    true: 20
+
+  # Weighted more strongly toward false because most profiles enable it,
+  # resulting in a more even overall distribution.
+  each_zone:
+    false: 90
+    true: 10
+
+  location_profile:
+    mew_standard: 25
+    mew_no_battle: 10
+    mew_no_chase: 10
+    mew_no_battle_or_chase: 5
+    mew_no_attraction_records: 10
+    postgame_standard: 30
+    postgame_no_battle: 5
+    postgame_no_chase: 5
+
+  # Always overwritten by triggers.
+  remove_battle_power_comp_locations: false
+  remove_chase_power_comp_locations: false
+  remove_attraction_locations: false
+
+  remove_quiz_power_comp_locations:
+    false: 50
+    true: 50
+  remove_hide_and_seek_power_comp_locations:
+    false: 70
+    true: 30
+  remove_errand_power_comp_locations:
+    false: 70
+    true: 30
+  remove_misc_power_comp_locations:
+    false: 50
+    true: 50
+  remove_legendary_pokemon_power_comp_locations:
+    false: 60
+    true: 40
+  remove_power_training_locations:
+    false: 60
+    true: 40
+  remove_attraction_prisma_locations:
+    false: 70
+    true: 30
+  remove_pokemon_unlock_locations:
+    false: 70
+    true: 30
+
+  triggers:
+    - option_category: PokePark
+      option_name: location_profile
+      option_result: mew_standard
+      options:
+        PokePark:
+          goal: mew
+          remove_battle_power_comp_locations: false
+          remove_chase_power_comp_locations: false
+          remove_attraction_locations: false
+
+    - option_category: PokePark
+      option_name: location_profile
+      option_result: mew_no_battle
+      options:
+        PokePark:
+          goal: mew
+          remove_battle_power_comp_locations: true
+          remove_chase_power_comp_locations: false
+          remove_attraction_locations: false
+
+    - option_category: PokePark
+      option_name: location_profile
+      option_result: mew_no_chase
+      options:
+        PokePark:
+          goal: mew
+          remove_battle_power_comp_locations: false
+          remove_chase_power_comp_locations: true
+          remove_attraction_locations: false
+
+    - option_category: PokePark
+      option_name: location_profile
+      option_result: mew_no_battle_or_chase
+      options:
+        PokePark:
+          goal: mew
+          remove_battle_power_comp_locations: true
+          remove_chase_power_comp_locations: true
+          remove_attraction_locations: false
+
+    - option_category: PokePark
+      option_name: location_profile
+      option_result: mew_no_attraction_records
+      options:
+        PokePark:
+          goal: mew
+          each_zone: true
+          remove_battle_power_comp_locations: false
+          remove_chase_power_comp_locations: false
+          remove_attraction_locations: true
+          # Provides more locations relative to the required progressive items.
+          remove_errand_power_comp_locations: false
+
+    - option_category: PokePark
+      option_name: location_profile
+      option_result: postgame_standard
+      options:
+        PokePark:
+          goal: postgame
+          each_zone: true
+          remove_battle_power_comp_locations: false
+          remove_chase_power_comp_locations: false
+          remove_attraction_locations: false
+
+    - option_category: PokePark
+      option_name: location_profile
+      option_result: postgame_no_battle
+      options:
+        PokePark:
+          goal: postgame
+          each_zone: true
+          remove_battle_power_comp_locations: true
+          remove_chase_power_comp_locations: false
+          remove_attraction_locations: false
+
+    - option_category: PokePark
+      option_name: location_profile
+      option_result: postgame_no_chase
+      options:
+        PokePark:
+          goal: postgame
+          each_zone: true
+          remove_battle_power_comp_locations: false
+          remove_chase_power_comp_locations: true
+          remove_attraction_locations: false
+
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: PokePark-{player}

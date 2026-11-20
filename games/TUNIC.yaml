@@ -11,6 +11,10 @@ TUNIC:
   keys_behind_bosses: 'false'
   ability_shuffling: 'true'
   shuffle_ladders: 'true'
+  shuffle_bells: 'true'
+  shuffle_fuses:
+    'true': 75
+    'false': 25
   entrance_rando:
     yes: 25
     no: 75

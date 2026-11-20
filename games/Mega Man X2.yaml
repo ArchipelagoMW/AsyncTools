@@ -1,0 +1,100 @@
+﻿Mega Man X2:
+  # Forced EnergyLink, disabled DamageLink
+  energy_link: true
+  damage_link: false
+
+  # Not forced, but should have a high chance to roll
+  # Chips are forced off unless pickup_locations is active
+  pickup_locations:
+    'false': 40
+    'true': 60
+  
+  # Fixed numbers because anything else is going to be horrid to manage via triggers I think
+  starting_hp_trigger:
+    low: 33
+    medium: 33
+    high: 33
+  starting_hp: 16
+  heart_tank_effectiveness: 2
+
+  # Chance to happen, somewhat evil
+  jammed_buster:
+    'false': 60
+    'true': 40
+
+  # Evil, but fun
+  boss_weakness_rando:
+    vanilla: 15
+    simple: 50
+    chaotic_double: 15
+    chaotic_triple: 20
+
+  # Makes the setting above less evil
+  boss_weakness_strictness: 
+    not_strict: 30
+    weakness_and_buster: 40
+    weakness_and_upgraded_buster: 10
+    only_weakness: 20
+
+  # Makes them evil again
+  boss_randomize_hp:
+    'off': 20
+    weak: 30
+    regular: 30
+    strong: 10
+    chaotic: 10
+
+  # Should not take very long for them to appear
+  x_hunters_arena_medal_count: random-range-1-3
+
+  # Only unlock fortress via medals or an access code
+  x_hunter_base_open:
+    item: 40
+    medals: 60
+  x_hunter_base_medal_count: random-high
+  x_hunter_base_boss_rematch_count: random-range-1-8
+  x_hunter_base_level_unlock:
+    vanilla: 60
+    all_open: 40
+
+  triggers:
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: MMX2-{player}
+
+    - option_category: Mega Man X2
+      option_name: starting_hp_trigger
+      option_result: low
+      options:
+        Mega Man X2:
+          starting_hp: random-range-8-12
+          heart_tank_effectiveness:
+            3: 10
+            4: 45
+            5: 45
+
+    - option_category: Mega Man X2
+      option_name: starting_hp_trigger
+      option_result: medium
+      options:
+        Mega Man X2:
+          starting_hp: random-range-12-16
+          heart_tank_effectiveness:
+            1: 5
+            2: 35
+            3: 30
+            4: 20
+
+    - option_category: Mega Man X2
+      option_name: starting_hp_trigger
+      option_result: high
+      options:
+        Mega Man X2:
+          starting_hp: random-range-16-24
+          heart_tank_effectiveness:
+            1: 60
+            2: 35
+            3: 5

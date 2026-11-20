@@ -7,7 +7,7 @@ Super Mario Land 2:
   mario_coin_fragment_percentage: random-middle
   mario_coin_fragments_required_percentage: random-range-50-90
   coinsanity: random
-  coinsanity_checks: random-low
+  coinsanity_checks: random-range-31-500
   shuffle_midway_bells: true
   marios_castle_midway_bell: true
   shuffle_pipe_traversal: random
@@ -34,6 +34,14 @@ Super Mario Land 2:
     - Golden Coins
     - Mario Coin Fragment
   triggers:
+    # If the slot rolls a Mario Coin Fragment hunt, a sizeable portion of its filler will be replaced with local macguffins.
+    # Therefore, allow it to reroll the full range instead of being clamped to [31, 500]. Also give it a bit of bias toward the middle part of the range (about 1300 locations)
+    - option_category: Super Mario Land 2
+      option_name: shuffle_golden_coins
+      option_result: mario_coin_fragment_hunt
+      options:
+        Super Mario Land 2:
+          coinsanity_checks: random-middle
     - option_category: null
       option_name: name
       option_result: Player{player}

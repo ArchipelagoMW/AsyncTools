@@ -10,9 +10,24 @@ Celeste 64:
   checkpointsanity:
     'false': 3
     'true': 2
+  cassette_shuffle:
+    'false': 3
+    'true': 2
+  trap_fill_percentage: random-high
+  bald_trap_weight: random
+  bubble_trap_weight: random
+  hiccup_trap_weight: random
+  ice_trap_weight: random
+  invisible_trap_weight: random
+  reverse_trap_weight: random
+  stun_trap_weight: random
+  literature_trap_weight: random
+  zoom_in_trap_weight: random
+  zoom_out_trap_weight: random
   madeline_one_dash_hair_color: any_color
   madeline_two_dash_hair_color: any_color
   madeline_feather_hair_color: any_color
+  madeline_hair_length: random
   sanities:
     none: 1
     all: 5    

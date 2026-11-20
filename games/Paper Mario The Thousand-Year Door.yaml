@@ -1,0 +1,180 @@
+﻿'Paper Mario: The Thousand-Year Door':
+  goal:
+    shadow_queen: 25
+    crystal_stars: 20
+    bonetail: 5
+
+  goal_stars:
+    random-range-5-7: 1
+
+  palace_stars:
+    random-range-2-7: 1
+
+  star_shuffle:
+    vanilla: 15
+    stars_only: 30
+    all: 5
+
+  tattlesanity:
+    'false': 40
+    'true': 10
+
+  piecesanity:
+    vanilla: 5
+    nonpanel_only: 10
+    all: 35
+
+  shopsanity:
+    'true': 50
+
+  shop_purchase_limit:
+    infinite: 10
+    consumables_only: 20
+    badges_only: 20
+
+  shinesanity:
+    'false': 5
+    'true': 45
+
+  keysanity:
+    'false': 10
+    'true': 40
+
+  dazzle_rewards:
+    vanilla: 10
+    filler: 10
+    all: 30
+
+  pit_items:
+    vanilla: 1
+    filler: 1
+    all: 1
+
+  limit_chapter_logic:
+    'false': 40
+    'true': 10
+
+  limit_chapter_eight:
+    'false': 50
+
+  blue_pipe_toggle:
+    'false': 10
+    'true': 40
+
+  palace_skip:
+    'false': 10
+    'true': 40
+
+  cutscene_skip:
+    'true': 50
+
+  disable_intermissions:
+    'true': 50
+
+  fast_travel:
+    'true': 50
+
+  succeed_conditions:
+    'false': 10
+    'true': 40
+
+  open_westside:
+    'false': 40
+    'true': 10
+
+  grubba_bribe_direction:
+    both_directions: 50
+
+  grubba_bribe_cost:
+    20: 40
+    random: 10
+
+  enemy_randomizer:
+    vanilla: 50
+
+  encounter_shuffle_type:
+    vanilla_groups: 50
+
+  enemy_stat_scaling:
+    'false': 50
+
+  shuffle_chapter_stats:
+    'false': 50
+
+  permanent_peekaboo:
+    'false': 10
+    'true': 40
+
+  full_run_bar:
+    'false': 20
+    'true': 30
+
+  first_attack:
+    'false': 20
+    'true': 30
+
+  badge_bp:
+    vanilla: 10
+    shuffled: 20
+    random_costs: 20
+
+  badge_fp:
+    vanilla: 10
+    shuffled: 20
+    random_costs: 20
+
+  partner_fp:
+    vanilla: 10
+    shuffled: 20
+    random_costs: 20
+
+  music_settings:
+    normal: 20
+    randomized: 30
+
+  block_visibility:
+    normal: 30
+    all_visible: 20
+
+  experience_multiplier:
+    1: 40
+    random-range-2-3: 10
+
+  starting_hp:
+    10: 30
+    random: 0
+    random-low: 0
+    random-high: 0
+    random-range-11-30: 20
+
+  starting_fp:
+    5: 30
+    random-range-6-20: 20
+
+  starting_bp:
+    3: 30
+    random-range-4-12: 20
+    
+  starting_coins:
+    100: 20
+    random-range-50-300: 30
+
+  starting_level:
+    1: 50
+
+  starting_partner:
+    random: 50
+
+  yoshi_color:
+    random: 50
+
+  yoshi_name:
+    Yoshi: 50
+
+  triggers:
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: TTYD-{player}

@@ -1,0 +1,254 @@
+﻿Donkey Kong 64:
+  # Victory settings
+  goal:
+    bosses: 1
+    keys: 1
+    krools_challenge: 1
+
+  require_beating_krool:
+    "false": 30
+    "true": 70
+
+  goal_quantity:
+    blueprints: 20
+    bonuses: 15
+    bosses: 3-7
+    company_coins: 2
+    crowns: 5
+    fairies: 15
+    golden_bananas: 100
+    keys: 8
+    medals: 15
+    pearls: 3
+    rainbow_coins: 10
+
+  helm_phase_count: random
+
+  crown_door_item:
+    opened: 40
+    hard_random: 60
+
+  coin_door_item:
+    opened: 40
+    hard_random: 60
+
+  helm_door_item_count:
+    bean: random
+    blueprints: random
+    company_coins: random
+    crowns: random
+    fairies: random
+    golden_bananas: random
+    keys: random
+    medals: random
+    pearls: random
+    rainbow_coins: random
+
+  krool_phase_count: random
+  krool_in_boss_pool: random
+
+  # B. Locker settings
+  randomize_blocker_required_amounts:
+    "false": 30
+    "true": 70
+  blocker_max: random-range-64-150
+  enable_chaos_blockers: random
+  maximize_level8_blocker: random
+  chaos_ratio: random-range-32-64
+  level_blockers:
+    level_1: 0
+    level_2: 0
+    level_3: 0
+    level_4: 0
+    level_5: 0
+    level_6: 0
+    level_7: 0
+    level_8: 167
+
+  # Items
+  starting_kong_count: random-low
+  select_starting_kong: any
+  starting_move_count: random-range-0-7
+  helm_key_lock: random
+  climbing_shuffle: random
+  shopowners_in_pool: random
+  boulders_in_pool: random
+  dropsanity: random
+  half_medals_in_pool: random
+  snide_turnins_to_pool: random
+  maximum_snide:
+    16: 10
+    24: 30
+    32: 60
+
+  # Shops
+  shop_prices:
+    free: 3
+    low: 1
+  smaller_shops: false
+
+  # Levels/Barriers
+  shuffle_helm_level_order: random
+  open_lobbies: random
+  switchsanity: random
+  remove_barriers_selected:
+    [
+      "japes_coconut_gates",
+      "aztec_tunnel_door",
+      "aztec_5dtemple_switches",
+      "aztec_tiny_temple_ice",
+      "factory_testing_gate",
+      "galleon_shipyard_area_gate",
+      "galleon_seasick_ship",
+      "forest_green_tunnel",
+      "caves_ice_walls",
+      "caves_igloo_pads",
+      "helm_star_gates",
+      "helm_punch_gates",
+    ]
+  loading_zone_rando:
+    "no": 4
+    "yes": 1
+  galleon_water_level: random
+
+   # Logic
+  cbs_required_for_medal: random-range-20-60
+  medal_distribution:
+    pre_selected: 1
+    progressive: 1
+  pearls_required_for_mermaid: random
+  fairies_required_for_bfi: random
+  jetpac_requirement: random
+  puzzle_rando:
+    easy: 1
+    medium: 1
+    hard: 1
+    chaos: 1
+
+  # Bonus Barrels
+  shuffled_bonus_barrels:
+    [
+      "batty_barrel_bandit",
+      "big_bug_bash",
+      "busy_barrel_barrage",
+      "mad_maze_maul",
+      "minecart_mayhem",
+      "beaver_bother",
+      "teetering_turtle_trouble",
+      "stealthy_snoop",
+      "stash_snatch",
+      "splish_splash_salvage",
+      "speedy_swing_sortie",
+      "krazy_kong_klamour",
+      "searchlight_seek",
+      "kremling_kosh",
+      "peril_path_panic",
+      "helm_minigames",
+      "arenas",
+      "training_minigames",
+      "arcade",
+    ]
+  hard_minigames: random
+  auto_complete_bonus_barrels: random
+  helm_room_bonus_count: random
+  alternate_minecart_mayhem: random
+
+  enemies_selected:
+    [
+      "Kosha",
+      "Gimpfish",
+      "GreenKlaptrap",
+      "Ruler",
+      "MushroomMan",
+      "Krossbones",
+      "ZingerRobo",
+      "GreenDice",
+      "Bug",
+      "RedKlaptrap",
+      "ZingerLime",
+      "SpiderSmall",
+      "PurpleKlaptrap",
+      "LankyKasplat",
+      "GetOut",
+      "Pufftup",
+      "ZingerCharger",
+      "Bat",
+      "DisableTaggingKop",
+      "RoboKremling",
+      "Shuri",
+      "SirDomino",
+      "DiddyKasplat",
+      "BeaverBlue",
+      "BeaverGold",
+      "ChunkyKasplat",
+      "Klump",
+      "Kremling",
+      "RedDice",
+      "Ghost",
+      "GetOutKop",
+      "DisableZKop",
+      "Klobber",
+      "TinyKasplat",
+      "DisableAKop",
+      "Kop",
+      "Kaboom",
+      "DKKasplat",
+      "FireballGlass",
+    ]
+
+  # Hints
+  hint_style: off
+  shopkeeper_hints: false
+  microhints: off
+
+  # Filler
+  junk_filler_weight: none
+  banana_filler_weight: none
+  crown_filler_weight: none
+  fairy_filler_weight: none
+  medal_filler_weight: none
+  pearl_filler_weight: none
+  rainbowcoin_filler_weight: none
+
+  # Traps
+  trap_fill_percentage: 0
+  bubble_trap_weight: none
+  slow_trap_weight: none
+  reverse_trap_weight: none
+  disable_a_trap_weight: none
+  disable_b_trap_weight: none
+  disable_c_trap_weight: none
+  disable_z_trap_weight: none
+  get_out_trap_weight: none
+  dry_trap_weight: none
+  flip_trap_weight: none
+  ice_floor_weight: none
+  paper_weight: none
+  slip_weight: none
+  animal_trap_weight: none
+  rockfall_trap_weight: none
+  disabletag_trap_weight: none
+
+  receive_notifications: display_only_progression
+
+  triggers:
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: DK64-{player}
+
+    - option_category: Donkey Kong 64
+      option_name: goal
+      option_result: keys
+      options:
+        Donkey Kong 64:
+          local_items: ["Keys"]
+
+    - option_category: Donkey Kong 64
+      option_name: goal
+      option_result: krools_challenge
+      options:
+        Donkey Kong 64:
+          local_items: ["Blueprints"]

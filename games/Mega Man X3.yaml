@@ -1,0 +1,175 @@
+﻿Mega Man X3:
+  # Forced EnergyLink
+  energy_link: true
+
+  # Not forced, but should have a high chance to roll
+  pickupsanity:
+    'false': 30
+    'true': 70
+
+  # Solving skill issue a bit
+  starting_life_count: 9
+  
+  # Fixed numbers because anything else is going to be horrid to manage via triggers I think
+  starting_hp_trigger:
+    low: 33
+    medium: 33
+    high: 33
+  starting_hp: 16
+  heart_tank_effectiveness: 2
+
+  # Chance to happen, somewhat evil
+  jammed_buster:
+    'false': 60
+    'true': 40
+
+  # These are a bit controversial as they're QoL settings, I'm just gonna force them
+  disable_charge_freeze: true
+  long_jumps: true
+
+  # Evil, but fun
+  boss_weakness_rando:
+    vanilla: 20
+    shuffled: 50
+    chaotic_double: 30
+
+  # Makes the setting above less evil
+  boss_weakness_strictness: 
+    not_strict: 30
+    weakness_and_buster: 40
+    weakness_and_upgraded_buster: 10
+    only_weakness: 20
+
+  # Makes them evil again
+  boss_randomize_hp:
+    'off': 0
+    weak: 40
+    regular: 40
+    strong: 10
+    chaotic: 10
+
+  # Only unlock Doppler Lab and Vile via medals or access codes
+  doppler_openess:
+    medals: 50
+    access_code: 50
+  doppler_open: []
+  doppler_medal_count: 0
+  vile_openess:
+    medals: 50
+    access_code: 50
+  vile_open: []
+  vile_medal_count: 0
+  doppler_lab_2_boss: random
+  doppler_lab_3_boss_rematch_count: random-range-1-8
+  doppler_all_labs: random
+
+  # This one is better forced
+  logic_vile_required: false
+
+  # Should be good
+  bit_medal_count: random-low
+  byte_medal_count: random-high
+
+  palette_default: random
+  palette_gold_armor: random
+  palette_charge_blue: charge_blue
+  palette_charge_pink: charge_pink
+  palette_charge_red: charge_red
+  palette_charge_green: charge_green
+  palette_acid_burst: random
+  palette_parasitic_bomb: random
+  palette_triad_thunder: random
+  palette_spinning_blade: random
+  palette_ray_splasher: random
+  palette_gravity_well: random
+  palette_frost_shield: random
+  palette_tornado_fang: random
+
+  triggers:
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: MMX3-{player}
+
+    - option_category: Mega Man X3
+      option_name: starting_hp_trigger
+      option_result: low
+      options:
+        Mega Man X3:
+          starting_hp: random-range-8-12
+          heart_tank_effectiveness:
+            3: 10
+            4: 45
+            5: 45
+
+    - option_category: Mega Man X3
+      option_name: starting_hp_trigger
+      option_result: medium
+      options:
+        Mega Man X3:
+          starting_hp: random-range-12-16
+          heart_tank_effectiveness:
+            1: 5
+            2: 35
+            3: 30
+            4: 20
+
+    - option_category: Mega Man X3
+      option_name: starting_hp_trigger
+      option_result: high
+      options:
+        Mega Man X3:
+          starting_hp: random-range-16-24
+          heart_tank_effectiveness:
+            1: 60
+            2: 35
+            3: 5
+
+      # These should 100% depend on more checks being available, otherwise gen failures can happen
+    - option_category: Mega Man X3
+      option_name: pickupsanity
+      option_result: true
+      options:
+        Mega Man X3:
+          quick_charge_in_pool: true
+          speedster_in_pool: true
+          super_recover_in_pool: true
+          rapid_five_in_pool: true
+          speed_shot_in_pool: true
+          buster_plus_in_pool: true
+          weapon_plus_in_pool: true
+          item_plus_in_pool: true
+
+    - option_category: Mega Man X3
+      option_name: doppler_openess
+      option_result: medals
+      options:
+        Mega Man X3:
+          doppler_open: 
+            - Medals
+          doppler_medal_count: random-high
+
+    - option_category: Mega Man X3
+      option_name: doppler_openess
+      option_result: access_code
+      options:
+        Mega Man X3:
+          doppler_open: []
+
+    - option_category: Mega Man X3
+      option_name: vile_openess
+      option_result: medals
+      options:
+        Mega Man X3:
+          vile_open: 
+            - Medals
+          vile_medal_count: random-low
+
+    - option_category: Mega Man X3
+      option_name: vile_openess
+      option_result: access_code
+      options:
+        Mega Man X3:
+          vile_open: []
