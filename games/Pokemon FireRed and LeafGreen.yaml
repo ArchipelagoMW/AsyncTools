@@ -3,7 +3,9 @@
   # Game Options #
   ################
   accessibility: full
-  game_version: random
+  game_version: 
+    firered: 50
+    leafgreen: 50
   goal:
     champion: 3
     champion_rematch: 2
