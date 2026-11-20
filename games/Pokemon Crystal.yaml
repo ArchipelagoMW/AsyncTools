@@ -510,8 +510,8 @@ Pokemon Crystal:
 
   randomize_hidden_items:
     # Shuffles hidden item locations into the pool
-    'false': 70
-    'true': 30
+    'false': 30
+    'true': 70
 
   randomize_berry_trees:
     # Shuffles berry tree locations into the pool
