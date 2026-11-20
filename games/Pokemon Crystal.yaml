@@ -50,8 +50,8 @@ Pokemon Crystal:
     # Other settings may additionally restrict which Pokemon Centers can be chosen.
     #
     # WARNING: Some starting towns without level scaling may produce difficult starts.
-    'false': 25
-    'true': 75
+    'false': 20
+    'true': 80
 
   johto_only:
     # Excludes Kanto and disables Kanto access. Include Silver Cave keeps Silver Cave and Mt. Silver available.
@@ -1882,6 +1882,8 @@ Pokemon Crystal:
   ############
 
   triggers:
+    - {option_category: Pokemon Crystal, option_name: randomize_starting_town, option_result: false, options: {Pokemon Crystal: {route_30_access: mr_pokemon}}}
+  
     ## Triggers for Faux-``goal`` "mixed" result
     - {option_category: Pokemon Crystal, option_name: goal_rolls_elite_four, option_result: include, options: {Pokemon Crystal: {+goal: ["Elite Four"]}}}
     - {option_category: Pokemon Crystal, option_name: goal_rolls_red, option_result: include, options: {Pokemon Crystal: {+goal: ["Red"]}}}
