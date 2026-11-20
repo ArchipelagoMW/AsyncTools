@@ -1161,8 +1161,8 @@ Pokemon Crystal:
 
   reusable_tms:
     # TMs can be used an infinite number of times
-    'false': 50
-    'true': 50
+    'false': 0
+    'true': 100
 
   modernise_moves_generation:
     # Selects the generation to update moves to.
