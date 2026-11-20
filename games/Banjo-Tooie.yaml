@@ -1,4 +1,5 @@
-﻿Banjo-Tooie:
+﻿# Tooie supports yaml-less Universal Tracker generation. You don't need to recreate your Tooie yaml from the spreadsheet.
+Banjo-Tooie:
   progression_balancing: 0 # Disabled for big asyncs
   accessibility:
     full: 50
