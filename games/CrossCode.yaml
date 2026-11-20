@@ -5,6 +5,7 @@
     creator: 35
     monkey: 25
     observatory: 10
+    facility_x: 10
     diorbis: 30
   closed_gaia: random
   rhombus_hub_unlock:
@@ -37,8 +38,7 @@
     per_item_type: 10
     per_shop: 10
     per_slot: 5
-  # This option expands sphere 1 and makes grinding accessible immediately. Enable or weight if desired.
-  start_with_green_leaf_shade: false
+  start_with_green_leaf_shade: true
   small_key_shuffle:
     own_world: 10
     any_world: 5
@@ -56,6 +56,28 @@
   bronze_chest_lock_weight: random-high
   silver_chest_lock_weight: random-low
   gold_chest_lock_weight: random-low
+  trap_weights:
+    "Artless Trap": 10
+    "Bomb Trap": 20
+    "Burglar's Rope Trap": 5
+    "Clumsy Trap": 20
+    "Combo Breaker Trap": 5
+    "Death Trap": 10
+    "Drunk Trap": 20
+    "Element Swap Trap": 10
+    "Forgetfulness Trap": 5
+    "Full Course Trap": 10
+    "Laser Of Doom Trap": 15
+    "Naked Trap": 5
+    "Overload Trap": 10
+    "SP Trap": 10
+    "Slip Trap": 20
+    "Voidout Trap": 5
+    "Winded Trap": 5
+    "Zoom Trap": 20
+  trap_percentage:
+    0: 20
+    random-range-10-30: 80
 
   # non-standard option for triggers
   x_weight_pools:
@@ -77,17 +99,10 @@
           drop_weight: random
     - option_category: CrossCode
       option_name: goal
-      option_result: creator
-      options:
-        CrossCode:
-          # This goal is known to be broken with the DLC in apworld 0.9.1
-          enable_dlc: false
-    - option_category: CrossCode
-      option_name: goal
       option_result: monkey
       options:
         CrossCode:
-          # This is the short goal, so disable the DLC to keep it shorter
+          # This is a short goal, so disable the DLC to keep it shorter
           enable_dlc: false
     - option_category: CrossCode
       option_name: goal
@@ -111,6 +126,15 @@
             - Broken Sword
             - Broken Shield
             - Broken Gauntlet
+    - option_category: CrossCode
+      option_name: goal
+      option_result: facility_x
+      options:
+        CrossCode:
+          # This is a short goal, so disable the DLC to keep it shorter
+          enable_dlc: false
+          # This goal can only be selected if quest randomization is on
+          quest_rando: true
     - option_category: null
       option_name: name
       option_result: Player{player}
