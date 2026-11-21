@@ -11,8 +11,7 @@ Manic Miners:
     # Minimum value is 10
     # Maximum value is 108
     # 25: 50
-    50: 50
-    random-range-50-108: 50
+    108: 50
 
   available_levels_at_start:
     # How many levels are available initially to the player.
@@ -28,7 +27,7 @@ Manic Miners:
     # You can define additional values between the minimum and maximum values.
     # Minimum value is 1
     # Maximum value is 18
-    5: 50
+    2: 50
 
   campaign_selection_lrr:
     # Whether your game will include the Standard campaign levels.
@@ -85,7 +84,7 @@ Manic Miners:
     # You can define additional values between the minimum and maximum values.
     # Minimum value is 1
     # Maximum value is 108
-    random-range-25-75: 50
+    random-range-60-108: 50
 
   locked_coordinates:
     # Only relevant if Victory Condition is set to "Coordinate Hunt". 
@@ -103,7 +102,6 @@ Manic Miners:
     # Minimum value is 0
     # Maximum value is 108
     0: 50
-    random-range-50-108: 50
 
   coordinates_in_pool:
     # Sets the number of Transporter Coordinates items shuffled into the item pool, if Locked Coordinates are disabled. 
@@ -115,6 +113,18 @@ Manic Miners:
     # Maximum value is 108
     0: 50
     # random-range-50-108: 50
+
+  collect_behaviour:
+    # How should the client behave when locations are completed on the server but not locally? This usually occurs when the server has !collect enabled, but could also be due to playing the same slot from multiple devices.
+    # Local Only: The client ignores server state all times. E.g. if your goal is to clear 25 levels then your local save must have cleared 25 levels to win, regardless of locations remaining. 
+    # Sync Goal: The client will prefer the server state to local state when calculating goal. E.g. if your goal is to clear 25 levels, then your client will declare you victorious once 25 "Clear: X" locations are completed. 
+    # WARNING - This means that it is possible for your game to be completed by other people !collecting your locations! Except for Coordinate Hunt, where you will still need to beat the final level.
+    # Sync With Parent: As well as syncing goal, if "Clear: X" is sent, then all "Bonus Clear" locations for the same level will be automatically sent. This prevents you from having to clear a level that someone else has collected. Only relevant if Bonus Locations are enabled. 
+    # Sync All: Like Sync With Parent, but if any of the "Bonus Clear" locations are sent, then all locations (both master and bonus) are sent, instead of only keying off the master "Clear" location.
+    local_only: 50
+    sync_goal: 0
+    sync_with_parent: 0
+    sync_all: 0
 
   #############
   # Locations #
@@ -156,18 +166,18 @@ Manic Miners:
   #########
   buildings_are_items:
     # Whether Buildings must be found in the multiworld to be unlocked.
-    'false': 10
-    'true': 90
+    'false': 0
+    'true': 50
 
   items_are_items:
     # Whether Items (Electric Fences and Dynamite) must be found in the multiworld to be unlocked.
-    'false': 10
-    'true': 90
+    'false': 0
+    'true': 50
 
   vehicles_are_items:
     # Whether Vehicles must be found in the multiworld to be unlocked.
-    'false': 10
-    'true': 90
+    'false': 0
+    'true': 50
 
   progressive_items:
     # Affects behaviour of unlockable Buildings/Items/Vehicles.
@@ -239,4 +249,4 @@ Manic Miners:
       option_result: Player{player}
       options:
         null:
-          name: MagicMiners-{player}
+          name: ManicMiners-{player}

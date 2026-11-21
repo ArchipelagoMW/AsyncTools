@@ -3,7 +3,9 @@
   # Game Options #
   ################
   accessibility: full
-  game_version: random
+  game_version: 
+    firered: 50
+    leafgreen: 50
   goal:
     champion: 3
     champion_rematch: 2
@@ -17,7 +19,7 @@
   random_starting_town:
     'false': 1
     'true': 2
-  starting_town_blacklist: []
+  starting_town_blacklist: ["Cinnabar Island", "One Island", "Two Island", "Three Island", "Four Island", "Five Island", "Six Island", "Seven Island"]
   shuffle_pokemon_centers: false
   shuffle_gyms: false
   shuffle_marts: false

@@ -1,5 +1,4 @@
 EarthBound:
-  progression_balancing: 50
   accessibility: full
   giygas_required:
     'false': 10
@@ -62,9 +61,9 @@ EarthBound:
     'false': 70
     'true': 10
   shop_randomizer:
-    'off': 70
-    'local_filler': 30
-    'shopsanity': 10
+    'off': 50
+    'local_filler': 25
+    'shopsanity': 25
   dungeon_shuffle:
     'false': 75
     'true': 25

@@ -6,11 +6,11 @@
     yoshi_house: 1
   yoshi_egg_count: random-range-20-40
   yoshi_egg_placement:
-    # - Special Zone
-    - Switch Palaces
+    - Special Zone
+    # - Switch Palaces
     - Ghost Houses
     - Castles
-    # - Every Level
+    # Every Level
 
   percentage_of_yoshi_eggs: random-range-60-95
   ability_shuffle: ['Swim', 'P-Switch', 'Yellow Switch Palace', 'Item Box', 'Midway Points', 'Special World', 'Carry', 'Run', 'Green Switch Palace', 'Blue Switch Palace', 'Powerups', 'Super Star', 'Red Switch Palace', 'Climb', 'P-Balloon', 'Spin Jump', 'Yoshi']
@@ -140,6 +140,13 @@
       options:
         'SMW: Spicy Mycena Waffles':
           yoshi_egg_count: random-range-30-80
+          yoshi_egg_placement:
+            - Special Zone
+            # - Switch Palaces
+            - Ghost Houses
+            - Castles
+            - Every Level
+          percentage_of_yoshi_eggs: random-range-55-75
           stun_trap_weight: random
           literature_trap_weight: random
           timer_trap_weight: random
@@ -149,7 +156,14 @@
       option_result: insanity
       options:
         'SMW: Spicy Mycena Waffles':
-          yoshi_egg_count: random-range-50-150
+          yoshi_egg_count: random-range-50-120
+          yoshi_egg_placement:
+            - Special Zone
+            # - Switch Palaces
+            - Ghost Houses
+            - Castles
+            - Every Level
+          percentage_of_yoshi_eggs: random-range-60-80
           stun_trap_weight: random
           literature_trap_weight: random
           timer_trap_weight: random

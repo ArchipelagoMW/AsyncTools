@@ -1,0 +1,128 @@
+﻿ANIMAL WELL:
+  progression_balancing: 0
+  accessibility: full
+  goal:
+    fireworks: 3
+    egg_hunt: 1
+  matchbox_and_keyring:
+    'false': 1
+    'true': 3
+  key_ring: true
+  matchbox: true
+  candle_checks: true
+  bunnies_as_checks: 
+    'off': 4
+    exclude_tedious: 2
+    all_bunnies: 1
+  bunny_warps_in_logic: false
+  fruitsanity:
+    'false': 1
+    'true': 2
+  exclude_song_chests: false
+  random_final_egg_location: false
+  death_link: false
+  trigger_logic_difficulty:
+    casual: 3
+    simple: 6
+    advanced: 2
+    expert: 1
+  tanking_damage: false
+  bubble_jumping:
+    'off': 3
+    short_chains: 1
+    long_chains: 0
+  disc_hopping: 'off'
+  wheel_tricks: 'off'
+  ball_throwing:
+    'off': 1
+    simple: 3
+    advanced: 0
+    expert: 0
+  flute_jumps: 'false'
+  obscure_tricks: 'false'
+  precise_tricks: 'false'
+  triggers:
+    # Da name
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: AnimalWell-{player}
+    # People who want matchbox probably also want key ring, and people who don't, don't.
+    - option_category: ANIMAL WELL
+      option_name: matchbox_and_keyring
+      option_result: 'false'
+      options:
+        ANIMAL WELL:
+          key_ring: 'false'
+          matchbox: 'false'
+    # Different sets of weights for different groups of players. "Casual" is defined by the default values.
+    - option_category: ANIMAL WELL
+      option_name: trigger_logic_difficulty
+      option_result: 'simple'
+      options:
+        ANIMAL WELL:
+          tanking_damage: false
+          bubble_jumping:
+            short_chains: 3
+            long_chains: 1
+          disc_hopping:
+            'off': 2
+            single: 3
+          wheel_tricks:
+            'off': 2
+            'simple': 3
+          ball_throwing:
+            'simple': 1
+            'advanced': 2
+          flute_jumps:
+            'false': 1
+            'true': 2
+          obscure_tricks:
+            'false': 1
+            'true': 1
+    - option_category: ANIMAL WELL
+      option_name: trigger_logic_difficulty
+      option_result: advanced
+      options:
+        ANIMAL WELL:
+          tanking_damage: 
+            'true': 1
+            'false': 1
+          bubble_jumping: long_chains
+          disc_hopping:
+            single: 1
+            multiple: 1
+          wheel_tricks:
+            simple: 2
+            advanced: 3
+          ball_throwing:
+            advanced: 2
+            expert: 1
+          flute_jumps: true
+          obscure_tricks: true
+          precise_tricks:
+            'true': 1
+            'false': 1
+    - option_category: ANIMAL WELL
+      option_name: trigger_logic_difficulty
+      option_result: expert
+      options:
+        ANIMAL WELL:
+          tanking_damage: true
+          bubble_jumping: long_chains
+          disc_hopping: multiple
+          wheel_tricks: advanced
+          ball_throwing: expert
+          flute_jumps: true
+          obscure_tricks: true
+          precise_tricks: true
+    # Make egg hunt a local macguffin hunt, and guarantee fruit shuffle so that way half your checks aren't fake
+    - option_category: ANIMAL WELL
+      option_name: goal
+      option_result: egg_hunt
+      options:
+        ANIMAL WELL:
+          local_items: ["Eggs"]
+          fruitsanity: true
