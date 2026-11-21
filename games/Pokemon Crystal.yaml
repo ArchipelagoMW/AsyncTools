@@ -12,8 +12,7 @@ Pokemon Crystal:
   
   goal_selection:
     one: 50
-    all: 10
-    mixed: 40
+    mixed: 50
 
   # Helper for goal_selection "one": stays 'off' unless "one" is rolled, then the trigger swaps in one weight per goal
   goal_one_pick: {'off': 1}
