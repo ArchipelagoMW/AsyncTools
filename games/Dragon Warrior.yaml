@@ -21,8 +21,8 @@
     'true': 50
   monstersanity:
     # This adds 40 checks.
-    'false': 70
-    'true': 30
+    'false': 50
+    'true': 50
   death_link:
     'false': 50
 

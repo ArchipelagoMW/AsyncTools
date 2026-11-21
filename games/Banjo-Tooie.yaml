@@ -1,4 +1,5 @@
-﻿Banjo-Tooie:
+﻿# Tooie supports yaml-less Universal Tracker generation. You don't need to recreate your Tooie yaml from the spreadsheet.
+Banjo-Tooie:
   progression_balancing: 0 # Disabled for big asyncs
   accessibility:
     full: 50
@@ -63,9 +64,13 @@
   bass_clef_amount: random
   randomize_jinjos: random
   randomize_doubloons: random
-  randomize_cheato: random
+  randomize_cheato:
+    'false': 25
+    'true': 75
   cheato_rewards: random
-  randomize_honeycombs: random
+  randomize_honeycombs:
+    'false': 25
+    'true': 75
   honeyb_rewards: random
   randomize_tickets: random
   randomize_green_relics: random
@@ -74,7 +79,9 @@
   randomize_beans: random
   randomize_glowbos: random
   randomize_dino_roar: random
-  nestsanity: random
+  nestsanity:
+    'false': 40
+    'true': 60
   randomize_signposts: random
   randomize_stop_n_swap: 'false' # Override in triggers when moves get randomised.
 
