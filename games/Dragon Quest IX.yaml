@@ -1,0 +1,60 @@
+Dragon Quest IX:
+  end_boss:
+    master_of_nuun: 50
+    greygnarl: 35
+    corvus: 15
+  randomize_shops:
+    none: 10
+    same_shop_type: 30
+    same_region: 30
+    same_shop_type_and_region: 30
+  shop_prices:
+    vanilla: 10
+    global_shared: 45
+    global_random: 45
+  filler_amount: random-range-low-0-60
+  shop_price_factor:
+    cheap: 30
+    normal: 30
+    expensive: 30
+    absolute_chaos: 10
+  randomize_skills:
+    vanilla: 50
+    fully_random: 50
+  triggers:
+    # Determine the shop price factor
+    - option_category: Dragon Quest IX
+      option_name: shop_price_factor
+      option_result: cheap
+      options:
+        Dragon Quest IX:
+          shop_price_min: random-range-10-50
+          shop_price_max: random-range-50-75
+    - option_category: Dragon Quest IX
+      option_name: shop_price_factor
+      option_result: normal
+      options:
+        Dragon Quest IX:
+          shop_price_min: random-range-80-100
+          shop_price_max: random-range-100-150
+    - option_category: Dragon Quest IX
+      option_name: shop_price_factor
+      option_result: expensive
+      options:
+        Dragon Quest IX:
+          shop_price_min: random-range-100-200
+          shop_price_max: random-range-200-300
+    - option_category: Dragon Quest IX
+      option_name: shop_price_factor
+      option_result: absolute_chaos
+      options:
+        Dragon Quest IX:
+          shop_price_min: random-range-10-100
+          shop_price_max: random-range-low-100-500
+    #Trigger to set up the player name
+    - option_category: null
+      option_name: name
+      option_result: Player{player}
+      options:
+        null:
+          name: DQIX-{player}
