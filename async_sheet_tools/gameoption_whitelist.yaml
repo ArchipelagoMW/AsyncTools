@@ -66,6 +66,9 @@ A Link to the Past:
     - Bombless Start
     - Tile Shuffle
 ANIMAL WELL:
+    - ANIMAL WELL
+    - Locations
+    - Name
     - Goal
     - Key Ring
     - Matchbox
@@ -626,15 +629,6 @@ Donkey Kong Country 2:
     - Rattly Palette
     - Squawks Palette
     - Quawks Palette
-Donkey Kong Country 3:
-    - Donkey Kong Country 3
-    - Locations
-    - Name
-    - Goal
-    - Krematoa Bonus Coins Cost
-    - Percentage of Banana Birds
-    - KONGsanity
-    - Level Shuffle
 DOOM 1993:
     - DOOM 1993
     - Locations
@@ -821,7 +815,6 @@ Funi Raccoon Game:
     - Eurosanity
     - Jewelsanity
     - Hatsanity
-    - Dumpster Weight Blocking
     - Lugh Quest Locking
     - Trap Toggle
     - Museum Threshold
@@ -1208,7 +1201,6 @@ Manic Miners:
     - Name
     - Victory Condition
     - Target Level Count
-    - Locked Coordinates
     - Target Times Are Locations
     - Target Time Difficulty
     - Crystal Targets Are Locations
@@ -1396,41 +1388,6 @@ Noita:
     - Bosses as Location Checks
     - Extra Orbs
     - Shop Price Reduction
-Ocarina of Time:
-    - Ocarina of Time
-    - Locations
-    - Name
-    - Forest
-    - Kakariko Gate
-    - Open Door of Time
-    - Rainbow Bridge Requirement
-    - Starting Age
-    - Randomize Spawn Positions
-    - Shuffle Boss Entrances
-    - Triforce Hunt
-    - Required Triforce Pieces
-    - MQ Dungeon Mode
-    - MQ Dungeon Count
-    - Medallions Required for Bridge
-    - Dungeon Rewards Required for Bridge
-    - Boss Keys
-    - Ganon's Boss Key
-    - Medallions Required for Ganon's BK
-    - Dungeon Rewards Required for Ganon's BK
-    - Key Rings Mode
-    - Shopsanity
-    - Tokensanity
-    - Scrub Shuffle
-    - Shuffle Child Trade Item
-    - Shuffle Rupees & Hearts
-    - Shuffle Pots
-    - Shuffle Crates
-    - Shuffle Kokiri Sword
-    - Shuffle Ocarinas
-    - Skip Child Stealth
-    - Complete Mask Quest
-    - Adult Trade Sequence Start
-    - Logic Tricks
 Ori and the Blind Forest:
     - Ori and the Blind Forest
     - Locations
@@ -1542,26 +1499,6 @@ Paint:
     - Starting Coins
     - Starting Partner
     - Yoshi Color
-Peggle Deluxe:
-    - Peggle Deluxe
-    - Locations
-    - Name
-    - Goal
-    - Master Count
-    - Level Count
-    - Include Full Clears
-    - Maximum Starting Ball Count
-    - Useful Item Percentage
-Peggle Nights:
-    - Peggle Nights
-    - Locations
-    - Name
-    - Goal
-    - Master Count
-    - Level Count
-    - Include Full Clears
-    - Maximum Starting Ball Count
-    - Useful Item Percentage
 Pizza Tower:
     - Pizza Tower
     - Locations
@@ -1655,7 +1592,6 @@ Pokemon Black and White:
     - Season Control
     - Modify Item Pool
     - Modify Logic
-    - Adjust Levels
     - Modify Encounter Rates
     - All Pokemon Seen
     - Replace Evolution Methods
@@ -1679,7 +1615,6 @@ Pokemon Crystal:
     - Route 44 Access Requirement
     - Route 44 Access Count
     - Magnet Train Access
-    - Vanilla Clair
     - Randomize Starting Town
     - Randomize Hidden Items
     - Require Itemfinder
@@ -1687,9 +1622,6 @@ Pokemon Crystal:
     - Add Missing Useful Items
     - Route 32 Access Condition
     - Dark Areas
-    - Victory Road Access
-    - Kanto Access Requirement
-    - Kanto Access Count
     - Red Gyarados Access
     - Route 2 Access
     - Route 3 Access
@@ -1711,7 +1643,6 @@ Pokemon Crystal:
     - Randomize Berry Trees
     - Randomize Pokedex
     - Randomize Pokemon Requests
-    - Randomize Phone Calls
     - Randomize Fly Unlocks
     - Randomize Bug Catching Contest
     - Randomize Starters
@@ -1723,11 +1654,9 @@ Pokemon Crystal:
     - Randomize Learnsets
     - Physical/Special Split
     - Randomize TM Moves
-    - TM Compatibility
     - HM Compatibility
     - Randomize Base Stats
     - Randomize Types
-    - Randomize Palettes
     - Randomize Music
     - Early Fly
     - Require Flash
@@ -2548,18 +2477,6 @@ Timespinner:
     - Gate Keep
     - Royal Roadblock
     - Pure Torcher
-Tony Hawk's Pro Skater 1 + 2:
-    - Tony Hawk's Pro Skater 1 + 2
-    - Locations
-    - Name
-    - Goal
-    - Skater Count
-    - Level Count
-    - Include Signature Specials
-    - Include Long Tricks
-    - Include Gaps
-    - Gap Count Per Level
-    - Trap Percentage
 TUNIC:
     - TUNIC
     - Locations
